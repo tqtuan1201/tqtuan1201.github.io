@@ -8,22 +8,22 @@
 			<key>assets</key>
 			<array>
 				<dict>
-					<key>kind</key>
+                    
+                    <key>kind</key>
 					<string>software-package</string>
-					<key>url</key>
-					<string>https://12bay.vn</string>
+					<key>url</key>	<string>https://tqtuan1201.github.io/BuildApp/NLD/PVN-NDL-USER.ipa</string>
 				</dict>
 				<dict>
 					<key>kind</key>
 					<string>display-image</string>
 					<key>url</key>
-					<string>https://12bay.vn</string>
+					<string>https://www.lg.com/lg4-common-gp/img/global/header-large-logo.png</string>
 				</dict>
 				<dict>
 					<key>kind</key>
 					<string>full-size-image</string>
 					<key>url</key>
-					<string>https://12bay.vn</string>
+					<string>https://www.lg.com/lg4-common-gp/img/global/header-large-logo.png</string>
 				</dict>
 			</array>
 			<key>metadata</key>
