@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.semanticweb.org/tuantruongquang/ontologies/2020/10/untitled-ontology-2"
+     xml:base="https://github.com/tqtuan1201/tqtuan1201.github.io/blob/master/Master/owl/appOntogoly.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://www.semanticweb.org/tuantruongquang/ontologies/2020/10/untitled-ontology-2">
+     ontologyIRI="https://github.com/tqtuan1201/tqtuan1201.github.io/blob/master/Master/owl/appOntogoly.owl">
     <Prefix name="" IRI="http://www.semanticweb.org/tuantruongquang/ontologies/2020/10/untitled-ontology-2"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
@@ -163,6 +163,9 @@
         <NamedIndividual IRI="#Akulaku-Developer"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#AlaskaAirlines"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#AlaskaAirlinesTravel"/>
     </Declaration>
     <Declaration>
@@ -190,6 +193,18 @@
         <NamedIndividual IRI="#AllAppsInWeather"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#AllAppsinBeauty"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AllAppsinCommunication"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AllAppsinPersonalization"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AllAppsinShopping"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Almosafer"/>
     </Declaration>
     <Declaration>
@@ -212,6 +227,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ApplepieStudioInc."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AppsAndLiveWallpapersByHelectronSoft"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#AppyhighTechnology"/>
@@ -772,6 +790,9 @@
         <NamedIndividual IRI="#MyNameRingtoneMaker"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#MyPhoto-PictureKeyboard"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#MyPhotoKeyboardPictureKeyboard"/>
     </Declaration>
     <Declaration>
@@ -908,6 +929,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#QantasAirways"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#QantasAirwaysLimited"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#QuantumAppx"/>
@@ -1135,6 +1159,9 @@
         <NamedIndividual IRI="#ULTA"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Ubeo.app"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#UbeoWinYourDeals"/>
     </Declaration>
     <Declaration>
@@ -1246,6 +1273,9 @@
         <NamedIndividual IRI="#Zomato"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#agoda.com"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#bigDreamCorporation"/>
     </Declaration>
     <Declaration>
@@ -1342,6 +1372,9 @@
         <NamedIndividual IRI="#weawowWeatherApp"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#wikiHow"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#wikiHowHowToDoAnything"/>
     </Declaration>
     <Declaration>
@@ -1429,6 +1462,18 @@
         <NamedIndividual IRI="#AllAppsInTravel&amp;Local"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#AllAppsinArt&amp;Design"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AllAppsinBooks&amp;Reference"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AllAppsinMaps&amp;Navigation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AllAppsinTravel&amp;Local"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Audible,Inc"/>
     </Declaration>
     <Declaration>
@@ -1480,6 +1525,9 @@
         <NamedIndividual IRI="#DoubleGIS,LLC"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#FacemojiEmojiKeyboard&amp;KeyboardTheme"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#FacemojiEmojiKeyboardForXiaomiFont&amp;Theme"/>
     </Declaration>
     <Declaration>
@@ -1487,6 +1535,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#GOSMSProMessenger,FreeThemes,Emoji"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GoAirlines(India)Limited"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#GojekOjekTaxiBooking,DeliveryAndPayment"/>
@@ -1585,6 +1636,9 @@
         <NamedIndividual IRI="#PhotoCartoonEditor&amp;EffectsCartoonYourself"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#RBApps&amp;Games"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Rappi,Inc-Delivery"/>
     </Declaration>
     <Declaration>
@@ -1679,60 +1733,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#®SUOLINNOVATIONSLTD"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#AllAppsinBeauty"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#agoda.com"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#QantasAirwaysLimited"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#AllAppsinCommunication"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#AllAppsinPersonalization"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#wikiHow"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#AllAppsinArt&amp;Design"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#MyPhoto-PictureKeyboard"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#FacemojiEmojiKeyboard&amp;KeyboardTheme"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#AllAppsinBooks&amp;Reference"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#AlaskaAirlines"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Ubeo.app"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#AllAppsinMaps&amp;Navigation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#GoAirlines(India)Limited"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#RBApps&amp;Games"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#AllAppsinShopping"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#AllAppsinTravel&amp;Local"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#AppsAndLiveWallpapersByHelectronSoft"/>
     </Declaration>
     <ClassAssertion>
         <Class IRI="#Developer"/>
@@ -5102,7 +5102,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#APUSGroup"/>
-        <Literal>APUS Group@dev.com</Literal>
+        <Literal xml:lang="dev.com">APUS Group</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5117,7 +5117,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#AccuWeather"/>
-        <Literal>AccuWeather@dev.com</Literal>
+        <Literal xml:lang="dev.com">AccuWeather</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5132,7 +5132,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Adobe"/>
-        <Literal>Adobe@dev.com</Literal>
+        <Literal xml:lang="dev.com">Adobe</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5147,7 +5147,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#AdobeInc"/>
-        <Literal>Adobe Inc@dev.com</Literal>
+        <Literal xml:lang="dev.com">Adobe Inc</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5187,7 +5187,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Airbnb"/>
-        <Literal>Airbnb@dev.com</Literal>
+        <Literal xml:lang="dev.com">Airbnb</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5202,7 +5202,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#AirtimeMediaInc."/>
-        <Literal>Airtime Media Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Airtime Media Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5217,7 +5217,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Akulaku-Developer"/>
-        <Literal>Akulaku-Developer@dev.com</Literal>
+        <Literal xml:lang="dev.com">Akulaku-Developer</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5257,7 +5257,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#AlibabaMobile"/>
-        <Literal>Alibaba Mobile@dev.com</Literal>
+        <Literal xml:lang="dev.com">Alibaba Mobile</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5307,7 +5307,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Almosafer"/>
-        <Literal>Almosafer@dev.com</Literal>
+        <Literal xml:lang="dev.com">Almosafer</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5322,7 +5322,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#AmazonMobileLLC"/>
-        <Literal>Amazon Mobile LLC@dev.com</Literal>
+        <Literal xml:lang="dev.com">Amazon Mobile LLC</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5337,7 +5337,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#AmberMobileLimited"/>
-        <Literal>Amber Mobile Limited@dev.com</Literal>
+        <Literal xml:lang="dev.com">Amber Mobile Limited</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5352,7 +5352,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#AminoApps"/>
-        <Literal>Amino Apps@dev.com</Literal>
+        <Literal xml:lang="dev.com">Amino Apps</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5367,7 +5367,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#AndiUnpam"/>
-        <Literal>Andi Unpam@dev.com</Literal>
+        <Literal xml:lang="dev.com">Andi Unpam</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5382,7 +5382,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#ApalonApps"/>
-        <Literal>Apalon Apps@dev.com</Literal>
+        <Literal xml:lang="dev.com">Apalon Apps</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5397,7 +5397,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#AppStarStudios"/>
-        <Literal>AppStar Studios@dev.com</Literal>
+        <Literal xml:lang="dev.com">AppStar Studios</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5412,7 +5412,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#ApplepieStudioInc."/>
-        <Literal>Applepie Studio Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Applepie Studio Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5427,7 +5427,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#AppyhighTechnology"/>
-        <Literal>Appyhigh Technology@dev.com</Literal>
+        <Literal xml:lang="dev.com">Appyhigh Technology</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5442,7 +5442,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#ArcosDorados"/>
-        <Literal>Arcos Dorados@dev.com</Literal>
+        <Literal xml:lang="dev.com">Arcos Dorados</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5457,7 +5457,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Ask.fm"/>
-        <Literal>Ask.fm@dev.com</Literal>
+        <Literal xml:lang="dev.com">Ask.fm</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5472,7 +5472,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Avito.ru"/>
-        <Literal>Avito.ru@dev.com</Literal>
+        <Literal xml:lang="dev.com">Avito.ru</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5487,7 +5487,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#AyagoDev"/>
-        <Literal>Ayago Dev@dev.com</Literal>
+        <Literal xml:lang="dev.com">Ayago Dev</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5527,7 +5527,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#BACHASoft"/>
-        <Literal>BACHA Soft@dev.com</Literal>
+        <Literal xml:lang="dev.com">BACHA Soft</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5542,7 +5542,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#BEAUTYLINX"/>
-        <Literal>BEAUTY LINX@dev.com</Literal>
+        <Literal xml:lang="dev.com">BEAUTY LINX</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5557,7 +5557,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#BIGOTECHNOLOGYPTE.LTD."/>
-        <Literal>BIGO TECHNOLOGY PTE. LTD.@dev.com</Literal>
+        <Literal xml:lang="dev.com">BIGO TECHNOLOGY PTE. LTD.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5572,7 +5572,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#BYTEMODPTE.Ltd"/>
-        <Literal>BYTEMOD PTE.Ltd@dev.com</Literal>
+        <Literal xml:lang="dev.com">BYTEMOD PTE.Ltd</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5587,7 +5587,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Badoo"/>
-        <Literal>Badoo@dev.com</Literal>
+        <Literal xml:lang="dev.com">Badoo</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5602,7 +5602,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#BariLab"/>
-        <Literal>BariLab@dev.com</Literal>
+        <Literal xml:lang="dev.com">BariLab</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5617,7 +5617,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Baviux"/>
-        <Literal>Baviux@dev.com</Literal>
+        <Literal xml:lang="dev.com">Baviux</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5632,7 +5632,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#BestPhotoApps"/>
-        <Literal>Best Photo Apps@dev.com</Literal>
+        <Literal xml:lang="dev.com">Best Photo Apps</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5647,7 +5647,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#BigtreeEntertainmentPvt.Ltd."/>
-        <Literal>Bigtree Entertainment Pvt. Ltd.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Bigtree Entertainment Pvt. Ltd.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5662,7 +5662,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#BirdView"/>
-        <Literal>BirdView@dev.com</Literal>
+        <Literal xml:lang="dev.com">BirdView</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5677,7 +5677,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Bitstrips"/>
-        <Literal>Bitstrips@dev.com</Literal>
+        <Literal xml:lang="dev.com">Bitstrips</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5692,7 +5692,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#BlaBlaCar"/>
-        <Literal>BlaBlaCar@dev.com</Literal>
+        <Literal xml:lang="dev.com">BlaBlaCar</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5732,7 +5732,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#BoloInternational"/>
-        <Literal>Bolo International@dev.com</Literal>
+        <Literal xml:lang="dev.com">Bolo International</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5747,7 +5747,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#BoltTechnology"/>
-        <Literal>Bolt Technology@dev.com</Literal>
+        <Literal xml:lang="dev.com">Bolt Technology</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5762,7 +5762,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#BooksyInternational"/>
-        <Literal>Booksy International@dev.com</Literal>
+        <Literal xml:lang="dev.com">Booksy International</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5802,7 +5802,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#BrilliantGamez"/>
-        <Literal>Brilliant Gamez@dev.com</Literal>
+        <Literal xml:lang="dev.com">Brilliant Gamez</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5817,7 +5817,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#BurgerKingItaly"/>
-        <Literal>Burger King Italy@dev.com</Literal>
+        <Literal xml:lang="dev.com">Burger King Italy</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5832,7 +5832,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#BíbliaOffline"/>
-        <Literal>Bíblia Offline@dev.com</Literal>
+        <Literal xml:lang="dev.com">Bíblia Offline</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5847,7 +5847,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#CLauncherLauncherTeam"/>
-        <Literal>C Launcher  Launcher Team@dev.com</Literal>
+        <Literal xml:lang="dev.com">C Launcher  Launcher Team</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5862,7 +5862,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Canva"/>
-        <Literal>Canva@dev.com</Literal>
+        <Literal xml:lang="dev.com">Canva</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5877,7 +5877,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#CarInfo"/>
-        <Literal>Car Info@dev.com</Literal>
+        <Literal xml:lang="dev.com">Car Info</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5892,7 +5892,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Careem"/>
-        <Literal>Careem@dev.com</Literal>
+        <Literal xml:lang="dev.com">Careem</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5907,7 +5907,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Carousell"/>
-        <Literal>Carousell@dev.com</Literal>
+        <Literal xml:lang="dev.com">Carousell</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5922,7 +5922,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#CebuPacific"/>
-        <Literal>Cebu Pacific@dev.com</Literal>
+        <Literal xml:lang="dev.com">Cebu Pacific</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5937,7 +5937,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#CentreForRailwayInformationSystems"/>
-        <Literal>Centre for Railway Information Systems@dev.com</Literal>
+        <Literal xml:lang="dev.com">Centre for Railway Information Systems</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5952,7 +5952,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#CheetahKeyboard"/>
-        <Literal>Cheetah Keyboard@dev.com</Literal>
+        <Literal xml:lang="dev.com">Cheetah Keyboard</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -5967,7 +5967,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#CheetahMobileInc"/>
-        <Literal>Cheetah Mobile Inc@dev.com</Literal>
+        <Literal xml:lang="dev.com">Cheetah Mobile Inc</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6007,7 +6007,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#ChoiceHotelsMobile"/>
-        <Literal>Choice Hotels Mobile@dev.com</Literal>
+        <Literal xml:lang="dev.com">Choice Hotels Mobile</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6022,7 +6022,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#ChristianCinema"/>
-        <Literal>Christian Cinema@dev.com</Literal>
+        <Literal xml:lang="dev.com">Christian Cinema</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6037,7 +6037,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Chrono24GmbH"/>
-        <Literal>Chrono24 GmbH@dev.com</Literal>
+        <Literal xml:lang="dev.com">Chrono24 GmbH</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6052,7 +6052,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#ClubFactory"/>
-        <Literal>Club Factory@dev.com</Literal>
+        <Literal xml:lang="dev.com">Club Factory</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6067,7 +6067,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#CodeArtBR"/>
-        <Literal>Code Art BR@dev.com</Literal>
+        <Literal xml:lang="dev.com">Code Art BR</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6082,7 +6082,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Colorfit"/>
-        <Literal>Colorfit@dev.com</Literal>
+        <Literal xml:lang="dev.com">Colorfit</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6132,7 +6132,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#ContentArcadeApps"/>
-        <Literal>Content Arcade Apps@dev.com</Literal>
+        <Literal xml:lang="dev.com">Content Arcade Apps</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6147,7 +6147,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Coocent"/>
-        <Literal>Coocent@dev.com</Literal>
+        <Literal xml:lang="dev.com">Coocent</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6162,7 +6162,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#CotechS.A."/>
-        <Literal>Cotech S.A.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Cotech S.A.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6202,7 +6202,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#DelicateThemeKeyboardForAndriodApps"/>
-        <Literal>Delicate theme keyboard for Andriod Apps@dev.com</Literal>
+        <Literal xml:lang="dev.com">Delicate theme keyboard for Andriod Apps</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6217,7 +6217,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#DeliveryClubLLC"/>
-        <Literal>Delivery Club LLC@dev.com</Literal>
+        <Literal xml:lang="dev.com">Delivery Club LLC</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6232,7 +6232,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Devexpert.NET"/>
-        <Literal>Devexpert.NET@dev.com</Literal>
+        <Literal xml:lang="dev.com">Devexpert.NET</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6247,7 +6247,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#DiDiGlobal"/>
-        <Literal>DiDi Global@dev.com</Literal>
+        <Literal xml:lang="dev.com">DiDi Global</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6312,7 +6312,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#DigiZoneTechnology"/>
-        <Literal>DigiZone Technology@dev.com</Literal>
+        <Literal xml:lang="dev.com">DigiZone Technology</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6327,7 +6327,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#DioAliasGames"/>
-        <Literal>Dio Alias Games@dev.com</Literal>
+        <Literal xml:lang="dev.com">Dio Alias Games</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6342,7 +6342,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#DonatosPizza"/>
-        <Literal>Donatos Pizza@dev.com</Literal>
+        <Literal xml:lang="dev.com">Donatos Pizza</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6357,7 +6357,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#DoorDash"/>
-        <Literal>DoorDash@dev.com</Literal>
+        <Literal xml:lang="dev.com">DoorDash</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6372,7 +6372,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#DotCUnitedSwiftTeam"/>
-        <Literal>DotC United Swift Team@dev.com</Literal>
+        <Literal xml:lang="dev.com">DotC United Swift Team</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6412,7 +6412,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#DreameMedia"/>
-        <Literal>Dreame Media@dev.com</Literal>
+        <Literal xml:lang="dev.com">Dreame Media</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6427,7 +6427,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#DreamsRoom"/>
-        <Literal>Dreams Room@dev.com</Literal>
+        <Literal xml:lang="dev.com">Dreams Room</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6467,7 +6467,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#EasyTaxi"/>
-        <Literal>Easy Taxi@dev.com</Literal>
+        <Literal xml:lang="dev.com">Easy Taxi</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6482,7 +6482,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#ElokenceSAS"/>
-        <Literal>Elokence SAS@dev.com</Literal>
+        <Literal xml:lang="dev.com">Elokence SAS</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6522,7 +6522,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#ExovoidSàrl"/>
-        <Literal>Exovoid Sàrl@dev.com</Literal>
+        <Literal xml:lang="dev.com">Exovoid Sàrl</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6537,7 +6537,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Facebook"/>
-        <Literal>Facebook@dev.com</Literal>
+        <Literal xml:lang="dev.com">Facebook</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6552,7 +6552,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Faithlife"/>
-        <Literal>Faithlife@dev.com</Literal>
+        <Literal xml:lang="dev.com">Faithlife</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6567,7 +6567,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Familonet"/>
-        <Literal>Familonet@dev.com</Literal>
+        <Literal xml:lang="dev.com">Familonet</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6607,7 +6607,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#FingerStudios"/>
-        <Literal>Finger Studios@dev.com</Literal>
+        <Literal xml:lang="dev.com">Finger Studios</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6647,7 +6647,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#FoodpandaGmbHASubsidiaryOfDeliveryHeroSE"/>
-        <Literal>Foodpanda GmbH a subsidiary of Delivery Hero SE@dev.com</Literal>
+        <Literal xml:lang="dev.com">Foodpanda GmbH a subsidiary of Delivery Hero SE</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6662,7 +6662,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Foursquare"/>
-        <Literal>Foursquare@dev.com</Literal>
+        <Literal xml:lang="dev.com">Foursquare</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6677,7 +6677,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#FriendzyLimited"/>
-        <Literal>Friendzy Limited@dev.com</Literal>
+        <Literal xml:lang="dev.com">Friendzy Limited</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6692,7 +6692,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#GO4YU"/>
-        <Literal>GO4YU@dev.com</Literal>
+        <Literal xml:lang="dev.com">GO4YU</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6707,7 +6707,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#GOMO"/>
-        <Literal>GOMO@dev.com</Literal>
+        <Literal xml:lang="dev.com">GOMO</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6722,7 +6722,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#GOMOGo"/>
-        <Literal>GOMO Go@dev.com</Literal>
+        <Literal xml:lang="dev.com">GOMO Go</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6737,7 +6737,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#GOMOLive"/>
-        <Literal>GOMO Live@dev.com</Literal>
+        <Literal xml:lang="dev.com">GOMO Live</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6752,7 +6752,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#GasBuddy"/>
-        <Literal>GasBuddy@dev.com</Literal>
+        <Literal xml:lang="dev.com">GasBuddy</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6767,7 +6767,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Gett-WorldwideCorporateGroundTravelApp"/>
-        <Literal>Gett - Worldwide Corporate Ground Travel App@dev.com</Literal>
+        <Literal xml:lang="dev.com">Gett - Worldwide Corporate Ground Travel App</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6807,7 +6807,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#GlowDayz"/>
-        <Literal>GlowDayz@dev.com</Literal>
+        <Literal xml:lang="dev.com">GlowDayz</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6897,7 +6897,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Goibibo"/>
-        <Literal>Goibibo@dev.com</Literal>
+        <Literal xml:lang="dev.com">Goibibo</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6937,7 +6937,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#GolEditora"/>
-        <Literal>Gol Editora@dev.com</Literal>
+        <Literal xml:lang="dev.com">Gol Editora</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -6952,7 +6952,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#GoldenstarWallpaper"/>
-        <Literal>Goldenstar Wallpaper@dev.com</Literal>
+        <Literal xml:lang="dev.com">Goldenstar Wallpaper</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7017,7 +7017,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#GoogleLLC"/>
-        <Literal>Google LLC@dev.com</Literal>
+        <Literal xml:lang="dev.com">Google LLC</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7057,7 +7057,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#GrabHoldings"/>
-        <Literal>Grab Holdings@dev.com</Literal>
+        <Literal xml:lang="dev.com">Grab Holdings</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7072,7 +7072,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Grubhub"/>
-        <Literal>Grubhub@dev.com</Literal>
+        <Literal xml:lang="dev.com">Grubhub</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7087,7 +7087,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#HEREAppsLLC"/>
-        <Literal>HERE Apps LLC@dev.com</Literal>
+        <Literal xml:lang="dev.com">HERE Apps LLC</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7127,7 +7127,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#HagoGames"/>
-        <Literal>Hago Games@dev.com</Literal>
+        <Literal xml:lang="dev.com">Hago Games</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7167,7 +7167,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#HeloHoldingsLimited"/>
-        <Literal>Helo Holdings Limited@dev.com</Literal>
+        <Literal xml:lang="dev.com">Helo Holdings Limited</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7182,7 +7182,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#HikePrivateLimited"/>
-        <Literal>Hike Private Limited@dev.com</Literal>
+        <Literal xml:lang="dev.com">Hike Private Limited</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7197,7 +7197,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Hilton"/>
-        <Literal>Hilton@dev.com</Literal>
+        <Literal xml:lang="dev.com">Hilton</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7237,7 +7237,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Hippo"/>
-        <Literal>Hippo@dev.com</Literal>
+        <Literal xml:lang="dev.com">Hippo</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7252,7 +7252,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#HoAnhThuan"/>
-        <Literal>hoanhthuan@gmail.com</Literal>
+        <Literal xml:lang="gmail.com">hoanhthuan</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7267,7 +7267,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#HoQuocThinh"/>
-        <Literal>quocthinh212@gmailcom</Literal>
+        <Literal xml:lang="gmailcom">quocthinh212</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7282,7 +7282,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#HoTanLoc"/>
-        <Literal>hotanloc@gmail.com</Literal>
+        <Literal xml:lang="gmail.com">hotanloc</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7297,7 +7297,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Holaverse"/>
-        <Literal>Holaverse@dev.com</Literal>
+        <Literal xml:lang="dev.com">Holaverse</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7337,7 +7337,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#HyFontStudio"/>
-        <Literal>HyFont Studio@dev.com</Literal>
+        <Literal xml:lang="dev.com">HyFont Studio</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7352,7 +7352,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#HyperconnectInc"/>
-        <Literal>Hyperconnect inc@dev.com</Literal>
+        <Literal xml:lang="dev.com">Hyperconnect inc</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7367,7 +7367,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#ILMETEOSrl"/>
-        <Literal>ILMETEO srl@dev.com</Literal>
+        <Literal xml:lang="dev.com">ILMETEO srl</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7382,7 +7382,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#IRCTCOfficial"/>
-        <Literal>IRCTC Official@dev.com</Literal>
+        <Literal xml:lang="dev.com">IRCTC Official</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7422,7 +7422,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#InShotInc."/>
-        <Literal>InShot Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">InShot Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7437,7 +7437,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#InfiniteStudioMobile"/>
-        <Literal>Infinite Studio Mobile@dev.com</Literal>
+        <Literal xml:lang="dev.com">Infinite Studio Mobile</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7452,7 +7452,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Infokombinat"/>
-        <Literal>Infokombinat@dev.com</Literal>
+        <Literal xml:lang="dev.com">Infokombinat</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7467,7 +7467,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Instagram"/>
-        <Literal>Instagram@dev.com</Literal>
+        <Literal xml:lang="dev.com">Instagram</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7482,7 +7482,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#IntersmartDevelopment"/>
-        <Literal>Intersmart Development@dev.com</Literal>
+        <Literal xml:lang="dev.com">Intersmart Development</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7497,7 +7497,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#JackInTheBoxInc."/>
-        <Literal>Jack in the Box Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Jack in the Box Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7537,7 +7537,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#JioPlatformsLimited"/>
-        <Literal>Jio Platforms Limited@dev.com</Literal>
+        <Literal xml:lang="dev.com">Jio Platforms Limited</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7552,7 +7552,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Joom"/>
-        <Literal>Joom@dev.com</Literal>
+        <Literal xml:lang="dev.com">Joom</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7567,7 +7567,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#JoyrideDating"/>
-        <Literal>Joyride Dating@dev.com</Literal>
+        <Literal xml:lang="dev.com">Joyride Dating</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7582,7 +7582,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#JubilantFoodworks"/>
-        <Literal>Jubilant Foodworks@dev.com</Literal>
+        <Literal xml:lang="dev.com">Jubilant Foodworks</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7597,7 +7597,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Just-EatHoldingLimited"/>
-        <Literal>Just-Eat Holding Limited@dev.com</Literal>
+        <Literal xml:lang="dev.com">Just-Eat Holding Limited</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7612,7 +7612,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#KakaoCorporation"/>
-        <Literal>Kakao Corporation@dev.com</Literal>
+        <Literal xml:lang="dev.com">Kakao Corporation</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7627,7 +7627,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#KalromSystemsLTD"/>
-        <Literal>Kalrom Systems LTD@dev.com</Literal>
+        <Literal xml:lang="dev.com">Kalrom Systems LTD</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7642,7 +7642,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#KappboomInc."/>
-        <Literal>Kappboom Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Kappboom Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7682,7 +7682,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#KitchenStories"/>
-        <Literal>Kitchen Stories@dev.com</Literal>
+        <Literal xml:lang="dev.com">Kitchen Stories</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7697,7 +7697,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Kiwi.com"/>
-        <Literal>Kiwi.com@dev.com</Literal>
+        <Literal xml:lang="dev.com">Kiwi.com</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7712,7 +7712,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#KlookTravelTechnologyLtd."/>
-        <Literal>Klook Travel Technology Ltd.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Klook Travel Technology Ltd.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7727,7 +7727,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#LBETech"/>
-        <Literal>LBE Tech@dev.com</Literal>
+        <Literal xml:lang="dev.com">LBE Tech</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7742,7 +7742,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#LINECorporation"/>
-        <Literal>LINE Corporation@dev.com</Literal>
+        <Literal xml:lang="dev.com">LINE Corporation</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7757,7 +7757,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Lab.studio2017"/>
-        <Literal>Lab.studio2017@dev.com</Literal>
+        <Literal xml:lang="dev.com">Lab.studio2017</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7772,7 +7772,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#LauncherDeveloper"/>
-        <Literal>Launcher Developer@dev.com</Literal>
+        <Literal xml:lang="dev.com">Launcher Developer</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7812,7 +7812,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#LazadaMobile"/>
-        <Literal>Lazada Mobile@dev.com</Literal>
+        <Literal xml:lang="dev.com">Lazada Mobile</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7827,7 +7827,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#LeapFitnessGroup"/>
-        <Literal>Leap Fitness Group@dev.com</Literal>
+        <Literal xml:lang="dev.com">Leap Fitness Group</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7887,7 +7887,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Life.Church"/>
-        <Literal>Life.Church@dev.com</Literal>
+        <Literal xml:lang="dev.com">Life.Church</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7927,7 +7927,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Livio"/>
-        <Literal>Livio@dev.com</Literal>
+        <Literal xml:lang="dev.com">Livio</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7967,7 +7967,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#LuuTinhDeveloper"/>
-        <Literal>LuuTinh Developer@dev.com</Literal>
+        <Literal xml:lang="dev.com">LuuTinh Developer</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7982,7 +7982,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#LyrebirdStudio"/>
-        <Literal>Lyrebird Studio@dev.com</Literal>
+        <Literal xml:lang="dev.com">Lyrebird Studio</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -7997,7 +7997,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#MACHAPPSoftwareLtd"/>
-        <Literal>MACHAPP Software Ltd@dev.com</Literal>
+        <Literal xml:lang="dev.com">MACHAPP Software Ltd</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8012,7 +8012,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#MAOGUANGLEE"/>
-        <Literal>MAOGUANG LEE@dev.com</Literal>
+        <Literal xml:lang="dev.com">MAOGUANG LEE</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8027,7 +8027,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#MEETUTEAM"/>
-        <Literal>MEET U TEAM@dev.com</Literal>
+        <Literal xml:lang="dev.com">MEET U TEAM</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8042,7 +8042,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#MRROCCO"/>
-        <Literal>MR ROCCO@dev.com</Literal>
+        <Literal xml:lang="dev.com">MR ROCCO</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8057,7 +8057,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#MacroPinch"/>
-        <Literal>MacroPinch@dev.com</Literal>
+        <Literal xml:lang="dev.com">MacroPinch</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8072,7 +8072,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#MadcatGames"/>
-        <Literal>Madcat Games@dev.com</Literal>
+        <Literal xml:lang="dev.com">Madcat Games</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8087,7 +8087,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Mail.RuGroup"/>
-        <Literal>Mail.Ru Group@dev.com</Literal>
+        <Literal xml:lang="dev.com">Mail.Ru Group</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8102,7 +8102,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#MakeMyTrip.com"/>
-        <Literal>MakeMyTrip.com@dev.com</Literal>
+        <Literal xml:lang="dev.com">MakeMyTrip.com</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8117,7 +8117,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#MapFactor"/>
-        <Literal>MapFactor@dev.com</Literal>
+        <Literal xml:lang="dev.com">MapFactor</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8132,7 +8132,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#MarcinLewandowski"/>
-        <Literal>Marcin Lewandowski@dev.com</Literal>
+        <Literal xml:lang="dev.com">Marcin Lewandowski</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8147,7 +8147,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Mecoo"/>
-        <Literal>Mecoo@dev.com</Literal>
+        <Literal xml:lang="dev.com">Mecoo</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8162,7 +8162,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#MediBangInc."/>
-        <Literal>MediBang Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">MediBang Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8177,7 +8177,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#MediaApplicationsTechnologiesForTheBBC"/>
-        <Literal>Media Applications Technologies for the BBC@dev.com</Literal>
+        <Literal xml:lang="dev.com">Media Applications Technologies for the BBC</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8192,7 +8192,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#MeetMe.com"/>
-        <Literal>MeetMe.com@dev.com</Literal>
+        <Literal xml:lang="dev.com">MeetMe.com</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8207,7 +8207,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#MelonsMessengerInc."/>
-        <Literal>Melons Messenger Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Melons Messenger Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8222,7 +8222,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#MercadoLibre"/>
-        <Literal>Mercado Libre@dev.com</Literal>
+        <Literal xml:lang="dev.com">Mercado Libre</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8237,7 +8237,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Merriam-WebsterInc."/>
-        <Literal>Merriam-Webster Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Merriam-Webster Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8277,7 +8277,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Meteored"/>
-        <Literal>Meteored@dev.com</Literal>
+        <Literal xml:lang="dev.com">Meteored</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8317,7 +8317,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Michelin"/>
-        <Literal>Michelin@dev.com</Literal>
+        <Literal xml:lang="dev.com">Michelin</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8332,7 +8332,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#MicrosoftCorporation"/>
-        <Literal>Microsoft Corporation@dev.com</Literal>
+        <Literal xml:lang="dev.com">Microsoft Corporation</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8347,7 +8347,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#MightyText"/>
-        <Literal>MightyText@dev.com</Literal>
+        <Literal xml:lang="dev.com">MightyText</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8362,7 +8362,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#MobiSoftech"/>
-        <Literal>Mobi Softech@dev.com</Literal>
+        <Literal xml:lang="dev.com">Mobi Softech</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8377,7 +8377,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#MobiSystems"/>
-        <Literal>MobiSystems@dev.com</Literal>
+        <Literal xml:lang="dev.com">MobiSystems</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8392,7 +8392,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Mobidic"/>
-        <Literal>Mobidic@dev.com</Literal>
+        <Literal xml:lang="dev.com">Mobidic</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8407,7 +8407,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Mobiquité"/>
-        <Literal>Mobiquité@dev.com</Literal>
+        <Literal xml:lang="dev.com">Mobiquité</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8422,7 +8422,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#MoboappsDevTeam"/>
-        <Literal>Moboapps Dev Team@dev.com</Literal>
+        <Literal xml:lang="dev.com">Moboapps Dev Team</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8437,7 +8437,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#ModelXApps"/>
-        <Literal>Model X Apps@dev.com</Literal>
+        <Literal xml:lang="dev.com">Model X Apps</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8452,7 +8452,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Monirapps"/>
-        <Literal>Monirapps@dev.com</Literal>
+        <Literal xml:lang="dev.com">Monirapps</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8467,7 +8467,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Moovit"/>
-        <Literal>Moovit@dev.com</Literal>
+        <Literal xml:lang="dev.com">Moovit</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8482,7 +8482,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Mozilla"/>
-        <Literal>Mozilla@dev.com</Literal>
+        <Literal xml:lang="dev.com">Mozilla</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8497,7 +8497,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#MyHeritage.com"/>
-        <Literal>MyHeritage.com@dev.com</Literal>
+        <Literal xml:lang="dev.com">MyHeritage.com</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8562,7 +8562,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Myntra"/>
-        <Literal>Myntra@dev.com</Literal>
+        <Literal xml:lang="dev.com">Myntra</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8577,7 +8577,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#NAVERCorp."/>
-        <Literal>NAVER Corp.@dev.com</Literal>
+        <Literal xml:lang="dev.com">NAVER Corp.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8592,7 +8592,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#NewFunGames"/>
-        <Literal>New fun games@dev.com</Literal>
+        <Literal xml:lang="dev.com">New fun games</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8607,7 +8607,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#NewITSolutions"/>
-        <Literal>New IT Solutions@dev.com</Literal>
+        <Literal xml:lang="dev.com">New IT Solutions</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8622,7 +8622,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#NoviDigital"/>
-        <Literal>Novi Digital@dev.com</Literal>
+        <Literal xml:lang="dev.com">Novi Digital</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8637,7 +8637,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#NoxFutureCorp."/>
-        <Literal>Nox Future Corp.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Nox Future Corp.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8677,7 +8677,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#OGQ"/>
-        <Literal>OGQ@dev.com</Literal>
+        <Literal xml:lang="dev.com">OGQ</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8692,7 +8692,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#ONEAppTeam"/>
-        <Literal>ONE App Team@dev.com</Literal>
+        <Literal xml:lang="dev.com">ONE App Team</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8707,7 +8707,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#OYO"/>
-        <Literal>OYO@dev.com</Literal>
+        <Literal xml:lang="dev.com">OYO</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8722,7 +8722,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#OdnoklassnikiLtd"/>
-        <Literal>Odnoklassniki Ltd@dev.com</Literal>
+        <Literal xml:lang="dev.com">Odnoklassniki Ltd</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8737,7 +8737,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#OleksiiSchastlyvyi"/>
-        <Literal>Oleksii Schastlyvyi@dev.com</Literal>
+        <Literal xml:lang="dev.com">Oleksii Schastlyvyi</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8752,7 +8752,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#OneLouderApps"/>
-        <Literal>OneLouder Apps@dev.com</Literal>
+        <Literal xml:lang="dev.com">OneLouder Apps</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8792,7 +8792,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#OoredooQatar"/>
-        <Literal>Ooredoo Qatar@dev.com</Literal>
+        <Literal xml:lang="dev.com">Ooredoo Qatar</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8807,7 +8807,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Opera"/>
-        <Literal>Opera@dev.com</Literal>
+        <Literal xml:lang="dev.com">Opera</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8897,7 +8897,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#OutThinkingElectronicsPrivateLimited"/>
-        <Literal>Out thinking electronics private limited@dev.com</Literal>
+        <Literal xml:lang="dev.com">Out thinking electronics private limited</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8912,7 +8912,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Outfit7Limited"/>
-        <Literal>Outfit7 Limited@dev.com</Literal>
+        <Literal xml:lang="dev.com">Outfit7 Limited</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8927,7 +8927,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Over"/>
-        <Literal>Over@dev.com</Literal>
+        <Literal xml:lang="dev.com">Over</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8942,7 +8942,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Overwolf"/>
-        <Literal>Overwolf@dev.com</Literal>
+        <Literal xml:lang="dev.com">Overwolf</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8982,7 +8982,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#PT.AplikasiKaryaAnakBangsa"/>
-        <Literal>PT. Aplikasi Karya Anak Bangsa@dev.com</Literal>
+        <Literal xml:lang="dev.com">PT. Aplikasi Karya Anak Bangsa</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -8997,7 +8997,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#PTBukalapak.com"/>
-        <Literal>PT Bukalapak.com@dev.com</Literal>
+        <Literal xml:lang="dev.com">PT Bukalapak.com</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9012,7 +9012,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Pakdata"/>
-        <Literal>Pakdata@dev.com</Literal>
+        <Literal xml:lang="dev.com">Pakdata</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9027,7 +9027,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#PaniniS.p.A."/>
-        <Literal>Panini S.p.A.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Panini S.p.A.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9067,7 +9067,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#PaulHemetsberger"/>
-        <Literal>Paul Hemetsberger@dev.com</Literal>
+        <Literal xml:lang="dev.com">Paul Hemetsberger</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9082,7 +9082,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#PerfectCorp."/>
-        <Literal>Perfect Corp.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Perfect Corp.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9097,7 +9097,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#PetloveLab"/>
-        <Literal>Petlove Lab@dev.com</Literal>
+        <Literal xml:lang="dev.com">Petlove Lab</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9147,7 +9147,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#PhotoCollageMaster"/>
-        <Literal>Photo Collage Master@dev.com</Literal>
+        <Literal xml:lang="dev.com">Photo Collage Master</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9198,7 +9198,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#PiuPiuApps"/>
-        <Literal>Piu Piu Apps@dev.com</Literal>
+        <Literal xml:lang="dev.com">Piu Piu Apps</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9238,7 +9238,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#PizzaHutInc."/>
-        <Literal>Pizza Hut Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Pizza Hut Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9253,7 +9253,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#PlentyoffishMediaULC"/>
-        <Literal>Plentyoffish Media ULC@dev.com</Literal>
+        <Literal xml:lang="dev.com">Plentyoffish Media ULC</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9293,7 +9293,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#PostmatesInc."/>
-        <Literal>Postmates Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Postmates Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9308,7 +9308,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Prestigio"/>
-        <Literal>Prestigio@dev.com</Literal>
+        <Literal xml:lang="dev.com">Prestigio</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9348,7 +9348,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#QuantumAppx"/>
-        <Literal>Quantum Appx@dev.com</Literal>
+        <Literal xml:lang="dev.com">Quantum Appx</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9363,7 +9363,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#QuarzoApps"/>
-        <Literal>Quarzo Apps@dev.com</Literal>
+        <Literal xml:lang="dev.com">Quarzo Apps</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9378,7 +9378,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#READERALLC"/>
-        <Literal>READERA LLC@dev.com</Literal>
+        <Literal xml:lang="dev.com">READERA LLC</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9393,7 +9393,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#RVStudio"/>
-        <Literal>RVStudio@dev.com</Literal>
+        <Literal xml:lang="dev.com">RVStudio</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9408,7 +9408,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#RapidoBike"/>
-        <Literal>Rapido Bike@dev.com</Literal>
+        <Literal xml:lang="dev.com">Rapido Bike</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9448,7 +9448,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#RepkaSoft"/>
-        <Literal>RepkaSoft@dev.com</Literal>
+        <Literal xml:lang="dev.com">RepkaSoft</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9463,7 +9463,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#RiafyTechnologies"/>
-        <Literal>Riafy Technologies@dev.com</Literal>
+        <Literal xml:lang="dev.com">Riafy Technologies</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9478,7 +9478,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#SNCF"/>
-        <Literal>SNCF@dev.com</Literal>
+        <Literal xml:lang="dev.com">SNCF</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9493,7 +9493,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#STOLMOLIMITED"/>
-        <Literal>STOLMO LIMITED@dev.com</Literal>
+        <Literal xml:lang="dev.com">STOLMO LIMITED</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9508,7 +9508,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#SandStormStudios"/>
-        <Literal>SandStorm Studios@dev.com</Literal>
+        <Literal xml:lang="dev.com">SandStorm Studios</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9523,7 +9523,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#SchipholAirport"/>
-        <Literal>Schiphol Airport@dev.com</Literal>
+        <Literal xml:lang="dev.com">Schiphol Airport</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9538,7 +9538,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#SecondaVariante"/>
-        <Literal>Seconda Variante@dev.com</Literal>
+        <Literal xml:lang="dev.com">Seconda Variante</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9553,7 +9553,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#ShareChat"/>
-        <Literal>ShareChat@dev.com</Literal>
+        <Literal xml:lang="dev.com">ShareChat</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9593,7 +9593,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#SharkeeLtd."/>
-        <Literal>Sharkee Ltd.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Sharkee Ltd.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9608,7 +9608,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#ShopBack"/>
-        <Literal>ShopBack@dev.com</Literal>
+        <Literal xml:lang="dev.com">ShopBack</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9623,7 +9623,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Shopee"/>
-        <Literal>Shopee@dev.com</Literal>
+        <Literal xml:lang="dev.com">Shopee</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9638,7 +9638,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#SigmoidLabsAndItsAffiliates"/>
-        <Literal>Sigmoid Labs and its Affiliates@dev.com</Literal>
+        <Literal xml:lang="dev.com">Sigmoid Labs and its Affiliates</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9653,7 +9653,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#SimSimiInc."/>
-        <Literal>SimSimi Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">SimSimi Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9668,7 +9668,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#SkoutInc."/>
-        <Literal>Skout Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Skout Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9708,7 +9708,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#SkyMapDevs"/>
-        <Literal>Sky Map Devs@dev.com</Literal>
+        <Literal xml:lang="dev.com">Sky Map Devs</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9723,7 +9723,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Skype"/>
-        <Literal>Skype@dev.com</Literal>
+        <Literal xml:lang="dev.com">Skype</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9738,7 +9738,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#SkyscannerLtd"/>
-        <Literal>Skyscanner Ltd@dev.com</Literal>
+        <Literal xml:lang="dev.com">Skyscanner Ltd</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9753,7 +9753,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#SlicePizzaApp"/>
-        <Literal>Slice Pizza App@dev.com</Literal>
+        <Literal xml:lang="dev.com">Slice Pizza App</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9768,7 +9768,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#SnapInc"/>
-        <Literal>Snap Inc@dev.com</Literal>
+        <Literal xml:lang="dev.com">Snap Inc</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9783,7 +9783,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#SnapdealPrivateLimited"/>
-        <Literal>Snapdeal Private Limited@dev.com</Literal>
+        <Literal xml:lang="dev.com">Snapdeal Private Limited</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9798,7 +9798,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#SonyMobileCommunications"/>
-        <Literal>Sony Mobile Communications@dev.com</Literal>
+        <Literal xml:lang="dev.com">Sony Mobile Communications</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9813,7 +9813,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#SonyPicturesNetworksIndiaPvt.Ltd"/>
-        <Literal>Sony Pictures Networks India Pvt. Ltd@dev.com</Literal>
+        <Literal xml:lang="dev.com">Sony Pictures Networks India Pvt. Ltd</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9828,7 +9828,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#SplendidAppMaker"/>
-        <Literal>Splendid App Maker@dev.com</Literal>
+        <Literal xml:lang="dev.com">Splendid App Maker</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9843,7 +9843,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#StarAppSistemas"/>
-        <Literal>StarApp Sistemas@dev.com</Literal>
+        <Literal xml:lang="dev.com">StarApp Sistemas</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9858,7 +9858,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#StarbucksCoffeeCompany"/>
-        <Literal>Starbucks Coffee Company@dev.com</Literal>
+        <Literal xml:lang="dev.com">Starbucks Coffee Company</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9884,7 +9884,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#StorytelSwedenAB"/>
-        <Literal>Storytel Sweden AB@dev.com</Literal>
+        <Literal xml:lang="dev.com">Storytel Sweden AB</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9899,7 +9899,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Styleseat"/>
-        <Literal>Styleseat@dev.com</Literal>
+        <Literal xml:lang="dev.com">Styleseat</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9914,7 +9914,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#SunspotWidgets."/>
-        <Literal>Sunspot Widgets.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Sunspot Widgets.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9929,7 +9929,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#SweefitStudios"/>
-        <Literal>Sweefit Studios@dev.com</Literal>
+        <Literal xml:lang="dev.com">Sweefit Studios</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9944,7 +9944,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#SweetSugar"/>
-        <Literal>Sweet Sugar@dev.com</Literal>
+        <Literal xml:lang="dev.com">Sweet Sugar</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9959,7 +9959,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Swiggy"/>
-        <Literal>Swiggy@dev.com</Literal>
+        <Literal xml:lang="dev.com">Swiggy</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9974,7 +9974,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Sygic."/>
-        <Literal>Sygic.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Sygic.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -9989,7 +9989,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#T-MobilePolskaS.A."/>
-        <Literal>T-Mobile Polska S.A.@dev.com</Literal>
+        <Literal xml:lang="dev.com">T-Mobile Polska S.A.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10004,7 +10004,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#TGVCinemasSdnBhd"/>
-        <Literal>TGV Cinemas Sdn Bhd@dev.com</Literal>
+        <Literal xml:lang="dev.com">TGV Cinemas Sdn Bhd</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10019,7 +10019,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#TRUSTUDIO"/>
-        <Literal>TRUSTUDIO@dev.com</Literal>
+        <Literal xml:lang="dev.com">TRUSTUDIO</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10034,7 +10034,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Tango"/>
-        <Literal>Tango@dev.com</Literal>
+        <Literal xml:lang="dev.com">Tango</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10049,7 +10049,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#TargetTech"/>
-        <Literal>TargetTech@dev.com</Literal>
+        <Literal xml:lang="dev.com">TargetTech</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10089,7 +10089,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#TelecomInternationalMyanmarLimited"/>
-        <Literal>Telecom International Myanmar Limited@dev.com</Literal>
+        <Literal xml:lang="dev.com">Telecom International Myanmar Limited</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10129,7 +10129,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#TelegramFZ-LLC"/>
-        <Literal>Telegram FZ-LLC@dev.com</Literal>
+        <Literal xml:lang="dev.com">Telegram FZ-LLC</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10144,7 +10144,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Telepathic"/>
-        <Literal>Telepathic@dev.com</Literal>
+        <Literal xml:lang="dev.com">Telepathic</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10184,7 +10184,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Tenoku"/>
-        <Literal>Tenoku@dev.com</Literal>
+        <Literal xml:lang="dev.com">Tenoku</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10199,7 +10199,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#TeslaCoilSoftware"/>
-        <Literal>TeslaCoil Software@dev.com</Literal>
+        <Literal xml:lang="dev.com">TeslaCoil Software</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10239,7 +10239,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#ThePurpleCastle"/>
-        <Literal>The Purple Castle@dev.com</Literal>
+        <Literal xml:lang="dev.com">The Purple Castle</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10254,7 +10254,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#TheWeatherChannel"/>
-        <Literal>The Weather Channel@dev.com</Literal>
+        <Literal xml:lang="dev.com">The Weather Channel</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10269,7 +10269,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#TikTokPte.Ltd."/>
-        <Literal>TikTok Pte. Ltd.@dev.com</Literal>
+        <Literal xml:lang="dev.com">TikTok Pte. Ltd.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10284,7 +10284,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Timehop"/>
-        <Literal>Timehop@dev.com</Literal>
+        <Literal xml:lang="dev.com">Timehop</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10299,7 +10299,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#ToTok"/>
-        <Literal>ToTok@dev.com</Literal>
+        <Literal xml:lang="dev.com">ToTok</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10314,7 +10314,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Tokopedia"/>
-        <Literal>Tokopedia@dev.com</Literal>
+        <Literal xml:lang="dev.com">Tokopedia</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10329,7 +10329,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#TooGoodToGoAps"/>
-        <Literal>Too Good To Go Aps@dev.com</Literal>
+        <Literal xml:lang="dev.com">Too Good To Go Aps</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10344,7 +10344,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#TouchPal"/>
-        <Literal>TouchPal@dev.com</Literal>
+        <Literal xml:lang="dev.com">TouchPal</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10359,7 +10359,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#TouchPalEmojiKeyboardTeam"/>
-        <Literal>TouchPal Emoji Keyboard Team@dev.com</Literal>
+        <Literal xml:lang="dev.com">TouchPal Emoji Keyboard Team</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10374,7 +10374,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#TranLeTrongKhuong"/>
-        <Literal>trongkhuong@gmail.com</Literal>
+        <Literal xml:lang="gmail.com">trongkhuong</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10389,7 +10389,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Traveloka"/>
-        <Literal>Traveloka@dev.com</Literal>
+        <Literal xml:lang="dev.com">Traveloka</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10404,7 +10404,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Treatwell"/>
-        <Literal>Treatwell@dev.com</Literal>
+        <Literal xml:lang="dev.com">Treatwell</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10419,7 +10419,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#TreydevInc"/>
-        <Literal>Treydev Inc@dev.com</Literal>
+        <Literal xml:lang="dev.com">Treydev Inc</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10434,7 +10434,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Tripadvisor"/>
-        <Literal>Tripadvisor@dev.com</Literal>
+        <Literal xml:lang="dev.com">Tripadvisor</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10449,7 +10449,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#TroveTechnologies"/>
-        <Literal>Trove Technologies@dev.com</Literal>
+        <Literal xml:lang="dev.com">Trove Technologies</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10464,7 +10464,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Truecaller"/>
-        <Literal>Truecaller@dev.com</Literal>
+        <Literal xml:lang="dev.com">Truecaller</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10479,7 +10479,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#TruongQuangTuan"/>
-        <Literal>truongquangtuanit@gmailcom</Literal>
+        <Literal xml:lang="gmailcom">truongquangtuanit</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10494,7 +10494,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#TubiTV"/>
-        <Literal>Tubi TV@dev.com</Literal>
+        <Literal xml:lang="dev.com">Tubi TV</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10509,7 +10509,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#UCWebSingaporePte.Ltd."/>
-        <Literal>UCWeb Singapore Pte. Ltd.@dev.com</Literal>
+        <Literal xml:lang="dev.com">UCWeb Singapore Pte. Ltd.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10524,7 +10524,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#ULTA"/>
-        <Literal>ULTA@dev.com</Literal>
+        <Literal xml:lang="dev.com">ULTA</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10564,7 +10564,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#UnfoldCreative"/>
-        <Literal>Unfold Creative@dev.com</Literal>
+        <Literal xml:lang="dev.com">Unfold Creative</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10579,7 +10579,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#VINCIAutoroutes"/>
-        <Literal>VINCI Autoroutes@dev.com</Literal>
+        <Literal xml:lang="dev.com">VINCI Autoroutes</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10594,7 +10594,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#VK.com"/>
-        <Literal>VK.com@dev.com</Literal>
+        <Literal xml:lang="dev.com">VK.com</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10609,7 +10609,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#VOVATECHLIMITED"/>
-        <Literal>VOVA TECH LIMITED@dev.com</Literal>
+        <Literal xml:lang="dev.com">VOVA TECH LIMITED</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10624,7 +10624,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Viacom18DigitalMedia"/>
-        <Literal>Viacom18 Digital Media@dev.com</Literal>
+        <Literal xml:lang="dev.com">Viacom18 Digital Media</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10639,7 +10639,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#ViberMediaS.àr.l."/>
-        <Literal>Viber Media S.à r.l.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Viber Media S.à r.l.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10654,7 +10654,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#VisualBlastersLLC"/>
-        <Literal>Visual Blasters LLC@dev.com</Literal>
+        <Literal xml:lang="dev.com">Visual Blasters LLC</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10669,7 +10669,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#VitalGamesProduction"/>
-        <Literal>Vital Games Production@dev.com</Literal>
+        <Literal xml:lang="dev.com">Vital Games Production</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10684,7 +10684,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#WOOWABROTHERSVIETNAM"/>
-        <Literal>WOOWA BROTHERS VIETNAM@dev.com</Literal>
+        <Literal xml:lang="dev.com">WOOWA BROTHERS VIETNAM</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10699,7 +10699,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Wallapop"/>
-        <Literal>Wallapop@dev.com</Literal>
+        <Literal xml:lang="dev.com">Wallapop</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10714,7 +10714,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Wattpad.com"/>
-        <Literal>Wattpad.com@dev.com</Literal>
+        <Literal xml:lang="dev.com">Wattpad.com</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10729,7 +10729,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Waze"/>
-        <Literal>Waze@dev.com</Literal>
+        <Literal xml:lang="dev.com">Waze</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10754,7 +10754,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#WeChat"/>
-        <Literal>WeChat@dev.com</Literal>
+        <Literal xml:lang="dev.com">WeChat</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10784,7 +10784,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#WeatherBug"/>
-        <Literal>WeatherBug@dev.com</Literal>
+        <Literal xml:lang="dev.com">WeatherBug</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10799,7 +10799,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#WeatherUnderground"/>
-        <Literal>Weather Underground@dev.com</Literal>
+        <Literal xml:lang="dev.com">Weather Underground</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10814,7 +10814,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#WebediaBrasil"/>
-        <Literal>Webedia Brasil@dev.com</Literal>
+        <Literal xml:lang="dev.com">Webedia Brasil</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10829,7 +10829,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#WebelinxLoveStoryGames"/>
-        <Literal>Webelinx Love Story Games@dev.com</Literal>
+        <Literal xml:lang="dev.com">Webelinx Love Story Games</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10844,7 +10844,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#WetterOnlineGmbH"/>
-        <Literal>WetterOnline GmbH@dev.com</Literal>
+        <Literal xml:lang="dev.com">WetterOnline GmbH</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10884,7 +10884,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#WhatsAppInc."/>
-        <Literal>WhatsApp Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">WhatsApp Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10949,7 +10949,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#WickedRide"/>
-        <Literal>WickedRide@dev.com</Literal>
+        <Literal xml:lang="dev.com">WickedRide</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -10964,7 +10964,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#WikimediaFoundation"/>
-        <Literal>Wikimedia Foundation@dev.com</Literal>
+        <Literal xml:lang="dev.com">Wikimedia Foundation</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11004,7 +11004,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#WishInc."/>
-        <Literal>Wish Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Wish Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11019,7 +11019,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#XaVanHoc"/>
-        <Literal>xavanhoc@gmail.com</Literal>
+        <Literal xml:lang="gmail.com">xavanhoc</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11034,7 +11034,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#YEMEKSEPETİELEKTRONİKİLETİŞİMA.S."/>
-        <Literal>YEMEK SEPETİ ELEKTRONİK İLETİŞİM A.S.@dev.com</Literal>
+        <Literal xml:lang="dev.com">YEMEK SEPETİ ELEKTRONİK İLETİŞİM A.S.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11049,7 +11049,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Yahoo"/>
-        <Literal>Yahoo@dev.com</Literal>
+        <Literal xml:lang="dev.com">Yahoo</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11139,7 +11139,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#YandexApps"/>
-        <Literal>Yandex Apps@dev.com</Literal>
+        <Literal xml:lang="dev.com">Yandex Apps</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11154,7 +11154,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#YobiMobi"/>
-        <Literal>Yobi Mobi@dev.com</Literal>
+        <Literal xml:lang="dev.com">Yobi Mobi</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11169,7 +11169,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Zedge"/>
-        <Literal>Zedge@dev.com</Literal>
+        <Literal xml:lang="dev.com">Zedge</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11184,7 +11184,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Zomato"/>
-        <Literal>Zomato@dev.com</Literal>
+        <Literal xml:lang="dev.com">Zomato</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11199,7 +11199,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#bigDreamCorporation"/>
-        <Literal>bigDream Corporation@dev.com</Literal>
+        <Literal xml:lang="dev.com">bigDream Corporation</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11239,7 +11239,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#bol.comBv"/>
-        <Literal>bol.com bv@dev.com</Literal>
+        <Literal xml:lang="dev.com">bol.com bv</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11279,7 +11279,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#difer"/>
-        <Literal>difer@dev.com</Literal>
+        <Literal xml:lang="dev.com">difer</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11294,7 +11294,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#eBayMobile"/>
-        <Literal>eBay Mobile@dev.com</Literal>
+        <Literal xml:lang="dev.com">eBay Mobile</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11334,7 +11334,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#efood"/>
-        <Literal>efood@dev.com</Literal>
+        <Literal xml:lang="dev.com">efood</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11349,7 +11349,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#gabenative"/>
-        <Literal>gabenative@dev.com</Literal>
+        <Literal xml:lang="dev.com">gabenative</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11364,7 +11364,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#hidemy.name"/>
-        <Literal>hidemy.name@dev.com</Literal>
+        <Literal xml:lang="dev.com">hidemy.name</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11379,7 +11379,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#iFoodDeliveryDeComidaEMercado"/>
-        <Literal>iFood Delivery de Comida e Mercado@dev.com</Literal>
+        <Literal xml:lang="dev.com">iFood Delivery de Comida e Mercado</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11419,7 +11419,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#iQIYI"/>
-        <Literal>iQIYI@dev.com</Literal>
+        <Literal xml:lang="dev.com">iQIYI</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11459,7 +11459,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#ibisinc."/>
-        <Literal>ibis inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">ibis inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11474,7 +11474,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#imo.im"/>
-        <Literal>imo.im@dev.com</Literal>
+        <Literal xml:lang="dev.com">imo.im</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11514,7 +11514,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#ipsy"/>
-        <Literal>ipsy@dev.com</Literal>
+        <Literal xml:lang="dev.com">ipsy</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11529,7 +11529,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#ixigo-IRCTCOfficialBookingPartner"/>
-        <Literal>ixigo - IRCTC Official Booking Partner@dev.com</Literal>
+        <Literal xml:lang="dev.com">ixigo - IRCTC Official Booking Partner</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11544,7 +11544,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#jejuair"/>
-        <Literal>jejuair@dev.com</Literal>
+        <Literal xml:lang="dev.com">jejuair</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11559,7 +11559,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#lastminute.com"/>
-        <Literal>lastminute.com@dev.com</Literal>
+        <Literal xml:lang="dev.com">lastminute.com</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11574,7 +11574,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#litnet"/>
-        <Literal>litnet@dev.com</Literal>
+        <Literal xml:lang="dev.com">litnet</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11589,7 +11589,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#memebox"/>
-        <Literal>memebox@dev.com</Literal>
+        <Literal xml:lang="dev.com">memebox</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11604,7 +11604,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#nandboxInc."/>
-        <Literal>nandbox Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">nandbox Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11619,7 +11619,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#newborntown"/>
-        <Literal>newborntown@dev.com</Literal>
+        <Literal xml:lang="dev.com">newborntown</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11634,7 +11634,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#ola"/>
-        <Literal>ola@dev.com</Literal>
+        <Literal xml:lang="dev.com">ola</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11649,7 +11649,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#pixivInc."/>
-        <Literal>pixiv Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">pixiv Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11664,7 +11664,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#play.io"/>
-        <Literal>play.io@dev.com</Literal>
+        <Literal xml:lang="dev.com">play.io</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11679,7 +11679,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#quran.com"/>
-        <Literal>quran.com@dev.com</Literal>
+        <Literal xml:lang="dev.com">quran.com</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11694,7 +11694,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#redBus"/>
-        <Literal>redBus@dev.com</Literal>
+        <Literal xml:lang="dev.com">redBus</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11709,7 +11709,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#smart-proAndroidApps"/>
-        <Literal>smart-pro android apps@dev.com</Literal>
+        <Literal xml:lang="dev.com">smart-pro android apps</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11724,7 +11724,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#weawowWeatherApp"/>
-        <Literal>weawow weather app@dev.com</Literal>
+        <Literal xml:lang="dev.com">weawow weather app</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11764,7 +11764,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#ŻabkaPolskasp.Zo.o."/>
-        <Literal>Żabka Polska sp. z o.o.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Żabka Polska sp. z o.o.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11779,7 +11779,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#МосковскийМетрополитен"/>
-        <Literal>Московский Метрополитен@dev.com</Literal>
+        <Literal xml:lang="dev.com">Московский Метрополитен</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11794,7 +11794,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#강남언니"/>
-        <Literal>강남언니@dev.com</Literal>
+        <Literal xml:lang="dev.com">강남언니</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11834,7 +11834,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#밀리의서재"/>
-        <Literal>밀리의서재@dev.com</Literal>
+        <Literal xml:lang="dev.com">밀리의서재</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -11904,10 +11904,10 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#description_html"/>
         <NamedIndividual IRI="#12Bay"/>
-        <Literal>&lt;div class=&quot;description&quot;&gt;
+        <Literal xml:lang="12bay.vn&lt;br&gt;» Phiên bản web và iphone: http://12bay.vn&lt;/div&gt;
+                    &lt;/div&gt;VND">&lt;div class=&quot;description&quot;&gt;
                     &lt;h2&gt;Mô tả của San Ve May Bay Gia Re - 12Bay.vn&lt;/h2&gt;
-                    &lt;div class=&quot;content&quot; itemprop=&quot;description&quot;&gt;&lt;b&gt;12BBAY.VN&lt;/b&gt;&lt;br&gt;&lt;b&gt;🎉Các chức năng chính:👍&lt;/b&gt;&lt;br&gt;» Đặt vé máy bay,&lt;br&gt;» Đặt vé tàu,&lt;br&gt;» Săn vé tự động,&lt;br&gt;» Theo dõi chuyến bay (Flight radar/ FLight tracker),&lt;br&gt;» Ứng dụng hổ trợ tra cứu thông tin so sánh giá vé máy bay của các hãng bay trong nước.&lt;br&gt;» Jetstar, VietNam Airlines, Vietjet Air, BambooAirways, DSVN&lt;br&gt;» Cập nhật tính năng &lt;b&gt;SĂN VÉ RẺ&lt;/b&gt; mới. Giúp bạn nhanh chóng lựa chọn được vé rẻ ưng ý nhất cho mình. Mọi nơi mọi lúc.&lt;br&gt;» Chương trình hỗ trợ giúp bạn tìm kiếm và so sánh giá vé máy bay của các hãng trong nước để lựa chọn cho mình giá phù hợp nhất. Vietnam Airlines, Vietjet, Jestar, Bamboo Airways.&lt;br&gt;» Kiểm tra tình trạng của  vé, kiểm tra vé thật hay vé giả.&lt;br&gt;» Hỗ trợ đặt vé giữ chổ và Thanh toán sau qua SMS hoặc Điện Thoại .&lt;br&gt;» Xem giá vé và đặt vé các chặn bay quốc tế.&lt;br&gt;&lt;b&gt; 💳 Hỗ trợ tất cả phương thức thanh toán 24/7 💳 &lt;/b&gt;&lt;br&gt;» Tiền mặt (tại Thế giới di động, Nguyễn Kim, Viễn thông A, Circle K, Vinmart, Citimart, Ministop, B’s mart, FamilyMart.. ) &lt;br&gt;» Tài khoản ngân hàng&lt;br&gt;» Thẻ ATM&lt;br&gt;» Thẻ tín dụng&lt;br&gt;&lt;b&gt;P/s&lt;/b&gt;&lt;br&gt;» HOTLINE hổ trợ: 1900 2642&lt;br&gt;» 📩 Mọi email đóng góp xin gửi về dev@12bay.vn&lt;br&gt;» Phiên bản web và iphone: http://12bay.vn&lt;/div&gt;
-                    &lt;/div&gt;VND</Literal>
+                    &lt;div class=&quot;content&quot; itemprop=&quot;description&quot;&gt;&lt;b&gt;12BBAY.VN&lt;/b&gt;&lt;br&gt;&lt;b&gt;🎉Các chức năng chính:👍&lt;/b&gt;&lt;br&gt;» Đặt vé máy bay,&lt;br&gt;» Đặt vé tàu,&lt;br&gt;» Săn vé tự động,&lt;br&gt;» Theo dõi chuyến bay (Flight radar/ FLight tracker),&lt;br&gt;» Ứng dụng hổ trợ tra cứu thông tin so sánh giá vé máy bay của các hãng bay trong nước.&lt;br&gt;» Jetstar, VietNam Airlines, Vietjet Air, BambooAirways, DSVN&lt;br&gt;» Cập nhật tính năng &lt;b&gt;SĂN VÉ RẺ&lt;/b&gt; mới. Giúp bạn nhanh chóng lựa chọn được vé rẻ ưng ý nhất cho mình. Mọi nơi mọi lúc.&lt;br&gt;» Chương trình hỗ trợ giúp bạn tìm kiếm và so sánh giá vé máy bay của các hãng trong nước để lựa chọn cho mình giá phù hợp nhất. Vietnam Airlines, Vietjet, Jestar, Bamboo Airways.&lt;br&gt;» Kiểm tra tình trạng của  vé, kiểm tra vé thật hay vé giả.&lt;br&gt;» Hỗ trợ đặt vé giữ chổ và Thanh toán sau qua SMS hoặc Điện Thoại .&lt;br&gt;» Xem giá vé và đặt vé các chặn bay quốc tế.&lt;br&gt;&lt;b&gt; 💳 Hỗ trợ tất cả phương thức thanh toán 24/7 💳 &lt;/b&gt;&lt;br&gt;» Tiền mặt (tại Thế giới di động, Nguyễn Kim, Viễn thông A, Circle K, Vinmart, Citimart, Ministop, B’s mart, FamilyMart.. ) &lt;br&gt;» Tài khoản ngân hàng&lt;br&gt;» Thẻ ATM&lt;br&gt;» Thẻ tín dụng&lt;br&gt;&lt;b&gt;P/s&lt;/b&gt;&lt;br&gt;» HOTLINE hổ trợ: 1900 2642&lt;br&gt;» 📩 Mọi email đóng góp xin gửi về dev</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#downloads"/>
@@ -12034,7 +12034,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#2ndPhoneNumber&amp;VPNLtd"/>
-        <Literal>2nd Phone Number &amp; VPN Ltd@dev.com</Literal>
+        <Literal xml:lang="dev.com">2nd Phone Number &amp; VPN Ltd</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -12049,7 +12049,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#4kWallpaper"/>
-        <Literal>4k wallpaper@dev.com</Literal>
+        <Literal xml:lang="dev.com">4k wallpaper</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -12089,7 +12089,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#7-Eleven,Inc."/>
-        <Literal>7-Eleven, Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">7-Eleven, Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -12104,7 +12104,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#9GAG"/>
-        <Literal>9GAG@dev.com</Literal>
+        <Literal xml:lang="dev.com">9GAG</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -12119,7 +12119,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#99TecnologiaLTDA"/>
-        <Literal>99 Tecnologia LTDA@dev.com</Literal>
+        <Literal xml:lang="dev.com">99 Tecnologia LTDA</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -12134,7 +12134,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#AGREGATOR-SONLAIN,OOO"/>
-        <Literal>AGREGATOR-S ONLAIN, OOO@dev.com</Literal>
+        <Literal xml:lang="dev.com">AGREGATOR-S ONLAIN, OOO</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -12149,7 +12149,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#AIRFRONT,Inc."/>
-        <Literal>AIRFRONT, Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">AIRFRONT, Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -12214,7 +12214,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Audible,Inc"/>
-        <Literal>Audible, Inc@dev.com</Literal>
+        <Literal xml:lang="dev.com">Audible, Inc</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -12229,7 +12229,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#AwardWinnerText&amp;SMSBlocker"/>
-        <Literal>Award Winner Text &amp; SMS Blocker Messages@dev.com</Literal>
+        <Literal xml:lang="dev.com">Award Winner Text &amp; SMS Blocker Messages</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -12244,7 +12244,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Beautylish,Inc."/>
-        <Literal>Beautylish, Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Beautylish, Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -12284,7 +12284,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#BestFreeVideoEditor&amp;VideoMakerDev"/>
-        <Literal>Best Free Video Editor &amp; Video Maker Dev@dev.com</Literal>
+        <Literal xml:lang="dev.com">Best Free Video Editor &amp; Video Maker Dev</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -12349,7 +12349,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Booking.comHotels&amp;VacationRentals"/>
-        <Literal>Booking.com Hotels &amp; Vacation Rentals@dev.com</Literal>
+        <Literal xml:lang="dev.com">Booking.com Hotels &amp; Vacation Rentals</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -12464,7 +12464,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#CookpadInc(UK)"/>
-        <Literal>Cookpad Inc (UK)@dev.com</Literal>
+        <Literal xml:lang="dev.com">Cookpad Inc (UK)</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -12479,7 +12479,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#DeNACo.,Ltd."/>
-        <Literal>DeNA Co., Ltd.@dev.com</Literal>
+        <Literal xml:lang="dev.com">DeNA Co., Ltd.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -12494,7 +12494,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Dictionary.com,LLC"/>
-        <Literal>Dictionary.com, LLC@dev.com</Literal>
+        <Literal xml:lang="dev.com">Dictionary.com, LLC</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -12509,7 +12509,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Domino&apos;sPizzaLLC"/>
-        <Literal>Domino&apos;s Pizza LLC@dev.com</Literal>
+        <Literal xml:lang="dev.com">Domino&apos;s Pizza LLC</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -12524,7 +12524,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#DoubleGIS,LLC"/>
-        <Literal>DoubleGIS, LLC@dev.com</Literal>
+        <Literal xml:lang="dev.com">DoubleGIS, LLC</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -12664,7 +12664,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Groupon,Inc."/>
-        <Literal>Groupon, Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Groupon, Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -12704,7 +12704,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#HinKhoj.com(हिंखोज.कॉम)"/>
-        <Literal>HinKhoj.com (हिंखोज.कॉम)@dev.com</Literal>
+        <Literal xml:lang="dev.com">HinKhoj.com (हिंखोज.कॉम)</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -12744,7 +12744,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Jehovah&apos;sWitnesses"/>
-        <Literal>Jehovah&apos;s Witnesses@dev.com</Literal>
+        <Literal xml:lang="dev.com">Jehovah&apos;s Witnesses</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -12834,7 +12834,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#KlarnaBankAB(publ)"/>
-        <Literal>Klarna Bank AB (publ)@dev.com</Literal>
+        <Literal xml:lang="dev.com">Klarna Bank AB (publ)</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -12924,7 +12924,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#LotteHimartCo.,Ltd"/>
-        <Literal>Lotte Himart Co.,Ltd@dev.com</Literal>
+        <Literal xml:lang="dev.com">Lotte Himart Co.,Ltd</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -12939,7 +12939,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Lowe&apos;sCompanies,Inc."/>
-        <Literal>Lowe&apos;s Companies, Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Lowe&apos;s Companies, Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -12979,7 +12979,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Maps&amp;GPSNavigation"/>
-        <Literal>Maps &amp; GPS Navigation@dev.com</Literal>
+        <Literal xml:lang="dev.com">Maps &amp; GPS Navigation</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -13019,7 +13019,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#McDonald&apos;sApps"/>
-        <Literal>McDonald&apos;s Apps@dev.com</Literal>
+        <Literal xml:lang="dev.com">McDonald&apos;s Apps</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -13034,7 +13034,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#McDonaldsUSA,LLC"/>
-        <Literal>McDonalds USA, LLC@dev.com</Literal>
+        <Literal xml:lang="dev.com">McDonalds USA, LLC</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -13124,7 +13124,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#MobiApp&amp;ThumbnailMakerInc"/>
-        <Literal>Mobi App &amp; Thumbnail Maker Inc@dev.com</Literal>
+        <Literal xml:lang="dev.com">Mobi App &amp; Thumbnail Maker Inc</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -13139,7 +13139,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Mobile,ASUSTekComputerInc."/>
-        <Literal>Mobile, ASUSTek Computer Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Mobile, ASUSTek Computer Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -13179,7 +13179,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Netflix,Inc."/>
-        <Literal>Netflix, Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Netflix, Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -13219,7 +13219,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#PathMobile,Inc."/>
-        <Literal>Path Mobile, Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Path Mobile, Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -13234,7 +13234,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Perfect365,Inc."/>
-        <Literal>Perfect365, Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Perfect365, Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -13274,7 +13274,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Rappi,Inc-Delivery"/>
-        <Literal>Rappi, Inc - Delivery@dev.com</Literal>
+        <Literal xml:lang="dev.com">Rappi, Inc - Delivery</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -13314,7 +13314,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#RewindApp&amp;HeartCamera-SnapPhotoEditor"/>
-        <Literal>Rewind App &amp; Heart Camera - Snap Photo Editor@dev.com</Literal>
+        <Literal xml:lang="dev.com">Rewind App &amp; Heart Camera - Snap Photo Editor</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -13329,7 +13329,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#SamsungElectronicsCo.,Ltd."/>
-        <Literal>Samsung Electronics Co.,  Ltd.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Samsung Electronics Co.,  Ltd.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -13344,7 +13344,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Scribd,Inc."/>
-        <Literal>Scribd, Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Scribd, Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -13359,7 +13359,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#SelfiePhotoEditor&amp;VintageFilters"/>
-        <Literal>Selfie Photo Editor &amp; Vintage Filters@dev.com</Literal>
+        <Literal xml:lang="dev.com">Selfie Photo Editor &amp; Vintage Filters</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -13374,7 +13374,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#SephoraUSA,Inc."/>
-        <Literal>Sephora USA, Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Sephora USA, Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -13514,7 +13514,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Tumblr,Inc"/>
-        <Literal>Tumblr, Inc@dev.com</Literal>
+        <Literal xml:lang="dev.com">Tumblr, Inc</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -13529,7 +13529,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#TwitchInteractive,Inc."/>
-        <Literal>Twitch Interactive, Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Twitch Interactive, Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -13619,7 +13619,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#UberTechnologies,Inc."/>
-        <Literal>Uber Technologies, Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">Uber Technologies, Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -13709,7 +13709,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Wendy&apos;sInt&apos;l.,LLC"/>
-        <Literal>Wendy&apos;s Int&apos;l., LLC@dev.com</Literal>
+        <Literal xml:lang="dev.com">Wendy&apos;s Int&apos;l., LLC</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -13749,7 +13749,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#Yelp,Inc"/>
-        <Literal>Yelp, Inc@dev.com</Literal>
+        <Literal xml:lang="dev.com">Yelp, Inc</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -13789,7 +13789,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#ZOETOPBUSINESSCO.,LIMITED"/>
-        <Literal>ZOETOP BUSINESS CO., LIMITED@dev.com</Literal>
+        <Literal xml:lang="dev.com">ZOETOP BUSINESS CO., LIMITED</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -13804,7 +13804,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#ZOZO,Inc"/>
-        <Literal>ZOZO, Inc@dev.com</Literal>
+        <Literal xml:lang="dev.com">ZOZO, Inc</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -13819,7 +13819,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#ZenUI,ASUSComputerInc."/>
-        <Literal>ZenUI, ASUS Computer Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">ZenUI, ASUS Computer Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -13834,7 +13834,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#dely,Inc."/>
-        <Literal>dely, Inc.@dev.com</Literal>
+        <Literal xml:lang="dev.com">dely, Inc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
@@ -13899,7 +13899,7 @@ OneWayToSource: Binding from view to modelM</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_email"/>
         <NamedIndividual IRI="#®SUOLINNOVATIONSLTD"/>
-        <Literal>® SUOL INNOVATIONS LTD@dev.com</Literal>
+        <Literal xml:lang="dev.com">® SUOL INNOVATIONS LTD</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#developer_name"/>
