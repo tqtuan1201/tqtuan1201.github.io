@@ -1,11 +1,13 @@
 {
-    “applinks”: {
-        “apps”: [],
-        “details”: [
-            {
-                “appID”: “28ZW86LB93.vn.aipacific.ai-health”,
-                “paths”: [“*”],
-            }
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "28ZW86LB93.vn.aipacific.ai-health",
+        "paths": [
+          "*"
         ]
-    }
+      }
+    ]
+  }
 }
