@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "vn.aipacific.aihealth.ai",
+    "sha256_cert_fingerprints":
+    ["94:DC:64:58:DA:12:38:CF:24:CF:DF:9A:9E:25:90:37:D1:0A:ED:94:97:0A:EC:A5:27:44:99:2F:14:46:34:BF"]
+  }
+}]
