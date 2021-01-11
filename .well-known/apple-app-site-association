@@ -1,11 +1,11 @@
 {
   "applinks": {
-    "apps": [],
+    "apps": ["Facebook"],
     "details": [
       {
         "appID": "28ZW86LB93.vn.aipacific.ai-health",
         "paths": [
-          "/bsgd/*"
+          "*"
         ]
       }
     ]
