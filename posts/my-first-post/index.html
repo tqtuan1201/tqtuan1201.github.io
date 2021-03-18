@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-theme=""><head>
-    <title> Tuan Truong | My First Post </title>
+<html lang="en" data-theme="light"><head>
+    <title> Tuan Truong | The VIPER Architecture </title>
 
     
     <meta charset="utf-8"><meta name="generator" content="Hugo 0.81.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-    <meta name="description" content="Hello, bla bla bla...">
+    <meta name="description" content="“First, slove the problem. Then, write the code”">
     
     <link rel="stylesheet"
           href="https://tqtuan1201.github.io/css/style.min.0c643de4008adca329f7a2d616ce308cca99d4ef45e4cca307323e7857910194.css"
@@ -49,18 +49,24 @@
                 integrity="sha256-jvceD9Q/IaMDcz277K5UOLeR0rgmxoqYg716pFmgdtI="
                 crossorigin="anonymous"></script>
     
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="My First Post"/>
-<meta name="twitter:description" content=""/>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tqtuan1201.github.io/images/profile.jpg"/>
+
+<meta name="twitter:title" content="The VIPER Architecture"/>
+<meta name="twitter:description" content="Architecture Just like MVC or MVVM, VIPER is a design pattern created to facilitate the development by creating layers of abstraction and isolation of concerns, creating a cleaner code, and bringing more maintainability further down the road
+VIPER is an acronym for View-Interactor-Presenter-Entity-Router. Each functionality or module must be defined by these five components.
+View It’s what the user sees, the view that represents a functionality. In some cases, a single functionality can have multiple views, for example, an onboarding flow with multiple steps."/>
 
 
     
-    <meta property="og:title" content="My First Post" />
-<meta property="og:description" content="" />
+    <meta property="og:title" content="The VIPER Architecture" />
+<meta property="og:description" content="Architecture Just like MVC or MVVM, VIPER is a design pattern created to facilitate the development by creating layers of abstraction and isolation of concerns, creating a cleaner code, and bringing more maintainability further down the road
+VIPER is an acronym for View-Interactor-Presenter-Entity-Router. Each functionality or module must be defined by these five components.
+View It’s what the user sees, the view that represents a functionality. In some cases, a single functionality can have multiple views, for example, an onboarding flow with multiple steps." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://tqtuan1201.github.io/posts/my-first-post/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://tqtuan1201.github.io/posts/my-first-post/" /><meta property="og:image" content="https://tqtuan1201.github.io/images/profile.jpg"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-03-01T15:58:30&#43;07:00" />
-<meta property="article:modified_time" content="2021-03-01T15:58:30&#43;07:00" /><meta property="og:site_name" content="I&#39;m Tuan Truong" />
+<meta property="article:modified_time" content="2021-03-01T15:58:30&#43;07:00" /><meta property="og:site_name" content="Hi, I&#39;m Tuan Truong" />
 
 
 </head>
@@ -68,9 +74,9 @@
     <div class="logo-title">
         <div class="title">
             <img src="https://tqtuan1201.github.io/images/profile.jpg" alt="profile picture">
-            <h3 title=""><a href="/">I&#39;m Tuan Truong</a></h3>
+            <h3 title=""><a href="/">Hi, I&#39;m Tuan Truong</a></h3>
             <div class="description">
-                <p>Hello, bla bla bla...</p>
+                <p>“First, slove the problem. Then, write the code”</p>
             </div>
         </div>
     </div>
@@ -115,6 +121,30 @@
     <ul class="nav" id="navMenu">
         
         
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">About</a></li>
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Contact</a></li>
+        
         
         
             <li class="theme-switch-item">
@@ -132,11 +162,97 @@
         <div class="post-content">
             
             <div class="post-title">
-                <h3>My First Post</h3>
+                <h3>The VIPER Architecture</h3>
                 
             </div>
 
-            </div>
+            <h1 id="architecture">Architecture</h1>
+<p>Just like MVC or MVVM, VIPER is a design pattern created to facilitate the development by creating layers of abstraction and isolation of concerns, creating a cleaner code, and bringing more maintainability further down the road</p>
+<p>VIPER is an acronym for <strong>View-Interactor-Presenter-Entity-Router</strong>. Each functionality or module must be defined by these <strong>five components</strong>.</p>
+<p><img src="/images/viper-bg.png" alt=""></p>
+<h3 id="view"><strong>View</strong></h3>
+<p><strong>It’s what the user sees, the view that represents a functionality</strong>. In some cases, a single functionality can have multiple views, for example, an onboarding flow with multiple steps. The Router is responsible for transitioning between those views, and they will all use the same Interactor, Presenter, Entity, and Router.</p>
+<ul>
+<li>It&rsquo;s the interface layer, which means UIKit files, mostly UIViewController subclasses and all the other stuff. Views don&rsquo;t do anything that&rsquo;s related to business logic</li>
+</ul>
+<h3 id="interactor"><strong>Interactor</strong></h3>
+<p>Responsible for <strong>handling logic</strong> after receiving orders from the Presenter. Returns the result through a delegate on the Presenter.</p>
+<ul>
+<li>The interactor is responsible for retrieving data from the model layer, and its implementation is completely independent of the user interface.</li>
+<li><strong>It&rsquo;s important to remember that data managers (network, database, sensor) are not part of VIPER</strong></li>
+</ul>
+<h3 id="presenter"><strong>Presenter</strong></h3>
+<p>It’s the crossroad that <strong>connects all the other components</strong>. Receives user actions from the View, sends and receives data from the Interactor, and route to other screens using the Route</p>
+<ul>
+<li>UIKit independent class that prepares the data in the format required by the view and take decisions based on UI events from the view, that&rsquo;s why sometimes it&rsquo;s referred as an event handler. It&rsquo;s the core class of a VIPER module, because it also communicates with the Interactor and calls the router for     wire-framing</li>
+<li>It&rsquo;s the only class that communicates with almost all the other components. That&rsquo;s the ONLY job of the presenter, so it should not know anything about UIKit or low level data models. Basically it&rsquo;s the heart of the application, or some would say it&rsquo;s the place where all the business logic gets implemented.</li>
+</ul>
+<h3 id="entity"><strong>Entity</strong></h3>
+<p>It’s the <strong>information</strong> and <strong>data used on the functionality</strong>. In our case, it will be CoreData since our information will be stored there.</p>
+<ul>
+<li>Plain model classes used mostly by the interactor. Usually I&rsquo;m defining them outside the VIPER module structure (in the service layer), because these entities are shared across the system.</li>
+</ul>
+<h3 id="router"><strong>Router</strong></h3>
+<p><strong>Controls the navigation</strong> flow between screens using UINavigationControllers or between modules by changing the root ViewController of the current Window.</p>
+<ul>
+<li>Also if you have to pass data between VIPER modules it feels like a right place to do this in the router. I usually communicate between two module using a delegate pattern, so I picked up this habit of calling delegate functions in the router</li>
+</ul>
+<h3 id="builder"><strong>Builder</strong></h3>
+<p>It&rsquo;s only responsibility is to build the complete module by using dependency injection for all the extenal services. It can also build mock or other versions of the same module. That&rsquo;s quite helpful if it comes to unit testing. Totally makes sense</p>
+<hr>
+<h1 id="comparison-with-mvvm">Comparison with MVVM</h1>
+<p>A design pattern that offers a similar level of abstraction is MVVM (Model-View-ViewModel). Between both patterns, we can identify the similarities, for example:</p>
+<ul>
+<li>The View on MVVM is the View on VIPER</li>
+<li>The Model on MVVM is the Entity on VIPER</li>
+<li>The ViewModel is represented by the rest of the VIPER components <strong>(Interactor, Presenter, and Router).</strong></li>
+</ul>
+<hr>
+<h1 id="vip-cycle">VIP Cycle</h1>
+<p><img src="/images/vip-cycle.png" alt=""></p>
+<p><strong>Data transfer between modules</strong></p>
+<p>Imagine a list, you select an item and go to a new controller scene. You have to pass at least a unique indentifier between VIPER modules to make this possible.</p>
+<p>It&rsquo;s usually done somewhat like this:</p>
+<ol>
+<li>The view calls the didSelect method on the presenter with the id</li>
+<li>The presenter forwards the id to the router using the routeFor(id) method</li>
+<li>The router calls the builder to build a new module using the id</li>
+<li>The builder builds the new module using the id</li>
+<li>The router presents the new module using it&rsquo;s view (controller)</li>
+<li>The new module passes the id for everyone who needs it (router, presenter)</li>
+<li>The new module&rsquo;s presenter gets the id</li>
+<li>The new module&rsquo;s interactor loads the data and gives it for the presenter</li>
+<li>The new module&rsquo;s presenter gives the data for the view and presents it</li>
+<li>Detail screen appears with proper data.</li>
+</ol>
+<hr>
+<h1 id="advantages"><strong>Advantages</strong></h1>
+<ol>
+<li>Simplicity - for large teams on complex projects</li>
+<li>Scalability - simultaneous work seamlessly</li>
+<li>Reusability - decoupled app components based on roles</li>
+<li>Consistency - module skeletons, separation of concerns</li>
+<li>Clarity - Single responsibilities (SOLID)</li>
+<li>Testability - separated small classes, TDD, better code coverage</li>
+<li>Interfaces - module independence, well defined scopes</li>
+<li>Bug fixing - easier to track issues, locate bugs and problems</li>
+<li>Source control - smaller files, less conflicts, cleaner code</li>
+<li>Easy - codebase looks similar, faster to read others work</li>
+</ol>
+<hr>
+<h1 id="drawbacks"><strong>Drawbacks</strong></h1>
+<ul>
+<li>Verbosity - many files per module</li>
+<li>Complexity - many protocols and delegates</li>
+<li>On-boarding - lack of proper VIPER knowledge</li>
+<li>Engagement - VIPER is bad, because it&rsquo;s complex, meh!</li>
+</ul>
+<h1 id="when"><strong>When</strong></h1>
+<p><img src="/images/viper-when.png" alt=""></p>
+<h2 id="ref">Ref</h2>
+<p><a href="https://cheesecakelabs.com/blog/best-practices-viper-architecture/">Marcelo Gracietti - VIPER architecture: Our best practices to build an app like a boss</a></p>
+<p><a href="https://medium.com/swlh/viper-architecture-and-solid-principles-in-ios-96480cfe88b9">Pedro Alvare, VIPER Architecture and Solid Principles in iOS</a></p>
+</div>
         <div class="post-footer">
             <div class="info">
                 

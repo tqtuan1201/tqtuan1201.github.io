@@ -8,12 +8,14 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Mar 2021 15:58:30 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First Post</title>
+      <title>The VIPER Architecture</title>
       <link>https://tqtuan1201.github.io/posts/my-first-post/</link>
       <pubDate>Mon, 01 Mar 2021 15:58:30 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/posts/my-first-post/</guid>
-      <description></description>
+      <description>Architecture Just like MVC or MVVM, VIPER is a design pattern created to facilitate the development by creating layers of abstraction and isolation of concerns, creating a cleaner code, and bringing more maintainability further down the road
+VIPER is an acronym for View-Interactor-Presenter-Entity-Router. Each functionality or module must be defined by these five components.
+View It’s what the user sees, the view that represents a functionality. In some cases, a single functionality can have multiple views, for example, an onboarding flow with multiple steps.</description>
     </item>
     
   </channel>
