@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <title> Tuan Truong | Series </title>
+    <title> Tuan Truong | Natural Language Processing On Ios Application Implement Viper Clean Architecture In An Ios App </title>
 
     
     <meta charset="utf-8"><meta name="generator" content="Hugo 0.81.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -29,10 +29,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicons/favicon-16x16.png">
 
-    <link rel="canonical" href="http://localhost:1313/series/">
+    <link rel="canonical" href="http://localhost:1313/posts/nlp-on-ios-application-viper-arch/">
 
     
-    <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/series/index.xml" title="Tuan Truong's Blog" />
     
     
     
@@ -53,15 +52,21 @@
     <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://localhost:1313/images/profile.jpg"/>
 
-<meta name="twitter:title" content="Series"/>
-<meta name="twitter:description" content="“First, slove the problem. Then, write the code”"/>
+<meta name="twitter:title" content="Natural Language Processing On Ios Application Implement Viper Clean Architecture In An Ios App"/>
+<meta name="twitter:description" content="Abstract Xây dựng ứng dụng iOS với kiến trúc VIPER về dự đoán tác giả bài thơ. Input đầu vào là một đoạn text đoạn thơ người dùng nhập vào và output là tác giả của đoạn thơ đó. Ví dụ: INPUT = Sao anh không về chơi thôn Vĩ? → OUTPUT = Hàn Mặc Tử
+Với giao diện đơn giản sau:
+  Tìm hiểu về Bag of Words, Turi Create."/>
 
 
     
-    <meta property="og:title" content="Series" />
-<meta property="og:description" content="“First, slove the problem. Then, write the code”" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://localhost:1313/series/" /><meta property="og:image" content="http://localhost:1313/images/profile.jpg"/><meta property="og:site_name" content="Hi, I&#39;m Tuan Truong" />
+    <meta property="og:title" content="Natural Language Processing On Ios Application Implement Viper Clean Architecture In An Ios App" />
+<meta property="og:description" content="Abstract Xây dựng ứng dụng iOS với kiến trúc VIPER về dự đoán tác giả bài thơ. Input đầu vào là một đoạn text đoạn thơ người dùng nhập vào và output là tác giả của đoạn thơ đó. Ví dụ: INPUT = Sao anh không về chơi thôn Vĩ? → OUTPUT = Hàn Mặc Tử
+Với giao diện đơn giản sau:
+  Tìm hiểu về Bag of Words, Turi Create." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/nlp-on-ios-application-viper-arch/" /><meta property="og:image" content="http://localhost:1313/images/profile.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-03-19T13:11:55&#43;07:00" />
+<meta property="article:modified_time" content="2021-03-19T13:11:55&#43;07:00" /><meta property="og:site_name" content="Hi, I&#39;m Tuan Truong" />
 
 
 </head>
@@ -153,11 +158,40 @@
 
     <div class="autopagerize_page_element">
         <div class="content">
-    <div class="archive  animated fadeInDown ">
-        <ul class="list-with-title">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
             
-        </ul>
+            <div class="post-title">
+                <h3>Natural Language Processing On Ios Application Implement Viper Clean Architecture In An Ios App</h3>
+                
+            </div>
+
+            <h2 id="abstract">Abstract</h2>
+<p>Xây dựng ứng dụng iOS với kiến trúc <strong>VIPER</strong> về dự đoán tác giả bài thơ. Input đầu vào là một đoạn text đoạn thơ người dùng nhập vào và output là tác giả của đoạn thơ đó. Ví dụ: <strong>INPUT</strong> = Sao anh không về chơi thôn Vĩ? → <strong>OUTPUT</strong> = Hàn Mặc Tử</p>
+<p>Với giao diện đơn giản sau:</p>
+<blockquote>
+<ul>
+<li>Tìm hiểu về Bag of Words, Turi Create.</li>
+<li>Xây dựng ứng dụng iOS trên kiến trúc VIPER Clean Architecture</li>
+<li>Một số từ khóa liên quan: Bag of Word, Logictic Classifier, Turi Create VIPER, iOS Application</li>
+</ul>
+</blockquote>
+<p><img src="/images/nlp-app-def.png" alt=""></p>
+<h2 id="đặt-vấn-đề">Đặt Vấn Đề</h2>
+<p>INPUT STRING:</p>
+<div class="highlight"><pre class="chroma"><code class="language-md" data-lang="md">Sao anh không về chơi thôn Vĩ? Nhìn nắng hàng cau nắng mới lên  →  Hàn Mặc Tử
+</code></pre></div><p>Nếu sử dụng các phương thức <strong>string compare</strong>  else  Format, break, space brute-force  → So it’s <strong>hard</strong> to do a blind string compare</p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                
+                
+            </div>
+        </div>
+
+        
     </div>
+
 
         </div>
     </div>
