@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head>
+    <title> Tuan Truong | Basic Ci Cd Gitlab Fastlane </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.81.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="“First, slove the problem. Then, write the code”">
+    
+    <link rel="stylesheet"
+          href="https://tqtuan1201.github.io/css/style.min.0c643de4008adca329f7a2d616ce308cca99d4ef45e4cca307323e7857910194.css"
+          integrity="sha256-DGQ95ACK3KMp96LWFs4wjMqZ1O9F5MyjBzI&#43;eFeRAZQ="
+          crossorigin="anonymous"
+          type="text/css">
+    
+    <link rel="stylesheet"
+        href="https://tqtuan1201.github.io/css/markupHighlight.min.f798cbda9aaa38f89eb38be6414bd082cfd71a6780375cbf67b6d2fb2b96491e.css"
+        integrity="sha256-95jL2pqqOPies4vmQUvQgs/XGmeAN1y/Z7bS&#43;yuWSR4="
+        crossorigin="anonymous"
+        type="text/css">
+    
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="https://tqtuan1201.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://tqtuan1201.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://tqtuan1201.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://tqtuan1201.github.io/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="https://tqtuan1201.github.io/posts/basic-ci-cd-gitlab-fastlane/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="https://tqtuan1201.github.io/js/anatole-header.min.0c05c0a90d28c968a1cad4fb31abd0b8e1264e788ccefed022ae1d3b6f627514.js"
+            integrity="sha256-DAXAqQ0oyWihytT7MavQuOEmTniMzv7QIq4dO29idRQ="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="https://tqtuan1201.github.io/js/anatole-theme-switcher.min.8ef71e0fd43f21a303733dbbecae5438b791d2b826c68a9883bd7aa459a076d2.js"
+                integrity="sha256-jvceD9Q/IaMDcz277K5UOLeR0rgmxoqYg716pFmgdtI="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tqtuan1201.github.io/images/profile.jpg"/>
+
+<meta name="twitter:title" content="Basic Ci Cd Gitlab Fastlane"/>
+<meta name="twitter:description" content="Abstract Trong bài viết này mình tiềm hiểu về GitLab-CI, Fastlane ở mức cơ bản.
+   Tìm hiểu GitLab-CI.
+  Fastlane là gì?
+   What is CI? Trong quá trình làm việc theo nhóm việc quản lý source-code giữa các thành viên với nhau là cực kỳ quan trọng. Việc cập nhật mã code giữa các thành viên với nhau là rất thường xuyên. Việc này dẫn đến nhiều vấn đề nảy sinh như code lỗi,&hellip; để phát hiện sớm các lỗi để sửa ngay đưa ra một khái niệm là Continuos Integration - Tích hợp liên tục"/>
+
+
+    
+    <meta property="og:title" content="Basic Ci Cd Gitlab Fastlane" />
+<meta property="og:description" content="Abstract Trong bài viết này mình tiềm hiểu về GitLab-CI, Fastlane ở mức cơ bản.
+   Tìm hiểu GitLab-CI.
+  Fastlane là gì?
+   What is CI? Trong quá trình làm việc theo nhóm việc quản lý source-code giữa các thành viên với nhau là cực kỳ quan trọng. Việc cập nhật mã code giữa các thành viên với nhau là rất thường xuyên. Việc này dẫn đến nhiều vấn đề nảy sinh như code lỗi,&hellip; để phát hiện sớm các lỗi để sửa ngay đưa ra một khái niệm là Continuos Integration - Tích hợp liên tục" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tqtuan1201.github.io/posts/basic-ci-cd-gitlab-fastlane/" /><meta property="og:image" content="https://tqtuan1201.github.io/images/profile.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-03-25T10:38:57&#43;07:00" />
+<meta property="article:modified_time" content="2021-03-25T10:38:57&#43;07:00" /><meta property="og:site_name" content="Hi, I&#39;m Tuan Truong" />
+
+
+</head>
+<body><div class="sidebar animated fadeInDown ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://tqtuan1201.github.io/images/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="/">Hi, I&#39;m Tuan Truong</a></h3>
+            <div class="description">
+                <p>“First, slove the problem. Then, write the code”</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://github.com/tqtuan1201" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/tqtuan1201" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/tqtuan1201" rel="me" aria-label="instagram">
+                    <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:truongquangtuanit@gmail.com" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Tuan Truong  2021 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  animated fadeInDown ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">About</a></li>
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Contact</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>Basic Ci Cd Gitlab Fastlane</h3>
+                
+            </div>
+
+            <h2 id="abstract">Abstract</h2>
+<p>Trong bài viết này mình tiềm hiểu về <strong>GitLab-CI, Fastlane</strong> ở mức cơ bản.</p>
+<blockquote>
+<ul>
+<li>
+<p>Tìm hiểu GitLab-CI.</p>
+</li>
+<li>
+<p>Fastlane là gì?</p>
+</li>
+</ul>
+</blockquote>
+<h2 id="what-is-ci"><strong>What is CI?</strong></h2>
+<p>Trong quá trình làm việc theo nhóm việc quản lý <strong>source-code</strong> giữa các thành viên với nhau là cực kỳ quan trọng. Việc cập nhật mã code giữa các thành viên với nhau là rất thường xuyên. Việc này dẫn đến nhiều vấn đề nảy sinh như code lỗi,&hellip; để phát hiện sớm các lỗi để sửa ngay đưa ra một khái niệm là <strong>Continuos Integration - Tích hợp liên tục</strong></p>
+<h2 id="lợi-ích-của-việc-sử-dụng-ci">Lợi ích của việc sử dụng CI</h2>
+<ul>
+<li>Giảm rủi ro tích hợp</li>
+<li>Chất lượng code cao hơn</li>
+<li>Code trên version control luôn hoạt động</li>
+<li>Giảm thời gian deploy</li>
+</ul>
+<p><strong>GitLab-CI</strong> là  một phần dịch vụ của GitLab cho phép nhà phát triển ứng dụng xây dựng và kiểm tra các đoạn code trong dự án bất cứ khi nào được đẩy lên từ nhà phát triển.</p>
+<ul>
+<li>​		<strong>Gitlab runner:</strong> Để bạn có thể chạy được test tự động mỗi khi có code mới, bạn cần phải có một runner. Gitlab runner là một công cụ được cài đặt sẵn trên server/local, luôn luôn lắng nghe và sẽ chạy theo một kịch bản được định sẵn.</li>
+</ul>
+<p><strong>Fastlane là gì ?</strong></p>
+<p>Fastlane là một công cụ giúp cho việc <strong>release</strong> sản phẩm của chúng ta trở nên dễ dàng hơn , nhanh hơn . Nó xử lý tất cả những công việc dườm dà như tạo screenshot , xử lý với code signing và release ứng dụng lên store .</p>
+<h2 id="các-bước-thực-hiện"><strong>Các bước thực hiện?</strong></h2>
+<ol>
+<li>Cài đặt GitLab-Runner trên MacOSX (Mac-mini)</li>
+<li>Đăng ký GitLab-Runner với GitLab-CI</li>
+<li>Cài đặt Fastlane in build/test</li>
+</ol>
+<h3 id="1-cài-con-runner"><strong>1. Cài con Runner</strong></h3>
+<p>Trong ví dụ này mình chạy con runner trên mac-mni ở công ty</p>
+<ol>
+<li>Tải về:</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo curl --output /usr/local/bin/gitlab-runner
+https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-darwin-amd64
+</code></pre></div><ol start="2">
+<li>
+<p>Cấp quyền thực thi:</p>
+</li>
+<li>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo chmod +x /usr/local/bin/gitlab-runner
+</code></pre></div></li>
+<li>
+<p>Cài đặt và chạy service:</p>
+</li>
+<li>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">cd ~
+gitlab-runner install
+gitlab-runner start
+</code></pre></div></li>
+</ol>
+<h3 id="2-registering-a-runner">2. Registering a Runner</h3>
+<ol>
+<li>
+<p>Đăng ký</p>
+</li>
+<li>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">gitlab-runner register
+</code></pre></div></li>
+<li>
+<p>Điền vào url gitlab của công ty</p>
+</li>
+<li>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Please enter the gitlab-ci coordinator URL (e.g. https://gitlab.com )
+https://gitlab.com
+</code></pre></div></li>
+<li>
+<p>Điền vào token trên gitlab vào:</p>
+</li>
+<li>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Please enter the gitlab-ci token for this runner
+xxx
+</code></pre></div></li>
+<li>
+<p>Thêm mô tả:</p>
+</li>
+<li>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Please enter the gitlab-ci description for this runner
+Local Runner
+</code></pre></div></li>
+<li>
+<p>Gắn tag vào, khi có push code mới có tab này thì runer sẽ thực thi</p>
+</li>
+<li>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Please enter the gitlab-ci tags for this runner (comma separated):
+ios,another-tag
+</code></pre></div></li>
+<li>
+<p>Chọn shell</p>
+</li>
+<li>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Please enter the executor: ssh, docker+machine, docker-ssh+machine, kubernetes, docker, parallels, virtualbox, docker-ssh, shell:
+shell
+</code></pre></div></li>
+</ol>
+<p>Nếu mọi thứ đều OK, bạn có thể thấy runner được đăng ký theo hình dưới.</p>
+<p><img src="https://bluecast.tech/wp-content/uploads/2019/07/git-runnner-setup-300x244.png" alt="git-runnner-setup"></p>
+<p><strong>Lưu ý:</strong></p>
+<p>Nếu muốn runner chạy mỗi khi có commit lên thì bạn check vào <strong>Run untagged jobs</strong></p>
+<p><code>Indicates whether this runner can pick jobs without tags</code></p>
+<p><img src="https://aws1.discourse-cdn.com/business4/uploads/gitlab/original/2X/a/a25ca1e6bf248af1676a41af739078c8b2f0003c.png" alt=""></p>
+<h2 id="fastlane"><strong>Fastlane</strong></h2>
+<p>Sau khi cài đặt thành công runner, chúng ta tiếp tục tiến hành cài đặt fastlane: <a href="https://docs.fastlane.tools/getting-started/ios/setup/">trang chủ</a>. Phần này được mô tả khá chi tiết trong tài liệu.</p>
+<h3 id="cấu-hình-cho-fastlane">Cấu hình cho Fastlane</h3>
+<p>Tiếp theo, chúng ta viết một số script đơn giản để test và build app:</p>
+<script type="application/javascript" src="https://gist.github.com/tqtuan1201/63dccba694778e08009148fcb672fa48.js"></script>
+
+<p>Trong đó,</p>
+<ol>
+<li><strong>test</strong> -&gt; sẽ tiến hành cài đặt pod, sau đó tiến hành chạy Unit Test</li>
+<li><strong>buildAppTest</strong> -&gt; sẽ tiến hành cài đặt pod, sau đó tiến hành build app để tạo file .IPA</li>
+<li><strong>sendTeleSendMailDone</strong> -&gt; sử dụng plugin telegram của fastlane, func này sẽ được gọi khi chúng ta đã build file ipa thành công để gửi file và báo cho tester biết.</li>
+</ol>
+<h1 id="tổng-kết">Tổng kết</h1>
+<p>Trên đây mình đã giới thiệu cho các bạn các khái niệm , các bước setup cơ bản để sử dụng fastlane, GitLab, bạn muốn tìm hiểu sâu hơn về nó có thể vào link để tìm hiểu chi tiết:
+<a href="https://docs.fastlane.tools/getting-started/ios/setup/">link to fastlane!</a></p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                
+                
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="https://tqtuan1201.github.io/js/jquery.min.64d0083866906099f942140bc1c5cba4b1bf65783c52e4a63c5c46bf9dbc41f4.js"
+        integrity="sha256-ZNAIOGaQYJn5QhQLwcXLpLG/ZXg8UuSmPFxGv528QfQ="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://tqtuan1201.github.io/js/bundle.min.45159b0e20ba3878972e064b7edc464c31a9e35a0d0a6a71e3fec84efdbe2ea5.js"
+        integrity="sha256-RRWbDiC6OHiXLgZLftxGTDGp41oNCmpx4/7ITv2&#43;LqU="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://tqtuan1201.github.io/js/medium-zoom.min.2d6fd0be87fa98f0c9b4dc2536b312bbca48757f584f6ea1f394abc9bcc38fbc.js"
+        integrity="sha256-LW/Qvof6mPDJtNwlNrMSu8pIdX9YT26h85SrybzDj7w="
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
