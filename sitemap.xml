@@ -2,7 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://tqtuan1201.github.io/categories/</loc>
+    <lastmod>2022-04-06T16:05:26+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/series/for-future/</loc>
+    <lastmod>2022-04-06T16:05:26+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/future/</loc>
+    <lastmod>2022-04-06T16:05:26+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/ios/</loc>
+    <lastmod>2022-04-06T16:05:26+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/mobile-app-development/</loc>
+    <lastmod>2022-04-06T16:05:26+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/categories/mobile-apps/</loc>
+    <lastmod>2022-04-06T16:05:26+07:00</lastmod>
+  </url><url>
     <loc>https://tqtuan1201.github.io/posts/</loc>
+    <lastmod>2022-04-06T16:05:26+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/roadmap/</loc>
+    <lastmod>2022-04-06T16:05:26+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/series/</loc>
+    <lastmod>2022-04-06T16:05:26+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/</loc>
     <lastmod>2022-04-06T16:05:26+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/</loc>
@@ -14,12 +41,28 @@
     <loc>https://tqtuan1201.github.io/posts/basic-ci-cd-gitlab-fastlane/</loc>
     <lastmod>2021-03-25T10:38:57+07:00</lastmod>
   </url><url>
+    <loc>https://tqtuan1201.github.io/tags/cicd/</loc>
+    <lastmod>2021-03-25T10:38:57+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/series/work/</loc>
+    <lastmod>2021-03-25T10:38:57+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/a/</loc>
+    <lastmod>2021-03-19T13:11:55+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/app-architecture/</loc>
+    <lastmod>2021-03-19T13:11:55+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/categories/machine-learning/</loc>
+    <lastmod>2021-03-19T13:11:55+07:00</lastmod>
+  </url><url>
     <loc>https://tqtuan1201.github.io/posts/nlp-on-ios-application-viper-arch/</loc>
+    <lastmod>2021-03-19T13:11:55+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/nlp/</loc>
     <lastmod>2021-03-19T13:11:55+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/posts/my-first-post/</loc>
     <lastmod>2021-03-01T15:58:30+07:00</lastmod>
-  </url><url>
-    <loc>https://tqtuan1201.github.io/series/</loc>
   </url>
 </urlset>

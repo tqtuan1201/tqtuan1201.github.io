@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NLP on Tuan Truong&#39;s Blog</title>
+    <link>https://tqtuan1201.github.io/tags/nlp/</link>
+    <description>Recent content in NLP on Tuan Truong&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 19 Mar 2021 13:11:55 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Natural Language Processing On Ios Application Implement Viper Clean Architecture In An Ios App</title>
+      <link>https://tqtuan1201.github.io/posts/nlp-on-ios-application-viper-arch/</link>
+      <pubDate>Fri, 19 Mar 2021 13:11:55 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/nlp-on-ios-application-viper-arch/</guid>
+      <description>Abstract Xây dựng ứng dụng iOS với kiến trúc VIPER về dự đoán tác giả bài thơ. Input đầu vào là một đoạn text đoạn thơ người dùng nhập vào và output là tác giả của đoạn thơ đó. Ví dụ: INPUT = Sao anh không về chơi thôn Vĩ? → OUTPUT = Hàn Mặc Tử
+  Tìm hiểu về Bag of Words, Turi Create. Xây dựng ứng dụng iOS trên kiến trúc VIPER Clean Architecture Một số từ khóa liên quan: Bag of Word, Logictic Classifier, Turi Create VIPER, iOS Application     Đặt Vấn Đề INPUT STRING:</description>
+    </item>
+    
+  </channel>
+</rss>
