@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://tqtuan1201.github.io/posts/basic-ci-cd-gitlab-fastlane/</loc>
-    <lastmod>2021-03-25T10:38:57+07:00</lastmod>
-  </url><url>
     <loc>https://tqtuan1201.github.io/posts/</loc>
-    <lastmod>2021-03-25T10:38:57+07:00</lastmod>
+    <lastmod>2022-04-06T16:05:26+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/</loc>
+    <lastmod>2022-04-06T16:05:26+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/posts/what-is-the-future-of-mobile-app-development/</loc>
+    <lastmod>2022-04-06T16:05:26+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/posts/basic-ci-cd-gitlab-fastlane/</loc>
     <lastmod>2021-03-25T10:38:57+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/posts/nlp-on-ios-application-viper-arch/</loc>
