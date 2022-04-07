@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VNUHCM on Tuan Truong&#39;s Blog</title>
+    <link>https://tqtuan1201.github.io/series/vnuhcm/</link>
+    <description>Recent content in VNUHCM on Tuan Truong&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 07 Apr 2022 15:45:29 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/series/vnuhcm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Factorization Machines &amp; their application on huge datasets Presentation</title>
+      <link>https://tqtuan1201.github.io/posts/factorization-machines-presentation/</link>
+      <pubDate>Thu, 07 Apr 2022 15:45:29 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/factorization-machines-presentation/</guid>
+      <description>Báo cáo này dựa trên bài báo Introductory Guide – Factorization Machines &amp;amp; their application on huge datasets (with codes in Python)  Tác giả: Ankit Choudhary
+ Một số từ khóa liên quan
+FMs: Factorization Machines, FFMs: Field Aware Factorization Machines, Matrix Factorization CTR: Click-Through Rate, Recommendation Systems
+Slide share  </description>
+    </item>
+    
+    <item>
+      <title>FACTORIZATION MACHINES AND THEIR APPLICATION ON HUGE DATASETS</title>
+      <link>https://tqtuan1201.github.io/posts/factorization-machines/</link>
+      <pubDate>Thu, 07 Apr 2022 13:29:52 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/factorization-machines/</guid>
+      <description>Giới thiệu tổng quát về Factorization Machines và ứng dụng của nó trên tập dữ liệu lớn Dựa trên bài báo Introductory Guide – Factorization Machines &amp;amp; their application on huge datasets (with codes in Python), tác giả: Ankit Choudhary
+ Phần mở đầu Khi chúng ta làm việc với các bài toán liên quan tới Click Prediction Problem hay Recommendation Systems. Chúng ta thường xuyên đối mặt với vấn đề là tập dữ liệu quá lớn.</description>
+    </item>
+    
+  </channel>
+</rss>

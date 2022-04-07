@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head>
+    <title> Tuan Truong | FACTORIZATION MACHINES AND THEIR APPLICATION ON HUGE DATASETS </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.81.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="“The only thing that is constant is change”, Heraclitus.">
+    
+    <link rel="stylesheet"
+          href="https://tqtuan1201.github.io/css/style.min.d2b8f5fe396d76fbfd2b3a785f0033ce93d6d99f7096c22017bfe25b70a5429f.css"
+          integrity="sha256-0rj1/jltdvv9Kzp4XwAzzpPW2Z9wlsIgF7/iW3ClQp8="
+          crossorigin="anonymous"
+          type="text/css">
+    
+    <link rel="stylesheet"
+        href="https://tqtuan1201.github.io/css/markupHighlight.min.f798cbda9aaa38f89eb38be6414bd082cfd71a6780375cbf67b6d2fb2b96491e.css"
+        integrity="sha256-95jL2pqqOPies4vmQUvQgs/XGmeAN1y/Z7bS&#43;yuWSR4="
+        crossorigin="anonymous"
+        type="text/css">
+    
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="https://tqtuan1201.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://tqtuan1201.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://tqtuan1201.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://tqtuan1201.github.io/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="https://tqtuan1201.github.io/posts/factorization-machines/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="https://tqtuan1201.github.io/js/anatole-header.min.0c05c0a90d28c968a1cad4fb31abd0b8e1264e788ccefed022ae1d3b6f627514.js"
+            integrity="sha256-DAXAqQ0oyWihytT7MavQuOEmTniMzv7QIq4dO29idRQ="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="https://tqtuan1201.github.io/js/anatole-theme-switcher.min.8ef71e0fd43f21a303733dbbecae5438b791d2b826c68a9883bd7aa459a076d2.js"
+                integrity="sha256-jvceD9Q/IaMDcz277K5UOLeR0rgmxoqYg716pFmgdtI="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tqtuan1201.github.io/images/profile.jpg"/>
+
+<meta name="twitter:title" content="FACTORIZATION MACHINES AND THEIR APPLICATION ON HUGE DATASETS"/>
+<meta name="twitter:description" content="Giới thiệu tổng quát về Factorization Machines và ứng dụng của nó trên tập dữ liệu lớn Dựa trên bài báo Introductory Guide – Factorization Machines &amp; their application on huge datasets (with codes in Python), tác giả: Ankit Choudhary
+ Phần mở đầu Khi chúng ta làm việc với các bài toán liên quan tới Click Prediction Problem hay Recommendation Systems. Chúng ta thường xuyên đối mặt với vấn đề là tập dữ liệu quá lớn."/>
+
+
+    
+    <meta property="og:title" content="FACTORIZATION MACHINES AND THEIR APPLICATION ON HUGE DATASETS" />
+<meta property="og:description" content="Giới thiệu tổng quát về Factorization Machines và ứng dụng của nó trên tập dữ liệu lớn Dựa trên bài báo Introductory Guide – Factorization Machines &amp; their application on huge datasets (with codes in Python), tác giả: Ankit Choudhary
+ Phần mở đầu Khi chúng ta làm việc với các bài toán liên quan tới Click Prediction Problem hay Recommendation Systems. Chúng ta thường xuyên đối mặt với vấn đề là tập dữ liệu quá lớn." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tqtuan1201.github.io/posts/factorization-machines/" /><meta property="og:image" content="https://tqtuan1201.github.io/images/profile.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-04-07T13:29:52&#43;07:00" />
+<meta property="article:modified_time" content="2022-04-07T13:29:52&#43;07:00" /><meta property="og:site_name" content="Hi, I&#39;m Tuan Truong" />
+<meta property="og:see_also" content="https://tqtuan1201.github.io/posts/factorization-machines-presentation/" />
+
+
+</head>
+<body><div class="sidebar animated fadeInDown ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://tqtuan1201.github.io/images/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="/">Hi, I&#39;m Tuan Truong</a></h3>
+            <div class="description">
+                <p>“The only thing that is constant is change”, Heraclitus.</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://github.com/tqtuan1201" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/tqtuan1201" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/tqtuan1201" rel="me" aria-label="instagram">
+                    <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:truongquangtuanit@gmail.com" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Tuan Truong  2022 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  animated fadeInDown ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">About</a></li>
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Contact</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>FACTORIZATION MACHINES AND THEIR APPLICATION ON HUGE DATASETS</h3>
+                
+            </div>
+
+            <blockquote>
+<p>Giới thiệu tổng quát về <strong>Factorization Machines</strong> và ứng dụng của nó trên tập dữ liệu lớn
+<em>Dựa trên bài báo Introductory Guide – Factorization Machines &amp; their application on huge datasets (with codes in Python), tác giả: Ankit Choudhary</em></p>
+</blockquote>
+<h2 id="phần-mở-đầu">Phần mở đầu</h2>
+<p>Khi chúng ta làm việc với các bài toán liên quan tới <strong>Click Prediction Problem</strong> hay <strong>Recommendation Systems</strong>. Chúng ta thường xuyên đối mặt với vấn đề là tập dữ liệu quá lớn. Việc dự đoán trong tập dữ liệu lớn là một khó khăn, thách thức với một nguồn tài nguyên máy tính hiện có. Hơn nữa đối với các tập dữ liệu thưa (sparse) là tập dữ liệu mà trong đó có tồn tại dữ liệu không có giá trị và trong tập dữ liệu đó có những dữ liệu có những đặc trưng quan trọng tác động tới việc dự đoán và cả những đặc trưng không quan trọng. Vậy thì việc dự đoán càng trở nên khó khăn hơn.
+Để giải quyết các vấn đề trên, tác giả giới thiệu về <strong>Factorization Machines</strong> để xác định trong tập dữ liệu đó có những đặc trưng nào quan trọng trong việc dự doán.</p>
+<h2 id="mục-tiêu"><strong>Mục tiêu</strong></h2>
+<p>Đưa ra những vấn đề gặp phải khi làm việc trên tập dữ liệu lớn, từ đó tác giả giới thiệu về <strong>Factorization Machines</strong> để khắc phục các vấn đề gặp phải.</p>
+<ul>
+<li>Để hiểu được Factorization Machines, tác giả giới thiệu cơ sở lý thuyết về mô hình phân rã ma trận (Matrix Factorization) và các thuật toán học liên quan.</li>
+<li>Sau đó tác giả giới thiệu và đánh giá lần lược các mô hình để tối ưu là: <strong>Linear &lt; Poly2 &lt; FMs &lt; FFMs</strong></li>
+</ul>
+<h2 id="cấu-trúc-trình-bày"><strong>Cấu trúc trình bày</strong></h2>
+<ul>
+<li>Phần 1: Giới thiệu một số kiến thức liên quan.</li>
+<li>Phần 2: Giới thiệu về Factorization Machines.</li>
+<li>Phần 3: Tổng kết.</li>
+</ul>
+<hr>
+<h2 id="một-số-kiến-thức-liên-quan">Một số kiến thức liên quan</h2>
+<ul>
+<li><strong>Gradient Descent</strong> là thuật toán tìm giá trị nhỏ nhất của <strong>hàm số f(x) dựa trên đạo hàm</strong>.</li>
+</ul>
+<p><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e15bf057-cc18-487c-a6b7-88f35c2aee62/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220407%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20220407T063041Z&amp;X-Amz-Expires=86400&amp;X-Amz-Signature=145a55f8b6f60a8a0b2b2bd98acfbd7ecb1d7bcf7f4e359a42516230ddbbc242&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=filename%20%3D%22Untitled.png%22&amp;x-id=GetObject#center" alt=""></p>
+<p>Việc chọn hệ số <strong>learning_rate</strong> cực kì quan trọng, có 3 trường hợp:</p>
+<ul>
+<li>Nếu learning_rate nhỏ: Mỗi lần hàm số giảm rất ít nên cần rất nhiều lần thực hiện bước 2 để hàm số đạt giá trị nhỏ nhất.</li>
+<li>Nếu learning_rate hợp lý: Sau một số lần lặp bước 2 vừa phải thì hàm sẽ đạt giá trị đủ nhỏ.</li>
+<li>Nếu learning_rate quá lớn: Sẽ gây hiện tượng overshoot và không bao giờ đạt được giá trị nhỏ nhất của hàm</li>
+<li><strong>Regularization</strong> (kỹ thuật chính quy hóa)</li>
+</ul>
+<p>Overfitting là hiện tượng mô hình tìm được <strong>quá khớp</strong> với dữ liệu huấn luyện (training). Việc quá khớp này có thể dẫn đến việc dự đoán nhầm nhiễu, và chất lượng mô hình không còn tốt trên dữ liệu test nữa.</p>
+<p align="center" >
+  <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f8a50694-6512-43b2-9a7c-e9f0509e5732/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220407%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220407T063245Z&X-Amz-Expires=86400&X-Amz-Signature=ea5a1c12c5312f82faa494c3fc4cf0b7e7a6c1b546241d4db782abf36ce9e096&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject#center">
+</p>
+<p align='center'>Model: Underfit: degree 1, Goodfit: degree 3, Overfit: degree 15</p>
+<p>Chính quy hoá (regularization) là một kỹ thuật giúp giảm lỗi quá khớp (Overfitting) trong khi vẫn giữ được tính tổng quát của nó (tính tổng quát là tính mô tả được nhiều dữ liệu, trong cả tập training và test) bằng cách thêm một phần chính quy hoá vào hàm lỗi như sau:</p>
+<p align="center" >
+  <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/376c9a7e-059a-426d-9aa7-721370ba3dfa/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220407%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220407T063308Z&X-Amz-Expires=86400&X-Amz-Signature=1b050922485d3f15608cab626644b61308c0e6db328af7e455e38df959c14b06&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject">
+</p>
+<p>E_x (θ) là hàm lỗi ban đầu và cụm λE_θ (θ) mới thêm vào là <strong>số hạng chính quy hoá</strong> đóng vai trò như một biện pháp kiểm soát lỗi.</p>
+<p>Phương pháp chính quy hoá này còn có tên là <strong>cắt trọng số (Weight Decay)</strong> vì nó làm cho các trọng số (tham số θ) bị tiêu biến dần về 0 trong khi học. Còn trong thống kê, phương pháp này có tên là co tham số (Parameter Shrinkage) vì nó làm co lại các giá trị tham số dần về 0.</p>
+<ul>
+<li><strong>Matrix Factorization</strong></li>
+</ul>
+<p align="center" >
+  <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f6c8e255-2d2e-41f0-9aa4-7c4a24007bac/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220407%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220407T063332Z&X-Amz-Expires=86400&X-Amz-Signature=8a20f99fc25ddbcc802c087e4af86afd36e08dbfdc0650ab2f9e3daaf1f239f6&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject">
+</p>
+Chúng ta có thể nhận ra có một vài **đánh giá bị thiếu** và vấn đề đặt ra ở đây là chúng ta muốn **xây dựng một phương thức để dự đoán các xếp hạng bị thiếu**.
+<p>Giả định rằng chúng ta sử dụng <strong>Matrix Factorization</strong> để giải quyết vấn đề trên là nên có một vài đặc trưng ẩn mà nó xác định được cách mà người dùng xếp hạng một bộ phim. Chẳng hạn người dùng A và B sẽ xếp hạng cao các bộ phim của diễn viên AI Pacino nếu họ là người hâm mộ của diễn viên đó. <em>Ở đây sự hâm mộ đối với một diễn viên cụ thể nào đó là một đặc trưng ẩn vì nó không thể hiện rõ ràng trong ma trận trên</em></p>
+<p><strong>Ý tưởng là chúng ta phân rã ma trận ánh xạ người dùng và bộ phim sang một không gian có hướng f mà ở đó các yếu tố đặc trưng ẩn có thể kết hợp được với nhau, nghĩa là tương quan người dùng và bộ phim được mô hình thành tích vô hướng bên trong không gian đó.</strong></p>
+<h2 id="giới-thiệu-về-factorization-machines">Giới thiệu về Factorization Machines</h2>
+<ul>
+<li><strong>Click Through Rate:</strong></li>
+</ul>
+<p>Click Through Rate (CTR) là gì?
+CTR là tỷ lệ thể hiện tần suất những người thấy quảng cáo của bạn kết thúc bằng cách nhấp vào quảng cáo đó. Tỷ lệ nhấp (CTR) có thể được sử dụng để đánh giá hiệu suất của từ khóa và quảng cáo của bạn</p>
+<p align="center" >
+  <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/90b02d44-1e80-43e4-9194-30b0d2871807/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220407%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220407T063356Z&X-Amz-Expires=86400&X-Amz-Signature=db529405ca855074888cf7ef935f78211c6f0e887b323cb6edbbae35c414b80b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject">
+</p>
+<p align="center" > CTR = Số nhấp chuột ÷ số lần hiển thị.</br>
+(VD: Nếu chúng ta đã có 5 lần nhấp chuột và 100 lần hiển thị. CTR bằng 5%.)</p>
+<ul>
+<li><strong>Mô hình trong dự đoán CTR</strong></li>
+</ul>
+<p>Dự đoán tỉ lệ nhấp đóng một vai trò quan trọng trong tính toán quảng cáo (Computational Advertising). Một số mô hình được dùng phổ biến trong việc tối ưu CTR là: <strong>Poly2</strong> và <strong>Factorization machines (FMs)</strong>. Trong thời gian gần đây một biến thể của <strong>FMs</strong> là <strong>FFMs</strong> đã thực hiện tốt việc dự đoán trong cuộc thi dự đoán CTR toàn cầu và FFMs cho thấy rất có hiệu quả trong việc phân lớp với tập dữ liệu lớn và thưa thớt.</p>
+<p>Để hiểu được <strong>FMs</strong> và <strong>FFMs</strong>. Việc đầu tiên chúng ta cẩn phải hiểu về mô hình hồi quy tuyến tính (Linear Regression) và hồi quy đa thức (Poly2 Regression)
+Chúng ta cùng xét tập dữ liệu trong ví dụ sau đây với mong muốn là dự đoán kết quả nhấp thông qua các đặc trưng như nhà xuất bản (Publisher), nhà quảng cáo (Advertiser) và giới tính (Gender)</p>
+<p><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/74c7ae76-e35f-4420-b9b5-0cc4bce87d6a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220407%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20220407T063604Z&amp;X-Amz-Expires=86400&amp;X-Amz-Signature=446ffb2d69fee4fc9dbb38e7115629765b5bcd917721b46eed0095fbab842019&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=filename%20%3D%22Untitled.png%22&amp;x-id=GetObject" alt="Untitled"></p>
+<p><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1e9ea281-32c5-476f-8721-9508b4631eb3/IMG_00016.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220407%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20220407T063619Z&amp;X-Amz-Expires=86400&amp;X-Amz-Signature=cb68949828251b22655eb2c6c4094021fe776c2400ca7f381033254df0aabe03&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=filename%20%3D%22IMG_00016.jpeg%22&amp;x-id=GetObject" alt="IMG_00016.jpeg"></p>
+<p><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/25289e9c-b939-49b1-9cf0-56eb6f02693d/IMG_00017.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220407%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20220407T063628Z&amp;X-Amz-Expires=86400&amp;X-Amz-Signature=c4f24d7361d8e5790f68bd146c07349d9e91a8025a88195dae7443d429ee46db&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=filename%20%3D%22IMG_00017.jpeg%22&amp;x-id=GetObject" alt="IMG_00017.jpeg"></p>
+<p><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e47ac5c3-3757-487b-8952-1c3580b3dab4/IMG_00018.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220407%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20220407T063639Z&amp;X-Amz-Expires=86400&amp;X-Amz-Signature=bbe03f6e42e5e1c727eedfac03f34da5242e46d44c221eb72a3cf10a40ad866a&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=filename%20%3D%22IMG_00018.jpeg%22&amp;x-id=GetObject" alt="IMG_00018.jpeg"></p>
+<p><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ca89d65a-9a7b-42c1-b604-9fcc58bb12e8/IMG_00019.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220407%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20220407T063648Z&amp;X-Amz-Expires=86400&amp;X-Amz-Signature=d84df678a8f6df2afc445ae4657f8fed568265a1c30a54f0b4fb240849230c42&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=filename%20%3D%22IMG_00019.jpeg%22&amp;x-id=GetObject" alt="IMG_00019.jpeg"></p>
+<h2 id="tổng-kết">Tổng kết</h2>
+<p>Qua bài báo này, chúng ta đã tìm hiểu về <strong>Factorization Machines</strong>, thông qua các cơ sở lý thuyết về mô hình phân rã ma trận (Matrix Factorization) và các thuật toán học liên quan song song với đó chúng ta đã so sánh và đánh giá lần lược các mô hình để tối ưu như <strong>Linear &lt; Poly2 &lt; FMs &lt; FFMs.</strong></p>
+<p><strong>FFMs</strong> được sử dụng và đã giành giải nhất trong ba cuộc thi về CTR do Criteo, Avazu, Outbrain tổ chức và giành giải ba trong cuộc thi RecSys Challenge 2015</p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/vnuhcm/">VNUHCM</a></span>
+
+                <span class="separator"><a class="tag" href="/tags/factorization-machines/">Factorization Machines</a><a class="tag" href="/tags/click-prediction-problem/">Click Prediction Problem</a><a class="tag" href="/tags/recommendation-systems/">Recommendation Systems</a></span>
+
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="https://tqtuan1201.github.io/js/jquery.min.64d0083866906099f942140bc1c5cba4b1bf65783c52e4a63c5c46bf9dbc41f4.js"
+        integrity="sha256-ZNAIOGaQYJn5QhQLwcXLpLG/ZXg8UuSmPFxGv528QfQ="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://tqtuan1201.github.io/js/bundle.min.45159b0e20ba3878972e064b7edc464c31a9e35a0d0a6a71e3fec84efdbe2ea5.js"
+        integrity="sha256-RRWbDiC6OHiXLgZLftxGTDGp41oNCmpx4/7ITv2&#43;LqU="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://tqtuan1201.github.io/js/medium-zoom.min.2d6fd0be87fa98f0c9b4dc2536b312bbca48757f584f6ea1f394abc9bcc38fbc.js"
+        integrity="sha256-LW/Qvof6mPDJtNwlNrMSu8pIdX9YT26h85SrybzDj7w="
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

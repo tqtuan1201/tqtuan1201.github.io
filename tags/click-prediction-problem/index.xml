@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Click Prediction Problem on Tuan Truong&#39;s Blog</title>
+    <link>https://tqtuan1201.github.io/tags/click-prediction-problem/</link>
+    <description>Recent content in Click Prediction Problem on Tuan Truong&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 07 Apr 2022 13:29:52 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/click-prediction-problem/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FACTORIZATION MACHINES AND THEIR APPLICATION ON HUGE DATASETS</title>
+      <link>https://tqtuan1201.github.io/posts/factorization-machines/</link>
+      <pubDate>Thu, 07 Apr 2022 13:29:52 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/factorization-machines/</guid>
+      <description>Giới thiệu tổng quát về Factorization Machines và ứng dụng của nó trên tập dữ liệu lớn Dựa trên bài báo Introductory Guide – Factorization Machines &amp;amp; their application on huge datasets (with codes in Python), tác giả: Ankit Choudhary
+ Phần mở đầu Khi chúng ta làm việc với các bài toán liên quan tới Click Prediction Problem hay Recommendation Systems. Chúng ta thường xuyên đối mặt với vấn đề là tập dữ liệu quá lớn.</description>
+    </item>
+    
+  </channel>
+</rss>
