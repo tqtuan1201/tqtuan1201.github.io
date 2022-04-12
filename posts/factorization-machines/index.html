@@ -187,10 +187,9 @@
 <hr>
 <h2 id="một-số-kiến-thức-liên-quan">Một số kiến thức liên quan</h2>
 <ul>
-<li><strong>Gradient Descent</strong> là thuật toán tìm giá trị nhỏ nhất của <strong>hàm số f(x) dựa trên đạo hàm</strong>.
-<img src="images/2022/04/gradient-descent.png" alt="Gradient Descent"></li>
+<li><strong>Gradient Descent</strong> là thuật toán tìm giá trị nhỏ nhất của <strong>hàm số f(x) dựa trên đạo hàm</strong>.</li>
 </ul>
-<p><img src="images/2022/04/overfiting.png#center" alt="overfiting1"></p>
+<p><img src="/images/2022/04/gradient-descent.png#center" alt="Gradient Descent"></p>
 <p>Việc chọn hệ số <strong>learning_rate</strong> cực kì quan trọng, có 3 trường hợp:</p>
 <ul>
 <li>Nếu learning_rate nhỏ: Mỗi lần hàm số giảm rất ít nên cần rất nhiều lần thực hiện bước 2 để hàm số đạt giá trị nhỏ nhất.</li>
@@ -199,23 +198,17 @@
 <li><strong>Regularization</strong> (kỹ thuật chính quy hóa)</li>
 </ul>
 <p>Overfitting là hiện tượng mô hình tìm được <strong>quá khớp</strong> với dữ liệu huấn luyện (training). Việc quá khớp này có thể dẫn đến việc dự đoán nhầm nhiễu, và chất lượng mô hình không còn tốt trên dữ liệu test nữa.</p>
-<p align="center" >
-  <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f8a50694-6512-43b2-9a7c-e9f0509e5732/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220407%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220407T063245Z&X-Amz-Expires=86400&X-Amz-Signature=ea5a1c12c5312f82faa494c3fc4cf0b7e7a6c1b546241d4db782abf36ce9e096&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject#center">
-</p>
+<p><img src="/images/2022/04/overfiting.png#center" alt="overfiting1"></p>
 <p align='center'>Model: Underfit: degree 1, Goodfit: degree 3, Overfit: degree 15</p>
 <p>Chính quy hoá (regularization) là một kỹ thuật giúp giảm lỗi quá khớp (Overfitting) trong khi vẫn giữ được tính tổng quát của nó (tính tổng quát là tính mô tả được nhiều dữ liệu, trong cả tập training và test) bằng cách thêm một phần chính quy hoá vào hàm lỗi như sau:</p>
-<p align="center" >
-  <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/376c9a7e-059a-426d-9aa7-721370ba3dfa/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220407%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220407T063308Z&X-Amz-Expires=86400&X-Amz-Signature=1b050922485d3f15608cab626644b61308c0e6db328af7e455e38df959c14b06&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject">
-</p>
+<p><img src="/images/2022/04/jfunc.png#center" alt="overfiting1"></p>
 <p>E_x (θ) là hàm lỗi ban đầu và cụm λE_θ (θ) mới thêm vào là <strong>số hạng chính quy hoá</strong> đóng vai trò như một biện pháp kiểm soát lỗi.</p>
 <p>Phương pháp chính quy hoá này còn có tên là <strong>cắt trọng số (Weight Decay)</strong> vì nó làm cho các trọng số (tham số θ) bị tiêu biến dần về 0 trong khi học. Còn trong thống kê, phương pháp này có tên là co tham số (Parameter Shrinkage) vì nó làm co lại các giá trị tham số dần về 0.</p>
 <ul>
 <li><strong>Matrix Factorization</strong></li>
 </ul>
-<p align="center" >
-  <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f6c8e255-2d2e-41f0-9aa4-7c4a24007bac/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220407%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220407T063332Z&X-Amz-Expires=86400&X-Amz-Signature=8a20f99fc25ddbcc802c087e4af86afd36e08dbfdc0650ab2f9e3daaf1f239f6&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject">
-</p>
-Chúng ta có thể nhận ra có một vài **đánh giá bị thiếu** và vấn đề đặt ra ở đây là chúng ta muốn **xây dựng một phương thức để dự đoán các xếp hạng bị thiếu**.
+<p><img src="/images/2022/04/matrix.png#center" alt="overfiting1"></p>
+<p>Chúng ta có thể nhận ra có một vài <strong>đánh giá bị thiếu</strong> và vấn đề đặt ra ở đây là chúng ta muốn <strong>xây dựng một phương thức để dự đoán các xếp hạng bị thiếu</strong>.</p>
 <p>Giả định rằng chúng ta sử dụng <strong>Matrix Factorization</strong> để giải quyết vấn đề trên là nên có một vài đặc trưng ẩn mà nó xác định được cách mà người dùng xếp hạng một bộ phim. Chẳng hạn người dùng A và B sẽ xếp hạng cao các bộ phim của diễn viên AI Pacino nếu họ là người hâm mộ của diễn viên đó. <em>Ở đây sự hâm mộ đối với một diễn viên cụ thể nào đó là một đặc trưng ẩn vì nó không thể hiện rõ ràng trong ma trận trên</em></p>
 <p><strong>Ý tưởng là chúng ta phân rã ma trận ánh xạ người dùng và bộ phim sang một không gian có hướng f mà ở đó các yếu tố đặc trưng ẩn có thể kết hợp được với nhau, nghĩa là tương quan người dùng và bộ phim được mô hình thành tích vô hướng bên trong không gian đó.</strong></p>
 <h2 id="giới-thiệu-về-factorization-machines">Giới thiệu về Factorization Machines</h2>
@@ -224,9 +217,7 @@ Chúng ta có thể nhận ra có một vài **đánh giá bị thiếu** và v�
 </ul>
 <p>Click Through Rate (CTR) là gì?
 CTR là tỷ lệ thể hiện tần suất những người thấy quảng cáo của bạn kết thúc bằng cách nhấp vào quảng cáo đó. Tỷ lệ nhấp (CTR) có thể được sử dụng để đánh giá hiệu suất của từ khóa và quảng cáo của bạn</p>
-<p align="center" >
-  <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/90b02d44-1e80-43e4-9194-30b0d2871807/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220407%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220407T063356Z&X-Amz-Expires=86400&X-Amz-Signature=db529405ca855074888cf7ef935f78211c6f0e887b323cb6edbbae35c414b80b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject">
-</p>
+<p><img src="/images/2022/04/clickthrough.png#center" alt="overfiting1"></p>
 <p align="center" > CTR = Số nhấp chuột ÷ số lần hiển thị.</br>
 (VD: Nếu chúng ta đã có 5 lần nhấp chuột và 100 lần hiển thị. CTR bằng 5%.)</p>
 <ul>
@@ -235,11 +226,11 @@ CTR là tỷ lệ thể hiện tần suất những người thấy quảng c�
 <p>Dự đoán tỉ lệ nhấp đóng một vai trò quan trọng trong tính toán quảng cáo (Computational Advertising). Một số mô hình được dùng phổ biến trong việc tối ưu CTR là: <strong>Poly2</strong> và <strong>Factorization machines (FMs)</strong>. Trong thời gian gần đây một biến thể của <strong>FMs</strong> là <strong>FFMs</strong> đã thực hiện tốt việc dự đoán trong cuộc thi dự đoán CTR toàn cầu và FFMs cho thấy rất có hiệu quả trong việc phân lớp với tập dữ liệu lớn và thưa thớt.</p>
 <p>Để hiểu được <strong>FMs</strong> và <strong>FFMs</strong>. Việc đầu tiên chúng ta cẩn phải hiểu về mô hình hồi quy tuyến tính (Linear Regression) và hồi quy đa thức (Poly2 Regression)
 Chúng ta cùng xét tập dữ liệu trong ví dụ sau đây với mong muốn là dự đoán kết quả nhấp thông qua các đặc trưng như nhà xuất bản (Publisher), nhà quảng cáo (Advertiser) và giới tính (Gender)</p>
-<p><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/74c7ae76-e35f-4420-b9b5-0cc4bce87d6a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220407%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20220407T063604Z&amp;X-Amz-Expires=86400&amp;X-Amz-Signature=446ffb2d69fee4fc9dbb38e7115629765b5bcd917721b46eed0095fbab842019&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=filename%20%3D%22Untitled.png%22&amp;x-id=GetObject" alt="Untitled"></p>
-<p><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1e9ea281-32c5-476f-8721-9508b4631eb3/IMG_00016.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220407%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20220407T063619Z&amp;X-Amz-Expires=86400&amp;X-Amz-Signature=cb68949828251b22655eb2c6c4094021fe776c2400ca7f381033254df0aabe03&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=filename%20%3D%22IMG_00016.jpeg%22&amp;x-id=GetObject" alt="IMG_00016.jpeg"></p>
-<p><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/25289e9c-b939-49b1-9cf0-56eb6f02693d/IMG_00017.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220407%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20220407T063628Z&amp;X-Amz-Expires=86400&amp;X-Amz-Signature=c4f24d7361d8e5790f68bd146c07349d9e91a8025a88195dae7443d429ee46db&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=filename%20%3D%22IMG_00017.jpeg%22&amp;x-id=GetObject" alt="IMG_00017.jpeg"></p>
-<p><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e47ac5c3-3757-487b-8952-1c3580b3dab4/IMG_00018.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220407%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20220407T063639Z&amp;X-Amz-Expires=86400&amp;X-Amz-Signature=bbe03f6e42e5e1c727eedfac03f34da5242e46d44c221eb72a3cf10a40ad866a&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=filename%20%3D%22IMG_00018.jpeg%22&amp;x-id=GetObject" alt="IMG_00018.jpeg"></p>
-<p><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ca89d65a-9a7b-42c1-b604-9fcc58bb12e8/IMG_00019.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220407%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20220407T063648Z&amp;X-Amz-Expires=86400&amp;X-Amz-Signature=d84df678a8f6df2afc445ae4657f8fed568265a1c30a54f0b4fb240849230c42&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=filename%20%3D%22IMG_00019.jpeg%22&amp;x-id=GetObject" alt="IMG_00019.jpeg"></p>
+<p><img src="/images/2022/04/fms01.png#center" alt="overfiting1">
+<img src="/images/2022/04/fms02.jpeg#center" alt="overfiting1">
+<img src="/images/2022/04/fms03.jpeg#center" alt="overfiting1">
+<img src="/images/2022/04/fms04.jpeg#center" alt="overfiting1">
+<img src="/images/2022/04/fms05.jpeg#center" alt="overfiting1"></p>
 <h2 id="tổng-kết">Tổng kết</h2>
 <p>Qua bài báo này, chúng ta đã tìm hiểu về <strong>Factorization Machines</strong>, thông qua các cơ sở lý thuyết về mô hình phân rã ma trận (Matrix Factorization) và các thuật toán học liên quan song song với đó chúng ta đã so sánh và đánh giá lần lược các mô hình để tối ưu như <strong>Linear &lt; Poly2 &lt; FMs &lt; FFMs.</strong></p>
 <p><strong>FFMs</strong> được sử dụng và đã giành giải nhất trong ba cuộc thi về CTR do Criteo, Avazu, Outbrain tổ chức và giành giải ba trong cuộc thi RecSys Challenge 2015</p>
