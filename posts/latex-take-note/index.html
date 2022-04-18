@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head>
+    <title> Tuan Truong | Latex Take Notes </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.81.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="“The only thing that is constant is change”, Heraclitus.">
+    
+    <link rel="stylesheet"
+          href="https://tqtuan1201.github.io/css/style.min.d2b8f5fe396d76fbfd2b3a785f0033ce93d6d99f7096c22017bfe25b70a5429f.css"
+          integrity="sha256-0rj1/jltdvv9Kzp4XwAzzpPW2Z9wlsIgF7/iW3ClQp8="
+          crossorigin="anonymous"
+          type="text/css">
+    
+    <link rel="stylesheet"
+        href="https://tqtuan1201.github.io/css/markupHighlight.min.f798cbda9aaa38f89eb38be6414bd082cfd71a6780375cbf67b6d2fb2b96491e.css"
+        integrity="sha256-95jL2pqqOPies4vmQUvQgs/XGmeAN1y/Z7bS&#43;yuWSR4="
+        crossorigin="anonymous"
+        type="text/css">
+    
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="https://tqtuan1201.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://tqtuan1201.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://tqtuan1201.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://tqtuan1201.github.io/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="https://tqtuan1201.github.io/posts/latex-take-note/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="https://tqtuan1201.github.io/js/anatole-header.min.0c05c0a90d28c968a1cad4fb31abd0b8e1264e788ccefed022ae1d3b6f627514.js"
+            integrity="sha256-DAXAqQ0oyWihytT7MavQuOEmTniMzv7QIq4dO29idRQ="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="https://tqtuan1201.github.io/js/anatole-theme-switcher.min.8ef71e0fd43f21a303733dbbecae5438b791d2b826c68a9883bd7aa459a076d2.js"
+                integrity="sha256-jvceD9Q/IaMDcz277K5UOLeR0rgmxoqYg716pFmgdtI="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tqtuan1201.github.io/images/profile.jpg"/>
+
+<meta name="twitter:title" content="Latex Take Notes"/>
+<meta name="twitter:description" content="The 14th Asian Conference on Intelligent Information and Database Systems
+https://aciids.pwr.edu.pl/2022/download/ACIIDS_2022_HCMC_Flyer_v.7.0.pdf
+ MY TOPIC: Predictive modelling of diseases based on a network and machine learning approach, I hope it&rsquo;s approved soon ^^
+ Paper Submission:
+The proceedings of ACIIDS 2022 will be published by Springer in series Lecture Notes in Artificial Intelligence and will be distributed at the conference
+ LNCS/LNAI style. Should not exceed 13 pages.   Here is a my collect data with purpose to learn, more knowledge from large amount of examples, solutions, and ideas on the internet."/>
+
+
+    
+    <meta property="og:title" content="Latex Take Notes" />
+<meta property="og:description" content="The 14th Asian Conference on Intelligent Information and Database Systems
+https://aciids.pwr.edu.pl/2022/download/ACIIDS_2022_HCMC_Flyer_v.7.0.pdf
+ MY TOPIC: Predictive modelling of diseases based on a network and machine learning approach, I hope it&rsquo;s approved soon ^^
+ Paper Submission:
+The proceedings of ACIIDS 2022 will be published by Springer in series Lecture Notes in Artificial Intelligence and will be distributed at the conference
+ LNCS/LNAI style. Should not exceed 13 pages.   Here is a my collect data with purpose to learn, more knowledge from large amount of examples, solutions, and ideas on the internet." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tqtuan1201.github.io/posts/latex-take-note/" /><meta property="og:image" content="https://tqtuan1201.github.io/images/profile.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-04-18T14:29:52&#43;07:00" />
+<meta property="article:modified_time" content="2022-04-18T14:29:52&#43;07:00" /><meta property="og:site_name" content="Hi, I&#39;m Tuan Truong" />
+<meta property="og:see_also" content="https://tqtuan1201.github.io/posts/factorization-machines-presentation/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/factorization-machines/" />
+
+
+</head>
+<body><div class="sidebar animated fadeInDown ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://tqtuan1201.github.io/images/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="/">Hi, I&#39;m Tuan Truong</a></h3>
+            <div class="description">
+                <p>“The only thing that is constant is change”, Heraclitus.</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://github.com/tqtuan1201" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/tqtuan1201" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/tqtuan1201" rel="me" aria-label="instagram">
+                    <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:truongquangtuanit@gmail.com" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Tuan Truong  2022 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  animated fadeInDown ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">About</a></li>
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Contact</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>Latex Take Notes</h3>
+                
+            </div>
+
+            <p><em>The 14th Asian Conference on Intelligent Information and Database Systems</em></p>
+<p><a href="https://aciids.pwr.edu.pl/2022/download/ACIIDS_2022_HCMC_Flyer_v.7.0.pdf">https://aciids.pwr.edu.pl/2022/download/ACIIDS_2022_HCMC_Flyer_v.7.0.pdf</a></p>
+<hr>
+<p>MY TOPIC: <strong>Predictive modelling of diseases based on a network and machine learning approach, I hope it&rsquo;s approved soon ^^</strong></p>
+<hr>
+<p><em>Paper Submission:</em></p>
+<p>The proceedings of <strong>ACIIDS 2022</strong> will be published by Springer in series Lecture Notes in Artificial
+Intelligence and will be distributed at the conference</p>
+<ul>
+<li>LNCS/LNAI style.</li>
+<li>Should not exceed 13 pages.</li>
+</ul>
+<hr>
+<p><strong>Here is a my collect data with purpose to learn, more knowledge from large amount of examples, solutions, and ideas on the internet. Let&rsquo;s start</strong></p>
+<hr>
+<h1 id="abstract">Abstract</h1>
+<p>Today is the deadline to submit my paper. Because the format changed suddenly, so I need to convert word to latex file. I have only two days to learn about Latex to convert IEEE to - LNCS/LNAI style. @@
+Here&rsquo;s what I learned in two days, including simple enough syntaxes and formulas to help you learn Latex quickly.</p>
+<blockquote>
+<p>To learn quickly, you should learn basic syntax first. For example, how to view basic layout; how to edit title names; how to change positions line or text, author&rsquo;s name and category. After that, to editing details such as images, tables, formulas, &hellip;</p>
+</blockquote>
+<hr>
+<h1 id="why-learnlatex"><strong><strong>Why learn LATEX?</strong></strong></h1>
+<p><img src="https://inzaneresearch.files.wordpress.com/2017/02/wordvlatex2.png#center" alt="(source: https://inzaneresearch.com/)"></p>
+<p align="center" >
+(source: https://inzaneresearch.com/)
+</p>
+<p>LATEX is used all over the world for <strong>scientific documents, books, as well as many other forms of publishing.</strong> Not only can it create beautifully <strong>typeset documents,</strong> but it allows users to very quickly tackle the more complicated parts of typesetting, such as inputting mathematics, creating tables of contents, referencing and creating bibliographies, and having a consistent layout across all sections.</p>
+<ul>
+<li>
+<p><strong>The best typesetting</strong> system is open, free, and it has been around for more than 30 years.</p>
+</li>
+<li>
+<p>Due to the huge number of <strong>open source</strong> <em>packages</em> available.</p>
+<ul>
+<li>These <em>packages</em> allow users to do even more with LATEX, such as add footnotes, draw schematics, create tables etc.</li>
+</ul>
+</li>
+<li>
+<p>LATEX is that it <strong>separates the content</strong> of the document from the style:</p>
+<ul>
+<li>You have written the content of your document, we can change its appearance with ease</li>
+<li>You can create one style of document which can be used to standardise the appearance of many different documents.</li>
+</ul>
+</li>
+<li>
+<p>This allows scientific journals to create <strong>templates</strong> for submissions. These templates have a pre-made layout meaning that only the content needs to be added. In fact there are hundreds of <a href="https://www.sharelatex.com/templates">templates</a>
+ available for everything from CVs to slideshows.</p>
+</li>
+<li>
+<p><strong>Quality and Aesthetics</strong>: Simply, documents produced using LaTeX just look better</p>
+</li>
+</ul>
+<hr>
+<h1 id="so-what-islatex">So, <strong><strong>What is LATEX?</strong></strong></h1>
+<p>LATEX (pronounced <em>LAY-tek</em> or <em>LAH-tek</em>) is a tool used to create <strong>professional-looking documents.</strong> It is based on the WYSIWYM (what you see is what you mean) idea, <strong>meaning you only have focus on the contents of your document and the computer will take care of the formatting <em>(Focus on Content)</em></strong>. Instead of spacing out text on a page to control formatting, as with Microsoft Word or LibreOffice Writer, users can enter plain text and let LATEX take care of the rest.</p>
+<hr>
+<h1 id="when-you-must-use-latex"><strong><strong>When you MUST use LaTeX?</strong></strong></h1>
+<p><img src="https://www.researchgate.net/profile/Haitham-El-Hussieny/post/Why_LaTex_is_better_choice_than_Microsoft_Word/attachment/5e2acf21cfe4a777d4075e6f/AS%3A850824771153921%401579863841308/download/Capture.png#center" alt="(source: https://www.researchgate.net/post/Why_LaTex_is_better_choice_than_Microsoft_Word)"></p>
+<p align="center" >
+(source: https://www.researchgate.net/post/Why_LaTex_is_better_choice_than_Microsoft_Word)
+</p>
+<ul>
+<li>
+<p>You are in academia, particularly in any <a href="https://en.wikipedia.org/wiki/Science,_technology,_engineering,_and_mathematics">STEM</a> discipline. <strong>To write</strong> a book, article, manuscript… and maybe self-publish.</p>
+</li>
+<li>
+<p>There are many <strong>hierarchies</strong> in the document.</p>
+</li>
+<li>
+<p>Using <strong>formula</strong> (Plugins can easily manage formula).</p>
+</li>
+<li>
+<p><strong>Export</strong> various file formats.</p>
+</li>
+<li>
+<p><strong>Coding Style</strong>, like HTML.</p>
+</li>
+</ul>
+<hr>
+<h1 id="tips">TIPS:</h1>
+<ol>
+<li>
+<p><strong>Quick to learn:</strong> <a href="https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes#What_is_LaTeX.3F">Learn LaTeX in 30 minutes</a></p>
+</li>
+<li>
+<p><strong>Generator Table online:</strong></p>
+<p><a href="https://www.tablesgenerator.com/#">Create LaTeX tables online - TablesGenerator.com</a></p>
+<p><a href="https://tableconvert.com/latex-generator">LaTeX Table Editor and Generator - Table Convert Online</a></p>
+</li>
+<li>
+<p><strong>Equation Editor</strong></p>
+<p><a href="https://www.codecogs.com/eqnedit.php">Equation Editor</a></p>
+<p><a href="https://www.tablesgenerator.com/#">Create LaTeX tables online - TablesGenerator.com</a></p>
+</li>
+</ol>
+<hr>
+<h1 id="tools">TOOLS</h1>
+<ol>
+<li><strong>Texpad (recommend)</strong>: <a href="https://www.texpad.com/">View link here | Price</a></li>
+<li><strong>Texmaker</strong>: <a href="https://www.xm1math.net/texmaker/">Download | Free</a></li>
+</ol>
+<hr>
+<p><strong>LaTeX:Symbols</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-latex" data-lang="latex"><span class="k">\%</span> → <span class="c">%
+</span><span class="c"></span>
+Fig.~<span class="k">\ref</span><span class="nb">{</span>fig2<span class="nb">}</span>: ref to finger image position
+
+Table~<span class="k">\ref</span><span class="nb">{</span>tab6<span class="nb">}</span>: ref to table image position
+</code></pre></div><p><a href="https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols">All LaTeX Symbols</a></p>
+<ul>
+<li><strong>authorrunning</strong>:   First names are abbreviated in the running head. If there are more than two authors, &lsquo;et al.&rsquo; is used.</li>
+<li><strong>maketitle: G</strong>enerates a title on a separate title page</li>
+<li><strong>titlerunning</strong>: Show title on header all pages</li>
+<li><strong>tabular:</strong> Insert table</li>
+<li><strong>textit</strong>:  italic text (Some text with \emph{emphasis and \emph{nested} content}.)</li>
+</ul>
+<p><strong>Text wrapping in tables</strong></p>
+<p>LaTeX&rsquo;s algorithms for formatting tables have a few shortcomings. One is that it will not automatically wrap text in cells, even if it overruns the width of the page. For columns that will contain text whose length exceeds the column&rsquo;s desired width, it is recommended that you use the p attribute and specify the desired width of the column (although it may take some trial-and-error to get the result you want). For a more convenient method, have a look at <a href="https://en.wikibooks.org/wiki/LaTeX/Tables#The_tabularx_package">The tabularx package</a>, or <a href="https://en.wikibooks.org/wiki/LaTeX/Tables#The_tabulary_package">The tabulary package</a>.</p>
+<p>Instead of <strong>p</strong>, use the <strong>m</strong> attribute to have the lines aligned toward the middle of the box or the b attribute to align along the bottom of the box.</p>
+<p><img src="/images/2022/04/table-elements.png" alt="Table elements"></p>
+<hr>
+<h1 id="cheat-sheets">Cheat Sheets</h1>
+<ul>
+<li>
+<p>Mathematical Symbols:</p>
+<ul>
+<li><a href="https://www.caam.rice.edu/~heinken/latex/symbols.pdf">https://www.caam.rice.edu/~heinken/latex/symbols.pdf</a></li>
+<li><a href="https://www.math.uci.edu/~xiangwen/pdf/LaTeX-Math-Symbols.pdf">https://www.math.uci.edu/~xiangwen/pdf/LaTeX-Math-Symbols.pdf</a></li>
+</ul>
+</li>
+<li>
+<p>Doc:</p>
+<ul>
+<li><a href="https://www.overleaf.com/learn">https://www.overleaf.com/learn</a></li>
+<li><a href="https://en.wikibooks.org/wiki/LaTeX/Tables">https://en.wikibooks.org/wiki/LaTeX/Tables</a></li>
+</ul>
+</li>
+<li>
+<p>Quick guide: <a href="https://users.dickinson.edu/~richesod/latex/latexcheatsheet.pdf">https://users.dickinson.edu/~richesod/latex/latexcheatsheet.pdf</a></p>
+</li>
+</ul>
+<hr>
+<h1 id="example-codes">Example Codes</h1>
+<p><strong>Simple page</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-latex" data-lang="latex"><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+First document. This is a simple example, with no
+extra parameters or packages included.
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-latex" data-lang="latex"><span class="k">\title</span><span class="nb">{</span>...<span class="nb">}</span>title of document
+<span class="k">\author</span><span class="nb">{</span>...<span class="nb">}</span>author of document
+<span class="k">\date</span><span class="nb">{</span>...<span class="nb">}</span>date
+<span class="k">\date</span><span class="nb">{</span>today<span class="nb">}</span>todays date
+<span class="k">\date</span><span class="nb">{</span>25.12.00<span class="nb">}</span>certain date
+<span class="k">\date</span><span class="nb">{}</span>no date
+</code></pre></div><p><img src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/0/01/Firstdocsmall.PNG#center" alt="https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes#What_is_LaTeX.3F"></p>
+<hr>
+<h2 id="basic-formatting"><strong><strong>Basic Formatting</strong></strong></h2>
+<div class="highlight"><pre class="chroma"><code class="language-latex" data-lang="latex"><span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>abstract<span class="nb">}</span>
+This is a simple paragraph at the beginning of the
+document. A brief introduction about the main subject.
+<span class="k">\end</span><span class="nb">{</span>abstract<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</code></pre></div><p><img src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/d/db/Abstractsmall.PNG#center" alt="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/d/db/Abstractsmall.PNG"></p>
+<div class="highlight"><pre class="chroma"><code class="language-latex" data-lang="latex"><span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>abstract<span class="nb">}</span>
+This is a simple paragraph at the beginning of the
+document. A brief introduction about the main subject.
+<span class="k">\end</span><span class="nb">{</span>abstract<span class="nb">}</span>
+
+Now that we have written our abstract, we can begin writing our first paragraph.
+
+This line will start a second Paragraph.
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</code></pre></div><p><img src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/d/d3/Abstractnonewline.PNG#center" alt="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/d/d3/Abstractnonewline.PNG"></p>
+<div class="highlight"><pre class="chroma"><code class="language-latex" data-lang="latex"><span class="k">\chapter</span><span class="nb">{</span>First Chapter<span class="nb">}</span>
+
+<span class="k">\section</span><span class="nb">{</span>Introduction<span class="nb">}</span>
+
+This is the first section.
+
+Lorem  ipsum  dolor  sit  amet,  consectetuer  adipiscing
+elit.   Etiam  lobortisfacilisis sem.  Nullam nec mi et
+neque pharetra sollicitudin.  Praesent imperdietmi nec ante.
+Donec ullamcorper, felis non sodales...
+
+<span class="k">\section</span><span class="nb">{</span>Second Section<span class="nb">}</span>
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Etiam lobortis facilisissem.  Nullam nec mi et neque pharetra
+sollicitudin.  Praesent imperdiet mi necante...
+
+<span class="k">\subsection</span><span class="nb">{</span>First Subsection<span class="nb">}</span>
+Praesent imperdietmi nec ante. Donec ullamcorper, felis non sodales...
+
+<span class="k">\section*</span><span class="nb">{</span>Unnumbered Section<span class="nb">}</span>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Etiam lobortis facilisissem
+</code></pre></div><p><img src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/7/7c/Sections1.PNG#center" alt="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/7/7c/Sections1.PNG"></p>
+<hr>
+<h2 id="text-formatting">Text formatting</h2>
+<div class="highlight"><pre class="chroma"><code class="language-latex" data-lang="latex">Some of the <span class="k">\textbf</span><span class="nb">{</span>greatest<span class="nb">}</span>
+discoveries in <span class="k">\underline</span><span class="nb">{</span>science<span class="nb">}</span>
+were made by <span class="k">\textbf</span><span class="nb">{</span><span class="k">\textit</span><span class="nb">{</span>accident<span class="nb">}}</span>.
+</code></pre></div><p><img src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/a/a9/Biu1.png#center" alt="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/a/a9/Biu1.png"></p>
+<div class="highlight"><pre class="chroma"><code class="language-latex" data-lang="latex">Some of the greatest <span class="k">\emph</span><span class="nb">{</span>discoveries<span class="nb">}</span>
+in science
+were made by accident.
+
+<span class="k">\textit</span><span class="nb">{</span>Some of the greatest <span class="k">\emph</span><span class="nb">{</span>discoveries<span class="nb">}</span>
+in science
+were made by accident.<span class="nb">}</span>
+
+<span class="k">\textbf</span><span class="nb">{</span>Some of the greatest <span class="k">\emph</span><span class="nb">{</span>discoveries<span class="nb">}</span>
+in science
+were made by accident.<span class="nb">}</span>
+</code></pre></div><p><img src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/5/5d/Biu5.png#center" alt="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/5/5d/Biu5.png"></p>
+<hr>
+<h2 id="image">Image</h2>
+<div class="highlight"><pre class="chroma"><code class="language-latex" data-lang="latex"><span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[h]
+    <span class="k">\centering</span>
+    <span class="k">\includegraphics</span><span class="na">[width=0.25\textwidth]</span><span class="nb">{</span>mesh<span class="nb">}</span>
+    <span class="k">\caption</span><span class="nb">{</span>a nice plot<span class="nb">}</span>
+    <span class="k">\label</span><span class="nb">{</span>fig:mesh1<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
+
+As you can see in the figure <span class="k">\ref</span><span class="nb">{</span>fig:mesh1<span class="nb">}</span>, the
+function grows near 0. Also, in the page <span class="k">\pageref</span><span class="nb">{</span>fig:mesh1<span class="nb">}</span>
+is the same example.
+</code></pre></div><p><img src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/2/25/InsertingImages.PNG#center" alt="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/2/25/InsertingImages.PNG"></p>
+<hr>
+<h2 id="lists">Lists</h2>
+<div class="highlight"><pre class="chroma"><code class="language-latex" data-lang="latex"><span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+  <span class="k">\item</span> The individual entries are indicated with a black dot, a so-called bullet.
+  <span class="k">\item</span> The text in the entries may be of any length.
+<span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+</code></pre></div><p><img src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/e/ea/Itemize.png" alt="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/e/ea/Itemize.png"></p>
+<div class="highlight"><pre class="chroma"><code class="language-latex" data-lang="latex"><span class="k">\begin</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+  <span class="k">\item</span> This is the first entry in our list
+  <span class="k">\item</span> The list numbers increase with each entry we add
+<span class="k">\end</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+</code></pre></div><p><img src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/3/3a/Enumerate.png" alt="enumerate"></p>
+<hr>
+<h2 id="math">Math</h2>
+<p>The World&rsquo;s most popular online equation editor creates formatted mathematical equations from <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics">LaTeX markup</a>
+and <a href="https://www.codecogs.com/eqnedit.php#">eqnedit</a></p>
+<div class="highlight"><pre class="chroma"><code class="language-latex" data-lang="latex">The mass-energy equivalence is described by the famous equation
+<span class="sb">\[</span><span class="nb"> E</span><span class="o">=</span><span class="nb">mc^</span><span class="m">2</span><span class="nb"> </span><span class="s">\]</span>
+discovered in 1905 by Albert Einstein.
+In natural units (<span class="s">$</span><span class="nb">c </span><span class="o">=</span><span class="nb"> </span><span class="m">1</span><span class="s">$</span>), the formula expresses the identity
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+E=m
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+</code></pre></div><p><img src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/3/3a/Einstein2.png#center" alt="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/3/3a/Einstein2.png"></p>
+<hr>
+<h2 id="table">Table</h2>
+<p><a href="https://en.wikibooks.org/wiki/LaTeX/Tables">LaTeX/Tables - Wikibooks, open books for an open world</a></p>
+<p><a href="https://www.tablesgenerator.com">Tables generator by copy and paste</a></p>
+</br>
+<div class="highlight"><pre class="chroma"><code class="language-latex" data-lang="latex"><span class="k">\begin</span><span class="nb">{</span>center<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span> c c c <span class="nb">}</span>
+ cell1 <span class="nb">&amp;</span> cell2 <span class="nb">&amp;</span> cell3 <span class="k">\\</span>
+ cell4 <span class="nb">&amp;</span> cell5 <span class="nb">&amp;</span> cell6 <span class="k">\\</span>
+ cell7 <span class="nb">&amp;</span> cell8 <span class="nb">&amp;</span> cell9
+<span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>center<span class="nb">}</span>
+</code></pre></div><p><img src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/c/c2/TablesEx1.png#center" alt="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/c/c2/TablesEx1.png"></p>
+<div class="highlight"><pre class="chroma"><code class="language-latex" data-lang="latex"><span class="k">\begin</span><span class="nb">{</span>center<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span> |c|c|c| <span class="nb">}</span>
+ <span class="k">\hline</span>
+ cell1 <span class="nb">&amp;</span> cell2 <span class="nb">&amp;</span> cell3 <span class="k">\\</span>
+ cell4 <span class="nb">&amp;</span> cell5 <span class="nb">&amp;</span> cell6 <span class="k">\\</span>
+ cell7 <span class="nb">&amp;</span> cell8 <span class="nb">&amp;</span> cell9 <span class="k">\\</span>
+ <span class="k">\hline</span>
+<span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>center<span class="nb">}</span>
+</code></pre></div><p><img src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/2/25/TablesEx2.png#center" alt="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/2/25/TablesEx2.png"></p>
+<div class="highlight"><pre class="chroma"><code class="language-latex" data-lang="latex"><span class="k">\begin</span><span class="nb">{</span>center<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>|c|c|c|c|<span class="nb">}</span>
+<span class="k">\hline</span>
+<span class="nb">&amp;</span><span class="k">\multicolumn</span><span class="nb">{</span>3<span class="nb">}{</span>|c|<span class="nb">}{</span>Income Groups<span class="nb">}</span><span class="k">\\</span>
+<span class="k">\cline</span><span class="nb">{</span>2-4<span class="nb">}</span>
+City<span class="nb">&amp;</span>Lower<span class="nb">&amp;</span>Middle<span class="nb">&amp;</span>Higher<span class="k">\\</span>
+<span class="k">\hline</span>
+City-1<span class="nb">&amp;</span> 11 <span class="nb">&amp;</span> 21 <span class="nb">&amp;</span> 13<span class="k">\\</span>
+City-2<span class="nb">&amp;</span> 21 <span class="nb">&amp;</span> 31 <span class="nb">&amp;</span>41<span class="k">\\</span>
+<span class="k">\hline</span>
+<span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>center<span class="nb">}</span>
+</code></pre></div><p><img src="https://i.stack.imgur.com/EEHSO.jpg#center" alt="https://i.stack.imgur.com/EEHSO.jpg"></p>
+<div class="highlight"><pre class="chroma"><code class="language-latex" data-lang="latex"><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="na">[english]</span><span class="nb">{</span>babel<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+Without specifying width for last column:
+<span class="k">\begin</span><span class="nb">{</span>center<span class="nb">}</span>
+    <span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>| l | l | l | l |<span class="nb">}</span>
+    <span class="k">\hline</span>
+    Day <span class="nb">&amp;</span> Min Temp <span class="nb">&amp;</span> Max Temp <span class="nb">&amp;</span> Summary <span class="k">\\</span> <span class="k">\hline</span>
+    Monday <span class="nb">&amp;</span> 11C <span class="nb">&amp;</span> 22C <span class="nb">&amp;</span> A clear day with lots of sunshine.
+    However, the strong breeze will bring down the temperatures. <span class="k">\\</span> <span class="k">\hline</span>
+    Tuesday <span class="nb">&amp;</span> 9C <span class="nb">&amp;</span> 19C <span class="nb">&amp;</span> Cloudy with rain, across many northern regions. Clear spells
+    across most of Scotland and Northern Ireland,
+    but rain reaching the far northwest. <span class="k">\\</span> <span class="k">\hline</span>
+    Wednesday <span class="nb">&amp;</span> 10C <span class="nb">&amp;</span> 21C <span class="nb">&amp;</span> Rain will still linger for the morning.
+    Conditions will improve by early afternoon and continue
+    throughout the evening. <span class="k">\\</span>
+    <span class="k">\hline</span>
+    <span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>center<span class="nb">}</span>
+
+With width specified:
+<span class="k">\begin</span><span class="nb">{</span>center<span class="nb">}</span>
+    <span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span> | l | l | l | p<span class="nb">{</span>5cm<span class="nb">}</span> |<span class="nb">}</span>
+    <span class="k">\hline</span>
+    Day <span class="nb">&amp;</span> Min Temp <span class="nb">&amp;</span> Max Temp <span class="nb">&amp;</span> Summary <span class="k">\\</span> <span class="k">\hline</span>
+    Monday <span class="nb">&amp;</span> 11C <span class="nb">&amp;</span> 22C <span class="nb">&amp;</span> A clear day with lots of sunshine.
+    However, the strong breeze will bring down the temperatures. <span class="k">\\</span> <span class="k">\hline</span>
+    Tuesday <span class="nb">&amp;</span> 9C <span class="nb">&amp;</span> 19C <span class="nb">&amp;</span> Cloudy with rain, across many northern regions. Clear spells
+    across most of Scotland and Northern Ireland,
+    but rain reaching the far northwest. <span class="k">\\</span> <span class="k">\hline</span>
+    Wednesday <span class="nb">&amp;</span> 10C <span class="nb">&amp;</span> 21C <span class="nb">&amp;</span> Rain will still linger for the morning.
+    Conditions will improve by early afternoon and continue
+    throughout the evening. <span class="k">\\</span>
+    <span class="k">\hline</span>
+    <span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>center<span class="nb">}</span>
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</code></pre></div><p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Latex_example_wrapped_table.svg/800px-Latex_example_wrapped_table.svg.png#center" alt="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Latex_example_wrapped_table.svg/800px-Latex_example_wrapped_table.svg.png"></p>
+<hr>
+<h1 id="conclusion">Conclusion</h1>
+<p>All of note above. I hope you can reach it in an easier and faster way.</p>
+<p><code>Don't be afraid; just do it! (LIVE &amp; LEARN)</code></p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/vnuhcm/">VNUHCM</a><a class="category" href="/categories/notes/">Notes</a></span>
+
+                <span class="separator"><a class="tag" href="/tags/latex/">Latex</a><a class="tag" href="/tags/notes/">Notes</a></span>
+
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="https://tqtuan1201.github.io/js/jquery.min.64d0083866906099f942140bc1c5cba4b1bf65783c52e4a63c5c46bf9dbc41f4.js"
+        integrity="sha256-ZNAIOGaQYJn5QhQLwcXLpLG/ZXg8UuSmPFxGv528QfQ="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://tqtuan1201.github.io/js/bundle.min.45159b0e20ba3878972e064b7edc464c31a9e35a0d0a6a71e3fec84efdbe2ea5.js"
+        integrity="sha256-RRWbDiC6OHiXLgZLftxGTDGp41oNCmpx4/7ITv2&#43;LqU="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://tqtuan1201.github.io/js/medium-zoom.min.2d6fd0be87fa98f0c9b4dc2536b312bbca48757f584f6ea1f394abc9bcc38fbc.js"
+        integrity="sha256-LW/Qvof6mPDJtNwlNrMSu8pIdX9YT26h85SrybzDj7w="
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

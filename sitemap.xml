@@ -2,6 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://tqtuan1201.github.io/categories/</loc>
+    <lastmod>2022-04-18T14:29:52+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/latex/</loc>
+    <lastmod>2022-04-18T14:29:52+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/posts/latex-take-note/</loc>
+    <lastmod>2022-04-18T14:29:52+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/notes/</loc>
+    <lastmod>2022-04-18T14:29:52+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/categories/notes/</loc>
+    <lastmod>2022-04-18T14:29:52+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/posts/</loc>
+    <lastmod>2022-04-18T14:29:52+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/series/</loc>
+    <lastmod>2022-04-18T14:29:52+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/</loc>
+    <lastmod>2022-04-18T14:29:52+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/</loc>
+    <lastmod>2022-04-18T14:29:52+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/series/vnuhcm/</loc>
+    <lastmod>2022-04-18T14:29:52+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/categories/vnuhcm/</loc>
+    <lastmod>2022-04-18T14:29:52+07:00</lastmod>
+  </url><url>
     <loc>https://tqtuan1201.github.io/series/12bay/</loc>
     <lastmod>2022-04-12T14:49:56+07:00</lastmod>
   </url><url>
@@ -14,28 +47,13 @@
     <loc>https://tqtuan1201.github.io/categories/applewatch/</loc>
     <lastmod>2022-04-12T14:49:56+07:00</lastmod>
   </url><url>
-    <loc>https://tqtuan1201.github.io/categories/</loc>
-    <lastmod>2022-04-12T14:49:56+07:00</lastmod>
-  </url><url>
     <loc>https://tqtuan1201.github.io/tags/ios/</loc>
     <lastmod>2022-04-12T14:49:56+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/categories/mobile-apps/</loc>
     <lastmod>2022-04-12T14:49:56+07:00</lastmod>
   </url><url>
-    <loc>https://tqtuan1201.github.io/posts/</loc>
-    <lastmod>2022-04-12T14:49:56+07:00</lastmod>
-  </url><url>
-    <loc>https://tqtuan1201.github.io/series/</loc>
-    <lastmod>2022-04-12T14:49:56+07:00</lastmod>
-  </url><url>
     <loc>https://tqtuan1201.github.io/tags/swiftui/</loc>
-    <lastmod>2022-04-12T14:49:56+07:00</lastmod>
-  </url><url>
-    <loc>https://tqtuan1201.github.io/tags/</loc>
-    <lastmod>2022-04-12T14:49:56+07:00</lastmod>
-  </url><url>
-    <loc>https://tqtuan1201.github.io/</loc>
     <lastmod>2022-04-12T14:49:56+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/posts/factorization-machines-presentation/</loc>
@@ -45,12 +63,6 @@
     <lastmod>2022-04-07T15:45:29+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/tags/slideshare/</loc>
-    <lastmod>2022-04-07T15:45:29+07:00</lastmod>
-  </url><url>
-    <loc>https://tqtuan1201.github.io/series/vnuhcm/</loc>
-    <lastmod>2022-04-07T15:45:29+07:00</lastmod>
-  </url><url>
-    <loc>https://tqtuan1201.github.io/categories/vnuhcm/</loc>
     <lastmod>2022-04-07T15:45:29+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/tags/click-prediction-problem/</loc>
