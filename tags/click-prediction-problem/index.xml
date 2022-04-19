@@ -13,8 +13,10 @@
       <pubDate>Thu, 07 Apr 2022 13:29:52 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/posts/factorization-machines/</guid>
-      <description>Giới thiệu tổng quát về Factorization Machines và ứng dụng của nó trên tập dữ liệu lớn Dựa trên bài báo Introductory Guide – Factorization Machines &amp;amp; their application on huge datasets (with codes in Python), tác giả: Ankit Choudhary
+      
+        <description>Giới thiệu tổng quát về Factorization Machines và ứng dụng của nó trên tập dữ liệu lớn Dựa trên bài báo Introductory Guide – Factorization Machines &amp;amp; their application on huge datasets (with codes in Python), tác giả: Ankit Choudhary
  Phần mở đầu Khi chúng ta làm việc với các bài toán liên quan tới Click Prediction Problem hay Recommendation Systems. Chúng ta thường xuyên đối mặt với vấn đề là tập dữ liệu quá lớn.</description>
+      
     </item>
     
   </channel>

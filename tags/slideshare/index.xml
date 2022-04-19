@@ -13,10 +13,12 @@
       <pubDate>Thu, 07 Apr 2022 15:45:29 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/posts/factorization-machines-presentation/</guid>
-      <description>Báo cáo này dựa trên bài báo Introductory Guide – Factorization Machines &amp;amp; their application on huge datasets (with codes in Python)  Tác giả: Ankit Choudhary
+      
+        <description>Báo cáo này dựa trên bài báo Introductory Guide – Factorization Machines &amp;amp; their application on huge datasets (with codes in Python)  Tác giả: Ankit Choudhary
  Một số từ khóa liên quan
 FMs: Factorization Machines, FFMs: Field Aware Factorization Machines, Matrix Factorization CTR: Click-Through Rate, Recommendation Systems
 Slide share  </description>
+      
     </item>
     
   </channel>

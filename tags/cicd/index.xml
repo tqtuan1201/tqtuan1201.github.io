@@ -13,10 +13,12 @@
       <pubDate>Thu, 25 Mar 2021 10:38:57 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/posts/basic-ci-cd-gitlab-fastlane/</guid>
-      <description>Abstract Trong bài viết này mình tiềm hiểu về GitLab-CI, Fastlane ở mức cơ bản.
+      
+        <description>Abstract Trong bài viết này mình tiềm hiểu về GitLab-CI, Fastlane ở mức cơ bản.
    Tìm hiểu GitLab-CI.
   Fastlane là gì?
    What is CI? Trong quá trình làm việc theo nhóm việc quản lý source-code giữa các thành viên với nhau là cực kỳ quan trọng. Việc cập nhật mã code giữa các thành viên với nhau là rất thường xuyên. Việc này dẫn đến nhiều vấn đề nảy sinh như code lỗi,&amp;hellip; để phát hiện sớm các lỗi để sửa ngay đưa ra một khái niệm là Continuos Integration - Tích hợp liên tục</description>
+      
     </item>
     
   </channel>

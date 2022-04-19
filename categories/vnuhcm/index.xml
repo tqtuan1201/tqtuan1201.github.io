@@ -13,12 +13,14 @@
       <pubDate>Mon, 18 Apr 2022 14:29:52 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/posts/latex-take-note/</guid>
-      <description>The 14th Asian Conference on Intelligent Information and Database Systems
+      
+        <description>The 14th Asian Conference on Intelligent Information and Database Systems
 https://aciids.pwr.edu.pl/2022/download/ACIIDS_2022_HCMC_Flyer_v.7.0.pdf
  MY TOPIC: Predictive modelling of diseases based on a network and machine learning approach, I hope it&amp;rsquo;s approved soon ^^
  Paper Submission:
 The proceedings of ACIIDS 2022 will be published by Springer in series Lecture Notes in Artificial Intelligence and will be distributed at the conference
  LNCS/LNAI style. Should not exceed 13 pages.   Here is a my collect data with purpose to learn, more knowledge from large amount of examples, solutions, and ideas on the internet.</description>
+      
     </item>
     
     <item>
@@ -27,10 +29,12 @@ The proceedings of ACIIDS 2022 will be published by Springer in series Lecture N
       <pubDate>Thu, 07 Apr 2022 15:45:29 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/posts/factorization-machines-presentation/</guid>
-      <description>Báo cáo này dựa trên bài báo Introductory Guide – Factorization Machines &amp;amp; their application on huge datasets (with codes in Python)  Tác giả: Ankit Choudhary
+      
+        <description>Báo cáo này dựa trên bài báo Introductory Guide – Factorization Machines &amp;amp; their application on huge datasets (with codes in Python)  Tác giả: Ankit Choudhary
  Một số từ khóa liên quan
 FMs: Factorization Machines, FFMs: Field Aware Factorization Machines, Matrix Factorization CTR: Click-Through Rate, Recommendation Systems
 Slide share  </description>
+      
     </item>
     
     <item>
@@ -39,8 +43,10 @@ Slide share  </description>
       <pubDate>Thu, 07 Apr 2022 13:29:52 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/posts/factorization-machines/</guid>
-      <description>Giới thiệu tổng quát về Factorization Machines và ứng dụng của nó trên tập dữ liệu lớn Dựa trên bài báo Introductory Guide – Factorization Machines &amp;amp; their application on huge datasets (with codes in Python), tác giả: Ankit Choudhary
+      
+        <description>Giới thiệu tổng quát về Factorization Machines và ứng dụng của nó trên tập dữ liệu lớn Dựa trên bài báo Introductory Guide – Factorization Machines &amp;amp; their application on huge datasets (with codes in Python), tác giả: Ankit Choudhary
  Phần mở đầu Khi chúng ta làm việc với các bài toán liên quan tới Click Prediction Problem hay Recommendation Systems. Chúng ta thường xuyên đối mặt với vấn đề là tập dữ liệu quá lớn.</description>
+      
     </item>
     
   </channel>

@@ -6,14 +6,27 @@
     <description>Recent content in Categories on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Apr 2022 14:29:52 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Apr 2022 11:08:19 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VOA</title>
+      <link>https://tqtuan1201.github.io/categories/voa/</link>
+      <pubDate>Tue, 19 Apr 2022 11:08:19 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/categories/voa/</guid>
+      
+        <description></description>
+      
+    </item>
+    
     <item>
       <title>Notes</title>
       <link>https://tqtuan1201.github.io/categories/notes/</link>
       <pubDate>Mon, 18 Apr 2022 14:29:52 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/categories/notes/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
@@ -22,7 +35,9 @@
       <pubDate>Mon, 18 Apr 2022 14:29:52 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/categories/vnuhcm/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
@@ -31,7 +46,9 @@
       <pubDate>Tue, 12 Apr 2022 14:49:56 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/categories/applewatch/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
@@ -40,7 +57,9 @@
       <pubDate>Tue, 12 Apr 2022 14:49:56 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/categories/mobile-apps/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
@@ -49,7 +68,9 @@
       <pubDate>Fri, 19 Mar 2021 13:11:55 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/categories/machine-learning/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
   </channel>

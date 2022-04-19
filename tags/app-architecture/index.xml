@@ -13,8 +13,10 @@
       <pubDate>Fri, 19 Mar 2021 13:11:55 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/posts/nlp-on-ios-application-viper-arch/</guid>
-      <description>Abstract Xây dựng ứng dụng iOS với kiến trúc VIPER về dự đoán tác giả bài thơ. Input đầu vào là một đoạn text đoạn thơ người dùng nhập vào và output là tác giả của đoạn thơ đó. Ví dụ: INPUT = Sao anh không về chơi thôn Vĩ? → OUTPUT = Hàn Mặc Tử
+      
+        <description>Abstract Xây dựng ứng dụng iOS với kiến trúc VIPER về dự đoán tác giả bài thơ. Input đầu vào là một đoạn text đoạn thơ người dùng nhập vào và output là tác giả của đoạn thơ đó. Ví dụ: INPUT = Sao anh không về chơi thôn Vĩ? → OUTPUT = Hàn Mặc Tử
   Tìm hiểu về Bag of Words, Turi Create. Xây dựng ứng dụng iOS trên kiến trúc VIPER Clean Architecture Một số từ khóa liên quan: Bag of Word, Logictic Classifier, Turi Create VIPER, iOS Application     Đặt Vấn Đề INPUT STRING:</description>
+      
     </item>
     
     <item>
@@ -23,9 +25,11 @@
       <pubDate>Mon, 01 Mar 2021 15:58:30 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/posts/my-first-post/</guid>
-      <description>Architecture Just like MVC or MVVM, VIPER is a design pattern created to facilitate the development by creating layers of abstraction and isolation of concerns, creating a cleaner code, and bringing more maintainability further down the road
+      
+        <description>Architecture Just like MVC or MVVM, VIPER is a design pattern created to facilitate the development by creating layers of abstraction and isolation of concerns, creating a cleaner code, and bringing more maintainability further down the road
 VIPER is an acronym for View-Interactor-Presenter-Entity-Router. Each functionality or module must be defined by these five components.
 View It’s what the user sees, the view that represents a functionality. In some cases, a single functionality can have multiple views, for example, an onboarding flow with multiple steps.</description>
+      
     </item>
     
   </channel>

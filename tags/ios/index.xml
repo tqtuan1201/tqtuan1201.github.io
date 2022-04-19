@@ -13,9 +13,11 @@
       <pubDate>Tue, 12 Apr 2022 14:49:56 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/posts/apple-watch-serial/</guid>
-      <description>Abstract In this part, I started to learn about SwiftUI to build apple watch app for 12bay app.Through this part, the desired result is to build 12bay application for apple watch and learn about new knowledge such as SwiftUI, Combine framework in the field of Wearable App Integration.
+      
+        <description>Abstract In this part, I started to learn about SwiftUI to build apple watch app for 12bay app.Through this part, the desired result is to build 12bay application for apple watch and learn about new knowledge such as SwiftUI, Combine framework in the field of Wearable App Integration.
 Completing this section, we must know the following knowledge:
  Have knowledge about SwiftUI. Have knowledge about Combine framework Have knowledge about Watchkit app architecture Have knowledge about HealthKit, WatchKit Develop 12Bay application on watchOS  Motivation Wearable App Integration</description>
+      
     </item>
     
     <item>
@@ -24,8 +26,10 @@ Completing this section, we must know the following knowledge:
       <pubDate>Wed, 06 Apr 2022 16:05:26 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/posts/what-is-the-future-of-mobile-app-development/</guid>
-      <description>💡 What is the future of mobile app development?  A new year has started and most of us are probably figuring out what we should focus on this year. Whether it’s learning new things or expanding our knowledge on topics we’ve already learned about in the past, there’s always something that deserves our attention in the world of iOS development.
+      
+        <description>💡 What is the future of mobile app development?  A new year has started and most of us are probably figuring out what we should focus on this year. Whether it’s learning new things or expanding our knowledge on topics we’ve already learned about in the past, there’s always something that deserves our attention in the world of iOS development.
  As per the statistics, over 5 million apps are available in Google Play Store and Apple App Store.</description>
+      
     </item>
     
     <item>
@@ -34,10 +38,12 @@ Completing this section, we must know the following knowledge:
       <pubDate>Thu, 25 Mar 2021 10:38:57 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/posts/basic-ci-cd-gitlab-fastlane/</guid>
-      <description>Abstract Trong bài viết này mình tiềm hiểu về GitLab-CI, Fastlane ở mức cơ bản.
+      
+        <description>Abstract Trong bài viết này mình tiềm hiểu về GitLab-CI, Fastlane ở mức cơ bản.
    Tìm hiểu GitLab-CI.
   Fastlane là gì?
    What is CI? Trong quá trình làm việc theo nhóm việc quản lý source-code giữa các thành viên với nhau là cực kỳ quan trọng. Việc cập nhật mã code giữa các thành viên với nhau là rất thường xuyên. Việc này dẫn đến nhiều vấn đề nảy sinh như code lỗi,&amp;hellip; để phát hiện sớm các lỗi để sửa ngay đưa ra một khái niệm là Continuos Integration - Tích hợp liên tục</description>
+      
     </item>
     
     <item>
@@ -46,8 +52,10 @@ Completing this section, we must know the following knowledge:
       <pubDate>Fri, 19 Mar 2021 13:11:55 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/posts/nlp-on-ios-application-viper-arch/</guid>
-      <description>Abstract Xây dựng ứng dụng iOS với kiến trúc VIPER về dự đoán tác giả bài thơ. Input đầu vào là một đoạn text đoạn thơ người dùng nhập vào và output là tác giả của đoạn thơ đó. Ví dụ: INPUT = Sao anh không về chơi thôn Vĩ? → OUTPUT = Hàn Mặc Tử
+      
+        <description>Abstract Xây dựng ứng dụng iOS với kiến trúc VIPER về dự đoán tác giả bài thơ. Input đầu vào là một đoạn text đoạn thơ người dùng nhập vào và output là tác giả của đoạn thơ đó. Ví dụ: INPUT = Sao anh không về chơi thôn Vĩ? → OUTPUT = Hàn Mặc Tử
   Tìm hiểu về Bag of Words, Turi Create. Xây dựng ứng dụng iOS trên kiến trúc VIPER Clean Architecture Một số từ khóa liên quan: Bag of Word, Logictic Classifier, Turi Create VIPER, iOS Application     Đặt Vấn Đề INPUT STRING:</description>
+      
     </item>
     
   </channel>
