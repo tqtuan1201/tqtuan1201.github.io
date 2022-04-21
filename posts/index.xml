@@ -6,7 +6,20 @@
     <description>Recent content in Posts on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 Apr 2022 11:08:19 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Apr 2022 17:39:16 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Let&#39;s idea, how to design travel app (12Bay) on watchOS?</title>
+      <link>https://tqtuan1201.github.io/posts/apple-watch-serial-design/</link>
+      <pubDate>Wed, 20 Apr 2022 17:39:16 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/apple-watch-serial-design/</guid>
+      
+        <description>Abstract Before we start to code. We should think about What is a purple of the application?
+Currently, We have multiple apps on macOS, iOS and ipadOS. With an app on watchOS, what needs should it meet? Find it out, and let&amp;rsquo;s design. This article talk about 12bay UI/UX on watchos
+ What is a purple of the application?     How to design it?     After one hour to survey I have some idea about functions of the app as follows:</description>
+      
+    </item>
+    
     <item>
       <title>VOA - Could Bitcoin Become a Reserve Currency</title>
       <link>https://tqtuan1201.github.io/posts/learn-en-voa-could-bitcoin-become-a-reserve-currency/</link>
