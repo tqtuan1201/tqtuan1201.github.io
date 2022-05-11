@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme="light"
+  class="html"
+><head>
+  <title>
+    
+      Tuan Truong
+        |
+        Apple Watch Serial P1 Homescreen
+
+
+      
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.81.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Tuan Truong" />
+  <meta
+    name="description"
+    content="
+      “The only thing that is constant is change”, Heraclitus.
+
+
+    "
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.5d0ab9997fe7356e90383be507c6acfedb0915acdc6edea5c99457f230aec00e.css"
+      integrity="sha256-XQq5mX/nNW6QODvlB8as/tsJFazcbt6lyZRX8jCuwA4="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.69685904d5c2a0c6258d03c207b778c10466edf6cea928cc0164c376b0ad0930.css"
+    integrity="sha256-aWhZBNXCoMYljQPCB7d4wQRm7fbOqSjMAWTDdrCtCTA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.6d585e78d28cce1200d39fb133c92ed83df01738da721d0f48fb6eac62d24e04.css"
+    integrity="sha256-bVheeNKMzhIA05&#43;xM8ku2D3wFzjach0PSPturGLSTgQ="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.6b00d96498d59caa0dbcf9b49d30d821915291f2ceb0e19248523c8607ff43fa.css"
+    integrity="sha256-awDZZJjVnKoNvPm0nTDYIZFSkfLOsOGSSFI8hgf/Q/o="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://tqtuan1201.github.io/posts/apple-watch-serial-p1-homescreen/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.46e6a54097480084f8f52c20ca1aa7425b4fad17029a887fd4017b12e311a72d.js"
+    integrity="sha256-RualQJdIAIT49SwgyhqnQltPrRcCmoh/1AF7EuMRpy0="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.5557c8ff5617a01067ac258fd70b9b992506e379317b0da51e5e0f6e018b408a.js"
+      integrity="sha256-VVfI/1YXoBBnrCWP1wubmSUG43kxew2lHl4PbgGLQIo="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tqtuan1201.github.io/images/profile.jpg"/>
+
+<meta name="twitter:title" content="Apple Watch Serial P1 Homescreen"/>
+<meta name="twitter:description" content="Abstract I have a long holiday with my family in my hometown. So it&rsquo;s a beautiful life. Today, we begin to code a home screen. In this post, We will learn to use basic SwiftUI to build UIs for apple watch application. Here are some keys you will get through this topic:
+  Create a new watchOS target inside of our existing iOS project.
+  Understand the WatchKit App."/>
+
+
+
+  
+  <meta property="og:title" content="Apple Watch Serial P1 Homescreen" />
+<meta property="og:description" content="Abstract I have a long holiday with my family in my hometown. So it&rsquo;s a beautiful life. Today, we begin to code a home screen. In this post, We will learn to use basic SwiftUI to build UIs for apple watch application. Here are some keys you will get through this topic:
+  Create a new watchOS target inside of our existing iOS project.
+  Understand the WatchKit App." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tqtuan1201.github.io/posts/apple-watch-serial-p1-homescreen/" /><meta property="og:image" content="https://tqtuan1201.github.io/images/profile.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-04T14:38:52&#43;07:00" />
+<meta property="article:modified_time" content="2022-05-04T14:38:52&#43;07:00" /><meta property="og:site_name" content="Hi, I&#39;m Tuan Truong" />
+<meta property="og:see_also" content="https://tqtuan1201.github.io/posts/apple-watch-serial-design/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/apple-watch-serial/" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "posts",
+        "name": "Apple Watch Serial P1 Homescreen",
+        "headline": "Apple Watch Serial P1 Homescreen",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Abstract I have a long holiday with my family in my hometown. So it\u0026rsquo;s a beautiful life. Today, we begin to code a home screen. In this post, We will learn to use basic SwiftUI to build UIs for apple watch application. Here are some keys you will get through this topic:\n  Create a new watchOS target inside of our existing iOS project.\n  Understand the WatchKit App.
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/tqtuan1201.github.io\/posts\/apple-watch-serial-p1-homescreen\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-05-04T14:38:52.00Z",
+        "datePublished": "2022-05-04T14:38:52.00Z",
+        "dateModified": "2022-05-04T14:38:52.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Tuan Truong",
+            "url": "https://tqtuan1201.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/tqtuan1201.github.io\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://tqtuan1201.github.io/images/profile.jpg"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/tqtuan1201.github.io\/posts\/apple-watch-serial-p1-homescreen\/",
+        "wordCount" : "1512",
+        "genre" : [ 
+      
+      "AppleWatch"
+
+    
+      
+        ,
+
+      
+      "Mobile Apps"
+
+    ],
+        "keywords" : [ 
+      
+      "AppleWatch"
+
+    
+      
+        ,
+
+      
+      "iOS"
+
+    
+      
+        ,
+
+      
+      "SwiftUI"
+
+    ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--light"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/profile.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Hi, I&#39;m Tuan Truong</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>“The only thing that is constant is change”, Heraclitus.</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a href="https://github.com/tqtuan1201" rel="me" aria-label="Linkedin" title="Linkedin">
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a href="https://github.com/tqtuan1201" rel="me" aria-label="GitHub" title="GitHub">
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a href="https://github.com/tqtuan1201" rel="me" aria-label="instagram" title="instagram">
+            <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a href="mailto:truongquangtuanit@gmail.com" rel="me" aria-label="e-mail" title="e-mail">
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
+    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    crossorigin="anonymous"
+  ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/"
+            
+            title=""
+            >Home</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/"
+            
+            title=""
+            >Posts</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/"
+            
+            title=""
+            >About</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/"
+            
+            title=""
+            >Contact</a
+          >
+        </li>
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+
+    <div class="post__content">
+      <h1>Apple Watch Serial P1 Homescreen</h1>
+      <h3>Table of Contents</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#abstract">Abstract</a>
+      <ul>
+        <li><a href="#create-12bay-watchos-app">Create 12Bay WatchOS App</a>
+          <ul>
+            <li><a href="#understand-the-watchkit-app-and-watchkit-extension">Understand the WatchKit App and WatchKit Extension</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#watch-connectivity">Watch Connectivity</a></li>
+    <li><a href="#lets-start-to-code-homescreen">Let&rsquo;s start to code homescreen</a>
+      <ul>
+        <li><a href="#first-one-lets-to-learn-some-basic-view">First one, Let&rsquo;s to learn some basic view</a>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+        <li><a href="#uikit-equivalent-in-swiftui">UIKit equivalent in SwiftUI</a>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+        <li><a href="#homescreen">HomeScreen</a>
+          <ul>
+            <li><a href="#homeitemview">HomeItemView</a></li>
+            <li><a href="#homeview">HomeView</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+        <div style="width: 100%; margin: 0 auto; background:rgba(0,0,0,0.5); height: 1px; opacity: 0.6"> </div><h1 id="abstract">Abstract</h1>
+<p>I have a long holiday with my family in my hometown. So it&rsquo;s a beautiful life. Today, we begin to code a <strong>home screen</strong>. In this post, We will learn to use basic <code>SwiftUI</code> to build UIs for apple watch application. Here are some keys you will get through this topic:</p>
+<ul>
+<li>
+<p>Create a new watchOS target inside of our existing iOS project.</p>
+</li>
+<li>
+<p>Understand the WatchKit App.</p>
+</li>
+<li>
+<p>What’s SwiftUI, and how is it different than UIKit?</p>
+</li>
+<li>
+<p>The fundamental component in SwiftUI: Views, Image, NavigationView, ect.</p>
+</li>
+<li>
+<p>Working with stacks, such as the VStack, HStack and ZStack.</p>
+</li>
+</ul>
+<p>This article is part of my <a href="https://tqtuan1201.github.io/categories/applewatch/"><em>Apple Watch by SwiftUI</em></a> series.</p>
+<p>Previously : <a href="https://tqtuan1201.github.io/posts/apple-watch-serial-design/">Let&rsquo;s Idea, How to Design Travel App (12Bay) on WatchOS?</a></p>
+<p>Let&rsquo;s do it.</p>
+<h2 id="create-12bay-watchos-app">Create 12Bay WatchOS App</h2>
+<p>To create a watchOS App target to an existing iOS project we need to select:  <em>File</em> -&gt; <em>New</em> -&gt; <em>Target</em> and select <em>Watch App for iOS App</em> under <em>watchOS tab</em>.</p>
+<p><img src="/images/image-20220504150128295.png#center50" alt=""></p>
+<p>When the target is created, we get two new folders named <em><strong>&lt;ProductName&gt;</strong></em> and <strong>&lt;ProductName&gt; Extension.</strong></p>
+<ul>
+<li>The <em><strong>&lt;ProductName&gt;</strong></em> folder :  Where our watchOS app’s storyboard(s) and the assets used by the storyboard(s) are stored.</li>
+<li>The <em><strong>&lt;ProductName&gt; Extension</strong></em> folder: This the area to store the code files.</li>
+</ul>
+<p><img src="/images/image-20220504160945366.png#center" alt="image-20220504160945366"></p>
+<p>Now that we have our iOS and Watch app “<em>working</em>”, let’s enable communication between them.</p>
+<h3 id="understand-the-watchkit-app-and-watchkit-extension">Understand the WatchKit App and WatchKit Extension</h3>
+<p>Regardless of whether you add a watchOS app to an existing project or create a new project that contains both an iOS and watchOS app, Xcode automatically configures the targets for your watchOS app and adds the needed files, as image bellow:
+<img src="https://docs-assets.developer.apple.com/published/1e9e9e41e4/3295999~dark@2x.png#center30" alt=""></p>
+<p align="center" >(source: developer.apple.com) </p>
+<ul>
+<li><strong>WatchKit App</strong></li>
+</ul>
+<p>​	An app bundle that contains your watchOS app’s storyboard and any assets used by the storyboard.</p>
+<ul>
+<li><strong>WatchKit Extension</strong></li>
+</ul>
+<p>​	An extension that contains your watchOS app’s code.</p>
+<p>Xcode sets the bundle IDs for both of the watch targets based on the container’s ID. For a watch-only app, this ID is the bundle ID for the root target. For a watchOS app with an iOS app, this ID is the iOS app’s bundle ID. The root of the WatchKit app and WatchKit extension’s bundle IDs must match the container’s bundle ID. If you change your iOS app’s bundle ID, you must update the other bundle IDs accordingly.
+When developing your watchOS app, <strong>edit your app’s storyboard in the WatchKit app</strong>, and <strong>write your app’s code in the WatchKit extension</strong>. Your WatchKit extension connects to controls and views in the storyboard using <a href="https://developer.apple.com/documentation/watchkit/wkinterfaceobject"><code>WKInterfaceObject</code></a> subclasses such as <a href="https://developer.apple.com/documentation/watchkit/wkinterfacebutton"><code>WKInterfaceButton</code></a> and <a href="https://developer.apple.com/documentation/watchkit/wkinterfacelabel"><code>WKInterfaceLabel</code></a>. These interface objects act as proxies for your storyboard elements. Use the interface elements to configure the elements in code.</p>
+<h1 id="watch-connectivity">Watch Connectivity</h1>
+<p>One more things, the goal is to send the result from the iOS app and present it in the watch app.</p>
+<p><strong>Watch Connectivity</strong> Implement two-way communication between an iOS app and its paired watchOS app.</p>
+<p>Use this framework to transfer data between your iOS app and the WatchKit extension of a paired watchOS app. You can pass small amounts of data or entire files. You also use this framework to trigger an update to your watchOS app&rsquo;s complication.</p>
+<p><img src="/images/image-20220504165304879.png#center50" alt="image-20220504165304879"></p>
+<hr>
+<h1 id="lets-start-to-code-homescreen">Let&rsquo;s start to code homescreen</h1>
+<p>Here is homescreen design, There are three main function to show:</p>
+<ul>
+<li>
+<p>Show the recent booking</p>
+</li>
+<li>
+<p>View all booking</p>
+</li>
+<li>
+<p>View all notification</p>
+<p><img src="/images/image-20220504165900031.png#center30" alt="image-20220504165900031"></p>
+</li>
+</ul>
+<h2 id="first-one-lets-to-learn-some-basic-view">First one, Let&rsquo;s to learn some basic view</h2>
+<h4 id="rip-constraints">Rip constraints</h4>
+<p><img src="https://i.stack.imgur.com/jqNUg.png#center30" alt=""></p>
+<p align="center" >(source: stackoverflow.com) </p>
+<p><em>SwiftUI</em> doesn&rsquo;t use layout constraints. <em>UIKit</em> is still around, it&rsquo;s not deprecated and fully functional, so if you continue to use the classic approach, you can use as many constraints as you wish.</p>
+<p><strong>However, if you choose to go with <em>SwiftUI</em> → rest in peace, constraints!</strong></p>
+<h4 id="layout">Layout</h4>
+<p>SwiftUI layout system is different from UIKit. <strong>It asks each child view to calculate its own size</strong> based on the bounds of its parent view. Next, asks each parent to position its children within its own bounds. More detail you can find here: <a href="https://www.hackingwithswift.com/books/ios-swiftui/how-layout-works-in-swiftui">how layout work in swiftUI - hackingwithswift</a></p>
+<h2 id="uikit-equivalent-in-swiftui">UIKit equivalent in SwiftUI</h2>
+<p>Integrate SwiftUI views into existing apps, and embed UIKit views and controllers into SwiftUI view hierarchies.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">UIKit</th>
+<th style="text-align:left">SwiftUI</th>
+<th style="text-align:left">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">UIView (<a href="https://fuckingswiftui.com/#uihostingcontroller">UIHostingController</a>)</td>
+<td style="text-align:left">View</td>
+<td style="text-align:left">There is no direct convert to <code>UIView</code>, but you can use container view to add view from <code>UIViewController</code> into view hierarchy</td>
+</tr>
+<tr>
+<td style="text-align:left">UIViewController (<a href="https://fuckingswiftui.com/#uihostingcontroller">UIHostingController</a>)</td>
+<td style="text-align:left">View</td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="views-and-controls">Views and Controls</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">UIKit</th>
+<th style="text-align:left">SwiftUI</th>
+<th style="text-align:left">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">UILabel</td>
+<td style="text-align:left"><a href="https://fuckingswiftui.com/#text">Text</a>, <a href="https://fuckingswiftui.com/#label">Label</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">UITabBar</td>
+<td style="text-align:left"><a href="https://fuckingswiftui.com/#tabview">TabView</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">UITabBarItem</td>
+<td style="text-align:left"><a href="https://fuckingswiftui.com/#tabview">TabView</a></td>
+<td style="text-align:left"><code>.tabItem</code> under <a href="https://fuckingswiftui.com/#tabview">TabView</a></td>
+</tr>
+<tr>
+<td style="text-align:left">UITextField</td>
+<td style="text-align:left"><a href="https://fuckingswiftui.com/#textfield">TextField</a></td>
+<td style="text-align:left">For password (<code>isSecureTextEntry</code>) use <a href="https://fuckingswiftui.com/#securefield">SecureField</a></td>
+</tr>
+<tr>
+<td style="text-align:left">UITextView</td>
+<td style="text-align:left"><a href="https://fuckingswiftui.com/#texteditor">TextEditor</a></td>
+<td style="text-align:left">iOS 14</td>
+</tr>
+<tr>
+<td style="text-align:left">UITableView</td>
+<td style="text-align:left"><a href="https://fuckingswiftui.com/#list">List</a></td>
+<td style="text-align:left">also <a href="https://fuckingswiftui.com/#vstack">VStack</a> and <a href="https://fuckingswiftui.com/#form">Form</a></td>
+</tr>
+<tr>
+<td style="text-align:left">UINavigationBar</td>
+<td style="text-align:left"><a href="https://fuckingswiftui.com/#navigationview">NavigationView</a></td>
+<td style="text-align:left">Part of <a href="https://fuckingswiftui.com/#navigationview">NavigationView</a></td>
+</tr>
+<tr>
+<td style="text-align:left">UINavigationItem</td>
+<td style="text-align:left"><a href="https://fuckingswiftui.com/#toolbaritem">ToolbarItem</a></td>
+<td style="text-align:left">iOS 14</td>
+</tr>
+<tr>
+<td style="text-align:left">UIBarButtonItem</td>
+<td style="text-align:left"><a href="https://fuckingswiftui.com/#navigationview">NavigationView</a></td>
+<td style="text-align:left"><code>.navigationBarItems</code> in <a href="https://fuckingswiftui.com/#navigationview">NavigationView</a></td>
+</tr>
+<tr>
+<td style="text-align:left">UICollectionView</td>
+<td style="text-align:left"><a href="https://fuckingswiftui.com/#lazyvgrid">LazyVGrid</a> and <a href="https://fuckingswiftui.com/#lazyhgrid">LazyHGrid</a></td>
+<td style="text-align:left">iOS 14</td>
+</tr>
+<tr>
+<td style="text-align:left">UIStackView</td>
+<td style="text-align:left"><a href="https://fuckingswiftui.com/#hstack">HStack</a>, <a href="https://fuckingswiftui.com/#lazyhstack">LazyHStack</a></td>
+<td style="text-align:left"><code>.axis</code> == <code>.Horizontal</code></td>
+</tr>
+<tr>
+<td style="text-align:left">UIStackView</td>
+<td style="text-align:left"><a href="https://fuckingswiftui.com/#vstack">VStack</a>, <a href="https://fuckingswiftui.com/#lazyvstack">LazyVStack</a></td>
+<td style="text-align:left"><code>.axis</code> == <code>.Vertical</code></td>
+</tr>
+<tr>
+<td style="text-align:left">UIScrollView</td>
+<td style="text-align:left"><a href="https://fuckingswiftui.com/#scrollview">ScrollView</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">UIActivityIndicatorView</td>
+<td style="text-align:left"><a href="https://fuckingswiftui.com/#progressview">ProgressView</a> with <code>CircularProgressViewStyle</code></td>
+<td style="text-align:left">iOS 14</td>
+</tr>
+<tr>
+<td style="text-align:left">UIImageView</td>
+<td style="text-align:left"><a href="https://fuckingswiftui.com/#image">Image</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">UIPickerView</td>
+<td style="text-align:left"><a href="https://fuckingswiftui.com/#picker">Picker</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">UIButton</td>
+<td style="text-align:left"><a href="https://fuckingswiftui.com/#button">Button</a>, <a href="https://fuckingswiftui.com/#link">Link</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">UIDatePicker</td>
+<td style="text-align:left"><a href="https://fuckingswiftui.com/#datepicker">DatePicker</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">UIPageControl</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">iOS 14. Auto add to <a href="https://fuckingswiftui.com/#tabview">TabView</a> with <code>PageTabViewStyle</code> style. You can control its appearance by <code>.indexViewStyle</code>.</td>
+</tr>
+<tr>
+<td style="text-align:left">UIProgressView</td>
+<td style="text-align:left"><a href="https://fuckingswiftui.com/#progressview">ProgressView</a></td>
+<td style="text-align:left">iOS 14</td>
+</tr>
+<tr>
+<td style="text-align:left">UISegmentedControl</td>
+<td style="text-align:left"><a href="https://fuckingswiftui.com/#picker">Picker</a></td>
+<td style="text-align:left">A style (<code>SegmentedPickerStyle</code>) of <a href="https://fuckingswiftui.com/#picker">Picker</a></td>
+</tr>
+<tr>
+<td style="text-align:left">UISlider</td>
+<td style="text-align:left"><a href="https://fuckingswiftui.com/#slider">Slider</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">UIStepper</td>
+<td style="text-align:left"><a href="https://fuckingswiftui.com/#stepper">Stepper</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">UISwitch</td>
+<td style="text-align:left"><a href="https://fuckingswiftui.com/#toggle">Toggle</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">UIToolBar</td>
+<td style="text-align:left"><a href="https://fuckingswiftui.com/#navigationview">NavigationView</a> with <code>.toolbar</code></td>
+<td style="text-align:left">iOS 14</td>
+</tr>
+<tr>
+<td style="text-align:left">MKMapView</td>
+<td style="text-align:left"><a href="https://fuckingswiftui.com/#map">Map</a></td>
+<td style="text-align:left">import <code>MKMapView</code> to use this view</td>
+</tr>
+</tbody>
+</table>
+<p align="center" >(source: https://goshdarnswiftui.com/) </p>
+<p>We will learn about some main controls in the following articles. So let to focus to code homescreen.</p>
+<hr>
+<h2 id="homescreen">HomeScreen</h2>
+<p>First one, we will create <code>homeItemView</code>  and after that create full screen <code>HomeView</code></p>
+<p><img src="/images/image-20220511152556631.png#center30" alt="image-20220511152556631"></p>
+<p align="center" > Home Screen </p>
+<h3 id="homeitemview">HomeItemView</h3>
+<p>Create <strong>HomeItemView</strong> file by click File -&gt; NewFile -&gt; File -&gt; <strong>SwiftUI View</strong>.  Xcode automatically inserts a preview structure at the bottom of the file that you can configure. So, we have two elements: View and PreviewProvider.</p>
+<ul>
+<li>
+<p>&lt;StructName&gt; : View: We will code here. This is a area to create custom views by declaring types that conform to the <code>View</code> protocol. Implement the required <a href="https://developer.apple.com/documentation/swiftui/view/body-swift.property"><code>body</code></a> computed property to provide the content for your custom view.</p>
+</li>
+<li>
+<p>&lt;StructName&gt; :PreviewProvider: A type that produces view previews in Xcode.</p>
+</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift">
+<span class="kd">struct</span> <span class="nc">HomeItemViewModel</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nv">title</span><span class="p">:</span><span class="nb">String</span>
+    <span class="kd">let</span> <span class="nv">icon</span><span class="p">:</span><span class="nb">String</span>
+<span class="p">}</span>
+
+<span class="kd">struct</span> <span class="nc">HomeItemView</span><span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nv">item</span><span class="p">:</span><span class="n">HomeItemViewModel</span>
+
+    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+        <span class="n">VStack</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">center</span><span class="p">,</span> <span class="n">spacing</span><span class="p">:</span> <span class="mf">4.0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">ZStack</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">topTrailing</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">ZStack</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">center</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">Circle</span><span class="p">().</span><span class="n">foregroundColor</span><span class="p">(.</span><span class="n">gray</span><span class="p">)</span>
+                    <span class="n">Image</span><span class="p">(</span><span class="kc">self</span><span class="p">.</span><span class="n">item</span><span class="p">.</span><span class="n">icon</span><span class="p">)</span>
+                        <span class="p">.</span><span class="n">resizable</span><span class="p">()</span> <span class="c1">// it will sized so that it fills all the available space</span>
+                        <span class="p">.</span><span class="n">aspectRatio</span><span class="p">(</span><span class="n">contentMode</span><span class="p">:</span> <span class="p">.</span><span class="n">fit</span><span class="p">)</span>
+                        <span class="p">.</span><span class="n">padding</span><span class="p">(.</span><span class="n">all</span><span class="p">,</span> <span class="mf">12.0</span><span class="p">)</span>
+                <span class="p">}</span>
+                <span class="n">Circle</span><span class="p">().</span><span class="n">foregroundColor</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">hex</span><span class="p">:</span> <span class="mh">0x93C866</span><span class="p">))</span>
+                    <span class="p">.</span><span class="n">frame</span><span class="p">(</span><span class="n">width</span><span class="p">:</span> <span class="mf">8.0</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mf">8.0</span><span class="p">)</span>
+                    <span class="p">.</span><span class="n">padding</span><span class="p">(.</span><span class="n">trailing</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">)</span>
+                    <span class="p">.</span><span class="n">padding</span><span class="p">(.</span><span class="n">top</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">)</span>
+            <span class="p">}</span>
+            <span class="p">.</span><span class="n">frame</span><span class="p">(</span><span class="n">width</span><span class="p">:</span> <span class="mf">40.0</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mf">40.0</span><span class="p">)</span>
+
+            <span class="n">Text</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">title</span><span class="p">).</span><span class="n">foregroundColor</span><span class="p">(.</span><span class="n">white</span><span class="p">)</span>
+                <span class="p">.</span><span class="n">font</span><span class="p">(.</span><span class="n">system</span><span class="p">(</span><span class="n">size</span><span class="p">:</span> <span class="mf">12.0</span><span class="p">))</span>
+
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">struct</span> <span class="nc">HomeItemView_Previews</span><span class="p">:</span> <span class="n">PreviewProvider</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="kd">let</span> <span class="nv">devices</span><span class="p">:[</span><span class="nb">String</span><span class="p">]</span> <span class="p">=</span> <span class="p">[</span><span class="s">&#34;Apple Watch Series 6 - 44mm&#34;</span><span class="p">,</span> <span class="s">&#34;Apple Watch SE - 40mm&#34;</span><span class="p">]</span>
+
+    <span class="kd">static</span> <span class="kd">var</span> <span class="nv">previews</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+        <span class="n">ForEach</span><span class="p">(</span><span class="n">HomeView_Previews</span><span class="p">.</span><span class="n">devices</span><span class="p">,</span> <span class="n">id</span><span class="p">:</span> <span class="p">.</span><span class="kc">self</span><span class="p">)</span> <span class="p">{</span> <span class="n">devicesName</span> <span class="k">in</span>
+            <span class="n">HomeItemView</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">title</span><span class="p">:</span> <span class="s">&#34;All Bookings&#34;</span><span class="p">,</span> <span class="n">icon</span><span class="p">:</span> <span class="s">&#34;notification&#34;</span><span class="p">))</span>
+                <span class="p">.</span><span class="n">previewDevice</span><span class="p">(</span><span class="n">PreviewDevice</span><span class="p">(</span><span class="n">rawValue</span><span class="p">:</span> <span class="n">devicesName</span><span class="p">))</span>
+                <span class="p">.</span><span class="n">previewDisplayName</span><span class="p">(</span><span class="n">devicesName</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div><p><img src="/images/image-20220511145619654.png" alt="image-20220511145619654"></p>
+<ul>
+<li>
+<p><strong><code>Stack</code></strong>: The core concept to align views with each other is using stacks:</p>
+<ul>
+<li><code>HStack</code>: A vertical stack, which shows views in a top-to-bottom list</li>
+<li><code>VStack</code>:  A horizontal stack, which shows views in a left-to-right list</li>
+<li><code>ZStack</code>: If you want to overlay views (i.e. put one view on top of another), you can use  this view.</li>
+</ul>
+<p>One more things, <code>Spacer</code> A flexible space that expands along the <strong>major axis</strong> of its containing stack layout, or on both axes if not contained in a stack. SwiftUI’s <code>Spacer</code> views automatically fill up all available space on their axis of expansion.</p>
+<p>We will learn more about it in the next posts. Fig below ilustration about this.</p>
+<p><img src="https://swdevnotes.com/images/swift/2021/0221/swiftui-layout-with-stacks.png#center" alt=""></p>
+</li>
+</ul>
+<p align="center" >(SwiftUI layout examples with Stack Views - source: https://swdevnotes.com/) </p>
+<p><img src="https://jonquach.com/assets/posts/create-smart-layout-components-hstack-vstack-zstack/stack-overview.jpg#center" alt=""></p>
+<p align="center" >(Stack layout - source: https://jonquach.com/) </p>
+<ul>
+<li>
+<p>Multiple previews: The first time I found <code>SwiftUI</code> interesting was when I able to previews multiple devices on the same time. Because we build an applewatch app, so I choose two devices: <em>&ldquo;Apple Watch Series 6 - 44mm&rdquo;, &ldquo;Apple Watch SE - 40mm&rdquo;</em>. You can find device name by this code bellow and run it on terminal.</p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="n">xcrun</span> <span class="n">simctl</span> <span class="n">list</span> <span class="n">devicetypes</span>
+</code></pre></div><p>Well, That&rsquo;s it. We finished to create reuse homeItem view. Easy right! Next, let to create full home screen now.</p>
+</li>
+</ul>
+<h3 id="homeview">HomeView</h3>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift">
+<span class="kd">import</span> <span class="nc">SwiftUI</span>
+
+<span class="kd">struct</span> <span class="nc">HomeView</span><span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+        <span class="n">NavigationView</span> <span class="p">{</span>
+            <span class="n">VStack</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">center</span><span class="p">,</span> <span class="n">spacing</span><span class="p">:</span> <span class="mf">10.0</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">Text</span><span class="p">(</span><span class="s">&#34;Support 24/7&#34;</span><span class="p">)</span>
+                <span class="n">Button</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">role</span><span class="p">:</span> <span class="p">.</span><span class="kr">none</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="p">{</span>
+
+                <span class="p">},</span> <span class="n">label</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="n">Text</span><span class="p">(</span><span class="s">&#34;1900 2642&#34;</span><span class="p">)</span>
+                        <span class="p">.</span><span class="n">bold</span><span class="p">()</span>
+                <span class="p">})</span>
+                <span class="p">.</span><span class="n">foregroundColor</span><span class="p">(.</span><span class="n">white</span><span class="p">)</span>
+                <span class="p">.</span><span class="n">background</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">hex</span><span class="p">:</span> <span class="mh">0xE49E26</span><span class="p">))</span>
+                <span class="p">.</span><span class="n">cornerRadius</span><span class="p">(</span><span class="mf">30.0</span><span class="p">)</span>
+                <span class="n">HStack</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">center</span><span class="p">,</span> <span class="n">spacing</span><span class="p">:</span> <span class="mf">8.0</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">HomeItemView</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">title</span><span class="p">:</span> <span class="s">&#34;All Bookings&#34;</span><span class="p">,</span> <span class="n">icon</span><span class="p">:</span> <span class="s">&#34;calendar&#34;</span><span class="p">))</span>
+                    <span class="n">HomeItemView</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">title</span><span class="p">:</span> <span class="s">&#34;Notifications&#34;</span><span class="p">,</span> <span class="n">icon</span><span class="p">:</span> <span class="s">&#34;notification&#34;</span><span class="p">))</span>
+                <span class="p">}</span>
+            <span class="p">}.</span><span class="n">padding</span><span class="p">()</span>
+        <span class="p">}</span>
+        <span class="p">.</span><span class="n">navigationTitle</span><span class="p">(</span><span class="s">&#34;12Bay&#34;</span><span class="p">)</span>
+        <span class="p">.</span><span class="n">navigationBarTitleDisplayMode</span><span class="p">(.</span><span class="n">inline</span><span class="p">)</span>
+        <span class="p">.</span><span class="n">navigationViewStyle</span><span class="p">(.</span><span class="n">stack</span><span class="p">)</span>
+        <span class="p">.</span><span class="n">navigationBarHidden</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span>
+        <span class="p">.</span><span class="n">navigationBarTitleDisplayMode</span><span class="p">(.</span><span class="n">inline</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">struct</span> <span class="nc">HomeView_Previews</span><span class="p">:</span> <span class="n">PreviewProvider</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="kd">let</span> <span class="nv">devices</span><span class="p">:[</span><span class="nb">String</span><span class="p">]</span> <span class="p">=</span> <span class="p">[</span><span class="s">&#34;Apple Watch Series 6 - 44mm&#34;</span><span class="p">,</span> <span class="s">&#34;Apple Watch SE - 40mm&#34;</span><span class="p">]</span>
+
+    <span class="kd">static</span> <span class="kd">var</span> <span class="nv">previews</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+        <span class="n">ForEach</span><span class="p">(</span><span class="n">HomeView_Previews</span><span class="p">.</span><span class="n">devices</span><span class="p">,</span> <span class="n">id</span><span class="p">:</span> <span class="p">.</span><span class="kc">self</span><span class="p">)</span> <span class="p">{</span> <span class="n">devicesName</span> <span class="k">in</span>
+            <span class="n">HomeView</span><span class="p">()</span>
+                <span class="p">.</span><span class="n">previewDevice</span><span class="p">(</span><span class="n">PreviewDevice</span><span class="p">(</span><span class="n">rawValue</span><span class="p">:</span> <span class="n">devicesName</span><span class="p">))</span>
+                <span class="p">.</span><span class="n">previewDisplayName</span><span class="p">(</span><span class="n">devicesName</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div><ul>
+<li><code>NavigationView </code>is one of <strong>the most important</strong> components of a <code>SwiftUI</code> app, allowing us to push and pop screens with ease, presenting information in a clear, hierarchical way for users.</li>
+</ul>
+<p><img src="/images/image-20220511153819014.png" alt="image-20220511153819014"></p>
+<p align="center" > Home Screen </p>
+<p>Now, You can click to <strong>run</strong> from <code>XCode</code> and an <strong>interesting screen</strong> will appear.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>With <code>SwiftUI</code>, building an independent watch app has never become so much <em><strong>simple and fast</strong></em>. We&rsquo;re able to apply our learning to create unique app experiences across Apple platform. In the next part I will go over establishing watch connectivity to send data back and forth between your iPhone and watch to update the UI and furthermore, we build another main screen, such as notifications or orders. So Happy coding ^^</p>
+<p>And, I think that</p>
+<blockquote>
+<p><em><strong>Practice</strong></em> is the best way to learn <strong>anything</strong>.
+&ldquo;Learn By Doing, Practicing and Not Just Reading&rdquo;</p>
+</blockquote>
+
+
+
+<h3>Posts in this Series</h3>
+<ul>
+  
+    <li><a href="/posts/apple-watch-serial-p1-homescreen/">Apple Watch Serial P1 Homescreen</a></li>
+
+  
+    <li><a href="/posts/apple-watch-serial-design/">Let&#39;s Idea, How to Design Travel App (12Bay) on WatchOS?</a></li>
+
+  
+    <li><a href="/posts/apple-watch-serial/">Apple Watch Series</a></li>
+
+  
+</ul>
+</div>
+    <div class="post__footer">
+      
+        <span><a class="category" href="/categories/applewatch/">AppleWatch</a><a class="category" href="/categories/mobile-apps/">Mobile Apps</a></span>
+
+
+
+
+      
+
+      
+        <span><a class="tag" href="/tags/applewatch/">AppleWatch</a><a class="tag" href="/tags/ios/">iOS</a><a class="tag" href="/tags/swiftui/">SwiftUI</a></span>
+
+
+
+
+      
+    </div>
+
+    
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
+    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    crossorigin="anonymous"
+  ></script></body>
+</html>

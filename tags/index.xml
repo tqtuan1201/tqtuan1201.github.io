@@ -6,44 +6,11 @@
     <description>Recent content in Tags on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Apr 2022 17:39:16 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>AppleWatch</title>
-      <link>https://tqtuan1201.github.io/tags/applewatch/</link>
-      <pubDate>Wed, 20 Apr 2022 17:39:16 +0700</pubDate>
-      
-      <guid>https://tqtuan1201.github.io/tags/applewatch/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>iOS</title>
-      <link>https://tqtuan1201.github.io/tags/ios/</link>
-      <pubDate>Wed, 20 Apr 2022 17:39:16 +0700</pubDate>
-      
-      <guid>https://tqtuan1201.github.io/tags/ios/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>SwiftUI</title>
-      <link>https://tqtuan1201.github.io/tags/swiftui/</link>
-      <pubDate>Wed, 20 Apr 2022 17:39:16 +0700</pubDate>
-      
-      <guid>https://tqtuan1201.github.io/tags/swiftui/</guid>
-      
-        <description></description>
-      
-    </item>
-    
+    <lastBuildDate>Tue, 10 May 2022 10:11:15 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Learn English</title>
       <link>https://tqtuan1201.github.io/tags/learn-english/</link>
-      <pubDate>Tue, 19 Apr 2022 11:08:19 +0700</pubDate>
+      <pubDate>Tue, 10 May 2022 10:11:15 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/tags/learn-english/</guid>
       
@@ -54,9 +21,42 @@
     <item>
       <title>VOA</title>
       <link>https://tqtuan1201.github.io/tags/voa/</link>
-      <pubDate>Tue, 19 Apr 2022 11:08:19 +0700</pubDate>
+      <pubDate>Tue, 10 May 2022 10:11:15 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/tags/voa/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>AppleWatch</title>
+      <link>https://tqtuan1201.github.io/tags/applewatch/</link>
+      <pubDate>Wed, 04 May 2022 14:38:52 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/tags/applewatch/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>iOS</title>
+      <link>https://tqtuan1201.github.io/tags/ios/</link>
+      <pubDate>Wed, 04 May 2022 14:38:52 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/tags/ios/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>SwiftUI</title>
+      <link>https://tqtuan1201.github.io/tags/swiftui/</link>
+      <pubDate>Wed, 04 May 2022 14:38:52 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/tags/swiftui/</guid>
       
         <description></description>
       
