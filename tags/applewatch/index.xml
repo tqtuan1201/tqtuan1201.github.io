@@ -6,7 +6,20 @@
     <description>Recent content in AppleWatch on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 May 2022 14:38:52 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/applewatch/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 May 2022 15:01:56 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/applewatch/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apple Watch Serial P2 Homescreen Connect</title>
+      <link>https://tqtuan1201.github.io/posts/apple-watch-serial-p2-homescreen-connect/</link>
+      <pubDate>Fri, 13 May 2022 15:01:56 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/apple-watch-serial-p2-homescreen-connect/</guid>
+      
+        <description>Abstract Today, we will to work on the home screen. In this post, we will focus on communication between an iOS app with watchOS app. Here are some keys you will get through this topic:
+ Understand Watch Connectivity. The fundamental component in SwiftUI Have knowledge about WCSession Have basic knowledge about data flow in SwiftUI  This article is part of my Apple Watch by SwiftUI series.
+Previously : Apple Watch Serial P1 Homescreen</description>
+      
+    </item>
+    
     <item>
       <title>Apple Watch Serial P1 Homescreen</title>
       <link>https://tqtuan1201.github.io/posts/apple-watch-serial-p1-homescreen/</link>

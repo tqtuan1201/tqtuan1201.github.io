@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme="light"
+  class="html"
+><head>
+  <title>
+    
+      Tuan Truong
+        |
+        Apple Watch Serial P2 Homescreen Connect
+
+
+      
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.81.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Tuan Truong" />
+  <meta
+    name="description"
+    content="
+      “The only thing that is constant is change”, Heraclitus.
+
+
+    "
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.5d0ab9997fe7356e90383be507c6acfedb0915acdc6edea5c99457f230aec00e.css"
+      integrity="sha256-XQq5mX/nNW6QODvlB8as/tsJFazcbt6lyZRX8jCuwA4="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.69685904d5c2a0c6258d03c207b778c10466edf6cea928cc0164c376b0ad0930.css"
+    integrity="sha256-aWhZBNXCoMYljQPCB7d4wQRm7fbOqSjMAWTDdrCtCTA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.6d585e78d28cce1200d39fb133c92ed83df01738da721d0f48fb6eac62d24e04.css"
+    integrity="sha256-bVheeNKMzhIA05&#43;xM8ku2D3wFzjach0PSPturGLSTgQ="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.6b00d96498d59caa0dbcf9b49d30d821915291f2ceb0e19248523c8607ff43fa.css"
+    integrity="sha256-awDZZJjVnKoNvPm0nTDYIZFSkfLOsOGSSFI8hgf/Q/o="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://tqtuan1201.github.io/posts/apple-watch-serial-p2-homescreen-connect/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.46e6a54097480084f8f52c20ca1aa7425b4fad17029a887fd4017b12e311a72d.js"
+    integrity="sha256-RualQJdIAIT49SwgyhqnQltPrRcCmoh/1AF7EuMRpy0="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.5557c8ff5617a01067ac258fd70b9b992506e379317b0da51e5e0f6e018b408a.js"
+      integrity="sha256-VVfI/1YXoBBnrCWP1wubmSUG43kxew2lHl4PbgGLQIo="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tqtuan1201.github.io/images/profile.jpg"/>
+
+<meta name="twitter:title" content="Apple Watch Serial P2 Homescreen Connect"/>
+<meta name="twitter:description" content="Abstract Today, we will to work on the home screen. In this post, we will focus on communication between an iOS app with watchOS app. Here are some keys you will get through this topic:
+ Understand Watch Connectivity. The fundamental component in SwiftUI Have knowledge about WCSession Have basic knowledge about data flow in SwiftUI  This article is part of my Apple Watch by SwiftUI series.
+Previously : Apple Watch Serial P1 Homescreen"/>
+
+
+
+  
+  <meta property="og:title" content="Apple Watch Serial P2 Homescreen Connect" />
+<meta property="og:description" content="Abstract Today, we will to work on the home screen. In this post, we will focus on communication between an iOS app with watchOS app. Here are some keys you will get through this topic:
+ Understand Watch Connectivity. The fundamental component in SwiftUI Have knowledge about WCSession Have basic knowledge about data flow in SwiftUI  This article is part of my Apple Watch by SwiftUI series.
+Previously : Apple Watch Serial P1 Homescreen" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tqtuan1201.github.io/posts/apple-watch-serial-p2-homescreen-connect/" /><meta property="og:image" content="https://tqtuan1201.github.io/images/profile.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-13T15:01:56&#43;07:00" />
+<meta property="article:modified_time" content="2022-05-13T15:01:56&#43;07:00" /><meta property="og:site_name" content="Hi, I&#39;m Tuan Truong" />
+<meta property="og:see_also" content="https://tqtuan1201.github.io/posts/apple-watch-serial-p1-homescreen/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/apple-watch-serial-design/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/apple-watch-serial/" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "posts",
+        "name": "Apple Watch Serial P2 Homescreen Connect",
+        "headline": "Apple Watch Serial P2 Homescreen Connect",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Abstract Today, we will to work on the home screen. In this post, we will focus on communication between an iOS app with watchOS app. Here are some keys you will get through this topic:\n Understand Watch Connectivity. The fundamental component in SwiftUI Have knowledge about WCSession Have basic knowledge about data flow in SwiftUI  This article is part of my Apple Watch by SwiftUI series.\nPreviously : Apple Watch Serial P1 Homescreen
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/tqtuan1201.github.io\/posts\/apple-watch-serial-p2-homescreen-connect\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-05-13T15:01:56.00Z",
+        "datePublished": "2022-05-13T15:01:56.00Z",
+        "dateModified": "2022-05-13T15:01:56.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Tuan Truong",
+            "url": "https://tqtuan1201.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/tqtuan1201.github.io\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://tqtuan1201.github.io/images/profile.jpg"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/tqtuan1201.github.io\/posts\/apple-watch-serial-p2-homescreen-connect\/",
+        "wordCount" : "2066",
+        "genre" : [ 
+      
+      "AppleWatch"
+
+    
+      
+        ,
+
+      
+      "Mobile Apps"
+
+    ],
+        "keywords" : [ 
+      
+      "AppleWatch"
+
+    
+      
+        ,
+
+      
+      "iOS"
+
+    
+      
+        ,
+
+      
+      "SwiftUI"
+
+    ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--light"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/profile.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Hi, I&#39;m Tuan Truong</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>“The only thing that is constant is change”, Heraclitus.</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a href="https://github.com/tqtuan1201" rel="me" aria-label="Linkedin" title="Linkedin">
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a href="https://github.com/tqtuan1201" rel="me" aria-label="GitHub" title="GitHub">
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a href="https://github.com/tqtuan1201" rel="me" aria-label="instagram" title="instagram">
+            <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a href="mailto:truongquangtuanit@gmail.com" rel="me" aria-label="e-mail" title="e-mail">
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
+    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    crossorigin="anonymous"
+  ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/"
+            
+            title=""
+            >Home</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/"
+            
+            title=""
+            >Posts</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/"
+            
+            title=""
+            >About</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/"
+            
+            title=""
+            >Contact</a
+          >
+        </li>
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+      <div class="post__thumbnail-wrapper">
+        <img class="post__thumbnail" src="/images/image-20220524150708430.png?quality=82&amp;strip=all" alt="Thumbnail image" />
+      </div>
+
+    
+
+    <div class="post__content">
+      <h1>Apple Watch Serial P2 Homescreen Connect</h1>
+      <h3>Table of Contents</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#related-knowledge">Related knowledge</a>
+      <ul>
+        <li><a href="#watch-connectivity"><strong>Watch Connectivity</strong></a>
+          <ul>
+            <li><a href="#configuring-and-activating-the-session">Configuring and Activating the Session</a></li>
+            <li><a href="#communicating-with-the-counterpart-app">Communicating with the Counterpart App</a></li>
+            <li><a href="#data-flow-in-swiftui">Data flow in SwiftUI</a></li>
+            <li><a href="#identifiable">Identifiable</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#lets-code">Let&rsquo;s code</a>
+      <ul>
+        <li><a href="#the-iphone-side">The iPhone Side</a>
+          <ul>
+            <li><a href="#send-message">Send message</a></li>
+          </ul>
+        </li>
+        <li><a href="#the-watchos-side">The WatchOS Side</a>
+          <ul>
+            <li><a href="#receiving-messages">Receiving messages</a></li>
+            <li><a href="#alert-message">Alert message</a></li>
+          </ul>
+        </li>
+        <li><a href="#running-the-apps">Running the Apps</a></li>
+      </ul>
+    </li>
+    <li><a href="#problems">Problems</a>
+      <ul>
+        <li><a href="#create-apple-watch-simulator-paird-iphone">Create Apple Watch Simulator paird iPhone</a></li>
+        <li><a href="#share-swift-classes-across-multiple-targets">Share Swift classes across multiple targets</a></li>
+        <li><a href="#wcerrordomain-code7007">WCErrorDomain Code=7007</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+        <div style="width: 100%; margin: 0 auto; background:rgba(0,0,0,0.5); height: 1px; opacity: 0.6"> </div><h1 id="abstract">Abstract</h1>
+<p>Today, we will to work on the home screen. In this post, we will focus on <strong>communication</strong> <strong>between an iOS app with watchOS app</strong>. Here are some keys  you will get through this topic:</p>
+<ul>
+<li>Understand <strong>Watch Connectivity</strong>.</li>
+<li>The fundamental component in <strong>SwiftUI</strong></li>
+<li>Have knowledge about <code>WCSession</code></li>
+<li>Have basic knowledge about data flow in SwiftUI</li>
+</ul>
+<p>This article is part of my <a href="https://tqtuan1201.github.io/categories/applewatch/"><em>Apple Watch by SwiftUI</em></a> series.</p>
+<p>Previously : <a href="https://tqtuan1201.github.io/posts/apple-watch-serial-p1-homescreen/">Apple Watch Serial P1 Homescreen</a></p>
+<p>Let&rsquo;s do it.</p>
+<p><img src="/images/image-20220511152556631.png#center30" alt="image-20220511152556631"></p>
+<p align="center" > Home Screen </p>
+<h1 id="related-knowledge">Related knowledge</h1>
+<p>The magic of the Apple Watch experience comes from seamless interactions between the watch and your iOS apps. (source: <a href="https://www.raywenderlich.com/books/watchos-with-swiftui-by-tutorials/v1.0/chapters/4-watch-connectivity">raywenderlich</a>)</p>
+<h2 id="watch-connectivity"><strong>Watch Connectivity</strong></h2>
+<p>Two-Way Communication Using Watch Connectivity: The <code>Watch Connectivity framework</code> provides convenient APIs to implement two-way communication between paired apps.</p>
+<p><img src="https://www.cuelogic.com/wp-content/uploads/2021/06/Screen-Shot-2017-03-17-at-5.06.05-PM.png.webp" alt=""></p>
+<p align="center" >Relationship between Watch app, WatchKit extension and iOS app </br>(source: developer.apple.com)</p>
+<p>To transfer data between the iOS app and the watch app, we need to use <a href="https://developer.apple.com/documentation/watchconnectivity/wcsession">WCSession</a>: The object that initiates communication between a WatchKit extension and its companion iOS app.</p>
+<h3 id="configuring-and-activating-the-session">Configuring and Activating the Session</h3>
+<p>Your iOS app and watchOS app must both create and configure an instance of this class at some point during their execution. When both session objects are active, the two processes can communicate immediately by sending messages back and forth. When only one session is active, the active session may still send updates and transfer files, but those transfers happen opportunistically in the background.</p>
+<p><img src="https://docs-assets.developer.apple.com/published/ee5ac6b8c3/session_activation_flow_2x_78d01144-a11d-4d5a-b8b8-6eed63f0f1c7.png#center50" alt=""></p>
+<p align="center" >Activation state changes when switching to another Apple Watch </br>(source: developer.apple.com)</p>
+<p>Figure above shows the sequence of events that happen when the user switches from one Apple Watch to another. When automatic switching is enabled, <strong>only one Apple Watch at a time</strong> actually communicates with the iOS app.</p>
+<h3 id="communicating-with-the-counterpart-app">Communicating with the Counterpart App</h3>
+<ul>
+<li>
+<p><code>updateApplicationContext(_:)</code> can be used to send data to the counter app when the counter app only cares about the latest state of that data.</p>
+</li>
+<li>
+<p><code>sendMessage(_:replyHandler:errorHandler:)</code> can be used when you need to transfer a dictionary of data <strong>immediately</strong>.</p>
+</li>
+<li>
+<p><code>sendMessageData(_:replyHandler:errorHandler:)</code> same as above, but for sending a Data object instead of a dictionary.</p>
+</li>
+<li>
+<p><code>transferUserInfo(_:)</code> is used to transfer a dictionary of data in the background.</p>
+</li>
+<li>
+<p><code>transferFile(_:metadata:)</code> is used to transfer files like images and optional dictionaries with file metadata.</p>
+</li>
+</ul>
+<div
+  class="notice
+    notice--warning
+
+  "
+>
+  <span
+    class="notice__title
+      notice__title--warning
+
+    "
+  >Warning</span><div class="notice__content">
+    <code>transferUserInfo(:_)</code> method suits the most for our use case, but according to <a href="https://developer.apple.com/documentation/watchconnectivity/wcsessiondelegate/1615633-session">Apple documentation</a> the system will not call the <code>didReceiveUserInfo</code> delegate method on simulator.
+  </div>
+</div>
+
+</br>
+<figure class="medium">
+    <img src="https://miro.medium.com/max/1400/1*gu_1gVtgGSSJWz-CqjIbng.png"
+         alt="image"/> <figcaption>
+            <p>(source: betterprogramming.pub)</p>
+        </figcaption>
+</figure>
+
+<h3 id="data-flow-in-swiftui">Data flow in SwiftUI</h3>
+<p>State is inevitable in any modern app, but with SwiftUI it’s important to remember that all of our views are simply functions of their state – we don’t change the views directly, but instead manipulate the state and let <em>that</em> dictate the result.</p>
+<p><code>SwiftUI</code> gives us several ways of storing state in our application, but they are subtly different and it’s important to understand <em>how</em> they are different in order to use the framework properly.</p>
+<p>The challenge in making a SwiftUI app is technically all four of <code>@State</code>, <code>@StateObject</code>, <code>@ObservedObject</code> and <code>@EnvironmentObject</code> will superficially “work”. Your app will compile, and you may even get the behaviour you are after even when using the wrong property wrapper for the situation. But, if used incorrectly, you may find your view doesn’t update when your data updates. Here is a summary about four states and how to use this:</p>
+<figure class="medium">
+    <img src="https://miro.medium.com/max/1400/1*rzkz3O97wgryeEn7flNisA.png"
+         alt="image"/> <figcaption>
+            <p>Diagram by <a href="https://twitter.com/chriseidhof"><strong>Chris Eidho</strong></a><strong>f</strong> from <a href="https://www.objc.io/"><strong>objc.io</strong></a></p>
+        </figcaption>
+</figure>
+
+<ul>
+<li>Use <code>@State</code> for <em><strong>simple properties</strong></em> that belong to a single view. They should usually be marked <code>private</code>.</li>
+<li>Use <code>@ObservedObject</code> for <em><strong>complex properties</strong></em> that might belong to several views. Most times you’re using a reference type you should be using <code>@ObservedObject</code> for it.</li>
+<li>Use <code>@StateObject</code> once for each <em><strong>observable object</strong></em> you use, in whichever part of your code is responsible for creating it.</li>
+<li>Use <code>@EnvironmentObject</code> for properties that were created <strong>elsewhere</strong> in the app, such as shared data.</li>
+</ul>
+<p><a href="https://www.hackingwithswift.com/quick-start/swiftui/whats-the-difference-between-observedobject-state-and-environmentobject">(What’s the difference between @ObservedObject, @State, and @EnvironmentObject? - ww.hackingwithswift.com)</a></p>
+<h3 id="identifiable">Identifiable</h3>
+<blockquote>
+<p>A class of types whose instances hold the value of an entity with stable identity. - apple</p>
+</blockquote>
+<p>The <code>Identifable</code> protocol is for use with any type that needs to have a <strong>stable notion of identity.</strong> We will compare <strong>Equatable</strong> with <strong>Identifiable</strong> in the following articles.</p>
+<h1 id="lets-code">Let&rsquo;s code</h1>
+<p>Because, we are using swift ( iOS version &gt;= 10) for iphone application and switUI (iOS version &gt;=13) for watch app. We cannot create one class WCSession to share with two projects. So we need to create two instances class to manager WCSession for iPhone and watch.</p>
+<ul>
+<li><code>PhoneWatchConnectivityManager</code>  for Iphone application</li>
+<li><code>WatchConnectivityManager</code> for watch applicaiton</li>
+</ul>
+<p>And, <code>WatchConnectivityShareData</code> class to share data model between two projects</p>
+<h2 id="the-iphone-side">The iPhone Side</h2>
+<p>First, Let’s start with the iOS side of things. Below is a completely finished version of my <code>PhoneWatchConnectivityManager.swift</code>. Underneath the code will be an explanation of everything in the file.</p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="c1">//</span>
+<span class="c1">//  WatchConnectivityManager.swift</span>
+<span class="c1">//  12BayV2</span>
+<span class="c1">//</span>
+<span class="c1">//  Created by Tuan Truong Quang on 5/13/22.</span>
+<span class="c1">//  Copyright © 2022 Truong Quang Tuan. All rights reserved.</span>
+<span class="c1">//</span>
+
+<span class="kd">import</span> <span class="nc">Foundation</span>
+<span class="kd">import</span> <span class="nc">WatchConnectivity</span>
+
+<span class="kd">class</span> <span class="nc">PhoneWatchConnectivityManager</span><span class="p">:</span> <span class="n">NSObject</span> <span class="p">{</span>
+    
+    <span class="kd">static</span> <span class="kd">let</span> <span class="nv">shared</span> <span class="p">=</span> <span class="n">PhoneWatchConnectivityManager</span><span class="p">()</span>
+    
+    <span class="n">fileprivate</span> <span class="kd">var</span> <span class="nv">sessionDef</span><span class="p">:</span><span class="n">WCSession</span><span class="p">?</span> <span class="p">=</span> <span class="kc">nil</span>
+    
+    <span class="kd">private</span> <span class="kr">override</span> <span class="kd">init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kc">super</span><span class="p">.</span><span class="kd">init</span><span class="p">()</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;::PhoneWatchConnectivityManager init WCSession.default&#34;</span><span class="p">)</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">sessionDef</span> <span class="p">=</span> <span class="n">WCSession</span><span class="p">.</span><span class="k">default</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">sessionDef</span><span class="p">?.</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">self</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//</span><span class="cs">MARK:</span><span class="c1">// Base funcs</span>
+<span class="kd">extension</span> <span class="nc">PhoneWatchConnectivityManager</span> <span class="p">{</span>
+    
+    <span class="kd">func</span> <span class="nf">activate</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="n">WCSession</span><span class="p">.</span><span class="n">isSupported</span><span class="p">()</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="n">WCSession</span><span class="p">.</span><span class="n">isSupported</span><span class="p">()</span> <span class="p">{</span>
+                <span class="bp">print</span><span class="p">(</span><span class="s">&#34;::PhoneWatchConnectivityManager  WCSession.default.activate()&#34;</span><span class="p">)</span>
+                <span class="kc">self</span><span class="p">.</span><span class="n">sessionDef</span><span class="p">?.</span><span class="n">activate</span><span class="p">()</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="kc">_</span> <span class="n">message</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">{</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;::PhoneWatchConnectivityManager WCSession.default.reachable </span><span class="si">\(</span><span class="n">WCSession</span><span class="p">.</span><span class="k">default</span><span class="p">.</span><span class="n">isReachable</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+        <span class="k">guard</span> <span class="kc">self</span><span class="p">.</span><span class="n">sessionDef</span><span class="p">?.</span><span class="n">activationState</span> <span class="p">==</span> <span class="p">.</span><span class="n">activated</span> <span class="k">else</span> <span class="p">{</span>
+          <span class="k">return</span>
+        <span class="p">}</span>
+        <span class="cp">#if</span> <span class="cp">os</span><span class="p">(</span><span class="cp">iOS</span><span class="p">)</span>
+        <span class="k">guard</span> <span class="kc">self</span><span class="p">.</span><span class="n">sessionDef</span><span class="p">?.</span><span class="n">isWatchAppInstalled</span> <span class="p">??</span> <span class="kc">false</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span>
+        <span class="p">}</span>
+        <span class="cp">#else</span>
+        <span class="k">guard</span> <span class="kc">self</span><span class="p">.</span><span class="n">sessionDef</span><span class="p">?.</span><span class="n">isCompanionAppInstalled</span> <span class="p">??</span> <span class="kc">false</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span>
+        <span class="p">}</span>
+        <span class="cp">#endif</span>
+        
+        <span class="k">if</span> <span class="kc">self</span><span class="p">.</span><span class="n">sessionDef</span><span class="p">?.</span><span class="n">isReachable</span> <span class="p">??</span> <span class="kc">false</span> <span class="p">{</span>
+            <span class="bp">print</span><span class="p">(</span><span class="s">&#34;::PhoneWatchConnectivityManager wcSession sendMessage: </span><span class="si">\(</span><span class="n">message</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+            <span class="kc">self</span><span class="p">.</span><span class="n">sessionDef</span><span class="p">?.</span><span class="n">sendMessage</span><span class="p">([</span><span class="n">WatchConnectivityShareData</span><span class="p">.</span><span class="n">MESSAGE_KEY</span> <span class="p">:</span> <span class="n">message</span><span class="p">],</span> <span class="n">replyHandler</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span> <span class="p">{</span> <span class="n">error</span> <span class="k">in</span>
+                <span class="bp">print</span><span class="p">(</span><span class="s">&#34;::PhoneWatchConnectivityManager Cannot send message: </span><span class="si">\(</span><span class="nb">String</span><span class="si">(</span><span class="n">describing</span><span class="p">:</span> <span class="n">error</span><span class="si">))</span><span class="s">&#34;</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="bp">print</span><span class="p">(</span><span class="s">&#34;::PhoneWatchConnectivityManager WCSession.default.isReachable false : </span><span class="si">\(</span><span class="n">WCSession</span><span class="p">.</span><span class="k">default</span><span class="p">.</span><span class="n">isReachable</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//</span><span class="cs">MARK:</span><span class="c1">// WCSessionDelegate</span>
+<span class="kd">extension</span> <span class="nc">PhoneWatchConnectivityManager</span><span class="p">:</span> <span class="n">WCSessionDelegate</span> <span class="p">{</span>
+    
+    <span class="kd">func</span> <span class="nf">session</span><span class="p">(</span><span class="kc">_</span> <span class="n">session</span><span class="p">:</span> <span class="n">WCSession</span><span class="p">,</span> <span class="n">didReceiveMessage</span> <span class="n">message</span><span class="p">:</span> <span class="p">[</span><span class="nb">String</span> <span class="p">:</span> <span class="nb">Any</span><span class="p">])</span> <span class="p">{</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;::PhoneWatchConnectivityManager didReceiveMessage: </span><span class="si">\(</span><span class="n">message</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+    <span class="p">}</span>
+    
+    
+    <span class="kd">func</span> <span class="nf">session</span><span class="p">(</span><span class="kc">_</span> <span class="n">session</span><span class="p">:</span> <span class="n">WCSession</span><span class="p">,</span> <span class="n">activationDidCompleteWith</span> <span class="n">activationState</span><span class="p">:</span> <span class="n">WCSessionActivationState</span><span class="p">,</span> <span class="n">error</span><span class="p">:</span> <span class="n">Error</span><span class="p">?)</span> <span class="p">{</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;::PhoneWatchConnectivityManager activationState: </span><span class="si">\(</span><span class="n">activationState</span><span class="p">.</span><span class="n">rawValue</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+        <span class="k">switch</span> <span class="n">activationState</span> <span class="p">{</span>
+               <span class="k">case</span> <span class="p">.</span><span class="n">activated</span><span class="p">:</span>
+                   <span class="bp">print</span><span class="p">(</span><span class="s">&#34;WCSession activated successfully&#34;</span><span class="p">)</span>
+               <span class="k">case</span> <span class="p">.</span><span class="n">inactive</span><span class="p">:</span>
+                   <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Unable to activate the WCSession. Error: </span><span class="si">\(</span><span class="n">error</span><span class="p">?.</span><span class="n">localizedDescription</span> <span class="p">??</span> <span class="s">&#34;--&#34;</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+               <span class="k">case</span> <span class="p">.</span><span class="n">notActivated</span><span class="p">:</span>
+                   <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Unexpected .notActivated state received after trying to activate the WCSession&#34;</span><span class="p">)</span>
+               <span class="p">@</span><span class="n">unknown</span> <span class="k">default</span><span class="p">:</span>
+                   <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Unexpected state received after trying to activate the WCSession&#34;</span><span class="p">)</span>
+               <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="cp">#if</span> <span class="cp">os</span><span class="p">(</span><span class="cp">iOS</span><span class="p">)</span>
+    <span class="kd">func</span> <span class="nf">sessionDidBecomeInactive</span><span class="p">(</span><span class="kc">_</span> <span class="n">session</span><span class="p">:</span> <span class="n">WCSession</span><span class="p">)</span> <span class="p">{</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;::PhoneWatchConnectivityManager sessionDidBecomeInactive &#34;</span><span class="p">)</span>
+    <span class="p">}</span>
+    
+    <span class="kd">func</span> <span class="nf">sessionDidDeactivate</span><span class="p">(</span><span class="kc">_</span> <span class="n">session</span><span class="p">:</span> <span class="n">WCSession</span><span class="p">)</span> <span class="p">{</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;::PhoneWatchConnectivityManager sessionDidDeactivate &#34;</span><span class="p">)</span>
+        <span class="n">session</span><span class="p">.</span><span class="n">activate</span><span class="p">()</span>
+    <span class="p">}</span>
+    
+    <span class="cp">#endif</span>
+<span class="p">}</span>
+
+
+</code></pre></div><ul>
+<li><code>init()</code> We will create local <code>sessionDef</code>  variable and setting the <code>WCSession</code> delegate to the <code>PhoneWatchConnectivityManager</code> in private init singleton class.</li>
+<li><code>func activate()</code> Configuring and Activating the Session.</li>
+<li><code>activationDidCompleteWith activationState (WCSessionDelegate)</code> : We get the current <strong>activation state</strong> of the session.</li>
+<li><code>sendMessage(_:replyHandler:errorHandler:)</code> We will using this function to sends a message immediately to the paired and active device and optionally handles a response.</li>
+</ul>
+<h3 id="send-message">Send message</h3>
+<p>Next, We will implement <code>func activate()</code> at <code>AppDelegate</code> class</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -&gt; Bool {
+
+        //Activate WatchConnect
+        PhoneWatchConnectivityManager.shared.activate()
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        StartViewCoordinator(window: self.window!).start()
+        
+        return true
+        
+}
+</code></pre></div><p>Now add a button in content view to call <code>sendMessage</code> function:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">  PhoneWatchConnectivityManager.shared.send(&#34;Hello World!, New message from iPhone\n\(Date().dateString(withFormat: .DD_MM_YYYY_HH_MM))&#34;)
+</code></pre></div><p>Finally, once you’re done with that, click to run project, if you see message bellow,
+your i<strong>OS app</strong> should be ready to go.</p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="p">::</span><span class="n">PhoneWatchConnectivityManager</span> <span class="kd">init</span> <span class="n">WCSession</span><span class="p">.</span><span class="k">default</span>
+<span class="p">::</span><span class="n">PhoneWatchConnectivityManager</span>  <span class="n">WCSession</span><span class="p">.</span><span class="k">default</span><span class="p">.</span><span class="n">activate</span><span class="p">()</span>
+<span class="p">::</span><span class="n">PhoneWatchConnectivityManager</span> <span class="n">activationState</span><span class="p">:</span> <span class="mi">2</span>
+<span class="p">::</span><span class="n">PhoneWatchConnectivityManager</span> <span class="n">WCSession</span> <span class="n">activated</span> <span class="n">successfully</span>
+</code></pre></div><p><img src="/images/image-20220523174301855.png#center70" alt="image-20220523174301855"></p>
+<h2 id="the-watchos-side">The WatchOS Side</h2>
+<p>Now, let’s get started on the watchOS side of things. You’ll find the complete version of my <code>WatchConnectivityManager</code> below:</p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="c1">//</span>
+<span class="c1">//  WatchConnectivityService.swift</span>
+<span class="c1">//  watchOS WatchKit Extension</span>
+<span class="c1">//</span>
+<span class="c1">//  Created by Tuan Truong Quang on 5/19/22.</span>
+<span class="c1">//  Copyright © 2022 Truong Quang Tuan. All rights reserved.</span>
+<span class="c1">//</span>
+
+<span class="kd">import</span> <span class="nc">os</span>
+<span class="kd">import</span> <span class="nc">SwiftUI</span>
+<span class="kd">import</span> <span class="nc">WatchConnectivity</span>
+
+<span class="kd">struct</span> <span class="nc">WatchMessageItemModel</span> <span class="p">:</span> <span class="n">Identifiable</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nv">id</span><span class="p">:</span> <span class="nb">String</span> <span class="p">=</span> <span class="n">UUID</span><span class="p">().</span><span class="n">uuidString</span>
+    
+    <span class="kd">var</span> <span class="nv">messsage</span><span class="p">:</span><span class="nb">String</span> <span class="p">=</span> <span class="s">&#34;&#34;</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">WatchConnectivityManager</span><span class="p">:</span> <span class="n">NSObject</span><span class="p">,</span> <span class="n">ObservableObject</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="kd">let</span> <span class="nv">wcSession</span><span class="p">:</span> <span class="n">WCSession</span>
+    <span class="kd">private</span> <span class="kd">let</span> <span class="nv">logger</span> <span class="p">=</span> <span class="n">Logger</span><span class="p">(</span><span class="n">subsystem</span><span class="p">:</span> <span class="s">&#34;WCExperimentsWatchApp&#34;</span><span class="p">,</span> <span class="n">category</span><span class="p">:</span> <span class="s">&#34;WatchConnectivityService&#34;</span><span class="p">)</span>
+    
+    <span class="p">@</span><span class="n">Published</span> <span class="kd">var</span> <span class="nv">notificationMessage</span><span class="p">:</span> <span class="n">WatchMessageItemModel</span><span class="p">?</span> <span class="p">=</span> <span class="kc">nil</span>
+    
+    <span class="kr">override</span> <span class="kd">init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">wcSession</span> <span class="p">=</span> <span class="n">WCSession</span><span class="p">.</span><span class="k">default</span>
+        <span class="kc">super</span><span class="p">.</span><span class="kd">init</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">WCSession</span><span class="p">.</span><span class="n">isSupported</span><span class="p">()</span> <span class="p">{</span>
+            <span class="n">wcSession</span><span class="p">.</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">self</span>
+            <span class="n">wcSession</span><span class="p">.</span><span class="n">activate</span><span class="p">()</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">extension</span> <span class="nc">WatchConnectivityManager</span><span class="p">:</span> <span class="n">WCSessionDelegate</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">session</span><span class="p">(</span><span class="kc">_</span> <span class="n">session</span><span class="p">:</span> <span class="n">WCSession</span><span class="p">,</span> <span class="n">activationDidCompleteWith</span> <span class="n">activationState</span><span class="p">:</span> <span class="n">WCSessionActivationState</span><span class="p">,</span> <span class="n">error</span><span class="p">:</span> <span class="n">Error</span><span class="p">?)</span> <span class="p">{</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;::WatchConnectivityService WCSession activationDidCompleteWith state: </span><span class="si">\(</span><span class="n">activationState</span><span class="p">.</span><span class="n">rawValue</span><span class="si">)</span><span class="s">, error: </span><span class="si">\(</span><span class="n">error</span><span class="p">?.</span><span class="n">localizedDescription</span> <span class="p">??</span> <span class="s">&#34;nil&#34;</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+    <span class="p">}</span>
+    
+    <span class="kd">func</span> <span class="nf">session</span><span class="p">(</span><span class="kc">_</span> <span class="n">session</span><span class="p">:</span> <span class="n">WCSession</span><span class="p">,</span> <span class="n">didFinish</span> <span class="n">userInfoTransfer</span><span class="p">:</span> <span class="n">WCSessionUserInfoTransfer</span><span class="p">,</span> <span class="n">error</span><span class="p">:</span> <span class="n">Error</span><span class="p">?)</span> <span class="p">{</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;::WatchConnectivityService didFinish userInfoTransfer: </span><span class="si">\(</span><span class="n">userInfoTransfer</span><span class="p">.</span><span class="n">userInfo</span><span class="si">)</span><span class="s">, error: </span><span class="si">\(</span><span class="n">error</span><span class="p">?.</span><span class="n">localizedDescription</span> <span class="p">??</span> <span class="s">&#34;nil&#34;</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+    <span class="p">}</span>
+    
+    <span class="kd">func</span> <span class="nf">session</span><span class="p">(</span><span class="kc">_</span> <span class="n">session</span><span class="p">:</span> <span class="n">WCSession</span><span class="p">,</span> <span class="n">didReceiveMessageData</span> <span class="n">messageData</span><span class="p">:</span> <span class="n">Data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;::WatchConnectivityService didReceiveMessageData: messageData </span><span class="si">\(</span><span class="n">messageData</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+    <span class="p">}</span>
+    
+    <span class="kd">func</span> <span class="nf">session</span><span class="p">(</span><span class="kc">_</span> <span class="n">session</span><span class="p">:</span> <span class="n">WCSession</span><span class="p">,</span> <span class="n">didReceiveMessage</span> <span class="n">message</span><span class="p">:</span> <span class="p">[</span><span class="nb">String</span> <span class="p">:</span> <span class="nb">Any</span><span class="p">],</span> <span class="n">replyHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">([</span><span class="nb">String</span> <span class="p">:</span> <span class="nb">Any</span><span class="p">])</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">{</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;::WatchConnectivityService didReceiveMessage: message </span><span class="si">\(</span><span class="n">message</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+    <span class="p">}</span>
+    
+    <span class="kd">func</span> <span class="nf">session</span><span class="p">(</span><span class="kc">_</span> <span class="n">session</span><span class="p">:</span> <span class="n">WCSession</span><span class="p">,</span> <span class="n">didReceiveMessageData</span> <span class="n">messageData</span><span class="p">:</span> <span class="n">Data</span><span class="p">,</span> <span class="n">replyHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">(</span><span class="n">Data</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">{</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;::WatchConnectivityService didReceiveMessageData: messageData </span><span class="si">\(</span><span class="n">messageData</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+    <span class="p">}</span>
+    
+    <span class="kd">func</span> <span class="nf">session</span><span class="p">(</span><span class="kc">_</span> <span class="n">session</span><span class="p">:</span> <span class="n">WCSession</span><span class="p">,</span> <span class="n">didReceiveMessage</span> <span class="n">message</span><span class="p">:</span> <span class="p">[</span><span class="nb">String</span> <span class="p">:</span> <span class="nb">Any</span><span class="p">])</span> <span class="p">{</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;::WatchConnectivityService didReceiveMessage: </span><span class="si">\(</span><span class="n">message</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+        <span class="n">DispatchQueue</span><span class="p">.</span><span class="n">main</span><span class="p">.</span><span class="n">async</span> <span class="p">{</span> <span class="p">[</span><span class="kr">weak</span> <span class="kc">self</span><span class="p">]</span> <span class="k">in</span> <span class="k">guard</span> <span class="kd">let</span> <span class="nv">strongSelf</span> <span class="p">=</span> <span class="kc">self</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+            <span class="kd">let</span> <span class="nv">messageByString</span><span class="p">:</span><span class="nb">String</span> <span class="p">=</span> <span class="n">message</span><span class="p">[</span><span class="n">WatchConnectivityShareData</span><span class="p">.</span><span class="n">MESSAGE_KEY</span><span class="p">]</span> <span class="k">as</span><span class="p">?</span> <span class="nb">String</span> <span class="p">??</span> <span class="s">&#34;Error&#34;</span>
+            <span class="n">strongSelf</span><span class="p">.</span><span class="n">notificationMessage</span> <span class="p">=</span> <span class="n">WatchMessageItemModel</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">messsage</span><span class="p">:</span> <span class="n">messageByString</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    
+    
+<span class="p">}</span>
+
+</code></pre></div><h3 id="receiving-messages">Receiving messages</h3>
+<p>To receive the messages sent using <code>sendMessage(_:replyHandler:errorHandler:)</code> method we need to implement the <code>session(_:didReceiveMessage:)</code> method from <code>WCSessionDelegate</code> protocol.</p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"> <span class="kd">func</span> <span class="nf">session</span><span class="p">(</span><span class="kc">_</span> <span class="n">session</span><span class="p">:</span> <span class="n">WCSession</span><span class="p">,</span> <span class="n">didReceiveMessage</span> <span class="n">message</span><span class="p">:</span> <span class="p">[</span><span class="nb">String</span> <span class="p">:</span> <span class="nb">Any</span><span class="p">])</span> <span class="p">{</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;::WatchConnectivityService didReceiveMessage: </span><span class="si">\(</span><span class="n">message</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+        <span class="n">DispatchQueue</span><span class="p">.</span><span class="n">main</span><span class="p">.</span><span class="n">async</span> <span class="p">{</span> <span class="p">[</span><span class="kr">weak</span> <span class="kc">self</span><span class="p">]</span> <span class="k">in</span> <span class="k">guard</span> <span class="kd">let</span> <span class="nv">strongSelf</span> <span class="p">=</span> <span class="kc">self</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+            <span class="kd">let</span> <span class="nv">messageByString</span><span class="p">:</span><span class="nb">String</span> <span class="p">=</span> <span class="n">message</span><span class="p">[</span><span class="n">WatchConnectivityShareData</span><span class="p">.</span><span class="n">MESSAGE_KEY</span><span class="p">]</span> <span class="k">as</span><span class="p">?</span> <span class="nb">String</span> <span class="p">??</span> <span class="s">&#34;Error&#34;</span>
+            <span class="n">strongSelf</span><span class="p">.</span><span class="n">notificationMessage</span> <span class="p">=</span> <span class="n">WatchMessageItemModel</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">messsage</span><span class="p">:</span> <span class="n">messageByString</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div><p>The <code>didRecieveMessage</code> method passes through <strong>a dictionary of data</strong>. This dictionary is the same dictionary that the iOS app sent, so the string inside the brackets <em><strong>must be</strong></em> the same as the key in the dictionary in <code> PhoneWatchConnectivityManager</code>.</p>
+<p>Once we receive the message we can store it as a published variable in <code>WatchConnectivityManager</code> on the main thread since we should always make sure we publish on the main thread. Our content view will then observe the changes to this variable and display a pop-up alert when the state changes.</p>
+<h3 id="alert-message">Alert message</h3>
+<p>Now let’s add code to observe changes to the notification message in our content view (<code>HomeView</code>). In the content view, we will add <code>StateObject</code> variable for the <code>WatchConnectivityManager</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">import SwiftUI
+
+struct HomeView: View {
+    
+    @StateObject var service = WatchConnectivityManager()
+    
+    var body: some View {  ...  }
+}
+</code></pre></div><p>And then, we will bind the message item model <code>WatchMessageItemModel</code> from <code>WatchConnectivityManager</code> to the alert.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">.alert(item: $service.notificationMessage, content: { info in
+		Alert(title: Text(&#34;WELL DONE\n\(info.messsage)&#34;))
+})
+</code></pre></div><p>Here is the complete  <code>HomeView</code> code:</p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="c1">//</span>
+<span class="c1">//  HomeView.swift</span>
+<span class="c1">//  watchOS WatchKit Extension</span>
+<span class="c1">//</span>
+<span class="c1">//  Created by Tuan Truong Quang on 5/5/22.</span>
+<span class="c1">//  Copyright © 2022 Truong Quang Tuan. All rights reserved.</span>
+<span class="c1">//</span>
+
+<span class="kd">import</span> <span class="nc">SwiftUI</span>
+
+<span class="kd">struct</span> <span class="nc">HomeView</span><span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+    
+    <span class="p">@</span><span class="n">StateObject</span> <span class="kd">var</span> <span class="nv">service</span> <span class="p">=</span> <span class="n">WatchConnectivityManager</span><span class="p">()</span>
+    
+    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+        <span class="n">NavigationView</span> <span class="p">{</span>
+            <span class="n">VStack</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">center</span><span class="p">,</span> <span class="n">spacing</span><span class="p">:</span> <span class="mf">10.0</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">Text</span><span class="p">(</span><span class="s">&#34;Support 24/7&#34;</span><span class="p">)</span>
+                <span class="n">Button</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">role</span><span class="p">:</span> <span class="p">.</span><span class="kr">none</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="p">{</span>
+                    
+                <span class="p">},</span> <span class="n">label</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="n">Text</span><span class="p">(</span><span class="s">&#34;1900 2642&#34;</span><span class="p">)</span>
+                        <span class="p">.</span><span class="n">bold</span><span class="p">()</span>
+                <span class="p">})</span>
+                <span class="p">.</span><span class="n">foregroundColor</span><span class="p">(.</span><span class="n">white</span><span class="p">)</span>
+                <span class="p">.</span><span class="n">background</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">hex</span><span class="p">:</span> <span class="mh">0xE49E26</span><span class="p">))</span>
+                <span class="p">.</span><span class="n">cornerRadius</span><span class="p">(</span><span class="mf">30.0</span><span class="p">)</span>
+                <span class="n">HStack</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">center</span><span class="p">,</span> <span class="n">spacing</span><span class="p">:</span> <span class="mf">8.0</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">HomeItemView</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">title</span><span class="p">:</span> <span class="s">&#34;All Bookings&#34;</span><span class="p">,</span> <span class="n">icon</span><span class="p">:</span> <span class="s">&#34;calendar&#34;</span><span class="p">))</span>
+                    <span class="n">HomeItemView</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">title</span><span class="p">:</span> <span class="s">&#34;Notifications&#34;</span><span class="p">,</span> <span class="n">icon</span><span class="p">:</span> <span class="s">&#34;notification&#34;</span><span class="p">))</span>
+                <span class="p">}</span>
+            <span class="p">}.</span><span class="n">padding</span><span class="p">()</span>
+                <span class="p">.</span><span class="n">alert</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="err">$</span><span class="n">service</span><span class="p">.</span><span class="n">notificationMessage</span><span class="p">,</span> <span class="n">content</span><span class="p">:</span> <span class="p">{</span> <span class="n">info</span> <span class="k">in</span>
+                    <span class="n">Alert</span><span class="p">(</span><span class="n">title</span><span class="p">:</span> <span class="n">Text</span><span class="p">(</span><span class="s">&#34;WELL DONE</span><span class="se">\n</span><span class="si">\(</span><span class="n">info</span><span class="p">.</span><span class="n">messsage</span><span class="si">)</span><span class="s">&#34;</span><span class="p">))</span>
+                <span class="p">})</span>
+        <span class="p">}</span>
+        <span class="p">.</span><span class="n">navigationTitle</span><span class="p">(</span><span class="s">&#34;12Bay&#34;</span><span class="p">)</span>
+        <span class="p">.</span><span class="n">navigationBarTitleDisplayMode</span><span class="p">(.</span><span class="n">inline</span><span class="p">)</span>
+        <span class="p">.</span><span class="n">navigationViewStyle</span><span class="p">(.</span><span class="n">stack</span><span class="p">)</span>
+        <span class="p">.</span><span class="n">navigationBarHidden</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span>
+        <span class="p">.</span><span class="n">navigationBarTitleDisplayMode</span><span class="p">(.</span><span class="n">inline</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">struct</span> <span class="nc">HomeView_Previews</span><span class="p">:</span> <span class="n">PreviewProvider</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="kd">let</span> <span class="nv">devices</span><span class="p">:[</span><span class="nb">String</span><span class="p">]</span> <span class="p">=</span> <span class="p">[</span><span class="s">&#34;Apple Watch Series 6 - 44mm&#34;</span><span class="p">,</span> <span class="s">&#34;Apple Watch SE - 40mm&#34;</span><span class="p">]</span>
+    
+    <span class="kd">static</span> <span class="kd">var</span> <span class="nv">previews</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+        <span class="n">ForEach</span><span class="p">(</span><span class="n">HomeView_Previews</span><span class="p">.</span><span class="n">devices</span><span class="p">,</span> <span class="n">id</span><span class="p">:</span> <span class="err">\</span><span class="p">.</span><span class="kc">self</span><span class="p">)</span> <span class="p">{</span> <span class="n">devicesName</span> <span class="k">in</span>
+            <span class="n">HomeView</span><span class="p">()</span>
+                <span class="p">.</span><span class="n">previewDevice</span><span class="p">(</span><span class="n">PreviewDevice</span><span class="p">(</span><span class="n">rawValue</span><span class="p">:</span> <span class="n">devicesName</span><span class="p">))</span>
+                <span class="p">.</span><span class="n">previewDisplayName</span><span class="p">(</span><span class="n">devicesName</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div><p>And that is it for the watchOS code!</p>
+<h2 id="running-the-apps">Running the Apps</h2>
+<p>Now all you have to do is run the scheme that deploys the app to the Apple Watch. Once the Apple Watch app loads (it may take a few minutes the first time), click the app on the iPhone home screen. Now you should have both apps running.</p>
+<p><img src="/images/demo-send-message-appwatch.gif" alt="demo-send-message-appwatch"></p>
+<h1 id="problems">Problems</h1>
+<h2 id="create-apple-watch-simulator-paird-iphone">Create Apple Watch Simulator paird iPhone</h2>
+<ol>
+<li>
+<p>Pair your phone simulator with your watch. Click <code>Add Additional Simulators</code> from the drop-down menu near the run and stop buttons in Xcode.</p>
+<p><img src="/images/image-20220524142519641.png#center70" alt="image-20220524142519641"></p>
+</li>
+<li>
+<p>Add check <code>Paired Apple Watch</code>
+<img src="/images/image-20220524142719622.png#center70" alt="image-20220524142719622"></p>
+</li>
+<li>
+<p>Launch the iPhone or watch application.</p>
+<p>To run an app on the simulator, you simply select the scheme for your Phone or WatchKit application by choosing it in the righthand side of the scheme .</p>
+<p><img src="/images/image-20220524143126538.png#center70" alt="image-20220524143126538"></p>
+</li>
+</ol>
+<h2 id="share-swift-classes-across-multiple-targets">Share Swift classes across multiple targets</h2>
+<p>Simple way by click to <code>Project</code> choose <code>Build Phases</code> tab and click to <code>+</code> add icon in  <code>Copy Bundle Resources</code> session</p>
+<p><img src="/images/image-20220524143932597.png" alt="image-20220524143932597"></p>
+<p>You can check how many targets are shared files by click to <code>Target Membership</code></p>
+<p><img src="/images/image-20220524144507291.png" alt="image-20220524144507291"></p>
+<h2 id="wcerrordomain-code7007">WCErrorDomain Code=7007</h2>
+<p>If you have a problem <strong>WCSession activated</strong> and <code>isReachable</code> is <strong>true</strong> value. But you cannot send message to watch app. It took me a long time to solve the above problem. Finally, I found the solution.
+<div
+  class="notice
+    notice--warning
+
+  "
+>
+  <span
+    class="notice__title
+      notice__title--warning
+
+    "
+  >Warning</span><div class="notice__content">
+    You just only to remove <strong>current iphone paired watch</strong> and create again
+  </div>
+</div>
+</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>Now, you have an app that runs both on the Apple watch and on the iPhone.</p>
+<p>In the next post, I will go over establishing watch connectivity to send data between my iPhone and watch to update the UI and complete the home screen.</p>
+<p>So, Happy coding ^^</p>
+
+
+
+<h3>Posts in this Series</h3>
+<ul>
+  
+    <li><a href="/posts/apple-watch-serial-p2-homescreen-connect/">Apple Watch Serial P2 Homescreen Connect</a></li>
+
+  
+    <li><a href="/posts/apple-watch-serial-p1-homescreen/">Apple Watch Serial P1 Homescreen</a></li>
+
+  
+    <li><a href="/posts/apple-watch-serial-design/">Let&#39;s Idea, How to Design Travel App (12Bay) on WatchOS?</a></li>
+
+  
+    <li><a href="/posts/apple-watch-serial/">Apple Watch Series</a></li>
+
+  
+</ul>
+</div>
+    <div class="post__footer">
+      
+        <span><a class="category" href="/categories/applewatch/">AppleWatch</a><a class="category" href="/categories/mobile-apps/">Mobile Apps</a></span>
+
+
+
+
+      
+
+      
+        <span><a class="tag" href="/tags/applewatch/">AppleWatch</a><a class="tag" href="/tags/ios/">iOS</a><a class="tag" href="/tags/swiftui/">SwiftUI</a></span>
+
+
+
+
+      
+    </div>
+
+    
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
+    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    crossorigin="anonymous"
+  ></script></body>
+</html>
