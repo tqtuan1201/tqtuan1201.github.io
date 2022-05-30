@@ -6,7 +6,20 @@
     <description>Recent content in SwiftUI on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 May 2022 15:01:56 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 May 2022 13:05:20 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apple Watch Serial P2 Homescreen Complete</title>
+      <link>https://tqtuan1201.github.io/posts/apple-watch-serial-p2-homescreen-complete/</link>
+      <pubDate>Mon, 30 May 2022 13:05:20 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/apple-watch-serial-p2-homescreen-complete/</guid>
+      
+        <description>Abstract Today, We will complete the homescreen. In this part, we just add background images and events for the elements view. Here are some keys you will get through this post:
+ Using ZStack to set full background image. Make calls from the watch application.  This article is part of my Apple Watch by SwiftUI series.
+ Complete Home screen UI design Add background images We will using Zstack .</description>
+      
+    </item>
+    
     <item>
       <title>Apple Watch Serial P2 Homescreen Connect</title>
       <link>https://tqtuan1201.github.io/posts/apple-watch-serial-p2-homescreen-connect/</link>
