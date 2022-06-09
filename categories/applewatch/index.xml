@@ -6,7 +6,22 @@
     <description>Recent content in AppleWatch on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 31 May 2022 14:59:52 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/categories/applewatch/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Jun 2022 16:54:01 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/categories/applewatch/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apple Watch Serial - My Order Detail Screen</title>
+      <link>https://tqtuan1201.github.io/posts/apple-watch-serial-order-detail/</link>
+      <pubDate>Wed, 08 Jun 2022 16:54:01 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/apple-watch-serial-order-detail/</guid>
+      
+        <description>Abstract Today, we will create an order detail UI screen and update data for this. This view to show all informations about order, e.g. booking ID, departing, arriving. Through this post, you can learn some knowledge such as:
+  Working on SwiftUI.
+  Understand the List, ZStack, TabView element.
+  Understand a navigation presentation NavigationView, NavigationLink.
+  This article is part of my Apple Watch by SwiftUI series.</description>
+      
+    </item>
+    
     <item>
       <title>Apple Watch Serial - My Order Screen</title>
       <link>https://tqtuan1201.github.io/posts/apple-watch-serial-my-order-p1-design/</link>
