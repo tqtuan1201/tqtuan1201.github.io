@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme="light"
+  class="html"
+><head>
+  <title>
+    
+      Tuan Truong
+        |
+        Apple Watch Serial My Notification
+
+
+      
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.81.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Tuan Truong" />
+  <meta
+    name="description"
+    content="
+      “The only thing that is constant is change”, Heraclitus.
+
+
+    "
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.5d0ab9997fe7356e90383be507c6acfedb0915acdc6edea5c99457f230aec00e.css"
+      integrity="sha256-XQq5mX/nNW6QODvlB8as/tsJFazcbt6lyZRX8jCuwA4="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.69685904d5c2a0c6258d03c207b778c10466edf6cea928cc0164c376b0ad0930.css"
+    integrity="sha256-aWhZBNXCoMYljQPCB7d4wQRm7fbOqSjMAWTDdrCtCTA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.6d585e78d28cce1200d39fb133c92ed83df01738da721d0f48fb6eac62d24e04.css"
+    integrity="sha256-bVheeNKMzhIA05&#43;xM8ku2D3wFzjach0PSPturGLSTgQ="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.6b00d96498d59caa0dbcf9b49d30d821915291f2ceb0e19248523c8607ff43fa.css"
+    integrity="sha256-awDZZJjVnKoNvPm0nTDYIZFSkfLOsOGSSFI8hgf/Q/o="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://tqtuan1201.github.io/posts/apple-watch-serial-my-notification/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.46e6a54097480084f8f52c20ca1aa7425b4fad17029a887fd4017b12e311a72d.js"
+    integrity="sha256-RualQJdIAIT49SwgyhqnQltPrRcCmoh/1AF7EuMRpy0="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.5557c8ff5617a01067ac258fd70b9b992506e379317b0da51e5e0f6e018b408a.js"
+      integrity="sha256-VVfI/1YXoBBnrCWP1wubmSUG43kxew2lHl4PbgGLQIo="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tqtuan1201.github.io/images/profile.jpg"/>
+
+<meta name="twitter:title" content="Apple Watch Serial My Notification"/>
+<meta name="twitter:description" content="Last week was my daughter birthday. I had a happy time with my family and now, focus to work
+Abstract Today, we will create a notification screen and learn how to use the Core Data framework with SwiftUI to store data. In this post, we will explore:
+  Working on SwiftUI.
+  How Core Data and SwiftUI work together
+  Creating and updating Core Data objects
+  How to update views when stored data gets updated"/>
+
+
+
+  
+  <meta property="og:title" content="Apple Watch Serial My Notification" />
+<meta property="og:description" content="Last week was my daughter birthday. I had a happy time with my family and now, focus to work
+Abstract Today, we will create a notification screen and learn how to use the Core Data framework with SwiftUI to store data. In this post, we will explore:
+  Working on SwiftUI.
+  How Core Data and SwiftUI work together
+  Creating and updating Core Data objects
+  How to update views when stored data gets updated" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tqtuan1201.github.io/posts/apple-watch-serial-my-notification/" /><meta property="og:image" content="https://tqtuan1201.github.io/images/profile.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-06-20T13:36:52&#43;07:00" />
+<meta property="article:modified_time" content="2022-06-20T13:36:52&#43;07:00" /><meta property="og:site_name" content="Hi, I&#39;m Tuan Truong" />
+<meta property="og:see_also" content="https://tqtuan1201.github.io/posts/apple-watch-serial-order-detail/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/apple-watch-serial-my-order-p1-design/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/apple-watch-serial-p2-homescreen-complete/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/apple-watch-serial-p2-homescreen-connect/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/apple-watch-serial-p1-homescreen/" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "posts",
+        "name": "Apple Watch Serial My Notification",
+        "headline": "Apple Watch Serial My Notification",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Last week was my daughter birthday. I had a happy time with my family and now, focus to work\nAbstract Today, we will create a notification screen and learn how to use the Core Data framework with SwiftUI to store data. In this post, we will explore:\n  Working on SwiftUI.\n  How Core Data and SwiftUI work together\n  Creating and updating Core Data objects\n  How to update views when stored data gets updated
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/tqtuan1201.github.io\/posts\/apple-watch-serial-my-notification\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-06-20T13:36:52.00Z",
+        "datePublished": "2022-06-20T13:36:52.00Z",
+        "dateModified": "2022-06-20T13:36:52.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Tuan Truong",
+            "url": "https://tqtuan1201.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/tqtuan1201.github.io\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://tqtuan1201.github.io/images/profile.jpg"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/tqtuan1201.github.io\/posts\/apple-watch-serial-my-notification\/",
+        "wordCount" : "1262",
+        "genre" : [ 
+      
+      "AppleWatch"
+
+    
+      
+        ,
+
+      
+      "Mobile Apps"
+
+    ],
+        "keywords" : [ 
+      
+      "AppleWatch"
+
+    
+      
+        ,
+
+      
+      "iOS"
+
+    
+      
+        ,
+
+      
+      "SwiftUI"
+
+    
+      
+        ,
+
+      
+      "Core Data"
+
+    ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--light"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/profile.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Hi, I&#39;m Tuan Truong</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>“The only thing that is constant is change”, Heraclitus.</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a href="https://github.com/tqtuan1201" rel="me" aria-label="Linkedin" title="Linkedin">
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a href="https://github.com/tqtuan1201" rel="me" aria-label="GitHub" title="GitHub">
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a href="https://github.com/tqtuan1201" rel="me" aria-label="instagram" title="instagram">
+            <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a href="mailto:truongquangtuanit@gmail.com" rel="me" aria-label="e-mail" title="e-mail">
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
+    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    crossorigin="anonymous"
+  ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/"
+            
+            title=""
+            >Home</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/"
+            
+            title=""
+            >Posts</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/"
+            
+            title=""
+            >About</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/"
+            
+            title=""
+            >Contact</a
+          >
+        </li>
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+      <div class="post__thumbnail-wrapper">
+        <img class="post__thumbnail" src="/images/image-20220620140317313.png?quality=92&amp;strip=all" alt="Thumbnail image" />
+      </div>
+
+    
+
+    <div class="post__content">
+      <h1>Apple Watch Serial My Notification</h1>
+      <h3>Table of Contents</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#ui-design">UI design</a></li>
+    <li><a href="#related-knowledge">Related knowledge</a>
+      <ul>
+        <li><a href="#what-is-core-data">What is Core Data?</a></li>
+        <li><a href="#the-stack">The Stack</a></li>
+        <li><a href="#versioning-and-migration">Versioning and Migration</a></li>
+        <li><a href="#background-data-tasks">Background Data Tasks</a></li>
+        <li><a href="#how-these-components-work-together">How these components work together?</a></li>
+      </ul>
+    </li>
+    <li><a href="#lets-code">Let&rsquo;s Code</a>
+      <ul>
+        <li><a href="#notification-screen">Notification Screen</a></li>
+        <li><a href="#load-and-store">Load and Store</a>
+          <ul>
+            <li><a href="#preparing-core-data">Preparing Core Data</a></li>
+            <li><a href="#core-data-stack">Core Data stack</a></li>
+            <li><a href="#store-and-load-local-data">Store and load local data</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#database-browser-for-sqlite">Database Browser for SQLite</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+        <div style="width: 100%; margin: 0 auto; background:rgba(0,0,0,0.5); height: 1px; opacity: 0.6"> </div><p>Last week was my daughter birthday. I had a happy time with my family and now, focus to work</p>
+<h1 id="abstract">Abstract</h1>
+<p>Today, we will create a notification screen and learn how to use the <code>Core Data framework</code> with <code>SwiftUI</code> to store data. In this post, we will explore:</p>
+<ul>
+<li>
+<p>Working on <code>SwiftUI</code>.</p>
+</li>
+<li>
+<p>How Core Data and <code>SwiftUI</code> work together</p>
+</li>
+<li>
+<p>Creating and updating Core Data objects</p>
+</li>
+<li>
+<p>How to update views when stored data gets updated</p>
+</li>
+<li>
+<p>Using SwiftUI property wrappers for fetching Core Data objects</p>
+</li>
+</ul>
+<h1 id="ui-design">UI design</h1>
+<p>First one, we will create a simple notification screen that users can see the latest notices. The finished screen look like:</p>
+<figure class="medium">
+    <img src="/images/image-20220620140317313.png"
+         alt="image"/> <figcaption>
+            <p>Notification Design</p>
+        </figcaption>
+</figure>
+
+<h1 id="related-knowledge">Related knowledge</h1>
+<h2 id="what-is-core-data">What is Core Data?</h2>
+<p><code>Core Data</code> is a graph-based optionally persisted model framework. Core Data can take care of your model layer, it can hold your entities, so you can ask Core Data for sorted, or filtered sets of entities that you need in some point of your app execution.</p>
+<p>Core Data can store your data in a <strong>SQLite database</strong>, or it can have your data in-memory, or even synchronized with CloudKit.</p>
+<figure class="medium">
+    <img src="/images/image-20220620142103166.png"
+         alt="image"/> <figcaption>
+            <p>The Stack (<a href="https://dev.to/fmo91/persistence-with-core-data-and-swiftui-45g5">source dev.to</a>)</p>
+        </figcaption>
+</figure>
+
+<h2 id="the-stack">The Stack</h2>
+<p>The Core Data Stack is composed of objects which interact between them to persist entities. The main components of the Core Data Stack are:</p>
+<ul>
+<li>
+<p><code>NSManagedObjectModel</code>: This class represents the descriptions for the entities you&rsquo;ll persist in your apps. Most of times, you&rsquo;ll define those entities using the Xcode visual editor, which will create a file with extension <code>.xcdatamodeld</code>.</p>
+</li>
+<li>
+<p><code>NSPersistentStoreCoordinator</code>: The persistent store coordinator will interface with the actual <code>Persistent Stores</code>, such as the SQLite databases. This is the class that interface between your app and the actual persistent stores. It needs a <code>NSManagedObjectModel</code> to work.</p>
+</li>
+<li>
+<p><code>NSManagedObjectContext</code>: <strong>The most important class in your Core Data Stack</strong>. Or, at least, the class you&rsquo;ll interact the most during your app development. It works as a scratchpad where you can make modifications to your <code>NSManagedObject</code> entities and then save the context to reflect the changes in the persistent stores. It needs a <code>NSPersistentStoreCoordinator</code> to work.</p>
+</li>
+</ul>
+<h2 id="versioning-and-migration">Versioning and Migration</h2>
+<p>Core Data helps you with versioning your data model and migration of user data with the evolution of the app.</p>
+<h2 id="background-data-tasks">Background Data Tasks</h2>
+<p>CoreData performs UI-Blocking data tasks, like parsing JSON into objects, but in the background, which further can be cached or stored to reduce server roundtrips.</p>
+<h2 id="how-these-components-work-together">How these components work together?</h2>
+<p>You can go to <a href="https://posaninagendra.github.io/post/2017-06-19-core-data/">Core Data Explained</a> to view for detail. The flow diagram below to understand the <code>Core Data stack</code>.</p>
+<figure class="medium">
+    <img src="/images/image-20220620143801631.png"
+         alt="image"/> <figcaption>
+            <p>The work flow (<a href="https://dev.to/fmo91/persistence-with-core-data-and-swiftui-45g5">posaninagendra.github.io</a>)</p>
+        </figcaption>
+</figure>
+
+<h1 id="lets-code">Let&rsquo;s Code</h1>
+<h2 id="notification-screen">Notification Screen</h2>
+<p>Here is the full code of <code>NotificationView</code> struct. It includes a sub view <code>NotificationItemView</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift">
+<span class="kd">import</span> <span class="nc">SwiftUI</span>
+<span class="kd">import</span> <span class="nc">CoreData</span>
+
+<span class="kd">struct</span> <span class="nc">NotificationView</span><span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+    
+    <span class="p">@</span><span class="n">StateObject</span> <span class="n">fileprivate</span> <span class="kd">var</span> <span class="nv">service</span> <span class="p">=</span> <span class="n">WatchConnectivityManager</span><span class="p">.</span><span class="n">share</span>
+    
+    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+        <span class="n">ZStack</span><span class="p">.</span><span class="kd">init</span> <span class="p">{</span>
+            <span class="n">Image</span><span class="p">(</span><span class="s">&#34;bgHeader&#34;</span><span class="p">)</span>
+                <span class="p">.</span><span class="n">resizable</span><span class="p">()</span>
+                <span class="p">.</span><span class="n">aspectRatio</span><span class="p">(</span><span class="n">contentMode</span><span class="p">:</span> <span class="p">.</span><span class="n">fit</span><span class="p">)</span>
+                <span class="p">.</span><span class="n">clipped</span><span class="p">()</span>
+            <span class="n">List</span><span class="p">()</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="kc">self</span><span class="p">.</span><span class="n">service</span><span class="p">.</span><span class="n">notifications</span><span class="p">.</span><span class="bp">isEmpty</span> <span class="p">{</span>
+                    <span class="n">Text</span><span class="p">(</span><span class="s">&#34;Oops, loos like there&#39;s no data...&#34;</span><span class="p">)</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                    <span class="n">ForEach</span><span class="p">(</span><span class="kc">self</span><span class="p">.</span><span class="n">service</span><span class="p">.</span><span class="n">notifications</span><span class="p">)</span> <span class="p">{</span> <span class="n">item</span> <span class="k">in</span>
+                        <span class="n">NotificationItemView</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="n">item</span><span class="p">)</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}.</span><span class="n">listStyle</span><span class="p">(.</span><span class="n">plain</span><span class="p">).</span><span class="n">opacity</span><span class="p">(</span><span class="mf">0.96</span><span class="p">)</span>
+        <span class="p">}.</span><span class="n">navigationTitle</span><span class="p">(</span><span class="s">&#34;Notifications&#34;</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">struct</span> <span class="nc">NotificationItemView</span><span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nv">item</span><span class="p">:</span><span class="n">NotificationItemModel</span>
+    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+        <span class="n">HStack</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">center</span><span class="p">,</span> <span class="n">spacing</span><span class="p">:</span> <span class="mf">8.0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">Image</span><span class="p">(</span><span class="s">&#34;notification&#34;</span><span class="p">)</span>
+                <span class="p">.</span><span class="n">resizable</span><span class="p">().</span><span class="n">frame</span><span class="p">(</span><span class="n">width</span><span class="p">:</span> <span class="mf">12.0</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mf">12.0</span><span class="p">,</span> <span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">center</span><span class="p">)</span>
+            <span class="n">VStack</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">leading</span><span class="p">,</span> <span class="n">spacing</span><span class="p">:</span> <span class="mf">2.0</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">Text</span><span class="p">(</span><span class="kc">self</span><span class="p">.</span><span class="n">item</span><span class="p">.</span><span class="n">title</span><span class="p">).</span><span class="n">bold</span><span class="p">().</span><span class="n">font</span><span class="p">(.</span><span class="n">system</span><span class="p">(</span><span class="n">size</span><span class="p">:</span> <span class="mf">12.0</span><span class="p">))</span>
+                <span class="n">Text</span><span class="p">(</span><span class="kc">self</span><span class="p">.</span><span class="n">item</span><span class="p">.</span><span class="n">des</span><span class="p">).</span><span class="n">font</span><span class="p">(.</span><span class="n">system</span><span class="p">(</span><span class="n">size</span><span class="p">:</span> <span class="mf">11.0</span><span class="p">))</span>
+                <span class="n">Text</span><span class="p">(</span><span class="kc">self</span><span class="p">.</span><span class="n">item</span><span class="p">.</span><span class="n">date</span><span class="p">).</span><span class="n">font</span><span class="p">(.</span><span class="n">system</span><span class="p">(</span><span class="n">size</span><span class="p">:</span> <span class="mf">10.0</span><span class="p">)).</span><span class="n">padding</span><span class="p">(.</span><span class="n">top</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">).</span><span class="n">opacity</span><span class="p">(</span><span class="mf">0.9</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div><figure class="medium">
+    <img src="/images/image-20220620165255268.png"
+         alt="image"/> <figcaption>
+            <p>NotificationView Previews</p>
+        </figcaption>
+</figure>
+
+<h2 id="load-and-store">Load and Store</h2>
+<h3 id="preparing-core-data">Preparing Core Data</h3>
+<p><strong>Right-click on your project’s folder</strong> in the project navigator and then <strong>New File…</strong> In the new window, type “data” in the top right corner, select <strong>Data Model</strong>, and press <strong>Next</strong>. Give it a name, and save it.</p>
+<figure class="medium">
+    <img src="https://johncodeos.com/wp-content/uploads/2022/03/core-data-ios-tutorial-2.png"
+         alt="image"/> <figcaption>
+            <p>source: johncodeos.com (<a href="https://johncodeos.com/how-to-use-core-data-in-ios-using-swift/">posaninagendra.github.io</a>)</p>
+        </figcaption>
+</figure>
+
+<p>Now, we are going to create the structure for the data that we want to save with <strong>Core Data</strong>.</p>
+<figure class="medium">
+    <img src="/images/image-20220620150608507.png"
+         alt="image"/> <figcaption>
+            <p>DataModels.xcdatamodeld</p>
+        </figcaption>
+</figure>
+
+<h3 id="core-data-stack">Core Data stack</h3>
+<p>After initializing the Core Data stack, it can be injected into SwiftUI views.</p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift">
+<span class="kd">import</span> <span class="nc">SwiftUI</span>
+
+<span class="p">@</span><span class="n">main</span>
+<span class="kd">struct</span> <span class="nc">_2BayV2App</span><span class="p">:</span> <span class="n">App</span> <span class="p">{</span>
+    <span class="p">@</span><span class="n">SceneBuilder</span> <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">Scene</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nv">persistenceController</span> <span class="p">=</span> <span class="n">DataManager</span><span class="p">.</span><span class="n">shared</span>
+        <span class="n">WindowGroup</span> <span class="p">{</span>
+            <span class="n">NavigationView</span> <span class="p">{</span>
+                <span class="n">HomeView</span><span class="p">()</span>
+                    <span class="p">.</span><span class="n">environment</span><span class="p">(</span><span class="err">\</span><span class="p">.</span><span class="n">managedObjectContext</span><span class="p">,</span> <span class="n">persistenceController</span><span class="p">.</span><span class="n">container</span><span class="p">.</span><span class="n">viewContext</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="n">WKNotificationScene</span><span class="p">(</span><span class="n">controller</span><span class="p">:</span> <span class="n">NotificationController</span><span class="p">.</span><span class="kc">self</span><span class="p">,</span> <span class="n">category</span><span class="p">:</span> <span class="s">&#34;myCategory&#34;</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><p>As we can see above, the managed object context is injected into the <code>HomeView</code> by using the environment() modifier. After this is done, <code>HomeView</code> now has access to the managed object context to save, update or delete items.</p>
+<div
+  class="notice"
+>
+  <span
+    class="notice__title"
+  >Info</span><div class="notice__content">
+    With the @Environment property wrapper, SwiftUI provides a possibility to share data between views without explicitly passing the data from view to view. By setting an environment property on a view, it will be available not only in the view itself but also in all of its subviews.
+  </div>
+</div>
+
+<h3 id="store-and-load-local-data">Store and load local data</h3>
+<p>In this case, when we receive data from the iPhone we will store this data to locally and when users open an app we will load this. To do this, we need to create a  singleton class to manage <code>ObjectContext</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="c1">//</span>
+<span class="c1">//  DataManager.swift</span>
+<span class="c1">//  watchOS WatchKit Extension</span>
+<span class="c1">//</span>
+<span class="c1">//  Created by Tuan Truong Quang on 6/10/22.</span>
+<span class="c1">//  Copyright © 2022 Truong Quang Tuan. All rights reserved.</span>
+<span class="c1">//</span>
+
+<span class="kd">import</span> <span class="nc">Foundation</span>
+<span class="kd">import</span> <span class="nc">CoreData</span>
+
+<span class="kd">class</span> <span class="nc">DataManager</span><span class="p">:</span> <span class="n">ObservableObject</span> <span class="p">{</span>
+
+    <span class="c1">// Storage for Core Data</span>
+    <span class="kd">let</span> <span class="nv">container</span><span class="p">:</span> <span class="n">NSPersistentContainer</span> <span class="p">=</span> <span class="n">NSPersistentContainer</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="s">&#34;DataModels&#34;</span><span class="p">)</span>
+    
+    <span class="c1">// A singleton for our entire app to use</span>
+    <span class="kd">static</span> <span class="kd">let</span> <span class="nv">shared</span> <span class="p">=</span> <span class="n">DataManager</span><span class="p">()</span>
+    <span class="kd">private</span> <span class="kd">init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">container</span><span class="p">.</span><span class="n">loadPersistentStores</span> <span class="p">{</span> <span class="n">persistentStore</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span>
+            <span class="n">XPrint</span><span class="p">(</span><span class="s">&#34;::DataManager container.loadPersistentStores: </span><span class="si">\(</span><span class="n">persistentStore</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+            <span class="n">XPrint</span><span class="p">(</span><span class="s">&#34;::DataManager container.loadPersistentStores error: </span><span class="si">\(</span><span class="n">error</span><span class="p">?.</span><span class="n">localizedDescription</span> <span class="p">??</span> <span class="s">&#34;&#34;</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">error</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="kd">let</span> <span class="nv">_url</span> <span class="p">=</span> <span class="n">persistentStore</span><span class="p">.</span><span class="n">url</span> <span class="p">{</span>
+                    <span class="k">try</span><span class="p">?</span> <span class="kc">self</span><span class="p">.</span><span class="n">container</span><span class="p">.</span><span class="n">viewContext</span><span class="p">.</span><span class="n">persistentStoreCoordinator</span><span class="p">?.</span><span class="n">destroyPersistentStore</span><span class="p">(</span><span class="n">at</span><span class="p">:</span> <span class="n">_url</span><span class="p">,</span> <span class="n">ofType</span><span class="p">:</span> <span class="n">NSSQLiteStoreType</span><span class="p">)</span>
+                    <span class="n">XPrint</span><span class="p">(</span><span class="s">&#34;::DataManager reset&#34;</span><span class="p">)</span>
+                    <span class="c1">//create oneagain</span>
+                    <span class="kc">self</span><span class="p">.</span><span class="n">container</span><span class="p">.</span><span class="n">loadPersistentStores</span> <span class="p">{</span> <span class="kc">_</span><span class="p">,</span> <span class="kc">_</span> <span class="k">in</span> <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="kd">func</span> <span class="nf">save</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nv">context</span> <span class="p">=</span> <span class="kc">self</span><span class="p">.</span><span class="n">container</span><span class="p">.</span><span class="n">viewContext</span>
+
+        <span class="k">if</span> <span class="n">context</span><span class="p">.</span><span class="n">hasChanges</span> <span class="p">{</span>
+            <span class="k">do</span> <span class="p">{</span>
+                <span class="k">try</span> <span class="n">context</span><span class="p">.</span><span class="n">save</span><span class="p">()</span>
+                <span class="n">XPrint</span><span class="p">(</span><span class="s">&#34;::DataManager save() success!&#34;</span><span class="p">)</span>
+            <span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+                <span class="c1">// Show some error here</span>
+                <span class="n">XPrint</span><span class="p">(</span><span class="s">&#34;::DataManager save() error!&#34;</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><p><code> func save() {}</code> : Attempts to commit unsaved changes to registered objects to the context’s parent store.</p>
+<div
+  class="notice
+    notice--warning
+
+  "
+>
+  <span
+    class="notice__title
+      notice__title--warning
+
+    "
+  >Warning</span><div class="notice__content">
+    Always verify that the context has uncommitted changes (using the <a href="https://developer.apple.com/documentation/coredata/nsmanagedobjectcontext/1506954-haschanges"><code>hasChanges</code></a> property) before invoking the <code>save:</code> method. Otherwise, Core Data may perform unnecessary work.
+  </div>
+</div>
+
+<p>And now, we will add code to an  <code>extension</code> to store and load notification data:</p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift">
+<span class="c1">//</span><span class="cs">MARK:</span><span class="c1">// Notification</span>
+<span class="kd">extension</span> <span class="nc">DataManager</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">onSaveNotifications</span><span class="p">(</span><span class="n">withItems</span> <span class="n">items</span><span class="p">:[</span><span class="n">NotificationItemModel</span><span class="p">])</span> <span class="p">{</span>
+        
+        <span class="c1">//delete all data</span>
+        <span class="kd">let</span> <span class="nv">notiEntity</span> <span class="p">=</span> <span class="n">NSFetchRequest</span><span class="p">&lt;</span><span class="n">NSFetchRequestResult</span><span class="p">&gt;(</span><span class="n">entityName</span><span class="p">:</span> <span class="s">&#34;NotificationLocals&#34;</span><span class="p">)</span>
+        <span class="kd">let</span> <span class="nv">delRequest</span> <span class="p">=</span> <span class="n">NSBatchDeleteRequest</span><span class="p">(</span><span class="n">fetchRequest</span><span class="p">:</span> <span class="n">notiEntity</span><span class="p">)</span>
+        <span class="k">do</span> <span class="p">{</span>
+            <span class="k">try</span> <span class="kc">self</span><span class="p">.</span><span class="n">container</span><span class="p">.</span><span class="n">viewContext</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">delRequest</span><span class="p">)</span>
+            <span class="k">try</span> <span class="kc">self</span><span class="p">.</span><span class="n">container</span><span class="p">.</span><span class="n">viewContext</span><span class="p">.</span><span class="n">save</span><span class="p">()</span>
+            <span class="bp">print</span> <span class="p">(</span><span class="s">&#34;::DataManager onSaveNotifications delete all success!&#34;</span><span class="p">)</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="kd">let</span> <span class="nv">error</span> <span class="p">{</span>
+            <span class="bp">print</span> <span class="p">(</span><span class="s">&#34;::DataManager onSaveNotifications delete all data error: </span><span class="si">\(</span><span class="n">error</span><span class="p">.</span><span class="n">localizedDescription</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+        <span class="p">}</span>
+        
+        <span class="n">items</span><span class="p">.</span><span class="n">forEach</span> <span class="p">{</span> <span class="n">item</span> <span class="k">in</span>
+            <span class="kd">let</span> <span class="nv">newLotiLocal</span> <span class="p">=</span> <span class="n">NSEntityDescription</span><span class="p">.</span><span class="n">insertNewObject</span><span class="p">(</span><span class="n">forEntityName</span><span class="p">:</span> <span class="s">&#34;NotificationLocals&#34;</span><span class="p">,</span> <span class="n">into</span><span class="p">:</span> <span class="kc">self</span><span class="p">.</span><span class="n">container</span><span class="p">.</span><span class="n">viewContext</span><span class="p">)</span>
+            <span class="n">newLotiLocal</span><span class="p">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">notiId</span><span class="p">,</span> <span class="n">forKey</span><span class="p">:</span> <span class="s">&#34;id&#34;</span><span class="p">)</span>
+            <span class="n">newLotiLocal</span><span class="p">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">title</span><span class="p">,</span> <span class="n">forKey</span><span class="p">:</span> <span class="s">&#34;title&#34;</span><span class="p">)</span>
+            <span class="n">newLotiLocal</span><span class="p">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">des</span><span class="p">,</span> <span class="n">forKey</span><span class="p">:</span> <span class="s">&#34;des&#34;</span><span class="p">)</span>
+            <span class="n">newLotiLocal</span><span class="p">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">date</span><span class="p">,</span> <span class="n">forKey</span><span class="p">:</span> <span class="s">&#34;date&#34;</span><span class="p">)</span>
+            
+        <span class="p">}</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">save</span><span class="p">()</span>
+    <span class="p">}</span>
+    
+    <span class="kd">func</span> <span class="nf">onLoadAndCatchonAppForNotification</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nv">fetchRequest</span><span class="p">:</span> <span class="n">NSFetchRequest</span><span class="p">&lt;</span><span class="n">NotificationLocals</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">NotificationLocals</span><span class="p">.</span><span class="n">fetchRequest</span><span class="p">()</span>
+        <span class="k">do</span> <span class="p">{</span>
+            
+            <span class="kd">let</span> <span class="nv">objects</span> <span class="p">=</span> <span class="k">try</span> <span class="kc">self</span><span class="p">.</span><span class="n">container</span><span class="p">.</span><span class="n">viewContext</span><span class="p">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fetchRequest</span><span class="p">)</span>
+            
+            <span class="kd">let</span> <span class="nv">itemByLocal</span> <span class="p">=</span>  <span class="n">objects</span><span class="p">.</span><span class="bp">map</span> <span class="p">{</span> <span class="p">(</span><span class="n">i_lc</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">NotificationItemModel</span> <span class="k">in</span>
+                <span class="kd">var</span> <span class="nv">item</span><span class="p">:</span><span class="n">NotificationItemModel</span> <span class="p">=</span> <span class="n">NotificationItemModel</span><span class="p">()</span>
+                <span class="n">item</span><span class="p">.</span><span class="n">notiId</span> <span class="p">=</span> <span class="n">i_lc</span><span class="p">.</span><span class="n">id</span> <span class="p">??</span> <span class="s">&#34;&#34;</span>
+                <span class="n">item</span><span class="p">.</span><span class="n">title</span> <span class="p">=</span> <span class="n">i_lc</span><span class="p">.</span><span class="n">title</span> <span class="p">??</span> <span class="s">&#34;&#34;</span>
+                <span class="n">item</span><span class="p">.</span><span class="n">des</span> <span class="p">=</span> <span class="n">i_lc</span><span class="p">.</span><span class="n">des</span> <span class="p">??</span> <span class="s">&#34;&#34;</span>
+                <span class="n">item</span><span class="p">.</span><span class="n">date</span> <span class="p">=</span> <span class="n">i_lc</span><span class="p">.</span><span class="n">date</span> <span class="p">??</span> <span class="s">&#34;&#34;</span>
+                <span class="k">return</span> <span class="n">item</span>
+            <span class="p">}</span>
+            <span class="n">XPrint</span><span class="p">(</span><span class="s">&#34;DataManager onLoadNotification count: </span><span class="si">\(</span><span class="n">itemByLocal</span><span class="p">.</span><span class="bp">count</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+            <span class="n">WatchConnectivityManager</span><span class="p">.</span><span class="n">share</span><span class="p">.</span><span class="n">notifications</span> <span class="p">=</span> <span class="n">itemByLocal</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="kd">let</span> <span class="nv">error</span> <span class="p">{</span>
+            <span class="n">XPrint</span><span class="p">(</span><span class="s">&#34;::DataManager onLoadNotification error: </span><span class="si">\(</span><span class="n">error</span><span class="p">.</span><span class="n">localizedDescription</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div><ul>
+<li>
+<p><code>onSaveNotifications</code> this method will call when we receive new data from iPhone. We will add on class <code>WatchConnectivityManager: NSObject, ObservableObject</code></p>
+</li>
+<li>
+<p><code>onLoadAndCatchonAppForNotification()</code> this method will be called when app is loaded. We will add on the <code>HomeView</code> struct</p>
+</li>
+</ul>
+<h1 id="database-browser-for-sqlite">Database Browser for SQLite</h1>
+<p>You can find the full path in <code>container.loadPersistentStores</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="p">::</span><span class="n">DataManager</span> <span class="n">container</span><span class="p">.</span><span class="n">loadPersistentStores</span><span class="p">:</span> <span class="p">&lt;</span><span class="n">NSPersistentStoreDescription</span><span class="p">:</span> <span class="mh">0x600003fd0450</span><span class="p">&gt;</span> <span class="p">(</span><span class="n">type</span><span class="p">:</span> <span class="n">SQLite</span><span class="p">,</span> <span class="n">url</span><span class="p">:</span> <span class="n">file</span><span class="p">:</span><span class="c1">///Users/*****/Library/Developer/CoreSimulator/Devices/***/DataModels.sqlite)</span>
+</code></pre></div><p>Now you can browse the structure, data, and execute SQL commands as you wish:</p>
+<figure class="medium">
+    <img src="/images/image-20220620171802374.png"
+         alt="image"/> <figcaption>
+            <p>Database Browser</p>
+        </figcaption>
+</figure>
+
+<p>That&rsquo;s it. We finished. Let&rsquo;s to play demo</p>
+<figure class="big">
+    <img src="/images/my-notification.gif"
+         alt="image"/> <figcaption>
+            <p>Store and load data demo</p>
+        </figcaption>
+</figure>
+
+<h1 id="conclusion">Conclusion</h1>
+<p>Well done, we learned how to use <code>Core Data</code> in <code>SwiftUI</code> to store data persistently and also understood what a managed <code>ObjectContext</code> is and how we can fetch stored data by using <code>SwiftUI</code>. This is end of apple watch series.</p>
+<p>In the next post, I will summarize the knowledge from coming up with ideas to a real product. See you soon ^^</p>
+
+
+
+<h3>Posts in this Series</h3>
+<ul>
+  
+    <li><a href="/posts/apple-watch-serial-my-notification/">Apple Watch Serial My Notification</a></li>
+
+  
+    <li><a href="/posts/apple-watch-serial-order-detail/">Apple Watch Serial - My Order Detail Screen</a></li>
+
+  
+    <li><a href="/posts/apple-watch-serial-my-order-p1-design/">Apple Watch Serial - My Order Screen</a></li>
+
+  
+    <li><a href="/posts/apple-watch-serial-p2-homescreen-complete/">Apple Watch Serial P2 Homescreen Complete</a></li>
+
+  
+    <li><a href="/posts/apple-watch-serial-p2-homescreen-connect/">Apple Watch Serial P2 Homescreen Connect</a></li>
+
+  
+    <li><a href="/posts/apple-watch-serial-p1-homescreen/">Apple Watch Serial P1 Homescreen</a></li>
+
+  
+    <li><a href="/posts/apple-watch-serial-design/">Let&#39;s Idea, How to Design Travel App (12Bay) on WatchOS?</a></li>
+
+  
+    <li><a href="/posts/apple-watch-serial/">Apple Watch Series</a></li>
+
+  
+</ul>
+</div>
+    <div class="post__footer">
+      
+        <span><a class="category" href="/categories/applewatch/">AppleWatch</a><a class="category" href="/categories/mobile-apps/">Mobile Apps</a></span>
+
+
+
+
+      
+
+      
+        <span><a class="tag" href="/tags/applewatch/">AppleWatch</a><a class="tag" href="/tags/ios/">iOS</a><a class="tag" href="/tags/swiftui/">SwiftUI</a><a class="tag" href="/tags/core-data/">Core Data</a></span>
+
+
+
+
+      
+    </div>
+
+    
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
+    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    crossorigin="anonymous"
+  ></script></body>
+</html>

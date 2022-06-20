@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Core Data on Tuan Truong&#39;s Blog</title>
+    <link>https://tqtuan1201.github.io/tags/core-data/</link>
+    <description>Recent content in Core Data on Tuan Truong&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 Jun 2022 13:36:52 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/core-data/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apple Watch Serial My Notification</title>
+      <link>https://tqtuan1201.github.io/posts/apple-watch-serial-my-notification/</link>
+      <pubDate>Mon, 20 Jun 2022 13:36:52 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/apple-watch-serial-my-notification/</guid>
+      
+        <description>Last week was my daughter birthday. I had a happy time with my family and now, focus to work
+Abstract Today, we will create a notification screen and learn how to use the Core Data framework with SwiftUI to store data. In this post, we will explore:
+  Working on SwiftUI.
+  How Core Data and SwiftUI work together
+  Creating and updating Core Data objects
+  How to update views when stored data gets updated</description>
+      
+    </item>
+    
+  </channel>
+</rss>
