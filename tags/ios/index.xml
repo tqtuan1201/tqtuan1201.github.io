@@ -6,7 +6,19 @@
     <description>Recent content in iOS on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jun 2022 13:36:52 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Jun 2022 13:42:23 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apple Watch Serial Summary</title>
+      <link>https://tqtuan1201.github.io/posts/apple-watch-serial-end/</link>
+      <pubDate>Wed, 22 Jun 2022 13:42:23 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/apple-watch-serial-end/</guid>
+      
+        <description>Abstract In this post, I will summarize some of my knowledge about developing an application on Apple Watch by SwiftUI language
+ Motivation Should You Learn SwiftUI or UIKit? Source to learn  Motivation The rise in wearable technology is very significant around the world. In 2022 App developers and businesses should get ready with apps that provide excellent digital experiences to users on wearables, to gain a distinct edge over those who do not.</description>
+      
+    </item>
+    
     <item>
       <title>Apple Watch Serial My Notification</title>
       <link>https://tqtuan1201.github.io/posts/apple-watch-serial-my-notification/</link>
