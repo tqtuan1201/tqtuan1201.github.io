@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme="light"
+  class="html"
+><head>
+  <title>
+    
+      Tuan Truong
+        |
+        TTBaseUIKit - Framework to build UI programmatically
+
+
+      
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.81.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Tuan Truong" />
+  <meta
+    name="description"
+    content="
+      “The only thing that is constant is change”, Heraclitus.
+
+
+    "
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.5d0ab9997fe7356e90383be507c6acfedb0915acdc6edea5c99457f230aec00e.css"
+      integrity="sha256-XQq5mX/nNW6QODvlB8as/tsJFazcbt6lyZRX8jCuwA4="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.69685904d5c2a0c6258d03c207b778c10466edf6cea928cc0164c376b0ad0930.css"
+    integrity="sha256-aWhZBNXCoMYljQPCB7d4wQRm7fbOqSjMAWTDdrCtCTA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.6d585e78d28cce1200d39fb133c92ed83df01738da721d0f48fb6eac62d24e04.css"
+    integrity="sha256-bVheeNKMzhIA05&#43;xM8ku2D3wFzjach0PSPturGLSTgQ="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.6b00d96498d59caa0dbcf9b49d30d821915291f2ceb0e19248523c8607ff43fa.css"
+    integrity="sha256-awDZZJjVnKoNvPm0nTDYIZFSkfLOsOGSSFI8hgf/Q/o="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/images/profile.jpg" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://tqtuan1201.github.io/posts/ttbaseuikit-ui-framework/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.46e6a54097480084f8f52c20ca1aa7425b4fad17029a887fd4017b12e311a72d.js"
+    integrity="sha256-RualQJdIAIT49SwgyhqnQltPrRcCmoh/1AF7EuMRpy0="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.5557c8ff5617a01067ac258fd70b9b992506e379317b0da51e5e0f6e018b408a.js"
+      integrity="sha256-VVfI/1YXoBBnrCWP1wubmSUG43kxew2lHl4PbgGLQIo="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tqtuan1201.github.io/images/profile.jpg"/>
+
+<meta name="twitter:title" content="TTBaseUIKit - Framework to build UI programmatically"/>
+<meta name="twitter:description" content="Abstract When I work with many projects. I always ask myself how to optimize the application, reusable code and how to develop the fastest and most efficient applications. So after two years of working with Swift language. I created the framework to build UI programmatically. With TTBaseUIKit, you can build apps in the fastest and most efficient way. A few points to note when you apply this framework:
+ How to set up the framework Basic config settings Usage example  Introduction I have been building framework for 5 years and for now, I still update new functions."/>
+
+
+
+  
+  <meta property="og:title" content="TTBaseUIKit - Framework to build UI programmatically" />
+<meta property="og:description" content="Abstract When I work with many projects. I always ask myself how to optimize the application, reusable code and how to develop the fastest and most efficient applications. So after two years of working with Swift language. I created the framework to build UI programmatically. With TTBaseUIKit, you can build apps in the fastest and most efficient way. A few points to note when you apply this framework:
+ How to set up the framework Basic config settings Usage example  Introduction I have been building framework for 5 years and for now, I still update new functions." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tqtuan1201.github.io/posts/ttbaseuikit-ui-framework/" /><meta property="og:image" content="https://tqtuan1201.github.io/images/profile.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-12T16:50:03&#43;07:00" />
+<meta property="article:modified_time" content="2022-07-12T16:50:03&#43;07:00" /><meta property="og:site_name" content="Hi, I&#39;m Tuan Truong" />
+<meta property="og:see_also" content="https://tqtuan1201.github.io/posts/apple-watch-serial-end/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/apple-watch-serial-my-notification/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/apple-watch-serial-order-detail/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/apple-watch-serial-my-order-p1-design/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/apple-watch-serial-p2-homescreen-complete/" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "posts",
+        "name": "TTBaseUIKit - Framework to build UI programmatically",
+        "headline": "TTBaseUIKit - Framework to build UI programmatically",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Abstract When I work with many projects. I always ask myself how to optimize the application, reusable code and how to develop the fastest and most efficient applications. So after two years of working with Swift language. I created the framework to build UI programmatically. With TTBaseUIKit, you can build apps in the fastest and most efficient way. A few points to note when you apply this framework:\n How to set up the framework Basic config settings Usage example  Introduction I have been building framework for 5 years and for now, I still update new functions.
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/tqtuan1201.github.io\/posts\/ttbaseuikit-ui-framework\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-07-12T16:50:03.00Z",
+        "datePublished": "2022-07-12T16:50:03.00Z",
+        "dateModified": "2022-07-12T16:50:03.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Tuan Truong",
+            "url": "https://tqtuan1201.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/tqtuan1201.github.io\/images\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://tqtuan1201.github.io/images/profile.jpg"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/tqtuan1201.github.io\/posts\/ttbaseuikit-ui-framework\/",
+        "wordCount" : "1244",
+        "genre" : [ 
+      
+      "Mobile Apps"
+
+    ],
+        "keywords" : [ 
+      
+      "TTBaseUIKit"
+
+    
+      
+        ,
+
+      
+      "UI-programmatically"
+
+    
+      
+        ,
+
+      
+      "Swift"
+
+    ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--light"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/profile.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Hi, I&#39;m Tuan Truong</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>“The only thing that is constant is change”, Heraclitus.</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a href="https://github.com/tqtuan1201" rel="me" aria-label="Linkedin" title="Linkedin">
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a href="https://github.com/tqtuan1201" rel="me" aria-label="GitHub" title="GitHub">
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a href="https://github.com/tqtuan1201" rel="me" aria-label="instagram" title="instagram">
+            <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a href="mailto:truongquangtuanit@gmail.com" rel="me" aria-label="e-mail" title="e-mail">
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
+    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    crossorigin="anonymous"
+  ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/"
+            
+            title=""
+            >Home</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/posts"
+            
+            title=""
+            >Posts</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/portfolio"
+            
+            title=""
+            >Projects</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/"
+            
+            title=""
+            >certifications</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/"
+            
+            title=""
+            >About</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/"
+            
+            title=""
+            >Contact</a
+          >
+        </li>
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+      <div class="post__thumbnail-wrapper">
+        <img class="post__thumbnail" src="https://github.com/tqtuan1201/TTBaseUIKit/raw/master/Images/bg.png?quality=92&amp;strip=all" alt="Thumbnail image" />
+      </div>
+
+    
+
+    <div class="post__content">
+      <h1>TTBaseUIKit - Framework to Build UI Programmatically</h1>
+      <h3>Table of Contents</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#how-to-set-up-the-framework">How to set up the framework</a>
+      <ul>
+        <li><a href="#using-cocoapods">Using CocoaPods</a></li>
+        <li><a href="#basic-config-settings">Basic config settings</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a>
+      <ul>
+        <li><a href="#interface-customization">Interface Customization</a>
+          <ul>
+            <li><a href="#show-message">Show Message</a></li>
+            <li><a href="#show-popup">Show Popup</a></li>
+            <li><a href="#show-empty-for-table-view">Show empty for table view</a></li>
+          </ul>
+        </li>
+        <li><a href="#viewcodable">ViewCodable</a></li>
+        <li><a href="#base-uiviews">Base UIViews</a>
+          <ul>
+            <li><a href="#custom-view">Custom View</a></li>
+            <li><a href="#baseuiviewcontroller">BaseUIViewController</a></li>
+            <li><a href="#baseuitableviewcontroller">BaseUITableViewController</a></li>
+          </ul>
+        </li>
+        <li><a href="#auto-layout">Auto Layout</a></li>
+        <li><a href="#useful-functions">Useful functions</a></li>
+        <li><a href="#example-apps">Example Apps</a></li>
+      </ul>
+    </li>
+    <li><a href="#installed-applications">Installed Applications</a></li>
+    <li><a href="#advantages">Advantages</a></li>
+    <li><a href="#disadvantages">Disadvantages</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+        <div style="width: 100%; margin: 0 auto; background:rgba(0,0,0,0.5); height: 1px; opacity: 0.6"> </div><h1 id="abstract">Abstract</h1>
+<p>When I work with many projects. I always ask myself how to optimize the application, reusable code and how to develop the fastest and most efficient applications. So after two years of working with Swift language. I created the framework to build UI programmatically. With <code>TTBaseUIKit</code>, you can build apps in the fastest and most efficient way.  A few points to note when you apply this framework:</p>
+<ul>
+<li>How to set up the framework</li>
+<li>Basic config settings</li>
+<li>Usage example</li>
+</ul>
+<h1 id="introduction">Introduction</h1>
+<p>I have been building framework for 5 years and for now, I still update new functions. This framework includes a lot of base UI components, e.g. <code>TTBaseUILabel</code>, <code>TTBaseUIButton</code>, <code>TTBaseUIView</code>, <code>TTBaseUIViewController</code>, <code>TTBaseUITableViewController</code>,&hellip; with many useful functions. With those base views, it gives you most of the functions for you to use. Here is the structure of the framework.</p>
+<figure class="big">
+    <img src="/images/image-20220712172821292.png"
+         alt="image"/> <figcaption>
+            <p>TTBaseUIKit Framework</p>
+        </figcaption>
+</figure>
+
+<p>Some base UI components, you can see it on the left side:</p>
+<figure class="big">
+    <img src="/images/image-20220713104243606.png"
+         alt="image"/> <figcaption>
+            <p>Base UI components</p>
+        </figcaption>
+</figure>
+
+<h1 id="how-to-set-up-the-framework">How to set up the framework</h1>
+<p>The current release of <code>TTBaseUIKit</code> supports all versions of iOS and OS X since the introduction of Auto Layout on each platform, in Swift language with a single codebase.</p>
+<p>Language Support: <strong>Swift</strong>, iOS minimum Deployment Target: <strong>iOS 10.0</strong></p>
+<h2 id="using-cocoapods">Using CocoaPods</h2>
+<p>Add the pod <code>TTBaseUIKit</code> to your <a href="http://guides.cocoapods.org/using/the-podfile.html">Podfile</a>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="nx">pod</span> <span class="s1">&#39;TTBaseUIKit&#39;</span>
+</code></pre></div><p>With <code>use_frameworks!</code> in your Podfile, <code>Swift</code>: import TTBaseUIKit</p>
+<h2 id="basic-config-settings">Basic config settings</h2>
+<p>When you use this framework. You have the ability to control <code>Color</code>, <code>FontSize</code>, <code>UI size</code>. It helps you a lot when you apply <strong>themes</strong>, build apps on <strong>different platforms</strong> and they are easy to change. Config setting in <code>AppDelegate</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="nv">view</span><span class="p">:</span><span class="n">ViewConfig</span> <span class="p">=</span> <span class="n">ViewConfig</span><span class="p">()</span>
+<span class="n">view</span><span class="p">.</span><span class="n">viewBgNavColor</span> <span class="p">=</span> <span class="n">UIColor</span><span class="p">.</span><span class="n">blue</span>
+<span class="n">view</span><span class="p">.</span><span class="n">viewBgColor</span> <span class="p">=</span> <span class="n">UIColor</span><span class="p">.</span><span class="n">white</span>
+<span class="n">view</span><span class="p">.</span><span class="n">buttonBgDef</span> <span class="p">=</span> <span class="n">UIColor</span><span class="p">.</span><span class="n">blue</span>
+<span class="n">view</span><span class="p">.</span><span class="n">buttonBgWar</span> <span class="p">=</span> <span class="n">UIColor</span><span class="p">.</span><span class="n">red</span>
+        
+<span class="kd">let</span> <span class="nv">size</span><span class="p">:</span><span class="n">SizeConfig</span> <span class="p">=</span> <span class="n">SizeConfig</span><span class="p">()</span>
+<span class="n">size</span><span class="p">.</span><span class="n">H_SEG</span> <span class="p">=</span> <span class="mf">50.0</span>
+<span class="n">size</span><span class="p">.</span><span class="n">H_BUTTON</span> <span class="p">=</span> <span class="mf">44.0</span>
+
+<span class="kd">let</span> <span class="nv">font</span><span class="p">:</span><span class="n">FontConfig</span> <span class="p">=</span> <span class="n">FontConfig</span><span class="p">()</span>
+<span class="n">font</span><span class="p">.</span><span class="n">HEADER_H</span> <span class="p">=</span> <span class="mi">16</span>
+<span class="n">font</span><span class="p">.</span><span class="n">TITLE_H</span> <span class="p">=</span> <span class="mi">14</span>
+<span class="n">font</span><span class="p">.</span><span class="n">SUB_TITLE_H</span> <span class="p">=</span> <span class="mi">12</span>
+<span class="n">font</span><span class="p">.</span><span class="n">SUB_SUB_TITLE_H</span> <span class="p">=</span> <span class="mi">10</span>
+
+<span class="n">TTBaseUIKitConfig</span><span class="p">.</span><span class="n">withDefaultConfig</span><span class="p">(</span><span class="n">withFontConfig</span><span class="p">:</span> <span class="n">font</span><span class="p">,</span> <span class="n">frameSize</span><span class="p">:</span> <span class="n">size</span><span class="p">,</span> <span class="n">view</span><span class="p">:</span> <span class="n">view</span><span class="p">)?.</span><span class="n">start</span><span class="p">(</span><span class="n">withViewLog</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+        
+<span class="kc">self</span><span class="p">.</span><span class="n">window</span> <span class="p">=</span> <span class="n">UIWindow</span><span class="p">(</span><span class="n">frame</span><span class="p">:</span> <span class="n">UIScreen</span><span class="p">.</span><span class="n">main</span><span class="p">.</span><span class="n">bounds</span><span class="p">)</span>
+<span class="kc">self</span><span class="p">.</span><span class="n">window</span><span class="p">!.</span><span class="n">rootViewController</span> <span class="p">=</span> <span class="n">UINavigationController</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">rootViewController</span><span class="p">:</span> <span class="n">YourViewController</span><span class="p">())</span>
+<span class="kc">self</span><span class="p">.</span><span class="n">window</span><span class="p">!.</span><span class="n">makeKeyAndVisible</span><span class="p">()</span>
+
+</code></pre></div><ul>
+<li>With <code>ViewConfig</code>, you can customize the most of colors for <code>Button</code>, <code>Label</code>, <code>Background colors</code>, ect. You can see all the config here: <a href="https://github.com/tqtuan1201/TTBaseUIKit/blob/master/TTBaseUIKit/TTBaseUIKit/BaseConfig/ViewConfig.swift">ViewConfig</a></li>
+<li>With <code>SizeConfig</code>, you can customize the most of size for <code>Button</code>, <code>Label</code>, <code>Navigation</code>, <code>Conner radius</code>, <code>Icon</code>, <code>Textfield</code>, ect. You can see all the config here: <a href="https://github.com/tqtuan1201/TTBaseUIKit/blob/master/TTBaseUIKit/TTBaseUIKit/BaseConfig/SizeConfig.swift">SizeConfig</a></li>
+<li>With <code>SizeConfig</code>, you can customize the most of font size for <code>Title</code>, <code>SubTitle</code>, <code>Header</code>, ect. You can see all the config here: <a href="https://github.com/tqtuan1201/TTBaseUIKit/blob/master/TTBaseUIKit/TTBaseUIKit/BaseConfig/FontConfig.swift">FontConfig</a></li>
+</ul>
+<p>Apply config by:</p>
+<div
+  class="notice"
+>
+  <span
+    class="notice__title"
+  >Info</span><div class="notice__content">
+    TTBaseUIKitConfig.withDefaultConfig(withFontConfig: font, frameSize: size, view: view)?.start(withViewLog: true)
+  </div>
+</div>
+
+<h1 id="usage">Usage</h1>
+<p><code>TTBaseUIKit</code> dramatically simplifies writing to build UI programmatically. Let&rsquo;s take a quick look at some examples, using <code>TTBaseUIKit</code> from Swift.</p>
+<figure class="medium">
+    <img src="https://github.com/tqtuan1201/TTBaseUIKit/raw/master/Images/1.gif"
+         alt="image"/> <figcaption>
+            <p>TTBaseUIKit Framework</p>
+        </figcaption>
+</figure>
+
+<h2 id="interface-customization">Interface Customization</h2>
+<h3 id="show-message">Show Message</h3>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="nv">noti</span><span class="p">:</span><span class="n">TTBaseNotificationViewConfig</span> <span class="p">=</span> <span class="n">TTBaseNotificationViewConfig</span><span class="p">(</span><span class="n">with</span><span class="p">:</span> <span class="n">window</span><span class="p">)</span>
+<span class="n">noti</span><span class="p">.</span><span class="n">setText</span><span class="p">(</span><span class="n">with</span><span class="p">:</span> <span class="s">&#34;WELCOME ^^&#34;</span><span class="p">,</span> <span class="n">subTitle</span><span class="p">:</span> <span class="s">&#34;Just demo little element ui with write by  programmatically swift&#34;</span><span class="p">)</span>
+<span class="n">noti</span><span class="p">.</span><span class="n">type</span> <span class="p">=</span> <span class="p">.</span><span class="n">NOTIFICATION_VIEW</span>
+<span class="n">noti</span><span class="p">.</span><span class="n">touchType</span> <span class="p">=</span> <span class="p">.</span><span class="n">SWIPE</span>
+<span class="n">noti</span><span class="p">.</span><span class="n">notifiType</span> <span class="p">=</span> <span class="p">.</span><span class="n">SUCCESS</span>
+<span class="n">noti</span><span class="p">.</span><span class="n">onShow</span><span class="p">()</span>
+</code></pre></div><figure class="small">
+    <img src="/images/image-20220713113301616.png"
+         alt="image"/> <figcaption>
+            <p>Show message</p>
+        </figcaption>
+</figure>
+
+<h3 id="show-popup">Show Popup</h3>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="nv">popupVC</span> <span class="p">=</span> <span class="n">TTPopupViewController</span><span class="p">(</span><span class="n">title</span><span class="p">:</span> <span class="s">&#34;SOMETHING LIKE THIS&#34;</span><span class="p">,</span> <span class="n">subTitle</span><span class="p">:</span> <span class="s">&#34;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has b&#34;</span><span class="p">,</span> <span class="n">isAllowTouchPanel</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+<span class="n">yourVC</span><span class="p">.</span><span class="n">present</span><span class="p">(</span><span class="n">popupVC</span><span class="p">,</span> <span class="n">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+</code></pre></div><h3 id="show-empty-for-table-view">Show empty for table view</h3>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="n">yourVC</span><span class="p">.</span><span class="n">tableView</span><span class="p">.</span><span class="n">setStaticBgNoData</span><span class="p">(</span><span class="n">title</span><span class="p">:</span> <span class="s">&#34;NO DATA&#34;</span><span class="p">,</span> <span class="n">des</span><span class="p">:</span> <span class="s">&#34;Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making &#34;</span><span class="p">)</span> <span class="p">{</span>
+  <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Touch handle!!!!&#34;</span><span class="p">)</span>
+            <span class="p">}</span>
+</code></pre></div><h2 id="viewcodable">ViewCodable</h2>
+<p>This is a <code>protocol</code> use to easily organize UI handling code. You can see all configs here: <a href="https://github.com/tqtuan1201/TTBaseUIKit/blob/master/TTBaseUIKit/TTBaseUIKit/CustomView/ViewCodable/ViewCodable.swift">ViewCodable</a></p>
+<ul>
+<li>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">setupViewCodable</span><span class="p">(</span><span class="n">with</span> <span class="n">views</span> <span class="p">:</span> <span class="p">[</span><span class="n">UIView</span><span class="p">])</span>
+</code></pre></div><p>This function calls all other functions in the correct order. You can use it in an UIViewController viewDidLoad method or in a view initializer, for example.</p>
+</li>
+<li>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">setupStyles</span><span class="p">()</span>
+</code></pre></div><p>This function should be used to apply styles to your customs views.</p>
+</li>
+<li>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">setupData</span><span class="p">()</span>
+</code></pre></div><p>This function should be used to set data</p>
+</li>
+<li>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">setupConstraints</span><span class="p">()</span>
+</code></pre></div><p>This function should be used to add constraints to your customs views</p>
+</li>
+<li>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">setupBaseDelegate</span><span class="p">()</span>
+</code></pre></div><p>This function should be used to set delegate for views</p>
+</li>
+</ul>
+<h2 id="base-uiviews">Base UIViews</h2>
+<h3 id="custom-view">Custom View</h3>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">import</span> <span class="nc">TTBaseUIKit</span>
+
+<span class="kd">class</span> <span class="nc">YourCustomView</span> <span class="p">:</span> <span class="n">TTBaseUIView</span> <span class="p">{</span>
+    <span class="kr">override</span> <span class="kd">func</span> <span class="nf">updateBaseUIView</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kc">super</span><span class="p">.</span><span class="n">updateBaseUIView</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">extension</span> <span class="nc">YourCustomView</span> <span class="p">:</span><span class="n">TTViewCodable</span> <span class="p">{</span>
+    
+    <span class="kd">func</span> <span class="nf">setupStyles</span><span class="p">()</span> <span class="p">{</span>
+    <span class="p">}</span>
+    
+    <span class="kd">func</span> <span class="nf">setupCustomView</span><span class="p">()</span> <span class="p">{</span>
+    <span class="p">}</span>
+    
+    <span class="kd">func</span> <span class="nf">setupConstraints</span><span class="p">()</span> <span class="p">{</span>
+    <span class="p">}</span>
+    
+<span class="p">}</span>
+
+</code></pre></div><h3 id="baseuiviewcontroller">BaseUIViewController</h3>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift">
+<span class="kd">import</span>  <span class="nc">TTBaseUIKit</span>
+
+<span class="kd">class</span> <span class="nc">BaseUIViewController</span><span class="p">:</span> <span class="n">TTBaseUIViewController</span><span class="p">&lt;</span><span class="n">DarkBaseUIView</span><span class="p">&gt;</span> <span class="p">{</span>
+    
+    <span class="kd">var</span> <span class="nv">lgNavType</span><span class="p">:</span><span class="n">BaseUINavigationView</span><span class="p">.</span><span class="n">TYPE</span> <span class="p">{</span> <span class="kr">get</span> <span class="p">{</span> <span class="k">return</span> <span class="p">.</span><span class="n">DEFAULT</span><span class="p">}}</span>
+    <span class="kd">var</span> <span class="nv">backType</span><span class="p">:</span><span class="n">BaseUINavigationView</span><span class="p">.</span><span class="n">NAV_BACK</span> <span class="p">=</span> <span class="p">.</span><span class="n">BACK_POP</span>
+    
+    <span class="kr">override</span> <span class="kd">func</span> <span class="nf">viewWillAppear</span><span class="p">(</span><span class="kc">_</span> <span class="n">animated</span><span class="p">:</span> <span class="nb">Bool</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kc">super</span><span class="p">.</span><span class="n">viewWillAppear</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">updateForNav</span><span class="p">()</span>
+    <span class="p">}</span>
+    
+    <span class="kd">public</span> <span class="kr">override</span> <span class="kd">init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kc">super</span><span class="p">.</span><span class="kd">init</span><span class="p">()</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">navBar</span> <span class="p">=</span> <span class="n">BaseUINavigationView</span><span class="p">(</span><span class="n">withType</span><span class="p">:</span> <span class="kc">self</span><span class="p">.</span><span class="n">lgNavType</span><span class="p">)</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">setDelegate</span><span class="p">()</span>
+    <span class="p">}</span>
+    
+    <span class="kd">public</span> <span class="kr">convenience</span> <span class="kd">init</span><span class="p">(</span><span class="n">backType</span><span class="p">:</span><span class="n">BaseUINavigationView</span><span class="p">.</span><span class="n">NAV_BACK</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kc">self</span><span class="p">.</span><span class="kd">init</span><span class="p">()</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">backType</span> <span class="p">=</span> <span class="n">backType</span>
+    <span class="p">}</span>
+    
+    <span class="kd">public</span> <span class="kr">convenience</span> <span class="kd">init</span><span class="p">(</span><span class="n">withTitleNav</span> <span class="n">title</span><span class="p">:</span><span class="nb">String</span><span class="p">,</span> <span class="n">backType</span><span class="p">:</span><span class="n">BaseUINavigationView</span><span class="p">.</span><span class="n">NAV_BACK</span> <span class="p">=</span> <span class="p">.</span><span class="n">BACK_POP</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kc">self</span><span class="p">.</span><span class="kd">init</span><span class="p">()</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">backType</span> <span class="p">=</span> <span class="n">backType</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">setTitleNav</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="p">}</span>
+    
+    <span class="kd">public</span> <span class="kr">convenience</span> <span class="kd">init</span><span class="p">(</span><span class="n">withNav</span> <span class="n">nav</span><span class="p">:</span><span class="n">BaseUINavigationView</span><span class="p">,</span> <span class="n">backType</span><span class="p">:</span><span class="n">BaseUINavigationView</span><span class="p">.</span><span class="n">NAV_BACK</span> <span class="p">=</span> <span class="p">.</span><span class="n">BACK_POP</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kc">self</span><span class="p">.</span><span class="kd">init</span><span class="p">()</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">backType</span> <span class="p">=</span> <span class="n">backType</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">navBar</span> <span class="p">=</span> <span class="n">nav</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">setDelegate</span><span class="p">()</span>
+    <span class="p">}</span>
+    
+    <span class="kr">required</span> <span class="kd">init</span><span class="p">?(</span><span class="n">coder</span> <span class="n">aDecoder</span><span class="p">:</span> <span class="n">NSCoder</span><span class="p">)</span> <span class="p">{</span>
+        <span class="bp">fatalError</span><span class="p">(</span><span class="s">&#34;init(coder:) has not been implemented&#34;</span><span class="p">)</span>
+    <span class="p">}</span>
+    
+<span class="p">}</span>
+
+<span class="c1">// </span><span class="cs">MARK:</span><span class="c1"> For private base funcs</span>
+<span class="kd">extension</span> <span class="nc">BaseUIViewController</span> <span class="p">{</span>
+    
+    <span class="n">fileprivate</span> <span class="kd">func</span> <span class="nf">setDelegate</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="kd">let</span> <span class="nv">lgNav</span> <span class="p">=</span> <span class="kc">self</span><span class="p">.</span><span class="n">navBar</span> <span class="k">as</span><span class="p">?</span> <span class="n">BaseUINavigationView</span> <span class="p">{</span> <span class="n">lgNav</span><span class="p">.</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">self</span> <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="n">fileprivate</span> <span class="kd">func</span> <span class="nf">updateForNav</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="kd">let</span> <span class="nv">lgNav</span> <span class="p">=</span> <span class="kc">self</span><span class="p">.</span><span class="n">navBar</span> <span class="k">as</span><span class="p">?</span> <span class="n">BaseUINavigationView</span> <span class="p">{</span>
+            <span class="n">lgNav</span><span class="p">.</span><span class="n">setTitle</span><span class="p">(</span><span class="n">title</span><span class="p">:</span> <span class="s">&#34;TTBASEUIVIEW_KIT&#34;</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// </span><span class="cs">MARK:</span><span class="c1"> For public base funcs</span>
+<span class="c1">//--NAV</span>
+<span class="kd">extension</span> <span class="nc">BaseUIViewController</span> <span class="p">{</span>
+    
+    <span class="kd">func</span> <span class="nf">setTitleNav</span><span class="p">(</span><span class="kc">_</span> <span class="n">text</span><span class="p">:</span><span class="nb">String</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">navBar</span><span class="p">.</span><span class="n">setTitle</span><span class="p">(</span><span class="n">title</span><span class="p">:</span> <span class="n">text</span><span class="p">)</span>
+    <span class="p">}</span>
+    
+    <span class="kd">func</span> <span class="nf">setShowNav</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">statusBar</span><span class="p">.</span><span class="n">isHidden</span> <span class="p">=</span> <span class="kc">false</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">navBar</span><span class="p">.</span><span class="n">isHidden</span> <span class="p">=</span> <span class="kc">false</span>
+    <span class="p">}</span>
+    
+    <span class="kd">func</span> <span class="nf">setHiddenNav</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">statusBar</span><span class="p">.</span><span class="n">isHidden</span> <span class="p">=</span> <span class="kc">true</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">navBar</span><span class="p">.</span><span class="n">isHidden</span> <span class="p">=</span> <span class="kc">true</span>
+    <span class="p">}</span>
+    
+<span class="p">}</span>
+
+<span class="kd">extension</span> <span class="nc">BaseUIViewController</span> <span class="p">:</span><span class="n">BaseUINavigationViewDelegate</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">navDidTouchUpBackButton</span><span class="p">(</span><span class="n">withNavView</span> <span class="n">nav</span><span class="p">:</span> <span class="n">BaseUINavigationView</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="kc">self</span><span class="p">.</span><span class="n">backType</span> <span class="p">==</span> <span class="p">.</span><span class="n">BACK_POP</span> <span class="p">{</span>
+            <span class="kc">self</span><span class="p">.</span><span class="n">navigationController</span><span class="p">?.</span><span class="n">popViewController</span><span class="p">(</span><span class="n">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="kc">self</span><span class="p">.</span><span class="n">backType</span> <span class="p">==</span> <span class="p">.</span><span class="n">BACK_TO_ROOT</span> <span class="p">{</span>
+            <span class="kc">self</span><span class="p">.</span><span class="n">navigationController</span><span class="p">?.</span><span class="n">popToRootViewController</span><span class="p">(</span><span class="n">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="kc">self</span><span class="p">.</span><span class="n">dismiss</span><span class="p">(</span><span class="n">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="kd">func</span> <span class="nf">navDidTouchUpRightButton</span><span class="p">(</span><span class="n">withNavView</span> <span class="n">nav</span><span class="p">:</span> <span class="n">BaseUINavigationView</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div><h3 id="baseuitableviewcontroller">BaseUITableViewController</h3>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">import</span> <span class="nc">TTBaseUIKit</span>
+
+<span class="kd">class</span> <span class="nc">BaseUITableViewController</span><span class="p">:</span> <span class="n">TTBaseUITableViewController</span> <span class="p">{</span>
+    
+    <span class="kr">override</span> <span class="kd">var</span> <span class="nv">navType</span><span class="p">:</span> <span class="n">TTBaseUIViewController</span><span class="p">&lt;</span><span class="n">TTBaseUIView</span><span class="p">&gt;.</span><span class="n">NAV_STYLE</span> <span class="p">{</span> <span class="kr">get</span> <span class="p">{</span> <span class="k">return</span> <span class="p">.</span><span class="n">STATUS_NAV</span><span class="p">}}</span>
+    
+    <span class="kd">var</span> <span class="nv">lgNavType</span><span class="p">:</span><span class="n">BaseUINavigationView</span><span class="p">.</span><span class="n">TYPE</span> <span class="p">{</span> <span class="kr">get</span> <span class="p">{</span> <span class="k">return</span> <span class="p">.</span><span class="n">DEFAULT</span><span class="p">}}</span>
+    <span class="kd">var</span> <span class="nv">backType</span><span class="p">:</span><span class="n">BaseUINavigationView</span><span class="p">.</span><span class="n">NAV_BACK</span> <span class="p">=</span> <span class="p">.</span><span class="n">BACK_POP</span>
+    
+    <span class="kr">override</span> <span class="kd">func</span> <span class="nf">viewWillTransition</span><span class="p">(</span><span class="n">to</span> <span class="n">size</span><span class="p">:</span> <span class="n">CGSize</span><span class="p">,</span> <span class="n">with</span> <span class="n">coordinator</span><span class="p">:</span> <span class="n">UIViewControllerTransitionCoordinator</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kc">super</span><span class="p">.</span><span class="n">viewWillTransition</span><span class="p">(</span><span class="n">to</span><span class="p">:</span> <span class="n">size</span><span class="p">,</span> <span class="n">with</span><span class="p">:</span> <span class="n">coordinator</span><span class="p">)</span>
+        <span class="n">DispatchQueue</span><span class="p">.</span><span class="n">main</span><span class="p">.</span><span class="n">async</span> <span class="p">{</span> <span class="p">[</span><span class="kr">weak</span> <span class="kc">self</span><span class="p">]</span> <span class="k">in</span> <span class="k">guard</span> <span class="kd">let</span> <span class="nv">strongSelf</span> <span class="p">=</span> <span class="kc">self</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+            <span class="k">guard</span> <span class="kd">let</span> <span class="nv">headerView</span> <span class="p">=</span> <span class="n">strongSelf</span><span class="p">.</span><span class="n">tableView</span><span class="p">.</span><span class="n">tableHeaderView</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+            <span class="n">headerView</span><span class="p">.</span><span class="n">layoutIfNeeded</span><span class="p">()</span>
+            <span class="kd">let</span> <span class="nv">header</span> <span class="p">=</span> <span class="n">strongSelf</span><span class="p">.</span><span class="n">tableView</span><span class="p">.</span><span class="n">tableHeaderView</span>
+            <span class="n">strongSelf</span><span class="p">.</span><span class="n">tableView</span><span class="p">.</span><span class="n">tableHeaderView</span> <span class="p">=</span> <span class="n">header</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    
+    
+    <span class="kr">override</span> <span class="kd">func</span> <span class="nf">updateBaseUI</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kc">super</span><span class="p">.</span><span class="n">updateBaseUI</span><span class="p">()</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">navBar</span> <span class="p">=</span> <span class="n">BaseUINavigationView</span><span class="p">(</span><span class="n">withType</span><span class="p">:</span> <span class="kc">self</span><span class="p">.</span><span class="n">lgNavType</span><span class="p">)</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">setDelegate</span><span class="p">()</span>
+    <span class="p">}</span>
+    
+<span class="p">}</span>
+
+
+<span class="c1">//For Base private funcs</span>
+<span class="kd">extension</span> <span class="nc">BaseUITableViewController</span> <span class="p">:</span> <span class="n">BaseUINavigationViewDelegate</span><span class="p">{</span>
+    
+    <span class="n">fileprivate</span> <span class="kd">func</span> <span class="nf">setDelegate</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="kd">let</span> <span class="nv">lgNav</span> <span class="p">=</span> <span class="kc">self</span><span class="p">.</span><span class="n">navBar</span> <span class="k">as</span><span class="p">?</span> <span class="n">BaseUINavigationView</span> <span class="p">{</span> <span class="n">lgNav</span><span class="p">.</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">self</span> <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="kd">func</span> <span class="nf">navDidTouchUpBackButton</span><span class="p">(</span><span class="n">withNavView</span> <span class="n">nav</span><span class="p">:</span> <span class="n">BaseUINavigationView</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">navigationController</span><span class="p">?.</span><span class="n">popViewController</span><span class="p">(</span><span class="n">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div><h2 id="auto-layout">Auto Layout</h2>
+<p><code>TTBaseUIKit</code> to make easy Auto Layout. This framework provides some functions to setup and update constraints.</p>
+<ul>
+<li><code>setLeadingAnchor</code> : Set/Update value for <strong>current view</strong> or <strong>super view</strong></li>
+<li><code>setTrailingAnchor(_ view:UIView? = nil, isUpdate:Bool = false, constant:CGFloat, isApplySafeArea:Bool = false, priority:UILayoutPriority? = nil)</code></li>
+<li><code>setTopAnchor(_ view:UIView? = nil, isUpdate:Bool = false, constant:CGFloat, priority:UILayoutPriority? = nil)</code></li>
+<li><code>setBottomAnchor(_ view:UIView? = nil, isUpdate:Bool = false, constant:CGFloat,isMarginsGuide:Bool = false, priority:UILayoutPriority? = nil) </code></li>
+<li><code>setCenterXAnchor(_ view:UIView? = nil, isUpdate:Bool = false, constant:CGFloat)</code></li>
+<li><code>setcenterYAnchor(_ view:UIView? = nil, isUpdate:Bool = false, constant:CGFloat)</code></li>
+</ul>
+<h2 id="useful-functions">Useful functions</h2>
+<p><code>TTBaseUIKit</code> provides common handling functions for <code>String</code>, <code>Date</code>, <code>Json</code>, <code>Device</code>, <code>Language</code>, <code>VietNamLunar </code>, <code>Validation</code>, <code>NetworkSpeedTest</code></p>
+<h2 id="example-apps">Example Apps</h2>
+<p>For more examples and usage, please refer to example project  <a href="https://github.com/tqtuan1201/TTBaseUIKit/tree/master/TTBaseUIKitExample"><code>TTBaseUIKitExample</code></a></p>
+<h1 id="installed-applications">Installed Applications</h1>
+<p>During my work, I have updated and used this framework in many projects. All my project using <code>UI programmatically</code> instead of using <code>Storyboard</code>. Here are some screenshoots of the apps:</p>
+<ul>
+<li>
+<p>12Bay iOS App</p>
+<figure class="medium">
+    <img src="/images/image-20220714103844009.png"
+         alt="image"/> <figcaption>
+            <p>12Bay iOS App</p>
+        </figcaption>
+</figure>
+
+</li>
+<li>
+<p>12Bay MacOS app</p>
+<figure class="medium">
+    <img src="/images/image-20220714104020426.png"
+         alt="image"/> <figcaption>
+            <p>12Bay MacOS app</p>
+        </figcaption>
+</figure>
+
+</li>
+<li>
+<p>Aihealth iOS app</p>
+</li>
+</ul>
+<figure class="medium">
+    <img src="/images/image-20220714104542214.png"
+         alt="image"/> <figcaption>
+            <p>Aihealth iOS app</p>
+        </figcaption>
+</figure>
+
+<p>You can see all my projects here: <a href="https://tqtuan1201.github.io/portfolio/">Link</a></p>
+<h1 id="advantages">Advantages</h1>
+<ul>
+<li>Reusable codes</li>
+<li>Speed up your project</li>
+<li>Easy to use</li>
+</ul>
+<h1 id="disadvantages">Disadvantages</h1>
+<ul>
+<li>Must <strong>build app to see UI</strong>, <code>SwiftUI </code> solved that problem I was thinking about.</li>
+</ul>
+<h1 id="conclusion">Conclusion</h1>
+<p><code>TTBaseUIKit</code> framework is a <code>UI programmatic</code> approach. You will create all UI elements and their constraints by coding them.</p>
+<div
+  class="notice"
+>
+  <span
+    class="notice__title"
+  >Info</span><div class="notice__content">
+    With <code>TTBaseUIKit</code>, you can build apps in the fastest and most efficient way.
+  </div>
+</div>
+
+<p>In the future, I will update the framework to support <code>SwiftUI</code>. Thanks for reading this post. If you enjoyed it, please share it with others.</p>
+
+
+
+<h3>Posts in this Series</h3>
+<ul>
+  
+    <li><a href="/posts/ttbaseuikit-ui-framework/">TTBaseUIKit - Framework to Build UI Programmatically</a></li>
+
+  
+    <li><a href="/posts/apple-watch-serial-end/">Apple Watch Serial Summary</a></li>
+
+  
+    <li><a href="/posts/apple-watch-serial-my-notification/">Apple Watch Serial My Notification</a></li>
+
+  
+    <li><a href="/posts/apple-watch-serial-order-detail/">Apple Watch Serial - My Order Detail Screen</a></li>
+
+  
+    <li><a href="/posts/apple-watch-serial-my-order-p1-design/">Apple Watch Serial - My Order Screen</a></li>
+
+  
+    <li><a href="/posts/apple-watch-serial-p2-homescreen-complete/">Apple Watch Serial P2 Homescreen Complete</a></li>
+
+  
+    <li><a href="/posts/apple-watch-serial-p2-homescreen-connect/">Apple Watch Serial P2 Homescreen Connect</a></li>
+
+  
+    <li><a href="/posts/apple-watch-serial-p1-homescreen/">Apple Watch Serial P1 Homescreen</a></li>
+
+  
+    <li><a href="/posts/apple-watch-serial-design/">Let&#39;s Idea, How to Design Travel App (12Bay) on WatchOS?</a></li>
+
+  
+    <li><a href="/posts/apple-watch-serial/">Apple Watch Series</a></li>
+
+  
+</ul>
+</div>
+    <div class="post__footer">
+      
+        <span><a class="category" href="/categories/mobile-apps/">Mobile Apps</a></span>
+
+
+
+
+      
+
+      
+        <span><a class="tag" href="/tags/ttbaseuikit/">TTBaseUIKit</a><a class="tag" href="/tags/ui-programmatically/">UI-programmatically</a><a class="tag" href="/tags/swift/">Swift</a></span>
+
+
+
+
+      
+    </div>
+
+    
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
+    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    crossorigin="anonymous"
+  ></script></body>
+</html>

@@ -6,7 +6,19 @@
     <description>Recent content in Mobile Apps on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Jun 2022 13:42:23 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/categories/mobile-apps/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Jul 2022 16:50:03 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/categories/mobile-apps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TTBaseUIKit - Framework to build UI programmatically</title>
+      <link>https://tqtuan1201.github.io/posts/ttbaseuikit-ui-framework/</link>
+      <pubDate>Tue, 12 Jul 2022 16:50:03 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/ttbaseuikit-ui-framework/</guid>
+      
+        <description>Abstract When I work with many projects. I always ask myself how to optimize the application, reusable code and how to develop the fastest and most efficient applications. So after two years of working with Swift language. I created the framework to build UI programmatically. With TTBaseUIKit, you can build apps in the fastest and most efficient way. A few points to note when you apply this framework:
+ How to set up the framework Basic config settings Usage example  Introduction I have been building framework for 5 years and for now, I still update new functions.</description>
+      
+    </item>
+    
     <item>
       <title>Apple Watch Serial Summary</title>
       <link>https://tqtuan1201.github.io/posts/apple-watch-serial-end/</link>
