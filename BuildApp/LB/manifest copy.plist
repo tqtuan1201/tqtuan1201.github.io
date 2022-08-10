@@ -8,10 +8,10 @@
 			<key>assets</key>
 			<array>
 				<dict>
-
-                    <key>kind</key>
+					<key>kind</key>
 					<string>software-package</string>
-					<key>url</key>	<string>https://tqtuan1201.github.io/BuildApp/LB/LBKIEMDUYET.ipa</string>
+					<key>url</key>
+					<string>https://tqtuan1201.github.io/BuildApp/Lg/LBKIEMDUYET.ipa</string>
 				</dict>
 				<dict>
 					<key>kind</key>
