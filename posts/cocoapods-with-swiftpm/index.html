@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme="light"
+  class="html"
+><head>
+  <title>
+    
+      Tuan Truong
+        |
+        Swift Package Manager (SwiftPM) vs Cocoapods
+
+
+      
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.81.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Tuan Truong" />
+  <meta
+    name="description"
+    content="
+      “The only thing that is constant is change”, Heraclitus.
+
+
+    "
+  />
+  
+    <meta name="google-site-verification" content="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.6a8466aed6b7a1d74e725a8fdfddb79e8131943a536e5c655aca4561649fa84f.css"
+      integrity="sha256-aoRmrta3oddOclqP3923noExlDpTblxlWspFYWSfqE8="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.69685904d5c2a0c6258d03c207b778c10466edf6cea928cc0164c376b0ad0930.css"
+    integrity="sha256-aWhZBNXCoMYljQPCB7d4wQRm7fbOqSjMAWTDdrCtCTA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.6d585e78d28cce1200d39fb133c92ed83df01738da721d0f48fb6eac62d24e04.css"
+    integrity="sha256-bVheeNKMzhIA05&#43;xM8ku2D3wFzjach0PSPturGLSTgQ="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.6b00d96498d59caa0dbcf9b49d30d821915291f2ceb0e19248523c8607ff43fa.css"
+    integrity="sha256-awDZZJjVnKoNvPm0nTDYIZFSkfLOsOGSSFI8hgf/Q/o="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/images/profile.jpg" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://tqtuan1201.github.io/posts/cocoapods-with-swiftpm/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.46e6a54097480084f8f52c20ca1aa7425b4fad17029a887fd4017b12e311a72d.js"
+    integrity="sha256-RualQJdIAIT49SwgyhqnQltPrRcCmoh/1AF7EuMRpy0="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.5557c8ff5617a01067ac258fd70b9b992506e379317b0da51e5e0f6e018b408a.js"
+      integrity="sha256-VVfI/1YXoBBnrCWP1wubmSUG43kxew2lHl4PbgGLQIo="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tqtuan1201.github.io/images/profile.jpg"/>
+
+<meta name="twitter:title" content="Swift Package Manager (SwiftPM) vs Cocoapods"/>
+<meta name="twitter:description" content="Abstract Today we will talk about dependency managers in iOS and compare their advantages and disadvantages. Finally, we learn how to use those to add dependencies to your project.
+Dependencies When we build applications, we often use code from other developers writing to build more powerful applications more quickly. In your projects, we can make an easy animation to hide or show the button. But if you want to add a complex animation to your project that’s not built-in."/>
+<meta name="twitter:site" content="@QuangTuan0409"/>
+
+
+
+  
+  <meta property="og:title" content="Swift Package Manager (SwiftPM) vs Cocoapods" />
+<meta property="og:description" content="Abstract Today we will talk about dependency managers in iOS and compare their advantages and disadvantages. Finally, we learn how to use those to add dependencies to your project.
+Dependencies When we build applications, we often use code from other developers writing to build more powerful applications more quickly. In your projects, we can make an easy animation to hide or show the button. But if you want to add a complex animation to your project that’s not built-in." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tqtuan1201.github.io/posts/cocoapods-with-swiftpm/" /><meta property="og:image" content="https://tqtuan1201.github.io/images/profile.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-22T16:21:09&#43;07:00" />
+<meta property="article:modified_time" content="2022-08-22T16:21:09&#43;07:00" /><meta property="og:site_name" content="Hi, I&#39;m Tuan Truong" />
+<meta property="og:see_also" content="https://tqtuan1201.github.io/posts/ttbaseuikit-ui-framework/" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "posts",
+        "name": "Swift Package Manager (SwiftPM) vs Cocoapods",
+        "headline": "Swift Package Manager (SwiftPM) vs Cocoapods",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Abstract Today we will talk about dependency managers in iOS and compare their advantages and disadvantages. Finally, we learn how to use those to add dependencies to your project.\nDependencies When we build applications, we often use code from other developers writing to build more powerful applications more quickly. In your projects, we can make an easy animation to hide or show the button. But if you want to add a complex animation to your project that’s not built-in.
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/tqtuan1201.github.io\/posts\/cocoapods-with-swiftpm\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-08-22T16:21:09.00Z",
+        "datePublished": "2022-08-22T16:21:09.00Z",
+        "dateModified": "2022-08-22T16:21:09.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Tuan Truong",
+            "url": "https://tqtuan1201.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/tqtuan1201.github.io\/images\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://tqtuan1201.github.io/images/profile.jpg"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/tqtuan1201.github.io\/posts\/cocoapods-with-swiftpm\/",
+        "wordCount" : "1293",
+        "genre" : [ 
+      
+      "Mobile Apps"
+
+    
+      
+        ,
+
+      
+      "Swift"
+
+    
+      
+        ,
+
+      
+      "TTBaseUIKit"
+
+    ],
+        "keywords" : [ 
+      
+      "Swift"
+
+    
+      
+        ,
+
+      
+      "SwiftPM"
+
+    
+      
+        ,
+
+      
+      "TTBaseUIKit"
+
+    
+      
+        ,
+
+      
+      "dependency managers"
+
+    
+      
+        ,
+
+      
+      "CocoaPods"
+
+    ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--light"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/profile.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Hi, I&#39;m Tuan Truong</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>“The only thing that is constant is change”, Heraclitus.</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a href="https://twitter.com/QuangTuan0409" rel="me" aria-label="Twitter" title="Twitter">
+            <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a href="https://github.com/tqtuan1201" rel="me" aria-label="GitHub" title="GitHub">
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a href="https://tuananhstory.com/" rel="me" aria-label="instagram" title="instagram">
+            <i class="fa-brands fa-safari fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a href="mailto:truongquangtuanit@gmail.com" rel="me" aria-label="e-mail" title="e-mail">
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
+    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/"
+            
+            title=""
+            >Home</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/posts"
+            
+            title=""
+            >Posts</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/portfolio"
+            
+            title=""
+            >Projects</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/certifications"
+            
+            title=""
+            >certifications</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/about"
+            
+            title=""
+            >About</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/contact"
+            
+            title=""
+            >Contact</a
+          >
+        </li>
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+      <div class="post__thumbnail-wrapper">
+        <img class="post__thumbnail" src="/images/image-20220823143317505.png?quality=92&amp;strip=all" alt="Thumbnail image" />
+      </div>
+
+    
+
+    <div class="post__content">
+      <h1>Swift Package Manager (SwiftPM) vs Cocoapods</h1>
+      <h3>Table of Contents</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#dependencies">Dependencies</a>
+      <ul>
+        <li><a href="#dependency-managers-in-ios-development">Dependency managers in iOS development</a></li>
+        <li><a href="#swift-package-manager">Swift Package Manager</a>
+          <ul>
+            <li><a href="#package-structure">Package structure</a></li>
+            <li><a href="#swift-package">Swift Package</a></li>
+            <li><a href="#how-to-use">How to use</a></li>
+          </ul>
+        </li>
+        <li><a href="#cocoapods">CocoaPods</a>
+          <ul>
+            <li><a href="#installing-cocoapods">Installing Cocoapods</a></li>
+            <li><a href="#using-cocoapods">Using Cocoapods</a></li>
+          </ul>
+        </li>
+        <li><a href="#carthage">Carthage</a>
+          <ul>
+            <li><a href="#supported-platforms">Supported Platforms</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#advantagesdisadvantages">Advantages/Disadvantages</a>
+      <ul>
+        <li><a href="#advantages">Advantages</a></li>
+        <li><a href="#disadvantages">Disadvantages</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+        <div style="width: 100%; margin: 0 auto; background:rgba(0,0,0,0.5); height: 1px; opacity: 0.6"> </div><h1 id="abstract">Abstract</h1>
+<p>Today we will talk about <code>dependency managers in iOS</code> and compare their advantages and disadvantages. Finally, we learn how to use those to add dependencies to your project.</p>
+<h1 id="dependencies">Dependencies</h1>
+<p>When we build applications, we often use code from other developers writing to build more powerful applications more quickly. In your projects, we can make an easy animation to hide or show the button. But if you want to add a complex animation to your project that’s not built-in. Such as import lottie animation into your projects to load and renders animations and vectors exported in the JSON format. So,</p>
+<div
+  class="notice"
+>
+  <span
+    class="notice__title"
+  >Info</span><div class="notice__content">
+    Whenever you use someone else&rsquo;s code in your project, that is know as a <strong>dependency</strong>. Because your code now depends on theirs to work.
+  </div>
+</div>
+
+<h2 id="dependency-managers-in-ios-development">Dependency managers in iOS development</h2>
+<figure class="small">
+    <img src="/images/image-20220823111106585.png"
+         alt="image"/> <figcaption>
+            <p>A quick <a href="https://twitter.com/cardosodev/status/1316016310044639248">Twitter poll</a></p>
+        </figcaption>
+</figure>
+
+<p>There are three main dependency manager tools when developing iOS applications:</p>
+<ul>
+<li><a href="https://www.swift.org/package-manager/">Swift Package Manager</a></li>
+<li><a href="https://cocoapods.org/">CocoaPods</a></li>
+<li><a href="https://github.com/Carthage/Carthage">Carthage</a></li>
+</ul>
+<h2 id="swift-package-manager">Swift Package Manager</h2>
+<blockquote>
+<p>The Swift Package Manager is a tool for <strong>managing the distribution of Swift code</strong>. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies. The Package Manager is included in Swift 3.0 and above. SwiftPM is a cross platform build system that is available for MacOS and Linux. Apple published an introduction video <a href="https://www.youtube.com/watch?v=z5KkwWFCuOM">Getting to Know Swift Package Manager – Apple WWDC 2018</a> and SwiftPM has been <a href="https://swift.org/package-manager/">documented</a>.</p>
+</blockquote>
+<h3 id="package-structure">Package structure</h3>
+<p><code>SwiftPM</code> created the following package structure. Source files are put in <code>Sources</code> and test files are put in <code>Tests</code>. Here is an example:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">├── Package.swift
+├── README.md
+├── Sources
+│   └── helloworld
+│       └── main.swift
+└── Tests
+    ├── LinuxMain.swift
+    └── helloworldTests
+        ├── XCTestManifests.swift
+        └── helloworldTests.swift
+
+</code></pre></div><h3 id="swift-package">Swift Package</h3>
+<p>The most inportant file is call <code>Package.swift</code>. This file use the PackageDescription library in the package manifest to <strong>list dependencies, configure localized resources, and set other configuration options.</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="o">/</span> <span class="nx">swift</span><span class="o">-</span><span class="nx">tools</span><span class="o">-</span><span class="nx">version</span><span class="p">:</span><span class="mf">4.2</span>
+<span class="c1">// The swift-tools-version declares the minimum 
+</span><span class="c1">// version of Swift required to build this package.
+</span><span class="c1"></span>
+<span class="kn">import</span> <span class="nx">Packagecontent</span>
+
+<span class="nx">let</span> <span class="kn">package</span> <span class="p">=</span> <span class="nf">Package</span><span class="p">(</span>
+    <span class="nx">name</span><span class="p">:</span> <span class="s">&#34;helloworld&#34;</span><span class="p">,</span>
+    <span class="nx">dependencies</span><span class="p">:</span> <span class="p">[</span>
+        <span class="c1">// Dependencies declare other packages that this package depends on.
+</span><span class="c1"></span>        <span class="c1">// .package(url: /* package url */, from: &#34;1.0.0&#34;),
+</span><span class="c1"></span>    <span class="p">],</span>
+    <span class="nx">targets</span><span class="p">:</span> <span class="p">[</span>
+        <span class="c1">// Targets are the basic building blocks of a package. 
+</span><span class="c1"></span>        <span class="c1">// A target can define a module or a test suite.
+</span><span class="c1"></span>        <span class="c1">// Targets can depend on other targets in this package, 
+</span><span class="c1"></span>        <span class="c1">// and on products in packages which this package depends on.
+</span><span class="c1"></span>        <span class="p">.</span><span class="nf">target</span><span class="p">(</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="s">&#34;helloworld&#34;</span><span class="p">,</span>
+            <span class="nx">dependencies</span><span class="p">:</span> <span class="p">[]),</span>
+        <span class="p">.</span><span class="nf">testTarget</span><span class="p">(</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="s">&#34;helloworldTests&#34;</span><span class="p">,</span>
+            <span class="nx">dependencies</span><span class="p">:</span> <span class="p">[</span><span class="s">&#34;helloworld&#34;</span><span class="p">]),</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</code></pre></div><h3 id="how-to-use">How to use</h3>
+<h4 id="package-resolution">Package Resolution</h4>
+<p>With the package dependencies configured in the SwiftPM, <code>Xcode</code> will download the packages and resolve dependencies at the build time. When you setting dependencies, you have some options:</p>
+<ul>
+<li>By version: Next version, up to next minor, &hellip;</li>
+<li>By branch</li>
+<li>By commit</li>
+</ul>
+<h4 id="adding-a-package-to-your-project">Adding a Package to your Project</h4>
+<p>To add a package dependency to your Xcode project, select <strong>File &gt; Swift Packages &gt; Add Package Dependency</strong> and enter its repository URL. You can also navigate to your target’s General pane, and in the “Frameworks, Libraries, and Embedded Content” section, click the + button, select Add Other, and choose Add Package Dependency. For more information, you can view all at <a href="https://developer.apple.com/documentation/xcode/adding-package-dependencies-to-your-app">adding-package-dependencies-to-your-app -appledoc</a></p>
+<h4 id="create-a-module-and-add-a-local-package-with-swiftpm">Create a Module and Add a Local Package with SwiftPM</h4>
+<p>As you develop your app, organize its code in a modular way to keep it maintainable by creating Swift packages and using them as <strong><em>local packages</em>.</strong></p>
+<ol>
+<li>
+<p>Open your Xcode project and create a local Swift package as part of your project by selecting <strong>File &gt; New &gt; Swift Package.</strong></p>
+</li>
+<li>
+<p>Choose a project and a group, but don’t create a new Git repository if your app is already under version control; then create the new Swift package.</p>
+</li>
+<li>
+<p>Move your code to the new package in the Project navigator and make any needed updates to the <em>package manifest</em>.</p>
+</li>
+<li>
+<p>Select your project in the Project navigator, then select your app target and navigate to its General pane.</p>
+</li>
+<li>
+<p>Click the + button in the <strong>“Frameworks, Libraries, and Embedded Content”</strong> section, select the local package’s library product, and add it as a dependency.</p>
+</li>
+</ol>
+<p>When you organize your app’s codebase using local packages, your Swift package’s code is part of the same repository as your app’s code. As you create more apps, consider moving local packages to their own Git repositories, and add them to your apps as a package dependency to reuse code across apps. You may even consider sharing them with other developers. For more information, see <a href="https://developer.apple.com/documentation/xcode/publishing-a-swift-package-with-xcode">Publishing a Swift Package with Xcode</a>.</p>
+<p>You can check library support <code>SwiftPM</code> at: <a href="https://swiftpackageregistry.com/">https://swiftpackageregistry.com/</a></p>
+<h2 id="cocoapods">CocoaPods</h2>
+<p>CocoaPods is a dependency manager for Swift and Objective-C Cocoa projects. It has over 91 thousand libraries and is used in over 3 million apps. CocoaPods can help you scale your projects elegantly.</p>
+<h3 id="installing-cocoapods">Installing Cocoapods</h3>
+<p>Cocoapods is built on top of Ruby, so you would need to install that in your system before using Cocoapods.</p>
+<p>Then, you can install using this command: <code>sudo gem install cocoapods</code></p>
+<h3 id="using-cocoapods">Using Cocoapods</h3>
+<p>Open <code>Terminal</code> and go to your Xcode project directory. Afterthat, run command bellow:</p>
+<p><code>pod init</code></p>
+<p>The pod file is generated, so you can config the like like:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">platform :ios, &#39;8.0&#39;  
+use_frameworks!  
+target &#39;12Bay&#39; do  
+	pod &#39;TTBaseUIKit&#39;
+end
+</code></pre></div><h2 id="carthage">Carthage</h2>
+<p>It is the another dependency manager. Carthage has been written in swift language. It will not change anything in Xcode project. It builds framework binaries using <code>xcodebuild</code> but user needs to integrate those libraries into project. To know more about Carthage click <a href="https://github.com/Carthage">here</a></p>
+<h3 id="supported-platforms">Supported Platforms</h3>
+<p>All Apple platforms, iOS, tvOS, watchOS, and macOS. Carthage command line tool works only on a Mac.</p>
+<h1 id="advantagesdisadvantages">Advantages/Disadvantages</h1>
+<h2 id="advantages">Advantages</h2>
+<table>
+<thead>
+<tr>
+<th>SwiftPM</th>
+<th>CocoaPods</th>
+<th>Carthage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>It’s Official Package Manager for Swift. It’s Future</td>
+<td>Supports both Dynamic Frameworks and Static Libraries (since version 1.5.0)</td>
+<td>Supports both Dynamic Frameworks and Static Libraries (since version 0.30.0).</td>
+</tr>
+<tr>
+<td>Automatically manage a dependency’s dependencies.</td>
+<td>Automatically manage a dependency’s dependencies.</td>
+<td>Automatically manage a dependency’s dependencies.</td>
+</tr>
+<tr>
+<td>Anyone inside the project will easily know what dependencies your app is using</td>
+<td>Anyone can easily tell what dependencies your app is using</td>
+<td>Anyone inside the project will easily know what dependencies your app is using.</td>
+</tr>
+<tr>
+<td>Automates the entire process of building, linking the dependency to targets</td>
+<td>It&rsquo;s easy to check if a new version of a dependency is available by using the command <code>pod outdated</code>.</td>
+<td>It&rsquo;s easy to check if a new version of a dependency is available by using the <code>carthage outdated</code> command.</td>
+</tr>
+<tr>
+<td>It supports XCFrameworks in binary format.</td>
+<td><strong>Almost every framework supports CocoaPods.</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>It’s the new standard build by Apple to create Swift apps. Works on Linux.</td>
+<td>Has an <a href="https://github.com/CocoaPods/CocoaPods-app">official Mac app</a> to easily manage app dependencies.</td>
+<td></td>
+</tr>
+<tr>
+<td>Because it doesn’t need installations so, it saves time on CI unlike the other dependencies managers for example Carthage or Cocoa-pods.</td>
+<td></td>
+<td><strong>Your project builds faster in comparison to CocoaPods as Carthage only builds the frameworks once</strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="disadvantages">Disadvantages</h2>
+<table>
+<thead>
+<tr>
+<th>SwiftPM</th>
+<th>CocoaPods</th>
+<th>Carthage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>At this point of time, SPM <strong>doesn’t support all third-party libraries</strong></td>
+<td>You will have to wait a <strong>long time</strong> the first time you install your dependencies. This will also happen on every <code>pod update</code> command when you want to update your dependencies.</td>
+<td>Not every framework supports Carthage.</td>
+</tr>
+<tr>
+<td>You have to follow a specific folder structure.</td>
+<td>Every time you build your project, <strong>all your dependencies will also be built, which leads to slower build times.</strong></td>
+<td>Too many steps to add</td>
+</tr>
+</tbody>
+</table>
+<h1 id="conclusion">Conclusion</h1>
+<figure class="small">
+    <img src="/images/image-20220823143317505.png"
+         alt="image"/> <figcaption>
+            <p><a href="https://miro.medium.com/max/1400/1*TxTR7WAyY2tFmN7eiYsjug.jpeg">source-miro.medium.com</a></p>
+        </figcaption>
+</figure>
+
+<p>Oki, that was it. Through this post, I found it at this point we should use <strong>CocoaPods</strong> instead of Swift Package Manage. Because SwiftPM is still very young and not all libraries support it. But,</p>
+<blockquote>
+<p><strong><code>Swift Package Manage</code></strong> is the future  of dependency management for any Swift project</p>
+</blockquote>
+<p>So, In the next post, we will talk about how to update iOS cocoapod library to support <code>Swift Package Manager</code>. Thank for reading this post. If you enjoyed it, please share it with others and see you next post.</p>
+
+
+
+<h3>Posts in this Series</h3>
+<ul>
+  
+    <li><a href="/posts/cocoapods-with-swiftpm/">Swift Package Manager (SwiftPM) vs Cocoapods</a></li>
+
+  
+    <li><a href="/posts/ttbaseuikit-ui-framework/">TTBaseUIKit - Framework to Build UI Programmatically</a></li>
+
+  
+</ul>
+
+<div class="contact-form">
+  <form class="form-style" method="POST" action="https://formspree.io/f/mqknvogq" data-toggle="validator">
+    <ul>
+      <li>
+        <label for="username">Name</label>
+        <input class="field-style field-full" type="text" name="username" id="username" placeholder="Name" required>
+      </li>
+      <li>
+        <label for="email">Email</label>
+        <input class="field-style field-full" type="email" id="email" name="email" placeholder="Email" required>
+      </li>
+      <li>
+        <label for="message">Message</label>
+        <textarea class="field-style" name="message" id="message" rows="6" placeholder="Message"></textarea>
+      </li>
+      <li>
+        <input class="field-style" type="submit" value="Send" />
+      </li>
+      <li>
+        <input type="text" name="_gotcha" style="display:none" />
+      </li>
+    </ul>
+  </form>
+</div>
+</div>
+    <div class="post__footer">
+      
+        <span><a class="category" href="/categories/mobile-apps/">Mobile Apps</a><a class="category" href="/categories/swift/">Swift</a><a class="category" href="/categories/ttbaseuikit/">TTBaseUIKit</a></span>
+
+
+
+
+      
+
+      
+        <span><a class="tag" href="/tags/swift/">Swift</a><a class="tag" href="/tags/swiftpm/">SwiftPM</a><a class="tag" href="/tags/ttbaseuikit/">TTBaseUIKit</a><a class="tag" href="/tags/dependency-managers/">dependency managers</a><a class="tag" href="/tags/cocoapods/">CocoaPods</a></span>
+
+
+
+
+      
+    </div>
+
+    
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
+    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script>
+  <script async defer src=" https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" /></noscript>
+
+
+</body>
+</html>

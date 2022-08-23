@@ -6,22 +6,11 @@
     <description>Recent content in Categories on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Aug 2022 13:53:21 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>LearnEN</title>
-      <link>https://tqtuan1201.github.io/categories/learnen/</link>
-      <pubDate>Mon, 15 Aug 2022 13:53:21 +0700</pubDate>
-      
-      <guid>https://tqtuan1201.github.io/categories/learnen/</guid>
-      
-        <description></description>
-      
-    </item>
-    
+    <lastBuildDate>Mon, 22 Aug 2022 16:21:09 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mobile Apps</title>
       <link>https://tqtuan1201.github.io/categories/mobile-apps/</link>
-      <pubDate>Tue, 12 Jul 2022 16:50:03 +0700</pubDate>
+      <pubDate>Mon, 22 Aug 2022 16:21:09 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/categories/mobile-apps/</guid>
       
@@ -32,7 +21,7 @@
     <item>
       <title>Swift</title>
       <link>https://tqtuan1201.github.io/categories/swift/</link>
-      <pubDate>Tue, 12 Jul 2022 16:50:03 +0700</pubDate>
+      <pubDate>Mon, 22 Aug 2022 16:21:09 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/categories/swift/</guid>
       
@@ -43,9 +32,20 @@
     <item>
       <title>TTBaseUIKit</title>
       <link>https://tqtuan1201.github.io/categories/ttbaseuikit/</link>
-      <pubDate>Tue, 12 Jul 2022 16:50:03 +0700</pubDate>
+      <pubDate>Mon, 22 Aug 2022 16:21:09 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/categories/ttbaseuikit/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>LearnEN</title>
+      <link>https://tqtuan1201.github.io/categories/learnen/</link>
+      <pubDate>Mon, 15 Aug 2022 13:53:21 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/categories/learnen/</guid>
       
         <description></description>
       

@@ -6,7 +6,19 @@
     <description>Recent content in Swift on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Jul 2022 16:50:03 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/categories/swift/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Aug 2022 16:21:09 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/categories/swift/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Swift Package Manager (SwiftPM) vs Cocoapods</title>
+      <link>https://tqtuan1201.github.io/posts/cocoapods-with-swiftpm/</link>
+      <pubDate>Mon, 22 Aug 2022 16:21:09 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/cocoapods-with-swiftpm/</guid>
+      
+        <description>Abstract Today we will talk about dependency managers in iOS and compare their advantages and disadvantages. Finally, we learn how to use those to add dependencies to your project.
+Dependencies When we build applications, we often use code from other developers writing to build more powerful applications more quickly. In your projects, we can make an easy animation to hide or show the button. But if you want to add a complex animation to your project that’s not built-in.</description>
+      
+    </item>
+    
     <item>
       <title>TTBaseUIKit - Framework to build UI programmatically</title>
       <link>https://tqtuan1201.github.io/posts/ttbaseuikit-ui-framework/</link>
