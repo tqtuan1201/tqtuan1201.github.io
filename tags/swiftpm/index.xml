@@ -6,7 +6,20 @@
     <description>Recent content in SwiftPM on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 Aug 2022 16:21:09 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/swiftpm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Aug 2022 11:10:07 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/swiftpm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Update Current Cocoapod Lib to Support SwiftPM</title>
+      <link>https://tqtuan1201.github.io/posts/how-to-update-cocoapod-lib-to-support-swiftpm/</link>
+      <pubDate>Wed, 24 Aug 2022 11:10:07 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/how-to-update-cocoapod-lib-to-support-swiftpm/</guid>
+      
+        <description>Abstract Today we will discuss about how to update the cocoapod library to support SwiftPM. Last week, I have updated my TTBaseUIkit library to support Swift Package Manager. So I want to share some useful experience with you.
+What is Swift Package Manager? First, if you don&amp;rsquo;t know about Swift Package Manager. I thought you read swiftpm-post to understand about this package.
+ The Swift Package Manager is a tool for managing the distribution of Swift code.</description>
+      
+    </item>
+    
     <item>
       <title>Swift Package Manager (SwiftPM) vs Cocoapods</title>
       <link>https://tqtuan1201.github.io/posts/cocoapods-with-swiftpm/</link>
