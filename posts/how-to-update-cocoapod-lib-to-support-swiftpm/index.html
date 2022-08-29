@@ -116,7 +116,7 @@
 <meta name="twitter:image" content="https://tqtuan1201.github.io/images/profile.jpg"/>
 
 <meta name="twitter:title" content="How to Update Current Cocoapod Lib to Support SwiftPM"/>
-<meta name="twitter:description" content="Abstract Today we will discuss about how to update the cocoapod library to support SwiftPM. Last week, I have updated my TTBaseUIkit library to support Swift Package Manager. So I want to share some useful experience with you.
+<meta name="twitter:description" content="Abstract Today we will discuss how to update the cocoapod library to support SwiftPM. Last week, I updated my TTBaseUIkit library to support Swift Package Manager. So I want to share some useful experience with you.
 What is Swift Package Manager? First, if you don&rsquo;t know about Swift Package Manager. I thought you read swiftpm-post to understand about this package.
  The Swift Package Manager is a tool for managing the distribution of Swift code."/>
 <meta name="twitter:site" content="@QuangTuan0409"/>
@@ -125,7 +125,7 @@ What is Swift Package Manager? First, if you don&rsquo;t know about Swift Packag
 
   
   <meta property="og:title" content="How to Update Current Cocoapod Lib to Support SwiftPM" />
-<meta property="og:description" content="Abstract Today we will discuss about how to update the cocoapod library to support SwiftPM. Last week, I have updated my TTBaseUIkit library to support Swift Package Manager. So I want to share some useful experience with you.
+<meta property="og:description" content="Abstract Today we will discuss how to update the cocoapod library to support SwiftPM. Last week, I updated my TTBaseUIkit library to support Swift Package Manager. So I want to share some useful experience with you.
 What is Swift Package Manager? First, if you don&rsquo;t know about Swift Package Manager. I thought you read swiftpm-post to understand about this package.
  The Swift Package Manager is a tool for managing the distribution of Swift code." />
 <meta property="og:type" content="article" />
@@ -151,7 +151,7 @@ What is Swift Package Manager? First, if you don&rsquo;t know about Swift Packag
         "alternativeHeadline": "",
         "description": "
       
-        Abstract Today we will discuss about how to update the cocoapod library to support SwiftPM. Last week, I have updated my TTBaseUIkit library to support Swift Package Manager. So I want to share some useful experience with you.\nWhat is Swift Package Manager? First, if you don\u0026rsquo;t know about Swift Package Manager. I thought you read swiftpm-post to understand about this package.\n The Swift Package Manager is a tool for managing the distribution of Swift code.
+        Abstract Today we will discuss how to update the cocoapod library to support SwiftPM. Last week, I updated my TTBaseUIkit library to support Swift Package Manager. So I want to share some useful experience with you.\nWhat is Swift Package Manager? First, if you don\u0026rsquo;t know about Swift Package Manager. I thought you read swiftpm-post to understand about this package.\n The Swift Package Manager is a tool for managing the distribution of Swift code.
 
 
       
@@ -206,7 +206,7 @@ What is Swift Package Manager? First, if you don&rsquo;t know about Swift Packag
 
     ,
         "url" : "https:\/\/tqtuan1201.github.io\/posts\/how-to-update-cocoapod-lib-to-support-swiftpm\/",
-        "wordCount" : "95",
+        "wordCount" : "866",
         "genre" : [ 
       
       "Mobile Apps"
@@ -489,18 +489,210 @@ What is Swift Package Manager? First, if you don&rsquo;t know about Swift Packag
   <ul>
     <li><a href="#abstract">Abstract</a></li>
     <li><a href="#what-is-swift-package-manager">What is Swift Package Manager?</a></li>
-    <li><a href="#setup">Setup</a></li>
+    <li><a href="#setup">Setup</a>
+      <ul>
+        <li><a href="#current-cocoapod-structure">Current cocoapod structure</a></li>
+        <li><a href="#initial-swiftpm">Initial SwiftPM</a>
+          <ul>
+            <li><a href="#step1-create-new-swiftpm">Step1: Create new SwiftPM</a></li>
+            <li><a href="#step2-configure-our-swift-package">Step2: Configure our Swift Package</a></li>
+            <li><a href="#step-3-commit">Step 3: Commit</a></li>
+          </ul>
+        </li>
+        <li><a href="#demo">Demo</a></li>
+      </ul>
+    </li>
+    <li><a href="#problems">Problems</a>
+      <ul>
+        <li><a href="#no-such-module-packagedescription">No such module &ldquo;PackageDescription&rdquo;</a></li>
+        <li><a href="#podspec-error---source_files-pattern-did-not-match-any-file">.podspec error - source_files` pattern did not match any file</a></li>
+        <li><a href="#the-spec-did-not-pass-validation-due-to-1-error">The spec did not pass validation, due to 1 error</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
         <div style="width: 100%; margin: 0 auto; background:rgba(0,0,0,0.5); height: 1px; opacity: 0.6"> </div><h1 id="abstract">Abstract</h1>
-<p>Today we will discuss about how to update the cocoapod library to support <code>SwiftPM</code>. Last week, I have updated my TTBaseUIkit library to support Swift Package Manager. So I want to share some useful experience with you.</p>
+<p>Today we will discuss how to update the cocoapod library to support <code>SwiftPM</code>. Last week, I updated my TTBaseUIkit library to support Swift Package Manager. So I want to share some useful experience with you.</p>
 <h1 id="what-is-swift-package-manager">What is Swift Package Manager?</h1>
 <p>First, if you don&rsquo;t know about Swift Package Manager. I thought you read <a href="http://localhost:1313/posts/cocoapods-with-swiftpm/">swiftpm-post</a> to understand about this package.</p>
 <blockquote>
 <p>The Swift Package Manager is a tool for <strong>managing the distribution of Swift code</strong>. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.</p>
 </blockquote>
 <h1 id="setup">Setup</h1>
-<p>Updating&hellip;</p>
+<h2 id="current-cocoapod-structure">Current cocoapod structure</h2>
+<figure class="small">
+    <img src="/images/image-20220826164934214.png"
+         alt="image"/> <figcaption>
+            <p>TTBaseUIKit Cocoapod Structure</p>
+        </figcaption>
+</figure>
+
+<p>Before updating the library, we should review our structure. Currently all source code locate in the root folder of cocoapods project <code>TTBaseUIKit</code>. We need to pay attention to the following two parts:</p>
+<ol>
+<li>
+<p>The path of files in project: <code>source_files</code>, <code>exclude_files</code>,  <code>resource_bundle</code>.</p>
+</li>
+<li>
+<p>Understanding configuration in <code>TTBaseUIKit.podspec</code></p>
+</li>
+</ol>
+<h2 id="initial-swiftpm">Initial SwiftPM</h2>
+<h3 id="step1-create-new-swiftpm">Step1: Create new SwiftPM</h3>
+<p>In the root folder of our library. From <code>Xcode</code> and select File &gt; New &gt; Swift Package</p>
+<p>After successfully, Xcode generates all necessary files and folders as it creates a Swift package:</p>
+<ol>
+<li>The <code>Package.swift</code> file, or <em>package manifest</em>,</li>
+<li>Source files reside in a folder named <code>Sources</code> and are scoped per <a href="https://developer.apple.com/documentation/PackageDescription/Target"><code>Target</code></a>.</li>
+<li>Unit test targets reside in a folder named <code>Tests</code></li>
+</ol>
+<figure class="small">
+    <img src="/images/image-20220826171103564.png"
+         alt="image"/> <figcaption>
+            <p>TTBaseUIKit SwiftPM Structure</p>
+        </figcaption>
+</figure>
+
+<h3 id="step2-configure-our-swift-package">Step2: Configure our Swift Package</h3>
+<ol>
+<li>
+<p>Firstly, we need to move <code>all old code</code> into the new <code>Sources</code> folder, like this:</p>
+<figure class="medium">
+    <img src="/images/image-20220826171929799.png"
+         alt="image"/> <figcaption>
+            <p>Move all source code</p>
+        </figcaption>
+</figure>
+
+</li>
+<li>
+<p>Secondly, update Config Cocoapod. We need to update the config for Cocoapod to work correctly.</p>
+<p>We need to update the path in the <code>.podspec</code>. In my project the files updated: <code>source_files</code>, <code>exclude_files</code>,  <code>resource_bundle</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">s.source_files = &#34;Sources/TTBaseUIKit/**/*.{swift}&#34;
+s.exclude_files = &#34;Sources/TTBaseUIKit/**/*.plist&#34;
+s.resource_bundle = { &#39;TTBaseUIKit&#39; =&gt; [&#39;Sources/TTBaseUIKit/**/*.{ttf}&#39;,&#39;Sources/TTBaseUIKit/**/*.{png}&#39;] }
+</code></pre></div></li>
+<li>
+<p>And finally, update Config Package.swift</p>
+<p>The <code>Package.swift</code> file is a human-readable configuration file that is used by SwiftPM to build your library. It contains various properties that define your package. This file is created in the root folder of your project during initialization.
+The <code>Package.swift</code> file for my project looks like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// swift-tools-version: 5.6
+</span><span class="c1">// The swift-tools-version declares the minimum version of Swift required to build this package.
+</span><span class="c1"></span>   
+<span class="kn">import</span> <span class="nx">PackageDescription</span>
+   
+<span class="nx">let</span> <span class="kn">package</span> <span class="p">=</span> <span class="nf">Package</span><span class="p">(</span>
+    <span class="nx">name</span><span class="p">:</span> <span class="s">&#34;TTBaseUIKit&#34;</span><span class="p">,</span>
+    <span class="nx">platforms</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">.</span><span class="nf">iOS</span><span class="p">(.</span><span class="nx">v10</span><span class="p">),</span>
+        <span class="p">.</span><span class="nf">macCatalyst</span><span class="p">(.</span><span class="nx">v13</span><span class="p">)</span>
+    <span class="p">],</span>
+    <span class="nx">products</span><span class="p">:</span> <span class="p">[</span>
+        <span class="c1">// Products define the executables and libraries a package produces, and make them visible to other packages.
+</span><span class="c1"></span>        <span class="p">.</span><span class="nf">library</span><span class="p">(</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="s">&#34;TTBaseUIKit&#34;</span><span class="p">,</span>
+            <span class="nx">targets</span><span class="p">:</span> <span class="p">[</span><span class="s">&#34;TTBaseUIKit&#34;</span><span class="p">]),</span>
+    <span class="p">],</span>
+    <span class="nx">dependencies</span><span class="p">:</span> <span class="p">[</span>
+        <span class="c1">// Dependencies declare other packages that this package depends on.
+</span><span class="c1"></span>        <span class="c1">// .package(url: /* package url */, from: &#34;1.0.0&#34;),
+</span><span class="c1"></span>    <span class="p">],</span>
+    <span class="nx">targets</span><span class="p">:</span> <span class="p">[</span>
+        <span class="c1">// Targets are the basic building blocks of a package. A target can define a module or a test suite.
+</span><span class="c1"></span>        <span class="c1">// Targets can depend on other targets in this package, and on products in packages this package depends on.
+</span><span class="c1"></span>        <span class="p">.</span><span class="nf">target</span><span class="p">(</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="s">&#34;TTBaseUIKit&#34;</span><span class="p">,</span>
+            <span class="nx">dependencies</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="nx">exclude</span><span class="p">:</span> <span class="p">[</span><span class="s">&#34;Info.plist&#34;</span><span class="p">],</span>
+        <span class="nx">resources</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">.</span><span class="nf">process</span><span class="p">(</span><span class="s">&#34;Support/Resources/Fonts&#34;</span><span class="p">),</span>
+            <span class="p">.</span><span class="nf">process</span><span class="p">(</span><span class="s">&#34;Support/Resources/Images&#34;</span><span class="p">),</span>
+        <span class="p">]</span>
+        <span class="p">),</span>
+        <span class="p">.</span><span class="nf">testTarget</span><span class="p">(</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="s">&#34;TTBaseUIKitTests&#34;</span><span class="p">,</span>
+            <span class="nx">dependencies</span><span class="p">:</span> <span class="p">[</span><span class="s">&#34;TTBaseUIKit&#34;</span><span class="p">]),</span>
+    <span class="p">],</span>
+    <span class="nx">swiftLanguageVersions</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">.</span><span class="nx">v5</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+   
+</code></pre></div><p>For more information about config, please go to the apple doc: <a href="https://developer.apple.com/documentation/xcode/creating-a-standalone-swift-package-with-xcode">https://developer.apple.com/documentation/xcode/creating-a-standalone-swift-package-with-xcode</a>. Please note that:</p>
+<ol>
+<li>
+<p>If you use <code>resources</code>, please add in config file:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">        resources: [
+            .process(&#34;Support/Resources/Fonts&#34;),
+            .process(&#34;Support/Resources/Images&#34;),
+        ]
+</code></pre></div></li>
+<li>
+<p>Please add <code>exclude</code> file <code>.Plist</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"> exclude: [&#34;Info.plist&#34;],
+</code></pre></div></li>
+</ol>
+</li>
+</ol>
+<h3 id="step-3-commit">Step 3: Commit</h3>
+<p>After setting up the project, the only thing that is left is to commit the changes, add a tag and push the changes:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">git commit -m &#39;Add support for SwiftPM&#39;
+git push
+git tag 1.5.0
+git push origin 1.5.0
+</code></pre></div><p>Update the cocoapod</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">pod lib lint --allow-warnings --verbose
+pod trunk push --allow-warnings --verbose
+</code></pre></div><p>You will get an email if everything is OK, and now our library supports both CocoaPods and SwiftPM.</p>
+<figure class="medium">
+    <img src="/images/image-20220826174208354.png"
+         alt="image"/> <figcaption>
+            <p>Now our library support both cocoapods and SwiftPM</p>
+        </figcaption>
+</figure>
+
+<h2 id="demo">Demo</h2>
+<p>I my project (<a href="https://12bay.vn/">12bay</a>). I used <code>SwiftPM</code> instead of <code>cocoapods</code></p>
+<figure class="big">
+    <img src="/images/image-20220829134503917.png"
+         alt="image"/> <figcaption>
+            <p>12Bay integrated SwiftPM</p>
+        </figcaption>
+</figure>
+
+<h1 id="problems">Problems</h1>
+<p>Here are some problems you may encounter when update:</p>
+<h2 id="no-such-module-packagedescription">No such module &ldquo;PackageDescription&rdquo;</h2>
+<ol>
+<li>
+<p>Check the first line of the Package.swift file has</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">// swift-tools-version: 5.6
+// The swift-tools-version declares the minimum version of Swift required to build this package
+</code></pre></div></li>
+<li>
+<p>Don&rsquo;t use <code>swift package generate-xcodeproj</code>. Because this code  is deprecated. You should using Xcode to create Swift Packages <strong>directly</strong></p>
+</li>
+</ol>
+<h2 id="podspec-error---source_files-pattern-did-not-match-any-file">.podspec error - source_files` pattern did not match any file</h2>
+<p>When you run <code>pod trunk push --allow-warnings --verbose</code>. This script will clone your code from github. So, make sure your tag version is TRUE and after that you need to check the files.</p>
+<p>Full info you can check here: <a href="https://guides.cocoapods.org/making/specs-and-specs-repo.html">https://guides.cocoapods.org/making/specs-and-specs-repo.html</a></p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">  s.source_files = &#34;Sources/TTBaseUIKit/**/*.{swift}&#34;
+  s.exclude_files = &#34;Sources/TTBaseUIKit/**/*.plist&#34;
+  s.resource_bundle = { &#39;TTBaseUIKit&#39; =&gt; [&#39;Sources/TTBaseUIKit/**/*.{ttf}&#39;,&#39;Sources/TTBaseUIKit/**/*.{png}&#39;] }
+</code></pre></div><p>May be you should clear the cache <code>pod cache clean YourPodKit</code></p>
+<h2 id="the-spec-did-not-pass-validation-due-to-1-error">The spec did not pass validation, due to 1 error</h2>
+<p>First, we find the root of the problem. Add <code>--verbose</code> to view more detail. For example:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">pod lib lint --allow-warnings --verbose
+or 
+pod trunk push --allow-warnings --verbose
+</code></pre></div><p>If you use <code>Bundle.module.url</code>. Add code below to solve problem:  <code> #if SWIFT_PACKAGE</code>. For example:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">#if SWIFT_PACKAGE
+		if let urlPackage =  Bundle.module.url(forResource: name, withExtension: &#34;ttf&#34;) {
+			TTBaseFunc.shared.printLog(object: &#34;::Fonts podFont applied by urlPackage Bundle.module.url&#34;)
+		}
+#endif
+</code></pre></div><h1 id="conclusion">Conclusion</h1>
+<p>Well done, we learned how to update the current cocoapod library to support SwiftPM. You can find my library at: <a href="https://github.com/tqtuan1201/TTBaseUIKit">https://github.com/tqtuan1201/TTBaseUIKit</a> and thank for your reading this post. Swift Package Manager will soon replace CocoaPods for loading third-party libraries into your project. Also, let me know if you have any comments or problems. Thank you!</p>
 
 
 
