@@ -396,6 +396,18 @@ What is Swift Package Manager? First, if you don&rsquo;t know about Swift Packag
         <li class="nav__list-item">
           <a
             
+            href="/keynote"
+            
+            title=""
+            >Topics</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
             href="/posts"
             
             title=""
@@ -423,7 +435,31 @@ What is Swift Package Manager? First, if you don&rsquo;t know about Swift Packag
             href="/certifications"
             
             title=""
-            >certifications</a
+            >Certifications</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/categories"
+            
+            title=""
+            >Categories</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/tags"
+            
+            title=""
+            >Tags</a
           >
         </li>
 
@@ -578,9 +614,9 @@ s.resource_bundle = { &#39;TTBaseUIKit&#39; =&gt; [&#39;Sources/TTBaseUIKit/**/*
 The <code>Package.swift</code> file for my project looks like this:</p>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// swift-tools-version: 5.6
 </span><span class="c1">// The swift-tools-version declares the minimum version of Swift required to build this package.
-</span><span class="c1"></span>   
+</span><span class="c1"></span>
 <span class="kn">import</span> <span class="nx">PackageDescription</span>
-   
+
 <span class="nx">let</span> <span class="kn">package</span> <span class="p">=</span> <span class="nf">Package</span><span class="p">(</span>
     <span class="nx">name</span><span class="p">:</span> <span class="s">&#34;TTBaseUIKit&#34;</span><span class="p">,</span>
     <span class="nx">platforms</span><span class="p">:</span> <span class="p">[</span>
@@ -617,7 +653,7 @@ The <code>Package.swift</code> file for my project looks like this:</p>
         <span class="p">.</span><span class="nx">v5</span>
     <span class="p">]</span>
 <span class="p">)</span>
-   
+
 </code></pre></div><p>For more information about config, please go to the apple doc: <a href="https://developer.apple.com/documentation/xcode/creating-a-standalone-swift-package-with-xcode">https://developer.apple.com/documentation/xcode/creating-a-standalone-swift-package-with-xcode</a>. Please note that:</p>
 <ol>
 <li>
@@ -683,7 +719,7 @@ pod trunk push --allow-warnings --verbose
 <h2 id="the-spec-did-not-pass-validation-due-to-1-error">The spec did not pass validation, due to 1 error</h2>
 <p>First, we find the root of the problem. Add <code>--verbose</code> to view more detail. For example:</p>
 <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">pod lib lint --allow-warnings --verbose
-or 
+or
 pod trunk push --allow-warnings --verbose
 </code></pre></div><p>If you use <code>Bundle.module.url</code>. Add code below to solve problem:  <code> #if SWIFT_PACKAGE</code>. For example:</p>
 <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">#if SWIFT_PACKAGE

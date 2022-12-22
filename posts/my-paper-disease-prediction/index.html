@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme="light"
+  class="html"
+><head>
+  <title>
+    
+      Tuan Truong
+        |
+        Predictive modelling of diseases based on a network and machine learning approach (book of abstracts - my paper)
+
+
+      
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.81.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Tuan Truong" />
+  <meta
+    name="description"
+    content="
+      “The only thing that is constant is change”, Heraclitus.
+
+
+    "
+  />
+  
+    <meta name="google-site-verification" content="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.6a8466aed6b7a1d74e725a8fdfddb79e8131943a536e5c655aca4561649fa84f.css"
+      integrity="sha256-aoRmrta3oddOclqP3923noExlDpTblxlWspFYWSfqE8="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.69685904d5c2a0c6258d03c207b778c10466edf6cea928cc0164c376b0ad0930.css"
+    integrity="sha256-aWhZBNXCoMYljQPCB7d4wQRm7fbOqSjMAWTDdrCtCTA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.6d585e78d28cce1200d39fb133c92ed83df01738da721d0f48fb6eac62d24e04.css"
+    integrity="sha256-bVheeNKMzhIA05&#43;xM8ku2D3wFzjach0PSPturGLSTgQ="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.6b00d96498d59caa0dbcf9b49d30d821915291f2ceb0e19248523c8607ff43fa.css"
+    integrity="sha256-awDZZJjVnKoNvPm0nTDYIZFSkfLOsOGSSFI8hgf/Q/o="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/images/profile.jpg" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://tqtuan1201.github.io/posts/my-paper-disease-prediction/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.46e6a54097480084f8f52c20ca1aa7425b4fad17029a887fd4017b12e311a72d.js"
+    integrity="sha256-RualQJdIAIT49SwgyhqnQltPrRcCmoh/1AF7EuMRpy0="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.5557c8ff5617a01067ac258fd70b9b992506e379317b0da51e5e0f6e018b408a.js"
+      integrity="sha256-VVfI/1YXoBBnrCWP1wubmSUG43kxew2lHl4PbgGLQIo="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tqtuan1201.github.io/images/profile.jpg"/>
+
+<meta name="twitter:title" content="Predictive modelling of diseases based on a network and machine learning approach (book of abstracts - my paper)"/>
+<meta name="twitter:description" content="End of year 2022. I just got a paper at the ACIIDS 2022 conference. So I want to share with you about this. I hope that it is a motivation to make the new goals for the next year.
+ BOOK OF ABSTRACTS Abstract Chronic diseases have become the first prioritized concern of the health industry, so understanding the disease progression is necessary for predicting, planning and preparing resources to prevent and cure the diseases most effectively."/>
+<meta name="twitter:site" content="@QuangTuan0409"/>
+
+
+
+  
+  <meta property="og:title" content="Predictive modelling of diseases based on a network and machine learning approach (book of abstracts - my paper)" />
+<meta property="og:description" content="End of year 2022. I just got a paper at the ACIIDS 2022 conference. So I want to share with you about this. I hope that it is a motivation to make the new goals for the next year.
+ BOOK OF ABSTRACTS Abstract Chronic diseases have become the first prioritized concern of the health industry, so understanding the disease progression is necessary for predicting, planning and preparing resources to prevent and cure the diseases most effectively." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tqtuan1201.github.io/posts/my-paper-disease-prediction/" /><meta property="og:image" content="https://tqtuan1201.github.io/images/profile.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-12-22T16:04:17&#43;07:00" />
+<meta property="article:modified_time" content="2022-12-22T16:04:17&#43;07:00" /><meta property="og:site_name" content="Hi, I&#39;m Tuan Truong" />
+<meta property="og:see_also" content="https://tqtuan1201.github.io/posts/latex-take-note/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/factorization-machines-presentation/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/factorization-machines/" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "posts",
+        "name": "Predictive modelling of diseases based on a network and machine learning approach (book of abstracts - my paper)",
+        "headline": "Predictive modelling of diseases based on a network and machine learning approach (book of abstracts - my paper)",
+        "alternativeHeadline": "",
+        "description": "
+      
+        End of year 2022. I just got a paper at the ACIIDS 2022 conference. So I want to share with you about this. I hope that it is a motivation to make the new goals for the next year.\n BOOK OF ABSTRACTS Abstract Chronic diseases have become the first prioritized concern of the health industry, so understanding the disease progression is necessary for predicting, planning and preparing resources to prevent and cure the diseases most effectively.
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/tqtuan1201.github.io\/posts\/my-paper-disease-prediction\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-12-22T16:04:17.00Z",
+        "datePublished": "2022-12-22T16:04:17.00Z",
+        "dateModified": "2022-12-22T16:04:17.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Tuan Truong",
+            "url": "https://tqtuan1201.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/tqtuan1201.github.io\/images\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://tqtuan1201.github.io/images/profile.jpg"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/tqtuan1201.github.io\/posts\/my-paper-disease-prediction\/",
+        "wordCount" : "1322",
+        "genre" : [ 
+      
+      "VNUHCM"
+
+    
+      
+        ,
+
+      
+      "MyPaper"
+
+    ],
+        "keywords" : [ 
+      
+      "MyPaper"
+
+    
+      
+        ,
+
+      
+      "Research"
+
+    
+      
+        ,
+
+      
+      "Disease prediction"
+
+    
+      
+        ,
+
+      
+      "ACIIDS 2022"
+
+    ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--light"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/profile.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Hi, I&#39;m Tuan Truong</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>“The only thing that is constant is change”, Heraclitus.</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a href="https://twitter.com/QuangTuan0409" rel="me" aria-label="Twitter" title="Twitter">
+            <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a href="https://github.com/tqtuan1201" rel="me" aria-label="GitHub" title="GitHub">
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a href="https://tuananhstory.com/" rel="me" aria-label="instagram" title="instagram">
+            <i class="fa-brands fa-safari fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a href="mailto:truongquangtuanit@gmail.com" rel="me" aria-label="e-mail" title="e-mail">
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
+    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/"
+            
+            title=""
+            >Home</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/keynote"
+            
+            title=""
+            >Topics</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/posts"
+            
+            title=""
+            >Posts</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/portfolio"
+            
+            title=""
+            >Projects</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/certifications"
+            
+            title=""
+            >Certifications</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/categories"
+            
+            title=""
+            >Categories</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/tags"
+            
+            title=""
+            >Tags</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/about"
+            
+            title=""
+            >About</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/contact"
+            
+            title=""
+            >Contact</a
+          >
+        </li>
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+      <div class="post__thumbnail-wrapper">
+        <img class="post__thumbnail" src="/images/image-20221222163939378.png?quality=92&amp;strip=all" alt="Thumbnail image" />
+      </div>
+
+    
+
+    <div class="post__content">
+      <h1>Predictive Modelling of Diseases Based on a Network and Machine Learning Approach (Book of Abstracts - My Paper)</h1>
+      <h3>Table of Contents</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#book-of-abstracts">BOOK OF ABSTRACTS</a>
+      <ul>
+        <li><a href="#abstract">Abstract</a></li>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#state-of-the-art">State of the art</a></li>
+        <li><a href="#original-contribution">Original contribution</a></li>
+        <li><a href="#methodology">Methodology</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#evaluation">Evaluation</a></li>
+        <li><a href="#conclusions">Conclusions</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        <div style="width: 100%; margin: 0 auto; background:rgba(0,0,0,0.5); height: 1px; opacity: 0.6"> </div><blockquote>
+<p>End of year 2022. I just got a paper at the ACIIDS 2022 conference. So I want to share with you about this. I hope that it is a motivation to make the new goals for the next year.</p>
+</blockquote>
+<h1 id="book-of-abstracts">BOOK OF ABSTRACTS</h1>
+<h2 id="abstract">Abstract</h2>
+<p>Chronic diseases have become the first prioritized concern of the health industry, so understanding the disease progression is necessary for predicting, planning and preparing resources to prevent and cure the diseases most effectively. Basing on patients’ medical history, this research analyzes and builds disease network to exploit hidden information showing the disease relations and progressions, applys machine learning models to assess the risks of morbidity and predicts the risk of contracting cardiovascular diseases (CVD) in patients with type-2 diabetes (T2D). The research data includes 249,809 medical histories of 65,337 patients in Ho Chi Minh City, Vietnam. The accuracies of the four prediction models (SVM, DT, RF and KNN) range from 78% to 80%. The predicted data can be used promisingly as a reference for medical specialists to provide effective healthcare guidance to patients as well as for healthcare service providers to use their data effectively and enhance their service quality.</p>
+<h2 id="introduction">Introduction</h2>
+<p>World Health Organization (WHO) defines chronic diseases as non communicable diseases (NCDs), which are not transmissible directly from person to person and are associated to long duration and slow progression. They have become the leading cause of fatality in most countries. According to WHO, 41 million people die from an NCD annually, which accounts for 77% of all deaths worldwide. Moreover, almost 50% out of these deaths are premature deaths (under 70 years old) and this percentage is growing. Because most NCD patients are still in their working age, chronic diseases reduce labor productivity and increase pressure on the medical system, resulting in considerable financial burdens to the economy of countries, especially low- and middle-income ones. Among four main types of NCDs, Type 2 diabetes is the most dangerous because it has the highest morbidity rate in the world. In fact, it is the top cause of fatality and it increases the risk of contracting other chronic diseases such as cardiovascular diseases.</p>
+<p>Understanding the progression of chronic diseases and making predictions relating to them can provide im- portant information useful for the prevention and management of the diseases. Thus, many models have been proposed to forecast the morbidity risk of chronic diseases, which can be divided into two main approaches: (i) Traditional statistical approaches and (ii) Machine learning and data mining approaches. However, both methods require a very big and full administrative data set with a great number of medical records, which are extremely difficult to collect because patients’ medical data are usually privately secured, discrete and unshareable. Besides, there exist some limitations in the exploitation of the relations among diseases and the progression of them. Also, the above approaches are very different in the method of implementation.</p>
+<p>Therefore, in the research scope, this study proposes a new method by widening and combining the above two approaches in order to build a risk prediction model for chronic diseases. Specifically, this study will predict the morbidity risk of cardiovascular diseases in type 2 diabetes patients.</p>
+<h2 id="state-of-the-art">State of the art</h2>
+<p>The rise of chronic diseases increases the health and financial burden. Therefore, there have been many studies on the improvement of patients’ health through prevention, early identification, and proper treatment. However, most approaches have not shown the progression and association between diseases. They also have many limitations in accessing data because the patient’s health data is often confidential, discrete, and not shared. For example, some regression models are not suitable because medical data has too many objects such as patients, diseases, doctors, drugs, etc. Therefore, model building is often complicated because there are many independent variables.</p>
+<p>Although machine learning methods are rich in techniques and tools, they do not show the necessary time and relationship factors in disease prediction. Models based on network analysis are often developed to find hidden patterns and relationships between objects. However, in the medical field, clinical diagnoses are often based on disease factors such as medical history, demographic information, vital signs, etc. These factors can also have a major influence on patient outcomes. In most cases, this information has not been exploited. Therefore, this study proposes a new approach by extending and combining existing methods, with the overall goal of focusing on understanding the progression of chronic disease through disease networks and identifying which patients are at risk of other chronic diseases in the future by applying machine learning algorithms to develop disease prediction models</p>
+<h2 id="original-contribution">Original contribution</h2>
+<ul>
+<li>
+<p>Instead of approaching the traditional statistical methods to build model, the study applies graph theory and network analysis to develop a disease network, and then applies machine learning methods to build a disease prediction model basing on the data extracted from the disease network.</p>
+</li>
+<li>
+<p>The disease network created in this study presents the relations and the progressions of chronic disease comorbidities, as well as providing a simple way to visualize the health trajectory of chronic disease patients.</p>
+</li>
+</ul>
+<h2 id="methodology">Methodology</h2>
+<p>The study is divided into two main parts, (i) understanding disease progression through network analysis approach and (ii) developing disease prediction models through machine learning algorithms. To build the disease network, two cohorts (the group of patients with T2D only and the group of patients with both T2D and CVD) were ag- gregated from their medical history to create two corresponding base disease networks. The final disease network is generated by aggregating the above two base networks. This disease network provides detailed information on the progression and relation of CVD in patients with T2D. Based on these insights, the development of a disease prediction model was also the second goal of this study. To develop the model, the study has extracted five fea- tures, three of which are from the disease network (node, edge and cluster) and the other two are from the data set. (gender and age). These features are then used to develop predictive models of CVD risk in patients with T2D.</p>
+<figure class="small">
+    <img src="/images/image-20221222162837912.png"
+         alt="image"/> <figcaption>
+            <p>Overview of prediction framework</p>
+        </figcaption>
+</figure>
+
+<h2 id="results">Results</h2>
+<p>The built disease network includes 19 chronic diseases and the edges represent disease progression. Four machine learning algorithms are used: SVM, DT, RF and KNN. Overall, the accuracies of the four models are almost similar. However, the study found that the predictive model based on SVM had the best accuracy of 80.02%, followed by the DT with an accuracy of 79.12%.</p>
+<figure class="small">
+    <img src="/images/image-20221222163054429.png"
+         alt="image"/> <figcaption>
+            <p>Disease network visualization</p>
+        </figcaption>
+</figure>
+
+<figure class="small">
+    <img src="/images/image-20221222163245669.png"
+         alt="image"/> <figcaption>
+            <p>The performance of models</p>
+        </figcaption>
+</figure>
+
+<h2 id="evaluation">Evaluation</h2>
+<p>This study uses 249,809 medical histories of 65,337 patients in a hospital in Ho Chi Minh City. 65% of patients in each cohort were randomly selected to build a disease network. The remaining 35% was divided into two datasets: the training and the test datasets. With the training dataset, 10-fold cross-validation was used to train and test the model and the test dataset was used to evaluate the performance of the models. The study used a confusion matrix to calculate the common measures such as accuracy, precision, recall, F1 score and ROC curve to evaluate the efficiency. Despite using only the disease classification code combined with some other basic features (age and gender), the approach gives quite good accuracy. Therefore, this is expected to be a new development direction in the current context of very little and sparse medical data.</p>
+<h2 id="conclusions">Conclusions</h2>
+<p>Disease prediction is an important research in the health industry and especially in preventive medicine. In the context of the rapid increase of chronic diseases, especially in low- or middle-income countries, and the increasing burden of disease due to population aging in many parts of the world, the results of disease prediction models are important inputs for planning and preparing resources for effective disease prevention. Moreover, this research could be useful to individuals and organizations in the healthcare field as it can help healthcare providers use their data more efficiently and improve their services.</p>
+<hr>
+<figure class="medium">
+    <img src="/images/image-20221222164117559.png"
+         alt="image"/> <figcaption>
+            <p><a href="https://link.springer.com/chapter/10.1007/978-981-19-8234-7_50#chapter-info">First Online: 24 November 2022</a></p>
+        </figcaption>
+</figure>
+
+<p>DOI: <a href="https://doi.org/10.1007/978-981-19-8234-7_50">https://doi.org/10.1007/978-981-19-8234-7_50</a></p>
+
+
+
+<h3>Posts in this Series</h3>
+<ul>
+  
+    <li><a href="/posts/my-paper-disease-prediction/">Predictive Modelling of Diseases Based on a Network and Machine Learning Approach (Book of Abstracts - My Paper)</a></li>
+
+  
+    <li><a href="/posts/latex-take-note/">Latex Take Notes</a></li>
+
+  
+    <li><a href="/posts/factorization-machines-presentation/">Factorization Machines &amp; Their Application on Huge Datasets Presentation</a></li>
+
+  
+    <li><a href="/posts/factorization-machines/">FACTORIZATION MACHINES and THEIR APPLICATION on HUGE DATASETS</a></li>
+
+  
+</ul>
+
+<div class="contact-form">
+  <form class="form-style" method="POST" action="https://formspree.io/f/mqknvogq" data-toggle="validator">
+    <ul>
+      <li>
+        <label for="username">Name</label>
+        <input class="field-style field-full" type="text" name="username" id="username" placeholder="Name" required>
+      </li>
+      <li>
+        <label for="email">Email</label>
+        <input class="field-style field-full" type="email" id="email" name="email" placeholder="Email" required>
+      </li>
+      <li>
+        <label for="message">Message</label>
+        <textarea class="field-style" name="message" id="message" rows="6" placeholder="Message"></textarea>
+      </li>
+      <li>
+        <input class="field-style" type="submit" value="Send" />
+      </li>
+      <li>
+        <input type="text" name="_gotcha" style="display:none" />
+      </li>
+    </ul>
+  </form>
+</div>
+</div>
+    <div class="post__footer">
+      
+        <span><a class="category" href="/categories/vnuhcm/">VNUHCM</a><a class="category" href="/categories/mypaper/">MyPaper</a></span>
+
+
+
+
+      
+
+      
+        <span><a class="tag" href="/tags/mypaper/">MyPaper</a><a class="tag" href="/tags/research/">Research</a><a class="tag" href="/tags/disease-prediction/">Disease prediction</a><a class="tag" href="/tags/aciids-2022/">ACIIDS 2022</a></span>
+
+
+
+
+      
+    </div>
+
+    
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
+    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script>
+  <script async defer src=" https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" /></noscript>
+
+
+</body>
+</html>
