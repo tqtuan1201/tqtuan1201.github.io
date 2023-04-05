@@ -6,57 +6,68 @@
     <description>Recent content in Categories on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Mar 2023 17:19:56 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Apr 2023 14:00:33 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Learn English&#39;</title>
-      <link>https://tqtuan1201.github.io/categories/learn-english/</link>
+      <title>12bay Project</title>
+      <link>https://tqtuan1201.github.io/categories/12bay-project/</link>
+      <pubDate>Mon, 03 Apr 2023 14:00:33 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/categories/12bay-project/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Case Studies</title>
+      <link>https://tqtuan1201.github.io/categories/case-studies/</link>
+      <pubDate>Mon, 03 Apr 2023 14:00:33 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/categories/case-studies/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Dev Journey</title>
+      <link>https://tqtuan1201.github.io/categories/dev-journey/</link>
+      <pubDate>Mon, 03 Apr 2023 14:00:33 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/categories/dev-journey/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Lifestyle</title>
+      <link>https://tqtuan1201.github.io/categories/lifestyle/</link>
       <pubDate>Wed, 15 Mar 2023 17:19:56 +0700</pubDate>
       
-      <guid>https://tqtuan1201.github.io/categories/learn-english/</guid>
+      <guid>https://tqtuan1201.github.io/categories/lifestyle/</guid>
       
         <description></description>
       
     </item>
     
     <item>
-      <title>MyPaper</title>
-      <link>https://tqtuan1201.github.io/categories/mypaper/</link>
+      <title>Artificial Intelligence and Machine Learning</title>
+      <link>https://tqtuan1201.github.io/categories/artificial-intelligence-and-machine-learning/</link>
       <pubDate>Thu, 22 Dec 2022 16:04:17 +0700</pubDate>
       
-      <guid>https://tqtuan1201.github.io/categories/mypaper/</guid>
+      <guid>https://tqtuan1201.github.io/categories/artificial-intelligence-and-machine-learning/</guid>
       
         <description></description>
       
     </item>
     
     <item>
-      <title>VNUHCM</title>
-      <link>https://tqtuan1201.github.io/categories/vnuhcm/</link>
-      <pubDate>Thu, 22 Dec 2022 16:04:17 +0700</pubDate>
-      
-      <guid>https://tqtuan1201.github.io/categories/vnuhcm/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Mobile Apps</title>
-      <link>https://tqtuan1201.github.io/categories/mobile-apps/</link>
+      <title>Frameworks and APIs</title>
+      <link>https://tqtuan1201.github.io/categories/frameworks-and-apis/</link>
       <pubDate>Wed, 24 Aug 2022 11:10:07 +0700</pubDate>
       
-      <guid>https://tqtuan1201.github.io/categories/mobile-apps/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Swift</title>
-      <link>https://tqtuan1201.github.io/categories/swift/</link>
-      <pubDate>Wed, 24 Aug 2022 11:10:07 +0700</pubDate>
-      
-      <guid>https://tqtuan1201.github.io/categories/swift/</guid>
+      <guid>https://tqtuan1201.github.io/categories/frameworks-and-apis/</guid>
       
         <description></description>
       
@@ -74,33 +85,44 @@
     </item>
     
     <item>
-      <title>LearnEN</title>
-      <link>https://tqtuan1201.github.io/categories/learnen/</link>
+      <title>Education and Learning</title>
+      <link>https://tqtuan1201.github.io/categories/education-and-learning/</link>
       <pubDate>Mon, 15 Aug 2022 13:53:21 +0700</pubDate>
       
-      <guid>https://tqtuan1201.github.io/categories/learnen/</guid>
+      <guid>https://tqtuan1201.github.io/categories/education-and-learning/</guid>
       
         <description></description>
       
     </item>
     
     <item>
-      <title>UI programmatically</title>
-      <link>https://tqtuan1201.github.io/categories/ui-programmatically/</link>
+      <title>English Reading and Writing</title>
+      <link>https://tqtuan1201.github.io/categories/english-reading-and-writing/</link>
+      <pubDate>Mon, 15 Aug 2022 13:53:21 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/categories/english-reading-and-writing/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>App Architecture</title>
+      <link>https://tqtuan1201.github.io/categories/app-architecture/</link>
       <pubDate>Tue, 12 Jul 2022 16:50:03 +0700</pubDate>
       
-      <guid>https://tqtuan1201.github.io/categories/ui-programmatically/</guid>
+      <guid>https://tqtuan1201.github.io/categories/app-architecture/</guid>
       
         <description></description>
       
     </item>
     
     <item>
-      <title>AppleWatch</title>
-      <link>https://tqtuan1201.github.io/categories/applewatch/</link>
-      <pubDate>Wed, 22 Jun 2022 13:42:23 +0700</pubDate>
+      <title>Swift Programming</title>
+      <link>https://tqtuan1201.github.io/categories/swift-programming/</link>
+      <pubDate>Tue, 12 Jul 2022 16:50:03 +0700</pubDate>
       
-      <guid>https://tqtuan1201.github.io/categories/applewatch/</guid>
+      <guid>https://tqtuan1201.github.io/categories/swift-programming/</guid>
       
         <description></description>
       
@@ -118,11 +140,22 @@
     </item>
     
     <item>
-      <title>Machine Learning</title>
-      <link>https://tqtuan1201.github.io/categories/machine-learning/</link>
-      <pubDate>Fri, 19 Mar 2021 13:11:55 +0700</pubDate>
+      <title>News and Updates</title>
+      <link>https://tqtuan1201.github.io/categories/news-and-updates/</link>
+      <pubDate>Wed, 06 Apr 2022 16:05:26 +0700</pubDate>
       
-      <guid>https://tqtuan1201.github.io/categories/machine-learning/</guid>
+      <guid>https://tqtuan1201.github.io/categories/news-and-updates/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Best Practices and Tips</title>
+      <link>https://tqtuan1201.github.io/categories/best-practices-and-tips/</link>
+      <pubDate>Thu, 25 Mar 2021 10:38:57 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/categories/best-practices-and-tips/</guid>
       
         <description></description>
       

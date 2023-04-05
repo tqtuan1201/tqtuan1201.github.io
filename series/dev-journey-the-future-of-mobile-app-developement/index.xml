@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dev Journey - The future of mobile app developement on Tuan Truong&#39;s Blog</title>
+    <link>https://tqtuan1201.github.io/series/dev-journey-the-future-of-mobile-app-developement/</link>
+    <description>Recent content in Dev Journey - The future of mobile app developement on Tuan Truong&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Apr 2022 17:39:16 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/series/dev-journey-the-future-of-mobile-app-developement/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Let&#39;s idea, how to design travel app (12Bay) on watchOS?</title>
+      <link>https://tqtuan1201.github.io/posts/apple-watch-serial-design/</link>
+      <pubDate>Wed, 20 Apr 2022 17:39:16 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/apple-watch-serial-design/</guid>
+      
+        <description>Abstract Before we start to code. We should think about What is a purple of the application?
+Currently, We have multiple apps on macOS, iOS and ipadOS. With an app on watchOS, what needs should it meet? Find it out, and let&amp;rsquo;s design. This article talk about 12bay UI/UX on watchos
+This article is part of my Apple Watch by SwiftUI series.
+Previously : Let&amp;rsquo;s Idea, How to Design Travel App (12Bay) on WatchOS?</description>
+      
+    </item>
+    
+    <item>
+      <title>What Is the Future of Mobile App Development</title>
+      <link>https://tqtuan1201.github.io/posts/what-is-the-future-of-mobile-app-development/</link>
+      <pubDate>Wed, 06 Apr 2022 16:05:26 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/what-is-the-future-of-mobile-app-development/</guid>
+      
+        <description>💡 What is the future of mobile app development?  A new year has started and most of us are probably figuring out what we should focus on this year. Whether it’s learning new things or expanding our knowledge on topics we’ve already learned about in the past, there’s always something that deserves our attention in the world of iOS development.
+ As per the statistics, over 5 million apps are available in Google Play Store and Apple App Store.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

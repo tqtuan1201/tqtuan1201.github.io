@@ -6,7 +6,21 @@
     <description>Recent content in App Architecture on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Mar 2021 13:11:55 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/app-architecture/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Apr 2023 14:00:33 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/app-architecture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to design the food selection in a mobile application</title>
+      <link>https://tqtuan1201.github.io/posts/devlife-12bay-food/</link>
+      <pubDate>Mon, 03 Apr 2023 14:00:33 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/devlife-12bay-food/</guid>
+      
+        <description>Long time no see! Just keep doing it and you&amp;rsquo;ll reach your goals.
+ Abstract So, today we will be discussing about how to design the food selection in a mobile application. In this post, we will explore
+ Improve your mindset about developing applications. Working on Swift, Sketch.  Let&amp;rsquo;s do it.
+ What is the purpose of the function? The main purpose is to provide more utility to customers using the 12bay application.</description>
+      
+    </item>
+    
     <item>
       <title>Natural Language Processing On Ios Application Implement Viper Clean Architecture In An Ios App</title>
       <link>https://tqtuan1201.github.io/posts/nlp-on-ios-application-viper-arch/</link>

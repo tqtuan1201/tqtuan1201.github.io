@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dev Journey - Advanced iOS Development on Tuan Truong&#39;s Blog</title>
+    <link>https://tqtuan1201.github.io/series/dev-journey-advanced-ios-development/</link>
+    <description>Recent content in Dev Journey - Advanced iOS Development on Tuan Truong&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 Aug 2022 11:10:07 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/series/dev-journey-advanced-ios-development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Update Current Cocoapod Lib to Support SwiftPM</title>
+      <link>https://tqtuan1201.github.io/posts/how-to-update-cocoapod-lib-to-support-swiftpm/</link>
+      <pubDate>Wed, 24 Aug 2022 11:10:07 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/how-to-update-cocoapod-lib-to-support-swiftpm/</guid>
+      
+        <description>Abstract Today we will discuss how to update the cocoapod library to support SwiftPM. Last week, I updated my TTBaseUIkit library to support Swift Package Manager. So I want to share some useful experience with you.
+What is Swift Package Manager? First, if you don&amp;rsquo;t know about Swift Package Manager. I thought you read swiftpm-post to understand about this package.
+ The Swift Package Manager is a tool for managing the distribution of Swift code.</description>
+      
+    </item>
+    
+    <item>
+      <title>Swift Package Manager (SwiftPM) vs Cocoapods</title>
+      <link>https://tqtuan1201.github.io/posts/cocoapods-with-swiftpm/</link>
+      <pubDate>Mon, 22 Aug 2022 16:21:09 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/cocoapods-with-swiftpm/</guid>
+      
+        <description>Abstract Today we will talk about dependency managers in iOS and compare their advantages and disadvantages. Finally, we learn how to use those to add dependencies to your project.
+Dependencies When we build applications, we often use code from other developers writing to build more powerful applications more quickly. In your projects, we can make an easy animation to hide or show the button. But if you want to add a complex animation to your project that’s not built-in.</description>
+      
+    </item>
+    
+    <item>
+      <title>Basic Ci Cd Gitlab Fastlane</title>
+      <link>https://tqtuan1201.github.io/posts/basic-ci-cd-gitlab-fastlane/</link>
+      <pubDate>Thu, 25 Mar 2021 10:38:57 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/basic-ci-cd-gitlab-fastlane/</guid>
+      
+        <description>Abstract Trong bài viết này mình tiềm hiểu về GitLab-CI, Fastlane ở mức cơ bản.
+   Tìm hiểu GitLab-CI.
+  Fastlane là gì?
+   What is CI? Trong quá trình làm việc theo nhóm việc quản lý source-code giữa các thành viên với nhau là cực kỳ quan trọng. Việc cập nhật mã code giữa các thành viên với nhau là rất thường xuyên. Việc này dẫn đến nhiều vấn đề nảy sinh như code lỗi,&amp;hellip; để phát hiện sớm các lỗi để sửa ngay đưa ra một khái niệm là Continuos Integration - Tích hợp liên tục</description>
+      
+    </item>
+    
+    <item>
+      <title>Natural Language Processing On Ios Application Implement Viper Clean Architecture In An Ios App</title>
+      <link>https://tqtuan1201.github.io/posts/nlp-on-ios-application-viper-arch/</link>
+      <pubDate>Fri, 19 Mar 2021 13:11:55 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/nlp-on-ios-application-viper-arch/</guid>
+      
+        <description>Abstract Xây dựng ứng dụng iOS với kiến trúc VIPER về dự đoán tác giả bài thơ. Input đầu vào là một đoạn text đoạn thơ người dùng nhập vào và output là tác giả của đoạn thơ đó. Ví dụ: INPUT = Sao anh không về chơi thôn Vĩ? → OUTPUT = Hàn Mặc Tử
+  Tìm hiểu về Bag of Words, Turi Create. Xây dựng ứng dụng iOS trên kiến trúc VIPER Clean Architecture Một số từ khóa liên quan: Bag of Word, Logictic Classifier, Turi Create VIPER, iOS Application     Đặt Vấn Đề INPUT STRING:</description>
+      
+    </item>
+    
+    <item>
+      <title>The VIPER Architecture</title>
+      <link>https://tqtuan1201.github.io/posts/my-first-post/</link>
+      <pubDate>Mon, 01 Mar 2021 15:58:30 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/my-first-post/</guid>
+      
+        <description>Architecture Just like MVC or MVVM, VIPER is a design pattern created to facilitate the development by creating layers of abstraction and isolation of concerns, creating a cleaner code, and bringing more maintainability further down the road
+VIPER is an acronym for View-Interactor-Presenter-Entity-Router. Each functionality or module must be defined by these five components.
+View It’s what the user sees, the view that represents a functionality. In some cases, a single functionality can have multiple views, for example, an onboarding flow with multiple steps.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

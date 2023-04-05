@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme="light"
+  class="html"
+><head>
+  <title>
+    
+      Tuan Truong
+        |
+        How to design the food selection in a mobile application
+
+
+      
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.81.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Tuan Truong" />
+  <meta
+    name="description"
+    content="
+      “The only thing that is constant is change”, Heraclitus.
+
+
+    "
+  />
+  
+    <meta name="google-site-verification" content="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.b61686322f4bbd4a001cab333d7229198865e0baca7d307e303767dae08f1a1e.css"
+      integrity="sha256-thaGMi9LvUoAHKszPXIpGYhl4LrKfTB&#43;MDdn2uCPGh4="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.69685904d5c2a0c6258d03c207b778c10466edf6cea928cc0164c376b0ad0930.css"
+    integrity="sha256-aWhZBNXCoMYljQPCB7d4wQRm7fbOqSjMAWTDdrCtCTA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.6d585e78d28cce1200d39fb133c92ed83df01738da721d0f48fb6eac62d24e04.css"
+    integrity="sha256-bVheeNKMzhIA05&#43;xM8ku2D3wFzjach0PSPturGLSTgQ="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.6b00d96498d59caa0dbcf9b49d30d821915291f2ceb0e19248523c8607ff43fa.css"
+    integrity="sha256-awDZZJjVnKoNvPm0nTDYIZFSkfLOsOGSSFI8hgf/Q/o="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/images/profile.jpg" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://tqtuan1201.github.io/posts/devlife-12bay-food/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.46e6a54097480084f8f52c20ca1aa7425b4fad17029a887fd4017b12e311a72d.js"
+    integrity="sha256-RualQJdIAIT49SwgyhqnQltPrRcCmoh/1AF7EuMRpy0="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.5557c8ff5617a01067ac258fd70b9b992506e379317b0da51e5e0f6e018b408a.js"
+      integrity="sha256-VVfI/1YXoBBnrCWP1wubmSUG43kxew2lHl4PbgGLQIo="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tqtuan1201.github.io/images/profile.jpg"/>
+
+<meta name="twitter:title" content="How to design the food selection in a mobile application"/>
+<meta name="twitter:description" content="Long time no see! Just keep doing it and you&rsquo;ll reach your goals.
+ Abstract So, today we will be discussing about how to design the food selection in a mobile application. In this post, we will explore
+ Improve your mindset about developing applications. Working on Swift, Sketch.  Let&rsquo;s do it.
+ What is the purpose of the function? The main purpose is to provide more utility to customers using the 12bay application."/>
+<meta name="twitter:site" content="@QuangTuan0409"/>
+
+
+
+  
+  <meta property="og:title" content="How to design the food selection in a mobile application" />
+<meta property="og:description" content="Long time no see! Just keep doing it and you&rsquo;ll reach your goals.
+ Abstract So, today we will be discussing about how to design the food selection in a mobile application. In this post, we will explore
+ Improve your mindset about developing applications. Working on Swift, Sketch.  Let&rsquo;s do it.
+ What is the purpose of the function? The main purpose is to provide more utility to customers using the 12bay application." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tqtuan1201.github.io/posts/devlife-12bay-food/" /><meta property="og:image" content="https://tqtuan1201.github.io/images/profile.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-04-03T14:00:33&#43;07:00" />
+<meta property="article:modified_time" content="2023-04-03T14:00:33&#43;07:00" /><meta property="og:site_name" content="Hi, I&#39;m Tuan Truong" />
+
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "posts",
+        "name": "How to design the food selection in a mobile application",
+        "headline": "How to design the food selection in a mobile application",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Long time no see! Just keep doing it and you\u0026rsquo;ll reach your goals.\n Abstract So, today we will be discussing about how to design the food selection in a mobile application. In this post, we will explore\n Improve your mindset about developing applications. Working on Swift, Sketch.  Let\u0026rsquo;s do it.\n What is the purpose of the function? The main purpose is to provide more utility to customers using the 12bay application.
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/tqtuan1201.github.io\/posts\/devlife-12bay-food\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightYear" : "2023",
+        "dateCreated": "2023-04-03T14:00:33.00Z",
+        "datePublished": "2023-04-03T14:00:33.00Z",
+        "dateModified": "2023-04-03T14:00:33.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Tuan Truong",
+            "url": "https://tqtuan1201.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/tqtuan1201.github.io\/images\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://tqtuan1201.github.io/images/profile.jpg"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/tqtuan1201.github.io\/posts\/devlife-12bay-food\/",
+        "wordCount" : "291",
+        "genre" : [ 
+      
+      "Dev Journey"
+
+    
+      
+        ,
+
+      
+      "Case Studies"
+
+    
+      
+        ,
+
+      
+      "12bay Project"
+
+    ],
+        "keywords" : [ 
+      
+      "TTBaseUIKit"
+
+    
+      
+        ,
+
+      
+      "UI-programmatically"
+
+    
+      
+        ,
+
+      
+      "Swift"
+
+    
+      
+        ,
+
+      
+      "12bay"
+
+    
+      
+        ,
+
+      
+      "App Architecture"
+
+    
+      
+        ,
+
+      
+      "Mobile Design"
+
+    ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--light"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/profile.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Hi, I&#39;m Tuan Truong</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>“The only thing that is constant is change”, Heraclitus.</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a href="https://www.linkedin.com/in/tuan-quang-24591558/" rel="me" aria-label="Linkedin" title="Linkedin">
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a href="https://github.com/tqtuan1201" rel="me" aria-label="GitHub" title="GitHub">
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a href="mailto:truongquangtuanit@gmail.com" rel="me" aria-label="e-mail" title="e-mail">
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a href="https://twitter.com/QuangTuan0409" rel="me" aria-label="Twitter" title="Twitter">
+            <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a href="https://tuananhstory.com/" rel="me" aria-label="instagram" title="instagram">
+            <i class="fa-brands fa-safari fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2023
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
+    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/"
+            
+            title=""
+            >Home</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/keynote"
+            
+            title=""
+            >Topics</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/posts"
+            
+            title=""
+            >Posts</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/portfolio"
+            
+            title=""
+            >Projects</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/certifications"
+            
+            title=""
+            >Certifications</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/series"
+            
+            title=""
+            >Series</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/categories"
+            
+            title=""
+            >Categories</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/tags"
+            
+            title=""
+            >Tags</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/about"
+            
+            title=""
+            >About</a
+          >
+        </li>
+
+      
+        
+        <li class="nav__list-item">
+          <a
+            
+            href="/contact"
+            
+            title=""
+            >Contact</a
+          >
+        </li>
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+      <div class="post__thumbnail-wrapper">
+        <img class="post__thumbnail" src="/images/image-20230405134128270.png?quality=100&amp;strip=all" alt="Thumbnail image" />
+      </div>
+
+    
+
+    <div class="post__content">
+      <h1>How to Design the Food Selection in a Mobile Application</h1>
+      <h3>Table of Contents</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#what-is-the-purpose-of-the-function">What is the purpose of the function?</a></li>
+    <li><a href="#lets-start-to-code">Let&rsquo;s start to code</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+        <div style="width: 100%; margin: 0 auto; background:rgba(0,0,0,0.5); height: 1px; opacity: 0.6"> </div><blockquote>
+<p>Long time no see! Just keep doing it and you&rsquo;ll reach your goals.</p>
+</blockquote>
+<h1 id="abstract">Abstract</h1>
+<p>So, today we will be discussing about how to design the food selection in a mobile application.  In this post, we will explore</p>
+<ul>
+<li>Improve your mindset about developing applications.</li>
+<li>Working on <code>Swift</code>, <code>Sketch</code>.</li>
+</ul>
+<p>Let&rsquo;s do it.</p>
+<hr>
+<h1 id="what-is-the-purpose-of-the-function">What is the purpose of the function?</h1>
+<p>The main purpose is to provide <mark>more utility</mark> to customers using the 12bay application. This is of great importance as it helps customers in choosing their dishes during the flight. After several hours of serveying, here is the food selection design:</p>
+<p><img src="/images/image-20230403144756074.png#center" alt="image-20220421134207276"></p>
+<p align="center" >(source: 12bay.vn - food selection design) </p>
+<p>Here are some important things:</p>
+<ul>
+<li>
+<p>The <mark>check box</mark> : It is easy for customers to see the dishes that they have chosen.</p>
+</li>
+<li>
+<p>On the <mark>summary screen</mark>:  You can quickly and easily view the total number of dishes that have been selected.</p>
+</li>
+</ul>
+<hr>
+<h1 id="lets-start-to-code">Let&rsquo;s start to code</h1>
+<p>In this function, I have decided to use the <mark>TTBaseUIKit</mark> framework, which is based on UIKit, to build the UI, and I have used the <mark>MVVM architecture</mark>. This marks the completion of building the UI within the UIKit framework. In the next post, I will create a new series called <strong>&lsquo;Going Deeper into SwiftUI&rsquo;</strong> to update the TTBaseUIKit framework and build the car selection function using swiftUI.</p>
+<ul>
+<li>
+<p><strong>TTBaseUIKit</strong>: The framework is used to  build UI Programmatically.</p>
+</li>
+<li>
+<p><strong>MVVM (Model-View-ViewModel) architecture</strong>: is an architecture design pattern used in mobile development.</p>
+<p><img src="/images/image-20230403155247941.png#center" alt="image-20220421134207276"></p>
+</li>
+</ul>
+<p align="center" >(Source: MVVM Diagram by AppCoda) </p>
+<p>Here is <code>FlightSelectFoodViewController</code> codebase, which is build on the <code>BaseUIViewController</code>:</p>
+<p><img src="/images/image-20230403154441020.png#center" alt="image-20220421134207276"></p>
+<p align="center" >(source: 12bay.vn - source base) </p>
+<hr>
+<h1 id="conclusion">Conclusion</h1>
+<p>Well done! You can download the 12bay application from the App Store and try it out. You can find it using this link: <a href="https://apps.apple.com/us/app/s%C4%83n-v%C3%A9-m%C3%A1y-bay-gi%C3%A1-r%E1%BA%BB-12bay-vn/id1191396802">12Bay</a>. See you in the next post.</p>
+<figure class="small">
+    <img src="/images/image-20230405134128270.png"
+         alt="image"/> <figcaption>
+            <p>12Bay iOS application</p>
+        </figcaption>
+</figure>
+
+
+
+
+<h3>Posts in this Series</h3>
+<ul>
+  
+    <li><a href="/posts/devlife-12bay-food/">How to Design the Food Selection in a Mobile Application</a></li>
+
+  
+</ul>
+
+<div class="contact-form">
+  <form class="form-style" method="POST" action="https://formspree.io/f/mqknvogq" data-toggle="validator">
+    <ul>
+      <li>
+        <label for="username">Name</label>
+        <input class="field-style field-full" type="text" name="username" id="username" placeholder="Name" required>
+      </li>
+      <li>
+        <label for="email">Email</label>
+        <input class="field-style field-full" type="email" id="email" name="email" placeholder="Email" required>
+      </li>
+      <li>
+        <label for="message">Message</label>
+        <textarea class="field-style" name="message" id="message" rows="6" placeholder="Message"></textarea>
+      </li>
+      <li>
+        <input class="field-style" type="submit" value="Send" />
+      </li>
+      <li>
+        <input type="text" name="_gotcha" style="display:none" />
+      </li>
+    </ul>
+  </form>
+</div>
+</div>
+    <div class="post__footer">
+      
+        <span><a class="category" href="/categories/dev-journey/">Dev Journey</a><a class="category" href="/categories/case-studies/">Case Studies</a><a class="category" href="/categories/12bay-project/">12bay Project</a></span>
+
+
+
+
+      
+
+      
+        <span><a class="tag" href="/tags/ttbaseuikit/">TTBaseUIKit</a><a class="tag" href="/tags/ui-programmatically/">UI-programmatically</a><a class="tag" href="/tags/swift/">Swift</a><a class="tag" href="/tags/12bay/">12bay</a><a class="tag" href="/tags/app-architecture/">App Architecture</a><a class="tag" href="/tags/mobile-design/">Mobile Design</a></span>
+
+
+
+
+      
+    </div>
+
+    
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2023
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
+    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script>
+  <script async defer src=" https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" /></noscript>
+
+
+</body>
+</html>

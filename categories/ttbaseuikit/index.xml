@@ -20,29 +20,5 @@ What is Swift Package Manager? First, if you don&amp;rsquo;t know about Swift Pa
       
     </item>
     
-    <item>
-      <title>Swift Package Manager (SwiftPM) vs Cocoapods</title>
-      <link>https://tqtuan1201.github.io/posts/cocoapods-with-swiftpm/</link>
-      <pubDate>Mon, 22 Aug 2022 16:21:09 +0700</pubDate>
-      
-      <guid>https://tqtuan1201.github.io/posts/cocoapods-with-swiftpm/</guid>
-      
-        <description>Abstract Today we will talk about dependency managers in iOS and compare their advantages and disadvantages. Finally, we learn how to use those to add dependencies to your project.
-Dependencies When we build applications, we often use code from other developers writing to build more powerful applications more quickly. In your projects, we can make an easy animation to hide or show the button. But if you want to add a complex animation to your project that’s not built-in.</description>
-      
-    </item>
-    
-    <item>
-      <title>TTBaseUIKit - Framework to build UI programmatically</title>
-      <link>https://tqtuan1201.github.io/posts/ttbaseuikit-ui-framework/</link>
-      <pubDate>Tue, 12 Jul 2022 16:50:03 +0700</pubDate>
-      
-      <guid>https://tqtuan1201.github.io/posts/ttbaseuikit-ui-framework/</guid>
-      
-        <description>Abstract When I work with many projects. I always ask myself how to optimize the application, reusable code and how to develop the fastest and most efficient applications. So after two years of working with Swift language. I created the framework to build UI programmatically. With TTBaseUIKit, you can build apps in the fastest and most efficient way. A few points to note when you apply this framework:
- How to set up the framework Basic config settings Usage example  Introduction I have been building framework for 5 years and for now, I still update new functions.</description>
-      
-    </item>
-    
   </channel>
 </rss>

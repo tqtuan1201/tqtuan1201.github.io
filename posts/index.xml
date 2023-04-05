@@ -6,7 +6,21 @@
     <description>Recent content in Posts on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Mar 2023 17:19:56 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Apr 2023 14:00:33 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to design the food selection in a mobile application</title>
+      <link>https://tqtuan1201.github.io/posts/devlife-12bay-food/</link>
+      <pubDate>Mon, 03 Apr 2023 14:00:33 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/devlife-12bay-food/</guid>
+      
+        <description>Long time no see! Just keep doing it and you&amp;rsquo;ll reach your goals.
+ Abstract So, today we will be discussing about how to design the food selection in a mobile application. In this post, we will explore
+ Improve your mindset about developing applications. Working on Swift, Sketch.  Let&amp;rsquo;s do it.
+ What is the purpose of the function? The main purpose is to provide more utility to customers using the 12bay application.</description>
+      
+    </item>
+    
     <item>
       <title>Are you following your dream?</title>
       <link>https://tqtuan1201.github.io/posts/areyoufollowingyourdream/</link>
@@ -15,7 +29,10 @@
       <guid>https://tqtuan1201.github.io/posts/areyoufollowingyourdream/</guid>
       
         <description>What’s Your Dream?  source: https://www.surpassyourgoals.com/2019/11/whats-your-dream/
-  </description>
+  &amp;ldquo;Have you ever stopped and asked yourself, &amp;lsquo;When did I die?&amp;rsquo;.
+. . . Since high school or university graduation&amp;hellip; and what is your dream?
+. . . . . . Are you trying to  survive or are you living in this world?&amp;rdquo;
+ </description>
       
     </item>
     

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>App Architecture on Tuan Truong&#39;s Blog</title>
+    <link>https://tqtuan1201.github.io/categories/app-architecture/</link>
+    <description>Recent content in App Architecture on Tuan Truong&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 Jul 2022 16:50:03 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/categories/app-architecture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TTBaseUIKit - Framework to build UI programmatically</title>
+      <link>https://tqtuan1201.github.io/posts/ttbaseuikit-ui-framework/</link>
+      <pubDate>Tue, 12 Jul 2022 16:50:03 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/ttbaseuikit-ui-framework/</guid>
+      
+        <description>Abstract When I work with many projects. I always ask myself how to optimize the application, reusable code and how to develop the fastest and most efficient applications. So after two years of working with Swift language. I created the framework to build UI programmatically. With TTBaseUIKit, you can build apps in the fastest and most efficient way. A few points to note when you apply this framework:
+ How to set up the framework Basic config settings Usage example  Introduction I have been building framework for 5 years and for now, I still update new functions.</description>
+      
+    </item>
+    
+    <item>
+      <title>The VIPER Architecture</title>
+      <link>https://tqtuan1201.github.io/posts/my-first-post/</link>
+      <pubDate>Mon, 01 Mar 2021 15:58:30 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/my-first-post/</guid>
+      
+        <description>Architecture Just like MVC or MVVM, VIPER is a design pattern created to facilitate the development by creating layers of abstraction and isolation of concerns, creating a cleaner code, and bringing more maintainability further down the road
+VIPER is an acronym for View-Interactor-Presenter-Entity-Router. Each functionality or module must be defined by these five components.
+View It’s what the user sees, the view that represents a functionality. In some cases, a single functionality can have multiple views, for example, an onboarding flow with multiple steps.</description>
+      
+    </item>
+    
+  </channel>
+</rss>
