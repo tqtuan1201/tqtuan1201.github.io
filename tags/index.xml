@@ -6,7 +6,29 @@
     <description>Recent content in Tags on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Apr 2023 14:00:33 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Apr 2023 14:42:41 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Economics</title>
+      <link>https://tqtuan1201.github.io/tags/economics/</link>
+      <pubDate>Fri, 07 Apr 2023 14:42:41 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/tags/economics/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Note</title>
+      <link>https://tqtuan1201.github.io/tags/note/</link>
+      <pubDate>Fri, 07 Apr 2023 14:42:41 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/tags/note/</guid>
+      
+        <description></description>
+      
+    </item>
+    
     <item>
       <title>12bay</title>
       <link>https://tqtuan1201.github.io/tags/12bay/</link>
@@ -360,20 +382,9 @@
     </item>
     
     <item>
-      <title>CICD</title>
-      <link>https://tqtuan1201.github.io/tags/cicd/</link>
-      <pubDate>Thu, 25 Mar 2021 10:38:57 +0700</pubDate>
-      
-      <guid>https://tqtuan1201.github.io/tags/cicd/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
       <title>NLP</title>
       <link>https://tqtuan1201.github.io/tags/nlp/</link>
-      <pubDate>Fri, 19 Mar 2021 13:11:55 +0700</pubDate>
+      <pubDate>Sat, 19 Mar 2022 13:11:55 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/tags/nlp/</guid>
       
@@ -382,9 +393,20 @@
     </item>
     
     <item>
+      <title>CICD</title>
+      <link>https://tqtuan1201.github.io/tags/cicd/</link>
+      <pubDate>Fri, 25 Feb 2022 10:38:57 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/tags/cicd/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
       <title>VIPER</title>
       <link>https://tqtuan1201.github.io/tags/viper/</link>
-      <pubDate>Mon, 01 Mar 2021 15:58:30 +0700</pubDate>
+      <pubDate>Sat, 01 Jan 2022 15:58:30 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/tags/viper/</guid>
       

@@ -193,9 +193,21 @@ Completing this section, we must know the following knowledge:
     </item>
     
     <item>
+      <title>Natural Language Processing On Ios Application Implement Viper Clean Architecture In An Ios App</title>
+      <link>https://tqtuan1201.github.io/posts/nlp-on-ios-application-viper-arch/</link>
+      <pubDate>Sat, 19 Mar 2022 13:11:55 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/nlp-on-ios-application-viper-arch/</guid>
+      
+        <description>Abstract Xây dựng ứng dụng iOS với kiến trúc VIPER về dự đoán tác giả bài thơ. Input đầu vào là một đoạn text đoạn thơ người dùng nhập vào và output là tác giả của đoạn thơ đó. Ví dụ: INPUT = Sao anh không về chơi thôn Vĩ? → OUTPUT = Hàn Mặc Tử
+  Tìm hiểu về Bag of Words, Turi Create. Xây dựng ứng dụng iOS trên kiến trúc VIPER Clean Architecture Một số từ khóa liên quan: Bag of Word, Logictic Classifier, Turi Create VIPER, iOS Application     Đặt Vấn Đề INPUT STRING:</description>
+      
+    </item>
+    
+    <item>
       <title>Basic Ci Cd Gitlab Fastlane</title>
       <link>https://tqtuan1201.github.io/posts/basic-ci-cd-gitlab-fastlane/</link>
-      <pubDate>Thu, 25 Mar 2021 10:38:57 +0700</pubDate>
+      <pubDate>Fri, 25 Feb 2022 10:38:57 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/posts/basic-ci-cd-gitlab-fastlane/</guid>
       
@@ -207,21 +219,9 @@ Completing this section, we must know the following knowledge:
     </item>
     
     <item>
-      <title>Natural Language Processing On Ios Application Implement Viper Clean Architecture In An Ios App</title>
-      <link>https://tqtuan1201.github.io/posts/nlp-on-ios-application-viper-arch/</link>
-      <pubDate>Fri, 19 Mar 2021 13:11:55 +0700</pubDate>
-      
-      <guid>https://tqtuan1201.github.io/posts/nlp-on-ios-application-viper-arch/</guid>
-      
-        <description>Abstract Xây dựng ứng dụng iOS với kiến trúc VIPER về dự đoán tác giả bài thơ. Input đầu vào là một đoạn text đoạn thơ người dùng nhập vào và output là tác giả của đoạn thơ đó. Ví dụ: INPUT = Sao anh không về chơi thôn Vĩ? → OUTPUT = Hàn Mặc Tử
-  Tìm hiểu về Bag of Words, Turi Create. Xây dựng ứng dụng iOS trên kiến trúc VIPER Clean Architecture Một số từ khóa liên quan: Bag of Word, Logictic Classifier, Turi Create VIPER, iOS Application     Đặt Vấn Đề INPUT STRING:</description>
-      
-    </item>
-    
-    <item>
       <title>The VIPER Architecture</title>
       <link>https://tqtuan1201.github.io/posts/my-first-post/</link>
-      <pubDate>Mon, 01 Mar 2021 15:58:30 +0700</pubDate>
+      <pubDate>Sat, 01 Jan 2022 15:58:30 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/posts/my-first-post/</guid>
       
