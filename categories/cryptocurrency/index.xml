@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cryptocurrency on Tuan Truong&#39;s Blog</title>
+    <link>https://tqtuan1201.github.io/categories/cryptocurrency/</link>
+    <description>Recent content in Cryptocurrency on Tuan Truong&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 16 Apr 2022 08:21:19 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/categories/cryptocurrency/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The vision</title>
+      <link>https://tqtuan1201.github.io/posts/note/cryptocurrency_world/</link>
+      <pubDate>Sat, 16 Apr 2022 08:21:19 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/note/cryptocurrency_world/</guid>
+      
+        <description>Cryptocurrency World
+Type something in the input field to search the table for keywords or description:
+   $(document).ready(function(){ $(&#34;#myInput&#34;).on(&#34;keyup&#34;, function() { var value = $(this).val().toLowerCase(); $(&#34;table tbody tr&#34;).filter(function() { $(this).toggle($(this).text().toLowerCase().indexOf(value)  -1) }); }); });       Key Define More     **ví metamask S&amp;amp;P 500 is a stock market index in the United States that includes 500 of the largest and most popular companies.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

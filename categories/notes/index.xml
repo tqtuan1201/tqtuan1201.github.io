@@ -6,7 +6,20 @@
     <description>Recent content in Notes on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Apr 2023 14:42:41 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/categories/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Apr 2023 13:54:47 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/categories/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What&#39;s the difference between who, whom, and whose, and how do we use these?</title>
+      <link>https://tqtuan1201.github.io/posts/learnenglish/grammar/who-whom-whose/</link>
+      <pubDate>Wed, 12 Apr 2023 13:54:47 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/learnenglish/grammar/who-whom-whose/</guid>
+      
+        <description>When I was learning english, I didn&amp;rsquo;t know how to distinguish between who, whom and whose. So this post i am noting some keywords to remember. Some knowledge has been extracted from www.myenglishpages.com.&amp;quot;
+ The main point &amp;ldquo;Who,&amp;rdquo; &amp;ldquo;whom,&amp;rdquo; and &amp;ldquo;whose&amp;rdquo; are all relative pronouns used in English to refer to  people, animals, or things previously mentioned in a sentence.
+Info Who is used as the subject of a sentence or clause (refers to the person who is doing the action).</description>
+      
+    </item>
+    
     <item>
       <title>Key Notes in Economics</title>
       <link>https://tqtuan1201.github.io/posts/note/economics/</link>
@@ -32,6 +45,19 @@ https://aciids.pwr.edu.pl/2022/download/ACIIDS_2022_HCMC_Flyer_v.7.0.pdf
  Paper Submission:
 The proceedings of ACIIDS 2022 will be published by Springer in series Lecture Notes in Artificial Intelligence and will be distributed at the conference
  LNCS/LNAI style. Should not exceed 13 pages.   Here is a my collect data with purpose to learn, more knowledge from large amount of examples, solutions, and ideas on the internet.</description>
+      
+    </item>
+    
+    <item>
+      <title>The vision</title>
+      <link>https://tqtuan1201.github.io/posts/note/cryptocurrency_world/</link>
+      <pubDate>Sat, 16 Apr 2022 08:21:19 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/note/cryptocurrency_world/</guid>
+      
+        <description>Cryptocurrency World
+Type something in the input field to search the table for keywords or description:
+   $(document).ready(function(){ $(&#34;#myInput&#34;).on(&#34;keyup&#34;, function() { var value = $(this).val().toLowerCase(); $(&#34;table tbody tr&#34;).filter(function() { $(this).toggle($(this).text().toLowerCase().indexOf(value)  -1) }); }); });       Key Define More     **ví metamask S&amp;amp;P 500 is a stock market index in the United States that includes 500 of the largest and most popular companies.</description>
       
     </item>
     

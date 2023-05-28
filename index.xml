@@ -6,7 +6,20 @@
     <description>Recent content on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Apr 2023 13:54:47 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 May 2023 16:51:06 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MEET OUR TEAM</title>
+      <link>https://tqtuan1201.github.io/posts/job/cv/ourteam/</link>
+      <pubDate>Thu, 18 May 2023 16:51:06 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/job/cv/ourteam/</guid>
+      
+        <description>If you have a great idea but don&amp;rsquo;t know how to start?
+ Don&#39;t worry, simply click on &#39;Contact Me&#39; and we can discuss your project over a cup of coffee. Together, we&#39;ll work to make your dreams a reality.
+Our development team specializes in creating innovative mobile applications and websites. With a diverse set of skills and expertise, we work collaboratively to deliver high-quality solutions that meet our clients&#39; needs.</description>
+      
+    </item>
+    
     <item>
       <title>What&#39;s the difference between who, whom, and whose, and how do we use these?</title>
       <link>https://tqtuan1201.github.io/posts/learnenglish/grammar/who-whom-whose/</link>
@@ -186,6 +199,17 @@ Abstract Last post, We completed the home screen. Today, We will focus to design
     </item>
     
     <item>
+      <title>MY RESUME</title>
+      <link>https://tqtuan1201.github.io/posts/job/cv/myresume/</link>
+      <pubDate>Wed, 18 May 2022 16:51:06 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/job/cv/myresume/</guid>
+      
+        <description>My name is Tuan (short for Quang-Tuan Truong). I’m a mobile lead with years of professional experience building applications and leading teams in both large companies and small startups. I am also co-founder of 12bay. Those applications provide simple solutions to help customers plan and travel quickly and conveniently. In 2023 with more than 900.000 download end 1,900 active users daily and I built everything from the front-end to the back-end and everything in between.</description>
+      
+    </item>
+    
+    <item>
       <title>Apple Watch Serial P2 Homescreen Connect</title>
       <link>https://tqtuan1201.github.io/posts/apple-watch-serial-p2-homescreen-connect/</link>
       <pubDate>Fri, 13 May 2022 15:01:56 +0700</pubDate>
@@ -260,6 +284,19 @@ https://aciids.pwr.edu.pl/2022/download/ACIIDS_2022_HCMC_Flyer_v.7.0.pdf
  Paper Submission:
 The proceedings of ACIIDS 2022 will be published by Springer in series Lecture Notes in Artificial Intelligence and will be distributed at the conference
  LNCS/LNAI style. Should not exceed 13 pages.   Here is a my collect data with purpose to learn, more knowledge from large amount of examples, solutions, and ideas on the internet.</description>
+      
+    </item>
+    
+    <item>
+      <title>The vision</title>
+      <link>https://tqtuan1201.github.io/posts/note/cryptocurrency_world/</link>
+      <pubDate>Sat, 16 Apr 2022 08:21:19 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/note/cryptocurrency_world/</guid>
+      
+        <description>Cryptocurrency World
+Type something in the input field to search the table for keywords or description:
+   $(document).ready(function(){ $(&#34;#myInput&#34;).on(&#34;keyup&#34;, function() { var value = $(this).val().toLowerCase(); $(&#34;table tbody tr&#34;).filter(function() { $(this).toggle($(this).text().toLowerCase().indexOf(value)  -1) }); }); });       Key Define More     **ví metamask S&amp;amp;P 500 is a stock market index in the United States that includes 500 of the largest and most popular companies.</description>
       
     </item>
     

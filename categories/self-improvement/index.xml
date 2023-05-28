@@ -19,5 +19,18 @@
       
     </item>
     
+    <item>
+      <title>The vision</title>
+      <link>https://tqtuan1201.github.io/posts/note/cryptocurrency_world/</link>
+      <pubDate>Sat, 16 Apr 2022 08:21:19 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/note/cryptocurrency_world/</guid>
+      
+        <description>Cryptocurrency World
+Type something in the input field to search the table for keywords or description:
+   $(document).ready(function(){ $(&#34;#myInput&#34;).on(&#34;keyup&#34;, function() { var value = $(this).val().toLowerCase(); $(&#34;table tbody tr&#34;).filter(function() { $(this).toggle($(this).text().toLowerCase().indexOf(value)  -1) }); }); });       Key Define More     **ví metamask S&amp;amp;P 500 is a stock market index in the United States that includes 500 of the largest and most popular companies.</description>
+      
+    </item>
+    
   </channel>
 </rss>
