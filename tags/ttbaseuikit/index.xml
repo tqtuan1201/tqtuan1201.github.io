@@ -6,7 +6,18 @@
     <description>Recent content in TTBaseUIKit on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Apr 2023 14:00:33 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/ttbaseuikit/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 May 2023 16:05:16 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/ttbaseuikit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SwiftUI Series - Updating TTBaseUIKit to support SwiftUI</title>
+      <link>https://tqtuan1201.github.io/posts/job/ios/swiftui/ttbaseuikitswiftuiserial/</link>
+      <pubDate>Mon, 29 May 2023 16:05:16 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/job/ios/swiftui/ttbaseuikitswiftuiserial/</guid>
+      
+        <description>Abstract InfoSwiftUI: It’s the future   I realize that now is a suitable time to learn and apply SwiftUI in the real world. So in this series, I will delve into the fundamental components of SwiftUI. With the knowledge gained, we will update TTBaseUIKit to support SwiftUI, allowing us to quickly build applications using these basic components. Additionally, we will develop a new feature called &amp;lsquo;Bus Booking&amp;rsquo; using SwiftUI on the 12Bay application.</description>
+      
+    </item>
+    
     <item>
       <title>How to design the food selection in a mobile application</title>
       <link>https://tqtuan1201.github.io/posts/devlife-12bay-food/</link>
