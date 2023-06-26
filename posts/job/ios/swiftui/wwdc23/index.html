@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme="light"
+  class="html"
+><head>
+  <title>
+    
+      Tuan Truong
+        |
+        WWDC23 from the perspective of an iOS developer
+
+
+      
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.81.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Tuan Truong" />
+  <meta
+    name="description"
+    content="
+      “The only thing that is constant is change”, Heraclitus.
+
+
+    "
+  />
+  
+    <meta name="google-site-verification" content="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.96ada9109c76570a48abadb1799220bb70919f1bc785eaac1c0152d6055421ce.css"
+      integrity="sha256-lq2pEJx2VwpIq62xeZIgu3CRnxvHheqsHAFS1gVUIc4="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.69685904d5c2a0c6258d03c207b778c10466edf6cea928cc0164c376b0ad0930.css"
+    integrity="sha256-aWhZBNXCoMYljQPCB7d4wQRm7fbOqSjMAWTDdrCtCTA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.6d585e78d28cce1200d39fb133c92ed83df01738da721d0f48fb6eac62d24e04.css"
+    integrity="sha256-bVheeNKMzhIA05&#43;xM8ku2D3wFzjach0PSPturGLSTgQ="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.6b00d96498d59caa0dbcf9b49d30d821915291f2ceb0e19248523c8607ff43fa.css"
+    integrity="sha256-awDZZJjVnKoNvPm0nTDYIZFSkfLOsOGSSFI8hgf/Q/o="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/images/profile.jpg" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://tqtuan1201.github.io/posts/job/ios/swiftui/wwdc23/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.46e6a54097480084f8f52c20ca1aa7425b4fad17029a887fd4017b12e311a72d.js"
+    integrity="sha256-RualQJdIAIT49SwgyhqnQltPrRcCmoh/1AF7EuMRpy0="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.5557c8ff5617a01067ac258fd70b9b992506e379317b0da51e5e0f6e018b408a.js"
+      integrity="sha256-VVfI/1YXoBBnrCWP1wubmSUG43kxew2lHl4PbgGLQIo="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tqtuan1201.github.io/images/profile.jpg"/>
+
+<meta name="twitter:title" content="WWDC23 from the perspective of an iOS developer"/>
+<meta name="twitter:description" content="Abstract WWDC23 - Code new worlds - Since the event took place, I have been following updates on SwiftUI. It demonstrates the importance of SwiftUI in Apple&rsquo;s ecosystem. And more than just a new product, Vision Pro shows a direction for the future, which could change the way we interact, communicate, and work. It takes time for this product to prove itself - a revolutionary product like the iPhone or not?"/>
+<meta name="twitter:site" content="@QuangTuan0409"/>
+
+
+
+  
+  <meta property="og:title" content="WWDC23 from the perspective of an iOS developer" />
+<meta property="og:description" content="Abstract WWDC23 - Code new worlds - Since the event took place, I have been following updates on SwiftUI. It demonstrates the importance of SwiftUI in Apple&rsquo;s ecosystem. And more than just a new product, Vision Pro shows a direction for the future, which could change the way we interact, communicate, and work. It takes time for this product to prove itself - a revolutionary product like the iPhone or not?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tqtuan1201.github.io/posts/job/ios/swiftui/wwdc23/" /><meta property="og:image" content="https://tqtuan1201.github.io/images/profile.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-06-12T15:42:34&#43;07:00" />
+<meta property="article:modified_time" content="2023-06-12T15:42:34&#43;07:00" /><meta property="og:site_name" content="Hi, I&#39;m Tuan Truong" />
+<meta property="og:see_also" content="https://tqtuan1201.github.io/posts/job/ios/swiftui/ttbaseuikitswiftuiserial/" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "posts",
+        "name": "WWDC23 from the perspective of an iOS developer",
+        "headline": "WWDC23 from the perspective of an iOS developer",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Abstract WWDC23 - Code new worlds - Since the event took place, I have been following updates on SwiftUI. It demonstrates the importance of SwiftUI in Apple\u0026rsquo;s ecosystem. And more than just a new product, Vision Pro shows a direction for the future, which could change the way we interact, communicate, and work. It takes time for this product to prove itself - a revolutionary product like the iPhone or not?
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/tqtuan1201.github.io\/posts\/job\/ios\/swiftui\/wwdc23\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightYear" : "2023",
+        "dateCreated": "2023-06-12T15:42:34.00Z",
+        "datePublished": "2023-06-12T15:42:34.00Z",
+        "dateModified": "2023-06-12T15:42:34.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Tuan Truong",
+            "url": "https://tqtuan1201.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/tqtuan1201.github.io\/images\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://tqtuan1201.github.io/images/profile.jpg"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/tqtuan1201.github.io\/posts\/job\/ios\/swiftui\/wwdc23\/",
+        "wordCount" : "569",
+        "genre" : [ 
+      
+      "News and Updates"
+
+    
+      
+        ,
+
+      
+      "Dev Journey"
+
+    ],
+        "keywords" : [ 
+      
+      "WWDC23"
+
+    
+      
+        ,
+
+      
+      "visionOS"
+
+    
+      
+        ,
+
+      
+      "SwiftUI"
+
+    ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--light"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/profile.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Hi, I&#39;m Tuan Truong</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>“The only thing that is constant is change”, Heraclitus.</p>
+        </br>
+        <div class="sidebar__introduction-description">
+          <i style="color:#454545; font-weight: 360; font-size: 0.92em;">'If you have a great idea but don’t know how to start? Don't worry, simply click on <a href="/posts/job/cv/ourteam"><strong>Meet My Team</strong></a> and we can discuss your project over a cup of coffee'</i>
+        </div>
+        </br></br>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a href="https://www.linkedin.com/in/thales-truong" rel="me" aria-label="Linkedin" title="Linkedin">
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a href="https://github.com/tqtuan1201" rel="me" aria-label="GitHub" title="GitHub">
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a href="mailto:truongquangtuanit@gmail.com" rel="me" aria-label="e-mail" title="e-mail">
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a href="https://twitter.com/QuangTuan0409" rel="me" aria-label="Twitter" title="Twitter">
+            <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a href="https://tuananhstory.com/" rel="me" aria-label="instagram" title="instagram">
+            <i class="fa-brands fa-safari fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2023
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
+    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/keynote"
+              
+              title=""
+              >Topics</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/posts"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/portfolio"
+              
+              title=""
+              >Projects</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/certifications"
+              
+              title=""
+              >Certifications</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/series"
+              
+              title=""
+              >Series</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/categories"
+              
+              title=""
+              >Categories</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/categories/notes/"
+              
+              title=""
+              >Notes</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/tags"
+              
+              title=""
+              >Tags</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/about"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/contact"
+              
+              title=""
+              >Contact</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      <li class="nav__list-item">
+        <div class="dropdown">
+          <button> RESUMES </button>
+          <div class="dropdown-content">
+          <a href="/posts/job/cv/myresume">My</a>
+          <a href="/posts/job/cv/ourteam">Team</a>
+          </div>
+        </div>
+      </li>
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+
+<style>
+ 
+.dropdown {
+  display: inline-block;
+  position: relative;
+  padding-right: 10px;
+  padding-left: 4px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+  border-radius: 2px;
+}
+.dropdown-content a {
+  display: block;
+  color: #000000;
+  padding: 5px;
+  text-decoration: none;
+}
+.dropdown-content a:hover {
+  color: #FFFFFF;
+  background-color: #686868;
+}
+</style>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+      <div class="post__thumbnail-wrapper">
+        <img class="post__thumbnail" src="/images/image-20230612155458610.png?quality=92&amp;strip=all" alt="Thumbnail image" />
+      </div>
+
+    
+
+    <div class="post__content">
+      <h1>WWDC23 From the Perspective of an IOS Developer</h1>
+      <h3>Table of Contents</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#whats-new">What&rsquo;s new</a>
+      <ul>
+        <li><a href="#ios-17">iOS 17</a></li>
+        <li><a href="#ipados-17">iPadOS 17</a></li>
+        <li><a href="#watchos-10">watchOS 10</a></li>
+        <li><a href="#macos-sonoma">macOS Sonoma</a></li>
+      </ul>
+    </li>
+    <li><a href="#visionos">visionOS</a>
+      <ul>
+        <li><a href="#the-architecture">The architecture</a></li>
+      </ul>
+    </li>
+    <li><a href="#the-first-application-on-a-visionos">The first application on a visionOS</a>
+      <ul>
+        <li><a href="#tool">Tool</a></li>
+        <li><a href="#install">Install</a>
+          <ul>
+            <li><a href="#step1-extracting-the-xip-file-and-install">Step1: Extracting the <code>xip file</code> and install</a></li>
+            <li><a href="#step2-create-the-app">Step2: Create the app</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+        <div style="width: 100%; margin: 0 auto; background:rgba(0,0,0,0.5); height: 1px; opacity: 0.6"> </div><h1 id="abstract">Abstract</h1>
+<p><a href="https://developer.apple.com/wwdc23/sessions/"> WWDC23</a> - <code>Code new worlds</code> - Since the event took place, I have been following updates on <code>SwiftUI</code>. It demonstrates the importance of <code>SwiftUI</code> in Apple&rsquo;s ecosystem. And more than just a new product, <a href="https://www.apple.com/apple-vision-pro/">Vision Pro</a> shows a direction for the future, which could change the way we interact, communicate, and work. It takes time for this product to prove itself - a revolutionary product like the iPhone or not? However, from my personal perspective, I find it very attractive and expect it to be a breakthrough product. In this article, I will summarize some key points about WWDC23 as well as some information related to visionOS.&quot;.</p>
+<h1 id="whats-new">What&rsquo;s new</h1>
+<h2 id="ios-17">iOS 17</h2>
+<p>Here are some standout features: <code> Contact Posters – Phone App, StandBy, Stickers in Messages, NameDrop and AirDrop for Sharing</code>. This image bellow summarizes what&rsquo;s new in iOS 17:</p>
+<figure class="medium">
+    <img src="/images/image-20230626115328650.png"
+         alt="image"/> <figcaption>
+            <p>iOS 17 Updates Summary (source: Apple)</p>
+        </figcaption>
+</figure>
+
+<h2 id="ipados-17">iPadOS 17</h2>
+<p>Live Activities, personalised lock screen, interactive widgets. New messages, faceTime, notes, safari, accessibility features</p>
+<figure class="medium">
+    <img src="/images/image-20230626123740061.png"
+         alt="image"/> <figcaption>
+            <p>iPadOS 17 Updates Summary (source: Apple)</p>
+        </figcaption>
+</figure>
+
+<h2 id="watchos-10">watchOS 10</h2>
+<p>Some of the new features include Smart Stacks, which show relevant widgets and apps based on machine learning, cycling workouts, which support Bluetooth sensors and power measurements, and new watch faces.</p>
+<figure class="small">
+    <img src="/images/image-20230626124855172.png"
+         alt="image"/> <figcaption>
+            <p>watchOS 10 Updates Summary (source: Apple)</p>
+        </figcaption>
+</figure>
+
+<h2 id="macos-sonoma">macOS Sonoma</h2>
+<p>Interactive widgets, new lock screen, new screen savers, smart video conferencing, game mode, new accessibility features</p>
+<figure class="small">
+    <img src="/images/image-20230626125511444.png"
+         alt="image"/> <figcaption>
+            <p>macOS 10 Updates Summary (source: Apple)</p>
+        </figcaption>
+</figure>
+
+<hr>
+<h1 id="visionos">visionOS</h1>
+<blockquote>
+<p>All-new platform. Familiar frameworks and tools. Get ready to design and build an entirely new universe of apps and games for Apple Vision Pro.</p>
+</blockquote>
+<h2 id="the-architecture">The architecture</h2>
+<p>Apple describes visionOS as “the first OS designed from the ground up for spatial computing” — spatial computing being Apple’s phrase of choice for augmented and virtual reality experiences. At the architecture level, visionOS <code>shares core blocks in common with MacOS and iOS</code>, but adds a <mark>real-time subsystem </mark> for processing interactive visuals on the Apple Vision Pro.</p>
+<figure class="small">
+    <img src="/images/image-20230626143840200.png"
+         alt="image"/> <figcaption>
+            <p>The architecture of the visionOS (source: Apple)</p>
+        </figcaption>
+</figure>
+
+<p>Here are some useful links to learn about this</p>
+<ul>
+<li><a href="https://developer.apple.com/visionos/">Discover visionOS from Apple</a></li>
+<li><a href="https://developer.apple.com/visionos/planning/">Start developing with the visionOS</a></li>
+<li><a href="https://developer.apple.com/documentation/visionOS">Document from Apple</a></li>
+</ul>
+<p>I&rsquo;m very excited about visionOS, so let&rsquo;s start practicing and writeing the first application</p>
+<h1 id="the-first-application-on-a-visionos">The first application on a visionOS</h1>
+<p>Here is a tutorial from Apple  <a href="https://developer.apple.com/documentation/visionos/creating-your-first-visionos-app">Build a new visionOS app using SwiftUI and add platform-specific features</a></p>
+<h2 id="tool">Tool</h2>
+<p>You need to install <a href="https://developer.apple.com/download/applications/">Download Xcode 15 beta 2</a></p>
+<figure class="small">
+    <img src="/images/image-20230626135551255.png"
+         alt="image"/> <figcaption>
+            <p>Download Xcode 15 beta 2</p>
+        </figcaption>
+</figure>
+
+<h2 id="install">Install</h2>
+<p>This is step-by-step tutorial that will help you easily learn and create your first app: <a href="https://developer.apple.com/news/?id=765ce4l3">Spotlight on: Developer tools for visionOS</a></p>
+<h3 id="step1-extracting-the-xip-file-and-install">Step1: Extracting the <code>xip file</code> and install</h3>
+<p>Double-click on the <code>Xcode_15_beta_2.xip</code> file to extracting it. After that, open it and initiate the installation. You will be presented with a pop-up window allowing you to choose what you want to install. Specifically, select Xcode beta and click the button to proceed with Vision OS.</p>
+<figure class="tiny">
+    <img src="/images/image-20230626145205323.png"
+         alt="image"/> <figcaption>
+            <p>Install Xcode 15 beta 2 - add visionOS</p>
+        </figcaption>
+</figure>
+
+<h3 id="step2-create-the-app">Step2: Create the app</h3>
+<p>A new window will appear, offering various options to create a new project. Select “Vision OS” and then click on “App.” You will also have the option to download the wearable version of Vision OS.</p>
+<figure class="big">
+    <img src="/images/vision-the-first-app.gif"
+         alt="image"/> <figcaption>
+            <p>Run on visionOS simulator</p>
+        </figcaption>
+</figure>
+
+<h1 id="conclusion">Conclusion</h1>
+<p>That&rsquo;s all for now. In future articles, we will discuss more details about visionOS. The next step is to learn SwiftUI so that we can write the function for booking a bus in the previous article, <a href="posts/job/ios/swiftui/ttbaseuikitswiftuiserial/">SwiftUI Series - Updating TTBaseUIKit to Support SwiftUI</a>. See you soon!</p>
+
+
+
+<h3>Posts in this Series</h3>
+<ul>
+  
+    <li><a href="/posts/job/ios/swiftui/wwdc23/">WWDC23 From the Perspective of an IOS Developer</a></li>
+
+  
+    <li><a href="/posts/job/ios/swiftui/ttbaseuikitswiftuiserial/">SwiftUI Series - Updating TTBaseUIKit to Support SwiftUI</a></li>
+
+  
+</ul>
+
+<div class="contact-form">
+  <form class="form-style" method="POST" action="https://formspree.io/f/mqknvogq" data-toggle="validator">
+    <ul>
+      <li>
+        <label for="username">Name</label>
+        <input class="field-style field-full" type="text" name="username" id="username" placeholder="Name" required>
+      </li>
+      <li>
+        <label for="email">Email</label>
+        <input class="field-style field-full" type="email" id="email" name="email" placeholder="Email" required>
+      </li>
+      <li>
+        <label for="message">Message</label>
+        <textarea class="field-style" name="message" id="message" rows="6" placeholder="Message"></textarea>
+      </li>
+      <li>
+        <input class="field-style" type="submit" value="Send" />
+      </li>
+      <li>
+        <input type="text" name="_gotcha" style="display:none" />
+      </li>
+    </ul>
+  </form>
+</div>
+</div>
+    <div class="post__footer">
+      
+        <span><a class="category" href="/categories/news-and-updates/">News and Updates</a><a class="category" href="/categories/dev-journey/">Dev Journey</a></span>
+
+
+
+
+      
+
+      
+        <span><a class="tag" href="/tags/wwdc23/">WWDC23</a><a class="tag" href="/tags/visionos/">visionOS</a><a class="tag" href="/tags/swiftui/">SwiftUI</a></span>
+
+
+
+
+      
+    </div>
+
+    
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2023
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
+    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script>
+  <script async defer src=" https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" /></noscript>
+
+
+</body>
+</html>

@@ -2,40 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://tqtuan1201.github.io/categories/12bay-project/</loc>
-    <lastmod>2023-05-29T16:05:16+07:00</lastmod>
-  </url><url>
     <loc>https://tqtuan1201.github.io/categories/</loc>
-    <lastmod>2023-05-29T16:05:16+07:00</lastmod>
+    <lastmod>2023-06-12T15:42:34+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/categories/dev-journey/</loc>
+    <lastmod>2023-06-12T15:42:34+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/categories/news-and-updates/</loc>
+    <lastmod>2023-06-12T15:42:34+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/posts/</loc>
+    <lastmod>2023-06-12T15:42:34+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/series/</loc>
+    <lastmod>2023-06-12T15:42:34+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/swiftui/</loc>
+    <lastmod>2023-06-12T15:42:34+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/series/swiftui-serial-updating-ttbaseuikit-to-support-swiftui/</loc>
+    <lastmod>2023-06-12T15:42:34+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/</loc>
+    <lastmod>2023-06-12T15:42:34+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/</loc>
+    <lastmod>2023-06-12T15:42:34+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/visionos/</loc>
+    <lastmod>2023-06-12T15:42:34+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/wwdc23/</loc>
+    <lastmod>2023-06-12T15:42:34+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/posts/job/ios/swiftui/wwdc23/</loc>
+    <lastmod>2023-06-12T15:42:34+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/categories/12bay-project/</loc>
     <lastmod>2023-05-29T16:05:16+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/tags/ios/</loc>
     <lastmod>2023-05-29T16:05:16+07:00</lastmod>
   </url><url>
-    <loc>https://tqtuan1201.github.io/posts/</loc>
-    <lastmod>2023-05-29T16:05:16+07:00</lastmod>
-  </url><url>
-    <loc>https://tqtuan1201.github.io/series/</loc>
-    <lastmod>2023-05-29T16:05:16+07:00</lastmod>
-  </url><url>
-    <loc>https://tqtuan1201.github.io/tags/swiftui/</loc>
-    <lastmod>2023-05-29T16:05:16+07:00</lastmod>
-  </url><url>
-    <loc>https://tqtuan1201.github.io/series/swiftui-serial-updating-ttbaseuikit-to-support-swiftui/</loc>
-    <lastmod>2023-05-29T16:05:16+07:00</lastmod>
-  </url><url>
     <loc>https://tqtuan1201.github.io/posts/job/ios/swiftui/ttbaseuikitswiftuiserial/</loc>
     <lastmod>2023-05-29T16:05:16+07:00</lastmod>
   </url><url>
-    <loc>https://tqtuan1201.github.io/tags/</loc>
-    <lastmod>2023-05-29T16:05:16+07:00</lastmod>
-  </url><url>
     <loc>https://tqtuan1201.github.io/tags/ttbaseuikit/</loc>
-    <lastmod>2023-05-29T16:05:16+07:00</lastmod>
-  </url><url>
-    <loc>https://tqtuan1201.github.io/</loc>
     <lastmod>2023-05-29T16:05:16+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/posts/job/cv/ourteam/</loc>
@@ -291,9 +303,6 @@
     <lastmod>2022-04-06T16:05:26+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/tags/mobile-development/</loc>
-    <lastmod>2022-04-06T16:05:26+07:00</lastmod>
-  </url><url>
-    <loc>https://tqtuan1201.github.io/categories/news-and-updates/</loc>
     <lastmod>2022-04-06T16:05:26+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/tags/roadmap/</loc>

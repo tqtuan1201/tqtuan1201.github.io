@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>visionOS on Tuan Truong&#39;s Blog</title>
+    <link>https://tqtuan1201.github.io/tags/visionos/</link>
+    <description>Recent content in visionOS on Tuan Truong&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 Jun 2023 15:42:34 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/visionos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WWDC23 from the perspective of an iOS developer</title>
+      <link>https://tqtuan1201.github.io/posts/job/ios/swiftui/wwdc23/</link>
+      <pubDate>Mon, 12 Jun 2023 15:42:34 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/job/ios/swiftui/wwdc23/</guid>
+      
+        <description>Abstract WWDC23 - Code new worlds - Since the event took place, I have been following updates on SwiftUI. It demonstrates the importance of SwiftUI in Apple&amp;rsquo;s ecosystem. And more than just a new product, Vision Pro shows a direction for the future, which could change the way we interact, communicate, and work. It takes time for this product to prove itself - a revolutionary product like the iPhone or not?</description>
+      
+    </item>
+    
+  </channel>
+</rss>
