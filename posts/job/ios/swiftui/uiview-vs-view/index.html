@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme="light"
+  class="html"
+><head>
+  <title>
+    
+      Tuan Truong
+        |
+        Understand View in SwiftUI
+
+
+      
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.81.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Tuan Truong" />
+  <meta
+    name="description"
+    content="
+      “The only thing that is constant is change”, Heraclitus.
+
+
+    "
+  />
+  
+    <meta name="google-site-verification" content="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.96ada9109c76570a48abadb1799220bb70919f1bc785eaac1c0152d6055421ce.css"
+      integrity="sha256-lq2pEJx2VwpIq62xeZIgu3CRnxvHheqsHAFS1gVUIc4="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.322f7815beb50e8cf61e202b1aa88261e079a6ab195e36ab0b4cdd7790ef98e2.css"
+    integrity="sha256-Mi94Fb61Doz2HiArGqiCYeB5pqsZXjarC0zdd5DvmOI="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.69685904d5c2a0c6258d03c207b778c10466edf6cea928cc0164c376b0ad0930.css"
+    integrity="sha256-aWhZBNXCoMYljQPCB7d4wQRm7fbOqSjMAWTDdrCtCTA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.6d585e78d28cce1200d39fb133c92ed83df01738da721d0f48fb6eac62d24e04.css"
+    integrity="sha256-bVheeNKMzhIA05&#43;xM8ku2D3wFzjach0PSPturGLSTgQ="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.6b00d96498d59caa0dbcf9b49d30d821915291f2ceb0e19248523c8607ff43fa.css"
+    integrity="sha256-awDZZJjVnKoNvPm0nTDYIZFSkfLOsOGSSFI8hgf/Q/o="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/images/profile.jpg" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://tqtuan1201.github.io/posts/job/ios/swiftui/uiview-vs-view/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.46e6a54097480084f8f52c20ca1aa7425b4fad17029a887fd4017b12e311a72d.js"
+    integrity="sha256-RualQJdIAIT49SwgyhqnQltPrRcCmoh/1AF7EuMRpy0="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.5557c8ff5617a01067ac258fd70b9b992506e379317b0da51e5e0f6e018b408a.js"
+      integrity="sha256-VVfI/1YXoBBnrCWP1wubmSUG43kxew2lHl4PbgGLQIo="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tqtuan1201.github.io/images/profile.jpg"/>
+
+<meta name="twitter:title" content="Understand View in SwiftUI"/>
+<meta name="twitter:description" content="Abstract In this article, we will learn about view in SwiftUI. This article is part of the SwiftUI Series - SwiftUI Series - Updating TTBaseUIKit to support SwiftUI
+ View is a function of state, not a sequence of events - apple
+  Woaaaa !
+ SwiftUI - Apple&rsquo;s declarative framework for building user interfaces. The user interface is defined based on the current state of the application, and any changes to the state automatically update the corresponding views."/>
+<meta name="twitter:site" content="@QuangTuan0409"/>
+
+
+
+  
+  <meta property="og:title" content="Understand View in SwiftUI" />
+<meta property="og:description" content="Abstract In this article, we will learn about view in SwiftUI. This article is part of the SwiftUI Series - SwiftUI Series - Updating TTBaseUIKit to support SwiftUI
+ View is a function of state, not a sequence of events - apple
+  Woaaaa !
+ SwiftUI - Apple&rsquo;s declarative framework for building user interfaces. The user interface is defined based on the current state of the application, and any changes to the state automatically update the corresponding views." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tqtuan1201.github.io/posts/job/ios/swiftui/uiview-vs-view/" /><meta property="og:image" content="https://tqtuan1201.github.io/images/profile.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-08-09T11:40:45&#43;07:00" />
+<meta property="article:modified_time" content="2023-08-09T11:40:45&#43;07:00" /><meta property="og:site_name" content="Hi, I&#39;m Tuan Truong" />
+<meta property="og:see_also" content="https://tqtuan1201.github.io/posts/job/ios/swiftui/understand-safearea/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/job/ios/swiftui/wwdc23/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/job/ios/swiftui/ttbaseuikitswiftuiserial/" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "posts",
+        "name": "Understand View in SwiftUI",
+        "headline": "Understand View in SwiftUI",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Abstract In this article, we will learn about view in SwiftUI. This article is part of the SwiftUI Series - SwiftUI Series - Updating TTBaseUIKit to support SwiftUI\n View is a function of state, not a sequence of events - apple\n  Woaaaa !\n SwiftUI - Apple\u0026rsquo;s declarative framework for building user interfaces. The user interface is defined based on the current state of the application, and any changes to the state automatically update the corresponding views.
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/tqtuan1201.github.io\/posts\/job\/ios\/swiftui\/uiview-vs-view\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightYear" : "2023",
+        "dateCreated": "2023-08-09T11:40:45.00Z",
+        "datePublished": "2023-08-09T11:40:45.00Z",
+        "dateModified": "2023-08-09T11:40:45.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Tuan Truong",
+            "url": "https://tqtuan1201.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/tqtuan1201.github.io\/images\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://tqtuan1201.github.io/images/profile.jpg"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/tqtuan1201.github.io\/posts\/job\/ios\/swiftui\/uiview-vs-view\/",
+        "wordCount" : "816",
+        "genre" : [ 
+      
+      "Notes"
+
+    
+      
+        ,
+
+      
+      "Dev Journey"
+
+    
+      
+        ,
+
+      
+      "Best Practices and Tips"
+
+    ],
+        "keywords" : [ 
+      
+      "View"
+
+    
+      
+        ,
+
+      
+      "SwiftUI"
+
+    ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--light"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <a href="/about">
+        <img
+          class="sidebar__introduction-profileimage"
+          src="/images/profile.jpg"
+          alt="profile picture"
+        />
+      </a>
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Hi, I&#39;m Tuan Truong</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>“The only thing that is constant is change”, Heraclitus.</p>
+        </br>
+        <div class="sidebar__introduction-description">
+          <i style="color:#454545; font-weight: 360; font-size: 0.92em;">'If you have a great idea but don’t know how to start? Don't worry, simply click on <a href="/posts/job/cv/ourteam"><strong>Meet My Team</strong></a> and we can discuss your project over a cup of coffee'</i>
+        </div>
+        </br></br>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a href="https://www.linkedin.com/in/thales-truong" rel="me" aria-label="Linkedin" title="Linkedin">
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a href="https://github.com/tqtuan1201" rel="me" aria-label="GitHub" title="GitHub">
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a href="mailto:truongquangtuanit@gmail.com" rel="me" aria-label="e-mail" title="e-mail">
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a href="https://twitter.com/QuangTuan0409" rel="me" aria-label="Twitter" title="Twitter">
+            <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a href="https://tuananhstory.com/" rel="me" aria-label="instagram" title="instagram">
+            <i class="fa-brands fa-safari fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+    </br></br>
+    <div class="sidebar__list">
+      <a href="/buymeacoffee">
+          <img src="/images/buymeacoffee_button.png" height=40; alt="By me a coffee ^^">
+      </a>
+    </div>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2023
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
+    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/keynote"
+              
+              title=""
+              >Topics</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/posts"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/portfolio"
+              
+              title=""
+              >Projects</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/certifications"
+              
+              title=""
+              >Certifications</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/series"
+              
+              title=""
+              >Series</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/categories"
+              
+              title=""
+              >Categories</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/categories/notes/"
+              
+              title=""
+              >Notes</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/tags"
+              
+              title=""
+              >Tags</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/about"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/contact"
+              
+              title=""
+              >Contact</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      <li class="nav__list-item">
+        <div class="dropdown">
+          <button> RESUMES </button>
+          <div class="dropdown-content">
+          <a href="/posts/job/cv/myresume">My CV</a>
+          <a href="/posts/job/cv/ourteam">My Team</a>
+          </div>
+        </div>
+      </li>
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+
+<style>
+ 
+.dropdown {
+  display: inline-block;
+  position: relative;
+  padding-right: 10px;
+  padding-left: 4px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+.dropdown:hover .dropdown-content {
+  background-color: #FFFFFF;
+  display: block;
+  border-radius: 2px;
+}
+.dropdown-content a {
+  display: block;
+  color: #000000;
+  padding: 5px;
+  text-decoration: none;
+}
+.dropdown-content a:hover {
+  color: #FFFFFF;
+  background-color: #686868;
+}
+</style>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+      <div class="post__thumbnail-wrapper">
+        <img class="post__thumbnail" src="/images/image-20230823152738294.png?quality=92&amp;strip=all" alt="Thumbnail image" />
+      </div>
+
+    
+
+    <div class="post__content">
+      <h1>Understand View in SwiftUI</h1>
+      <h3>Table of Contents</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#what-is-a-view">What is a View?</a>
+      <ul>
+        <li><a href="#model-data">Model data</a></li>
+        <li><a href="#summary">Summary</a></li>
+      </ul>
+    </li>
+    <li><a href="#lets-code">Let’s Code</a>
+      <ul>
+        <li><a href="#hello-world">Hello, World!</a></li>
+        <li><a href="#change-background-color">Change background color</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+        <div style="width: 100%; margin: 0 auto; background:rgba(0,0,0,0.5); height: 1px; opacity: 0.6"> </div><h1 id="abstract">Abstract</h1>
+<p>In this article, we will learn about <code>view</code> in SwiftUI. This article is part of the SwiftUI Series - <a href="http://localhost:1313/posts/job/ios/swiftui/ttbaseuikitswiftuiserial/">SwiftUI Series - Updating TTBaseUIKit to support SwiftUI</a></p>
+<figure class="small">
+    <img src="/images/image-20230809134257061.png"
+         alt="image"/> <figcaption>
+            <p>View is a function of state, not a sequence of events - apple</p>
+        </figcaption>
+</figure>
+
+<p>Woaaaa !</p>
+<p><code> SwiftUI</code> - Apple&rsquo;s <mark>declarative framework</mark> for building user interfaces. The user interface is defined based on the <code>current state</code> of the application, and <strong>any changes to the state automatically update the corresponding views</strong>.</p>
+<h1 id="what-is-a-view">What is a View?</h1>
+<div
+  class="notice"
+>
+  <span
+    class="notice__title"
+  >Info</span><div class="notice__content">
+    <code>View</code> : A type that represents part of your app’s user interface and provides modifiers that you use to configure views. - apple
+  </div>
+</div>
+
+<p>You create custom views by declaring types that conform to the <code>View</code> protocol. Implement the required <a href="https://developer.apple.com/documentation/swiftui/view/body-8kl5o"><code>body</code></a> computed property to provide the content for your custom view. <a href="https://developer.apple.com/documentation/swiftui/view#overview">view-apple-overview</a></p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">struct</span> <span class="nc">MyView</span><span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+        <span class="n">Text</span><span class="p">(</span><span class="s">&#34;Hello, World!&#34;</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><p>There are <strong>two points</strong> we need to note.</p>
+<p>Firstly, <code>struct</code> style</p>
+<p>In SwiftUI, the <code>struct</code> keyword is used to define views because structs in Swift have value semantics. This means that when you create an instance of a struct, it is copied rather than referenced. <u>This property is important in SwiftUI</u> because the framework relies on struct values <mark> to manage the state and rendering of views efficiently</mark>.</p>
+<ul>
+<li><strong>Value Semantics:</strong> Structs in Swift have value semantics, which makes them easier to reason about and avoids common pitfalls associated with shared mutable state. <mark>Each instance of a struct is independent, and modifying one instance does not affect other instances.</mark></li>
+<li><strong>Immutable Views:</strong> SwiftUI promotes the use of immutable views. When the state of a view changes, SwiftUI creates a new instance of the view with the updated state, rather than modifying the existing view. This approach allows SwiftUI to <strong>optimize</strong> view updates and perform efficient diffs to update only the necessary parts of the UI.</li>
+<li><strong>Performance</strong>: The value semantics of structs in SwiftUI allow for efficient memory management and performance optimizations. SwiftUI can compare the old and new values of a struct to determine what needs to be updated, avoiding unnecessary work and improving performance.</li>
+<li><strong>SwiftUI&rsquo;s View Protocol:</strong> The <code>View</code> protocol in SwiftUI is designed to work with value types, such as structs. By conforming to the <code>View</code>protocol, a struct can define its body as a computed property, allowing SwiftUI to efficiently render and update the view hierarchy.</li>
+</ul>
+<p>Secondly, <code>body: some View</code></p>
+<blockquote>
+<p>the <code>body</code> property is a requirement of the <code>View</code> protocol</p>
+</blockquote>
+<p>The <code>body</code> property is responsible for describing the structure and hierarchy of a view&rsquo;s user interface. It can contain multiple views, such as stacks, buttons, images, and more, allowing you to build complex and interactive user interfaces using SwiftUI&rsquo;s composability and declarative syntax.</p>
+<h2 id="model-data">Model data</h2>
+<blockquote>
+<p>Manage the data that your app uses to drive its interface.</p>
+</blockquote>
+<p>SwiftUI offers a <code>declarative approach</code> to user interface design. As you compose a hierarchy of views, you also indicate data dependencies for the views. When the data changes, either due to an external event or because of an action that the user performs,<mark> SwiftUI automatically updates the affected parts of the interface</mark>. As a result, the framework automatically performs most of the work that view controllers traditionally do.</p>
+<figure class="medium">
+    <img src="https://docs-assets.developer.apple.com/published/7a8488351b0c9f662b694bc1153162a5/model-data-hero@2x.png"
+         alt="image"/> <figcaption>
+            <p>model-data source: apple</p>
+        </figcaption>
+</figure>
+
+<p>The framework provides tools, like state variables and bindings, for connecting your app’s data to the user interface. These tools help you maintain a single source of truth for every piece of data in your app, in part by reducing the amount of glue logic you write. Select the tool that best suits the task you need to perform:</p>
+<ul>
+<li>Manage transient UI state <code>locally</code> within a view by wrapping value types as <a href="https://developer.apple.com/documentation/swiftui/state"><code>State</code></a> properties.</li>
+<li><code>Share</code> a reference to a source of truth, like local state, using the <a href="https://developer.apple.com/documentation/swiftui/binding"><code>Binding</code></a> property wrapper.</li>
+<li>Connect to and observe reference model data in <code>views</code> by applying the <a href="https://developer.apple.com/documentation/Observation/Observable()"><code>Observable()</code></a> macro to the model data type. Instantiate an observable model data type directly in a view using a <a href="https://developer.apple.com/documentation/swiftui/state"><code>State</code></a> property. Share the observable model data with other views in the hierarchy without passing a reference using the <a href="https://developer.apple.com/documentation/swiftui/environment"><code>Environment</code></a> property wrapper.</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<figure class="big">
+    <img src="/images/image-20230823152738294.png"
+         alt="image"/> <figcaption>
+            <p>What is a View?</p>
+        </figcaption>
+</figure>
+
+<h1 id="lets-code">Let’s Code</h1>
+<h2 id="hello-world">Hello, World!</h2>
+<blockquote>
+<p>The <code>Text</code> view is used to display static or dynamically generated text content.</p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">struct</span> <span class="nc">ContentView</span><span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+        <span class="n">Text</span><span class="p">(</span><span class="s">&#34;Hello, World!&#34;</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="change-background-color">Change background color</h2>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">struct</span> <span class="nc">ContentView</span><span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+    
+    <span class="p">@</span><span class="n">State</span> <span class="kd">private</span> <span class="kd">var</span> <span class="nv">isTouching</span><span class="p">:</span> <span class="nb">Bool</span> <span class="p">=</span> <span class="kc">false</span>
+    
+    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+        <span class="n">ZStack</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">bottom</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="kc">self</span><span class="p">.</span><span class="n">isTouching</span> <span class="p">{</span>
+                <span class="n">Color</span><span class="p">.</span><span class="n">yellow</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="n">Color</span><span class="p">.</span><span class="n">pink</span>
+            <span class="p">}</span>
+            <span class="n">VStack</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">center</span><span class="p">,</span> <span class="n">spacing</span><span class="p">:</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">Text</span><span class="p">(</span><span class="s">&#34;This is a view&#34;</span><span class="p">).</span><span class="n">bold</span><span class="p">().</span><span class="n">foregroundColor</span><span class="p">(.</span><span class="n">white</span><span class="p">)</span>
+                <span class="n">Button</span><span class="p">(</span><span class="s">&#34;Touch to change background&#34;</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="kc">self</span><span class="p">.</span><span class="n">isTouching</span><span class="p">.</span><span class="n">toggle</span><span class="p">()</span>
+                <span class="p">}.</span><span class="n">padding</span><span class="p">().</span><span class="n">background</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="n">white</span><span class="p">).</span><span class="n">cornerRadius</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+            <span class="p">}.</span><span class="n">padding</span><span class="p">(.</span><span class="n">bottom</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><figure class="medium">
+    <img src="/images/understandView-inSwiftUI.gif"
+         alt="image"/> <figcaption>
+            <p>Let&rsquo;s play!</p>
+        </figcaption>
+</figure>
+
+<h1 id="conclusion">Conclusion</h1>
+<blockquote>
+<p>Everything is a View</p>
+</blockquote>
+<p><code>Views</code> are the fundamental building blocks in SwiftUI, responsible for defining the visual elements and interactions within an application. From displaying text and images to creating complex layouts and custom controls, views provide the necessary tools to build dynamic and engaging user interfaces. Have fun and thanks for reading!</p>
+
+
+
+<h3>Posts in this Series</h3>
+<ul>
+  
+    <li><a href="/posts/job/ios/swiftui/uiview-vs-view/">Understand View in SwiftUI</a></li>
+
+  
+    <li><a href="/posts/job/ios/swiftui/understand-safearea/">Understand Safe Area in SwiftUI</a></li>
+
+  
+    <li><a href="/posts/job/ios/swiftui/wwdc23/">WWDC23 From the Perspective of an IOS Developer</a></li>
+
+  
+    <li><a href="/posts/job/ios/swiftui/ttbaseuikitswiftuiserial/">SwiftUI Series - Updating TTBaseUIKit to Support SwiftUI</a></li>
+
+  
+</ul>
+
+<div class="contact-form">
+  <form class="form-style" method="POST" action="https://formspree.io/f/mqknvogq" data-toggle="validator">
+    <ul>
+      <li>
+        <label for="username">Name</label>
+        <input class="field-style field-full" type="text" name="username" id="username" placeholder="Name" required>
+      </li>
+      <li>
+        <label for="email">Email</label>
+        <input class="field-style field-full" type="email" id="email" name="email" placeholder="Email" required>
+      </li>
+      <li>
+        <label for="message">Message</label>
+        <textarea class="field-style" name="message" id="message" rows="6" placeholder="Message"></textarea>
+      </li>
+      <li>
+        <input class="field-style" type="submit" value="Send" />
+      </li>
+      <li>
+        <input type="text" name="_gotcha" style="display:none" />
+      </li>
+    </ul>
+  </form>
+</div>
+<div>
+  <div style="background-color: #f0f0f0; border-radius: 10px; padding: 30px; text-align: center;">
+    <p>
+      If you enjoy reading my articles and find them helpful, please support me. Your support will encourage me to create and share more content with you ^^
+    </p>
+    <a href="/buymeacoffee">
+      <span style = "background-color: #FFD734;border-radius: 10px; padding: 10px 10px 10px 10px; color: black;" >By me a coffee </span>
+    </a>
+  </div>
+</div>
+</div>
+    <div class="post__footer">
+      
+        <span><a class="category" href="/categories/notes/">Notes</a><a class="category" href="/categories/dev-journey/">Dev Journey</a><a class="category" href="/categories/best-practices-and-tips/">Best Practices and Tips</a></span>
+
+
+
+
+      
+
+      
+        <span><a class="tag" href="/tags/view/">View</a><a class="tag" href="/tags/swiftui/">SwiftUI</a></span>
+
+
+
+
+      
+    </div>
+
+    
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2023
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
+    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script>
+  <script async defer src=" https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" /></noscript>
+
+
+</body>
+</html>

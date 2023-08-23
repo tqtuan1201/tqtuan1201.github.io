@@ -6,7 +6,21 @@
     <description>Recent content in SwiftUI Serial - Updating TTBaseUIKit to support SwiftUI on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Jul 2023 11:21:48 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/series/swiftui-serial-updating-ttbaseuikit-to-support-swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Aug 2023 11:40:45 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/series/swiftui-serial-updating-ttbaseuikit-to-support-swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understand View in SwiftUI</title>
+      <link>https://tqtuan1201.github.io/posts/job/ios/swiftui/uiview-vs-view/</link>
+      <pubDate>Wed, 09 Aug 2023 11:40:45 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/job/ios/swiftui/uiview-vs-view/</guid>
+      
+        <description>Abstract In this article, we will learn about view in SwiftUI. This article is part of the SwiftUI Series - SwiftUI Series - Updating TTBaseUIKit to support SwiftUI
+ View is a function of state, not a sequence of events - apple
+  Woaaaa !
+ SwiftUI - Apple&amp;rsquo;s declarative framework for building user interfaces. The user interface is defined based on the current state of the application, and any changes to the state automatically update the corresponding views.</description>
+      
+    </item>
+    
     <item>
       <title>Understand safe area in SwiftUI</title>
       <link>https://tqtuan1201.github.io/posts/job/ios/swiftui/understand-safearea/</link>
