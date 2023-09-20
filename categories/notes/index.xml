@@ -6,7 +6,18 @@
     <description>Recent content in Notes on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Aug 2023 11:40:45 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/categories/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Sep 2023 15:37:02 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/categories/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>12Bay integrated SwiftUI. With 12Bay, no StoryBoard, no XIB files, no cocoapods, ...</title>
+      <link>https://tqtuan1201.github.io/posts/job/ios/swiftui/12bay-bus-v2/</link>
+      <pubDate>Mon, 18 Sep 2023 15:37:02 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/job/ios/swiftui/12bay-bus-v2/</guid>
+      
+        <description>Bus booking function write by SwiftUI For three months, I dedicated myself to learning SwiftUI and using it to develop a bus booking feature. Along the way, I faced several challenges in integrating SwiftUI into an existing UIKit-based project. In my upcoming articles, I will dive deep into these challenges, providing detailed insights and solutions. But first, let&amp;rsquo;s explore the user interface for booking a ride, which includes selecting a bus route, choosing seats, and specifying pickup/drop-off points.</description>
+      
+    </item>
+    
     <item>
       <title>Understand View in SwiftUI</title>
       <link>https://tqtuan1201.github.io/posts/job/ios/swiftui/uiview-vs-view/</link>
