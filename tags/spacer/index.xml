@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spacer on Tuan Truong&#39;s Blog</title>
+    <link>https://tqtuan1201.github.io/tags/spacer/</link>
+    <description>Recent content in Spacer on Tuan Truong&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 14 Oct 2023 16:05:43 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/spacer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What is the Spacer and how do we use it in SwiftUI</title>
+      <link>https://tqtuan1201.github.io/posts/job/ios/swiftui/swiftui-spacer/</link>
+      <pubDate>Sat, 14 Oct 2023 16:05:43 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/job/ios/swiftui/swiftui-spacer/</guid>
+      
+        <description>Abstract In this article, we will learn about Spacer in SwiftUI. We will dive into the world of Spacer. Exploring their purpose, functionality and practical applications. This article is part of the SwiftUI Series - SwiftUI Series - Updating TTBaseUIKit to support SwiftUI
+What is the Spacer? The Spacer is a layout view that expands to fill available space within a container.
+Here is the definition from Apple. You can view full details at developer.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

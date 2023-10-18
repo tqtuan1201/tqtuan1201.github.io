@@ -6,7 +6,20 @@
     <description>Recent content in Notes on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Sep 2023 15:37:02 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/categories/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Oct 2023 16:05:43 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/categories/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What is the Spacer and how do we use it in SwiftUI</title>
+      <link>https://tqtuan1201.github.io/posts/job/ios/swiftui/swiftui-spacer/</link>
+      <pubDate>Sat, 14 Oct 2023 16:05:43 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/job/ios/swiftui/swiftui-spacer/</guid>
+      
+        <description>Abstract In this article, we will learn about Spacer in SwiftUI. We will dive into the world of Spacer. Exploring their purpose, functionality and practical applications. This article is part of the SwiftUI Series - SwiftUI Series - Updating TTBaseUIKit to support SwiftUI
+What is the Spacer? The Spacer is a layout view that expands to fill available space within a container.
+Here is the definition from Apple. You can view full details at developer.</description>
+      
+    </item>
+    
     <item>
       <title>12Bay integrated SwiftUI. With 12Bay, no StoryBoard, no XIB files, no cocoapods, ...</title>
       <link>https://tqtuan1201.github.io/posts/job/ios/swiftui/12bay-bus-v2/</link>
@@ -26,9 +39,9 @@
       <guid>https://tqtuan1201.github.io/posts/job/ios/swiftui/uiview-vs-view/</guid>
       
         <description>Abstract In this article, we will learn about view in SwiftUI. This article is part of the SwiftUI Series - SwiftUI Series - Updating TTBaseUIKit to support SwiftUI
- View is a function of state, not a sequence of events - apple
-  Woaaaa !
- SwiftUI - Apple&amp;rsquo;s declarative framework for building user interfaces. The user interface is defined based on the current state of the application, and any changes to the state automatically update the corresponding views.</description>
+View is a function of state, not a sequence of events - apple
+Woaaaa !
+SwiftUI - Apple&amp;rsquo;s declarative framework for building user interfaces. The user interface is defined based on the current state of the application, and any changes to the state automatically update the corresponding views.</description>
       
     </item>
     
@@ -40,7 +53,7 @@
       <guid>https://tqtuan1201.github.io/posts/job/ios/swiftui/understand-safearea/</guid>
       
         <description>Abstract In this article, we will learn about Safe Area in SwiftUI. This article is part of the SwiftUI Series - SwiftUI Series - Updating TTBaseUIKit to support SwiftUI
- Related knowledge What is the Layout? In the Apple ecosystem, Layout refers to the process of arranging and positioning user interface elements such as views and controls on a screen or within a container view using layout constraints, Auto Layout, or SwiftUI.</description>
+Related knowledge What is the Layout? In the Apple ecosystem, Layout refers to the process of arranging and positioning user interface elements such as views and controls on a screen or within a container view using layout constraints, Auto Layout, or SwiftUI.</description>
       
     </item>
     
@@ -52,8 +65,8 @@
       <guid>https://tqtuan1201.github.io/posts/note/commonphrases/</guid>
       
         <description>These are the phrase notes I record to remember what I learn while studying English. You can easily search for specific words or descriptions to find what you need quickly.&amp;quot;
- Type something in the input field to search the table for keywords or description:
-   $(document).ready(function(){ $(&#34;#myInput&#34;).on(&#34;keyup&#34;, function() { var value = $(this).val().toLowerCase(); $(&#34;table tbody tr&#34;).filter(function() { $(this).toggle($(this).text().toLowerCase().indexOf(value)  -1) }); }); });      Phrases Define More     No wonder (I am) not surprised at all (that).</description>
+Type something in the input field to search the table for keywords or description:
+Phrases Define More No wonder (I am) not surprised at all (that). To express a lack of surprise or understanding about something. It is often used to indicate that a particular situation or outcome is not unexpected, based on the information or context that is known - No wonder she won the race - she&amp;rsquo;s been training for months!</description>
       
     </item>
     
@@ -65,7 +78,7 @@
       <guid>https://tqtuan1201.github.io/posts/learnenglish/grammar/who-whom-whose/</guid>
       
         <description>When I was learning english, I didn&amp;rsquo;t know how to distinguish between who, whom and whose. So this post i am noting some keywords to remember. Some knowledge has been extracted from www.myenglishpages.com.&amp;quot;
- The main point &amp;ldquo;Who,&amp;rdquo; &amp;ldquo;whom,&amp;rdquo; and &amp;ldquo;whose&amp;rdquo; are all relative pronouns used in English to refer to  people, animals, or things previously mentioned in a sentence.
+The main point &amp;ldquo;Who,&amp;rdquo; &amp;ldquo;whom,&amp;rdquo; and &amp;ldquo;whose&amp;rdquo; are all relative pronouns used in English to refer to people, animals, or things previously mentioned in a sentence.
 Info Who is used as the subject of a sentence or clause (refers to the person who is doing the action).</description>
       
     </item>
@@ -78,7 +91,7 @@ Info Who is used as the subject of a sentence or clause (refers to the person wh
       <guid>https://tqtuan1201.github.io/posts/note/economics/</guid>
       
         <description>These are the small notes that I record to remember while reading books about economics or learning about financial knowledge. With so many terms and concepts that I don&amp;rsquo;t understand, I make a point to write them down to aid my studies. You can easily search for specific words or descriptions to find what you need quickly.
- Type something in the input field to search the table for keywords or description:</description>
+Type something in the input field to search the table for keywords or description:</description>
       
     </item>
     
@@ -91,10 +104,10 @@ Info Who is used as the subject of a sentence or clause (refers to the person wh
       
         <description>The 14th Asian Conference on Intelligent Information and Database Systems
 https://aciids.pwr.edu.pl/2022/download/ACIIDS_2022_HCMC_Flyer_v.7.0.pdf
- MY TOPIC: Predictive modelling of diseases based on a network and machine learning approach, I hope it&amp;rsquo;s approved soon ^^
- Paper Submission:
+MY TOPIC: Predictive modelling of diseases based on a network and machine learning approach, I hope it&amp;rsquo;s approved soon ^^
+Paper Submission:
 The proceedings of ACIIDS 2022 will be published by Springer in series Lecture Notes in Artificial Intelligence and will be distributed at the conference
- LNCS/LNAI style. Should not exceed 13 pages.   Here is a my collect data with purpose to learn, more knowledge from large amount of examples, solutions, and ideas on the internet.</description>
+LNCS/LNAI style. Should not exceed 13 pages. Here is a my collect data with purpose to learn, more knowledge from large amount of examples, solutions, and ideas on the internet.</description>
       
     </item>
     
@@ -107,7 +120,9 @@ The proceedings of ACIIDS 2022 will be published by Springer in series Lecture N
       
         <description>Cryptocurrency World
 Type something in the input field to search the table for keywords or description:
-   $(document).ready(function(){ $(&#34;#myInput&#34;).on(&#34;keyup&#34;, function() { var value = $(this).val().toLowerCase(); $(&#34;table tbody tr&#34;).filter(function() { $(this).toggle($(this).text().toLowerCase().indexOf(value)  -1) }); }); });       Key Define More     **ví metamask S&amp;amp;P 500 is a stock market index in the United States that includes 500 of the largest and most popular companies.</description>
+Key Define More **ví metamask S&amp;amp;P 500 is a stock market index in the United States that includes 500 of the largest and most popular companies. It is used to measure the performance of the US stock market and is one of the most important stock indices globally. https://www.dnse.com.vn/hoc/chi-so-sp-500-la-gi ví metamask
+mạng Arbitrum
+dApps</description>
       
     </item>
     

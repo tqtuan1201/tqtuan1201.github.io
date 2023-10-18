@@ -16,7 +16,9 @@
       
         <description>Cryptocurrency World
 Type something in the input field to search the table for keywords or description:
-   $(document).ready(function(){ $(&#34;#myInput&#34;).on(&#34;keyup&#34;, function() { var value = $(this).val().toLowerCase(); $(&#34;table tbody tr&#34;).filter(function() { $(this).toggle($(this).text().toLowerCase().indexOf(value)  -1) }); }); });       Key Define More     **ví metamask S&amp;amp;P 500 is a stock market index in the United States that includes 500 of the largest and most popular companies.</description>
+Key Define More **ví metamask S&amp;amp;P 500 is a stock market index in the United States that includes 500 of the largest and most popular companies. It is used to measure the performance of the US stock market and is one of the most important stock indices globally. https://www.dnse.com.vn/hoc/chi-so-sp-500-la-gi ví metamask
+mạng Arbitrum
+dApps</description>
       
     </item>
     

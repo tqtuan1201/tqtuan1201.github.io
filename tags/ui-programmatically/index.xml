@@ -15,9 +15,9 @@
       <guid>https://tqtuan1201.github.io/posts/devlife-12bay-food/</guid>
       
         <description>Long time no see! Just keep doing it and you&amp;rsquo;ll reach your goals.
- Abstract So, today we will be discussing about how to design the food selection in a mobile application. In this post, we will explore
- Improve your mindset about developing applications. Working on Swift, Sketch.  Let&amp;rsquo;s do it.
- What is the purpose of the function? The main purpose is to provide more utility to customers using the 12bay application.</description>
+Abstract So, today we will be discussing about how to design the food selection in a mobile application. In this post, we will explore
+Improve your mindset about developing applications. Working on Swift, Sketch. Let&amp;rsquo;s do it.
+What is the purpose of the function? The main purpose is to provide more utility to customers using the 12bay application.</description>
       
     </item>
     
@@ -29,7 +29,7 @@
       <guid>https://tqtuan1201.github.io/posts/ttbaseuikit-ui-framework/</guid>
       
         <description>Abstract When I work with many projects. I always ask myself how to optimize the application, reusable code and how to develop the fastest and most efficient applications. So after two years of working with Swift language. I created the framework to build UI programmatically. With TTBaseUIKit, you can build apps in the fastest and most efficient way. A few points to note when you apply this framework:
- How to set up the framework Basic config settings Usage example  Introduction I have been building framework for 5 years and for now, I still update new functions.</description>
+How to set up the framework Basic config settings Usage example Introduction I have been building framework for 5 years and for now, I still update new functions.</description>
       
     </item>
     

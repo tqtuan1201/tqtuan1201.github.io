@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme="light"
+  class="html"
+><head>
+  <title>
+    
+      Tuan Truong
+        |
+        What is the Spacer and how do we use it in SwiftUI
+
+
+      
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.119.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Tuan Truong" />
+  <meta
+    name="description"
+    content="
+      “The only thing that is constant is change”, Heraclitus.
+
+
+    "
+  />
+  
+    <meta name="google-site-verification" content="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.96ada9109c76570a48abadb1799220bb70919f1bc785eaac1c0152d6055421ce.css"
+      integrity="sha256-lq2pEJx2VwpIq62xeZIgu3CRnxvHheqsHAFS1gVUIc4="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.322f7815beb50e8cf61e202b1aa88261e079a6ab195e36ab0b4cdd7790ef98e2.css"
+    integrity="sha256-Mi94Fb61Doz2HiArGqiCYeB5pqsZXjarC0zdd5DvmOI="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.69685904d5c2a0c6258d03c207b778c10466edf6cea928cc0164c376b0ad0930.css"
+    integrity="sha256-aWhZBNXCoMYljQPCB7d4wQRm7fbOqSjMAWTDdrCtCTA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.6d585e78d28cce1200d39fb133c92ed83df01738da721d0f48fb6eac62d24e04.css"
+    integrity="sha256-bVheeNKMzhIA05&#43;xM8ku2D3wFzjach0PSPturGLSTgQ="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.6b00d96498d59caa0dbcf9b49d30d821915291f2ceb0e19248523c8607ff43fa.css"
+    integrity="sha256-awDZZJjVnKoNvPm0nTDYIZFSkfLOsOGSSFI8hgf/Q/o="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/images/profile.jpg" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://tqtuan1201.github.io/posts/job/ios/swiftui/swiftui-spacer/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.738c0e3a493854876aeab9e2316fd43f1936aeeac4cc6b3e60bb26456dba72ad.js"
+      integrity="sha256-c4wOOkk4VIdq6rniMW/UPxk2rurEzGs&#43;YLsmRW26cq0="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tqtuan1201.github.io/images/profile.jpg"/>
+
+<meta name="twitter:title" content="What is the Spacer and how do we use it in SwiftUI"/>
+<meta name="twitter:description" content="Abstract In this article, we will learn about Spacer in SwiftUI. We will dive into the world of Spacer. Exploring their purpose, functionality and practical applications. This article is part of the SwiftUI Series - SwiftUI Series - Updating TTBaseUIKit to support SwiftUI
+What is the Spacer? The Spacer is a layout view that expands to fill available space within a container.
+Here is the definition from Apple. You can view full details at developer."/>
+<meta name="twitter:site" content="@QuangTuan0409"/>
+
+
+
+  
+  <meta property="og:title" content="What is the Spacer and how do we use it in SwiftUI" />
+<meta property="og:description" content="Abstract In this article, we will learn about Spacer in SwiftUI. We will dive into the world of Spacer. Exploring their purpose, functionality and practical applications. This article is part of the SwiftUI Series - SwiftUI Series - Updating TTBaseUIKit to support SwiftUI
+What is the Spacer? The Spacer is a layout view that expands to fill available space within a container.
+Here is the definition from Apple. You can view full details at developer." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tqtuan1201.github.io/posts/job/ios/swiftui/swiftui-spacer/" /><meta property="og:image" content="https://tqtuan1201.github.io/images/profile.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-10-14T16:05:43+07:00" />
+<meta property="article:modified_time" content="2023-10-14T16:05:43+07:00" /><meta property="og:site_name" content="Hi, I&#39;m Tuan Truong" />
+<meta property="og:see_also" content="https://tqtuan1201.github.io/posts/job/ios/swiftui/12bay-bus-v2/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/job/ios/swiftui/uiview-vs-view/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/job/ios/swiftui/understand-safearea/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/job/ios/swiftui/wwdc23/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/job/ios/swiftui/ttbaseuikitswiftuiserial/" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "posts",
+        "name": "What is the Spacer and how do we use it in SwiftUI",
+        "headline": "What is the Spacer and how do we use it in SwiftUI",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Abstract In this article, we will learn about Spacer in SwiftUI. We will dive into the world of Spacer. Exploring their purpose, functionality and practical applications. This article is part of the SwiftUI Series - SwiftUI Series - Updating TTBaseUIKit to support SwiftUI\nWhat is the Spacer? The Spacer is a layout view that expands to fill available space within a container.\nHere is the definition from Apple. You can view full details at developer.
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/tqtuan1201.github.io\/posts\/job\/ios\/swiftui\/swiftui-spacer\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightYear" : "2023",
+        "dateCreated": "2023-10-14T16:05:43.00Z",
+        "datePublished": "2023-10-14T16:05:43.00Z",
+        "dateModified": "2023-10-14T16:05:43.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Tuan Truong",
+            "url": "https://tqtuan1201.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/tqtuan1201.github.io\/images\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://tqtuan1201.github.io/images/profile.jpg"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/tqtuan1201.github.io\/posts\/job\/ios\/swiftui\/swiftui-spacer\/",
+        "wordCount" : "831",
+        "genre" : [ 
+      
+      "Notes"
+
+    
+      
+        ,
+
+      
+      "Dev Journey"
+
+    
+      
+        ,
+
+      
+      "Best Practices and Tips"
+
+    ],
+        "keywords" : [ 
+      
+      "Spacer"
+
+    
+      
+        ,
+
+      
+      "SwiftUI"
+
+    ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--light"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <a href="/about">
+        <img
+          class="sidebar__introduction-profileimage"
+          src="/images/profile.jpg"
+          alt="profile picture"
+        />
+      </a>
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Hi, I&#39;m Tuan Truong</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>“The only thing that is constant is change”, Heraclitus.</p>
+        </br>
+        <div class="sidebar__introduction-description">
+          <i style="color:#454545; font-weight: 360; font-size: 0.92em;">'If you have a great idea but don’t know how to start? Don't worry, simply click on <a href="/posts/job/cv/ourteam"><strong>Meet My Team</strong></a> and we can discuss your project over a cup of coffee'</i>
+        </div>
+        </br></br>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a href="https://www.linkedin.com/in/thales-truong" rel="me" aria-label="Linkedin" title="Linkedin">
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a href="https://github.com/tqtuan1201" rel="me" aria-label="GitHub" title="GitHub">
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a href="mailto:truongquangtuanit@gmail.com" rel="me" aria-label="e-mail" title="e-mail">
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a href="https://twitter.com/QuangTuan0409" rel="me" aria-label="Twitter" title="Twitter">
+            <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a href="https://tuananhstory.com/" rel="me" aria-label="instagram" title="instagram">
+            <i class="fa-brands fa-safari fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+    </br></br>
+    <div class="sidebar__list">
+      <a href="/buymeacoffee">
+          <img src="/images/buymeacoffee_button.png" height=40; alt="By me a coffee ^^">
+      </a>
+    </div>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2023
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/keynote"
+              
+              title=""
+              >Topics</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/posts"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/portfolio"
+              
+              title=""
+              >Projects</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/certifications"
+              
+              title=""
+              >Certifications</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/series"
+              
+              title=""
+              >Series</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/categories"
+              
+              title=""
+              >Categories</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/categories/notes/"
+              
+              title=""
+              >Notes</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/tags"
+              
+              title=""
+              >Tags</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/about"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/contact"
+              
+              title=""
+              >Contact</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      <li class="nav__list-item">
+        <div class="dropdown">
+          <button> RESUMES </button>
+          <div class="dropdown-content">
+          <a href="/posts/job/cv/myresume">My CV</a>
+          <a href="/posts/job/cv/ourteam">My Team</a>
+          </div>
+        </div>
+      </li>
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+
+<style>
+ 
+.dropdown {
+  display: inline-block;
+  position: relative;
+  padding-right: 10px;
+  padding-left: 4px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+.dropdown:hover .dropdown-content {
+  background-color: #FFFFFF;
+  display: block;
+  border-radius: 2px;
+}
+.dropdown-content a {
+  display: block;
+  color: #000000;
+  padding: 5px;
+  text-decoration: none;
+}
+.dropdown-content a:hover {
+  color: #FFFFFF;
+  background-color: #686868;
+}
+</style>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+      <div class="post__thumbnail-wrapper">
+        <img class="post__thumbnail" src="/images/image-2023101740108245%e2%80%afPM.png?quality=92&amp;strip=all" alt="Thumbnail image" />
+      </div>
+
+    
+
+    <div class="post__content">
+      <h1>What Is the Spacer and How Do We Use It in SwiftUI</h1>
+      <h3>Table of Contents</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#what-is-the-spacer">What is the Spacer?</a></li>
+    <li><a href="#lets-code">Let’s Code?</a>
+      <ul>
+        <li><a href="#basic">Basic</a></li>
+        <li><a href="#customizing---ttbasesuispacerhttpsgithubcomtqtuan1201ttbaseuikitblobmastersourcesttbaseuikitswiftuiviewbaseviewsbasesuispacerswift">Customizing - <a href="https://github.com/tqtuan1201/TTBaseUIKit/blob/master/Sources/TTBaseUIKit/SwiftUIView/BaseViews/BaseSUISpacer.swift">(TTBaseSUISpacer)</a></a></li>
+        <li><a href="#another-way-to-build-a-layout-without-a-spacer">Another way to build a layout without a spacer?</a>
+          <ul>
+            <li><a href="#using-zstack">Using <code>ZStack</code></a></li>
+            <li><a href="#using-framealignment">Using <code>.frame(alignment</code></a></li>
+            <li><a href="#using-overlayalignment-availableios-150-">Using <code>.overlay(alignment (@available(iOS 15.0, *))</code></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+        <div style="width: 100%; margin: 0 auto; background:rgba(0,0,0,0.5); height: 1px; opacity: 0.6"> </div><h1 id="abstract">Abstract</h1>
+<p>In this article, we will learn about <code>Spacer</code> in SwiftUI. We will dive into the world of <code>Spacer</code>. Exploring their purpose, functionality and practical applications. This article is part of the SwiftUI Series - <a href="/posts/job/ios/swiftui/ttbaseuikitswiftuiserial/">SwiftUI Series - Updating TTBaseUIKit to support SwiftUI</a></p>
+<h1 id="what-is-the-spacer">What is the Spacer?</h1>
+<p>The <code>Spacer</code> is a layout view that expands to <mark>fill available space</mark> within a container.</p>
+<p>Here is the definition from Apple. You can view full details at <a href="https://developer.apple.com/documentation/swiftui/spacer">developer.apple</a></p>
+<figure class="small"><img src="/images/image-20230929161409165.png"
+         alt="image"/><figcaption>
+            <p>Spacer - Developer Apple</p>
+        </figcaption>
+</figure>
+
+<hr>
+<h1 id="lets-code">Let’s Code?</h1>
+<figure class="medium"><img src="/images/image-20231002162324545.png"
+         alt="image"/><figcaption>
+            <p>What Is the Spacer and How Do You Use It in SwiftUI</p>
+        </figcaption>
+</figure>
+
+<h2 id="basic">Basic</h2>
+<p>Here are a few examples of how you can use the <code>Spacer</code> view in <code>SwiftUI</code></p>
+<p><strong>Example 1: Creating Equal Spacing</strong></p>
+<p>In this example, the <code>Spacer</code> views evenly distribute the available space between the <code>Text</code> views vertically, creating equal spacing between them. The <code>Spacer</code> views will expand to fill the available space, pushing the <code>Text</code> views towards the top and bottom edges.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">struct</span> <span class="nc">SimpleView</span> <span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">VStack</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">center</span><span class="p">,</span> <span class="n">spacing</span><span class="p">:</span> <span class="mf">10.0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Text</span><span class="p">(</span><span class="s">&#34;Top View&#34;</span><span class="p">).</span><span class="n">padding</span><span class="p">().</span><span class="n">background</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="n">pink</span><span class="p">).</span><span class="n">cornerRadius</span><span class="p">(</span><span class="mf">8.0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            <span class="n">Spacer</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            <span class="n">Text</span><span class="p">(</span><span class="s">&#34;Middle View&#34;</span><span class="p">).</span><span class="n">padding</span><span class="p">().</span><span class="n">background</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="n">blue</span><span class="p">).</span><span class="n">cornerRadius</span><span class="p">(</span><span class="mf">8.0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            <span class="n">Spacer</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            <span class="n">Text</span><span class="p">(</span><span class="s">&#34;Bottom View&#34;</span><span class="p">).</span><span class="n">padding</span><span class="p">().</span><span class="n">background</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="n">gray</span><span class="p">).</span><span class="n">cornerRadius</span><span class="p">(</span><span class="mf">8.0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}.</span><span class="n">frame</span><span class="p">(</span><span class="n">maxWidth</span><span class="p">:</span> <span class="p">.</span><span class="n">infinity</span><span class="p">).</span><span class="n">padding</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">background</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="n">green</span><span class="p">.</span><span class="n">opacity</span><span class="p">(</span><span class="mf">0.4</span><span class="p">)).</span><span class="n">cornerRadius</span><span class="p">(</span><span class="mf">8.0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><strong>Example 2: Creating Flexible Spacing</strong></p>
+<p>Here, the <code>Spacer</code> view is used within an <code>HStack</code> to create flexible spacing between the &ldquo;Leading&rdquo; and &ldquo;Trailing&rdquo; <code>Text</code> views. The <code>Spacer</code> has a <code>minLength</code> parameter set to 50, which means it will expand to fill the available space but will not shrink below 50 points. This creates a minimum spacing between the two <code>Text</code> views.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="n">HStack</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Text</span><span class="p">(</span><span class="s">&#34;Leading&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Spacer</span><span class="p">(</span><span class="n">minLength</span><span class="p">:</span> <span class="mi">50</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Text</span><span class="p">(</span><span class="s">&#34;Trailing&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><strong>Example 3: Expanding a View</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="n">VStack</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Text</span><span class="p">(</span><span class="s">&#34;Top&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Spacer</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Text</span><span class="p">(</span><span class="s">&#34;Bottom&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">frame</span><span class="p">(</span><span class="n">maxHeight</span><span class="p">:</span> <span class="p">.</span><span class="n">infinity</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>In this example, the <code>Spacer</code> view is used to push the &ldquo;Bottom&rdquo; <code>Text</code> view to the bottom of the screen. By setting the <code>frame</code> of the &ldquo;Bottom&rdquo; view with <code>maxHeight: .infinity</code>, it will expand to fill all the available space below the &ldquo;Top&rdquo; view.</p>
+<hr>
+<h2 id="customizing---ttbasesuispacerhttpsgithubcomtqtuan1201ttbaseuikitblobmastersourcesttbaseuikitswiftuiviewbaseviewsbasesuispacerswift">Customizing - <a href="https://github.com/tqtuan1201/TTBaseUIKit/blob/master/Sources/TTBaseUIKit/SwiftUIView/BaseViews/BaseSUISpacer.swift">(TTBaseSUISpacer)</a></h2>
+<p>In <code>SwiftUI</code>, the <code>Spacer</code> view is primarily used for layout and spacing purposes, and it doesn&rsquo;t have direct properties to change <em><u><strong>background color</strong></u></em> or <strong><u><em>set corner radius</em></u></strong>. However, we can create a customizing class to add some commonly used functions.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">struct</span> <span class="nc">TTBaseSUISpacer</span><span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">var</span> <span class="nv">maxWidth</span><span class="p">:</span><span class="n">CGFloat</span><span class="p">?</span> <span class="p">=</span> <span class="kc">nil</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">var</span> <span class="nv">maxHeight</span><span class="p">:</span><span class="n">CGFloat</span><span class="p">?</span> <span class="p">=</span> <span class="kc">nil</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">var</span> <span class="nv">viewDefBgColor</span><span class="p">:</span> <span class="n">Color</span> <span class="p">=</span> <span class="p">.</span><span class="n">clear</span> <span class="c1">//TTBaseUIKitConfig.getViewConfig().viewStackDefColor</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">var</span> <span class="nv">viewDefCornerRadius</span><span class="p">:</span> <span class="n">CGFloat</span> <span class="p">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">init</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">init</span><span class="p">(</span><span class="n">maxHeight</span><span class="p">:</span> <span class="n">CGFloat</span><span class="p">?</span> <span class="p">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">maxHeight</span> <span class="p">=</span> <span class="n">maxHeight</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">init</span><span class="p">(</span><span class="n">maxWidth</span><span class="p">:</span> <span class="n">CGFloat</span><span class="p">?</span> <span class="p">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">maxWidth</span> <span class="p">=</span> <span class="n">maxWidth</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">init</span><span class="p">(</span><span class="n">maxWidth</span><span class="p">:</span> <span class="n">CGFloat</span><span class="p">?</span> <span class="p">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">maxHeight</span><span class="p">:</span><span class="n">CGFloat</span><span class="p">?)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">maxWidth</span> <span class="p">=</span> <span class="n">maxWidth</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">maxHeight</span> <span class="p">=</span> <span class="n">maxHeight</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">init</span><span class="p">(</span><span class="n">withBg</span> <span class="n">bg</span><span class="p">:</span><span class="n">Color</span><span class="p">,</span> <span class="n">radius</span><span class="p">:</span><span class="n">CGFloat</span><span class="p">,</span> <span class="n">maxWidth</span><span class="p">:</span> <span class="n">CGFloat</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">viewDefBgColor</span> <span class="p">=</span> <span class="n">bg</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">viewDefCornerRadius</span> <span class="p">=</span> <span class="n">radius</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">maxWidth</span> <span class="p">=</span> <span class="n">maxWidth</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">init</span><span class="p">(</span><span class="n">withBg</span> <span class="n">bg</span><span class="p">:</span><span class="n">Color</span><span class="p">,</span> <span class="n">radius</span><span class="p">:</span><span class="n">CGFloat</span><span class="p">,</span> <span class="n">maxHeight</span><span class="p">:</span> <span class="n">CGFloat</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">viewDefBgColor</span> <span class="p">=</span> <span class="n">bg</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">viewDefCornerRadius</span> <span class="p">=</span> <span class="n">radius</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">maxHeight</span> <span class="p">=</span> <span class="n">maxHeight</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">init</span><span class="p">(</span><span class="n">withBg</span> <span class="n">bg</span><span class="p">:</span><span class="n">Color</span><span class="p">,</span> <span class="n">radius</span><span class="p">:</span><span class="n">CGFloat</span><span class="p">,</span> <span class="n">maxWidth</span><span class="p">:</span> <span class="n">CGFloat</span><span class="p">?</span> <span class="p">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">maxHeight</span><span class="p">:</span><span class="n">CGFloat</span><span class="p">?</span> <span class="p">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">viewDefBgColor</span> <span class="p">=</span> <span class="n">bg</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">viewDefCornerRadius</span> <span class="p">=</span> <span class="n">radius</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">maxWidth</span> <span class="p">=</span> <span class="n">maxWidth</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">maxHeight</span> <span class="p">=</span> <span class="n">maxHeight</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Rectangle</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="p">.</span><span class="n">foregroundColor</span><span class="p">(</span><span class="kc">self</span><span class="p">.</span><span class="n">viewDefBgColor</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">.</span><span class="n">frame</span><span class="p">(</span><span class="n">maxWidth</span><span class="p">:</span> <span class="kc">self</span><span class="p">.</span><span class="n">maxWidth</span><span class="p">,</span> <span class="n">maxHeight</span><span class="p">:</span> <span class="kc">self</span><span class="p">.</span><span class="n">maxHeight</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">.</span><span class="n">cornerRadius</span><span class="p">(</span><span class="kc">self</span><span class="p">.</span><span class="n">viewDefCornerRadius</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><figure class="medium"><img src="/images/image-2023101344757062%e2%80%afPM.png"
+         alt="image"/><figcaption>
+            <p>Spacer customizing - TTBaseSUISpacer</p>
+        </figcaption>
+</figure>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">struct</span> <span class="nc">TTBaseSUISpacerHorDemo</span> <span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">VStack</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">center</span><span class="p">,</span> <span class="n">spacing</span><span class="p">:</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">HStack</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">center</span><span class="p">,</span> <span class="n">spacing</span><span class="p">:</span> <span class="mf">10.0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">Text</span><span class="p">(</span><span class="s">&#34;Top View&#34;</span><span class="p">).</span><span class="n">padding</span><span class="p">().</span><span class="n">background</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="n">pink</span><span class="p">).</span><span class="n">cornerRadius</span><span class="p">(</span><span class="mf">8.0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">TTBaseSUISpacer</span><span class="p">(</span><span class="n">withBg</span><span class="p">:</span> <span class="p">.</span><span class="n">green</span><span class="p">.</span><span class="n">opacity</span><span class="p">(</span><span class="mf">0.2</span><span class="p">),</span> <span class="n">radius</span><span class="p">:</span> <span class="mf">8.0</span><span class="p">)</span> <span class="c1">// Expands to fill available space</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="n">HStack</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">center</span><span class="p">,</span> <span class="n">spacing</span><span class="p">:</span> <span class="mf">10.0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">TTBaseSUISpacer</span><span class="p">(</span><span class="n">withBg</span><span class="p">:</span> <span class="p">.</span><span class="n">green</span><span class="p">.</span><span class="n">opacity</span><span class="p">(</span><span class="mf">0.2</span><span class="p">),</span> <span class="n">radius</span><span class="p">:</span> <span class="mf">8.0</span><span class="p">)</span> <span class="c1">// Expands to fill available space</span>
+</span></span><span class="line"><span class="cl">                <span class="n">Text</span><span class="p">(</span><span class="s">&#34;Top View&#34;</span><span class="p">).</span><span class="n">padding</span><span class="p">().</span><span class="n">background</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="n">pink</span><span class="p">).</span><span class="n">cornerRadius</span><span class="p">(</span><span class="mf">8.0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="n">HStack</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">center</span><span class="p">,</span> <span class="n">spacing</span><span class="p">:</span> <span class="mf">10.0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">Text</span><span class="p">(</span><span class="s">&#34;Top View&#34;</span><span class="p">).</span><span class="n">padding</span><span class="p">().</span><span class="n">background</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="n">pink</span><span class="p">).</span><span class="n">cornerRadius</span><span class="p">(</span><span class="mf">8.0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">TTBaseSUISpacer</span><span class="p">(</span><span class="n">withBg</span><span class="p">:</span> <span class="p">.</span><span class="n">green</span><span class="p">.</span><span class="n">opacity</span><span class="p">(</span><span class="mf">0.3</span><span class="p">),</span> <span class="n">radius</span><span class="p">:</span> <span class="mf">8.0</span><span class="p">)</span> <span class="c1">// Expands to fill available space</span>
+</span></span><span class="line"><span class="cl">                <span class="n">TTBaseSUISpacer</span><span class="p">(</span><span class="n">withBg</span><span class="p">:</span> <span class="p">.</span><span class="n">blue</span><span class="p">.</span><span class="n">opacity</span><span class="p">(</span><span class="mf">0.3</span><span class="p">),</span> <span class="n">radius</span><span class="p">:</span> <span class="mf">8.0</span><span class="p">,</span> <span class="n">maxWidth</span><span class="p">:</span> <span class="mf">20.0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">TTBaseSUISpacer</span><span class="p">(</span><span class="n">withBg</span><span class="p">:</span> <span class="p">.</span><span class="n">red</span><span class="p">.</span><span class="n">opacity</span><span class="p">(</span><span class="mf">0.3</span><span class="p">),</span> <span class="n">radius</span><span class="p">:</span> <span class="mf">8.0</span><span class="p">)</span> <span class="c1">// Expands to fill available space</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="another-way-to-build-a-layout-without-a-spacer">Another way to build a layout without a spacer?</h2>
+<div
+  class="notice"
+>
+  <span
+    class="notice__title"
+  >Info</span><div class="notice__content">
+    Yes, we can do that. We can use <code>ZStack</code> or <code>frame(alignment</code> or <code>overlay(alignment (@available(iOS 15.0, *))</code>
+  </div>
+</div>
+
+<p>Here is the layout written by <code>Spacer</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">//ButtonView</span>
+</span></span><span class="line"><span class="cl"><span class="kd">struct</span> <span class="nc">TTBaseButtonDemo</span> <span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ZStack</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">trailing</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Color</span><span class="p">.</span><span class="n">green</span><span class="p">.</span><span class="n">opacity</span><span class="p">(</span><span class="mf">0.4</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">HStack</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">center</span><span class="p">,</span> <span class="n">spacing</span><span class="p">:</span> <span class="mf">12.0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">Image</span><span class="p">(</span><span class="n">systemName</span><span class="p">:</span> <span class="s">&#34;mic.circle.fill&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">.</span><span class="n">resizable</span><span class="p">().</span><span class="n">renderingMode</span><span class="p">(.</span><span class="n">template</span><span class="p">).</span><span class="n">aspectRatio</span><span class="p">(</span><span class="n">contentMode</span><span class="p">:</span> <span class="p">.</span><span class="n">fit</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">.</span><span class="n">foregroundColor</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="n">blue</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    
+</span></span><span class="line"><span class="cl">                    <span class="p">.</span><span class="n">frame</span><span class="p">(</span><span class="n">width</span><span class="p">:</span> <span class="mf">40.0</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span><span class="mf">40.0</span><span class="p">,</span> <span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">center</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">Text</span><span class="p">(</span><span class="s">&#34;Add Record&#34;</span><span class="p">).</span><span class="n">foregroundColor</span><span class="p">(.</span><span class="n">white</span><span class="p">).</span><span class="n">padding</span><span class="p">().</span><span class="n">background</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="n">blue</span><span class="p">).</span><span class="n">cornerRadius</span><span class="p">(</span><span class="mf">8.0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}.</span><span class="n">padding</span><span class="p">(.</span><span class="n">trailing</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}.</span><span class="n">frame</span><span class="p">(</span><span class="n">height</span><span class="p">:</span> <span class="mf">70.0</span><span class="p">).</span><span class="n">frame</span><span class="p">(</span><span class="n">width</span><span class="p">:</span> <span class="mi">200</span><span class="p">).</span><span class="n">cornerRadius</span><span class="p">(</span><span class="mf">8.0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//View</span>
+</span></span><span class="line"><span class="cl"><span class="kd">struct</span> <span class="nc">TTBaseSUISpacerDemo3</span> <span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">VStack</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">center</span><span class="p">,</span> <span class="n">spacing</span><span class="p">:</span> <span class="mf">10.0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">TTBaseSUISpacer</span><span class="p">(</span><span class="n">withBg</span><span class="p">:</span> <span class="p">.</span><span class="n">green</span><span class="p">.</span><span class="n">opacity</span><span class="p">(</span><span class="mf">0.4</span><span class="p">),</span> <span class="n">radius</span><span class="p">:</span> <span class="mf">8.0</span><span class="p">)</span> <span class="c1">// Expands to fill available space</span>
+</span></span><span class="line"><span class="cl">            <span class="n">HStack</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">center</span><span class="p">,</span> <span class="n">spacing</span><span class="p">:</span> <span class="mf">12.0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">TTBaseSUISpacer</span><span class="p">(</span><span class="n">withBg</span><span class="p">:</span> <span class="p">.</span><span class="n">green</span><span class="p">.</span><span class="n">opacity</span><span class="p">(</span><span class="mf">0.2</span><span class="p">),</span> <span class="n">radius</span><span class="p">:</span> <span class="mf">8.0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">TTBaseButtonDemo</span><span class="p">().</span><span class="n">layoutPriority</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}.</span><span class="n">frame</span><span class="p">(</span><span class="n">height</span><span class="p">:</span> <span class="mf">70.0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><figure class="medium"><img src="/images/image-2023101732959746%e2%80%afPM.png"
+         alt="image"/><figcaption>
+            <p>Another way to build a layout without a spacer?</p>
+        </figcaption>
+</figure>
+
+<p>Now, we will update the code without using the <code>Spacer</code></p>
+<h3 id="using-zstack">Using <code>ZStack</code></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">//Using ZStack</span>
+</span></span><span class="line"><span class="cl"><span class="kd">struct</span> <span class="nc">TTBaseSUINoSpacerDemo3</span> <span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ZStack</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">bottomTrailing</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Color</span><span class="p">.</span><span class="n">green</span><span class="p">.</span><span class="n">opacity</span><span class="p">(</span><span class="mf">0.4</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">TTBaseButtonDemo</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><figure class="medium"><img src="/images/image-2023101733729707%e2%80%afPM.png"
+         alt="image"/><figcaption>
+            <p>Using ZStack</p>
+        </figcaption>
+</figure>
+
+<h3 id="using-framealignment">Using <code>.frame(alignment</code></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">//Using .frame</span>
+</span></span><span class="line"><span class="cl"><span class="kd">struct</span> <span class="nc">TTBaseSUINoSpacerDemo4</span> <span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">VStack</span><span class="p">(</span><span class="n">content</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">TTBaseButtonDemo</span><span class="p">().</span><span class="n">frame</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">bottomTrailing</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}).</span><span class="n">padding</span><span class="p">().</span><span class="n">frame</span><span class="p">(</span><span class="n">maxWidth</span><span class="p">:</span> <span class="p">.</span><span class="n">infinity</span><span class="p">,</span> <span class="n">maxHeight</span><span class="p">:</span> <span class="p">.</span><span class="n">infinity</span><span class="p">,</span> <span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">bottomTrailing</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><figure class="medium"><img src="/images/image-2023101734006934%e2%80%afPM.png"
+         alt="image"/><figcaption>
+            <p>.frame(alignment</p>
+        </figcaption>
+</figure>
+
+<h3 id="using-overlayalignment-availableios-150-">Using <code>.overlay(alignment (@available(iOS 15.0, *))</code></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">//Using overlay(alignment</span>
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="n">available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">15.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kd">struct</span> <span class="nc">TTBaseSUINoSpacerDemo5</span> <span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Color</span><span class="p">.</span><span class="n">green</span><span class="p">.</span><span class="n">opacity</span><span class="p">(</span><span class="mf">0.4</span><span class="p">).</span><span class="n">overlay</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">bottomTrailing</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">TTBaseButtonDemo</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><figure class="medium"><img src="/images/image-2023101734146506%e2%80%afPM.png"
+         alt="image"/><figcaption>
+            <p>Using .overlay(alignment</p>
+        </figcaption>
+</figure>
+
+<h1 id="conclusion">Conclusion</h1>
+<p>That&rsquo;s all about <code>Spacer</code> that I discovered. In the real world, we have many ways to build layouts. Keep exploring SwiftUI&rsquo;s vast array of features to unlock its full potential in your app development journey.</p>
+
+
+
+<h3>Posts in this Series</h3>
+<ul>
+  
+    <li><a href="/posts/job/ios/swiftui/swiftui-spacer/">What Is the Spacer and How Do We Use It in SwiftUI</a></li>
+
+  
+    <li><a href="/posts/job/ios/swiftui/12bay-bus-v2/">12Bay Integrated SwiftUI. With 12Bay, No StoryBoard, No XIB Files, No Cocoapods, ...</a></li>
+
+  
+    <li><a href="/posts/job/ios/swiftui/uiview-vs-view/">Understand View in SwiftUI</a></li>
+
+  
+    <li><a href="/posts/job/ios/swiftui/understand-safearea/">Understand Safe Area in SwiftUI</a></li>
+
+  
+    <li><a href="/posts/job/ios/swiftui/wwdc23/">WWDC23 From the Perspective of an IOS Developer</a></li>
+
+  
+    <li><a href="/posts/job/ios/swiftui/ttbaseuikitswiftuiserial/">SwiftUI Series - Updating TTBaseUIKit to Support SwiftUI</a></li>
+
+  
+</ul>
+
+<div class="contact-form">
+  <form class="form-style" method="POST" action="https://formspree.io/f/mqknvogq" data-toggle="validator">
+    <ul>
+      <li>
+        <label for="username">Name</label>
+        <input class="field-style field-full" type="text" name="username" id="username" placeholder="Name" required>
+      </li>
+      <li>
+        <label for="email">Email</label>
+        <input class="field-style field-full" type="email" id="email" name="email" placeholder="Email" required>
+      </li>
+      <li>
+        <label for="message">Message</label>
+        <textarea class="field-style" name="message" id="message" rows="6" placeholder="Message"></textarea>
+      </li>
+      <li>
+        <input class="field-style" type="submit" value="Send" />
+      </li>
+      <li>
+        <input type="text" name="_gotcha" style="display:none" />
+      </li>
+    </ul>
+  </form>
+</div>
+<div>
+  <div style="background-color: #f0f0f0; border-radius: 10px; padding: 30px; text-align: center;">
+    <p>
+      If you enjoy reading my articles and find them helpful, please support me. Your support will encourage me to create and share more content with you ^^
+    </p>
+    <a href="/buymeacoffee">
+      <span style = "background-color: #FFD734;border-radius: 10px; padding: 10px 10px 10px 10px; color: black;" >By me a coffee </span>
+    </a>
+  </div>
+</div>
+</div>
+    <div class="post__footer">
+      
+        <span><a class="category" href="/categories/notes/">Notes</a><a class="category" href="/categories/dev-journey/">Dev Journey</a><a class="category" href="/categories/best-practices-and-tips/">Best Practices and Tips</a></span>
+
+
+
+
+      
+
+      
+        <span><a class="tag" href="/tags/spacer/">Spacer</a><a class="tag" href="/tags/swiftui/">SwiftUI</a></span>
+
+
+
+
+      
+    </div>
+
+    
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2023
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script>
+  <script async defer src=" https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" /></noscript>
+
+
+</body>
+</html>

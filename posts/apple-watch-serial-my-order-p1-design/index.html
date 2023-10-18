@@ -19,7 +19,7 @@
   </title>
 
   
-  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.81.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.119.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="author" content="Tuan Truong" />
   <meta
     name="description"
@@ -91,8 +91,8 @@
   
   <script
     type="text/javascript"
-    src="/js/anatole-header.min.46e6a54097480084f8f52c20ca1aa7425b4fad17029a887fd4017b12e311a72d.js"
-    integrity="sha256-RualQJdIAIT49SwgyhqnQltPrRcCmoh/1AF7EuMRpy0="
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
     crossorigin="anonymous"
   ></script>
 
@@ -101,8 +101,8 @@
     
     <script
       type="text/javascript"
-      src="/js/anatole-theme-switcher.min.5557c8ff5617a01067ac258fd70b9b992506e379317b0da51e5e0f6e018b408a.js"
-      integrity="sha256-VVfI/1YXoBBnrCWP1wubmSUG43kxew2lHl4PbgGLQIo="
+      src="/js/anatole-theme-switcher.min.738c0e3a493854876aeab9e2316fd43f1936aeeac4cc6b3e60bb26456dba72ad.js"
+      integrity="sha256-c4wOOkk4VIdq6rniMW/UPxk2rurEzGs&#43;YLsmRW26cq0="
       crossorigin="anonymous"
     ></script>
 
@@ -128,8 +128,8 @@ Abstract Last post, We completed the home screen. Today, We will focus to design
 Abstract Last post, We completed the home screen. Today, We will focus to design the my order and update data from iPhone app. Some of the main ideas you can got throught this post:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tqtuan1201.github.io/posts/apple-watch-serial-my-order-p1-design/" /><meta property="og:image" content="https://tqtuan1201.github.io/images/profile.jpg"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-05-31T14:59:52&#43;07:00" />
-<meta property="article:modified_time" content="2022-05-31T14:59:52&#43;07:00" /><meta property="og:site_name" content="Hi, I&#39;m Tuan Truong" />
+<meta property="article:published_time" content="2022-05-31T14:59:52+07:00" />
+<meta property="article:modified_time" content="2022-05-31T14:59:52+07:00" /><meta property="og:site_name" content="Hi, I&#39;m Tuan Truong" />
 <meta property="og:see_also" content="https://tqtuan1201.github.io/posts/apple-watch-serial-end/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/apple-watch-serial-my-notification/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/apple-watch-serial-order-detail/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/apple-watch-serial-p2-homescreen-complete/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/apple-watch-serial-p2-homescreen-connect/" />
 
 
@@ -204,7 +204,7 @@ Abstract Last post, We completed the home screen. Today, We will focus to design
 
     ,
         "url" : "https:\/\/tqtuan1201.github.io\/posts\/apple-watch-serial-my-order-p1-design\/",
-        "wordCount" : "1336",
+        "wordCount" : "1337",
         "genre" : [ 
       
       "12bay Project"
@@ -347,8 +347,8 @@ Abstract Last post, We completed the home screen. Today, We will focus to design
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
-    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
     crossorigin="anonymous"
   ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
       defer
@@ -643,9 +643,8 @@ Abstract Last post, We completed the home screen. Today, We will focus to design
 <p>This article is part of my <a href="https://tqtuan1201.github.io/categories/applewatch/"><em>Apple Watch by SwiftUI</em></a> series.</p>
 <h1 id="my-order-ui-design">My Order UI design</h1>
 <p>We will be buiding a single screen that displays a list of orders, and touch on any of the item will let  you navigate to a different view to showing details about your booking. The my order screen illustrated as image below. Fig. 1 for the case of no data and Fig. 2 for the case of have active or non active tikets.</p>
-<figure class="medium">
-    <img src="/images/image-20220602165138746.png"
-         alt="image"/> <figcaption>
+<figure class="medium"><img src="/images/image-20220602165138746.png"
+         alt="image"/><figcaption>
             <p>The my order design screen</p>
         </figcaption>
 </figure>
@@ -670,217 +669,214 @@ Abstract Last post, We completed the home screen. Today, We will focus to design
 
 <h2 id="in-iphone-side">In iPhone Side</h2>
 <p>In the <code>PhoneWatchConnectivityManager</code> class (iOS project). I create <code>sendMessage(byDic</code> method to send message by dictionary type. Below is my method:</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift">
-<span class="kd">import</span> <span class="nc">Foundation</span>
-<span class="kd">import</span> <span class="nc">WatchConnectivity</span>
-
-<span class="kd">class</span> <span class="nc">PhoneWatchConnectivityManager</span><span class="p">:</span> <span class="n">NSObject</span> <span class="p">{</span>
-    
-    <span class="kd">static</span> <span class="kd">let</span> <span class="nv">shared</span> <span class="p">=</span> <span class="n">PhoneWatchConnectivityManager</span><span class="p">()</span>
-    
-    <span class="n">fileprivate</span> <span class="kd">var</span> <span class="nv">sessionDef</span><span class="p">:</span><span class="n">WCSession</span><span class="p">?</span> <span class="p">=</span> <span class="kc">nil</span>
-    
-    <span class="kd">private</span> <span class="kr">override</span> <span class="kd">init</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kc">super</span><span class="p">.</span><span class="kd">init</span><span class="p">()</span>
-        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;::PhoneWatchConnectivityManager init WCSession.default&#34;</span><span class="p">)</span>
-        <span class="kc">self</span><span class="p">.</span><span class="n">sessionDef</span> <span class="p">=</span> <span class="n">WCSession</span><span class="p">.</span><span class="k">default</span>
-        <span class="kc">self</span><span class="p">.</span><span class="n">sessionDef</span><span class="p">?.</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">self</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="c1">//</span><span class="cs">MARK:</span><span class="c1">// Base funcs</span>
-<span class="kd">extension</span> <span class="nc">PhoneWatchConnectivityManager</span> <span class="p">{</span>
-      <span class="kd">func</span> <span class="nf">sendMessage</span><span class="p">(</span><span class="n">byDic</span> <span class="n">dic</span><span class="p">:[</span><span class="nb">String</span> <span class="p">:</span> <span class="nb">Any</span><span class="p">])</span> <span class="p">{</span>
-        <span class="kc">self</span><span class="p">.</span><span class="n">sessionDef</span><span class="p">?.</span><span class="n">sendMessage</span><span class="p">(</span><span class="n">dic</span><span class="p">,</span> <span class="n">replyHandler</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">errorHandler</span><span class="p">:</span> <span class="p">{</span> <span class="n">error</span> <span class="k">in</span>
-            <span class="bp">print</span><span class="p">(</span><span class="s">&#34;::PhoneWatchConnectivityManager Cannot send message: </span><span class="si">\(</span><span class="nb">String</span><span class="si">(</span><span class="n">describing</span><span class="p">:</span> <span class="n">error</span><span class="si">))</span><span class="s">&#34;</span><span class="p">)</span>
-        <span class="p">})</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div><p>In  my order on iPhone application, I will call this method to send data to apple watch when I get the data from server.</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="k">if</span> <span class="kd">let</span> <span class="nv">orderByDic</span><span class="p">:[</span><span class="nb">String</span><span class="p">:</span><span class="nb">Any</span><span class="p">]</span>  <span class="p">=</span> <span class="kc">self</span><span class="p">.</span><span class="n">viewModel</span><span class="p">.</span><span class="n">getItemsByDic</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">PhoneWatchConnectivityManager</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">sendMessage</span><span class="p">(</span><span class="n">byDic</span><span class="p">:</span> <span class="n">orderByDic</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div><p><code>getItemsByDic()</code> is the method in the <code>HistoryBookingRootViewModel</code> class. The output is <code>[String: Any]</code>. Here is example code:</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">getItemsByDic</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="p">[</span><span class="nb">String</span><span class="p">:</span> <span class="nb">Any</span><span class="p">]?</span> <span class="p">{</span>
-    <span class="k">guard</span> <span class="kd">let</span> <span class="nv">response</span><span class="p">:[</span><span class="n">ResultBookingDetail</span><span class="p">]</span> <span class="p">=</span> <span class="kc">self</span><span class="p">.</span><span class="n">flightHistoryResponse</span><span class="p">?.</span><span class="n">data</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="kc">nil</span><span class="p">}</span>
-    <span class="kd">let</span> <span class="nv">itemByDics</span><span class="p">:[[</span><span class="nb">String</span><span class="p">:</span><span class="nb">Any</span><span class="p">]]</span> <span class="p">=</span> <span class="n">response</span><span class="p">.</span><span class="bp">map</span> <span class="p">{</span> <span class="n">item</span> <span class="k">in</span>
-        <span class="kd">var</span> <span class="nv">itemByDic</span><span class="p">:[</span><span class="nb">String</span><span class="p">:</span><span class="nb">Any</span><span class="p">]</span> <span class="p">=</span> <span class="p">[:]</span>
-        <span class="n">itemByDic</span><span class="p">[</span><span class="s">&#34;type&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="n">item</span><span class="p">.</span><span class="n">type</span><span class="p">?.</span><span class="n">rawValue</span> <span class="p">??</span> <span class="s">&#34;&#34;</span>
-        <span class="n">itemByDic</span><span class="p">[</span><span class="s">&#34;id&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="n">item</span><span class="p">.</span><span class="n">getIdToView</span><span class="p">()</span>
-        <span class="n">itemByDic</span><span class="p">[</span><span class="s">&#34;date&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="n">item</span><span class="p">.</span><span class="n">getDateToShowAppleWatch</span><span class="p">()</span>
-        <span class="n">itemByDic</span><span class="p">[</span><span class="s">&#34;prnCode&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="n">item</span><span class="p">.</span><span class="n">getPNRCodeToView</span><span class="p">()</span>
-        <span class="n">itemByDic</span><span class="p">[</span><span class="s">&#34;isActive&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="n">item</span><span class="p">.</span><span class="n">isActiveTicket</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">itemByDic</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="p">[</span><span class="n">WatchConnectivityShareData</span><span class="p">.</span><span class="n">BOOKING_ORDER</span><span class="p">:</span><span class="n">itemByDics</span><span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div><h2 id="in-watch-side">In Watch Side</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">import</span> <span class="nc">Foundation</span>
+</span></span><span class="line"><span class="cl"><span class="kd">import</span> <span class="nc">WatchConnectivity</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">PhoneWatchConnectivityManager</span><span class="p">:</span> <span class="n">NSObject</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="kd">let</span> <span class="nv">shared</span> <span class="p">=</span> <span class="n">PhoneWatchConnectivityManager</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">fileprivate</span> <span class="kd">var</span> <span class="nv">sessionDef</span><span class="p">:</span><span class="n">WCSession</span><span class="p">?</span> <span class="p">=</span> <span class="kc">nil</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kr">override</span> <span class="kd">init</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">super</span><span class="p">.</span><span class="kd">init</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;::PhoneWatchConnectivityManager init WCSession.default&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">sessionDef</span> <span class="p">=</span> <span class="n">WCSession</span><span class="p">.</span><span class="k">default</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">sessionDef</span><span class="p">?.</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">self</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//</span><span class="cs">MARK:</span><span class="c1">// Base funcs</span>
+</span></span><span class="line"><span class="cl"><span class="kd">extension</span> <span class="nc">PhoneWatchConnectivityManager</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="kd">func</span> <span class="nf">sendMessage</span><span class="p">(</span><span class="n">byDic</span> <span class="n">dic</span><span class="p">:[</span><span class="nb">String</span> <span class="p">:</span> <span class="nb">Any</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">sessionDef</span><span class="p">?.</span><span class="n">sendMessage</span><span class="p">(</span><span class="n">dic</span><span class="p">,</span> <span class="n">replyHandler</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">errorHandler</span><span class="p">:</span> <span class="p">{</span> <span class="n">error</span> <span class="k">in</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">print</span><span class="p">(</span><span class="s">&#34;::PhoneWatchConnectivityManager Cannot send message: </span><span class="si">\(</span><span class="nb">String</span><span class="si">(</span><span class="n">describing</span><span class="p">:</span> <span class="n">error</span><span class="si">))</span><span class="s">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>In  my order on iPhone application, I will call this method to send data to apple watch when I get the data from server.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="k">if</span> <span class="kd">let</span> <span class="nv">orderByDic</span><span class="p">:[</span><span class="nb">String</span><span class="p">:</span><span class="nb">Any</span><span class="p">]</span>  <span class="p">=</span> <span class="kc">self</span><span class="p">.</span><span class="n">viewModel</span><span class="p">.</span><span class="n">getItemsByDic</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">PhoneWatchConnectivityManager</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">sendMessage</span><span class="p">(</span><span class="n">byDic</span><span class="p">:</span> <span class="n">orderByDic</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><code>getItemsByDic()</code> is the method in the <code>HistoryBookingRootViewModel</code> class. The output is <code>[String: Any]</code>. Here is example code:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">getItemsByDic</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="p">[</span><span class="nb">String</span><span class="p">:</span> <span class="nb">Any</span><span class="p">]?</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">guard</span> <span class="kd">let</span> <span class="nv">response</span><span class="p">:[</span><span class="n">ResultBookingDetail</span><span class="p">]</span> <span class="p">=</span> <span class="kc">self</span><span class="p">.</span><span class="n">flightHistoryResponse</span><span class="p">?.</span><span class="n">data</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="kc">nil</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">itemByDics</span><span class="p">:[[</span><span class="nb">String</span><span class="p">:</span><span class="nb">Any</span><span class="p">]]</span> <span class="p">=</span> <span class="n">response</span><span class="p">.</span><span class="bp">map</span> <span class="p">{</span> <span class="n">item</span> <span class="k">in</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">var</span> <span class="nv">itemByDic</span><span class="p">:[</span><span class="nb">String</span><span class="p">:</span><span class="nb">Any</span><span class="p">]</span> <span class="p">=</span> <span class="p">[:]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">itemByDic</span><span class="p">[</span><span class="s">&#34;type&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="n">item</span><span class="p">.</span><span class="n">type</span><span class="p">?.</span><span class="n">rawValue</span> <span class="p">??</span> <span class="s">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">itemByDic</span><span class="p">[</span><span class="s">&#34;id&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="n">item</span><span class="p">.</span><span class="n">getIdToView</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">itemByDic</span><span class="p">[</span><span class="s">&#34;date&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="n">item</span><span class="p">.</span><span class="n">getDateToShowAppleWatch</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">itemByDic</span><span class="p">[</span><span class="s">&#34;prnCode&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="n">item</span><span class="p">.</span><span class="n">getPNRCodeToView</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">itemByDic</span><span class="p">[</span><span class="s">&#34;isActive&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="n">item</span><span class="p">.</span><span class="n">isActiveTicket</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">itemByDic</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">[</span><span class="n">WatchConnectivityShareData</span><span class="p">.</span><span class="n">BOOKING_ORDER</span><span class="p">:</span><span class="n">itemByDics</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="in-watch-side">In Watch Side</h2>
 <p>In <code>WatchConnectivityManager</code> (watchOS project). We will receive message data via <code>func  session(_ session: WCSession, didReceiveMessage message: [String : Any])</code> method. After get the data, we convert type from dictionary to <code>MyOrderListItemModel</code> item model.</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="c1">//</span>
-<span class="c1">//  MyOrderListItemModel.swift</span>
-<span class="c1">//  watchOS WatchKit Extension</span>
-<span class="c1">//</span>
-<span class="c1">//  Created by Tuan Truong Quang on 6/1/22.</span>
-<span class="c1">//  Copyright © 2022 Truong Quang Tuan. All rights reserved.</span>
-<span class="c1">//</span>
-
-<span class="kd">import</span> <span class="nc">Foundation</span>
-<span class="kd">import</span> <span class="nc">Foundation</span>
-
-<span class="kd">struct</span> <span class="nc">MyOrderListItemModel</span> <span class="p">:</span> <span class="n">Identifiable</span> <span class="p">{</span>
-    
-    <span class="kd">var</span> <span class="nv">id</span><span class="p">:</span> <span class="nb">String</span> <span class="p">=</span> <span class="n">UUID</span><span class="p">().</span><span class="n">uuidString</span>
-    
-    <span class="kd">var</span> <span class="nv">bookingId</span><span class="p">:</span><span class="nb">String</span> <span class="p">=</span> <span class="s">&#34;&#34;</span>
-    <span class="kd">var</span> <span class="nv">type</span><span class="p">:</span><span class="nb">String</span> <span class="p">=</span> <span class="s">&#34;&#34;</span>
-    <span class="kd">var</span> <span class="nv">date</span><span class="p">:</span><span class="nb">String</span> <span class="p">=</span> <span class="s">&#34;&#34;</span>
-    <span class="kd">var</span> <span class="nv">prnCode</span><span class="p">:</span><span class="nb">String</span> <span class="p">=</span> <span class="s">&#34;&#34;</span>
-    <span class="kd">var</span> <span class="nv">isActive</span><span class="p">:</span><span class="nb">Bool</span> <span class="p">=</span> <span class="kc">true</span>
- 
-    <span class="kd">init</span><span class="p">(</span><span class="n">byDic</span> <span class="n">dic</span><span class="p">:[</span><span class="nb">String</span><span class="p">:</span><span class="nb">Any</span><span class="p">])</span> <span class="p">{</span>
-        <span class="kc">self</span><span class="p">.</span><span class="n">bookingId</span> <span class="p">=</span> <span class="n">dic</span><span class="p">[</span><span class="s">&#34;id&#34;</span><span class="p">]</span> <span class="k">as</span><span class="p">?</span> <span class="nb">String</span> <span class="p">??</span> <span class="s">&#34;&#34;</span>
-        <span class="kc">self</span><span class="p">.</span><span class="n">type</span> <span class="p">=</span> <span class="n">dic</span><span class="p">[</span><span class="s">&#34;type&#34;</span><span class="p">]</span> <span class="k">as</span><span class="p">?</span> <span class="nb">String</span> <span class="p">??</span> <span class="s">&#34;&#34;</span>
-        <span class="kc">self</span><span class="p">.</span><span class="n">date</span> <span class="p">=</span> <span class="n">dic</span><span class="p">[</span><span class="s">&#34;date&#34;</span><span class="p">]</span> <span class="k">as</span><span class="p">?</span> <span class="nb">String</span> <span class="p">??</span> <span class="s">&#34;&#34;</span>
-        <span class="kc">self</span><span class="p">.</span><span class="n">prnCode</span> <span class="p">=</span> <span class="n">dic</span><span class="p">[</span><span class="s">&#34;prnCode&#34;</span><span class="p">]</span> <span class="k">as</span><span class="p">?</span> <span class="nb">String</span> <span class="p">??</span> <span class="s">&#34;&#34;</span>
-        <span class="kc">self</span><span class="p">.</span><span class="n">isActive</span> <span class="p">=</span> <span class="n">dic</span><span class="p">[</span><span class="s">&#34;isActive&#34;</span><span class="p">]</span> <span class="k">as</span><span class="p">?</span> <span class="nb">Bool</span> <span class="p">??</span> <span class="kc">false</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">extension</span> <span class="nc">MyOrderListItemModel</span> <span class="p">{</span>
-    <span class="kd">func</span> <span class="nf">getIcon</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="kc">self</span><span class="p">.</span><span class="n">type</span><span class="p">.</span><span class="n">uppercased</span><span class="p">()</span> <span class="p">==</span> <span class="s">&#34;FLIGHT&#34;</span> <span class="p">{</span> <span class="k">return</span> <span class="s">&#34;plane&#34;</span><span class="p">}</span>
-        <span class="k">if</span> <span class="kc">self</span><span class="p">.</span><span class="n">type</span><span class="p">.</span><span class="n">uppercased</span><span class="p">()</span> <span class="p">==</span> <span class="s">&#34;TRAIN&#34;</span> <span class="p">{</span> <span class="k">return</span> <span class="s">&#34;icon-homeTrain&#34;</span><span class="p">}</span>
-        <span class="k">if</span> <span class="kc">self</span><span class="p">.</span><span class="n">type</span><span class="p">.</span><span class="n">uppercased</span><span class="p">()</span> <span class="p">==</span> <span class="s">&#34;BUS&#34;</span> <span class="p">{</span> <span class="k">return</span> <span class="s">&#34;bus&#34;</span><span class="p">}</span>
-        <span class="k">return</span> <span class="s">&#34;plane&#34;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-</code></pre></div><h1 id="update-data-for-view">Update data for view</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">//</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//  MyOrderListItemModel.swift</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//  watchOS WatchKit Extension</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//  Created by Tuan Truong Quang on 6/1/22.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//  Copyright © 2022 Truong Quang Tuan. All rights reserved.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">import</span> <span class="nc">Foundation</span>
+</span></span><span class="line"><span class="cl"><span class="kd">import</span> <span class="nc">Foundation</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">struct</span> <span class="nc">MyOrderListItemModel</span> <span class="p">:</span> <span class="n">Identifiable</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">id</span><span class="p">:</span> <span class="nb">String</span> <span class="p">=</span> <span class="n">UUID</span><span class="p">().</span><span class="n">uuidString</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">bookingId</span><span class="p">:</span><span class="nb">String</span> <span class="p">=</span> <span class="s">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">type</span><span class="p">:</span><span class="nb">String</span> <span class="p">=</span> <span class="s">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">date</span><span class="p">:</span><span class="nb">String</span> <span class="p">=</span> <span class="s">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">prnCode</span><span class="p">:</span><span class="nb">String</span> <span class="p">=</span> <span class="s">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">isActive</span><span class="p">:</span><span class="nb">Bool</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    <span class="kd">init</span><span class="p">(</span><span class="n">byDic</span> <span class="n">dic</span><span class="p">:[</span><span class="nb">String</span><span class="p">:</span><span class="nb">Any</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">bookingId</span> <span class="p">=</span> <span class="n">dic</span><span class="p">[</span><span class="s">&#34;id&#34;</span><span class="p">]</span> <span class="k">as</span><span class="p">?</span> <span class="nb">String</span> <span class="p">??</span> <span class="s">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">type</span> <span class="p">=</span> <span class="n">dic</span><span class="p">[</span><span class="s">&#34;type&#34;</span><span class="p">]</span> <span class="k">as</span><span class="p">?</span> <span class="nb">String</span> <span class="p">??</span> <span class="s">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">date</span> <span class="p">=</span> <span class="n">dic</span><span class="p">[</span><span class="s">&#34;date&#34;</span><span class="p">]</span> <span class="k">as</span><span class="p">?</span> <span class="nb">String</span> <span class="p">??</span> <span class="s">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">prnCode</span> <span class="p">=</span> <span class="n">dic</span><span class="p">[</span><span class="s">&#34;prnCode&#34;</span><span class="p">]</span> <span class="k">as</span><span class="p">?</span> <span class="nb">String</span> <span class="p">??</span> <span class="s">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">isActive</span> <span class="p">=</span> <span class="n">dic</span><span class="p">[</span><span class="s">&#34;isActive&#34;</span><span class="p">]</span> <span class="k">as</span><span class="p">?</span> <span class="nb">Bool</span> <span class="p">??</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">extension</span> <span class="nc">MyOrderListItemModel</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">getIcon</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="kc">self</span><span class="p">.</span><span class="n">type</span><span class="p">.</span><span class="n">uppercased</span><span class="p">()</span> <span class="p">==</span> <span class="s">&#34;FLIGHT&#34;</span> <span class="p">{</span> <span class="k">return</span> <span class="s">&#34;plane&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="kc">self</span><span class="p">.</span><span class="n">type</span><span class="p">.</span><span class="n">uppercased</span><span class="p">()</span> <span class="p">==</span> <span class="s">&#34;TRAIN&#34;</span> <span class="p">{</span> <span class="k">return</span> <span class="s">&#34;icon-homeTrain&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="kc">self</span><span class="p">.</span><span class="n">type</span><span class="p">.</span><span class="n">uppercased</span><span class="p">()</span> <span class="p">==</span> <span class="s">&#34;BUS&#34;</span> <span class="p">{</span> <span class="k">return</span> <span class="s">&#34;bus&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="s">&#34;plane&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h1 id="update-data-for-view">Update data for view</h1>
 <p>Now, We update data when receive data on <code>session didReceiveMessage</code> method:</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift">
-<span class="kd">import</span> <span class="nc">os</span>
-<span class="kd">import</span> <span class="nc">SwiftUI</span>
-<span class="kd">import</span> <span class="nc">WatchConnectivity</span>
-
-<span class="kd">class</span> <span class="nc">WatchConnectivityManager</span><span class="p">:</span> <span class="n">NSObject</span><span class="p">,</span> <span class="n">ObservableObject</span> <span class="p">{</span>
-    <span class="kd">private</span> <span class="kd">let</span> <span class="nv">wcSession</span><span class="p">:</span> <span class="n">WCSession</span>
-    <span class="kd">private</span> <span class="kd">let</span> <span class="nv">logger</span> <span class="p">=</span> <span class="n">Logger</span><span class="p">(</span><span class="n">subsystem</span><span class="p">:</span> <span class="s">&#34;WCExperimentsWatchApp&#34;</span><span class="p">,</span> <span class="n">category</span><span class="p">:</span> <span class="s">&#34;WatchConnectivityService&#34;</span><span class="p">)</span>
-    
-    <span class="p">@</span><span class="n">Published</span> <span class="kd">var</span> <span class="nv">notificationMessage</span><span class="p">:</span> <span class="n">WatchMessageItemModel</span><span class="p">?</span> <span class="p">=</span> <span class="kc">nil</span>
-    
-    <span class="p">@</span><span class="n">Published</span> <span class="kd">var</span> <span class="nv">bookingOrder</span><span class="p">:</span> <span class="p">[</span><span class="n">MyOrderListItemModel</span><span class="p">]</span> <span class="p">=</span> <span class="p">[]</span>
-
-    <span class="kd">static</span> <span class="kd">let</span> <span class="nv">share</span> <span class="p">=</span> <span class="n">WatchConnectivityManager</span><span class="p">()</span>
-    
-    <span class="kd">private</span> <span class="kr">override</span> <span class="kd">init</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kc">self</span><span class="p">.</span><span class="n">wcSession</span> <span class="p">=</span> <span class="n">WCSession</span><span class="p">.</span><span class="k">default</span>
-        <span class="kc">super</span><span class="p">.</span><span class="kd">init</span><span class="p">()</span>
-        <span class="k">if</span> <span class="n">WCSession</span><span class="p">.</span><span class="n">isSupported</span><span class="p">()</span> <span class="p">{</span>
-            <span class="n">wcSession</span><span class="p">.</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">self</span>
-            <span class="n">wcSession</span><span class="p">.</span><span class="n">activate</span><span class="p">()</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">extension</span> <span class="nc">WatchConnectivityManager</span><span class="p">:</span> <span class="n">WCSessionDelegate</span> <span class="p">{</span>
-    
-    <span class="kd">func</span> <span class="nf">session</span><span class="p">(</span><span class="kc">_</span> <span class="n">session</span><span class="p">:</span> <span class="n">WCSession</span><span class="p">,</span> <span class="n">didReceiveMessage</span> <span class="n">message</span><span class="p">:</span> <span class="p">[</span><span class="nb">String</span> <span class="p">:</span> <span class="nb">Any</span><span class="p">])</span> <span class="p">{</span>
-        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;::WatchConnectivityService didReceiveMessage: </span><span class="si">\(</span><span class="n">message</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
-        <span class="n">DispatchQueue</span><span class="p">.</span><span class="n">main</span><span class="p">.</span><span class="n">async</span> <span class="p">{</span> <span class="p">[</span><span class="kr">weak</span> <span class="kc">self</span><span class="p">]</span> <span class="k">in</span> <span class="k">guard</span> <span class="kd">let</span> <span class="nv">strongSelf</span> <span class="p">=</span> <span class="kc">self</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
-            
-            <span class="c1">//Order</span>
-            <span class="k">if</span> <span class="n">message</span><span class="p">.</span><span class="n">keys</span><span class="p">.</span><span class="bp">contains</span><span class="p">(</span><span class="n">WatchConnectivityShareData</span><span class="p">.</span><span class="n">BOOKING_ORDER</span><span class="p">)</span> <span class="p">{</span>
-                <span class="k">if</span> <span class="kd">let</span> <span class="nv">orderByDic</span> <span class="p">=</span> <span class="n">message</span><span class="p">[</span><span class="n">WatchConnectivityShareData</span><span class="p">.</span><span class="n">BOOKING_ORDER</span><span class="p">]</span> <span class="k">as</span><span class="p">?</span> <span class="p">[[</span><span class="nb">String</span><span class="p">:</span><span class="nb">Any</span><span class="p">]]</span> <span class="p">{</span>
-                    <span class="n">strongSelf</span><span class="p">.</span><span class="n">bookingOrder</span> <span class="p">=</span> <span class="n">orderByDic</span><span class="p">.</span><span class="bp">map</span> <span class="p">{</span> <span class="n">dic</span> <span class="k">in</span>
-                        <span class="k">return</span> <span class="n">MyOrderListItemModel</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">byDic</span><span class="p">:</span> <span class="n">dic</span><span class="p">)</span>
-                    <span class="p">}</span>
-                    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;strongSelf.bookingOrder: </span><span class="si">\(</span><span class="n">strongSelf</span><span class="p">.</span><span class="n">bookingOrder</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
-                <span class="p">}</span>
-            
-            <span class="c1">//Message</span>
-            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="n">message</span><span class="p">.</span><span class="n">keys</span><span class="p">.</span><span class="bp">contains</span><span class="p">(</span><span class="n">WatchConnectivityShareData</span><span class="p">.</span><span class="n">MESSAGE_KEY</span><span class="p">)</span> <span class="p">{</span>
-                <span class="kd">let</span> <span class="nv">messageByString</span><span class="p">:</span><span class="nb">String</span> <span class="p">=</span> <span class="n">message</span><span class="p">[</span><span class="n">WatchConnectivityShareData</span><span class="p">.</span><span class="n">MESSAGE_KEY</span><span class="p">]</span> <span class="k">as</span><span class="p">?</span> <span class="nb">String</span> <span class="p">??</span> <span class="s">&#34;Error&#34;</span>
-                <span class="n">strongSelf</span><span class="p">.</span><span class="n">notificationMessage</span> <span class="p">=</span> <span class="n">WatchMessageItemModel</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">messsage</span><span class="p">:</span> <span class="n">messageByString</span><span class="p">)</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-</code></pre></div><p>By marking the <strong>bookingOrder</strong> variable as <code>@Published</code>, it means that whenever there is any changes to the users variable, the instances of the class that are &ldquo;subscribed&rdquo; to it will be notified, prompting SwiftUI to re-render the <code>View</code>. The final step is to connect the data source to our <code>View</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">import</span> <span class="nc">os</span>
+</span></span><span class="line"><span class="cl"><span class="kd">import</span> <span class="nc">SwiftUI</span>
+</span></span><span class="line"><span class="cl"><span class="kd">import</span> <span class="nc">WatchConnectivity</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">WatchConnectivityManager</span><span class="p">:</span> <span class="n">NSObject</span><span class="p">,</span> <span class="n">ObservableObject</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">let</span> <span class="nv">wcSession</span><span class="p">:</span> <span class="n">WCSession</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">let</span> <span class="nv">logger</span> <span class="p">=</span> <span class="n">Logger</span><span class="p">(</span><span class="n">subsystem</span><span class="p">:</span> <span class="s">&#34;WCExperimentsWatchApp&#34;</span><span class="p">,</span> <span class="n">category</span><span class="p">:</span> <span class="s">&#34;WatchConnectivityService&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="p">@</span><span class="n">Published</span> <span class="kd">var</span> <span class="nv">notificationMessage</span><span class="p">:</span> <span class="n">WatchMessageItemModel</span><span class="p">?</span> <span class="p">=</span> <span class="kc">nil</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="p">@</span><span class="n">Published</span> <span class="kd">var</span> <span class="nv">bookingOrder</span><span class="p">:</span> <span class="p">[</span><span class="n">MyOrderListItemModel</span><span class="p">]</span> <span class="p">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="kd">let</span> <span class="nv">share</span> <span class="p">=</span> <span class="n">WatchConnectivityManager</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kr">override</span> <span class="kd">init</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">wcSession</span> <span class="p">=</span> <span class="n">WCSession</span><span class="p">.</span><span class="k">default</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">super</span><span class="p">.</span><span class="kd">init</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">WCSession</span><span class="p">.</span><span class="n">isSupported</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">wcSession</span><span class="p">.</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">self</span>
+</span></span><span class="line"><span class="cl">            <span class="n">wcSession</span><span class="p">.</span><span class="n">activate</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">extension</span> <span class="nc">WatchConnectivityManager</span><span class="p">:</span> <span class="n">WCSessionDelegate</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">session</span><span class="p">(</span><span class="kc">_</span> <span class="n">session</span><span class="p">:</span> <span class="n">WCSession</span><span class="p">,</span> <span class="n">didReceiveMessage</span> <span class="n">message</span><span class="p">:</span> <span class="p">[</span><span class="nb">String</span> <span class="p">:</span> <span class="nb">Any</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;::WatchConnectivityService didReceiveMessage: </span><span class="si">\(</span><span class="n">message</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">DispatchQueue</span><span class="p">.</span><span class="n">main</span><span class="p">.</span><span class="n">async</span> <span class="p">{</span> <span class="p">[</span><span class="kr">weak</span> <span class="kc">self</span><span class="p">]</span> <span class="k">in</span> <span class="k">guard</span> <span class="kd">let</span> <span class="nv">strongSelf</span> <span class="p">=</span> <span class="kc">self</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            <span class="c1">//Order</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">message</span><span class="p">.</span><span class="n">keys</span><span class="p">.</span><span class="bp">contains</span><span class="p">(</span><span class="n">WatchConnectivityShareData</span><span class="p">.</span><span class="n">BOOKING_ORDER</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="kd">let</span> <span class="nv">orderByDic</span> <span class="p">=</span> <span class="n">message</span><span class="p">[</span><span class="n">WatchConnectivityShareData</span><span class="p">.</span><span class="n">BOOKING_ORDER</span><span class="p">]</span> <span class="k">as</span><span class="p">?</span> <span class="p">[[</span><span class="nb">String</span><span class="p">:</span><span class="nb">Any</span><span class="p">]]</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">strongSelf</span><span class="p">.</span><span class="n">bookingOrder</span> <span class="p">=</span> <span class="n">orderByDic</span><span class="p">.</span><span class="bp">map</span> <span class="p">{</span> <span class="n">dic</span> <span class="k">in</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">return</span> <span class="n">MyOrderListItemModel</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">byDic</span><span class="p">:</span> <span class="n">dic</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;strongSelf.bookingOrder: </span><span class="si">\(</span><span class="n">strongSelf</span><span class="p">.</span><span class="n">bookingOrder</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            <span class="c1">//Message</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="n">message</span><span class="p">.</span><span class="n">keys</span><span class="p">.</span><span class="bp">contains</span><span class="p">(</span><span class="n">WatchConnectivityShareData</span><span class="p">.</span><span class="n">MESSAGE_KEY</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="kd">let</span> <span class="nv">messageByString</span><span class="p">:</span><span class="nb">String</span> <span class="p">=</span> <span class="n">message</span><span class="p">[</span><span class="n">WatchConnectivityShareData</span><span class="p">.</span><span class="n">MESSAGE_KEY</span><span class="p">]</span> <span class="k">as</span><span class="p">?</span> <span class="nb">String</span> <span class="p">??</span> <span class="s">&#34;Error&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="n">strongSelf</span><span class="p">.</span><span class="n">notificationMessage</span> <span class="p">=</span> <span class="n">WatchMessageItemModel</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">messsage</span><span class="p">:</span> <span class="n">messageByString</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>By marking the <strong>bookingOrder</strong> variable as <code>@Published</code>, it means that whenever there is any changes to the users variable, the instances of the class that are &ldquo;subscribed&rdquo; to it will be notified, prompting SwiftUI to re-render the <code>View</code>. The final step is to connect the data source to our <code>View</code>.</p>
 <p>To do this, we will create an instance of the <code>WatchConnectivityManager</code> class in the ContentView. In order to &ldquo;subscribe&rdquo; to be notified of any changes to the data, we have to mark it with <code>@StateObject</code>:</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">import</span> <span class="nc">SwiftUI</span>
-
-<span class="kd">struct</span> <span class="nc">MyOrderView</span><span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
-    
-    <span class="p">@</span><span class="n">StateObject</span> <span class="n">fileprivate</span> <span class="kd">var</span> <span class="nv">service</span> <span class="p">=</span> <span class="n">WatchConnectivityManager</span><span class="p">.</span><span class="n">share</span>
-    
-    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
-        <span class="n">NavigationView</span> <span class="p">{</span>
-            <span class="n">List</span><span class="p">()</span> <span class="p">{</span>
-                <span class="kd">let</span> <span class="nv">activeTickets</span><span class="p">:[</span><span class="n">MyOrderListItemModel</span><span class="p">]</span> <span class="p">=</span> <span class="kc">self</span><span class="p">.</span><span class="n">service</span><span class="p">.</span><span class="n">bookingOrder</span><span class="p">.</span><span class="bp">filter</span><span class="p">({</span><span class="nv">$0</span><span class="p">.</span><span class="n">isActive</span><span class="p">})</span>
-                <span class="kd">let</span> <span class="nv">nonactiveTickets</span><span class="p">:[</span><span class="n">MyOrderListItemModel</span><span class="p">]</span> <span class="p">=</span> <span class="kc">self</span><span class="p">.</span><span class="n">service</span><span class="p">.</span><span class="n">bookingOrder</span><span class="p">.</span><span class="bp">filter</span><span class="p">({</span><span class="o">!</span><span class="nv">$0</span><span class="p">.</span><span class="n">isActive</span><span class="p">})</span>
-                
-                <span class="n">Section</span><span class="p">(</span><span class="n">header</span><span class="p">:</span> <span class="n">Text</span><span class="p">(</span><span class="s">&#34;Active Tickets&#34;</span><span class="p">))</span> <span class="p">{</span>
-                    <span class="k">if</span> <span class="n">activeTickets</span><span class="p">.</span><span class="bp">isEmpty</span> <span class="p">{</span>
-                        <span class="n">Text</span><span class="p">(</span><span class="s">&#34;Oops, loos like there&#39;s no data...&#34;</span><span class="p">)</span>
-                    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                        <span class="n">ForEach</span><span class="p">(</span><span class="n">activeTickets</span><span class="p">)</span> <span class="p">{</span> <span class="n">item</span> <span class="k">in</span>
-                            <span class="n">MyOrderListItemView</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="n">item</span><span class="p">)</span>
-                        <span class="p">}</span>
-                    <span class="p">}</span>
-                <span class="p">}.</span><span class="n">headerProminence</span><span class="p">(.</span><span class="n">increased</span><span class="p">)</span>
-                <span class="n">Section</span><span class="p">(</span><span class="n">header</span><span class="p">:</span> <span class="n">Text</span><span class="p">(</span><span class="s">&#34;Purchase History&#34;</span><span class="p">),</span> <span class="n">footer</span><span class="p">:</span> <span class="n">Text</span><span class="p">(</span><span class="s">&#34;Call 1900 2642 if you have any problems&#34;</span><span class="p">))</span> <span class="p">{</span>
-                    <span class="k">if</span> <span class="n">nonactiveTickets</span><span class="p">.</span><span class="bp">isEmpty</span> <span class="p">{</span>
-                        <span class="n">Text</span><span class="p">(</span><span class="s">&#34;Oops, loos like there&#39;s no data...&#34;</span><span class="p">)</span>
-                    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                        <span class="n">ForEach</span><span class="p">(</span><span class="n">nonactiveTickets</span><span class="p">)</span> <span class="p">{</span> <span class="n">item</span> <span class="k">in</span>
-                            <span class="n">MyOrderListItemView</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="n">item</span><span class="p">)</span>
-                        <span class="p">}</span>
-                    <span class="p">}</span>
-                <span class="p">}.</span><span class="n">headerProminence</span><span class="p">(.</span><span class="n">standard</span><span class="p">)</span>
-            <span class="p">}</span>
-            <span class="p">.</span><span class="n">listStyle</span><span class="p">(.</span><span class="n">automatic</span><span class="p">)</span>
-        <span class="p">}</span>
-        <span class="p">.</span><span class="n">navigationTitle</span><span class="p">(</span><span class="s">&#34;My Booking&#34;</span><span class="p">)</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div><p>And <code> MyOrderListItemView</code> is a element on <code>List</code>. It is like a row in UITableView on UIKit world @@.</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="c1">//</span>
-<span class="c1">//  MyOrderListItemView.swift</span>
-<span class="c1">//  watchOS WatchKit Extension</span>
-<span class="c1">//</span>
-<span class="c1">//  Created by Tuan Truong Quang on 6/1/22.</span>
-<span class="c1">//  Copyright © 2022 Truong Quang Tuan. All rights reserved.</span>
-<span class="c1">//</span>
-
-<span class="kd">import</span> <span class="nc">SwiftUI</span>
-
-<span class="kd">struct</span> <span class="nc">MyOrderListItemView</span><span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
-    
-    <span class="kd">var</span> <span class="nv">item</span><span class="p">:</span><span class="n">MyOrderListItemModel</span>
-    
-    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
-        <span class="n">HStack</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">center</span><span class="p">,</span> <span class="n">spacing</span><span class="p">:</span> <span class="mf">2.0</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">Image</span><span class="p">(</span><span class="kc">self</span><span class="p">.</span><span class="n">item</span><span class="p">.</span><span class="n">getIcon</span><span class="p">())</span>
-                <span class="p">.</span><span class="n">resizable</span><span class="p">()</span> <span class="c1">// it will sized so that it fills all the available space</span>
-                <span class="p">.</span><span class="n">frame</span><span class="p">(</span><span class="n">width</span><span class="p">:</span> <span class="mf">10.0</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mf">10.0</span><span class="p">,</span> <span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">center</span><span class="p">)</span>
-            
-            <span class="n">VStack</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">leading</span><span class="p">,</span> <span class="n">spacing</span><span class="p">:</span> <span class="mf">2.0</span><span class="p">)</span> <span class="p">{</span>
-                <span class="n">Text</span><span class="p">(</span><span class="kc">self</span><span class="p">.</span><span class="n">item</span><span class="p">.</span><span class="n">bookingId</span><span class="p">).</span><span class="n">font</span><span class="p">(.</span><span class="n">system</span><span class="p">(</span><span class="n">size</span><span class="p">:</span> <span class="mf">9.0</span><span class="p">)).</span><span class="n">opacity</span><span class="p">(</span><span class="mf">0.8</span><span class="p">).</span><span class="n">padding</span><span class="p">(.</span><span class="n">leading</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">)</span>
-                <span class="n">Text</span><span class="p">(</span><span class="kc">self</span><span class="p">.</span><span class="n">item</span><span class="p">.</span><span class="n">date</span><span class="p">).</span><span class="n">font</span><span class="p">(.</span><span class="n">system</span><span class="p">(</span><span class="n">size</span><span class="p">:</span> <span class="mf">9.0</span><span class="p">)).</span><span class="n">opacity</span><span class="p">(</span><span class="mf">1.0</span><span class="p">).</span><span class="n">padding</span><span class="p">(.</span><span class="n">leading</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">)</span>
-                <span class="n">Text</span><span class="p">(</span><span class="kc">self</span><span class="p">.</span><span class="n">item</span><span class="p">.</span><span class="n">prnCode</span><span class="p">).</span><span class="n">font</span><span class="p">(.</span><span class="n">system</span><span class="p">(</span><span class="n">size</span><span class="p">:</span> <span class="mf">10.0</span><span class="p">)).</span><span class="n">fontWeight</span><span class="p">(.</span><span class="n">bold</span><span class="p">).</span><span class="n">padding</span><span class="p">(.</span><span class="n">leading</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">)</span>
-            <span class="p">}</span>
-            <span class="n">Spacer</span><span class="p">()</span>
-            <span class="n">Circle</span><span class="p">()</span>
-                <span class="p">.</span><span class="n">foregroundColor</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">hex</span><span class="p">:</span> <span class="mh">0x1D67D6</span><span class="p">).</span><span class="n">opacity</span><span class="p">(</span><span class="mf">0.9</span><span class="p">))</span>
-                <span class="p">.</span><span class="n">frame</span><span class="p">(</span><span class="n">width</span><span class="p">:</span> <span class="mf">8.0</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mf">8.0</span><span class="p">)</span>
-                <span class="p">.</span><span class="n">padding</span><span class="p">(.</span><span class="n">trailing</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-                <span class="p">.</span><span class="n">opacity</span><span class="p">(</span><span class="kc">self</span><span class="p">.</span><span class="n">item</span><span class="p">.</span><span class="n">isActive</span> <span class="p">?</span> <span class="mf">1.0</span> <span class="p">:</span> <span class="mf">0.0</span><span class="p">)</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">import</span> <span class="nc">SwiftUI</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">struct</span> <span class="nc">MyOrderView</span><span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="p">@</span><span class="n">StateObject</span> <span class="n">fileprivate</span> <span class="kd">var</span> <span class="nv">service</span> <span class="p">=</span> <span class="n">WatchConnectivityManager</span><span class="p">.</span><span class="n">share</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">NavigationView</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">List</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="kd">let</span> <span class="nv">activeTickets</span><span class="p">:[</span><span class="n">MyOrderListItemModel</span><span class="p">]</span> <span class="p">=</span> <span class="kc">self</span><span class="p">.</span><span class="n">service</span><span class="p">.</span><span class="n">bookingOrder</span><span class="p">.</span><span class="bp">filter</span><span class="p">({</span><span class="nv">$0</span><span class="p">.</span><span class="n">isActive</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl">                <span class="kd">let</span> <span class="nv">nonactiveTickets</span><span class="p">:[</span><span class="n">MyOrderListItemModel</span><span class="p">]</span> <span class="p">=</span> <span class="kc">self</span><span class="p">.</span><span class="n">service</span><span class="p">.</span><span class="n">bookingOrder</span><span class="p">.</span><span class="bp">filter</span><span class="p">({</span><span class="o">!</span><span class="nv">$0</span><span class="p">.</span><span class="n">isActive</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl">                
+</span></span><span class="line"><span class="cl">                <span class="n">Section</span><span class="p">(</span><span class="n">header</span><span class="p">:</span> <span class="n">Text</span><span class="p">(</span><span class="s">&#34;Active Tickets&#34;</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">if</span> <span class="n">activeTickets</span><span class="p">.</span><span class="bp">isEmpty</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">Text</span><span class="p">(</span><span class="s">&#34;Oops, loos like there&#39;s no data...&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">ForEach</span><span class="p">(</span><span class="n">activeTickets</span><span class="p">)</span> <span class="p">{</span> <span class="n">item</span> <span class="k">in</span>
+</span></span><span class="line"><span class="cl">                            <span class="n">MyOrderListItemView</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="n">item</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}.</span><span class="n">headerProminence</span><span class="p">(.</span><span class="n">increased</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">Section</span><span class="p">(</span><span class="n">header</span><span class="p">:</span> <span class="n">Text</span><span class="p">(</span><span class="s">&#34;Purchase History&#34;</span><span class="p">),</span> <span class="n">footer</span><span class="p">:</span> <span class="n">Text</span><span class="p">(</span><span class="s">&#34;Call 1900 2642 if you have any problems&#34;</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">if</span> <span class="n">nonactiveTickets</span><span class="p">.</span><span class="bp">isEmpty</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">Text</span><span class="p">(</span><span class="s">&#34;Oops, loos like there&#39;s no data...&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">ForEach</span><span class="p">(</span><span class="n">nonactiveTickets</span><span class="p">)</span> <span class="p">{</span> <span class="n">item</span> <span class="k">in</span>
+</span></span><span class="line"><span class="cl">                            <span class="n">MyOrderListItemView</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="n">item</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}.</span><span class="n">headerProminence</span><span class="p">(.</span><span class="n">standard</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">.</span><span class="n">listStyle</span><span class="p">(.</span><span class="n">automatic</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">navigationTitle</span><span class="p">(</span><span class="s">&#34;My Booking&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>And <code> MyOrderListItemView</code> is a element on <code>List</code>. It is like a row in UITableView on UIKit world @@.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">//</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//  MyOrderListItemView.swift</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//  watchOS WatchKit Extension</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//  Created by Tuan Truong Quang on 6/1/22.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//  Copyright © 2022 Truong Quang Tuan. All rights reserved.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">import</span> <span class="nc">SwiftUI</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">struct</span> <span class="nc">MyOrderListItemView</span><span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">item</span><span class="p">:</span><span class="n">MyOrderListItemModel</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">HStack</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">center</span><span class="p">,</span> <span class="n">spacing</span><span class="p">:</span> <span class="mf">2.0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Image</span><span class="p">(</span><span class="kc">self</span><span class="p">.</span><span class="n">item</span><span class="p">.</span><span class="n">getIcon</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">                <span class="p">.</span><span class="n">resizable</span><span class="p">()</span> <span class="c1">// it will sized so that it fills all the available space</span>
+</span></span><span class="line"><span class="cl">                <span class="p">.</span><span class="n">frame</span><span class="p">(</span><span class="n">width</span><span class="p">:</span> <span class="mf">10.0</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mf">10.0</span><span class="p">,</span> <span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">center</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            <span class="n">VStack</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">leading</span><span class="p">,</span> <span class="n">spacing</span><span class="p">:</span> <span class="mf">2.0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">Text</span><span class="p">(</span><span class="kc">self</span><span class="p">.</span><span class="n">item</span><span class="p">.</span><span class="n">bookingId</span><span class="p">).</span><span class="n">font</span><span class="p">(.</span><span class="n">system</span><span class="p">(</span><span class="n">size</span><span class="p">:</span> <span class="mf">9.0</span><span class="p">)).</span><span class="n">opacity</span><span class="p">(</span><span class="mf">0.8</span><span class="p">).</span><span class="n">padding</span><span class="p">(.</span><span class="n">leading</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">Text</span><span class="p">(</span><span class="kc">self</span><span class="p">.</span><span class="n">item</span><span class="p">.</span><span class="n">date</span><span class="p">).</span><span class="n">font</span><span class="p">(.</span><span class="n">system</span><span class="p">(</span><span class="n">size</span><span class="p">:</span> <span class="mf">9.0</span><span class="p">)).</span><span class="n">opacity</span><span class="p">(</span><span class="mf">1.0</span><span class="p">).</span><span class="n">padding</span><span class="p">(.</span><span class="n">leading</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">Text</span><span class="p">(</span><span class="kc">self</span><span class="p">.</span><span class="n">item</span><span class="p">.</span><span class="n">prnCode</span><span class="p">).</span><span class="n">font</span><span class="p">(.</span><span class="n">system</span><span class="p">(</span><span class="n">size</span><span class="p">:</span> <span class="mf">10.0</span><span class="p">)).</span><span class="n">fontWeight</span><span class="p">(.</span><span class="n">bold</span><span class="p">).</span><span class="n">padding</span><span class="p">(.</span><span class="n">leading</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Spacer</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Circle</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">                <span class="p">.</span><span class="n">foregroundColor</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">hex</span><span class="p">:</span> <span class="mh">0x1D67D6</span><span class="p">).</span><span class="n">opacity</span><span class="p">(</span><span class="mf">0.9</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                <span class="p">.</span><span class="n">frame</span><span class="p">(</span><span class="n">width</span><span class="p">:</span> <span class="mf">8.0</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mf">8.0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="p">.</span><span class="n">padding</span><span class="p">(.</span><span class="n">trailing</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="p">.</span><span class="n">opacity</span><span class="p">(</span><span class="kc">self</span><span class="p">.</span><span class="n">item</span><span class="p">.</span><span class="n">isActive</span> <span class="p">?</span> <span class="mf">1.0</span> <span class="p">:</span> <span class="mf">0.0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><ul>
 <li><code>List</code> (UITableView in UIKit World): A container that presents rows of data arranged in a single column <strong>(static scrollable list)</strong>. Here are some tutorial to deep dive:
 <ul>
 <li><a href="https://www.devtechie.com/swiftui-list-deep-dive">SwiftUI List: Deep Dive</a></li>
@@ -892,35 +888,34 @@ Abstract Last post, We completed the home screen. Today, We will focus to design
 <p><strong>SwiftUI</strong> has introduced the <code>NavigationView</code> and <code>NavigationLink</code> structs. These two pieces work together to allow navigation between views in your application. The <code>NavigationView</code> is used to wrap the content of your views, setting them up for subsequent navigation. The <code>NavigationLink</code> does the actual work of assigning what content to navigate to and providing a UI component for the user to initiate that navigation.</p>
 <p>When a menu item is tapped, we want to bring in a detail view that shows more information. We already placed <code>ContentView</code> inside a <code>NavigationView</code>, so now we can use a new view type called <code>NavigationLink</code>. We need to give this a <em>destination</em> – what kind of thing it should show – then provide everything inside the link as a closure.</p>
 <p>So, to achieve this use this code for a <code>HomeView</code>:</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">struct</span> <span class="nc">HomeView</span><span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
-    
-    <span class="p">@</span><span class="n">StateObject</span> <span class="n">fileprivate</span> <span class="kd">var</span> <span class="nv">service</span> <span class="p">=</span> <span class="n">WatchConnectivityManager</span><span class="p">.</span><span class="n">share</span>
-    
-    <span class="n">fileprivate</span> <span class="kd">let</span> <span class="nv">backgroundImages</span> <span class="p">=</span> <span class="p">[</span><span class="s">&#34;home-bg&#34;</span><span class="p">,</span> <span class="s">&#34;home-bg1&#34;</span><span class="p">,</span> <span class="s">&#34;home-bg2&#34;</span><span class="p">,</span> <span class="s">&#34;home-bg3&#34;</span><span class="p">,</span> <span class="s">&#34;home-bg4&#34;</span><span class="p">]</span>
-    
-    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
-        <span class="n">NavigationView</span> <span class="p">{</span>
-            <span class="p">...</span>
-            
-            <span class="n">HStack</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">center</span><span class="p">,</span> <span class="n">spacing</span><span class="p">:</span> <span class="mf">8.0</span><span class="p">)</span> <span class="p">{</span>
-                
-                <span class="n">NavigationLink</span><span class="p">(</span><span class="n">destination</span><span class="p">:</span> <span class="n">MyOrderView</span><span class="p">())</span> <span class="p">{</span>
-                    <span class="n">HomeItemView</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">title</span><span class="p">:</span> <span class="s">&#34;All Bookings&#34;</span><span class="p">,</span> <span class="n">icon</span><span class="p">:</span> <span class="s">&#34;calendar&#34;</span><span class="p">))</span>
-                <span class="p">}.</span><span class="n">buttonStyle</span><span class="p">(.</span><span class="n">plain</span><span class="p">)</span>
-                
-            <span class="p">}.</span><span class="n">padding</span><span class="p">(.</span><span class="n">top</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">)</span>
-            
-            <span class="p">...</span>
-        <span class="p">}</span>
-        <span class="p">.</span><span class="n">navigationTitle</span><span class="p">(</span><span class="s">&#34;12Bay&#34;</span><span class="p">)</span>
-        <span class="p">.</span><span class="n">navigationBarTitleDisplayMode</span><span class="p">(.</span><span class="n">inline</span><span class="p">)</span>
-        <span class="p">.</span><span class="n">navigationViewStyle</span><span class="p">(.</span><span class="n">stack</span><span class="p">)</span>
-        <span class="p">.</span><span class="n">navigationBarHidden</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span>
-        <span class="p">.</span><span class="n">navigationBarTitleDisplayMode</span><span class="p">(.</span><span class="n">inline</span><span class="p">)</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">struct</span> <span class="nc">HomeView</span><span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="p">@</span><span class="n">StateObject</span> <span class="n">fileprivate</span> <span class="kd">var</span> <span class="nv">service</span> <span class="p">=</span> <span class="n">WatchConnectivityManager</span><span class="p">.</span><span class="n">share</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">fileprivate</span> <span class="kd">let</span> <span class="nv">backgroundImages</span> <span class="p">=</span> <span class="p">[</span><span class="s">&#34;home-bg&#34;</span><span class="p">,</span> <span class="s">&#34;home-bg1&#34;</span><span class="p">,</span> <span class="s">&#34;home-bg2&#34;</span><span class="p">,</span> <span class="s">&#34;home-bg3&#34;</span><span class="p">,</span> <span class="s">&#34;home-bg4&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">NavigationView</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="p">...</span>
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            <span class="n">HStack</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">center</span><span class="p">,</span> <span class="n">spacing</span><span class="p">:</span> <span class="mf">8.0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                
+</span></span><span class="line"><span class="cl">                <span class="n">NavigationLink</span><span class="p">(</span><span class="n">destination</span><span class="p">:</span> <span class="n">MyOrderView</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">HomeItemView</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">title</span><span class="p">:</span> <span class="s">&#34;All Bookings&#34;</span><span class="p">,</span> <span class="n">icon</span><span class="p">:</span> <span class="s">&#34;calendar&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}.</span><span class="n">buttonStyle</span><span class="p">(.</span><span class="n">plain</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                
+</span></span><span class="line"><span class="cl">            <span class="p">}.</span><span class="n">padding</span><span class="p">(.</span><span class="n">top</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            <span class="p">...</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">navigationTitle</span><span class="p">(</span><span class="s">&#34;12Bay&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">navigationBarTitleDisplayMode</span><span class="p">(.</span><span class="n">inline</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">navigationViewStyle</span><span class="p">(.</span><span class="n">stack</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">navigationBarHidden</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">navigationBarTitleDisplayMode</span><span class="p">(.</span><span class="n">inline</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><ul>
 <li><a href="https://swiftontap.com/NavigationLink">NavigationLink</a> : Use this to push a new view onto the navigation stack.
 <ul>
 <li><code>.buttonStyle(.plain)</code>: set transparent for overlay color.</li>
@@ -928,9 +923,8 @@ Abstract Last post, We completed the home screen. Today, We will focus to design
 </li>
 </ul>
 <p>Well done, Our my order is now finalized. Let&rsquo;s to play.</p>
-<figure class="medium">
-    <img src="/images/my-order.gif"
-         alt="image"/> <figcaption>
+<figure class="medium"><img src="/images/my-order.gif"
+         alt="image"/><figcaption>
             <p>My Order Screen</p>
         </figcaption>
 </figure>
@@ -1012,8 +1006,8 @@ Abstract Last post, We completed the home screen. Today, We will focus to design
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
-    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
     crossorigin="anonymous"
   ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
       defer

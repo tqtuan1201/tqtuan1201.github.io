@@ -6,7 +6,20 @@
     <description>Recent content in SwiftUI on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Sep 2023 15:37:02 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Oct 2023 16:05:43 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What is the Spacer and how do we use it in SwiftUI</title>
+      <link>https://tqtuan1201.github.io/posts/job/ios/swiftui/swiftui-spacer/</link>
+      <pubDate>Sat, 14 Oct 2023 16:05:43 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/job/ios/swiftui/swiftui-spacer/</guid>
+      
+        <description>Abstract In this article, we will learn about Spacer in SwiftUI. We will dive into the world of Spacer. Exploring their purpose, functionality and practical applications. This article is part of the SwiftUI Series - SwiftUI Series - Updating TTBaseUIKit to support SwiftUI
+What is the Spacer? The Spacer is a layout view that expands to fill available space within a container.
+Here is the definition from Apple. You can view full details at developer.</description>
+      
+    </item>
+    
     <item>
       <title>12Bay integrated SwiftUI. With 12Bay, no StoryBoard, no XIB files, no cocoapods, ...</title>
       <link>https://tqtuan1201.github.io/posts/job/ios/swiftui/12bay-bus-v2/</link>
@@ -26,9 +39,9 @@
       <guid>https://tqtuan1201.github.io/posts/job/ios/swiftui/uiview-vs-view/</guid>
       
         <description>Abstract In this article, we will learn about view in SwiftUI. This article is part of the SwiftUI Series - SwiftUI Series - Updating TTBaseUIKit to support SwiftUI
- View is a function of state, not a sequence of events - apple
-  Woaaaa !
- SwiftUI - Apple&amp;rsquo;s declarative framework for building user interfaces. The user interface is defined based on the current state of the application, and any changes to the state automatically update the corresponding views.</description>
+View is a function of state, not a sequence of events - apple
+Woaaaa !
+SwiftUI - Apple&amp;rsquo;s declarative framework for building user interfaces. The user interface is defined based on the current state of the application, and any changes to the state automatically update the corresponding views.</description>
       
     </item>
     
@@ -40,7 +53,7 @@
       <guid>https://tqtuan1201.github.io/posts/job/ios/swiftui/understand-safearea/</guid>
       
         <description>Abstract In this article, we will learn about Safe Area in SwiftUI. This article is part of the SwiftUI Series - SwiftUI Series - Updating TTBaseUIKit to support SwiftUI
- Related knowledge What is the Layout? In the Apple ecosystem, Layout refers to the process of arranging and positioning user interface elements such as views and controls on a screen or within a container view using layout constraints, Auto Layout, or SwiftUI.</description>
+Related knowledge What is the Layout? In the Apple ecosystem, Layout refers to the process of arranging and positioning user interface elements such as views and controls on a screen or within a container view using layout constraints, Auto Layout, or SwiftUI.</description>
       
     </item>
     
@@ -62,7 +75,7 @@
       
       <guid>https://tqtuan1201.github.io/posts/job/ios/swiftui/ttbaseuikitswiftuiserial/</guid>
       
-        <description>Abstract InfoSwiftUI: It’s the future   I realize that now is a suitable time to learn and apply SwiftUI in the real world. So in this series, I will delve into the fundamental components of SwiftUI. With the knowledge gained, we will update TTBaseUIKit to support SwiftUI, allowing us to quickly build applications using these basic components. Additionally, we will develop a new feature called &amp;lsquo;Bus Booking&amp;rsquo; using SwiftUI on the 12Bay application.</description>
+        <description>Abstract Info SwiftUI: It’s the future I realize that now is a suitable time to learn and apply SwiftUI in the real world. So in this series, I will delve into the fundamental components of SwiftUI. With the knowledge gained, we will update TTBaseUIKit to support SwiftUI, allowing us to quickly build applications using these basic components. Additionally, we will develop a new feature called &amp;lsquo;Bus Booking&amp;rsquo; using SwiftUI on the 12Bay application.</description>
       
     </item>
     
@@ -74,7 +87,7 @@
       <guid>https://tqtuan1201.github.io/posts/apple-watch-serial-end/</guid>
       
         <description>Abstract In this post, I will summarize some of my knowledge about developing an application on Apple Watch by SwiftUI language
- Motivation Should You Learn SwiftUI or UIKit? Does SwiftUI replace UIKit? Resources  Motivation The rise in wearable technology is very significant around the world. In 2022 App developers and businesses should get ready with apps that provide excellent digital experiences to users on wearables, to gain a distinct edge over those who do not.</description>
+Motivation Should You Learn SwiftUI or UIKit? Does SwiftUI replace UIKit? Resources Motivation The rise in wearable technology is very significant around the world. In 2022 App developers and businesses should get ready with apps that provide excellent digital experiences to users on wearables, to gain a distinct edge over those who do not.</description>
       
     </item>
     
@@ -87,10 +100,10 @@
       
         <description>Last week was my daughter birthday. I had a happy time with my family and now, focus to work
 Abstract Today, we will create a notification screen and learn how to use the Core Data framework with SwiftUI to store data. In this post, we will explore:
-  Working on SwiftUI.
-  How Core Data and SwiftUI work together
-  Creating and updating Core Data objects
-  How to update views when stored data gets updated</description>
+Working on SwiftUI.
+How Core Data and SwiftUI work together
+Creating and updating Core Data objects
+How to update views when stored data gets updated</description>
       
     </item>
     
@@ -102,10 +115,11 @@ Abstract Today, we will create a notification screen and learn how to use the Co
       <guid>https://tqtuan1201.github.io/posts/apple-watch-serial-order-detail/</guid>
       
         <description>Abstract Today, we will create an order detail UI screen and update data for this. This view to show all informations about order, e.g. booking ID, departing, arriving. Through this post, you can learn some knowledge such as:
-  Working on SwiftUI.
-  Understand the List, ZStack, TabView element.
-  Understand a navigation presentation NavigationView, NavigationLink.
-  This article is part of my Apple Watch by SwiftUI series.</description>
+Working on SwiftUI.
+Understand the List, ZStack, TabView element.
+Understand a navigation presentation NavigationView, NavigationLink.
+This article is part of my Apple Watch by SwiftUI series.
+UI design We will create a simple screen to display the full details of an order.</description>
       
     </item>
     
@@ -129,8 +143,8 @@ Abstract Last post, We completed the home screen. Today, We will focus to design
       <guid>https://tqtuan1201.github.io/posts/apple-watch-serial-p2-homescreen-complete/</guid>
       
         <description>Abstract Today, We will complete the homescreen. In this part, we just add background images and events for the elements view. Here are some keys you will get through this post:
- Using ZStack to set full background image. Make calls from the watch application.  This article is part of my Apple Watch by SwiftUI series.
- Complete Home screen UI design Add background images We will using Zstack .</description>
+Using ZStack to set full background image. Make calls from the watch application. This article is part of my Apple Watch by SwiftUI series.
+Complete Home screen UI design Add background images We will using Zstack . In SwiftUI using &amp;ldquo;ZStack is a view that overlays its children, aligning them in both axes.</description>
       
     </item>
     
@@ -142,7 +156,7 @@ Abstract Last post, We completed the home screen. Today, We will focus to design
       <guid>https://tqtuan1201.github.io/posts/apple-watch-serial-p2-homescreen-connect/</guid>
       
         <description>Abstract Today, we will to work on the home screen. In this post, we will focus on communication between an iOS app with watchOS app. Here are some keys you will get through this topic:
- Understand Watch Connectivity. The fundamental component in SwiftUI Have knowledge about WCSession Have basic knowledge about data flow in SwiftUI  This article is part of my Apple Watch by SwiftUI series.
+Understand Watch Connectivity. The fundamental component in SwiftUI Have knowledge about WCSession Have basic knowledge about data flow in SwiftUI This article is part of my Apple Watch by SwiftUI series.
 Previously : Apple Watch Serial P1 Homescreen</description>
       
     </item>
@@ -155,8 +169,9 @@ Previously : Apple Watch Serial P1 Homescreen</description>
       <guid>https://tqtuan1201.github.io/posts/apple-watch-serial-p1-homescreen/</guid>
       
         <description>Abstract I have a long holiday with my family in my hometown. So it&amp;rsquo;s a beautiful life. Today, we begin to code a home screen. In this post, We will learn to use basic SwiftUI to build UIs for apple watch application. Here are some keys you will get through this topic:
-  Create a new watchOS target inside of our existing iOS project.
-  Understand the WatchKit App.</description>
+Create a new watchOS target inside of our existing iOS project.
+Understand the WatchKit App.
+What’s SwiftUI, and how is it different than UIKit?</description>
       
     </item>
     
@@ -183,8 +198,9 @@ Previously : Let&amp;rsquo;s Idea, How to Design Travel App (12Bay) on WatchOS?<
       
         <description>Abstract In this part, I started to learn about SwiftUI to build apple watch app for 12bay app.Through this part, the desired result is to build 12bay application for apple watch and learn about new knowledge such as SwiftUI, Combine framework in the field of Wearable App Integration.
 Completing this section, we must know the following knowledge:
-  Have knowledge about SwiftUI.
-  Have knowledge about Combine framework</description>
+Have knowledge about SwiftUI.
+Have knowledge about Combine framework
+Have knowledge about Watchkit app architecture</description>
       
     </item>
     

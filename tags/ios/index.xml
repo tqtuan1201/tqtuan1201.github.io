@@ -14,7 +14,7 @@
       
       <guid>https://tqtuan1201.github.io/posts/job/ios/swiftui/ttbaseuikitswiftuiserial/</guid>
       
-        <description>Abstract InfoSwiftUI: It’s the future   I realize that now is a suitable time to learn and apply SwiftUI in the real world. So in this series, I will delve into the fundamental components of SwiftUI. With the knowledge gained, we will update TTBaseUIKit to support SwiftUI, allowing us to quickly build applications using these basic components. Additionally, we will develop a new feature called &amp;lsquo;Bus Booking&amp;rsquo; using SwiftUI on the 12Bay application.</description>
+        <description>Abstract Info SwiftUI: It’s the future I realize that now is a suitable time to learn and apply SwiftUI in the real world. So in this series, I will delve into the fundamental components of SwiftUI. With the knowledge gained, we will update TTBaseUIKit to support SwiftUI, allowing us to quickly build applications using these basic components. Additionally, we will develop a new feature called &amp;lsquo;Bus Booking&amp;rsquo; using SwiftUI on the 12Bay application.</description>
       
     </item>
     
@@ -26,7 +26,7 @@
       <guid>https://tqtuan1201.github.io/posts/apple-watch-serial-end/</guid>
       
         <description>Abstract In this post, I will summarize some of my knowledge about developing an application on Apple Watch by SwiftUI language
- Motivation Should You Learn SwiftUI or UIKit? Does SwiftUI replace UIKit? Resources  Motivation The rise in wearable technology is very significant around the world. In 2022 App developers and businesses should get ready with apps that provide excellent digital experiences to users on wearables, to gain a distinct edge over those who do not.</description>
+Motivation Should You Learn SwiftUI or UIKit? Does SwiftUI replace UIKit? Resources Motivation The rise in wearable technology is very significant around the world. In 2022 App developers and businesses should get ready with apps that provide excellent digital experiences to users on wearables, to gain a distinct edge over those who do not.</description>
       
     </item>
     
@@ -39,10 +39,10 @@
       
         <description>Last week was my daughter birthday. I had a happy time with my family and now, focus to work
 Abstract Today, we will create a notification screen and learn how to use the Core Data framework with SwiftUI to store data. In this post, we will explore:
-  Working on SwiftUI.
-  How Core Data and SwiftUI work together
-  Creating and updating Core Data objects
-  How to update views when stored data gets updated</description>
+Working on SwiftUI.
+How Core Data and SwiftUI work together
+Creating and updating Core Data objects
+How to update views when stored data gets updated</description>
       
     </item>
     
@@ -54,10 +54,11 @@ Abstract Today, we will create a notification screen and learn how to use the Co
       <guid>https://tqtuan1201.github.io/posts/apple-watch-serial-order-detail/</guid>
       
         <description>Abstract Today, we will create an order detail UI screen and update data for this. This view to show all informations about order, e.g. booking ID, departing, arriving. Through this post, you can learn some knowledge such as:
-  Working on SwiftUI.
-  Understand the List, ZStack, TabView element.
-  Understand a navigation presentation NavigationView, NavigationLink.
-  This article is part of my Apple Watch by SwiftUI series.</description>
+Working on SwiftUI.
+Understand the List, ZStack, TabView element.
+Understand a navigation presentation NavigationView, NavigationLink.
+This article is part of my Apple Watch by SwiftUI series.
+UI design We will create a simple screen to display the full details of an order.</description>
       
     </item>
     
@@ -81,8 +82,8 @@ Abstract Last post, We completed the home screen. Today, We will focus to design
       <guid>https://tqtuan1201.github.io/posts/apple-watch-serial-p2-homescreen-complete/</guid>
       
         <description>Abstract Today, We will complete the homescreen. In this part, we just add background images and events for the elements view. Here are some keys you will get through this post:
- Using ZStack to set full background image. Make calls from the watch application.  This article is part of my Apple Watch by SwiftUI series.
- Complete Home screen UI design Add background images We will using Zstack .</description>
+Using ZStack to set full background image. Make calls from the watch application. This article is part of my Apple Watch by SwiftUI series.
+Complete Home screen UI design Add background images We will using Zstack . In SwiftUI using &amp;ldquo;ZStack is a view that overlays its children, aligning them in both axes.</description>
       
     </item>
     
@@ -94,7 +95,7 @@ Abstract Last post, We completed the home screen. Today, We will focus to design
       <guid>https://tqtuan1201.github.io/posts/apple-watch-serial-p2-homescreen-connect/</guid>
       
         <description>Abstract Today, we will to work on the home screen. In this post, we will focus on communication between an iOS app with watchOS app. Here are some keys you will get through this topic:
- Understand Watch Connectivity. The fundamental component in SwiftUI Have knowledge about WCSession Have basic knowledge about data flow in SwiftUI  This article is part of my Apple Watch by SwiftUI series.
+Understand Watch Connectivity. The fundamental component in SwiftUI Have knowledge about WCSession Have basic knowledge about data flow in SwiftUI This article is part of my Apple Watch by SwiftUI series.
 Previously : Apple Watch Serial P1 Homescreen</description>
       
     </item>
@@ -107,8 +108,9 @@ Previously : Apple Watch Serial P1 Homescreen</description>
       <guid>https://tqtuan1201.github.io/posts/apple-watch-serial-p1-homescreen/</guid>
       
         <description>Abstract I have a long holiday with my family in my hometown. So it&amp;rsquo;s a beautiful life. Today, we begin to code a home screen. In this post, We will learn to use basic SwiftUI to build UIs for apple watch application. Here are some keys you will get through this topic:
-  Create a new watchOS target inside of our existing iOS project.
-  Understand the WatchKit App.</description>
+Create a new watchOS target inside of our existing iOS project.
+Understand the WatchKit App.
+What’s SwiftUI, and how is it different than UIKit?</description>
       
     </item>
     
@@ -135,8 +137,9 @@ Previously : Let&amp;rsquo;s Idea, How to Design Travel App (12Bay) on WatchOS?<
       
         <description>Abstract In this part, I started to learn about SwiftUI to build apple watch app for 12bay app.Through this part, the desired result is to build 12bay application for apple watch and learn about new knowledge such as SwiftUI, Combine framework in the field of Wearable App Integration.
 Completing this section, we must know the following knowledge:
-  Have knowledge about SwiftUI.
-  Have knowledge about Combine framework</description>
+Have knowledge about SwiftUI.
+Have knowledge about Combine framework
+Have knowledge about Watchkit app architecture</description>
       
     </item>
     
@@ -148,7 +151,7 @@ Completing this section, we must know the following knowledge:
       <guid>https://tqtuan1201.github.io/posts/nlp-on-ios-application-viper-arch/</guid>
       
         <description>Abstract Xây dựng ứng dụng iOS với kiến trúc VIPER về dự đoán tác giả bài thơ. Input đầu vào là một đoạn text đoạn thơ người dùng nhập vào và output là tác giả của đoạn thơ đó. Ví dụ: INPUT = Sao anh không về chơi thôn Vĩ? → OUTPUT = Hàn Mặc Tử
-  Tìm hiểu về Bag of Words, Turi Create. Xây dựng ứng dụng iOS trên kiến trúc VIPER Clean Architecture Một số từ khóa liên quan: Bag of Word, Logictic Classifier, Turi Create VIPER, iOS Application     Đặt Vấn Đề INPUT STRING:</description>
+Tìm hiểu về Bag of Words, Turi Create. Xây dựng ứng dụng iOS trên kiến trúc VIPER Clean Architecture Một số từ khóa liên quan: Bag of Word, Logictic Classifier, Turi Create VIPER, iOS Application Đặt Vấn Đề INPUT STRING:</description>
       
     </item>
     
@@ -160,9 +163,9 @@ Completing this section, we must know the following knowledge:
       <guid>https://tqtuan1201.github.io/posts/basic-ci-cd-gitlab-fastlane/</guid>
       
         <description>Abstract Trong bài viết này mình tiềm hiểu về GitLab-CI, Fastlane ở mức cơ bản.
-   Tìm hiểu GitLab-CI.
-  Fastlane là gì?
-   What is CI? Trong quá trình làm việc theo nhóm việc quản lý source-code giữa các thành viên với nhau là cực kỳ quan trọng. Việc cập nhật mã code giữa các thành viên với nhau là rất thường xuyên. Việc này dẫn đến nhiều vấn đề nảy sinh như code lỗi,&amp;hellip; để phát hiện sớm các lỗi để sửa ngay đưa ra một khái niệm là Continuos Integration - Tích hợp liên tục</description>
+Tìm hiểu GitLab-CI.
+Fastlane là gì?
+What is CI? Trong quá trình làm việc theo nhóm việc quản lý source-code giữa các thành viên với nhau là cực kỳ quan trọng. Việc cập nhật mã code giữa các thành viên với nhau là rất thường xuyên. Việc này dẫn đến nhiều vấn đề nảy sinh như code lỗi,&amp;hellip; để phát hiện sớm các lỗi để sửa ngay đưa ra một khái niệm là Continuos Integration - Tích hợp liên tục</description>
       
     </item>
     

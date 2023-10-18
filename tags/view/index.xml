@@ -26,9 +26,9 @@
       <guid>https://tqtuan1201.github.io/posts/job/ios/swiftui/uiview-vs-view/</guid>
       
         <description>Abstract In this article, we will learn about view in SwiftUI. This article is part of the SwiftUI Series - SwiftUI Series - Updating TTBaseUIKit to support SwiftUI
- View is a function of state, not a sequence of events - apple
-  Woaaaa !
- SwiftUI - Apple&amp;rsquo;s declarative framework for building user interfaces. The user interface is defined based on the current state of the application, and any changes to the state automatically update the corresponding views.</description>
+View is a function of state, not a sequence of events - apple
+Woaaaa !
+SwiftUI - Apple&amp;rsquo;s declarative framework for building user interfaces. The user interface is defined based on the current state of the application, and any changes to the state automatically update the corresponding views.</description>
       
     </item>
     

@@ -15,7 +15,7 @@
       <guid>https://tqtuan1201.github.io/posts/my-paper-disease-prediction/</guid>
       
         <description>At the end of 2022. I obtained a paper at the ACIIDS 2022 conference. So I want to share with you about this. I hope that it is a motivation to make the new goals for the next year.
- BOOK OF ABSTRACTS Abstract Chronic diseases have become the first prioritized concern of the health industry, so understanding the disease progression is necessary for predicting, planning and preparing resources to prevent and cure the diseases most effectively.</description>
+BOOK OF ABSTRACTS Abstract Chronic diseases have become the first prioritized concern of the health industry, so understanding the disease progression is necessary for predicting, planning and preparing resources to prevent and cure the diseases most effectively.</description>
       
     </item>
     
@@ -28,10 +28,10 @@
       
         <description>The 14th Asian Conference on Intelligent Information and Database Systems
 https://aciids.pwr.edu.pl/2022/download/ACIIDS_2022_HCMC_Flyer_v.7.0.pdf
- MY TOPIC: Predictive modelling of diseases based on a network and machine learning approach, I hope it&amp;rsquo;s approved soon ^^
- Paper Submission:
+MY TOPIC: Predictive modelling of diseases based on a network and machine learning approach, I hope it&amp;rsquo;s approved soon ^^
+Paper Submission:
 The proceedings of ACIIDS 2022 will be published by Springer in series Lecture Notes in Artificial Intelligence and will be distributed at the conference
- LNCS/LNAI style. Should not exceed 13 pages.   Here is a my collect data with purpose to learn, more knowledge from large amount of examples, solutions, and ideas on the internet.</description>
+LNCS/LNAI style. Should not exceed 13 pages. Here is a my collect data with purpose to learn, more knowledge from large amount of examples, solutions, and ideas on the internet.</description>
       
     </item>
     
@@ -42,10 +42,10 @@ The proceedings of ACIIDS 2022 will be published by Springer in series Lecture N
       
       <guid>https://tqtuan1201.github.io/posts/factorization-machines-presentation/</guid>
       
-        <description>Báo cáo này dựa trên bài báo Introductory Guide – Factorization Machines &amp;amp; their application on huge datasets (with codes in Python)  Tác giả: Ankit Choudhary
- Một số từ khóa liên quan
+        <description>Báo cáo này dựa trên bài báo Introductory Guide – Factorization Machines &amp;amp; their application on huge datasets (with codes in Python) Tác giả: Ankit Choudhary
+Một số từ khóa liên quan
 FMs: Factorization Machines, FFMs: Field Aware Factorization Machines, Matrix Factorization CTR: Click-Through Rate, Recommendation Systems
-Slide share  </description>
+Slide share </description>
       
     </item>
     
@@ -57,7 +57,7 @@ Slide share  </description>
       <guid>https://tqtuan1201.github.io/posts/factorization-machines/</guid>
       
         <description>Giới thiệu tổng quát về Factorization Machines và ứng dụng của nó trên tập dữ liệu lớn Dựa trên bài báo Introductory Guide – Factorization Machines &amp;amp; their application on huge datasets (with codes in Python), tác giả: Ankit Choudhary
- Phần mở đầu Khi chúng ta làm việc với các bài toán liên quan tới Click Prediction Problem hay Recommendation Systems. Chúng ta thường xuyên đối mặt với vấn đề là tập dữ liệu quá lớn.</description>
+Phần mở đầu Khi chúng ta làm việc với các bài toán liên quan tới Click Prediction Problem hay Recommendation Systems. Chúng ta thường xuyên đối mặt với vấn đề là tập dữ liệu quá lớn.</description>
       
     </item>
     
@@ -69,7 +69,7 @@ Slide share  </description>
       <guid>https://tqtuan1201.github.io/posts/nlp-on-ios-application-viper-arch/</guid>
       
         <description>Abstract Xây dựng ứng dụng iOS với kiến trúc VIPER về dự đoán tác giả bài thơ. Input đầu vào là một đoạn text đoạn thơ người dùng nhập vào và output là tác giả của đoạn thơ đó. Ví dụ: INPUT = Sao anh không về chơi thôn Vĩ? → OUTPUT = Hàn Mặc Tử
-  Tìm hiểu về Bag of Words, Turi Create. Xây dựng ứng dụng iOS trên kiến trúc VIPER Clean Architecture Một số từ khóa liên quan: Bag of Word, Logictic Classifier, Turi Create VIPER, iOS Application     Đặt Vấn Đề INPUT STRING:</description>
+Tìm hiểu về Bag of Words, Turi Create. Xây dựng ứng dụng iOS trên kiến trúc VIPER Clean Architecture Một số từ khóa liên quan: Bag of Word, Logictic Classifier, Turi Create VIPER, iOS Application Đặt Vấn Đề INPUT STRING:</description>
       
     </item>
     
