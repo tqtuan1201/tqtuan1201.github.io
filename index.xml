@@ -6,7 +6,18 @@
     <description>Recent content on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Oct 2023 16:05:43 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Dec 2023 15:31:00 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rebuiding train booking feature by SwiftUI in 12Bay application - Design</title>
+      <link>https://tqtuan1201.github.io/posts/job/ios/swiftui/12bay-train-v2/</link>
+      <pubDate>Wed, 13 Dec 2023 15:31:00 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/job/ios/swiftui/12bay-train-v2/</guid>
+      
+        <description>Abstract Today, we are continuing our journey of learning SwiftUI by rebuilding the train booking feature in the 12Bay application. This function is designed to help users find trains that are available for their desired departure and arrival stations. Once users find their preferred train, the app will show them which seats are available for that specific journey. Users can then choose their preferred seat type, like window or aisle seats, and select the number of tickets they want to book.</description>
+      
+    </item>
+    
     <item>
       <title>What is the Spacer and how do we use it in SwiftUI</title>
       <link>https://tqtuan1201.github.io/posts/job/ios/swiftui/swiftui-spacer/</link>

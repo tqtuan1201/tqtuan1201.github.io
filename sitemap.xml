@@ -2,52 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://tqtuan1201.github.io/tags/12bay/</loc>
+    <lastmod>2023-12-13T15:31:00+07:00</lastmod>
+  </url><url>
     <loc>https://tqtuan1201.github.io/categories/best-practices-and-tips/</loc>
-    <lastmod>2023-10-14T16:05:43+07:00</lastmod>
+    <lastmod>2023-12-13T15:31:00+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/categories/</loc>
-    <lastmod>2023-10-14T16:05:43+07:00</lastmod>
+    <lastmod>2023-12-13T15:31:00+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/categories/dev-journey/</loc>
-    <lastmod>2023-10-14T16:05:43+07:00</lastmod>
+    <lastmod>2023-12-13T15:31:00+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/categories/notes/</loc>
-    <lastmod>2023-10-14T16:05:43+07:00</lastmod>
+    <lastmod>2023-12-13T15:31:00+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/posts/</loc>
-    <lastmod>2023-10-14T16:05:43+07:00</lastmod>
+    <lastmod>2023-12-13T15:31:00+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/posts/job/ios/swiftui/12bay-train-v2/</loc>
+    <lastmod>2023-12-13T15:31:00+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/series/</loc>
-    <lastmod>2023-10-14T16:05:43+07:00</lastmod>
-  </url><url>
-    <loc>https://tqtuan1201.github.io/tags/spacer/</loc>
-    <lastmod>2023-10-14T16:05:43+07:00</lastmod>
+    <lastmod>2023-12-13T15:31:00+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/tags/swiftui/</loc>
-    <lastmod>2023-10-14T16:05:43+07:00</lastmod>
+    <lastmod>2023-12-13T15:31:00+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/series/swiftui-serial-updating-ttbaseuikit-to-support-swiftui/</loc>
-    <lastmod>2023-10-14T16:05:43+07:00</lastmod>
+    <lastmod>2023-12-13T15:31:00+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/tags/</loc>
-    <lastmod>2023-10-14T16:05:43+07:00</lastmod>
+    <lastmod>2023-12-13T15:31:00+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/ttbaseuikit/</loc>
+    <lastmod>2023-12-13T15:31:00+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/</loc>
+    <lastmod>2023-12-13T15:31:00+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/view/</loc>
+    <lastmod>2023-12-13T15:31:00+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/spacer/</loc>
     <lastmod>2023-10-14T16:05:43+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/posts/job/ios/swiftui/swiftui-spacer/</loc>
     <lastmod>2023-10-14T16:05:43+07:00</lastmod>
   </url><url>
-    <loc>https://tqtuan1201.github.io/tags/12bay/</loc>
-    <lastmod>2023-09-18T15:37:02+07:00</lastmod>
-  </url><url>
     <loc>https://tqtuan1201.github.io/posts/job/ios/swiftui/12bay-bus-v2/</loc>
-    <lastmod>2023-09-18T15:37:02+07:00</lastmod>
-  </url><url>
-    <loc>https://tqtuan1201.github.io/tags/ttbaseuikit/</loc>
-    <lastmod>2023-09-18T15:37:02+07:00</lastmod>
-  </url><url>
-    <loc>https://tqtuan1201.github.io/tags/view/</loc>
     <lastmod>2023-09-18T15:37:02+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/posts/job/ios/swiftui/uiview-vs-view/</loc>

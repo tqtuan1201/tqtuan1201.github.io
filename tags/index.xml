@@ -6,33 +6,11 @@
     <description>Recent content in Tags on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Oct 2023 16:05:43 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Spacer</title>
-      <link>https://tqtuan1201.github.io/tags/spacer/</link>
-      <pubDate>Sat, 14 Oct 2023 16:05:43 +0700</pubDate>
-      
-      <guid>https://tqtuan1201.github.io/tags/spacer/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>SwiftUI</title>
-      <link>https://tqtuan1201.github.io/tags/swiftui/</link>
-      <pubDate>Sat, 14 Oct 2023 16:05:43 +0700</pubDate>
-      
-      <guid>https://tqtuan1201.github.io/tags/swiftui/</guid>
-      
-        <description></description>
-      
-    </item>
-    
+    <lastBuildDate>Wed, 13 Dec 2023 15:31:00 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>12bay</title>
       <link>https://tqtuan1201.github.io/tags/12bay/</link>
-      <pubDate>Mon, 18 Sep 2023 15:37:02 +0700</pubDate>
+      <pubDate>Wed, 13 Dec 2023 15:31:00 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/tags/12bay/</guid>
       
@@ -41,9 +19,20 @@
     </item>
     
     <item>
+      <title>SwiftUI</title>
+      <link>https://tqtuan1201.github.io/tags/swiftui/</link>
+      <pubDate>Wed, 13 Dec 2023 15:31:00 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/tags/swiftui/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
       <title>TTBaseUIKit</title>
       <link>https://tqtuan1201.github.io/tags/ttbaseuikit/</link>
-      <pubDate>Mon, 18 Sep 2023 15:37:02 +0700</pubDate>
+      <pubDate>Wed, 13 Dec 2023 15:31:00 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/tags/ttbaseuikit/</guid>
       
@@ -54,9 +43,20 @@
     <item>
       <title>View</title>
       <link>https://tqtuan1201.github.io/tags/view/</link>
-      <pubDate>Mon, 18 Sep 2023 15:37:02 +0700</pubDate>
+      <pubDate>Wed, 13 Dec 2023 15:31:00 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/tags/view/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Spacer</title>
+      <link>https://tqtuan1201.github.io/tags/spacer/</link>
+      <pubDate>Sat, 14 Oct 2023 16:05:43 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/tags/spacer/</guid>
       
         <description></description>
       
