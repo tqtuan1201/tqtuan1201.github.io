@@ -6,7 +6,29 @@
     <description>Recent content on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 Mar 2024 14:59:21 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Aug 2024 15:33:58 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TTBaseUIKit has been integrated with SwiftUI since version 2.1.0</title>
+      <link>https://tqtuan1201.github.io/posts/job/ios/swiftui/ttbaseuikit-integrated-with-swiftui/</link>
+      <pubDate>Sun, 04 Aug 2024 15:33:58 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/job/ios/swiftui/ttbaseuikit-integrated-with-swiftui/</guid>
+      
+        <description>Abstract After spending some time working with SwiftUI, especially integrating it with UIKit on various new projects. I have updated TTBaseUIKit to support SwiftUI from iOS 14, corresponding to library version 2.1.0. This marks a significant milestone in my work. Gaining a deeper understanding of SwiftUI and how to navigate between the UIKit and SwiftUI realms will be beneficial for my future projects. As I have mentioned before SwiftUIL It&amp;rsquo;s the future</description>
+      
+    </item>
+    
+    <item>
+      <title>Start New Journey</title>
+      <link>https://tqtuan1201.github.io/posts/job/cryptocurrency/start-journey/</link>
+      <pubDate>Mon, 27 May 2024 16:43:37 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/job/cryptocurrency/start-journey/</guid>
+      
+        <description>Nowadays, when you&amp;rsquo;re in Vietnam, whether you&amp;rsquo;re sitting at a sidewalk cafe or coffee shop, you always hear people talking about Bitcoin, Blockchain and trading. Even though I work in technology, I don&amp;rsquo;t fully understand what everyone is talking about. I&amp;rsquo;m not sure if what they&amp;rsquo;re saying is accurate or not. That has made me really want to learn more and explore this topic. That&amp;rsquo;s the reason I&amp;rsquo;m starting this journey.</description>
+      
+    </item>
+    
     <item>
       <title>Busy | Really?</title>
       <link>https://tqtuan1201.github.io/posts/life/newjourey/</link>

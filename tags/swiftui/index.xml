@@ -6,7 +6,18 @@
     <description>Recent content in SwiftUI on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 Dec 2023 15:31:00 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Aug 2024 15:33:58 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TTBaseUIKit has been integrated with SwiftUI since version 2.1.0</title>
+      <link>https://tqtuan1201.github.io/posts/job/ios/swiftui/ttbaseuikit-integrated-with-swiftui/</link>
+      <pubDate>Sun, 04 Aug 2024 15:33:58 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/job/ios/swiftui/ttbaseuikit-integrated-with-swiftui/</guid>
+      
+        <description>Abstract After spending some time working with SwiftUI, especially integrating it with UIKit on various new projects. I have updated TTBaseUIKit to support SwiftUI from iOS 14, corresponding to library version 2.1.0. This marks a significant milestone in my work. Gaining a deeper understanding of SwiftUI and how to navigate between the UIKit and SwiftUI realms will be beneficial for my future projects. As I have mentioned before SwiftUIL It&amp;rsquo;s the future</description>
+      
+    </item>
+    
     <item>
       <title>Rebuiding train booking feature by SwiftUI in 12Bay application - Design</title>
       <link>https://tqtuan1201.github.io/posts/job/ios/swiftui/12bay-train-v2/</link>

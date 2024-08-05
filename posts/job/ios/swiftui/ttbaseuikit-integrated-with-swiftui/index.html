@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme="light"
+  class="html"
+><head>
+  <title>
+    
+      Tuan Truong
+        |
+        TTBaseUIKit has been integrated with SwiftUI since version 2.1.0
+
+
+      
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.119.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Tuan Truong" />
+  <meta
+    name="description"
+    content="
+      “The only thing that is constant is change”, Heraclitus.
+
+
+    "
+  />
+  
+    <meta name="google-site-verification" content="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.96ada9109c76570a48abadb1799220bb70919f1bc785eaac1c0152d6055421ce.css"
+      integrity="sha256-lq2pEJx2VwpIq62xeZIgu3CRnxvHheqsHAFS1gVUIc4="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.322f7815beb50e8cf61e202b1aa88261e079a6ab195e36ab0b4cdd7790ef98e2.css"
+    integrity="sha256-Mi94Fb61Doz2HiArGqiCYeB5pqsZXjarC0zdd5DvmOI="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.69685904d5c2a0c6258d03c207b778c10466edf6cea928cc0164c376b0ad0930.css"
+    integrity="sha256-aWhZBNXCoMYljQPCB7d4wQRm7fbOqSjMAWTDdrCtCTA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.6d585e78d28cce1200d39fb133c92ed83df01738da721d0f48fb6eac62d24e04.css"
+    integrity="sha256-bVheeNKMzhIA05&#43;xM8ku2D3wFzjach0PSPturGLSTgQ="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.6b00d96498d59caa0dbcf9b49d30d821915291f2ceb0e19248523c8607ff43fa.css"
+    integrity="sha256-awDZZJjVnKoNvPm0nTDYIZFSkfLOsOGSSFI8hgf/Q/o="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/images/profile.jpg" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://tqtuan1201.github.io/posts/job/ios/swiftui/ttbaseuikit-integrated-with-swiftui/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.738c0e3a493854876aeab9e2316fd43f1936aeeac4cc6b3e60bb26456dba72ad.js"
+      integrity="sha256-c4wOOkk4VIdq6rniMW/UPxk2rurEzGs&#43;YLsmRW26cq0="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tqtuan1201.github.io/images/profile.jpg"/>
+
+<meta name="twitter:title" content="TTBaseUIKit has been integrated with SwiftUI since version 2.1.0"/>
+<meta name="twitter:description" content="Abstract After spending some time working with SwiftUI, especially integrating it with UIKit on various new projects. I have updated TTBaseUIKit to support SwiftUI from iOS 14, corresponding to library version 2.1.0. This marks a significant milestone in my work. Gaining a deeper understanding of SwiftUI and how to navigate between the UIKit and SwiftUI realms will be beneficial for my future projects. As I have mentioned before SwiftUIL It&rsquo;s the future"/>
+<meta name="twitter:site" content="@QuangTuan0409"/>
+
+
+
+  
+  <meta property="og:title" content="TTBaseUIKit has been integrated with SwiftUI since version 2.1.0" />
+<meta property="og:description" content="Abstract After spending some time working with SwiftUI, especially integrating it with UIKit on various new projects. I have updated TTBaseUIKit to support SwiftUI from iOS 14, corresponding to library version 2.1.0. This marks a significant milestone in my work. Gaining a deeper understanding of SwiftUI and how to navigate between the UIKit and SwiftUI realms will be beneficial for my future projects. As I have mentioned before SwiftUIL It&rsquo;s the future" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tqtuan1201.github.io/posts/job/ios/swiftui/ttbaseuikit-integrated-with-swiftui/" /><meta property="og:image" content="https://tqtuan1201.github.io/images/profile.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-08-04T15:33:58+07:00" />
+<meta property="article:modified_time" content="2024-08-04T15:33:58+07:00" /><meta property="og:site_name" content="Hi, I&#39;m Tuan Truong" />
+<meta property="og:see_also" content="https://tqtuan1201.github.io/posts/job/ios/swiftui/12bay-train-v2/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/job/ios/swiftui/swiftui-spacer/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/job/ios/swiftui/12bay-bus-v2/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/job/ios/swiftui/uiview-vs-view/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/job/ios/swiftui/understand-safearea/" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "posts",
+        "name": "TTBaseUIKit has been integrated with SwiftUI since version 2.1.0",
+        "headline": "TTBaseUIKit has been integrated with SwiftUI since version 2.1.0",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Abstract After spending some time working with SwiftUI, especially integrating it with UIKit on various new projects. I have updated TTBaseUIKit to support SwiftUI from iOS 14, corresponding to library version 2.1.0. This marks a significant milestone in my work. Gaining a deeper understanding of SwiftUI and how to navigate between the UIKit and SwiftUI realms will be beneficial for my future projects. As I have mentioned before SwiftUIL It\u0026rsquo;s the future
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/tqtuan1201.github.io\/posts\/job\/ios\/swiftui\/ttbaseuikit-integrated-with-swiftui\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightYear" : "2024",
+        "dateCreated": "2024-08-04T15:33:58.00Z",
+        "datePublished": "2024-08-04T15:33:58.00Z",
+        "dateModified": "2024-08-04T15:33:58.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Tuan Truong",
+            "url": "https://tqtuan1201.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/tqtuan1201.github.io\/images\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://tqtuan1201.github.io/images/profile.jpg"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/tqtuan1201.github.io\/posts\/job\/ios\/swiftui\/ttbaseuikit-integrated-with-swiftui\/",
+        "wordCount" : "407",
+        "genre" : [ 
+      
+      "Dev Journey"
+
+    
+      
+        ,
+
+      
+      "Notes"
+
+    ],
+        "keywords" : [ 
+      
+      "TTBaseUIKit"
+
+    
+      
+        ,
+
+      
+      "iOS"
+
+    
+      
+        ,
+
+      
+      "SwiftUI"
+
+    ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--light"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <a href="/about">
+        <img
+          class="sidebar__introduction-profileimage"
+          src="/images/profile.jpg"
+          alt="profile picture"
+        />
+      </a>
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Hi, I&#39;m Tuan Truong</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>“The only thing that is constant is change”, Heraclitus.</p>
+        </br>
+        <div class="sidebar__introduction-description">
+          <i style="color:#454545; font-weight: 360; font-size: 0.92em;">'If you have a great idea but don’t know how to start? Don't worry, simply click on <a href="/posts/job/cv/ourteam"><strong>Meet My Team</strong></a> and we can discuss your project over a cup of coffee'</i>
+        </div>
+        </br></br>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a href="https://www.linkedin.com/in/thales-truong" rel="me" aria-label="Linkedin" title="Linkedin">
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a href="https://github.com/tqtuan1201" rel="me" aria-label="GitHub" title="GitHub">
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a href="mailto:truongquangtuanit@gmail.com" rel="me" aria-label="e-mail" title="e-mail">
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a href="https://twitter.com/QuangTuan0409" rel="me" aria-label="Twitter" title="Twitter">
+            <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a href="https://warpcast.com/thales-truong" rel="me" aria-label="instagram" title="instagram">
+            <i class="fa-brands fa-weebly fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+    </br></br>
+    <div class="sidebar__list">
+      <a href="/buymeacoffee">
+          <img src="/images/buymeacoffee_button.png" height=40; alt="By me a coffee ^^">
+      </a>
+    </div>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2024
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/keynote"
+              
+              title=""
+              >Topics</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/posts"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/portfolio"
+              
+              title=""
+              >Projects</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/certifications"
+              
+              title=""
+              >Certifications</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/series"
+              
+              title=""
+              >Series</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/categories"
+              
+              title=""
+              >Categories</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/categories/notes/"
+              
+              title=""
+              >Notes</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/tags"
+              
+              title=""
+              >Tags</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/about"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/contact"
+              
+              title=""
+              >Contact</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      <li class="nav__list-item">
+        <div class="dropdown">
+          <button> RESUMES </button>
+          <div class="dropdown-content">
+          <a href="/posts/job/cv/myresume">My CV</a>
+          <a href="/posts/job/cv/ourteam">My Team</a>
+          </div>
+        </div>
+      </li>
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+
+<style>
+ 
+.dropdown {
+  display: inline-block;
+  position: relative;
+  padding-right: 10px;
+  padding-left: 4px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+.dropdown:hover .dropdown-content {
+  background-color: #FFFFFF;
+  display: block;
+  border-radius: 2px;
+}
+.dropdown-content a {
+  display: block;
+  color: #000000;
+  padding: 5px;
+  text-decoration: none;
+}
+.dropdown-content a:hover {
+  color: #FFFFFF;
+  background-color: #686868;
+}
+</style>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+      <div class="post__thumbnail-wrapper">
+        <img class="post__thumbnail" src="/images/image-2024080462740916%e2%80%afPM.png?quality=92&amp;strip=all" alt="Thumbnail image" />
+      </div>
+
+    
+
+    <div class="post__content">
+      <h1>TTBaseUIKit Has Been Integrated With SwiftUI Since Version 2.1.0</h1>
+      <h3>Table of Contents</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#whats-new">What&rsquo;s new?</a></li>
+    <li><a href="#lets-code">Let’s Code</a>
+      <ul>
+        <li><a href="#step-1-download-sample">Step 1. Download Sample</a></li>
+        <li><a href="#step-2-setup">Step 2. Setup</a>
+          <ul>
+            <li><a href="#if-you-are-only-using-uikit">If you are only using <code>UIKit</code></a></li>
+            <li><a href="#if-you-are-using-both-uikit-and-swiftui-or-just-swiftui">If you are using both <code>UIKit</code> and <code>SwiftUI</code> or just <code>SwiftUI</code></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+        <div style="width: 100%; margin: 0 auto; background:rgba(0,0,0,0.5); height: 1px; opacity: 0.6"> </div><h1 id="abstract">Abstract</h1>
+<p>After spending some time working with <code>SwiftUI</code>, especially integrating it with <code>UIKit</code> on various new projects. I have updated <code>TTBaseUIKit</code> to support <code>SwiftUI</code> from iOS 14, corresponding to library version 2.1.0. This marks a significant milestone in my work. Gaining a deeper understanding of <code>SwiftUI</code> and how to navigate between the <code>UIKit</code> and <code>SwiftUI</code> realms will be beneficial for my future projects. As I have mentioned before <mark>SwiftUIL It&rsquo;s the future</mark></p>
+<div
+  class="notice"
+>
+  <span
+    class="notice__title"
+  >Info</span><div class="notice__content">
+    TTBaseUIKit is a framework that helps you build iOS applications in the fastest and most efficient way, by providing base views written in both UIKit Programmatically and SwiftUI. <em>You can explore more details through the <a href="https://tqtuan1201.github.io/tags/ttbaseuikit/">#TTBaseUIKit</a> articles.</em>
+  </div>
+</div>
+
+<h1 id="whats-new">What&rsquo;s new?</h1>
+<p>In this update, I have included a <code>Base Project</code> called  <a href="https://github.com/tqtuan1201/TTBaseUIKit/tree/master/TTBaseUIKitExample">TTBaseUIKitExample</a>, which provides comprehensive examples    of Base classes such as <code>BaseUIViewController</code>, <code>BaseUITableViewController</code>, <code>BaseCollectionViewController</code>, and more in <code>UIKit</code>, as well as <code>BaseView</code>, <code>BaseButton</code>, <code>BaseText</code>, <code>BaseStack</code>, and others in SwiftUI. The simplest and most straightforward way to understand this is to download the example and run it.</p>
+<figure class="medium"><img src="/images/TTBaseUIKit.gif"
+         alt="image"/><figcaption>
+            <p>TTBaseUIKit</p>
+        </figcaption>
+</figure>
+
+<h1 id="lets-code">Let’s Code</h1>
+<p>The simplest and easiest way is to download this example and run it. <mark>Hands-on practice is the easiest way to understand it well</mark></p>
+<h2 id="step-1-download-sample">Step 1. Download Sample</h2>
+<p>Click  <a href="https://github.com/tqtuan1201/TTBaseUIKit/tree/master">TTBaseUIKit</a> to download and then go to the <code>TTBaseUIKitExample</code> folder to install it.</p>
+<h2 id="step-2-setup">Step 2. Setup</h2>
+<p><strong>CocoaPods</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pod &#39;TTBaseUIKit&#39;
+</span></span></code></pre></div><p><strong>Swift Package Manager</strong></p>
+<ol>
+<li>File &gt; Swift Packages &gt; Add Package Dependency</li>
+<li>Add <a href="https://github.com/tqtuan1201/TTBaseUIKit.git">https://github.com/tqtuan1201/TTBaseUIKit.git</a></li>
+<li>Select &ldquo;Up to Next Major&rdquo; with &ldquo;2.1.0&rdquo; or</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="n">dependencies</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="n">package</span><span class="p">(</span><span class="n">url</span><span class="p">:</span> <span class="s">&#34;https://github.com/tqtuan1201/TTBaseUIKit.git&#34;</span><span class="p">,</span> <span class="n">branch</span><span class="p">:</span> <span class="s">&#34;master&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span></code></pre></div><p>After you finish installing, press &lsquo;Build&rsquo; to build project. If you see &lsquo;<strong>Build Succeeded</strong>&rsquo;, it means you have succeeded. Then press &lsquo;Run&rsquo; to execute the example.</p>
+<figure class="medium"><img src="/images/image-2024080440457300%e2%80%afPM.png"
+         alt="image"/><figcaption>
+            <p>TTBaseUIKitExample</p>
+        </figcaption>
+</figure>
+
+<h3 id="if-you-are-only-using-uikit">If you are only using <code>UIKit</code></h3>
+<p>The <code>UIKit</code> component is supported from <code>iOS 10 and above</code>, corresponding to library versions &lt; <code>2.0.1</code>.</p>
+<figure class="medium"><img src="/images/image-2024080441441370%e2%80%afPM.png"
+         alt="image"/><figcaption>
+            <p>TTBaseUIKit UIKit Sample</p>
+        </figcaption>
+</figure>
+
+<h3 id="if-you-are-using-both-uikit-and-swiftui-or-just-swiftui">If you are using both <code>UIKit</code> and <code>SwiftUI</code> or just <code>SwiftUI</code></h3>
+<p>The <code>SwiftUI</code> component is supported from <code>iOS 14</code> and above, corresponding to library versions &gt;= <code>2.0.1</code></p>
+<figure class="medium"><img src="/images/image-2024080441554897%e2%80%afPM.png"
+         alt="image"/><figcaption>
+            <p>TTBaseUIKit SwiftUI Sample</p>
+        </figcaption>
+</figure>
+
+<h1 id="conclusion">Conclusion</h1>
+<blockquote>
+<p>TTBaseUIKit (Base Project - A framework to quickly create iOS project via base views)</p>
+</blockquote>
+<p><mark>TTBaseUIKit</mark> is a framework that helps you build iOS applications in <mark>the fastest and most efficient way</mark>, by providing base views written in both <code>UIKit Programmatically</code> and <code>SwiftUI</code>. The current release of <mark>TTBaseUIKit</mark> supports all versions of iOS and OS X since the introduction of Auto Layout on each platform, in Swift language with a single codebase.</p>
+<figure class="medium"><img src="/images/TTBaseUIKit-Info-BG-1x.png"
+         alt="image"/><figcaption>
+            <p>TTBaseUIKit Framework</p>
+        </figcaption>
+</figure>
+
+<p>Happy coding! See you soon ^^</p>
+
+
+
+<h3>Posts in this Series</h3>
+<ul>
+  
+    <li><a href="/posts/job/ios/swiftui/ttbaseuikit-integrated-with-swiftui/">TTBaseUIKit Has Been Integrated With SwiftUI Since Version 2.1.0</a></li>
+
+  
+    <li><a href="/posts/job/ios/swiftui/12bay-train-v2/">Rebuiding Train Booking Feature by SwiftUI in 12Bay Application - Design</a></li>
+
+  
+    <li><a href="/posts/job/ios/swiftui/swiftui-spacer/">What Is the Spacer and How Do We Use It in SwiftUI</a></li>
+
+  
+    <li><a href="/posts/job/ios/swiftui/12bay-bus-v2/">12Bay Integrated SwiftUI. With 12Bay, No StoryBoard, No XIB Files, No Cocoapods, ...</a></li>
+
+  
+    <li><a href="/posts/job/ios/swiftui/uiview-vs-view/">Understand View in SwiftUI</a></li>
+
+  
+    <li><a href="/posts/job/ios/swiftui/understand-safearea/">Understand Safe Area in SwiftUI</a></li>
+
+  
+    <li><a href="/posts/job/ios/swiftui/wwdc23/">WWDC23 From the Perspective of an IOS Developer</a></li>
+
+  
+    <li><a href="/posts/job/ios/swiftui/ttbaseuikitswiftuiserial/">SwiftUI Series - Updating TTBaseUIKit to Support SwiftUI</a></li>
+
+  
+</ul>
+
+<div class="contact-form">
+  <form class="form-style" method="POST" action="https://formspree.io/f/mqknvogq" data-toggle="validator">
+    <ul>
+      <li>
+        <label for="username">Name</label>
+        <input class="field-style field-full" type="text" name="username" id="username" placeholder="Name" required>
+      </li>
+      <li>
+        <label for="email">Email</label>
+        <input class="field-style field-full" type="email" id="email" name="email" placeholder="Email" required>
+      </li>
+      <li>
+        <label for="message">Message</label>
+        <textarea class="field-style" name="message" id="message" rows="6" placeholder="Message"></textarea>
+      </li>
+      <li>
+        <input class="field-style" type="submit" value="Send" />
+      </li>
+      <li>
+        <input type="text" name="_gotcha" style="display:none" />
+      </li>
+    </ul>
+  </form>
+</div>
+</div>
+    <div class="post__footer">
+      
+        <span><a class="category" href="/categories/dev-journey/">Dev Journey</a><a class="category" href="/categories/notes/">Notes</a></span>
+
+
+
+
+      
+
+      
+        <span><a class="tag" href="/tags/ttbaseuikit/">TTBaseUIKit</a><a class="tag" href="/tags/ios/">iOS</a><a class="tag" href="/tags/swiftui/">SwiftUI</a></span>
+
+
+
+
+      
+    </div>
+
+    
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2024
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script>
+  <script async defer src=" https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" /></noscript>
+
+
+</body>
+</html>
