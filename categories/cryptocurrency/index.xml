@@ -6,7 +6,20 @@
     <description>Recent content in Cryptocurrency on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 16 Apr 2022 08:21:19 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/categories/cryptocurrency/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Oct 2025 16:11:11 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/categories/cryptocurrency/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The fundamental concepts of blockchain</title>
+      <link>https://tqtuan1201.github.io/posts/note/basicknowledgeblockchain/</link>
+      <pubDate>Wed, 15 Oct 2025 16:11:11 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/note/basicknowledgeblockchain/</guid>
+      
+        <description>When I started learning about blockchain, I found many new words or keywords that I needed to learn. Here are the words I wrote down.
+Type something in the input field to search the table for keywords or description:
+Key Define Example Distributed Ledger Technology (DLT) A way to record data shared, synchronized, and secured across many computers. Examples of several DLTs: Blockchain (like Bitcoin, Ethereum), Hyperledger Fabric, Corda Smart contract life-cycle management The whole process of creating, using, and maintaining a smart contract — from start to finish.</description>
+      
+    </item>
+    
     <item>
       <title>The vision</title>
       <link>https://tqtuan1201.github.io/posts/note/cryptocurrency_world/</link>

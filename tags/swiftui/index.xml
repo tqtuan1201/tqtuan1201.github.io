@@ -6,7 +6,20 @@
     <description>Recent content in SwiftUI on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Jul 2025 16:29:23 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 Dec 2025 15:22:14 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New Feature: Smart new version check &amp; UIKit Previews since version 2.2.2</title>
+      <link>https://tqtuan1201.github.io/posts/job/ios/ttbaseuikit/checknewversion/</link>
+      <pubDate>Wed, 10 Dec 2025 15:22:14 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/job/ios/ttbaseuikit/checknewversion/</guid>
+      
+        <description>Abstract While working on multiple mobile app projects, I noticed two recurring problems:
+Users often don’t update the app because they never know a new version is available. UIKit developers struggle to preview views quickly without running the whole app. So in this update, we introduce two improvements to make development and user experience smoother.
+Let’s Code Auto-Check for New App Versions Apps should always stay up to date with the latest performance and stability improvements.</description>
+      
+    </item>
+    
     <item>
       <title>New Feature: UI Debugging in TTBaseUIKit since version 2.2.1</title>
       <link>https://tqtuan1201.github.io/posts/job/ios/ttbaseuikit/debuguikit/</link>

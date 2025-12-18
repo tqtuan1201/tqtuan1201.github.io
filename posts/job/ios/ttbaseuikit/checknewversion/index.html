@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme="light"
+  class="html"
+><head>
+  <title>
+    
+      Tuan Truong
+        |
+        New Feature: Smart new version check &amp; UIKit Previews since version 2.2.2
+
+
+      
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.119.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Tuan Truong" />
+  <meta
+    name="description"
+    content="
+      “The only thing that is constant is change”, Heraclitus.
+
+
+    "
+  />
+  
+    <meta name="google-site-verification" content="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.96ada9109c76570a48abadb1799220bb70919f1bc785eaac1c0152d6055421ce.css"
+      integrity="sha256-lq2pEJx2VwpIq62xeZIgu3CRnxvHheqsHAFS1gVUIc4="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.322f7815beb50e8cf61e202b1aa88261e079a6ab195e36ab0b4cdd7790ef98e2.css"
+    integrity="sha256-Mi94Fb61Doz2HiArGqiCYeB5pqsZXjarC0zdd5DvmOI="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.69685904d5c2a0c6258d03c207b778c10466edf6cea928cc0164c376b0ad0930.css"
+    integrity="sha256-aWhZBNXCoMYljQPCB7d4wQRm7fbOqSjMAWTDdrCtCTA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.6d585e78d28cce1200d39fb133c92ed83df01738da721d0f48fb6eac62d24e04.css"
+    integrity="sha256-bVheeNKMzhIA05&#43;xM8ku2D3wFzjach0PSPturGLSTgQ="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.6b00d96498d59caa0dbcf9b49d30d821915291f2ceb0e19248523c8607ff43fa.css"
+    integrity="sha256-awDZZJjVnKoNvPm0nTDYIZFSkfLOsOGSSFI8hgf/Q/o="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/images/profile.jpg" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://tqtuan1201.github.io/posts/job/ios/ttbaseuikit/checknewversion/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.738c0e3a493854876aeab9e2316fd43f1936aeeac4cc6b3e60bb26456dba72ad.js"
+      integrity="sha256-c4wOOkk4VIdq6rniMW/UPxk2rurEzGs&#43;YLsmRW26cq0="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tqtuan1201.github.io/images/profile.jpg"/>
+
+<meta name="twitter:title" content="New Feature: Smart new version check &amp; UIKit Previews since version 2.2.2"/>
+<meta name="twitter:description" content="Abstract While working on multiple mobile app projects, I noticed two recurring problems:
+Users often don’t update the app because they never know a new version is available. UIKit developers struggle to preview views quickly without running the whole app. So in this update, we introduce two improvements to make development and user experience smoother.
+Let’s Code Auto-Check for New App Versions Apps should always stay up to date with the latest performance and stability improvements."/>
+<meta name="twitter:site" content="@QuangTuan0409"/>
+
+
+
+  
+  <meta property="og:title" content="New Feature: Smart new version check &amp; UIKit Previews since version 2.2.2" />
+<meta property="og:description" content="Abstract While working on multiple mobile app projects, I noticed two recurring problems:
+Users often don’t update the app because they never know a new version is available. UIKit developers struggle to preview views quickly without running the whole app. So in this update, we introduce two improvements to make development and user experience smoother.
+Let’s Code Auto-Check for New App Versions Apps should always stay up to date with the latest performance and stability improvements." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tqtuan1201.github.io/posts/job/ios/ttbaseuikit/checknewversion/" /><meta property="og:image" content="https://tqtuan1201.github.io/images/profile.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2025-12-10T15:22:14+07:00" />
+<meta property="article:modified_time" content="2025-12-10T15:22:14+07:00" /><meta property="og:site_name" content="Hi, I&#39;m Tuan Truong" />
+<meta property="og:see_also" content="https://tqtuan1201.github.io/posts/job/ios/ttbaseuikit/debuguikit/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/job/ios/swiftui/ttbaseuikit-integrated-with-swiftui/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/job/ios/swiftui/12bay-train-v2/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/job/ios/swiftui/swiftui-spacer/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/job/ios/swiftui/12bay-bus-v2/" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "posts",
+        "name": "New Feature: Smart new version check \u0026 UIKit Previews since version 2.2.2",
+        "headline": "New Feature: Smart new version check \u0026 UIKit Previews since version 2.2.2",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Abstract While working on multiple mobile app projects, I noticed two recurring problems:\nUsers often don’t update the app because they never know a new version is available. UIKit developers struggle to preview views quickly without running the whole app. So in this update, we introduce two improvements to make development and user experience smoother.\nLet’s Code Auto-Check for New App Versions Apps should always stay up to date with the latest performance and stability improvements.
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/tqtuan1201.github.io\/posts\/job\/ios\/ttbaseuikit\/checknewversion\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightYear" : "2025",
+        "dateCreated": "2025-12-10T15:22:14.00Z",
+        "datePublished": "2025-12-10T15:22:14.00Z",
+        "dateModified": "2025-12-10T15:22:14.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Tuan Truong",
+            "url": "https://tqtuan1201.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/tqtuan1201.github.io\/images\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://tqtuan1201.github.io/images/profile.jpg"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/tqtuan1201.github.io\/posts\/job\/ios\/ttbaseuikit\/checknewversion\/",
+        "wordCount" : "602",
+        "genre" : [ 
+      
+      "Dev Journey"
+
+    
+      
+        ,
+
+      
+      "Notes"
+
+    ],
+        "keywords" : [ 
+      
+      "TTBaseUIKit"
+
+    
+      
+        ,
+
+      
+      "iOS"
+
+    
+      
+        ,
+
+      
+      "SwiftUI"
+
+    ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--light"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <a href="/about">
+        <img
+          class="sidebar__introduction-profileimage"
+          src="/images/profile.jpg"
+          alt="profile picture"
+        />
+      </a>
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Hi, I&#39;m Tuan Truong</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>“The only thing that is constant is change”, Heraclitus.</p>
+        </br>
+        <div class="sidebar__introduction-description">
+          <i style="color:#454545; font-weight: 360; font-size: 0.92em;">'If you have a great idea but don’t know how to start? Don't worry, simply click on <a href="/posts/job/cv/ourteam"><strong>Meet My Team</strong></a> and we can discuss your project over a cup of coffee'</i>
+        </div>
+        </br></br>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a href="https://www.linkedin.com/in/thales-truong" rel="me" aria-label="Linkedin" title="Linkedin">
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a href="https://github.com/tqtuan1201" rel="me" aria-label="GitHub" title="GitHub">
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a href="mailto:truongquangtuanit@gmail.com" rel="me" aria-label="e-mail" title="e-mail">
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a href="https://twitter.com/QuangTuan0409" rel="me" aria-label="Twitter" title="Twitter">
+            <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a href="https://warpcast.com/thales-truong" rel="me" aria-label="instagram" title="instagram">
+            <i class="fa-brands fa-weebly fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+    </br></br>
+    <div class="sidebar__list">
+      <a href="/buymeacoffee">
+          <img src="/images/buymeacoffee_button.png" height=40; alt="By me a coffee ^^">
+      </a>
+    </div>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2025
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/keynote"
+              
+              title=""
+              >Topics</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/posts"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/portfolio"
+              
+              title=""
+              >Projects</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/certifications"
+              
+              title=""
+              >Certifications</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/series"
+              
+              title=""
+              >Series</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/categories"
+              
+              title=""
+              >Categories</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/categories/keynotes/"
+              
+              title=""
+              >Notes</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/tags"
+              
+              title=""
+              >Tags</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/about"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/contact"
+              
+              title=""
+              >Contact</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      <li class="nav__list-item">
+        <div class="dropdown">
+          <button> RESUMES </button>
+          <div class="dropdown-content">
+          <a href="/posts/job/cv/myresume">My CV</a>
+          <a href="/posts/job/cv/ourteam">My Team</a>
+          </div>
+        </div>
+      </li>
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+
+<style>
+ 
+.dropdown {
+  display: inline-block;
+  position: relative;
+  padding-right: 10px;
+  padding-left: 4px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+.dropdown:hover .dropdown-content {
+  background-color: #FFFFFF;
+  display: block;
+  border-radius: 2px;
+}
+.dropdown-content a {
+  display: block;
+  color: #000000;
+  padding: 5px;
+  text-decoration: none;
+}
+.dropdown-content a:hover {
+  color: #FFFFFF;
+  background-color: #686868;
+}
+</style>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+      <div class="post__thumbnail-wrapper">
+        <img class="post__thumbnail" src="/images/image-2025121852531479%e2%80%afPM.png?quality=92&amp;strip=all" alt="Thumbnail image" />
+      </div>
+
+    
+
+    <div class="post__content">
+      <h1>New Feature: Smart New Version Check &amp; UIKit Previews Since Version 2.2.2</h1>
+      <h3>Table of Contents</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#lets-code">Let’s Code</a>
+      <ul>
+        <li><a href="#auto-check-for-new-app-versions">Auto-Check for New App Versions</a></li>
+        <li><a href="#preview-uikit-views-with-previewprovider">Preview UIKit Views with <code>PreviewProvider</code></a>
+          <ul>
+            <li><a href="#uiviews">UIViews</a></li>
+            <li><a href="#viewcontrollers">ViewControllers</a></li>
+            <li><a href="#cells">Cells</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#whats-next">What&rsquo;s Next?</a></li>
+  </ul>
+</nav>
+        <div style="width: 100%; margin: 0 auto; background:rgba(0,0,0,0.5); height: 1px; opacity: 0.6"> </div><h1 id="abstract">Abstract</h1>
+<p>While working on multiple mobile app projects, I noticed two recurring problems:</p>
+<ul>
+<li><mark>Users often don’t update the app</mark> because they never know a new version is available.</li>
+<li><mark>UIKit developers struggle to preview</mark> views quickly without running the whole app.</li>
+</ul>
+<p>So in this update, we introduce <strong>two improvements</strong> to make development and user experience smoother.</p>
+<h1 id="lets-code">Let’s Code</h1>
+<h2 id="auto-check-for-new-app-versions">Auto-Check for New App Versions</h2>
+<p>Apps should always stay up to date with the latest performance and stability improvements. This new feature automatically checks for the latest version on the <code>App Store</code> and displays an update popup when needed.</p>
+<figure class="large"><img src="/images/TTBaseUIKit-NewVersion-Short.gif"
+         alt="image"/><figcaption>
+            <p>Auto-Check for New App Versions - TTBaseUIKitExample</p>
+        </figcaption>
+</figure>
+
+<div
+  class="notice"
+>
+  <span
+    class="notice__title"
+  >Info</span><div class="notice__content">
+    First, if you haven’t installed <code>TTBaseUIKit</code> yet, you should read the setup guide at <a href="/posts/ttbaseuikit-ui-framework/">ttbaseuikit-ui-framework</a>.
+  </div>
+</div>
+
+<p>Then, you just need to call</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">import</span> <span class="nc">TTBaseUIKit</span>
+</span></span><span class="line"><span class="cl"><span class="n">TTBaseCheckNewVersion</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">onCheck</span><span class="p">()</span>
+</span></span></code></pre></div><p>If you don’t want the library to automatically fetch your app information using the <code>buildId</code>, simply provide it manually via <code>paramConfig.appId</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">paramConfig</span><span class="p">:</span><span class="n">ParamConfig</span> <span class="p">=</span> <span class="n">ParamConfig</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">paramConfig</span><span class="p">.</span><span class="n">appId</span> <span class="p">=</span> <span class="mi">1191396802</span>
+</span></span><span class="line"><span class="cl"><span class="n">paramConfig</span><span class="p">.</span><span class="n">forceUpdateNewVersion</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="n">paramConfig</span><span class="p">.</span><span class="n">isGetNewVersionMessageByAppStore</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="n">TTBaseUIKitConfig</span><span class="p">.</span><span class="n">withDefaultConfig</span><span class="p">(</span><span class="n">withFontConfig</span><span class="p">:</span> <span class="n">fontConfig</span><span class="p">,</span> <span class="n">frameSize</span><span class="p">:</span> <span class="n">sizeConfig</span><span class="p">,</span> <span class="n">view</span><span class="p">:</span> <span class="n">customView</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="n">styleConfig</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="n">paramConfig</span><span class="p">)?.</span><span class="n">start</span><span class="p">(</span><span class="n">withViewLog</span><span class="p">:</span> <span class="kc">false</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><code>appId</code>: Your application’s ID on the Apple App Store.</li>
+<li><code>forceUpdateNewVersion</code>: Set to <code>true</code> if you want to require users to update the app to the latest version before they can continue using it.</li>
+<li><code>isGetNewVersionMessageByAppStore</code>: Set to <code>true</code> if you want to retrieve the update message directly from the App Store.</li>
+</ul>
+<p>Or you can customize the messages using the following language file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="s">&#34;TTBaseUIkit.NewVersion.Title&#34;</span> <span class="p">=</span> <span class="s">&#34;New update available&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;TTBaseUIkit.NewVersion.SubTitle&#34;</span> <span class="p">=</span> <span class="s">&#34;This update brings enhanced performance and optimized stability. Update now to get the most out of the app&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;TTBaseUIkit.NewVersion.Button.Update&#34;</span> <span class="p">=</span> <span class="s">&#34;Update Now&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;TTBaseUIkit.NewVersion.Button.Later&#34;</span> <span class="p">=</span> <span class="s">&#34;Maybe Later&#34;</span><span class="p">;</span>
+</span></span></code></pre></div><h2 id="preview-uikit-views-with-previewprovider">Preview UIKit Views with <code>PreviewProvider</code></h2>
+<p><code>SwiftUI</code> already gives us powerful live previews, but <mark>UIKit developers have always lacked something similar</mark>.
+Now you can preview <strong>any UIKit view</strong> directly inside Xcode using <code>PreviewProvider</code>.</p>
+<ul>
+<li>No need to run the app just to check small UI changes.</li>
+<li>Faster UI iterations.</li>
+<li>Easier debugging for layout, spacing, and edge cases.</li>
+</ul>
+<h3 id="uiviews">UIViews</h3>
+<p>If you want to quickly preview <code>UIViews</code>, you can use <mark>TTBaseUIViewPreview</mark>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"> <span class="kd">struct</span> <span class="nc">TTBaseUIViewPreview_Previews</span><span class="p">:</span> <span class="n">PreviewProvider</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="kd">static</span> <span class="kd">var</span> <span class="nv">previews</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="n">TTBaseUIViewPreview</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">             <span class="kd">let</span> <span class="nv">testView</span><span class="p">:</span><span class="n">TTBaseUIView</span> <span class="p">=</span> <span class="n">TTBaseUIView</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">             <span class="n">testView</span><span class="p">.</span><span class="n">setBgColor</span><span class="p">(</span><span class="n">UIColor</span><span class="p">.</span><span class="n">gray</span><span class="p">.</span><span class="n">withAlphaComponent</span><span class="p">(</span><span class="mf">0.2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">             <span class="n">testView</span><span class="p">.</span><span class="n">setConerDef</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">             <span class="k">return</span> <span class="n">testView</span>
+</span></span><span class="line"><span class="cl">         <span class="p">}</span>
+</span></span><span class="line"><span class="cl">         <span class="p">.</span><span class="n">size</span><span class="p">(</span><span class="n">height</span><span class="p">:</span> <span class="mf">200.0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">         <span class="p">.</span><span class="n">padding</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">     <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span></code></pre></div><h3 id="viewcontrollers">ViewControllers</h3>
+<p>If you want to quickly preview <code>ViewControllers</code>, you can use <mark>TTBaseUIViewControllerPreview</mark>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">struct</span> <span class="nc">MenuViewController_Previews</span><span class="p">:</span> <span class="n">PreviewProvider</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="kd">var</span> <span class="nv">previews</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">TTBaseUIViewControllerPreview</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">let</span> <span class="nv">vc</span> <span class="p">=</span> <span class="n">MenuViewController</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">UINavigationController</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">rootViewController</span><span class="p">:</span> <span class="n">vc</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="cells">Cells</h3>
+<p>If you want to quickly preview cells in table views and collection views, use <mark>TTBaseCellPreview</mark>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"> <span class="kd">struct</span> <span class="nc">TTBaseCellPreviewPreview</span><span class="p">:</span> <span class="n">PreviewProvider</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="kd">static</span> <span class="kd">var</span> <span class="nv">previews</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="n">TTBaseCellPreview</span><span class="p">(</span><span class="n">size</span><span class="p">:</span> <span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">width</span><span class="p">:</span> <span class="mi">340</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mi">80</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">             <span class="kd">let</span> <span class="nv">cell</span> <span class="p">=</span> <span class="n">TTIconTextSubtextTableViewCell</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">             <span class="n">cell</span><span class="p">.</span><span class="n">panel</span><span class="p">.</span><span class="n">setHeightAnchor</span><span class="p">(</span><span class="n">constant</span><span class="p">:</span> <span class="mf">80.0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">             <span class="k">return</span> <span class="n">cell</span>
+</span></span><span class="line"><span class="cl">         <span class="p">}</span>
+</span></span><span class="line"><span class="cl">         <span class="p">.</span><span class="n">size</span><span class="p">(</span><span class="n">height</span><span class="p">:</span> <span class="mf">80.0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">         <span class="p">.</span><span class="n">previewLayout</span><span class="p">(.</span><span class="n">sizeThatFits</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">     <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span></code></pre></div><figure class="large"><img src="/images/image-2025121043106160%e2%80%afPM.png"
+         alt="image"/><figcaption>
+            <p>Preview UIKit - TTBaseUIKit Example</p>
+        </figcaption>
+</figure>
+
+<h1 id="conclusion">Conclusion</h1>
+<p>Both features aim to <strong>reduce the time spent on repetitive tasks</strong> and improve <strong>the overall development</strong> <strong>flow</strong>:</p>
+<ul>
+<li><strong>Automatic version checking:</strong> keeps users on the latest build.</li>
+<li><strong>UIKit previews:</strong> lets developers see UI changes instantly without running the app.</li>
+</ul>
+<p>These updates continue the original goal of the base framework: <mark>build faster, debug smarter, and write less repetitive code</mark>.</p>
+<blockquote>
+<p><mark>TTBaseUIKit</mark> is a framework that helps you build iOS applications in <mark>the fastest and most efficient way</mark>, by providing base views written in both <code>UIKit Programmatically</code> and <code>SwiftUI</code>. The current release of <mark>TTBaseUIKit</mark> supports all versions of iOS and OS X since the introduction of Auto Layout on each platform, in Swift language with a single codebase.</p>
+</blockquote>
+<h1 id="whats-next">What&rsquo;s Next?</h1>
+<p>We’ve finished implementing <code>the new version checking feature</code>. In the next post, we’ll introduce the app update notification feature, helping users understand <mark>what’s new</mark> and what to pay attention to after updating the app. Happy coding! See you soon ^^</p>
+
+
+
+<h3>Posts in this Series</h3>
+<ul>
+  
+    <li><a href="/posts/job/ios/ttbaseuikit/checknewversion/">New Feature: Smart New Version Check &amp; UIKit Previews Since Version 2.2.2</a></li>
+
+  
+    <li><a href="/posts/job/ios/ttbaseuikit/debuguikit/">New Feature: UI Debugging in TTBaseUIKit Since Version 2.2.1</a></li>
+
+  
+    <li><a href="/posts/job/ios/swiftui/ttbaseuikit-integrated-with-swiftui/">TTBaseUIKit Has Been Integrated With SwiftUI Since Version 2.1.0</a></li>
+
+  
+    <li><a href="/posts/job/ios/swiftui/12bay-train-v2/">Rebuiding Train Booking Feature by SwiftUI in 12Bay Application - Design</a></li>
+
+  
+    <li><a href="/posts/job/ios/swiftui/swiftui-spacer/">What Is the Spacer and How Do We Use It in SwiftUI</a></li>
+
+  
+    <li><a href="/posts/job/ios/swiftui/12bay-bus-v2/">12Bay Integrated SwiftUI. With 12Bay, No StoryBoard, No XIB Files, No Cocoapods, ...</a></li>
+
+  
+    <li><a href="/posts/job/ios/swiftui/uiview-vs-view/">Understand View in SwiftUI</a></li>
+
+  
+    <li><a href="/posts/job/ios/swiftui/understand-safearea/">Understand Safe Area in SwiftUI</a></li>
+
+  
+    <li><a href="/posts/job/ios/swiftui/wwdc23/">WWDC23 From the Perspective of an IOS Developer</a></li>
+
+  
+    <li><a href="/posts/job/ios/swiftui/ttbaseuikitswiftuiserial/">SwiftUI Series - Updating TTBaseUIKit to Support SwiftUI</a></li>
+
+  
+</ul>
+
+<div class="contact-form">
+  <form class="form-style" method="POST" action="https://formspree.io/f/mqknvogq" data-toggle="validator">
+    <ul>
+      <li>
+        <label for="username">Name</label>
+        <input class="field-style field-full" type="text" name="username" id="username" placeholder="Name" required>
+      </li>
+      <li>
+        <label for="email">Email</label>
+        <input class="field-style field-full" type="email" id="email" name="email" placeholder="Email" required>
+      </li>
+      <li>
+        <label for="message">Message</label>
+        <textarea class="field-style" name="message" id="message" rows="6" placeholder="Message"></textarea>
+      </li>
+      <li>
+        <input class="field-style" type="submit" value="Send" />
+      </li>
+      <li>
+        <input type="text" name="_gotcha" style="display:none" />
+      </li>
+    </ul>
+  </form>
+</div>
+</div>
+    <div class="post__footer">
+      
+        <span><a class="category" href="/categories/dev-journey/">Dev Journey</a><a class="category" href="/categories/notes/">Notes</a></span>
+
+
+
+
+      
+
+      
+        <span><a class="tag" href="/tags/ttbaseuikit/">TTBaseUIKit</a><a class="tag" href="/tags/ios/">iOS</a><a class="tag" href="/tags/swiftui/">SwiftUI</a></span>
+
+
+
+
+      
+    </div>
+
+    
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2025
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script>
+  <script async defer src=" https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" /></noscript>
+
+
+</body>
+</html>

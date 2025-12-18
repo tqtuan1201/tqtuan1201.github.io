@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme="light"
+  class="html"
+><head>
+  <title>
+    
+      Tuan Truong
+        |
+        An Overview of Hyperledger - The Leading Enterprise Blockchain Platform
+
+
+      
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.119.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Tuan Truong" />
+  <meta
+    name="description"
+    content="
+      “The only thing that is constant is change”, Heraclitus.
+
+
+    "
+  />
+  
+    <meta name="google-site-verification" content="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.96ada9109c76570a48abadb1799220bb70919f1bc785eaac1c0152d6055421ce.css"
+      integrity="sha256-lq2pEJx2VwpIq62xeZIgu3CRnxvHheqsHAFS1gVUIc4="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.322f7815beb50e8cf61e202b1aa88261e079a6ab195e36ab0b4cdd7790ef98e2.css"
+    integrity="sha256-Mi94Fb61Doz2HiArGqiCYeB5pqsZXjarC0zdd5DvmOI="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.69685904d5c2a0c6258d03c207b778c10466edf6cea928cc0164c376b0ad0930.css"
+    integrity="sha256-aWhZBNXCoMYljQPCB7d4wQRm7fbOqSjMAWTDdrCtCTA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.6d585e78d28cce1200d39fb133c92ed83df01738da721d0f48fb6eac62d24e04.css"
+    integrity="sha256-bVheeNKMzhIA05&#43;xM8ku2D3wFzjach0PSPturGLSTgQ="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.6b00d96498d59caa0dbcf9b49d30d821915291f2ceb0e19248523c8607ff43fa.css"
+    integrity="sha256-awDZZJjVnKoNvPm0nTDYIZFSkfLOsOGSSFI8hgf/Q/o="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/images/profile.jpg" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://tqtuan1201.github.io/posts/job/blockchain/survey/an-overview-of-hyperledger/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.738c0e3a493854876aeab9e2316fd43f1936aeeac4cc6b3e60bb26456dba72ad.js"
+      integrity="sha256-c4wOOkk4VIdq6rniMW/UPxk2rurEzGs&#43;YLsmRW26cq0="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tqtuan1201.github.io/images/profile.jpg"/>
+
+<meta name="twitter:title" content="An Overview of Hyperledger - The Leading Enterprise Blockchain Platform"/>
+<meta name="twitter:description" content="Abstract Hyperledger is an open-source collaborative effort created to advance cross-industry blockchain technologies. Hosted by The Linux Foundation, Hyperledger aims to develop a comprehensive suite of stable frameworks, tools, and libraries suitable for enterprise-grade blockchain deployments. It is widely recognized as a leading platform for building permissioned blockchain applications geared toward enterprise use cases.
+According to Brian behlendorf, executive director of Hyperledger
+“Hyperledger is an open source community of communities to benefit an ecosystem of hyperledger based solution providers and users focused on blockchain related use-cases that will work on variety of industrial sectors”"/>
+<meta name="twitter:site" content="@QuangTuan0409"/>
+
+
+
+  
+  <meta property="og:title" content="An Overview of Hyperledger - The Leading Enterprise Blockchain Platform" />
+<meta property="og:description" content="Abstract Hyperledger is an open-source collaborative effort created to advance cross-industry blockchain technologies. Hosted by The Linux Foundation, Hyperledger aims to develop a comprehensive suite of stable frameworks, tools, and libraries suitable for enterprise-grade blockchain deployments. It is widely recognized as a leading platform for building permissioned blockchain applications geared toward enterprise use cases.
+According to Brian behlendorf, executive director of Hyperledger
+“Hyperledger is an open source community of communities to benefit an ecosystem of hyperledger based solution providers and users focused on blockchain related use-cases that will work on variety of industrial sectors”" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tqtuan1201.github.io/posts/job/blockchain/survey/an-overview-of-hyperledger/" /><meta property="og:image" content="https://tqtuan1201.github.io/images/profile.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2025-10-14T17:45:40+07:00" />
+<meta property="article:modified_time" content="2025-10-14T17:45:40+07:00" /><meta property="og:site_name" content="Hi, I&#39;m Tuan Truong" />
+<meta property="og:see_also" content="https://tqtuan1201.github.io/posts/job/blockchain/survey/what-is-blockchain/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/note/basicknowledgeblockchain/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/job/cryptocurrency/start-journey/" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "posts",
+        "name": "An Overview of Hyperledger - The Leading Enterprise Blockchain Platform",
+        "headline": "An Overview of Hyperledger - The Leading Enterprise Blockchain Platform",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Abstract Hyperledger is an open-source collaborative effort created to advance cross-industry blockchain technologies. Hosted by The Linux Foundation, Hyperledger aims to develop a comprehensive suite of stable frameworks, tools, and libraries suitable for enterprise-grade blockchain deployments. It is widely recognized as a leading platform for building permissioned blockchain applications geared toward enterprise use cases.\nAccording to Brian behlendorf, executive director of Hyperledger\n“Hyperledger is an open source community of communities to benefit an ecosystem of hyperledger based solution providers and users focused on blockchain related use-cases that will work on variety of industrial sectors”
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/tqtuan1201.github.io\/posts\/job\/blockchain\/survey\/an-overview-of-hyperledger\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightYear" : "2025",
+        "dateCreated": "2025-10-14T17:45:40.00Z",
+        "datePublished": "2025-10-14T17:45:40.00Z",
+        "dateModified": "2025-10-14T17:45:40.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Tuan Truong",
+            "url": "https://tqtuan1201.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/tqtuan1201.github.io\/images\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://tqtuan1201.github.io/images/profile.jpg"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/tqtuan1201.github.io\/posts\/job\/blockchain\/survey\/an-overview-of-hyperledger\/",
+        "wordCount" : "1142",
+        "genre" : [ 
+      
+      "Notes"
+
+    
+      
+        ,
+
+      
+      "Self-Improvement"
+
+    
+      
+        ,
+
+      
+      "Economics"
+
+    ],
+        "keywords" : [ 
+      
+      "Note"
+
+    
+      
+        ,
+
+      
+      "Cryptocurrency"
+
+    
+      
+        ,
+
+      
+      "Private Blockchain"
+
+    ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--light"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <a href="/about">
+        <img
+          class="sidebar__introduction-profileimage"
+          src="/images/profile.jpg"
+          alt="profile picture"
+        />
+      </a>
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Hi, I&#39;m Tuan Truong</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>“The only thing that is constant is change”, Heraclitus.</p>
+        </br>
+        <div class="sidebar__introduction-description">
+          <i style="color:#454545; font-weight: 360; font-size: 0.92em;">'If you have a great idea but don’t know how to start? Don't worry, simply click on <a href="/posts/job/cv/ourteam"><strong>Meet My Team</strong></a> and we can discuss your project over a cup of coffee'</i>
+        </div>
+        </br></br>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a href="https://www.linkedin.com/in/thales-truong" rel="me" aria-label="Linkedin" title="Linkedin">
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a href="https://github.com/tqtuan1201" rel="me" aria-label="GitHub" title="GitHub">
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a href="mailto:truongquangtuanit@gmail.com" rel="me" aria-label="e-mail" title="e-mail">
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a href="https://twitter.com/QuangTuan0409" rel="me" aria-label="Twitter" title="Twitter">
+            <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a href="https://warpcast.com/thales-truong" rel="me" aria-label="instagram" title="instagram">
+            <i class="fa-brands fa-weebly fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+    </br></br>
+    <div class="sidebar__list">
+      <a href="/buymeacoffee">
+          <img src="/images/buymeacoffee_button.png" height=40; alt="By me a coffee ^^">
+      </a>
+    </div>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2025
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/keynote"
+              
+              title=""
+              >Topics</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/posts"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/portfolio"
+              
+              title=""
+              >Projects</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/certifications"
+              
+              title=""
+              >Certifications</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/series"
+              
+              title=""
+              >Series</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/categories"
+              
+              title=""
+              >Categories</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/categories/keynotes/"
+              
+              title=""
+              >Notes</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/tags"
+              
+              title=""
+              >Tags</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/about"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/contact"
+              
+              title=""
+              >Contact</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      <li class="nav__list-item">
+        <div class="dropdown">
+          <button> RESUMES </button>
+          <div class="dropdown-content">
+          <a href="/posts/job/cv/myresume">My CV</a>
+          <a href="/posts/job/cv/ourteam">My Team</a>
+          </div>
+        </div>
+      </li>
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+
+<style>
+ 
+.dropdown {
+  display: inline-block;
+  position: relative;
+  padding-right: 10px;
+  padding-left: 4px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+.dropdown:hover .dropdown-content {
+  background-color: #FFFFFF;
+  display: block;
+  border-radius: 2px;
+}
+.dropdown-content a {
+  display: block;
+  color: #000000;
+  padding: 5px;
+  text-decoration: none;
+}
+.dropdown-content a:hover {
+  color: #FFFFFF;
+  background-color: #686868;
+}
+</style>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+      <div class="post__thumbnail-wrapper">
+        <img class="post__thumbnail" src="/images/image-2025121853343168%e2%80%afPM.png?quality=92&amp;strip=all" alt="Thumbnail image" />
+      </div>
+
+    
+
+    <div class="post__content">
+      <h1>An Overview of Hyperledger - The Leading Enterprise Blockchain Platform</h1>
+      <h3>Table of Contents</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#why">Why?</a></li>
+    <li><a href="#design-principles">Design Principles</a></li>
+    <li><a href="#ecosystem">Ecosystem</a>
+      <ul>
+        <li><a href="#hyperledger-fabric">Hyperledger Fabric</a></li>
+        <li><a href="#hyperledger-sawtooth">Hyperledger Sawtooth</a></li>
+        <li><a href="#hyperledger-besu">Hyperledger Besu</a></li>
+        <li><a href="#hyperledger-indy">Hyperledger Indy</a></li>
+        <li><a href="#hyperledger-iroha">Hyperledger Iroha</a></li>
+      </ul>
+    </li>
+    <li><a href="#ethereum-vs-hyperledger">Ethereum vs Hyperledger</a></li>
+    <li><a href="#hyperledger-architecture">Hyperledger Architecture</a></li>
+    <li><a href="#real-world-applications-of-hyperledger">Real-World Applications of Hyperledger</a>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#whats-next">What&rsquo;s Next?</a></li>
+  </ul>
+</nav>
+        <div style="width: 100%; margin: 0 auto; background:rgba(0,0,0,0.5); height: 1px; opacity: 0.6"> </div><h1 id="abstract">Abstract</h1>
+<p>Hyperledger is an <mark>open-source</mark> collaborative effort created to advance cross-industry blockchain technologies. Hosted by The Linux Foundation, Hyperledger aims to develop a comprehensive suite of stable frameworks, tools, and libraries suitable for <mark><strong>enterprise-grade blockchain deployments</strong></mark>. It is widely recognized as a leading platform for building permissioned blockchain applications geared toward enterprise use cases.</p>
+<p>According to Brian behlendorf, executive director of Hyperledger</p>
+<blockquote>
+<p>“Hyperledger is an open source community of communities to benefit an ecosystem of hyperledger based solution providers and users focused on blockchain related use-cases that will work on variety of industrial sectors”</p>
+</blockquote>
+<h1 id="why">Why?</h1>
+<p>When blockchain first appeared, most attention focused on public networks like <code>Bitcoin</code> and <code>Ethereum</code>. These systems are open to everyone and built for transparency — but they don’t fit business needs very well.</p>
+<p>Industries such as <code>finance</code>, <code>supply chain</code>, and <code>manufacturing</code> need networks where only <mark>authorized members can join</mark>, where <strong>data privacy</strong> is protected, and where <strong>transactions</strong> can be fast and verified among trusted parties.</p>
+<p>To solve this, the <strong>Linux Foundation launched Hyperledger in 2015</strong> as a global, open-source collaboration. Its goal is to create <mark><strong>modular and permissioned blockchain frameworks</strong></mark> that companies can use to build <mark>secure, private, and scalable solutions</mark> without needing a public cryptocurrency.</p>
+<h1 id="design-principles">Design Principles</h1>
+<p>Hyperledger projects are built on <mark>clear philosophy</mark>: They focus on solving real business problems that require <code>strong security,</code> <code>privacy</code>, and <code>system integration</code>. In enterprise environments, companies often deal with sensitive data and need to control who can access information. Hyperledger follows design principles that make blockchain technology suitable for these needs.
+This means each project is developed with features like permissioned networks, modular architecture, and tools that help organizations connect blockchain with <strong>their</strong> <strong>existing IT systems</strong>.</p>
+<figure class="normal"><img src="/images/image-20251112112217593%e2%80%afAM.png"
+         alt="image"/><figcaption>
+            <p>Hyperledger Design Architecture</p>
+        </figcaption>
+</figure>
+
+<p><strong>Modular Architecture:</strong> Hyperledger provides a modular design that enables developers to customize and integrate different components, such as consensus mechanisms, membership services, and ledger storage. This architecture allows for components to be used interchangeably based on specific use cases.</p>
+<p><strong>Permissioned Network:</strong> Hyperledger focuses on permissioned blockchain networks, where all participants are known and must be authorized to join. This approach enhances trust and security among participants</p>
+<p><strong>Security and Confidentiality:</strong> Given that blockchain data is often immutable, Hyperledger emphasizes a high level of security and robustness. The architecture is designed for confidentiality, which is particularly vital for enterprise applications requiring restricted data visibility</p>
+<p><strong>Non-Cryptocurrency Architecture:</strong> Unlike public blockchain projects, the design of Hyperledger <strong>does not incorporate cryptocurrency token</strong></p>
+<p><strong>Interoperability:</strong> The platform is designed to be interoperable, allowing its applications to connect and interact with blockchain applications built on other platforms, such as Ethereum</p>
+<h1 id="ecosystem">Ecosystem</h1>
+<p>The Hyperledger ecosystem consists of various projects categorized into <mark>Distributed Ledger Frameworks</mark>, <mark>Tools</mark>, and <mark>Libraries</mark></p>
+<figure class="normal"><img src="/images/image-20251112113757918%e2%80%afAM.png"
+         alt="image"/><figcaption>
+            <p>The Hyperledger Project umbrella - An overview of Hyperledger blockchain technologies and their uses paper</p>
+        </figcaption>
+</figure>
+
+<h2 id="hyperledger-fabric">Hyperledger Fabric</h2>
+<p>The most widely adopted framework, <strong>Fabric</strong> provides a modular and secure architecture suitable for enterprise-grade applications.
+Key features:</p>
+<ul>
+<li>Permissioned membership using <strong>MSP (Membership Service Provider)</strong></li>
+<li>Pluggable consensus (e.g., Raft, Kafka, or BFT)</li>
+<li>Chaincode (smart contracts) written in Go, Node.js, or Java</li>
+<li>Channel-based data partitioning for privacy</li>
+</ul>
+<p>Use cases: <mark>Supply chain tracking, trade finance, digital identity</mark>.</p>
+<h2 id="hyperledger-sawtooth">Hyperledger Sawtooth</h2>
+<p>Originally developed by Intel, <strong>Sawtooth</strong> focuses on flexibility and scalability.
+Notable feature: <strong>Proof of Elapsed Time (PoET)</strong> — a consensus algorithm optimized for trusted execution environments (TEE).</p>
+<p>Use cases: <mark>IoT integration, logistics, and data provenance</mark></p>
+<h2 id="hyperledger-besu">Hyperledger Besu</h2>
+<p>An <strong>Ethereum-compatible</strong> client designed for both public and private network use.</p>
+<ul>
+<li>Supports <strong>EVM</strong> and <strong>smart contracts</strong> using Solidity</li>
+<li>Allows enterprises to bridge public and private ecosystems</li>
+</ul>
+<p>Use cases: <mark>Consortium blockchains and DeFi integrations.</mark></p>
+<h2 id="hyperledger-indy">Hyperledger Indy</h2>
+<p>Specialized for <strong>decentralized identity (DID)</strong> solutions.</p>
+<ul>
+<li>Built-in support for verifiable credentials</li>
+<li>Interoperable with W3C standards</li>
+</ul>
+<p>Use cases: <mark>Self-sovereign identity, KYC, credential verification.</mark></p>
+<h2 id="hyperledger-iroha">Hyperledger Iroha</h2>
+<p>A simple, efficient blockchain platform focusing on <mark> <strong>mobile and infrastructure integration</strong></mark>.</p>
+<ul>
+<li>Emphasizes ease of use and role-based permissioning</li>
+<li>Ideal for applications with simple asset management logic</li>
+</ul>
+<h1 id="ethereum-vs-hyperledger">Ethereum vs Hyperledger</h1>
+<figure class="normal"><img src="/images/image-20251112115049852%e2%80%afAM.png"
+         alt="image"/><figcaption>
+            <p>Hyperledger Fabric-Based Tea Supply Chain Production Data Traceable Scheme</p>
+        </figcaption>
+</figure>
+
+<h1 id="hyperledger-architecture">Hyperledger Architecture</h1>
+<figure class="small"><img src="/images/image-2025111242324515%e2%80%afPM.png"
+         alt="image"/><figcaption>
+            <p>Architecture</p>
+        </figcaption>
+</figure>
+
+<p>The general architecture across frameworks includes:</p>
+<ul>
+<li><strong>Ledger:</strong> Keeps a permanent record of all transactions that can’t be changed.</li>
+<li><strong>Smart Contracts (Chaincode in Fabric)</strong> Define the business rules and automatically execute them on the blockchain. ()</li>
+<li><strong>Privacy:</strong> Protects sensitive data and controls who can see what information.</li>
+<li><strong>Consensus:</strong> Makes sure all members in the network agree on the same version of the ledger.</li>
+<li><strong>Membership Services:</strong> Manages the identities of people and organizations in the network.</li>
+</ul>
+<p>This modularity allows organizations to customize blockchain components according to their operational and regulatory needs.</p>
+<figure class="normal"><img src="/images/image-2025111241053107%e2%80%afPM.png"
+         alt="image"/><figcaption>
+            <p>Main components of a single node Hyperledger fabric network (uploaded by <a href="https://www.researchgate.net/profile/Josep-Guerrero?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6Il9kaXJlY3QiLCJwYWdlIjoiX2RpcmVjdCJ9fQ">Josep M. Guerrero</a>)</p>
+        </figcaption>
+</figure>
+
+<h1 id="real-world-applications-of-hyperledger">Real-World Applications of Hyperledger</h1>
+<p>Below are real-world applications that show how Hyperledger, especially <mark>Hyperledger Fabric</mark>, is transforming industries today.</p>
+<h5 id="walmart--ibm--food-supply-chain-transparency">Walmart &amp; IBM — Food Supply Chain Transparency</h5>
+<p>Walmart teamed up with IBM to use <strong>Hyperledger Fabric</strong> for tracking the origin of food products such as mangoes in the U.S. and pork in China.
+→ Result: The time to trace a product’s source dropped from <strong>seven days to just 2.2 seconds</strong>, dramatically improving food safety and recall efficiency.</p>
+<h5 id="circulor--responsible-mining-and-battery-materials">Circulor — Responsible Mining and Battery Materials</h5>
+<p><strong>Circulor</strong> uses Hyperledger Fabric to trace raw materials like cobalt and lithium used in electric vehicle batteries.
+→ Result: Ensures ethical sourcing and compliance with global standards, building consumer trust and corporate accountability.</p>
+<h5 id="sony-global-education--verifiable-digital-credentials">Sony Global Education — Verifiable Digital Credentials</h5>
+<p><strong>Sony Global Education</strong> developed a blockchain-based platform using Hyperledger to issue and verify academic certificates.
+→ Result: Students and institutions can instantly verify credentials, reducing fraud and administrative overhead.</p>
+<h5 id="change-healthcare--transparent-medical-claims">Change Healthcare — Transparent Medical Claims</h5>
+<p>In the healthcare sector, <strong>Change Healthcare</strong> implemented Fabric to streamline claim management and improve transparency.
+→ Result: Faster claim resolution, better interoperability among providers, and a trusted audit trail.</p>
+<h5 id="ibm-blockchain-platform--multi-industry-blockchain-as-a-service">IBM Blockchain Platform — Multi-Industry Blockchain-as-a-Service</h5>
+<p><strong>IBM’s Blockchain Services</strong>, built on Hyperledger Fabric, offer enterprise solutions for logistics, finance, identity, and healthcare.
+→ Result: Thousands of organizations can deploy custom blockchain networks without managing complex infrastructure.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>Hyperledger has emerged as a key framework for enterprise blockchain adoption, providing modular, permissioned, and scalable solutions across industries.
+Its open governance and strong community collaboration enable continuous improvement and ensure enterprise-level reliability.
+Real-world implementations such as IBM Food Trust, TradeLens, and Energy Web Foundation demonstrate its practical value in building trusted, transparent business networks.
+As blockchain technology extends beyond cryptocurrency, Hyperledger remains a driving force in shaping the future of enterprise innovation.</p>
+<h1 id="whats-next">What&rsquo;s Next?</h1>
+<p>Now that we understand the basic ideas of Hyperledger, our next step is to dive deeper into its <strong>core components</strong>.
+In the upcoming lesson, we’ll explore <strong>Hyperledger Fabric Architecture</strong> — and learn how key elements like the <mark><strong>ledger, smart contracts (chaincode), membership services, and consensus mechanisms</strong></mark> work together to build a complete blockchain network.</p>
+<p>By mastering these building blocks, you’ll gain a clearer view of how enterprise blockchain systems are structured and how they operate in the real world.</p>
+<p>Wishing you a happy day! Catch you later ^^</p>
+
+
+
+<h3>Posts in this Series</h3>
+<ul>
+  
+    <li><a href="/posts/job/blockchain/survey/what-is-blockchain/">What Is Blockchain</a></li>
+
+  
+    <li><a href="/posts/note/basicknowledgeblockchain/">The Fundamental Concepts of Blockchain</a></li>
+
+  
+    <li><a href="/posts/job/blockchain/survey/an-overview-of-hyperledger/">An Overview of Hyperledger - The Leading Enterprise Blockchain Platform</a></li>
+
+  
+    <li><a href="/posts/job/cryptocurrency/start-journey/">Start New Journey</a></li>
+
+  
+</ul>
+
+<div class="contact-form">
+  <form class="form-style" method="POST" action="https://formspree.io/f/mqknvogq" data-toggle="validator">
+    <ul>
+      <li>
+        <label for="username">Name</label>
+        <input class="field-style field-full" type="text" name="username" id="username" placeholder="Name" required>
+      </li>
+      <li>
+        <label for="email">Email</label>
+        <input class="field-style field-full" type="email" id="email" name="email" placeholder="Email" required>
+      </li>
+      <li>
+        <label for="message">Message</label>
+        <textarea class="field-style" name="message" id="message" rows="6" placeholder="Message"></textarea>
+      </li>
+      <li>
+        <input class="field-style" type="submit" value="Send" />
+      </li>
+      <li>
+        <input type="text" name="_gotcha" style="display:none" />
+      </li>
+    </ul>
+  </form>
+</div>
+</div>
+    <div class="post__footer">
+      
+        <span><a class="category" href="/categories/notes/">Notes</a><a class="category" href="/categories/self-improvement/">Self-Improvement</a><a class="category" href="/categories/economics/">Economics</a></span>
+
+
+
+
+      
+
+      
+        <span><a class="tag" href="/tags/note/">Note</a><a class="tag" href="/tags/cryptocurrency/">Cryptocurrency</a><a class="tag" href="/tags/private-blockchain/">Private Blockchain</a></span>
+
+
+
+
+      
+    </div>
+
+    
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2025
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script>
+  <script async defer src=" https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" /></noscript>
+
+
+</body>
+</html>

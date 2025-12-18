@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Private Blockchain on Tuan Truong&#39;s Blog</title>
+    <link>https://tqtuan1201.github.io/tags/private-blockchain/</link>
+    <description>Recent content in Private Blockchain on Tuan Truong&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 Oct 2025 17:45:40 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/private-blockchain/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>An Overview of Hyperledger - The Leading Enterprise Blockchain Platform</title>
+      <link>https://tqtuan1201.github.io/posts/job/blockchain/survey/an-overview-of-hyperledger/</link>
+      <pubDate>Tue, 14 Oct 2025 17:45:40 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/job/blockchain/survey/an-overview-of-hyperledger/</guid>
+      
+        <description>Abstract Hyperledger is an open-source collaborative effort created to advance cross-industry blockchain technologies. Hosted by The Linux Foundation, Hyperledger aims to develop a comprehensive suite of stable frameworks, tools, and libraries suitable for enterprise-grade blockchain deployments. It is widely recognized as a leading platform for building permissioned blockchain applications geared toward enterprise use cases.
+According to Brian behlendorf, executive director of Hyperledger
+“Hyperledger is an open source community of communities to benefit an ecosystem of hyperledger based solution providers and users focused on blockchain related use-cases that will work on variety of industrial sectors”</description>
+      
+    </item>
+    
+  </channel>
+</rss>
