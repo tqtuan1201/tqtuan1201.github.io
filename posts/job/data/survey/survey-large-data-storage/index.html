@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme="light"
+  class="html"
+><head>
+  <title>
+    
+      Tuan Truong
+        |
+        An Overview of Large-Scale Data Storage Architectures
+
+
+      
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.119.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Tuan Truong" />
+  <meta
+    name="description"
+    content="
+      “The only thing that is constant is change”, Heraclitus.
+
+
+    "
+  />
+  
+    <meta name="google-site-verification" content="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.96ada9109c76570a48abadb1799220bb70919f1bc785eaac1c0152d6055421ce.css"
+      integrity="sha256-lq2pEJx2VwpIq62xeZIgu3CRnxvHheqsHAFS1gVUIc4="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.322f7815beb50e8cf61e202b1aa88261e079a6ab195e36ab0b4cdd7790ef98e2.css"
+    integrity="sha256-Mi94Fb61Doz2HiArGqiCYeB5pqsZXjarC0zdd5DvmOI="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.69685904d5c2a0c6258d03c207b778c10466edf6cea928cc0164c376b0ad0930.css"
+    integrity="sha256-aWhZBNXCoMYljQPCB7d4wQRm7fbOqSjMAWTDdrCtCTA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.6d585e78d28cce1200d39fb133c92ed83df01738da721d0f48fb6eac62d24e04.css"
+    integrity="sha256-bVheeNKMzhIA05&#43;xM8ku2D3wFzjach0PSPturGLSTgQ="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.6b00d96498d59caa0dbcf9b49d30d821915291f2ceb0e19248523c8607ff43fa.css"
+    integrity="sha256-awDZZJjVnKoNvPm0nTDYIZFSkfLOsOGSSFI8hgf/Q/o="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/images/profile.jpg" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://tqtuan1201.github.io/posts/job/data/survey/survey-large-data-storage/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.738c0e3a493854876aeab9e2316fd43f1936aeeac4cc6b3e60bb26456dba72ad.js"
+      integrity="sha256-c4wOOkk4VIdq6rniMW/UPxk2rurEzGs&#43;YLsmRW26cq0="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tqtuan1201.github.io/images/profile.jpg"/>
+
+<meta name="twitter:title" content="An Overview of Large-Scale Data Storage Architectures"/>
+<meta name="twitter:description" content="Abstract Today, we begin a new journey to learn about the data lakehouse—especially how to store, process, and analyze large-scale data in in today’s data-driven world. We will start with the most fundamental concepts to build a solid understanding, then gradually move toward more advanced topics. Our two goals are simple: to understand the data lakehouse clearly, and to apply that knowledge effectively in our daily work.
+Let’s get started"/>
+<meta name="twitter:site" content="@QuangTuan0409"/>
+
+
+
+  
+  <meta property="og:title" content="An Overview of Large-Scale Data Storage Architectures" />
+<meta property="og:description" content="Abstract Today, we begin a new journey to learn about the data lakehouse—especially how to store, process, and analyze large-scale data in in today’s data-driven world. We will start with the most fundamental concepts to build a solid understanding, then gradually move toward more advanced topics. Our two goals are simple: to understand the data lakehouse clearly, and to apply that knowledge effectively in our daily work.
+Let’s get started" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tqtuan1201.github.io/posts/job/data/survey/survey-large-data-storage/" /><meta property="og:image" content="https://tqtuan1201.github.io/images/profile.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2026-01-28T14:53:39+07:00" />
+<meta property="article:modified_time" content="2026-01-28T14:53:39+07:00" /><meta property="og:site_name" content="Hi, I&#39;m Tuan Truong" />
+
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "posts",
+        "name": "An Overview of Large-Scale Data Storage Architectures",
+        "headline": "An Overview of Large-Scale Data Storage Architectures",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Abstract Today, we begin a new journey to learn about the data lakehouse—especially how to store, process, and analyze large-scale data in in today’s data-driven world. We will start with the most fundamental concepts to build a solid understanding, then gradually move toward more advanced topics. Our two goals are simple: to understand the data lakehouse clearly, and to apply that knowledge effectively in our daily work.\nLet’s get started
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/tqtuan1201.github.io\/posts\/job\/data\/survey\/survey-large-data-storage\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightYear" : "2026",
+        "dateCreated": "2026-01-28T14:53:39.00Z",
+        "datePublished": "2026-01-28T14:53:39.00Z",
+        "dateModified": "2026-01-28T14:53:39.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Tuan Truong",
+            "url": "https://tqtuan1201.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/tqtuan1201.github.io\/images\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://tqtuan1201.github.io/images/profile.jpg"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/tqtuan1201.github.io\/posts\/job\/data\/survey\/survey-large-data-storage\/",
+        "wordCount" : "1182",
+        "genre" : [ 
+      
+      "Notes"
+
+    
+      
+        ,
+
+      
+      "Self-Improvement"
+
+    
+      
+        ,
+
+      
+      "Dev Journey"
+
+    ],
+        "keywords" : [ 
+      
+      "Note"
+
+    
+      
+        ,
+
+      
+      "Survey"
+
+    
+      
+        ,
+
+      
+      "Lakehouse"
+
+    
+      
+        ,
+
+      
+      "Data"
+
+    ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--light"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <a href="/about">
+        <img
+          class="sidebar__introduction-profileimage"
+          src="/images/profile.jpg"
+          alt="profile picture"
+        />
+      </a>
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Hi, I&#39;m Tuan Truong</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>“The only thing that is constant is change”, Heraclitus.</p>
+        </br>
+        <div class="sidebar__introduction-description">
+          <i style="color:#454545; font-weight: 360; font-size: 0.92em;">'If you have a great idea but don’t know how to start? Don't worry, simply click on <a href="/posts/job/cv/ourteam"><strong>Meet My Team</strong></a> and we can discuss your project over a cup of coffee'</i>
+        </div>
+        </br></br>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a href="https://www.linkedin.com/in/thales-truong" rel="me" aria-label="Linkedin" title="Linkedin">
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a href="https://github.com/tqtuan1201" rel="me" aria-label="GitHub" title="GitHub">
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a href="mailto:truongquangtuanit@gmail.com" rel="me" aria-label="e-mail" title="e-mail">
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a href="https://twitter.com/QuangTuan0409" rel="me" aria-label="Twitter" title="Twitter">
+            <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a href="https://warpcast.com/thales-truong" rel="me" aria-label="instagram" title="instagram">
+            <i class="fa-brands fa-weebly fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+    </br></br>
+    <div class="sidebar__list">
+      <a href="/buymeacoffee">
+          <img src="/images/buymeacoffee_button.png" height=40; alt="By me a coffee ^^">
+      </a>
+    </div>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2026
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/keynote"
+              
+              title=""
+              >Topics</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/posts"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/portfolio"
+              
+              title=""
+              >Projects</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/certifications"
+              
+              title=""
+              >Certifications</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/series"
+              
+              title=""
+              >Series</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/categories"
+              
+              title=""
+              >Categories</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/categories/keynotes/"
+              
+              title=""
+              >Notes</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/tags"
+              
+              title=""
+              >Tags</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/about"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/contact"
+              
+              title=""
+              >Contact</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      <li class="nav__list-item">
+        <div class="dropdown">
+          <button> RESUMES </button>
+          <div class="dropdown-content">
+          <a href="/posts/job/cv/myresume">My CV</a>
+          <a href="/posts/job/cv/ourteam">My Team</a>
+          </div>
+        </div>
+      </li>
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+
+<style>
+ 
+.dropdown {
+  display: inline-block;
+  position: relative;
+  padding-right: 10px;
+  padding-left: 4px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+.dropdown:hover .dropdown-content {
+  background-color: #FFFFFF;
+  display: block;
+  border-radius: 2px;
+}
+.dropdown-content a {
+  display: block;
+  color: #000000;
+  padding: 5px;
+  text-decoration: none;
+}
+.dropdown-content a:hover {
+  color: #FFFFFF;
+  background-color: #686868;
+}
+</style>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+      <div class="post__thumbnail-wrapper">
+        <img class="post__thumbnail" src="/images/image-20260320104943969%e2%80%afAM.png?quality=92&amp;strip=all" alt="Thumbnail image" />
+      </div>
+
+    
+
+    <div class="post__content">
+      <h1>An Overview of Large-Scale Data Storage Architectures</h1>
+      <h3>Table of Contents</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#problems">Problems</a>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#approach">Approach</a></li>
+    <li><a href="#open-table-formats">Open Table Formats</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#delta-lake">Delta Lake</a></li>
+            <li><a href="#apache-iceberg">Apache Iceberg</a></li>
+            <li><a href="#apache-hudi">Apache Hudi</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#experimental-study">Experimental Study</a></li>
+    <li><a href="#whats-next">What&rsquo;s Next?</a></li>
+  </ul>
+</nav>
+        <div style="width: 100%; margin: 0 auto; background:rgba(0,0,0,0.5); height: 1px; opacity: 0.6"> </div><h1 id="abstract">Abstract</h1>
+<p>Today, we begin a new journey to learn about the data lakehouse—especially how to store, process, and analyze large-scale data in in today’s data-driven world. We will start with the most fundamental concepts to build a solid understanding, then gradually move toward more advanced topics.
+Our two goals are simple: to understand the data lakehouse clearly, and to apply that knowledge effectively in our daily work.</p>
+<p>Let’s get started</p>
+<p>First, we need to clearly <strong>understand the problem</strong>. Then, we will explore and review the existing approaches to address it. Finally, we will select one approach for in-depth analysis and hands-on experimentation.</p>
+<h1 id="problems">Problems</h1>
+<p>Today, data is fragmented and does not follow common standards. Data is often <strong>scattered</strong>, <strong>duplicated</strong>, and <strong>inconsistent across different systems</strong>. Many systems use local databases that are not <strong>synchronized</strong>, which leads to poor data quality—especially when data is transferred and processed through multiple intermediate systems. These issues reduce the effectiveness of data analysis and data usage, particularly as the demand for analytics and data visualization continues to grow.</p>
+<figure class="small"><img src="/images/image-2026012835151430%e2%80%afPM.png"
+         alt="image"/><figcaption>
+            <p>Problems with local data storage (AI-generated images)</p>
+        </figcaption>
+</figure>
+
+<p>Therefore, building a large-scale data storage system, such as <mark>Lakehouse</mark>, is necessary to standardize data, improve data quality, and create a strong foundation for data analytics, visualization, and future AI models.</p>
+<h5 id="so-the-solution-is">So, the solution is</h5>
+<p align="center" style="font-size: 32px; font-weight: 700;">
+  "Build once, scale anywhere"
+</p>
+<p><strong><mark>Building a Data Lakehouse platform to merge all data sources into one single source of truth</mark></strong>. This system ensures data is <code>clean</code> and consistent while <code>reducing costs</code> by using low-cost cloud storage. It provides a flexible foundation to support <code>data reports</code>, <code>visualizations</code>, and <code>AI/ML applications</code>.</p>
+<h1 id="approach">Approach</h1>
+<p>In the context of large-scale data storage, <mark>Data Warehouses</mark>, <mark>Data Lakes</mark>, and <mark>Data Lakehouses</mark> are fundamental concepts that must be considered. Each architecture reflects a distinct approach to <code>data organization</code>, <code>processing</code>, and <code>usage</code>, shaped by the growing volume, variety, and velocity of modern data.</p>
+<figure class="medium"><img src="/images/image-2026013051554780%e2%80%afPM.png"
+         alt="image"/><figcaption>
+            <p>Evolution of large-scale data storage architectures from Data Warehouse to Data Lake and Data Lakehouse. (AI-generated images)</p>
+        </figcaption>
+</figure>
+
+<ul>
+<li>
+<p><strong>Data Warehouse:</strong></p>
+<p><code>Structured data </code>storage with <mark>high cost</mark>, optimized for BI and reporting.</p>
+</li>
+<li>
+<p><strong>Data Lake:</strong></p>
+<p><mark>Low-cost</mark> raw data storage with high scalability, <mark>risk of data swamp due to lack of governance</mark>.</p>
+</li>
+<li>
+<p><strong>Data Lakehouse:</strong></p>
+<p>Bridges the gap by <mark>combining warehouse reliability with lake scalability</mark>.</p>
+<figure class="medium"><img src="/images/image-2026013054102168%e2%80%afPM.png"
+           alt="image"/><figcaption>
+              <p>The Modern Data Lakehouse (AI-generated images)</p>
+          </figcaption>
+  </figure>
+
+</li>
+</ul>
+<p><strong>The key lies in <mark>Open Table Formats</mark></strong></p>
+<p>To effectively exploit data, we must first <strong>understand where the data is stored and how it is organized</strong>. <code>Open Table Formats</code> standardize the organization of both data and metadata using open specifications, enabling data stored in a Data Lake to be accessed and utilized in a database-like manner.</p>
+<figure class="medium"><img src="/images/image-2026020231605625%e2%80%afPM.png"
+         alt="image"/><figcaption>
+            <p>Data Lakehouse Layers (AI-generated images)</p>
+        </figcaption>
+</figure>
+
+<p>As a result, <strong>Open Table Formats (OTF)</strong> act as the <em>“key”</em> that transforms traditionally static Data Lakes into <code>flexible</code>, well-governed systems—providing consistency, scalability, and performance comparable to traditional database systems.</p>
+<ul>
+<li>
+<p>Traditional Data Lakes often fail because they are just collections of files without organization, leading to &ldquo;data swamps&rdquo;. Open Table Formats solve this by adding a <strong>transactional metadata layer</strong> on top of raw storage. This layer defines how a collection of files is managed and presented as a single table, allowing the system to track exactly which data belongs to which version.</p>
+</li>
+<li>
+<p>Knowing Where Data Lives through Catalogs: To exploit data effectively, the system must know its exact location and state. <strong>Data Catalogs</strong> (such as Project Nessie, AWS Glue, or Hive Metastore) act as the &ldquo;single source of truth&rdquo; by providing a pointer to the <strong>latest metadata file</strong>. This metadata file contains a map of all physical data files, their schemas, and partitions, ensuring that every query engine sees the most current and consistent version of the data</p>
+</li>
+<li>
+<p>Turning a Data Lake into a Database: By organizing data and metadata according to <strong>open standards</strong>, a Data Lake gains powerful database-like features:</p>
+<p>• <strong>ACID Transactions:</strong> Ensures that data is never corrupted during concurrent reads and writes.</p>
+<p>• <strong>Schema Evolution:</strong> Allows you to change table structures (adding or renaming columns) without rewriting the entire dataset.</p>
+<p>• <strong>Time Travel:</strong> Enables users to query historical versions of data for auditing or debugging.</p>
+<p>• <strong>High Performance:</strong> Uses file-level statistics (min/max values) to &ldquo;skip&rdquo; irrelevant data, making queries as fast as a traditional data warehous</p>
+</li>
+</ul>
+<h1 id="open-table-formats">Open Table Formats</h1>
+<p>This approach organizes data and metadata using open standards, allowing data stored in a Data Lake to be queried and managed like a traditional database. Today, this capability is enabled by three major open table formats: <code>Delta Lake</code>, <code>Apache Iceberg,</code> and <code>Apache Hudi</code>.</p>
+<figure class="medium"><img src="/images/image-2026020232248196%e2%80%afPM.png"
+         alt="image"/><figcaption>
+            <p>Open Table Formats (AI-generated images)</p>
+        </figcaption>
+</figure>
+
+<h3 id="delta-lake">Delta Lake</h3>
+<p>Created by <code>Databricks</code>.  Delta Lake was developed by Databricks, the company behind Apache Spark.</p>
+<ul>
+<li>
+<p><strong>Simple and clear transaction log (_delta_log)</strong>: It uses a simple transaction log based on JSON and Parquet files, making it easy to understand, debug, and manage.</p>
+</li>
+<li>
+<p><strong>Best integration with Spark</strong>: Delta Lake is natively designed for Apache Spark and works seamlessly with Spark SQL and Spark Streaming.</p>
+</li>
+</ul>
+<div
+  class="notice"
+>
+  <span
+    class="notice__title"
+  >Info</span><div class="notice__content">
+    <strong><mark>Popular and easy to use</mark></strong>
+→ It is widely adopted, well-documented, and easy to use for both batch and streaming data.
+  </div>
+</div>
+
+<h3 id="apache-iceberg">Apache Iceberg</h3>
+<ul>
+<li><strong>A truly open standard, engine-agnostic design</strong>: Designed to work independently of any specific compute engine.</li>
+<li><strong>Snapshot-based metadata</strong>: Uses snapshot-based metadata to track table changes and enable time travel.</li>
+</ul>
+<div
+  class="notice"
+>
+  <span
+    class="notice__title"
+  >Info</span><div class="notice__content">
+    <mark><strong>Very powerful for analytics and query engines</strong></mark>
+→ Optimized for large-scale analytics and high-performance query workloads.
+  </div>
+</div>
+
+<h3 id="apache-hudi">Apache Hudi</h3>
+<ul>
+<li><strong>Designed for streaming and upserts</strong>: Built to handle continuous data ingestion and update workloads.</li>
+<li><strong>Strong support for record-level updates</strong>: Efficiently updates individual records without rewriting entire files.</li>
+</ul>
+<div
+  class="notice"
+>
+  <span
+    class="notice__title"
+  >Info</span><div class="notice__content">
+    <mark><strong>Well suited for near real-time use cases</strong></mark>
+→ Ideal for low-latency data pipelines and incremental processing.
+  </div>
+</div>
+
+<h1 id="experimental-study">Experimental Study</h1>
+<p>Based on the paper <em>Data Lakehouse: A Survey and Experimental Study</em> (Information Systems 127 (2025) 102460) by <em>Ahmed A. Harby and Farhana Zulkernine</em>, the authors compare and analyze three data platforms: <mark><strong>Data Lake</strong></mark>, <mark><strong>Data Warehouse</strong></mark>, and <mark>Data Lakehouse</mark>. The comparison is conducted using a storage system built on popular open-source technologies and a dataset from the <strong>Internet Movie Database (IMDb)</strong> containing <strong>50,000 movies</strong>.</p>
+<figure class="medium"><img src="/images/image-2026020233436368%e2%80%afPM.png"
+         alt="image"/><figcaption>
+            <p>Data Lakehouse: A survey and experimental study (Information Systems 127 (2025) 102460) Ahmed A. Harby, Farhana Zulkerninea</p>
+        </figcaption>
+</figure>
+
+<figure class="medium"><img src="/images/image-2026020233814462%e2%80%afPM.png"
+         alt="image"/><figcaption>
+            <p>Data Lakehouse: A survey and experimental study (Information Systems 127 (2025) 102460) Ahmed A. Harby, Farhana Zulkerninea</p>
+        </figcaption>
+</figure>
+
+<figure class="medium"><img src="/images/image-2026020235832248%e2%80%afPM.png"
+         alt="image"/><figcaption>
+            <p>Data Lakehouse: A survey and experimental study (Information Systems 127 (2025) 102460) Ahmed A. Harby, Farhana Zulkerninea</p>
+        </figcaption>
+</figure>
+
+<ul>
+<li><strong>Response time:</strong> <em><u>Delta Lakehouse has slower response times for simple queries because of metadata management and consistency overhead</u></em>. <mark>However, for complex queries (Q5–Q15), Delta Lakehouse delivers much better performance and scalability</mark>.</li>
+<li><strong>Advanced features:</strong> Delta Lakehouse supports capabilities that traditional Data Lakes and Data Warehouses do not, such as <strong>Time Travel</strong> (querying data at a past point in time) and <strong>Schema Evolution</strong> (changing the table schema without rewriting existing data)</li>
+<li><strong>Resource consumption:</strong> Delta Lakehouse uses more CPU on average than Hive due to its automated metadata management layer, but it uses memory more efficiently thanks to <strong>Optimistic Concurrency Control</strong>.</li>
+</ul>
+<h1 id="whats-next">What&rsquo;s Next?</h1>
+<p>Now we have a general understanding of the system.</p>
+<figure class="medium"><img src="/images/image-2026031953007938%e2%80%afPM.png"
+         alt="image"/><figcaption>
+            <p>Shift Left Architecture</p>
+        </figcaption>
+</figure>
+
+<p>Next, we will build <mark>an end-to-end prototype</mark>, starting with the basic flows. This helps us understand how everything works and see the overall structure.</p>
+<figure class="medium"><img src="/images/image-2026031955215029%e2%80%afPM.png"
+         alt="image"/><figcaption>
+            <p>Build end-to-end prototype</p>
+        </figcaption>
+</figure>
+
+<p>Wow, that&rsquo;s amazing. See you soon!</p>
+
+
+
+<h3>Posts in this Series</h3>
+<ul>
+  
+    <li><a href="/posts/job/data/survey/survey-large-data-storage/">An Overview of Large-Scale Data Storage Architectures</a></li>
+
+  
+</ul>
+
+<div class="contact-form">
+  <form class="form-style" method="POST" action="https://formspree.io/f/mqknvogq" data-toggle="validator">
+    <ul>
+      <li>
+        <label for="username">Name</label>
+        <input class="field-style field-full" type="text" name="username" id="username" placeholder="Name" required>
+      </li>
+      <li>
+        <label for="email">Email</label>
+        <input class="field-style field-full" type="email" id="email" name="email" placeholder="Email" required>
+      </li>
+      <li>
+        <label for="message">Message</label>
+        <textarea class="field-style" name="message" id="message" rows="6" placeholder="Message"></textarea>
+      </li>
+      <li>
+        <input class="field-style" type="submit" value="Send" />
+      </li>
+      <li>
+        <input type="text" name="_gotcha" style="display:none" />
+      </li>
+    </ul>
+  </form>
+</div>
+</div>
+    <div class="post__footer">
+      
+        <span><a class="category" href="/categories/notes/">Notes</a><a class="category" href="/categories/self-improvement/">Self-Improvement</a><a class="category" href="/categories/dev-journey/">Dev Journey</a></span>
+
+
+
+
+      
+
+      
+        <span><a class="tag" href="/tags/note/">Note</a><a class="tag" href="/tags/survey/">Survey</a><a class="tag" href="/tags/lakehouse/">Lakehouse</a><a class="tag" href="/tags/data/">Data</a></span>
+
+
+
+
+      
+    </div>
+
+    
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2026
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script>
+  <script async defer src=" https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" /></noscript>
+
+
+</body>
+</html>

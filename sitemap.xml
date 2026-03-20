@@ -2,25 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://tqtuan1201.github.io/posts/job/data/survey/survey-large-data-storage/</loc>
+    <lastmod>2026-01-28T14:53:39+07:00</lastmod>
+  </url><url>
     <loc>https://tqtuan1201.github.io/categories/</loc>
-    <lastmod>2025-12-10T15:22:14+07:00</lastmod>
+    <lastmod>2026-01-28T14:53:39+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/data/</loc>
+    <lastmod>2026-01-28T14:53:39+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/series/data-lakehouse-journey/</loc>
+    <lastmod>2026-01-28T14:53:39+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/categories/dev-journey/</loc>
-    <lastmod>2025-12-10T15:22:14+07:00</lastmod>
+    <lastmod>2026-01-28T14:53:39+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/lakehouse/</loc>
+    <lastmod>2026-01-28T14:53:39+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/note/</loc>
+    <lastmod>2026-01-28T14:53:39+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/categories/notes/</loc>
+    <lastmod>2026-01-28T14:53:39+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/posts/</loc>
+    <lastmod>2026-01-28T14:53:39+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/categories/self-improvement/</loc>
+    <lastmod>2026-01-28T14:53:39+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/series/</loc>
+    <lastmod>2026-01-28T14:53:39+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/survey/</loc>
+    <lastmod>2026-01-28T14:53:39+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/</loc>
+    <lastmod>2026-01-28T14:53:39+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/</loc>
+    <lastmod>2026-01-28T14:53:39+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/tags/ios/</loc>
     <lastmod>2025-12-10T15:22:14+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/posts/job/ios/ttbaseuikit/checknewversion/</loc>
-    <lastmod>2025-12-10T15:22:14+07:00</lastmod>
-  </url><url>
-    <loc>https://tqtuan1201.github.io/categories/notes/</loc>
-    <lastmod>2025-12-10T15:22:14+07:00</lastmod>
-  </url><url>
-    <loc>https://tqtuan1201.github.io/posts/</loc>
-    <lastmod>2025-12-10T15:22:14+07:00</lastmod>
-  </url><url>
-    <loc>https://tqtuan1201.github.io/series/</loc>
     <lastmod>2025-12-10T15:22:14+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/tags/swiftui/</loc>
@@ -29,13 +56,7 @@
     <loc>https://tqtuan1201.github.io/series/swiftui-serial-updating-ttbaseuikit-to-support-swiftui/</loc>
     <lastmod>2025-12-10T15:22:14+07:00</lastmod>
   </url><url>
-    <loc>https://tqtuan1201.github.io/tags/</loc>
-    <lastmod>2025-12-10T15:22:14+07:00</lastmod>
-  </url><url>
     <loc>https://tqtuan1201.github.io/tags/ttbaseuikit/</loc>
-    <lastmod>2025-12-10T15:22:14+07:00</lastmod>
-  </url><url>
-    <loc>https://tqtuan1201.github.io/</loc>
     <lastmod>2025-12-10T15:22:14+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/tags/blockchain/</loc>
@@ -48,12 +69,6 @@
     <lastmod>2025-10-22T16:13:18+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/categories/economics/</loc>
-    <lastmod>2025-10-22T16:13:18+07:00</lastmod>
-  </url><url>
-    <loc>https://tqtuan1201.github.io/tags/note/</loc>
-    <lastmod>2025-10-22T16:13:18+07:00</lastmod>
-  </url><url>
-    <loc>https://tqtuan1201.github.io/categories/self-improvement/</loc>
     <lastmod>2025-10-22T16:13:18+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/posts/job/blockchain/survey/what-is-blockchain/</loc>

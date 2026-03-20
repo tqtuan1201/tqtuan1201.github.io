@@ -6,7 +6,19 @@
     <description>Recent content on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Dec 2025 15:22:14 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Jan 2026 14:53:39 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>An Overview of Large-Scale Data Storage Architectures</title>
+      <link>https://tqtuan1201.github.io/posts/job/data/survey/survey-large-data-storage/</link>
+      <pubDate>Wed, 28 Jan 2026 14:53:39 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/job/data/survey/survey-large-data-storage/</guid>
+      
+        <description>Abstract Today, we begin a new journey to learn about the data lakehouse—especially how to store, process, and analyze large-scale data in in today’s data-driven world. We will start with the most fundamental concepts to build a solid understanding, then gradually move toward more advanced topics. Our two goals are simple: to understand the data lakehouse clearly, and to apply that knowledge effectively in our daily work.
+Let’s get started</description>
+      
+    </item>
+    
     <item>
       <title>New Feature: Smart new version check &amp; UIKit Previews since version 2.2.2</title>
       <link>https://tqtuan1201.github.io/posts/job/ios/ttbaseuikit/checknewversion/</link>
