@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deep Link Tester — Test iOS Universal Links & Android App Links</title>
+  <meta name="description" content="Free deep link testing tool. Validate Universal Links (AASA), Android App Links (assetlinks.json), and custom URL schemes with configurable parameters, QR code, and website readiness checker." />
+  <meta name="keywords" content="deep link, universal link, app link, AASA, assetlinks, iOS, Android, tester, CFBundleURLSchemes" />
+  <meta property="og:title" content="Deep Link Tester — Universal Links & App Links" />
+  <meta property="og:description" content="Free configurable deep link testing tool with website readiness checker." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+  <style>
+    :root {
+      --bg-primary: #05050f;
+      --bg-secondary: #0a0a1a;
+      --bg-card: rgba(14, 14, 36, 0.92);
+      --bg-card-hover: rgba(18, 18, 44, 0.96);
+      --bg-input: rgba(22, 22, 52, 0.8);
+      --bg-input-focus: rgba(32, 32, 68, 0.95);
+      --border: rgba(90, 90, 160, 0.15);
+      --border-hover: rgba(110, 110, 190, 0.28);
+      --border-focus: rgba(120, 130, 255, 0.55);
+      --text-primary: #eaeaf6;
+      --text-secondary: #a0a0c8;
+      --text-muted: #6c6ca0;
+      --accent: #7c83ff;
+      --accent-hover: #9ba0ff;
+      --accent-glow: rgba(124, 131, 255, 0.22);
+      --accent-2: #c084fc;
+      --accent-3: #f472b6;
+      --success: #34d399;
+      --success-bg: rgba(52, 211, 153, 0.08);
+      --success-border: rgba(52, 211, 153, 0.22);
+      --danger: #f87171;
+      --danger-bg: rgba(248, 113, 113, 0.08);
+      --danger-border: rgba(248, 113, 113, 0.18);
+      --danger-hover: #fca5a5;
+      --warning: #fbbf24;
+      --warning-bg: rgba(251, 191, 36, 0.08);
+      --warning-border: rgba(251, 191, 36, 0.18);
+      --info: #60a5fa;
+      --info-bg: rgba(96, 165, 250, 0.06);
+      --info-border: rgba(96, 165, 250, 0.18);
+      --radius: 18px;
+      --radius-sm: 12px;
+      --radius-xs: 6px;
+      --transition: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.18);
+      --shadow-md: 0 8px 32px rgba(0,0,0,0.28);
+      --shadow-lg: 0 16px 48px rgba(0,0,0,0.4);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      min-height: 100vh;
+      padding: 0;
+      background-image:
+        radial-gradient(ellipse at 20% 0%, rgba(124,131,255,0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 10%, rgba(192,132,252,0.06) 0%, transparent 45%),
+        radial-gradient(ellipse at 50% 100%, rgba(52,211,153,0.04) 0%, transparent 40%);
+      background-attachment: fixed;
+    }
+
+    .container { max-width: 720px; margin: 0 auto; padding: 20px 20px 60px; }
+
+    /* ─── Header ─── */
+    .header {
+      text-align: center;
+      padding: 28px 16px 20px;
+      position: relative;
+    }
+
+    .header-icon {
+      font-size: 36px;
+      margin-bottom: 8px;
+      display: block;
+      filter: drop-shadow(0 4px 16px rgba(124,131,255,0.35));
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+
+    .header h1 {
+      font-size: 28px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #7c83ff 0%, #c084fc 50%, #f472b6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 6px;
+      letter-spacing: -0.5px;
+    }
+
+    .header .subtitle {
+      color: var(--text-muted);
+      font-size: 13px;
+      line-height: 1.5;
+      max-width: 440px;
+      margin: 0 auto 10px;
+    }
+
+    .platform-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      background: var(--info-bg);
+      color: var(--info);
+      border: 1px solid var(--info-border);
+      backdrop-filter: blur(8px);
+    }
+
+    /* ─── Card ─── */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 24px;
+      margin-bottom: 14px;
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      transition: all var(--transition);
+      position: relative;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: var(--radius);
+      padding: 1px;
+      background: linear-gradient(135deg, transparent 40%, rgba(124,131,255,0.12) 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+
+    .card:hover {
+      border-color: var(--border-hover);
+      box-shadow: var(--shadow-md);
+      background: var(--bg-card-hover);
+    }
+
+    .card:hover::before { opacity: 1; }
+
+    .card-title {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-title .icon { font-size: 13px; }
+
+    /* ─── Mode Toggle ─── */
+    .mode-toggle {
+      display: flex;
+      background: var(--bg-input);
+      border-radius: var(--radius-sm);
+      padding: 3px;
+      margin-bottom: 18px;
+      border: 1px solid var(--border);
+    }
+
+    .mode-btn {
+      flex: 1;
+      padding: 10px 14px;
+      border: none;
+      background: transparent;
+      color: var(--text-secondary);
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .mode-btn.active {
+      background: linear-gradient(135deg, var(--accent), #6b6dff);
+      color: #fff;
+      box-shadow: 0 2px 12px var(--accent-glow);
+    }
+
+    .mode-btn:not(.active):hover {
+      color: var(--text-primary);
+      background: rgba(255,255,255,0.04);
+    }
+
+    /* ─── Inputs ─── */
+    label {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 5px;
+      letter-spacing: 0.3px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px 14px;
+      background: var(--bg-input);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: 13.5px;
+      transition: all var(--transition);
+      outline: none;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      background: var(--bg-input-focus);
+      border-color: var(--border-focus);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+
+    input::placeholder, textarea::placeholder { color: var(--text-muted); font-size: 13px; }
+    .form-group { margin-bottom: 12px; }
+    .form-row { display: flex; gap: 10px; }
+    .form-row .form-group { flex: 1; }
+
+    /* ─── Preset ─── */
+    .preset-row { display: flex; gap: 8px; align-items: flex-end; }
+    .preset-row .form-group { flex: 1; margin-bottom: 0; }
+    .preset-actions { display: flex; gap: 5px; }
+
+    /* ─── Buttons ─── */
+    .btn {
+      padding: 9px 15px;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #9b6dff);
+      color: #fff;
+      box-shadow: 0 4px 16px var(--accent-glow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 24px rgba(124,131,255,0.4);
+      filter: brightness(1.08);
+    }
+
+    .btn-primary:active { transform: translateY(0); filter: brightness(0.95); }
+
+    .btn-secondary {
+      background: var(--bg-input);
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-input-focus);
+      color: var(--text-primary);
+      border-color: var(--border-focus);
+    }
+
+    .btn-danger {
+      background: var(--danger-bg);
+      color: var(--danger);
+      border: 1px solid var(--danger-border);
+    }
+
+    .btn-danger:hover {
+      background: rgba(248,113,113,0.18);
+      color: var(--danger-hover);
+    }
+
+    .btn-success {
+      background: var(--success-bg);
+      color: var(--success);
+      border: 1px solid var(--success-border);
+    }
+
+    .btn-success:hover { background: rgba(52,211,153,0.18); }
+
+    .btn-icon { padding: 9px; min-width: 38px; justify-content: center; }
+
+    .btn-full {
+      width: 100%;
+      justify-content: center;
+      padding: 13px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .btn-open-app {
+      background: linear-gradient(135deg, #7c83ff 0%, #9b6dff 40%, #c084fc 100%);
+      background-size: 200% 200%;
+      animation: gradientShift 3s ease infinite;
+      color: #fff;
+      box-shadow: 0 4px 20px var(--accent-glow);
+    }
+
+    .btn-open-app:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(124,131,255,0.45);
+    }
+
+    @keyframes gradientShift {
+      0%,100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      transform: none !important;
+      filter: grayscale(0.3);
+    }
+
+    /* ─── Params Builder ─── */
+    .params-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .param-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 6px;
+      align-items: center;
+      animation: slideIn 0.2s ease-out;
+    }
+
+    .param-row input { flex: 1; }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* ─── Preview ─── */
+    .preview-box {
+      background: rgba(124,131,255,0.05);
+      border: 1px solid rgba(124,131,255,0.15);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+      font-size: 12.5px;
+      word-break: break-all;
+      color: var(--accent-hover);
+      line-height: 1.6;
+      min-height: 40px;
+      transition: all var(--transition);
+    }
+
+    .preview-box:empty::before {
+      content: 'Configure above to generate deep link...';
+      color: var(--text-muted);
+      font-family: 'Inter', sans-serif;
+      font-style: italic;
+      font-size: 12px;
+    }
+
+    /* ─── Actions ─── */
+    .actions { display: flex; gap: 8px; margin-top: 14px; }
+    .actions .btn-primary,
+    .actions .btn-open-app { flex: 1; }
+
+    /* ─── QR Code ─── */
+    .qr-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      padding: 18px;
+      animation: fadeIn 0.3s ease-out;
+    }
+
+    .qr-container canvas,
+    .qr-container img {
+      border-radius: 12px;
+      box-shadow: var(--shadow-md);
+    }
+
+    /* ─── Collapsible ─── */
+    .collapsible-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      padding: 6px 0;
+      margin-bottom: 6px;
+      user-select: none;
+      border-radius: 8px;
+      transition: color var(--transition);
+    }
+
+    .collapsible-header:hover label { color: var(--text-primary); }
+
+    .collapsible-header .arrow {
+      transition: transform var(--transition);
+      color: var(--text-muted);
+      font-size: 10px;
+    }
+
+    .collapsible-header.open .arrow { transform: rotate(180deg); }
+    .collapsible-content { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    .collapsible-content.open { max-height: 500px; }
+
+    /* ─── Slider ─── */
+    .slider-row { display: flex; align-items: center; gap: 12px; }
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      flex: 1;
+      height: 5px;
+      background: var(--bg-input);
+      border: none;
+      border-radius: 3px;
+      padding: 0;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--accent);
+      cursor: pointer;
+      box-shadow: 0 2px 8px var(--accent-glow);
+      transition: transform 0.15s ease;
+    }
+
+    input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.15); }
+    input[type="range"]:focus { box-shadow: none; }
+
+    .slider-value {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+      min-width: 32px;
+      text-align: center;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ─── Checker Results ─── */
+    .checker-input-row { display: flex; gap: 8px; margin-bottom: 14px; }
+    .checker-input-row input { flex: 1; }
+
+    .check-result { animation: fadeIn 0.3s ease-out; margin-bottom: 10px; }
+
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 6px;
+      font-size: 12.5px;
+      line-height: 1.5;
+      border: 1px solid;
+      transition: transform 0.15s ease;
+    }
+
+    .check-item:hover { transform: translateX(2px); }
+
+    .check-item.pass { background: var(--success-bg); border-color: var(--success-border); color: var(--success); }
+    .check-item.fail { background: var(--danger-bg); border-color: var(--danger-border); color: var(--danger); }
+    .check-item.warn { background: var(--warning-bg); border-color: var(--warning-border); color: var(--warning); }
+    .check-item.info { background: var(--info-bg); border-color: var(--info-border); color: var(--info); }
+
+    .check-icon { font-size: 15px; flex-shrink: 0; margin-top: 1px; }
+    .check-text { flex: 1; }
+    .check-text strong { display: block; margin-bottom: 2px; font-size: 12px; }
+    .check-text small { opacity: 0.8; font-size: 10.5px; }
+    .check-text code {
+      background: rgba(255,255,255,0.07);
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-size: 10.5px;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+
+    .guide-box {
+      background: var(--info-bg);
+      border: 1px solid var(--info-border);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      font-size: 11.5px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      margin-top: 12px;
+    }
+
+    .guide-box h4 {
+      color: var(--info);
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .guide-box ol, .guide-box ul { padding-left: 18px; margin: 0; }
+    .guide-box li { margin-bottom: 3px; }
+
+    .guide-box code {
+      background: rgba(255,255,255,0.05);
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-size: 10.5px;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      color: var(--accent-hover);
+    }
+
+    .spinner {
+      width: 18px;
+      height: 18px;
+      border: 2px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+      display: inline-block;
+    }
+
+    .checker-status {
+      text-align: center;
+      padding: 18px;
+      color: var(--text-muted);
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    /* ─── Tab Bar ─── */
+    .tab-bar {
+      display: flex;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 16px;
+      gap: 2px;
+    }
+
+    .tab-btn {
+      padding: 10px 18px;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: all var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      position: relative;
+    }
+
+    .tab-btn.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    .tab-btn:not(.active):hover {
+      color: var(--text-primary);
+      background: rgba(255,255,255,0.02);
+    }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; animation: fadeIn 0.25s ease-out; }
+
+    /* ─── Toast ─── */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: rgba(14,14,36,0.95);
+      border: 1px solid var(--border-hover);
+      border-radius: var(--radius-sm);
+      padding: 10px 18px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-primary);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      box-shadow: var(--shadow-lg);
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      max-width: 90vw;
+    }
+
+    .toast.show { transform: translateX(-50%) translateY(0); }
+
+    /* ─── Footer ─── */
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      padding: 16px;
+      color: var(--text-muted);
+      font-size: 10.5px;
+      line-height: 1.7;
+      opacity: 0.7;
+    }
+
+    .footer a { color: var(--accent); text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+
+    /* ─── Two-Column Layout (desktop) ─── */
+    @media (min-width: 800px) {
+      .container { max-width: 860px; }
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        align-items: start;
+      }
+      .two-col .card { margin-bottom: 0; }
+      .sticky-col { position: sticky; top: 20px; }
+    }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 600px) {
+      .container { padding: 12px 12px 50px; }
+      .card { padding: 16px 18px; border-radius: 14px; }
+      .form-row { flex-direction: column; gap: 0; }
+      .header h1 { font-size: 24px; }
+      .header .subtitle { font-size: 12px; }
+      .actions { flex-direction: column; }
+      .checker-input-row { flex-direction: column; }
+      .tab-btn { padding: 8px 14px; font-size: 12px; }
+      .mode-btn { font-size: 12px; padding: 9px 10px; }
+    }
+
+    @media (max-width: 380px) {
+      .header h1 { font-size: 22px; }
+      .card { padding: 14px 14px; }
+    }
+
+    .hidden { display: none !important; }
+
+    /* ─── Scrollbar ─── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: rgba(124,131,255,0.2); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(124,131,255,0.35); }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <span class="header-icon">🔗</span>
+      <h1>Deep Link Tester</h1>
+      <p class="subtitle">Test Universal Links, App Links &amp; Custom URL Schemes with configurable parameters and website readiness validation</p>
+      <div class="platform-badge" id="platformBadge"></div>
+    </header>
+
+    <!-- Main Tabs -->
+    <div class="card">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="switchTab('tester')">🚀 Link Tester</button>
+        <button class="tab-btn" onclick="switchTab('checker')">🔍 Site Checker</button>
+      </div>
+
+      <!-- ========== TAB: TESTER ========== -->
+      <div class="tab-content active" id="tab-tester">
+
+        <!-- Mode Toggle -->
+        <div class="card-title"><span class="icon">🔀</span> Link Type</div>
+        <div class="mode-toggle">
+          <button class="mode-btn active" id="modeScheme" onclick="setMode('scheme')">🔑 Custom Scheme</button>
+          <button class="mode-btn" id="modeUniversal" onclick="setMode('universal')">🌐 Universal Link</button>
+        </div>
+
+        <!-- Presets -->
+        <div class="card-title"><span class="icon">📦</span> App Presets</div>
+        <div class="preset-row">
+          <div class="form-group">
+            <select id="presetSelect" onchange="loadPreset()">
+              <option value="">— Select preset —</option>
+            </select>
+          </div>
+          <div class="preset-actions">
+            <button class="btn btn-secondary btn-icon" onclick="savePresetPrompt()" title="Save current config as preset">💾</button>
+            <button class="btn btn-danger btn-icon" onclick="deletePreset()" title="Delete selected preset">🗑️</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== TAB: CHECKER ========== -->
+      <div class="tab-content" id="tab-checker">
+        <div class="card-title"><span class="icon">🔍</span> Website Readiness Checker</div>
+        <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 14px; line-height: 1.5;">
+          Enter a domain to check if it has the required configuration files for Universal Links (iOS) and App Links (Android).
+        </p>
+        <div class="checker-input-row">
+          <input id="checkerDomain" placeholder="e.g. example.com" onkeydown="if(event.key==='Enter')runChecker()" />
+          <button class="btn btn-primary" id="checkerBtn" onclick="runChecker()">Check</button>
+        </div>
+        <div id="checkerResults"></div>
+      </div>
+    </div>
+
+    <!-- Two-Column Layout for Config + Preview -->
+    <div class="two-col" id="testerColumns">
+    <div class="card" id="configCard">
+      <div class="card-title"><span class="icon">⚙️</span> Configuration</div>
+
+      <!-- Scheme / Domain -->
+      <div class="form-group" id="schemeGroup">
+        <label id="schemeLabel">URL Scheme (CFBundleURLSchemes)</label>
+        <input id="scheme" placeholder="e.g. myapp, 12bay, comgooglemaps" oninput="updatePreview()" />
+      </div>
+
+      <!-- Host (Custom Scheme only) -->
+      <div class="form-group" id="hostGroup">
+        <label>Host <span style="color: var(--text-muted);">(optional)</span></label>
+        <input id="host" placeholder="e.g. open, navigate" oninput="updatePreview()" />
+      </div>
+
+      <!-- Path -->
+      <div class="form-group">
+        <label>Path</label>
+        <input id="path" placeholder="e.g. product/detail, home, settings" oninput="updatePreview()" />
+      </div>
+
+      <!-- Query Params -->
+      <div class="params-header">
+        <label style="margin-bottom: 0;">Query Parameters</label>
+        <button class="btn btn-secondary" onclick="addParam()" style="padding: 6px 12px; font-size: 12px;">+ Add</button>
+      </div>
+      <div id="paramsContainer"></div>
+
+      <!-- Fallback (Collapsible) -->
+      <div style="margin-top: 18px;">
+        <div class="collapsible-header" id="fallbackToggle" onclick="toggleCollapsible('fallback')">
+          <label style="margin-bottom: 0; cursor: pointer;">⬇️ Fallback &amp; Advanced</label>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="collapsible-content" id="fallbackContent">
+          <div class="form-group">
+            <label>iOS Fallback URL (App Store)</label>
+            <input id="iosFallback" placeholder="https://apps.apple.com/app/id..." />
+          </div>
+          <div class="form-group">
+            <label>Android Fallback URL (Play Store)</label>
+            <input id="androidFallback" placeholder="https://play.google.com/store/apps/details?id=..." />
+          </div>
+          <div class="form-group">
+            <label>Fallback Timeout</label>
+            <div class="slider-row">
+              <input type="range" id="timeout" min="500" max="5000" step="250" value="2000" oninput="updateTimeoutLabel()" />
+              <span class="slider-value" id="timeoutLabel">2.0s</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Preview + QR (sticky on desktop) -->
+    <div class="sticky-col">
+    <div class="card" id="previewCard">
+      <div class="card-title"><span class="icon">🔗</span> Generated Deep Link</div>
+      <div class="preview-box" id="preview"></div>
+      <div class="actions">
+        <button class="btn btn-open-app btn-full" onclick="handleOpenApp()">🚀 Open App</button>
+        <button class="btn btn-secondary btn-icon" onclick="copyToClipboard()" title="Copy to clipboard">📋</button>
+        <button class="btn btn-secondary btn-icon" onclick="toggleQR()" title="Show QR Code">📱</button>
+      </div>
+    </div>
+
+    <!-- QR Code -->
+    <div class="card hidden" id="qrCard">
+      <div class="card-title"><span class="icon">📱</span> QR Code</div>
+      <div class="qr-container">
+        <div id="qrCode"></div>
+        <p style="font-size: 12px; color: var(--text-muted);">Scan with your phone to test the deep link</p>
+      </div>
+    </div>
+    </div><!-- end sticky-col -->
+    </div><!-- end two-col -->
+
+    <!-- Footer -->
+    <footer class="footer">
+      Deep Link Tester — Free &amp; Open Source<br />
+      Works with iOS Universal Links, Android App Links &amp; Custom URL Schemes
+    </footer>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // ============================================================
+    // State
+    // ============================================================
+    let currentMode = 'scheme'; // default to custom scheme
+    let paramCounter = 0;
+    let qrInstance = null;
+    let qrVisible = false;
+    let currentTab = 'tester';
+
+    const STORAGE_KEY = 'deeplink_tester_presets_v2';
+
+    // ============================================================
+    // Default Presets (Universal Link focused)
+    // ============================================================
+    const DEFAULT_PRESETS = {
+      '🌐 Universal Link — Example': {
+        mode: 'universal',
+        scheme: 'example.com',
+        host: '',
+        path: 'app/product',
+        params: [{ key: 'id', value: '123' }, { key: 'ref', value: 'deeplink' }],
+        iosFallback: 'https://apps.apple.com/app/id000000000',
+        androidFallback: 'https://play.google.com/store/apps/details?id=com.example.app',
+        timeout: 2000
+      },
+      '🌐 Universal Link — 12bay': {
+        mode: 'universal',
+        scheme: '12bay.vn',
+        host: '',
+        path: 'flight/search',
+        params: [{ key: 'from', value: 'SGN' }, { key: 'to', value: 'HAN' }],
+        iosFallback: 'https://apps.apple.com/vn/app/id1220902361?l=vi',
+        androidFallback: 'https://play.google.com/store/apps/details?id=vn.12bay',
+        timeout: 2000
+      },
+      '🔑 Custom Scheme — 12bay': {
+        mode: 'scheme',
+        scheme: '12bay',
+        host: '',
+        path: 'product/detail',
+        params: [{ key: 'id', value: '123' }, { key: 'ref', value: 'test' }],
+        iosFallback: 'https://apps.apple.com/vn/app/id1220902361?l=vi',
+        androidFallback: 'https://play.google.com/store/apps/details?id=vn.12bay',
+        timeout: 2000
+      },
+      '🔑 Custom Scheme — Google Maps': {
+        mode: 'scheme',
+        scheme: 'comgooglemaps',
+        host: '',
+        path: '',
+        params: [{ key: 'center', value: '10.7769,106.7009' }, { key: 'zoom', value: '14' }],
+        iosFallback: 'https://apps.apple.com/app/id585027354',
+        androidFallback: 'https://play.google.com/store/apps/details?id=com.google.android.apps.maps',
+        timeout: 2000
+      }
+    };
+
+    // ============================================================
+    // Init
+    // ============================================================
+    document.addEventListener('DOMContentLoaded', () => {
+      detectPlatform();
+      initPresets();
+      addParam('', '');
+      updatePreview();
+    });
+
+    function detectPlatform() {
+      const ua = navigator.userAgent || navigator.vendor || window.opera;
+      const badge = document.getElementById('platformBadge');
+      let platform = 'Desktop', icon = '🖥️';
+
+      if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) { platform = 'iOS'; icon = '🍎'; }
+      else if (/android/i.test(ua)) { platform = 'Android'; icon = '🤖'; }
+
+      badge.textContent = `${icon} Platform: ${platform}`;
+      badge.dataset.platform = platform.toLowerCase();
+    }
+
+    // ============================================================
+    // Tab Switching
+    // ============================================================
+    function switchTab(tab) {
+      currentTab = tab;
+      document.querySelectorAll('.tab-btn').forEach((btn, i) => {
+        btn.classList.toggle('active', (i === 0 && tab === 'tester') || (i === 1 && tab === 'checker'));
+      });
+      document.getElementById('tab-tester').classList.toggle('active', tab === 'tester');
+      document.getElementById('tab-checker').classList.toggle('active', tab === 'checker');
+
+      // Show/hide tester-only cards
+      const show = tab === 'tester';
+      document.getElementById('testerColumns').classList.toggle('hidden', !show);
+    }
+
+    // ============================================================
+    // Mode Toggle
+    // ============================================================
+    function setMode(mode) {
+      currentMode = mode;
+      document.getElementById('modeScheme').classList.toggle('active', mode === 'scheme');
+      document.getElementById('modeUniversal').classList.toggle('active', mode === 'universal');
+
+      const schemeLabel = document.getElementById('schemeLabel');
+      const hostGroup = document.getElementById('hostGroup');
+      const schemeInput = document.getElementById('scheme');
+
+      if (mode === 'universal') {
+        schemeLabel.textContent = 'Domain';
+        schemeInput.placeholder = 'e.g. example.com, myapp.com';
+        hostGroup.classList.add('hidden');
+      } else {
+        schemeLabel.textContent = 'URL Scheme (CFBundleURLSchemes)';
+        schemeInput.placeholder = 'e.g. myapp, 12bay, comgooglemaps';
+        hostGroup.classList.remove('hidden');
+      }
+      updatePreview();
+    }
+
+    // ============================================================
+    // Build Deep Link
+    // ============================================================
+    function buildDeepLink() {
+      const scheme = document.getElementById('scheme').value.trim();
+      const host = document.getElementById('host').value.trim();
+      const path = document.getElementById('path').value.trim();
+      if (!scheme) return '';
+
+      const params = getParams();
+      const query = new URLSearchParams();
+      params.forEach(p => { if (p.key) query.append(p.key, p.value); });
+      const qs = query.toString();
+
+      let url = '';
+      if (currentMode === 'universal') {
+        const domain = scheme.replace(/^https?:\/\//, '').replace(/\/+$/, '');
+        url = `https://${domain}`;
+        if (path) url += `/${path.replace(/^\//, '')}`;
+        if (qs) url += `?${qs}`;
+      } else {
+        const clean = scheme.replace(/:\/\/$/, '').replace(/:$/, '');
+        url = `${clean}://`;
+        if (host) url += host;
+        if (path) {
+          if (host && !path.startsWith('/')) url += '/';
+          url += path.replace(/^\//, '');
+        }
+        if (qs) url += `?${qs}`;
+      }
+      return url;
+    }
+
+    function updatePreview() {
+      const link = buildDeepLink();
+      document.getElementById('preview').textContent = link;
+      if (qrVisible && link) generateQR(link);
+    }
+
+    // ============================================================
+    // Params
+    // ============================================================
+    function getParams() {
+      const rows = document.querySelectorAll('.param-row');
+      return Array.from(rows).map(row => ({
+        key: row.querySelector('.param-key').value.trim(),
+        value: row.querySelector('.param-value').value.trim()
+      }));
+    }
+
+    function addParam(key = '', value = '') {
+      paramCounter++;
+      const container = document.getElementById('paramsContainer');
+      const row = document.createElement('div');
+      row.className = 'param-row';
+      row.innerHTML = `
+        <input class="param-key" placeholder="Key" value="${escapeHtml(key)}" oninput="updatePreview()" />
+        <input class="param-value" placeholder="Value" value="${escapeHtml(value)}" oninput="updatePreview()" />
+        <button class="btn btn-danger btn-icon" onclick="removeParam(this)" style="padding:8px;" title="Remove">✕</button>
+      `;
+      container.appendChild(row);
+      updatePreview();
+    }
+
+    function removeParam(btn) {
+      const row = btn.closest('.param-row');
+      row.style.opacity = '0';
+      row.style.transform = 'translateY(-8px)';
+      row.style.transition = 'all 0.2s ease';
+      setTimeout(() => { row.remove(); updatePreview(); }, 200);
+    }
+
+    // ============================================================
+    // Open App
+    // ============================================================
+    function handleOpenApp() {
+      const deepLink = buildDeepLink();
+      if (!deepLink) { showToast('⚠️ Enter a URL scheme or domain first'); return; }
+
+      const ua = navigator.userAgent || navigator.vendor || window.opera;
+      const timeout = parseInt(document.getElementById('timeout').value) || 2000;
+      const iosFb = document.getElementById('iosFallback').value.trim();
+      const androidFb = document.getElementById('androidFallback').value.trim();
+
+      if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+        let opened = false;
+        const onBlur = () => { opened = true; };
+        window.addEventListener('blur', onBlur);
+        window.location.href = deepLink;
+        setTimeout(() => {
+          window.removeEventListener('blur', onBlur);
+          if (!opened && iosFb) window.location.href = iosFb;
+          else if (!opened) showToast('⚠️ App not found. Set an iOS fallback URL.');
+        }, timeout);
+      } else if (/android/i.test(ua)) {
+        window.location.href = deepLink;
+        if (androidFb) setTimeout(() => { window.location.href = androidFb; }, timeout);
+      } else {
+        showToast('🖥️ Opening deep link (Desktop)...');
+        window.location.href = deepLink;
+      }
+    }
+
+    // ============================================================
+    // Clipboard
+    // ============================================================
+    async function copyToClipboard() {
+      const link = buildDeepLink();
+      if (!link) { showToast('⚠️ Nothing to copy'); return; }
+      try {
+        await navigator.clipboard.writeText(link);
+        showToast('✅ Copied to clipboard!');
+      } catch {
+        const ta = document.createElement('textarea');
+        ta.value = link; ta.style.cssText = 'position:fixed;opacity:0';
+        document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove();
+        showToast('✅ Copied to clipboard!');
+      }
+    }
+
+    // ============================================================
+    // QR Code
+    // ============================================================
+    function toggleQR() {
+      const card = document.getElementById('qrCard');
+      qrVisible = !qrVisible;
+      if (qrVisible) {
+        card.classList.remove('hidden');
+        const link = buildDeepLink();
+        if (link) generateQR(link);
+      } else {
+        card.classList.add('hidden');
+      }
+    }
+
+    function generateQR(text) {
+      const c = document.getElementById('qrCode');
+      c.innerHTML = '';
+      if (!text) return;
+      try {
+        new QRCode(c, {
+          text, width: 200, height: 200,
+          colorDark: '#e8e8f4', colorLight: '#10102a',
+          correctLevel: QRCode.CorrectLevel.M
+        });
+      } catch { c.innerHTML = '<p style="color:var(--danger)">QR generation failed</p>'; }
+    }
+
+    // ============================================================
+    // Presets
+    // ============================================================
+    function getPresets() {
+      try {
+        const s = localStorage.getItem(STORAGE_KEY);
+        if (s) return JSON.parse(s);
+      } catch {}
+      return { ...DEFAULT_PRESETS };
+    }
+
+    function savePresets(p) {
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(p)); } catch {}
+    }
+
+    function initPresets() {
+      const presets = getPresets();
+      let save = false;
+      for (const [n, c] of Object.entries(DEFAULT_PRESETS)) {
+        if (!presets[n]) { presets[n] = c; save = true; }
+      }
+      if (save) savePresets(presets);
+      refreshPresetDropdown(presets);
+    }
+
+    function refreshPresetDropdown(presets) {
+      if (!presets) presets = getPresets();
+      const sel = document.getElementById('presetSelect');
+      const cur = sel.value;
+      sel.innerHTML = '<option value="">— Select preset —</option>';
+
+      // Sort: universal first, then scheme
+      const names = Object.keys(presets).sort((a, b) => {
+        const aU = presets[a].mode === 'universal' ? 0 : 1;
+        const bU = presets[b].mode === 'universal' ? 0 : 1;
+        if (aU !== bU) return aU - bU;
+        return a.localeCompare(b);
+      });
+
+      names.forEach(name => {
+        const opt = document.createElement('option');
+        opt.value = name;
+        opt.textContent = name;
+        sel.appendChild(opt);
+      });
+
+      if (cur && presets[cur]) sel.value = cur;
+    }
+
+    function loadPreset() {
+      const name = document.getElementById('presetSelect').value;
+      if (!name) return;
+      const config = getPresets()[name];
+      if (!config) return;
+
+      setMode(config.mode || 'universal');
+      document.getElementById('scheme').value = config.scheme || '';
+      document.getElementById('host').value = config.host || '';
+      document.getElementById('path').value = config.path || '';
+      document.getElementById('iosFallback').value = config.iosFallback || '';
+      document.getElementById('androidFallback').value = config.androidFallback || '';
+      document.getElementById('timeout').value = config.timeout || 2000;
+      updateTimeoutLabel();
+
+      document.getElementById('paramsContainer').innerHTML = '';
+      const params = config.params || [];
+      if (params.length === 0) addParam('', '');
+      else params.forEach(p => addParam(p.key || '', p.value || ''));
+
+      updatePreview();
+      showToast(`✅ Loaded "${name}"`);
+    }
+
+    function savePresetPrompt() {
+      const name = prompt('Preset name:');
+      if (!name?.trim()) return;
+      const presets = getPresets();
+      presets[name.trim()] = getCurrentConfig();
+      savePresets(presets);
+      refreshPresetDropdown(presets);
+      document.getElementById('presetSelect').value = name.trim();
+      showToast(`💾 Saved "${name.trim()}"`);
+    }
+
+    function deletePreset() {
+      const name = document.getElementById('presetSelect').value;
+      if (!name) { showToast('⚠️ Select a preset to delete'); return; }
+      if (!confirm(`Delete preset "${name}"?`)) return;
+      const presets = getPresets();
+      delete presets[name];
+      savePresets(presets);
+      refreshPresetDropdown(presets);
+      showToast(`🗑️ Deleted "${name}"`);
+    }
+
+    function getCurrentConfig() {
+      return {
+        mode: currentMode,
+        scheme: document.getElementById('scheme').value.trim(),
+        host: document.getElementById('host').value.trim(),
+        path: document.getElementById('path').value.trim(),
+        params: getParams().filter(p => p.key),
+        iosFallback: document.getElementById('iosFallback').value.trim(),
+        androidFallback: document.getElementById('androidFallback').value.trim(),
+        timeout: parseInt(document.getElementById('timeout').value) || 2000
+      };
+    }
+
+    // ============================================================
+    // Website Readiness Checker
+    // ============================================================
+    // CORS proxy strategies (tried in order)
+    const CORS_STRATEGIES = [
+      // Strategy 1: allorigins.win JSON wrapper (most reliable)
+      async (url) => {
+        const apiUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
+        const resp = await fetch(apiUrl, { cache: 'no-store' });
+        if (!resp.ok) return null;
+        const json = await resp.json();
+        if (json.status && json.status.http_code && json.status.http_code >= 400) {
+          return { ok: false, status: json.status.http_code };
+        }
+        return { ok: true, text: json.contents, contentType: json.status?.content_type || '' };
+      },
+      // Strategy 2: corsproxy.io
+      async (url) => {
+        const apiUrl = `https://corsproxy.io/?${encodeURIComponent(url)}`;
+        const resp = await fetch(apiUrl, { cache: 'no-store' });
+        if (!resp.ok) return null; // null = try next proxy
+        const text = await resp.text();
+        return { ok: true, text, contentType: resp.headers.get('content-type') || '' };
+      },
+      // Strategy 3: allorigins raw (backup)
+      async (url) => {
+        const apiUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
+        const resp = await fetch(apiUrl, { cache: 'no-store' });
+        if (!resp.ok) return null;
+        const text = await resp.text();
+        return { ok: true, text, contentType: resp.headers.get('content-type') || '' };
+      }
+    ];
+
+    // Fetch with automatic CORS proxy fallback
+    async function fetchWithProxy(url) {
+      // 1. Try direct fetch first
+      try {
+        const resp = await fetch(url, { method: 'GET', mode: 'cors', cache: 'no-store' });
+        if (resp.ok) {
+          const text = await resp.text();
+          const ct = resp.headers.get('content-type') || '';
+          return { ok: true, text, contentType: ct, via: 'direct' };
+        }
+        // Direct 404 = file truly not found (no need for proxy)
+        if (resp.status === 404) {
+          return { ok: false, status: 404, via: 'direct' };
+        }
+        // Other errors (403, 500, etc.) — fall through to proxy
+      } catch (e) {
+        // CORS blocked or network error — try proxies
+      }
+
+      // 2. Try each proxy strategy in order
+      for (const strategy of CORS_STRATEGIES) {
+        try {
+          const result = await strategy(url);
+          if (result === null) continue; // This proxy failed, try next
+          if (result.ok) {
+            return { ok: true, text: result.text, contentType: result.contentType, via: 'proxy' };
+          }
+          // Proxy confirmed the original returned an error (e.g. 404)
+          if (result.status === 404) {
+            return { ok: false, status: 404, via: 'proxy' };
+          }
+          // Other errors from proxy: try next proxy
+          continue;
+        } catch (e) {
+          // This proxy threw an exception, try next
+          continue;
+        }
+      }
+
+      // All methods exhausted
+      return { ok: false, status: 0, via: 'failed' };
+    }
+
+    async function runChecker() {
+      const domain = document.getElementById('checkerDomain').value.trim().replace(/^https?:\/\//, '').replace(/\/+$/, '');
+      if (!domain) { showToast('⚠️ Enter a domain to check'); return; }
+
+      const btn = document.getElementById('checkerBtn');
+      const resultsDiv = document.getElementById('checkerResults');
+      btn.disabled = true;
+      btn.textContent = 'Checking...';
+      resultsDiv.innerHTML = '<div class="checker-status"><span class="spinner"></span> Checking website configuration...</div>';
+
+      const results = [];
+
+      // ── 1. Check AASA (iOS Universal Links) ──
+      const aasaPaths = [
+        `https://${domain}/.well-known/apple-app-site-association`,
+        `https://${domain}/apple-app-site-association`
+      ];
+
+      let aasaFound = false;
+      let aasaData = null;
+
+      for (const url of aasaPaths) {
+        const resp = await fetchWithProxy(url);
+
+        if (resp.ok) {
+          try {
+            aasaData = JSON.parse(resp.text);
+            aasaFound = true;
+
+            const viaNote = resp.via === 'proxy' ? ' <small>(fetched via CORS proxy)</small>' : '';
+            results.push({ type: 'pass', title: 'AASA File Found', detail: `Found at <code>${url}</code>${viaNote}` });
+
+            // Content-Type (only reliable on direct fetch)
+            if (resp.via === 'direct') {
+              if (resp.contentType.includes('application/json')) {
+                results.push({ type: 'pass', title: 'Content-Type: application/json', detail: 'AASA served with correct content type' });
+              } else {
+                results.push({ type: 'warn', title: 'Content-Type Warning', detail: `Expected <code>application/json</code>, got <code>${escapeHtml(resp.contentType)}</code>. iOS may reject this.` });
+              }
+            } else {
+              results.push({ type: 'info', title: 'Content-Type (via proxy)', detail: 'Cannot verify Content-Type header through proxy. Ensure your server sends <code>application/json</code>.' });
+            }
+
+            // Check applinks key
+            if (aasaData.applinks) {
+              results.push({ type: 'pass', title: 'applinks Key Present', detail: 'Universal Links configuration found in AASA' });
+
+              const details = aasaData.applinks.details || [];
+              if (Array.isArray(details) && details.length > 0) {
+                results.push({ type: 'pass', title: `${details.length} App(s) Configured`, detail: 'App IDs found in applinks.details' });
+
+                // Show app IDs
+                details.forEach((d, i) => {
+                  const appID = d.appID || (d.appIDs && d.appIDs[0]) || 'N/A';
+                  results.push({ type: 'info', title: `App ${i + 1}: ${escapeHtml(appID)}`, detail: d.paths ? `Paths: <code>${escapeHtml(JSON.stringify(d.paths))}</code>` : (d.components ? `Components configured` : 'Details available') });
+                });
+              } else if (aasaData.applinks.apps !== undefined) {
+                // Old format with 'apps' array
+                results.push({ type: 'pass', title: 'applinks.apps Present', detail: 'Legacy AASA format detected' });
+              } else {
+                results.push({ type: 'warn', title: 'No details in applinks', detail: 'applinks section exists but no app details configured' });
+              }
+            } else if (aasaData.webcredentials || aasaData.appclips) {
+              results.push({ type: 'warn', title: 'No applinks Key', detail: 'AASA has webcredentials/appclips but no Universal Links (applinks) section' });
+            } else {
+              results.push({ type: 'fail', title: 'Missing applinks Key', detail: 'AASA file found but missing <code>applinks</code> key for Universal Links' });
+            }
+
+            break; // Found valid AASA, stop trying other paths
+          } catch {
+            results.push({ type: 'fail', title: 'AASA Invalid JSON', detail: `File found at <code>${url}</code> but is not valid JSON` });
+          }
+        }
+        // If not ok, try next path
+      }
+
+      if (!aasaFound && results.filter(r => r.title.includes('AASA')).length === 0) {
+        results.push({
+          type: 'fail',
+          title: 'AASA File Not Found',
+          detail: `No <code>apple-app-site-association</code> file found on <code>${escapeHtml(domain)}</code>. <small>Checked: <a href="${aasaPaths[0]}" target="_blank" style="color:var(--accent)">.well-known/</a> and <a href="${aasaPaths[1]}" target="_blank" style="color:var(--accent)">root</a></small>`
+        });
+      }
+
+      // ── 2. Check assetlinks.json (Android App Links) ──
+      const alUrl = `https://${domain}/.well-known/assetlinks.json`;
+      let alFound = false;
+
+      const alResp = await fetchWithProxy(alUrl);
+
+      if (alResp.ok) {
+        try {
+          const data = JSON.parse(alResp.text);
+          alFound = true;
+
+          const viaNote = alResp.via === 'proxy' ? ' <small>(fetched via CORS proxy)</small>' : '';
+          results.push({ type: 'pass', title: 'assetlinks.json Found', detail: `Found at <code>${alUrl}</code>${viaNote}` });
+
+          // Content-Type
+          if (alResp.via === 'direct') {
+            if (alResp.contentType.includes('application/json')) {
+              results.push({ type: 'pass', title: 'Content-Type: application/json', detail: 'assetlinks.json served with correct content type' });
+            } else {
+              results.push({ type: 'warn', title: 'Content-Type Warning', detail: `Expected <code>application/json</code>, got <code>${escapeHtml(alResp.contentType)}</code>` });
+            }
+          } else {
+            results.push({ type: 'info', title: 'Content-Type (via proxy)', detail: 'Cannot verify Content-Type through proxy. Ensure server sends <code>application/json</code>.' });
+          }
+
+          if (Array.isArray(data) && data.length > 0) {
+            const appLinks = data.filter(e => e.relation && e.relation.includes('delegate_permission/common.handle_all_urls'));
+            if (appLinks.length > 0) {
+              results.push({ type: 'pass', title: `${appLinks.length} App Link(s) Configured`, detail: 'handle_all_urls delegation found' });
+
+              // Show package names
+              appLinks.forEach((entry, i) => {
+                const pkg = entry.target && entry.target.package_name ? entry.target.package_name : 'N/A';
+                results.push({ type: 'info', title: `Android App ${i + 1}: ${escapeHtml(pkg)}`, detail: `Package: <code>${escapeHtml(pkg)}</code>` });
+              });
+            } else {
+              results.push({ type: 'warn', title: 'No App Links Delegation', detail: 'assetlinks.json exists but no <code>handle_all_urls</code> relation found' });
+            }
+          } else {
+            results.push({ type: 'warn', title: 'Empty assetlinks.json', detail: 'File exists but contains no entries' });
+          }
+        } catch {
+          results.push({ type: 'fail', title: 'assetlinks.json Invalid JSON', detail: `File found at <code>${alUrl}</code> but is not valid JSON` });
+        }
+      } else {
+        const statusNote = alResp.status ? ` (HTTP ${alResp.status})` : '';
+        results.push({
+          type: 'fail',
+          title: 'assetlinks.json Not Found',
+          detail: `No <code>assetlinks.json</code> found on <code>${escapeHtml(domain)}</code>${statusNote}. <small><a href="${alUrl}" target="_blank" style="color:var(--accent)">Check manually</a></small>`
+        });
+      }
+
+      // ── 3. HTTPS (prepend) ──
+      results.unshift({
+        type: 'pass',
+        title: 'HTTPS Check',
+        detail: `All checks performed over HTTPS (required for both Universal Links and App Links)`
+      });
+
+      // Render results
+      renderCheckerResults(results, domain, aasaFound, alFound);
+
+      btn.disabled = false;
+      btn.textContent = 'Check';
+    }
+
+    function renderCheckerResults(results, domain, aasaOk, alOk) {
+      const div = document.getElementById('checkerResults');
+      let html = '<div class="check-result">';
+
+      results.forEach(r => {
+        const icon = r.type === 'pass' ? '✅' : r.type === 'fail' ? '❌' : r.type === 'warn' ? '⚠️' : 'ℹ️';
+        html += `
+          <div class="check-item ${r.type}">
+            <span class="check-icon">${icon}</span>
+            <div class="check-text">
+              <strong>${r.title}</strong>
+              ${r.detail}
+            </div>
+          </div>
+        `;
+      });
+
+      // Summary + Guide
+      const allPass = results.every(r => r.type === 'pass');
+      const hasFail = results.some(r => r.type === 'fail');
+
+      if (allPass) {
+        html += `
+          <div class="check-item pass" style="margin-top:8px;">
+            <span class="check-icon">🎉</span>
+            <div class="check-text"><strong>All checks passed!</strong>
+              <code>${domain}</code> is ready for both Universal Links (iOS) and App Links (Android).
+            </div>
+          </div>
+        `;
+      }
+
+      if (hasFail) {
+        html += `<div class="guide-box"><h4>📋 Setup Guide</h4>`;
+
+        if (!aasaOk) {
+          html += `
+            <p><strong>iOS Universal Links — AASA Setup:</strong></p>
+            <ol>
+              <li>Create <code>apple-app-site-association</code> file (no extension)</li>
+              <li>Host at <code>https://${escapeHtml(domain)}/.well-known/apple-app-site-association</code></li>
+              <li>Serve with <code>Content-Type: application/json</code></li>
+              <li>Must be accessible without redirects</li>
+              <li>File size must be under 128 KB</li>
+            </ol>
+            <p style="margin-top:6px;"><strong>Example AASA content:</strong></p>
+            <code style="display:block;white-space:pre;padding:8px;margin-top:4px;border-radius:6px;background:rgba(0,0,0,0.2);line-height:1.5">{
+  "applinks": {
+    "apps": [],
+    "details": [{
+      "appIDs": ["TEAMID.com.example.app"],
+      "components": [{
+        "/": "/product/*",
+        "comment": "Match product pages"
+      }]
+    }]
+  }
+}</code>
+            <p style="margin-top:8px;"><strong>In Xcode:</strong></p>
+            <ol>
+              <li>Enable <em>Associated Domains</em> capability</li>
+              <li>Add <code>applinks:${escapeHtml(domain)}</code></li>
+            </ol>
+          `;
+        }
+
+        if (!alOk) {
+          html += `
+            <p style="margin-top:12px;"><strong>Android App Links — assetlinks.json Setup:</strong></p>
+            <ol>
+              <li>Create <code>assetlinks.json</code> file</li>
+              <li>Host at <code>https://${escapeHtml(domain)}/.well-known/assetlinks.json</code></li>
+              <li>Serve with <code>Content-Type: application/json</code></li>
+              <li>Must be accessible without redirects</li>
+            </ol>
+            <p style="margin-top:6px;"><strong>Example assetlinks.json:</strong></p>
+            <code style="display:block;white-space:pre;padding:8px;margin-top:4px;border-radius:6px;background:rgba(0,0,0,0.2);line-height:1.5">[{
+  "relation": [
+    "delegate_permission/common.handle_all_urls"
+  ],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.example.app",
+    "sha256_cert_fingerprints": [
+      "AA:BB:CC:..."
+    ]
+  }
+}]</code>
+            <p style="margin-top:8px;"><strong>In AndroidManifest.xml:</strong></p>
+            <ol>
+              <li>Add intent-filter with <code>android:autoVerify="true"</code></li>
+              <li>Include <code>android.intent.action.VIEW</code> action</li>
+              <li>Add <code>android.intent.category.BROWSABLE</code></li>
+            </ol>
+          `;
+        }
+
+        html += '</div>';
+      }
+
+      html += '</div>';
+      div.innerHTML = html;
+    }
+
+    // ============================================================
+    // Collapsible
+    // ============================================================
+    function toggleCollapsible(id) {
+      const header = document.getElementById(id + 'Toggle');
+      const content = document.getElementById(id + 'Content');
+      header.classList.toggle('open');
+      content.classList.toggle('open');
+    }
+
+    // ============================================================
+    // Helpers
+    // ============================================================
+    function updateTimeoutLabel() {
+      const val = document.getElementById('timeout').value;
+      document.getElementById('timeoutLabel').textContent = (val / 1000).toFixed(1) + 's';
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      clearTimeout(toast._t);
+      toast._t = setTimeout(() => toast.classList.remove('show'), 2500);
+    }
+
+    function escapeHtml(str) {
+      const d = document.createElement('div');
+      d.textContent = str;
+      return d.innerHTML;
+    }
+  </script>
+</body>
+</html>
