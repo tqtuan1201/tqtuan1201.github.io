@@ -197,7 +197,7 @@
 
     ,
         "url" : "https:\/\/tqtuan1201.github.io\/buymeacoffee\/",
-        "wordCount" : "28",
+        "wordCount" : "29",
         "genre" : [ ],
         "keywords" : [ ]
     }
@@ -371,10 +371,10 @@
             
             <a
               
-              href="/posts"
+              href="/myapps"
               
               title=""
-              >Posts</a
+              >Apps</a
             >
           </li>
         
@@ -568,12 +568,38 @@
     <div class="post__content">
       <h1>Buy Me a Coffee</h1>
       <p>If you enjoy reading my articles and find them helpful, please support me. Your support will encourage me to create and share more content with you ^^</p>
-<figure class="small"><img src="/images/bymeacoffee_bg.png"
-         alt="image"/><figcaption>
-            <p>0x8739c6E645e28124D1b4f683DDF7990f5812e396</p>
-        </figcaption>
-</figure>
-
+<style>
+.bmc-container { text-align: center; margin: 24px 0; }
+.bmc-container img.bmc-qr { max-width: 260px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+.bmc-more { margin-top: 16px; }
+.bmc-more summary {
+  cursor: pointer; display: inline-block;
+  padding: 8px 24px; border-radius: 24px;
+  background: linear-gradient(135deg, #ff813f, #ffdd00);
+  color: #fff; font-weight: 600; font-size: 0.95em;
+  list-style: none; user-select: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.bmc-more summary::-webkit-details-marker { display: none; }
+.bmc-more summary:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(255,129,63,0.35); }
+.bmc-more[open] summary { margin-bottom: 16px; }
+.bmc-more img.bmc-bg {
+  max-width: 100%; border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  animation: fadeSlide 0.4s ease;
+}
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(-12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+</style>
+<div class="bmc-container">
+  <img class="bmc-qr" src="/images/by-me-coffee-new2026.png" alt="Buy me a coffee QR">
+  <details class="bmc-more">
+    <summary>☕ More</summary>
+    <img class="bmc-bg" src="/images/bymeacoffee_bg.png" alt="Buy me a coffee">
+  </details>
+</div>
 </div>
     <div class="post__footer">
       
