@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="js/theme-init.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Practice — Run First, Read Code Later | TTBaseUIKit</title>
+    <meta name="description"
+        content="The best way to learn TTBaseUIKit: clone the example project, run it first, then study the code. Step-by-step guide with screenshots and architecture walkthrough.">
+    <meta property="og:title" content="Best Practice — TTBaseUIKit Example Project Guide">
+    <meta property="og:description"
+        content="Run First, Read Code Later — the fastest way to master TTBaseUIKit with the official example project.">
+    <meta property="og:type" content="website">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#3b82f6' } } } }</script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+    <style>
+        /* ── Best Practice Page Styles ── */
+        .bp-hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1a1040 40%, #0f172a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .bp-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 60% 50% at 30% 20%, rgba(245,158,11,0.15), transparent),
+                radial-gradient(ellipse 60% 50% at 70% 80%, rgba(239,68,68,0.1), transparent),
+                radial-gradient(ellipse 80% 40% at 50% 50%, rgba(59,130,246,0.08), transparent);
+        }
+
+        /* ── Phone Frame ── */
+        .phone-frame {
+            position: relative;
+            width: 180px;
+            flex-shrink: 0;
+            border-radius: 28px;
+            overflow: hidden;
+            border: 3px solid rgba(255,255,255,0.15);
+            box-shadow:
+                0 0 0 1px rgba(255,255,255,0.05),
+                0 25px 50px rgba(0,0,0,0.4),
+                0 0 40px rgba(59,130,246,0.1);
+            background: #000;
+            transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+                        box-shadow 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .phone-frame:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow:
+                0 0 0 1px rgba(255,255,255,0.1),
+                0 35px 65px rgba(0,0,0,0.5),
+                0 0 60px rgba(59,130,246,0.15);
+        }
+        .phone-frame img {
+            width: 100%;
+            display: block;
+        }
+        .phone-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 0.75rem 0.5rem 0.5rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+            text-align: center;
+            font-size: 0.6875rem;
+            font-weight: 600;
+            color: white;
+            letter-spacing: 0.02em;
+        }
+
+        /* ── Screenshot Carousel ── */
+        .screenshot-carousel {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            align-items: flex-end;
+            padding: 2rem 0;
+            flex-wrap: wrap;
+        }
+        @media (min-width: 768px) {
+            .screenshot-carousel { flex-wrap: nowrap; }
+            .phone-frame { width: 200px; }
+        }
+
+        /* ── Philosophy Card ── */
+        .philosophy-card {
+            background: linear-gradient(135deg, rgba(245,158,11,0.08), rgba(239,68,68,0.05));
+            border: 1px solid rgba(245,158,11,0.2);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .philosophy-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -30%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(245,158,11,0.06), transparent 70%);
+            pointer-events: none;
+        }
+
+        /* ── Step Card ── */
+        .bp-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+            padding: 1.5rem;
+            border-radius: 1.25rem;
+            border: 1px solid var(--border-color);
+            background: var(--card-bg);
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .bp-step:hover {
+            border-color: rgba(245,158,11,0.4);
+            background: rgba(245,158,11,0.03);
+            transform: translateX(4px);
+        }
+        .bp-step-num {
+            flex-shrink: 0;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 1rem;
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.125rem;
+            color: white;
+            box-shadow: 0 4px 15px rgba(245,158,11,0.35);
+        }
+        .bp-step-body { flex: 1; min-width: 0; }
+        .bp-step-title {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text-color);
+            margin-bottom: 0.25rem;
+        }
+        .bp-step-desc {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .bp-step-code {
+            margin-top: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--code-bg);
+            border-radius: 0.625rem;
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+            font-size: 0.8125rem;
+            color: #f59e0b;
+            border: 1px solid var(--border-color);
+            display: inline-block;
+        }
+
+        /* ── Tab Feature Grid ── */
+        .tab-feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1rem;
+        }
+        .tab-feature-card {
+            border-radius: 1.25rem;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            background: var(--card-bg);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .tab-feature-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .tab-feature-icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+        .tab-feature-title {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text-color);
+            margin-bottom: 0.375rem;
+        }
+        .tab-feature-desc {
+            font-size: 0.8125rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .tab-feature-badge {
+            display: inline-flex;
+            margin-top: 0.75rem;
+            padding: 0.25rem 0.625rem;
+            border-radius: 0.5rem;
+            font-size: 0.6875rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        /* ── Architecture Diagram ── */
+        .arch-flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        .arch-node {
+            padding: 0.75rem 1.25rem;
+            border-radius: 1rem;
+            font-weight: 700;
+            font-size: 0.8125rem;
+            border: 1px solid var(--border-color);
+            background: var(--card-bg);
+            text-align: center;
+            transition: all 0.2s;
+        }
+        .arch-node:hover { transform: scale(1.05); }
+        .arch-arrow {
+            color: var(--text-muted);
+            font-size: 1.25rem;
+            font-weight: 300;
+        }
+
+        /* ── Gradient text ── */
+        .bp-gradient-text {
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ── CTA Box ── */
+        .bp-cta {
+            background: linear-gradient(135deg, #1a1040 0%, #0f172a 50%, #1a1040 100%);
+            border-radius: 1.5rem;
+            padding: 3rem;
+            text-align: center;
+            border: 1px solid rgba(245,158,11,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        .bp-cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 60% 50% at 30% 100%, rgba(245,158,11,0.1), transparent),
+                radial-gradient(ellipse 60% 50% at 70% 0%, rgba(239,68,68,0.06), transparent);
+        }
+        .bp-cta-inner { position: relative; z-index: 1; }
+
+        .bp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.875rem 2rem;
+            font-weight: 700;
+            font-size: 0.9375rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+            margin: 0.375rem;
+        }
+        .bp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        .bp-btn-primary {
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            color: white;
+        }
+        .bp-btn-secondary {
+            background: rgba(255,255,255,0.08);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+        .bp-btn-secondary:hover { background: rgba(255,255,255,0.15); }
+
+        /* ── Section header ── */
+        .bp-section-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .bp-section-header h2 {
+            font-size: 1.875rem;
+            font-weight: 800;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+        .bp-section-header p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            max-width: 36rem;
+            margin: 0 auto;
+        }
+
+        /* ── Explore Cards ── */
+        .explore-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .explore-card {
+            padding: 1.25rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border-color);
+            background: var(--card-bg);
+            text-decoration: none;
+            transition: all 0.25s;
+            display: block;
+        }
+        .explore-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(245,158,11,0.4);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+        .explore-card-icon { font-size: 1.5rem; margin-bottom: 0.5rem; display: block; }
+        .explore-card-title { font-weight: 700; font-size: 0.875rem; color: var(--text-color); margin-bottom: 0.25rem; }
+        .explore-card-desc { font-size: 0.75rem; color: var(--text-secondary); line-height: 1.5; }
+    </style>
+</head>
+
+<body class="antialiased min-h-screen flex flex-col">
+    <script>window.TTBase = '';</script>
+    <div id="site-header"></div>
+
+    <div class="max-w-screen-2xl mx-auto flex-1 w-full flex pt-16">
+        <div id="site-sidebar"></div>
+
+        <main class="flex-1 min-w-0 py-10 px-4 sm:px-6 lg:px-8 xl:pr-12">
+            <div class="max-w-5xl mx-auto">
+
+                <!-- ── Hero ── -->
+                <div class="bp-hero rounded-2xl mb-12 px-6 py-14 sm:px-12 sm:py-20 text-center relative">
+                    <div class="relative z-10">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6" style="background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);">
+                            <span class="w-2 h-2 rounded-full bg-amber-400" style="animation:pulse 2s infinite;"></span>
+                            <span class="text-sm font-semibold text-amber-300">🎯 Best Practice · Run First, Read Code Later</span>
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl font-black text-white mb-4 tracking-tight">
+                            The <span class="bp-gradient-text">Fastest Way</span> to Learn
+                        </h1>
+                        <p class="text-slate-300 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed mb-8">
+                            Stop reading docs — <strong class="text-white">run the example first.</strong>
+                            Experience components in action, then study the code. That's how pros learn frameworks.
+                        </p>
+                        <div class="flex flex-wrap justify-center gap-3 mb-8">
+                            <a href="https://github.com/tqtuan1201/TTBaseUIKit/tree/master/TTBaseUIKitExample" target="_blank" rel="noopener"
+                                class="bp-btn bp-btn-primary">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                                View on GitHub
+                            </a>
+                            <a href="#quick-start" class="bp-btn bp-btn-secondary">
+                                ⚡ Quick Start Guide
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── Screenshot Showcase ── -->
+                <section class="mb-16">
+                    <div class="bp-section-header">
+                        <h2>📱 Example App Screenshots</h2>
+                        <p>TTBaseUIKitExample — 5 tabs showcasing UIKit, SwiftUI, Debug tools, and real-world API demos</p>
+                    </div>
+                    <div class="screenshot-carousel">
+                        <div class="phone-frame" style="animation: float 4s ease-in-out infinite; animation-delay: 0s;">
+                            <img src="images/sample/iOS_sam_01.jpeg" alt="Menu Tab — TTBaseUIKit config, theme setup, base components overview" loading="lazy">
+                            <div class="phone-label">📋 Menu</div>
+                        </div>
+                        <div class="phone-frame" style="animation: float 4s ease-in-out infinite; animation-delay: 0.5s;">
+                            <img src="images/sample/iOS_sam_02.jpeg" alt="Demo Features — Recipe Book, Product Catalog, User Directory, Social Feed" loading="lazy">
+                            <div class="phone-label">✨ Demos</div>
+                        </div>
+                        <div class="phone-frame" style="animation: float 4s ease-in-out infinite; animation-delay: 1s;">
+                            <img src="images/sample/iOS_sam_03.jpeg" alt="DebugBridge — TTBDebugPlus macOS companion integration" loading="lazy">
+                            <div class="phone-label">🔗 DebugBridge</div>
+                        </div>
+                        <div class="phone-frame" style="animation: float 4s ease-in-out infinite; animation-delay: 1.5s;">
+                            <img src="images/sample/iOS_sam_04.jpeg" alt="UI Debug — Layout inspector, API logger, screen capture" loading="lazy">
+                            <div class="phone-label">🔍 UI Debug</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ── Philosophy ── -->
+                <section class="mb-16">
+                    <div class="philosophy-card">
+                        <div class="relative z-10">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="text-3xl">💡</span>
+                                <h2 class="text-2xl font-black m-0" style="color: var(--text-color);">Why "Run First"?</h2>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                                <div>
+                                    <div class="text-2xl mb-2">🏃‍♂️</div>
+                                    <h3 class="font-bold dark:text-white text-sm mb-1">Experience Before Theory</h3>
+                                    <p class="text-sm text-slate-500 dark:text-slate-400 m-0">Seeing components in action creates mental models that make code infinitely easier to understand.</p>
+                                </div>
+                                <div>
+                                    <div class="text-2xl mb-2">🧠</div>
+                                    <h3 class="font-bold dark:text-white text-sm mb-1">Pattern Recognition</h3>
+                                    <p class="text-sm text-slate-500 dark:text-slate-400 m-0">Running the app reveals architecture patterns — Coordinator, ViewCodable, Config — before you read a single line.</p>
+                                </div>
+                                <div>
+                                    <div class="text-2xl mb-2">⚡</div>
+                                    <h3 class="font-bold dark:text-white text-sm mb-1">10x Faster Learning</h3>
+                                    <p class="text-sm text-slate-500 dark:text-slate-400 m-0">Developers who run examples first learn frameworks 10x faster than those who start with documentation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ── Quick Start ── -->
+                <section class="mb-16" id="quick-start">
+                    <div class="bp-section-header">
+                        <h2>⚡ Quick Start — 60 Seconds</h2>
+                        <p>From zero to running TTBaseUIKitExample in your Xcode simulator</p>
+                    </div>
+                    <div class="flex flex-col gap-4 max-w-2xl mx-auto">
+                        <div class="bp-step">
+                            <div class="bp-step-num">1</div>
+                            <div class="bp-step-body">
+                                <div class="bp-step-title">Clone the Repository</div>
+                                <div class="bp-step-desc">Download TTBaseUIKit — the example project is included in the repository.</div>
+                                <code class="bp-step-code">git clone https://github.com/tqtuan1201/TTBaseUIKit.git</code>
+                            </div>
+                        </div>
+                        <div class="bp-step">
+                            <div class="bp-step-num">2</div>
+                            <div class="bp-step-body">
+                                <div class="bp-step-title">Open in Xcode</div>
+                                <div class="bp-step-desc">Open the Xcode project. SPM dependencies resolve automatically — no extra setup needed.</div>
+                                <code class="bp-step-code">open TTBaseUIKit.xcodeproj</code>
+                            </div>
+                        </div>
+                        <div class="bp-step">
+                            <div class="bp-step-num">3</div>
+                            <div class="bp-step-body">
+                                <div class="bp-step-title">Select Target & Run</div>
+                                <div class="bp-step-desc">Choose <strong>TTBaseUIKitExample</strong> scheme, pick any Simulator, press <kbd style="padding:0.15rem 0.4rem;font-size:0.75rem;background:var(--code-bg);border-radius:0.25rem;border:1px solid var(--border-color);font-weight:600;">⌘R</kbd> to build & run.</div>
+                            </div>
+                        </div>
+                        <div class="bp-step" style="border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.03);">
+                            <div class="bp-step-num" style="background: linear-gradient(135deg, #22c55e, #16a34a); box-shadow: 0 4px 15px rgba(34,197,94,0.35);">✓</div>
+                            <div class="bp-step-body">
+                                <div class="bp-step-title" style="color: #22c55e;">Now Explore!</div>
+                                <div class="bp-step-desc">Tap through all 5 tabs. Try the Demo features — call real APIs. Triple-tap any screen to activate the Debug Kit. <strong>Then</strong> start reading the code.</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ── What's Inside ── -->
+                <section class="mb-16">
+                    <div class="bp-section-header">
+                        <h2>🔍 What's Inside the Example</h2>
+                        <p>5 tabs covering every aspect of TTBaseUIKit — from basic components to real-world API demos</p>
+                    </div>
+                    <div class="tab-feature-grid">
+                        <div class="tab-feature-card" style="--border-hover-color: rgba(59,130,246,0.4);">
+                            <span class="tab-feature-icon">📋</span>
+                            <div class="tab-feature-title">Menu Tab</div>
+                            <div class="tab-feature-desc">Framework overview, theme config demo, base components showcase — TTBaseUIKit config, ViewConfig, SizeConfig, FontConfig all in action.</div>
+                            <span class="tab-feature-badge" style="background:rgba(59,130,246,0.12);color:#60a5fa;">UIKit</span>
+                        </div>
+                        <div class="tab-feature-card" style="--border-hover-color: rgba(139,92,246,0.4);">
+                            <span class="tab-feature-icon">✨</span>
+                            <div class="tab-feature-title">Demos Tab</div>
+                            <div class="tab-feature-desc">7 real-world SwiftUI demos — Recipe Book, Product Catalog, User Directory, Social Feed, Quotes Wall, Todo Manager, Photo Gallery. All powered by live APIs.</div>
+                            <span class="tab-feature-badge" style="background:rgba(139,92,246,0.12);color:#a78bfa;">SwiftUI + API</span>
+                        </div>
+                        <div class="tab-feature-card" style="--border-hover-color: rgba(16,185,129,0.4);">
+                            <span class="tab-feature-icon">🔗</span>
+                            <div class="tab-feature-title">DebugBridge Tab</div>
+                            <div class="tab-feature-desc">TTBDebugPlus macOS companion integration. Real-time log streaming, network inspection, remote screenshots — connect Mac ↔ iPhone via Bonjour.</div>
+                            <span class="tab-feature-badge" style="background:rgba(16,185,129,0.12);color:#34d399;">v2.3.0+</span>
+                        </div>
+                        <div class="tab-feature-card" style="--border-hover-color: rgba(239,68,68,0.4);">
+                            <span class="tab-feature-icon">🔍</span>
+                            <div class="tab-feature-title">UI Debug Tab</div>
+                            <div class="tab-feature-desc">Built-in TTBaseDebugKit — triple-tap layout inspector, API response logger, screen capture with annotations, developer settings panel.</div>
+                            <span class="tab-feature-badge" style="background:rgba(239,68,68,0.12);color:#f87171;">v2.2.1+</span>
+                        </div>
+                        <div class="tab-feature-card" style="--border-hover-color: rgba(245,158,11,0.4);">
+                            <span class="tab-feature-icon">👤</span>
+                            <div class="tab-feature-title">Contact Tab</div>
+                            <div class="tab-feature-desc">Author info, links to documentation, GitHub, portfolio — shows how to build a simple profile screen with TTBaseUIKit.</div>
+                            <span class="tab-feature-badge" style="background:rgba(245,158,11,0.12);color:#fbbf24;">Info</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ── UIKit Demos ── -->
+                <section class="mb-16">
+                    <div class="bp-section-header">
+                        <h2>🧱 UIKit Demos Breakdown</h2>
+                        <p>11 dedicated UIKit demo categories covering all base views and patterns</p>
+                    </div>
+                    <div class="explore-grid">
+                        <div class="explore-card">
+                            <span class="explore-card-icon">📐</span>
+                            <div class="explore-card-title">Auto Layout</div>
+                            <div class="explore-card-desc">Programmatic constraints with chainable helpers</div>
+                        </div>
+                        <div class="explore-card">
+                            <span class="explore-card-icon">📅</span>
+                            <div class="explore-card-title">Calendar</div>
+                            <div class="explore-card-desc">Custom calendar view implementation</div>
+                        </div>
+                        <div class="explore-card">
+                            <span class="explore-card-icon">📊</span>
+                            <div class="explore-card-title">Cell Types</div>
+                            <div class="explore-card-desc">Various table/collection cell patterns</div>
+                        </div>
+                        <div class="explore-card">
+                            <span class="explore-card-icon">🏗️</span>
+                            <div class="explore-card-title">CollectionView</div>
+                            <div class="explore-card-desc">BaseUICollectionViewController demos</div>
+                        </div>
+                        <div class="explore-card">
+                            <span class="explore-card-icon">🧩</span>
+                            <div class="explore-card-title">Components</div>
+                            <div class="explore-card-desc">Buttons, labels, text fields, images</div>
+                        </div>
+                        <div class="explore-card">
+                            <span class="explore-card-icon">📭</span>
+                            <div class="explore-card-title">Empty Table</div>
+                            <div class="explore-card-desc">Empty state + retry pattern</div>
+                        </div>
+                        <div class="explore-card">
+                            <span class="explore-card-icon">💬</span>
+                            <div class="explore-card-title">Message</div>
+                            <div class="explore-card-desc">Notification banners & alerts</div>
+                        </div>
+                        <div class="explore-card">
+                            <span class="explore-card-icon">🪟</span>
+                            <div class="explore-card-title">Popup</div>
+                            <div class="explore-card-desc">Modal dialogs & bottom sheets</div>
+                        </div>
+                        <div class="explore-card">
+                            <span class="explore-card-icon">💀</span>
+                            <div class="explore-card-title">Skeleton</div>
+                            <div class="explore-card-desc">Loading placeholder animations</div>
+                        </div>
+                        <div class="explore-card">
+                            <span class="explore-card-icon">📋</span>
+                            <div class="explore-card-title">TableView</div>
+                            <div class="explore-card-desc">BaseUITableViewController patterns</div>
+                        </div>
+                        <div class="explore-card">
+                            <span class="explore-card-icon">📱</span>
+                            <div class="explore-card-title">ViewController</div>
+                            <div class="explore-card-desc">ViewCodable lifecycle demos</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ── Architecture ── -->
+                <section class="mb-16">
+                    <div class="bp-section-header">
+                        <h2>🏛️ Code Architecture</h2>
+                        <p>Understand the patterns used in TTBaseUIKitExample</p>
+                    </div>
+
+                    <!-- Flow -->
+                    <div class="arch-flow">
+                        <div class="arch-node" style="border-color: rgba(245,158,11,0.4); background: rgba(245,158,11,0.05);">
+                            <div style="color:#f59e0b;">AppDelegate</div>
+                            <div style="font-size:0.6875rem;color:var(--text-muted);font-weight:400;">Config + Start</div>
+                        </div>
+                        <span class="arch-arrow">→</span>
+                        <div class="arch-node" style="border-color: rgba(59,130,246,0.4); background: rgba(59,130,246,0.05);">
+                            <div style="color:#3b82f6;">AppCoordinator</div>
+                            <div style="font-size:0.6875rem;color:var(--text-muted);font-weight:400;">TabBar + Navigation</div>
+                        </div>
+                        <span class="arch-arrow">→</span>
+                        <div class="arch-node" style="border-color: rgba(139,92,246,0.4); background: rgba(139,92,246,0.05);">
+                            <div style="color:#8b5cf6;">ViewControllers</div>
+                            <div style="font-size:0.6875rem;color:var(--text-muted);font-weight:400;">ViewCodable Protocol</div>
+                        </div>
+                    </div>
+
+                    <!-- Code samples -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-lg font-bold dark:text-white mb-3">1. AppDelegate — Config</h3>
+                            <pre><code class="language-swift">// Configure Design System
+let view = ViewConfig()
+view.viewBgNavColor = UIColor.getColorFromHex(
+    netHex: 0x4DA0DC)
+view.buttonBgDef = UIColor.getColorFromHex(
+    netHex: 0x4DA0DC)
+
+let fontConfig = FontConfig()
+fontConfig.HEADER_H = 18
+fontConfig.TITLE_H = 14
+
+let sizeConfig = SizeConfig()
+sizeConfig.H_BUTTON = 50.0
+sizeConfig.CORNER_RADIUS = 8.0
+
+TTBaseUIKitConfig.withDefaultConfig(
+    withFontConfig: fontConfig,
+    frameSize: sizeConfig,
+    view: view
+)?.start(withViewLog: true)</code></pre>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold dark:text-white mb-3">2. AppCoordinator — Navigation</h3>
+                            <pre><code class="language-swift">class AppCoordinator: Coordinator {
+    func start() {
+        let tabBar = UITabBarController()
+
+        // Menu Tab (UIKit)
+        let menuNav = UINavigationController()
+        let menuCoord = MenuCoordinator(
+            navigationController: menuNav)
+        menuCoord.start()
+
+        // Demos Tab (SwiftUI)
+        let demosVC = DemoFeaturesView()
+            .embeddedInHostingController(
+                isHiddenTabbar: false)
+
+        tabBar.viewControllers = [
+            menuNav, demosVC, contactNav]
+        window.rootViewController = tabBar
+    }
+}</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ── After Running ── -->
+                <section class="mb-16">
+                    <div class="bp-section-header">
+                        <h2>📖 After Running — Deep Dive</h2>
+                        <p>Once you've experienced the app, explore these resources to understand every component</p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <a href="uikit/index.html" class="explore-card">
+                            <span class="explore-card-icon">🧱</span>
+                            <div class="explore-card-title">UIKit Components</div>
+                            <div class="explore-card-desc">72+ base views with full API reference</div>
+                        </a>
+                        <a href="swiftui/index.html" class="explore-card">
+                            <span class="explore-card-icon">🎨</span>
+                            <div class="explore-card-title">SwiftUI Views</div>
+                            <div class="explore-card-desc">51+ declarative views & modifiers</div>
+                        </a>
+                        <a href="ttbdebugplus.html" class="explore-card">
+                            <span class="explore-card-icon">🛠</span>
+                            <div class="explore-card-title">TTBDebugPlus</div>
+                            <div class="explore-card-desc">macOS companion debugger guide</div>
+                        </a>
+                        <a href="getting-started.html" class="explore-card">
+                            <span class="explore-card-icon">📖</span>
+                            <div class="explore-card-title">Getting Started</div>
+                            <div class="explore-card-desc">Full config reference & setup guide</div>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- ── GitHub CTA ── -->
+                <div class="bp-cta">
+                    <div class="bp-cta-inner">
+                        <div class="text-4xl mb-4">🎯</div>
+                        <h2 class="text-2xl sm:text-3xl font-black text-white mb-3">Ready to Start?</h2>
+                        <p class="text-slate-400 max-w-xl mx-auto mb-8">
+                            Clone TTBaseUIKitExample, run it, explore every tab — then come back here to understand the code. That's the best practice.
+                        </p>
+                        <div class="flex flex-wrap justify-center gap-3">
+                            <a href="https://github.com/tqtuan1201/TTBaseUIKit/tree/master/TTBaseUIKitExample"
+                                target="_blank" rel="noopener" class="bp-btn bp-btn-primary">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                                View on GitHub
+                            </a>
+                            <a href="https://github.com/tqtuan1201/TTBaseUIKit/archive/refs/heads/master.zip"
+                                class="bp-btn bp-btn-secondary">
+                                ⬇ Download ZIP
+                            </a>
+                            <a href="demo.html" class="bp-btn bp-btn-secondary">
+                                🎬 Watch Demo →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <div id="site-footer"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-swift.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/search.js"></script>
+</body>
+
+</html>

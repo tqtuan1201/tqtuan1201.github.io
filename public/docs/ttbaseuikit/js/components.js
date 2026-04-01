@@ -18,6 +18,7 @@ const NAV_SECTIONS = [
         title: 'Introduction',
         items: [
             { label: 'Getting Started', href: 'getting-started.html', icon: '📖' },
+            { label: 'Best Practice', href: 'best-practice.html', icon: '🎯' },
             { label: 'Apps Showcase', href: 'showcase.html', icon: '🚀' },
             { label: 'Project Demo', href: 'demo.html', icon: '🎬' },
             { label: 'Blog', href: 'blog.html', icon: '📝' }
@@ -126,6 +127,7 @@ function renderHeader() {
                     <a href="${resolveHref('ai-agents/index.html')}" class="hover:text-blue-500 transition-colors" style="text-decoration:none;">AI Agents</a>
                     <a href="${resolveHref('showcase.html')}" class="hover:text-blue-500 transition-colors" style="text-decoration:none;">Showcase</a>
                     <a href="${resolveHref('demo.html')}" class="hover:text-blue-500 transition-colors" style="text-decoration:none;">Demo</a>
+                    <a href="${resolveHref('best-practice.html')}" class="hover:text-blue-500 transition-colors" style="text-decoration:none;"><span style="background:linear-gradient(135deg,#f59e0b,#ef4444);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:800;">Best Practice</span></a>
                     <a href="${resolveHref('blog.html')}" class="hover:text-blue-500 transition-colors" style="text-decoration:none;">Blog</a>
                 </nav>
                 <button id="search-btn" class="search-btn-header flex items-center gap-2 px-3 py-1.5 text-sm text-slate-400 border border-slate-200 dark:border-slate-700 rounded-lg hover:border-blue-500 hover:text-blue-500 transition-colors" title="Search (⌘K)">
