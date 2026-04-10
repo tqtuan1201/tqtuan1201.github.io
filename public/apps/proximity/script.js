@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initShowcaseTabs();
   initParallaxHero();
   initParticleNetwork();
+  initVideoPlayer();
 });
 
 // ── Ambient Particle Canvas — Premium Smooth ────────────────────────
@@ -377,4 +378,16 @@ function initParallaxHero() {
       badge.style.transform = `translateY(${-factor * direction * (0.3 + i * 0.2)}px)`;
     });
   }, { passive: true });
+}
+
+// ── Video Player — YouTube Direct ───────────────────────────────────
+function initVideoPlayer() {
+  const thumbnail = document.getElementById('videoThumbnail');
+  if (!thumbnail) return;
+
+  const YOUTUBE_URL = 'https://youtu.be/nFAHoENvkYc';
+
+  thumbnail.addEventListener('click', () => {
+    window.open(YOUTUBE_URL, '_blank', 'noopener,noreferrer');
+  });
 }

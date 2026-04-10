@@ -6,12 +6,24 @@ const translations = {
   en: {
     // Navbar
     "nav.features": "Features",
+    "nav.video": "Video",
     "nav.showcase": "App Preview",
     "nav.how": "How It Works",
     "nav.platforms": "Platforms",
     "nav.pricing": "Pricing",
     "nav.contact": "Contact",
     "nav.download": "Download Free",
+
+    // Video Section
+    "video.label": "Video",
+    "video.title": "See Proximity Lock in Action",
+    "video.desc": "Watch how Proximity Lock secures your Mac automatically — from initial setup to everyday protection.",
+    "video.player.title": "Proximity Lock — Demo",
+    "video.player.badge": "Watch on YouTube",
+    "video.duration": "▶ Watch on YouTube",
+    "video.chip.1": "Auto-Lock Demo",
+    "video.chip.2": "Café Mode in Action",
+    "video.chip.3": "iPhone + Mac Setup",
 
     // Hero
     "hero.badge": "Bluetooth Security for Mac & iPhone",
@@ -150,7 +162,7 @@ const translations = {
     "download.ios.desc": "Your iPhone becomes the Bluetooth security key.",
     "download.ios.platform": "Platform",
     "download.ios.requires": "Requires",
-    "download.ios.cta": "Get on TestFlight",
+    "download.ios.cta": "Get on App Store",
     "download.install.title": "📦 macOS Installation",
     "download.install.step1": "Download the .dmg file above",
     "download.install.step2": "Open the .dmg and drag to Applications",
@@ -167,12 +179,24 @@ const translations = {
   vi: {
     // Thanh điều hướng
     "nav.features": "Tính năng",
+    "nav.video": "Video",
     "nav.showcase": "Xem trước",
     "nav.how": "Cách hoạt động",
     "nav.platforms": "Nền tảng",
     "nav.pricing": "Bảng giá",
     "nav.contact": "Liên hệ",
     "nav.download": "Tải miễn phí",
+
+    // Video Section
+    "video.label": "Video",
+    "video.title": "Xem Proximity Lock hoạt động",
+    "video.desc": "Xem cách Proximity Lock tự động bảo vệ Mac của bạn — từ lúc cài đặt đến sử dụng hàng ngày.",
+    "video.player.title": "Proximity Lock — Demo",
+    "video.player.badge": "Xem trên YouTube",
+    "video.duration": "▶ Xem trên YouTube",
+    "video.chip.1": "Demo tự động khoá",
+    "video.chip.2": "Chế độ Café thực tế",
+    "video.chip.3": "Cài đặt iPhone + Mac",
 
     // Phần giới thiệu chính
     "hero.badge": "Bảo mật Bluetooth cho Mac & iPhone",
@@ -311,7 +335,7 @@ const translations = {
     "download.ios.desc": "iPhone trở thành chìa khoá bảo mật Bluetooth.",
     "download.ios.platform": "Nền tảng",
     "download.ios.requires": "Yêu cầu",
-    "download.ios.cta": "Tải trên TestFlight",
+    "download.ios.cta": "Tải trên App Store",
     "download.install.title": "📦 Cài đặt macOS",
     "download.install.step1": "Tải file .dmg ở trên",
     "download.install.step2": "Mở file .dmg và kéo vào thư mục Applications",
