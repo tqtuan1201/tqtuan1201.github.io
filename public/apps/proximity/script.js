@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initParallaxHero();
   initParticleNetwork();
   initVideoPlayer();
+  initChallengeHashtagCopy();
 });
 
 // ── Ambient Particle Canvas — Premium Smooth ────────────────────────
@@ -389,5 +390,43 @@ function initVideoPlayer() {
 
   thumbnail.addEventListener('click', () => {
     window.open(YOUTUBE_URL, '_blank', 'noopener,noreferrer');
+  });
+}
+
+// ── Creator Challenge — Hashtag Copy to Clipboard ─────────────────────
+function initChallengeHashtagCopy() {
+  const btn = document.getElementById('challengeCopyBtn');
+  if (!btn) return;
+
+  btn.addEventListener('click', async () => {
+    const hashtags = btn.getAttribute('data-hashtags') || '#ProximityLock #MacSecurity';
+
+    try {
+      await navigator.clipboard.writeText(hashtags);
+    } catch {
+      // Fallback for older browsers
+      const textarea = document.createElement('textarea');
+      textarea.value = hashtags;
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+    }
+
+    // Visual feedback
+    const label = btn.querySelector('span');
+    const currentLang = document.documentElement.getAttribute('data-lang') || 'en';
+    const copiedText = (currentLang === 'vi') ? 'Đã sao chép ✓' : 'Copied ✓';
+    const originalText = label.textContent;
+
+    btn.classList.add('copied');
+    label.textContent = copiedText;
+
+    setTimeout(() => {
+      btn.classList.remove('copied');
+      label.textContent = originalText;
+    }, 2000);
   });
 }

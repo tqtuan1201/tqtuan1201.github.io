@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creator Challenge — Get Proximity Lock Pro for Free</title>
+  <meta name="description" content="Create a short video about Proximity Lock. 5,000 views = 50% OFF · 10,000 views = lifetime Pro FREE! Step-by-step guide with ready-to-use captions.">
+  <meta property="og:title" content="Creator Challenge — Get Pro for Free!">
+  <meta property="og:description" content="Make a video about Proximity Lock. 5K views = 50% OFF · 10K views = FREE Pro! Ready-to-copy captions included!">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="assets/app-icon.png">
+  <style>
+    /* ═══════════════════════════════════════════════════════════════
+       Challenge Guide — Page-Specific Styles
+       ═══════════════════════════════════════════════════════════════ */
+    .challenge-page { padding-top: 100px; min-height: 100vh; }
+
+    .challenge-page .container { max-width: 780px; }
+
+    /* Back link */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-tertiary);
+      margin-bottom: 32px;
+      transition: color var(--transition-fast);
+    }
+    .back-link:hover { color: var(--text-primary); }
+
+    /* Hero */
+    .guide-hero {
+      text-align: center;
+      padding: 48px 32px;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, rgba(255,215,0,0.06), rgba(255,140,0,0.04), var(--bg-card));
+      border: 1px solid rgba(255,215,0,0.15);
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .guide-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, rgba(255,215,0,0.08), transparent 40%, transparent 60%, rgba(255,140,0,0.05));
+      pointer-events: none;
+      opacity: 0;
+      animation: challenge-hero-shimmer 4s ease-in-out infinite;
+    }
+
+    .guide-hero-icon {
+      width: 88px;
+      height: 88px;
+      margin: 0 auto 20px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, var(--gold-subtle), rgba(255,140,0,0.1));
+      border: 1px solid rgba(255,215,0,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      box-shadow: 0 0 40px var(--gold-glow);
+    }
+
+    .guide-hero h1 {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, var(--gold), var(--deep-amber));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .guide-hero p {
+      font-size: clamp(15px, 1.6vw, 17px);
+      color: var(--text-secondary);
+      line-height: 1.7;
+      max-width: 520px;
+      margin: 0 auto 20px;
+    }
+
+    .guide-reward {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      border-radius: var(--radius-full);
+      background: linear-gradient(135deg, rgba(255,215,0,0.12), rgba(255,140,0,0.08));
+      border: 1px solid rgba(255,215,0,0.2);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    /* Step Cards */
+    .guide-steps { display: flex; flex-direction: column; gap: 20px; margin-bottom: 40px; }
+
+    .guide-step {
+      padding: 24px;
+      border-radius: var(--radius-lg);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      transition: border-color var(--transition-fast);
+    }
+    .guide-step:hover { border-color: rgba(255,215,0,0.12); }
+
+    .guide-step-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .guide-step-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .guide-step-badge.blue { background: rgba(0,122,255,0.12); }
+    .guide-step-badge.orange { background: rgba(255,159,10,0.12); }
+    .guide-step-badge.purple { background: rgba(191,90,242,0.12); }
+    .guide-step-badge.green { background: rgba(48,209,88,0.12); }
+    .guide-step-badge.amber { background: rgba(255,140,0,0.12); }
+
+    .guide-step-meta { flex: 1; }
+
+    .guide-step-label {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+    .guide-step-label.blue { color: var(--accent); }
+    .guide-step-label.orange { color: var(--orange); }
+    .guide-step-label.purple { color: var(--purple); }
+    .guide-step-label.green { color: var(--green); }
+    .guide-step-label.amber { color: var(--deep-amber); }
+
+    .guide-step-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .guide-step-desc {
+      font-size: 14px;
+      color: var(--text-tertiary);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    /* Content Template Cards */
+    .template-lang-toggle {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .template-lang-btn {
+      padding: 5px 14px;
+      border-radius: var(--radius-full);
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.04);
+      color: rgba(255,255,255,0.45);
+    }
+    .template-lang-btn.active {
+      background: rgba(255,159,10,0.25);
+      border-color: rgba(255,159,10,0.4);
+      color: #fff;
+    }
+
+    .template-card {
+      padding: 16px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      margin-bottom: 12px;
+    }
+
+    .template-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 8px;
+    }
+
+    .template-body {
+      font-size: 13px;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.7;
+      white-space: pre-wrap;
+      word-break: break-word;
+      margin-bottom: 12px;
+    }
+
+    .template-copy-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      background: rgba(255,159,10,0.15);
+      border: 1px solid rgba(255,159,10,0.25);
+      color: var(--orange);
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+    .template-copy-btn:hover {
+      background: rgba(255,159,10,0.25);
+      transform: translateY(-1px);
+    }
+    .template-copy-btn.copied {
+      background: rgba(48,209,88,0.15);
+      border-color: rgba(48,209,88,0.25);
+      color: var(--green);
+    }
+
+    /* Hashtag Block */
+    .hashtag-block {
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: rgba(191,90,242,0.06);
+      border: 1px solid rgba(191,90,242,0.12);
+      font-size: 13px;
+      color: var(--purple);
+      font-weight: 500;
+      line-height: 1.7;
+      word-break: break-word;
+      margin-bottom: 12px;
+    }
+
+    .hashtag-copy-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 18px;
+      border-radius: var(--radius-full);
+      background: var(--purple);
+      color: var(--bg-primary);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+    .hashtag-copy-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(191,90,242,0.3); }
+    .hashtag-copy-btn.copied { background: var(--green); }
+
+    /* Platform Pills */
+    .platform-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .platform-pill {
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      background: rgba(48,209,88,0.08);
+      border: 1px solid rgba(48,209,88,0.18);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--green);
+    }
+
+    /* Claim Section */
+    .claim-card {
+      padding: 28px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, rgba(255,140,0,0.08), var(--bg-card));
+      border: 1px solid rgba(255,140,0,0.15);
+      text-align: center;
+    }
+
+    .claim-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 16px 0;
+      font-family: monospace;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+    .claim-email:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,140,0,0.2);
+    }
+    .claim-email.copied {
+      border-color: rgba(48,209,88,0.3);
+      color: var(--green);
+    }
+
+    .claim-subject {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      margin-top: 12px;
+      line-height: 1.6;
+    }
+
+    .claim-subject code {
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.06);
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+
+    /* CTA Bottom */
+    .guide-cta-section {
+      text-align: center;
+      padding: 40px 0;
+    }
+
+    .guide-cta-section .btn-gold { margin-bottom: 16px; }
+
+    .guide-footer-note {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Video guide link */
+    .video-guide-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: var(--radius-lg);
+      background: rgba(255,0,0,0.08);
+      border: 1px solid rgba(255,0,0,0.15);
+      color: #f44;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all var(--transition-fast);
+      margin-top: 12px;
+    }
+    .video-guide-link:hover {
+      background: rgba(255,0,0,0.15);
+      transform: translateY(-2px);
+    }
+
+    /* Claim Row — individual copyable items */
+    .claim-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      margin-bottom: 10px;
+    }
+
+    .claim-row-icon {
+      font-size: 18px;
+      flex-shrink: 0;
+      width: 28px;
+      text-align: center;
+    }
+
+    .claim-row-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .claim-row-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-tertiary);
+      margin-bottom: 2px;
+    }
+
+    .claim-row-value {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      word-break: break-all;
+    }
+
+    .claim-row-value.mono {
+      font-family: 'SF Mono', 'Consolas', monospace;
+      font-size: 13px;
+    }
+
+    .claim-row-copy {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 6px 12px;
+      border-radius: var(--radius-full);
+      background: rgba(255,140,0,0.12);
+      border: 1px solid rgba(255,140,0,0.2);
+      color: var(--deep-amber);
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+    .claim-row-copy:hover {
+      background: rgba(255,140,0,0.2);
+      transform: translateY(-1px);
+    }
+    .claim-row-copy.copied {
+      background: rgba(48,209,88,0.15);
+      border-color: rgba(48,209,88,0.25);
+      color: var(--green);
+    }
+
+    /* One-click send button */
+    .claim-send-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 16px 24px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, var(--gold), var(--deep-amber));
+      color: var(--bg-primary);
+      font-size: 16px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: all var(--transition-fast);
+      margin-top: 16px;
+      letter-spacing: -0.01em;
+    }
+    .claim-send-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px var(--gold-glow);
+    }
+    .claim-send-btn svg { flex-shrink: 0; }
+
+    .claim-lazy-note {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-tertiary);
+      margin-top: 8px;
+    }
+
+    @media (max-width: 767px) {
+      .challenge-page { padding-top: 80px; }
+      .guide-hero { padding: 32px 20px; }
+      .guide-step { padding: 18px; }
+      .claim-row { flex-wrap: wrap; }
+      .claim-row-copy { margin-top: 4px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       NAVBAR (same as index)
+       ═══════════════════════════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">
+          <img src="assets/app-icon.png" alt="Proximity Lock">
+        </div>
+        <span>Proximity Lock</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#how-it-works">How It Works</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="challenge.html" class="nav-challenge active">🎁 Challenge</a></li>
+        <li><a href="index.html#download">Download</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="lang-toggle">
+          <button class="active" data-lang="en">EN</button>
+          <button data-lang="vi">VI</button>
+        </div>
+        <a href="index.html#download" class="btn-primary nav-cta">Download Free</a>
+      </div>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="nav-progress" id="navProgress"></div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       CHALLENGE GUIDE
+       ═══════════════════════════════════════════════════════════════ -->
+  <main class="challenge-page">
+    <div class="container">
+
+      <!-- Back Link -->
+      <a href="index.html" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        Back to Home
+      </a>
+
+      <!-- Hero -->
+      <div class="guide-hero">
+        <div class="guide-hero-icon">🎁</div>
+        <h1>Get Pro for Free!</h1>
+        <p>Create a short video about Proximity Lock.<br>5,000 views = 50% OFF · 10,000 views = FREE Pro!</p>
+        <div class="guide-reward">🏆 5K = 50% OFF · 10K = Lifetime Pro FREE</div>
+      </div>
+
+      <!-- Steps -->
+      <div class="guide-steps">
+
+        <!-- ────────────────────────────────────────────────────────
+             STEP 1: Download the App
+             ──────────────────────────────────────────────────────── -->
+        <div class="guide-step">
+          <div class="guide-step-header">
+            <div class="guide-step-badge blue">📲</div>
+            <div class="guide-step-meta">
+              <div class="guide-step-label blue">STEP 1</div>
+              <div class="guide-step-title">Download the App</div>
+            </div>
+          </div>
+          <p class="guide-step-desc">
+            Get Proximity Lock on both your iPhone and Mac from the App Store. The app uses Bluetooth to auto-lock your Mac when you walk away.
+          </p>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+            <a href="https://apps.apple.com/us/app/proximity-lock-smart-autolock/id6760981832" target="_blank" rel="noopener" class="btn-primary" style="font-size: 14px; padding: 10px 20px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
+              iPhone App
+            </a>
+            <a href="https://www.youtube.com/watch?v=nFAHoENvkYc" target="_blank" rel="noopener" class="video-guide-link" style="margin-top: 0;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Setup Guide
+            </a>
+          </div>
+        </div>
+
+        <!-- ────────────────────────────────────────────────────────
+             STEP 2: Copy Content (3 templates, bilingual)
+             ──────────────────────────────────────────────────────── -->
+        <div class="guide-step" id="step-content">
+          <div class="guide-step-header">
+            <div class="guide-step-badge orange">📝</div>
+            <div class="guide-step-meta">
+              <div class="guide-step-label orange">STEP 2</div>
+              <div class="guide-step-title">Copy Content</div>
+            </div>
+          </div>
+          <p class="guide-step-desc">
+            Pick a ready-made caption below and customize it for your post. Toggle language to get the version you need.
+          </p>
+
+          <!-- Language Toggle -->
+          <div class="template-lang-toggle">
+            <button class="template-lang-btn active" data-template-lang="en" onclick="switchTemplateLang('en')">EN</button>
+            <button class="template-lang-btn" data-template-lang="vi" onclick="switchTemplateLang('vi')">VI</button>
+          </div>
+
+          <!-- Template 1: Nosy Coworker -->
+          <div class="template-card">
+            <div class="template-title">📸 Nosy Coworker / Đồng nghiệp tọc mạch</div>
+            <div class="template-body" data-lang-en>When your coworker has built-in surveillance cameras for eyes 📸👀
+Pro move: Stand up and the Mac locks itself. Good luck snooping on my chats! 😂
+The app is called Proximity Lock — Bluetooth radar that auto-locks your screen like magic. Link in Bio!
+👉 Download link in the comments!
+https://tqtuan1201.github.io/public/apps/proximity/
+🎬 Setup guide: https://www.youtube.com/watch?v=nFAHoENvkYc</div>
+            <div class="template-body" data-lang-vi style="display:none;">Khi bạn có đứa đồng nghiệp gắn camera chạy bằng cơm 📸👀
+Tuyệt chiêu: Đứng lên là máy tự khóa. Đố bà soi được tin nhắn tui chat với bồ! Nghỉ khỏe! 😂
+App tên là Proximity Lock nha mấy ní, radar Bluetooth tự động khóa màn hình siêu ảo. Link tui để ở Bio
+👉 Link tải app ở dưới comment nha!
+https://tqtuan1201.github.io/public/apps/proximity/
+🎬 Hướng dẫn cài đặt: https://www.youtube.com/watch?v=nFAHoENvkYc</div>
+            <button class="template-copy-btn" onclick="copyTemplate(this)">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              Copy Content
+            </button>
+          </div>
+
+          <!-- Template 2: Café Mode -->
+          <div class="template-card">
+            <div class="template-title">☕ Café Mode / Café Mode cứu mạng</div>
+            <div class="template-body" data-lang-en>Real talk: Working at a café, you chug a large iced tea and nature calls 🚽
+A. Hold it until you leave.
+B. Drag your backpack + MacBook + charger into the restroom.
+C. Ask the stranger next to you 'Hey, watch my laptop?'
+D. Use magic.
+Ever since I got Proximity Lock, I pick D. Turn on 'Café Mode', walk away like a boss. Anyone unplugs the charger or closes the lid? ALARM blasts across the whole café. Last time I set it up to test my friend and he literally dropped his drink 🤣.
+If you work at cafés, install this ASAP for peace of mind!
+👉 Download link in the comments!
+https://tqtuan1201.github.io/public/apps/proximity/
+🎬 Setup guide: https://www.youtube.com/watch?v=nFAHoENvkYc</div>
+            <div class="template-body" data-lang-vi style="display:none;">Sự thật mất lòng: Đi làm ở quán cafe, uống ly trà đào size L xong mắc vệ sinh thì phải làm sao? 🚽
+A. Nhịn tới lúc đi về.
+B. Vác cả cái balo + MacBook + cục sạc vào toilet.
+C. Nhờ anh bàn bên 'Anh ơi ngó hộ em cái máy'.
+D. Dùng pháp thuật.
+Từ ngày xài cái app Proximity Lock, tui chọn D mấy bà ạ. Bật 'Café Mode' lên rồi hiên ngang đi vệ sinh. Đứa nào táy máy rút sạc hay gập màn hình là máy nó hú còi báo động ầm cả quán. Thề, hôm trước gài bẫy thử thằng bạn mà nó giật mình rớt luôn ly nước 🤣.
+Ai hay đi làm quán cafe thì cài gấp đi cho nhẹ đầu!
+👉 Link tải app ở dưới comment nha!
+https://tqtuan1201.github.io/public/apps/proximity/
+🎬 Hướng dẫn cài đặt: https://www.youtube.com/watch?v=nFAHoENvkYc</div>
+            <button class="template-copy-btn" onclick="copyTemplate(this)">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              Copy Content
+            </button>
+          </div>
+
+          <!-- Template 3: Prank -->
+          <div class="template-card">
+            <div class="template-title">🚨 Prank Friends / Troll bạn bè cười xỉu</div>
+            <div class="template-body" data-lang-en>Testing my best friend's loyalty with a $2000 MacBook and the result... 🚨🔊
+OMG this charger-unplug alarm app is the BEST prank ever =))) The look on their face — they thought they broke my laptop!!! 😂
+If you wanna prank your friends, download Proximity Lock now. They're even giving away FREE lifetime Pro for making a video about it! 🎁
+👉 Download link in the comments!
+https://tqtuan1201.github.io/public/apps/proximity/
+🎬 Setup guide: https://www.youtube.com/watch?v=nFAHoENvkYc</div>
+            <div class="template-body" data-lang-vi style="display:none;">Thử lòng bạn thân bằng MacBook nghìn đô và cái kết... 🚨🔊
+Trời ơi cài cái app báo động rút sạc này troll bạn bè dính cực kỳ =))) Mặt nó tái mét tưởng làm hỏng máy tui mấy bà ơi!!!
+Ai muốn chơi khăm người yêu thì tải ngay Proximity Lock nha. App đang có vụ làm video được tặng luôn bản Pro vĩnh viễn đó, húp lẹ! 🎁
+👉 Link tải app ở dưới comment nha!
+https://tqtuan1201.github.io/public/apps/proximity/
+🎬 Hướng dẫn cài đặt: https://www.youtube.com/watch?v=nFAHoENvkYc</div>
+            <button class="template-copy-btn" onclick="copyTemplate(this)">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              Copy Content
+            </button>
+          </div>
+        </div>
+
+        <!-- ────────────────────────────────────────────────────────
+             STEP 3: Copy Hashtags
+             ──────────────────────────────────────────────────────── -->
+        <div class="guide-step">
+          <div class="guide-step-header">
+            <div class="guide-step-badge purple">#️⃣</div>
+            <div class="guide-step-meta">
+              <div class="guide-step-label purple">STEP 3</div>
+              <div class="guide-step-title">Copy Hashtags</div>
+            </div>
+          </div>
+          <p class="guide-step-desc">Use these hashtags when posting your content for maximum reach.</p>
+          <div class="hashtag-block" id="hashtagText">#ProximityLock #AutoLock #RemoteLock #RemoteMacControl #ChongTromMacbook #SmartLock #MacSecurity #BuildInPublic #WorkspaceGoals</div>
+          <button class="hashtag-copy-btn" id="hashtagCopyBtn" onclick="copyHashtags()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copy All Hashtags
+          </button>
+        </div>
+
+        <!-- ────────────────────────────────────────────────────────
+             STEP 4: Post on Social Media
+             ──────────────────────────────────────────────────────── -->
+        <div class="guide-step">
+          <div class="guide-step-header">
+            <div class="guide-step-badge green">🚀</div>
+            <div class="guide-step-meta">
+              <div class="guide-step-label green">STEP 4</div>
+              <div class="guide-step-title">Post on Social Media</div>
+            </div>
+          </div>
+          <p class="guide-step-desc">Share your video on any of these platforms. Be creative — the more engaging, the faster you'll hit your tier!</p>
+          <div class="platform-pills">
+            <span class="platform-pill">TikTok</span>
+            <span class="platform-pill">Instagram Reels</span>
+            <span class="platform-pill">YouTube Shorts</span>
+          </div>
+        </div>
+
+        <!-- ────────────────────────────────────────────────────────
+             STEP 5: Claim Your Reward
+             ──────────────────────────────────────────────────────── -->
+        <div class="guide-step">
+          <div class="guide-step-header">
+            <div class="guide-step-badge amber">🏆</div>
+            <div class="guide-step-meta">
+              <div class="guide-step-label amber">STEP 5</div>
+              <div class="guide-step-title">Claim Your Reward</div>
+            </div>
+          </div>
+          <p class="guide-step-desc">Hit 5,000+ views? Awesome! Just click the button below — it opens your email app with everything filled in. Or copy each field manually.</p>
+
+          <!-- Subject Row -->
+          <div class="claim-row">
+            <div class="claim-row-icon">📋</div>
+            <div class="claim-row-content">
+              <div class="claim-row-label">Email Subject</div>
+              <div class="claim-row-value mono" id="claimSubject">[CLAIM PRO] Creator Challenge</div>
+            </div>
+            <button class="claim-row-copy" onclick="copyField(this, 'claimSubject')">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              Copy
+            </button>
+          </div>
+
+          <!-- Email Body Row -->
+          <div class="claim-row" style="align-items: flex-start;">
+            <div class="claim-row-icon" style="margin-top: 2px;">✉️</div>
+            <div class="claim-row-content">
+              <div class="claim-row-label">Email Body</div>
+              <div class="template-body" id="emailTemplateBody" style="margin-bottom: 0;">Hi Proximity Lock Team,
+
+I've completed the Creator Challenge! Here are my details:
+
+🎯 Tier: [5K views = 50% OFF / 10K views = 100% FREE]
+📱 Post Link: [Paste your post link here]
+👀 View Count: [Number of views]
+
+Please find the screenshot of my view count attached.
+
+Thank you!</div>
+            </div>
+            <button class="claim-row-copy" onclick="copyField(this, 'emailTemplateBody')">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              Copy
+            </button>
+          </div>
+
+          <!-- Send To Row -->
+          <div class="claim-row">
+            <div class="claim-row-icon">📧</div>
+            <div class="claim-row-content">
+              <div class="claim-row-label">Send To</div>
+              <div class="claim-row-value mono" id="claimEmailAddr">truongquangtuanit@gmail.com</div>
+            </div>
+            <button class="claim-row-copy" onclick="copyField(this, 'claimEmailAddr')">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              Copy
+            </button>
+          </div>
+
+          <!-- ONE-CLICK SEND — Gmail compose pre-filled -->
+          <a id="claimMailtoBtn" href="#" class="claim-send-btn" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+            ✨ Open Gmail — Everything Pre-filled!
+          </a>
+          <p class="claim-lazy-note">Opens Gmail in a new tab with subject &amp; body filled. Just attach your screenshot and hit Send! 🎉</p>
+        </div>
+
+      </div>
+
+      <!-- CTA Bottom -->
+      <div class="guide-cta-section">
+        <a href="https://apps.apple.com/us/app/proximity-lock-smart-autolock/id6760981832" target="_blank" rel="noopener" class="btn-gold">
+          <span>Download & Start the Challenge</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <p class="guide-footer-note">
+          ℹ️ Pro access is granted via official Apple Promo Code after manual verification. No subscription, no strings attached.
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <div class="logo-icon">
+            <img src="assets/app-icon.png" alt="Proximity Lock">
+          </div>
+          <span>Proximity Lock</span>
+        </div>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <p class="footer-copyright">© 2026 Proximity Lock. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // ── Template Language Toggle ──────────────────────────────────
+    function switchTemplateLang(lang) {
+      // Update toggle buttons
+      document.querySelectorAll('.template-lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.templateLang === lang);
+      });
+
+      // Show/hide template bodies
+      document.querySelectorAll('.template-body[data-lang-en]').forEach(el => {
+        el.style.display = lang === 'en' ? '' : 'none';
+      });
+      document.querySelectorAll('.template-body[data-lang-vi]').forEach(el => {
+        el.style.display = lang === 'vi' ? '' : 'none';
+      });
+    }
+
+    // ── Copy Template Content ────────────────────────────────────
+    function copyTemplate(btn) {
+      const card = btn.closest('.template-card');
+      const visibleBody = card.querySelector('.template-body:not([style*="display:none"]):not([style*="display: none"])');
+      if (!visibleBody) return;
+
+      const text = visibleBody.textContent.trim();
+      copyToClipboard(text);
+
+      // Reset all other copy buttons
+      document.querySelectorAll('.template-copy-btn').forEach(b => {
+        b.classList.remove('copied');
+        b.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy Content';
+      });
+
+      // Feedback
+      btn.classList.add('copied');
+      btn.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Copied ✓';
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        btn.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy Content';
+      }, 2500);
+    }
+
+    // ── Copy Hashtags ────────────────────────────────────────────
+    function copyHashtags() {
+      const text = document.getElementById('hashtagText').textContent.trim();
+      copyToClipboard(text);
+
+      const btn = document.getElementById('hashtagCopyBtn');
+      btn.classList.add('copied');
+      btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Copied ✓';
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy All Hashtags';
+      }, 2500);
+    }
+
+    // ── Copy Email ───────────────────────────────────────────────
+    function copyEmail() {
+      copyToClipboard('truongquangtuanit@gmail.com');
+      const el = document.getElementById('claimEmail');
+      if (!el) return;
+      el.classList.add('copied');
+      el.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Copied ✓';
+      setTimeout(() => {
+        el.classList.remove('copied');
+        el.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg> truongquangtuanit@gmail.com';
+      }, 2500);
+    }
+
+    // ── Copy Any Field (unified) ─────────────────────────────────
+    function copyField(btn, elementId) {
+      const text = document.getElementById(elementId).textContent.trim();
+      copyToClipboard(text);
+      btn.classList.add('copied');
+      const origHTML = btn.innerHTML;
+      btn.innerHTML = '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Copied ✓';
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        btn.innerHTML = origHTML;
+      }, 2500);
+    }
+
+    // ── Build Gmail compose link on load ────────────────────────
+    document.addEventListener('DOMContentLoaded', () => {
+      const mailtoBtn = document.getElementById('claimMailtoBtn');
+      if (mailtoBtn) {
+        const to = 'truongquangtuanit@gmail.com';
+        const subject = encodeURIComponent('[CLAIM PRO] Creator Challenge');
+        const body = encodeURIComponent(
+          document.getElementById('emailTemplateBody').textContent.trim()
+        );
+        mailtoBtn.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`;
+        mailtoBtn.target = '_blank';
+        mailtoBtn.rel = 'noopener';
+      }
+    });
+
+    // ── Clipboard Utility ────────────────────────────────────────
+    async function copyToClipboard(text) {
+      try {
+        await navigator.clipboard.writeText(text);
+      } catch {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      }
+    }
+
+    // ── Navbar scroll effect (reused from main site) ─────────────
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      if (nav) nav.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    // ── Mobile menu toggle ───────────────────────────────────────
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (mobileToggle && navLinks) {
+      mobileToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+        mobileToggle.classList.toggle('active');
+      });
+    }
+  </script>
+
+</body>
+</html>
