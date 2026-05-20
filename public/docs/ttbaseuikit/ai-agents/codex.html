@@ -19,28 +19,21 @@
             <div class="prose dark:prose-invert max-w-3xl mx-auto">
                 <div class="flex items-center gap-3 mb-6">
                     <h1 class="text-4xl font-extrabold m-0">OpenAI Codex</h1>
-                    <span class="badge badge-amber">Coming Soon</span>
+                    <span class="badge badge-green">Supported</span>
                 </div>
-                <p>OpenAI Codex CLI integration for TTBaseUIKit is being developed. Codex reads <code>AGENTS.md</code> files to understand project conventions.</p>
+                <p>OpenAI Codex can use the shared TTBaseUIKit Agent Skills package from <code>Agents/Antigravity/Installation/Codex/</code>. The package installs reusable skills for UIKit, SwiftUI, bug fixing, refactoring, audits, and xcodebuild verification.</p>
 
                 <hr>
-                <h2>🔧 Planned Setup</h2>
-                <p>Create an <code>AGENTS.md</code> at your project root:</p>
+                <h2>🔧 Setup</h2>
+                <p>Install the Codex skill package from the repository:</p>
 
-<pre><code class="language-markdown"># AGENTS.md — TTBaseUIKit Codex Configuration
+<pre><code class="language-bash">cd Agents/Antigravity/Installation/Codex
+bash install.sh</code></pre>
 
-## Project Type: iOS Framework
-## Target: iOS 14+
-## Architecture: MVVM + Coordinator
+                <p>Installed skills land in <code>~/.agents/skills/</code> and are available across repositories.</p>
 
-## Conventions
-- Use TTBaseUIKit base classes for all views
-- SwiftUI: SUIBaseView for navigation
-- UIKit: ViewCodable protocol for view setup
-- Config access: XView, XSize, XFont shortcuts</code></pre>
-
-                <div class="info-box warning">
-                    <strong>Status:</strong> OpenAI Codex integration is under development. Check back for updates or <a href="https://github.com/tqtuan1201/TTBaseUIKit" target="_blank">watch the repository</a> for announcements.
+                <div class="info-box tip">
+                    <strong>Available workflows:</strong> <code>/ttb-init</code>, <code>/ttb-uikit</code>, <code>/ttb-swiftui</code>, <code>/ttb-native</code>, <code>/ttb-bugfix</code>, <code>/ttb-refactor</code>, and <code>/ttb-audit</code>.
                 </div>
 
                 <a href="index.html" class="inline-flex items-center gap-2 text-primary hover:underline mt-8">← Back to AI Agents Hub</a>

@@ -5,7 +5,7 @@
     <script src="../js/theme-init.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Agents Hub — TTBaseUIKit Documentation</title>
-    <meta name="description" content="Configure AI coding agents for TTBaseUIKit: Copilot, Claude Code, Xcode Agent Skills, Codex, and Gemini. 17 agents, 27 prompts, 11 instructions.">
+    <meta name="description" content="Configure AI coding agents for TTBaseUIKit with the standard Agent Skills package, Copilot agents, Claude Code, Codex, Cursor/Antigravity, and Gemini. 8 shared skills, 44 shared prompts, 17 Copilot agents, 27 Copilot prompts, 11 instructions.">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#3b82f6' } } } }</script>
     <link rel="stylesheet" href="../css/style.css">
@@ -23,26 +23,41 @@
                 <div class="flex items-center gap-3 mb-2">
                     <h1 class="text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">✨ AI Agents Hub</h1>
                 </div>
-                <p class="text-lg text-slate-600 dark:text-slate-400 mb-8">TTBaseUIKit is custom-built for AI-assisted development. Configure your coding agents with our pre-built instructions, 17 specialized agents, and 27 prompt templates.</p>
+                <p class="text-lg text-slate-600 dark:text-slate-400 mb-8">TTBaseUIKit is custom-built for AI-assisted development. The <code>Agents/Antigravity/</code> folder is the source package for the shared TTBaseUIKit Agent Skills, not a single-tool-only integration. The same skill set can be installed for Codex, Claude Code, Cursor/Antigravity-style skill runners, and other tools that understand <code>SKILL.md</code>.</p>
 
                 <!-- Stats -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
                     <div class="glass-card p-4 text-center">
                         <div class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">17</div>
-                        <div class="text-xs text-slate-500">Agents</div>
+                        <div class="text-xs text-slate-500">Copilot Agents</div>
                     </div>
                     <div class="glass-card p-4 text-center">
-                        <div class="text-2xl font-bold bg-gradient-to-r from-purple-500 to-pink-400 bg-clip-text text-transparent">27</div>
-                        <div class="text-xs text-slate-500">Prompts</div>
+                        <div class="text-2xl font-bold bg-gradient-to-r from-purple-500 to-pink-400 bg-clip-text text-transparent">8</div>
+                        <div class="text-xs text-slate-500">Shared Skills</div>
                     </div>
                     <div class="glass-card p-4 text-center">
-                        <div class="text-2xl font-bold bg-gradient-to-r from-green-500 to-emerald-400 bg-clip-text text-transparent">11</div>
+                        <div class="text-2xl font-bold bg-gradient-to-r from-green-500 to-emerald-400 bg-clip-text text-transparent">71</div>
+                        <div class="text-xs text-slate-500">Prompt Templates</div>
+                    </div>
+                    <div class="glass-card p-4 text-center">
+                        <div class="text-2xl font-bold bg-gradient-to-r from-amber-500 to-orange-400 bg-clip-text text-transparent">11</div>
                         <div class="text-xs text-slate-500">Instructions</div>
                     </div>
-                    <div class="glass-card p-4 text-center">
-                        <div class="text-2xl font-bold bg-gradient-to-r from-amber-500 to-orange-400 bg-clip-text text-transparent">5</div>
-                        <div class="text-xs text-slate-500">AI Tools</div>
-                    </div>
+                </div>
+
+                <!-- Shared Skills Package -->
+                <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">Shared Agent Skills Package</h2>
+                <div class="component-grid mb-12">
+                    <a href="antigravity.html" class="component-card">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="w-10 h-10 rounded-xl bg-gradient-to-br from-fuchsia-500 to-violet-700 flex items-center justify-center text-xl">🚀</span>
+                            <div>
+                                <h3 class="m-0">TTBaseUIKit Agent Skills</h3>
+                                <span class="badge badge-green">Standard Package</span>
+                            </div>
+                        </div>
+                        <p>Reusable skill package in <code>Agents/Antigravity/</code>: 8 skill sets, 44 prompt templates, 11 Iron Laws, FCR scoring, and xcodebuild verification.</p>
+                    </a>
                 </div>
 
                 <!-- AI Tool Cards -->
@@ -56,7 +71,7 @@
                                 <span class="badge badge-green">Full Support</span>
                             </div>
                         </div>
-                        <p>Custom instructions, 17 agents, 27 prompt templates. Deep integration with `.github/` configuration.</p>
+                        <p>Custom instructions, 17 agents, and 27 prompt templates from <code>Agents/copilot/</code> for repeatable iOS code operations.</p>
                     </a>
 
                     <a href="claude-code.html" class="component-card">
@@ -67,7 +82,18 @@
                                 <span class="badge badge-green">Supported</span>
                             </div>
                         </div>
-                        <p>CLAUDE.md setup with architecture rules, MVVM conventions, and routing patterns for TTBaseUIKit.</p>
+                        <p>Install the shared skill package to <code>~/.claude/skills/</code> with the Claude Code installer.</p>
+                    </a>
+
+                    <a href="antigravity.html" class="component-card">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="w-10 h-10 rounded-xl bg-gradient-to-br from-fuchsia-500 to-violet-700 flex items-center justify-center text-xl">🧩</span>
+                            <div>
+                                <h3 class="m-0">Cursor / Antigravity</h3>
+                                <span class="badge badge-green">Supported</span>
+                            </div>
+                        </div>
+                        <p>Use the root installer package for compatible skill runners. The same TTBaseUIKit skills are installed from <code>Agents/Antigravity/Installation/</code>.</p>
                     </a>
 
                     <a href="xcode-agent-skills.html" class="component-card">
@@ -86,10 +112,10 @@
                             <span class="w-10 h-10 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-xl">⚡</span>
                             <div>
                                 <h3 class="m-0">OpenAI Codex</h3>
-                                <span class="badge badge-amber">Coming Soon</span>
+                                <span class="badge badge-green">Supported</span>
                             </div>
                         </div>
-                        <p>AGENTS.md configuration for Codex CLI. Planned deep integration with TTBaseUIKit patterns.</p>
+                        <p>Install the shared skill package to <code>~/.agents/skills/</code> with the Codex installer.</p>
                     </a>
 
                     <a href="gemini.html" class="component-card">
@@ -106,9 +132,40 @@
 
                 <hr class="my-12 border-slate-200 dark:border-slate-800">
 
+                <!-- Shared Skills Catalog -->
+                <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">🚀 Shared Skill Sets (8)</h2>
+                <p class="text-slate-600 dark:text-slate-400 mb-6">Enterprise-grade iOS workflows in <code>Agents/Antigravity/</code>. These are packaged for Codex, Claude Code, Cursor, and compatible Agent Skills runners:</p>
+
+                <table class="api-table mb-12">
+                    <thead><tr><th>Skill</th><th>Load Level</th><th>Purpose</th></tr></thead>
+                    <tbody>
+                        <tr><td><code>antigravity-root</code></td><td><span class="badge badge-green">Root</span></td><td>MVVM-C workflow, UIKit + SwiftUI rules, xcodebuild verification, zero regression</td></tr>
+                        <tr><td><code>ttb-skill-init</code></td><td><span class="badge badge-blue">Always</span></td><td>Project setup, TTBaseUIKitConfig, localization, MVVM-C folder structure</td></tr>
+                        <tr><td><code>ttb-skill-uikit</code></td><td><span class="badge badge-purple">Domain</span></td><td>UIKit screen, list, form, cell, custom view, API, coordinator, ViewModel</td></tr>
+                        <tr><td><code>ttb-skill-swiftui</code></td><td><span class="badge badge-purple">Domain</span></td><td>TTBaseSUI screens/views, SUIBaseView navigation, native SwiftUI fallback</td></tr>
+                        <tr><td><code>ttb-skill-native-swiftui-components</code></td><td><span class="badge badge-purple">Domain</span></td><td>Native SwiftUI components using TTBaseUIKit design tokens, iOS 14+</td></tr>
+                        <tr><td><code>ttb-skill-bugfix</code></td><td><span class="badge badge-red">Domain</span></td><td>Root cause analysis, minimal fix strategy, xcodebuild verify, zero regression</td></tr>
+                        <tr><td><code>ttb-skill-refactor</code></td><td><span class="badge badge-green">Domain</span></td><td>Migrate to TTViewCodable, replace raw UIKit, adopt TTBaseSUI, clean MVVM separation</td></tr>
+                        <tr><td><code>ttb-skill-audit</code></td><td><span class="badge badge-amber">On Demand</span></td><td>Performance, accessibility, localization audits with FCR compliance scoring</td></tr>
+                    </tbody>
+                </table>
+
+                <!-- Install Targets -->
+                <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">⚙️ Install Targets</h2>
+                <p class="text-slate-600 dark:text-slate-400 mb-6">The repository includes ready-made installers and archives under <code>Agents/Antigravity/Installation/</code>:</p>
+
+                <table class="api-table mb-12">
+                    <thead><tr><th>Tool</th><th>Installer</th><th>Install Location</th></tr></thead>
+                    <tbody>
+                        <tr><td>Codex</td><td><code>Agents/Antigravity/Installation/Codex/install.sh</code></td><td><code>~/.agents/skills/</code></td></tr>
+                        <tr><td>Claude Code</td><td><code>Agents/Antigravity/Installation/ClaudeCode/install.sh</code></td><td><code>~/.claude/skills/</code></td></tr>
+                        <tr><td>Cursor / Antigravity-compatible skill runners</td><td><code>Agents/Antigravity/Installation/install.sh</code></td><td><code>~/.cursor/skills/</code></td></tr>
+                    </tbody>
+                </table>
+
                 <!-- Agents Catalog -->
-                <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">📋 Agents Catalog (17)</h2>
-                <p class="text-slate-600 dark:text-slate-400 mb-6">Pre-built agents in <code>.github/agents/</code> for automated code operations:</p>
+                <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">📋 Copilot Agents Catalog (17)</h2>
+                <p class="text-slate-600 dark:text-slate-400 mb-6">Pre-built agents in <code>Agents/copilot/agents/</code> for automated code operations:</p>
 
                 <table class="api-table mb-12">
                     <thead><tr><th>Agent</th><th>Category</th><th>Description</th></tr></thead>
@@ -134,8 +191,8 @@
                 </table>
 
                 <!-- Prompts Catalog -->
-                <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">📝 Prompt Templates (27)</h2>
-                <p class="text-slate-600 dark:text-slate-400 mb-6">Ready-to-use prompts in <code>.github/prompts/</code>:</p>
+                <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">📝 Copilot Prompt Templates (27)</h2>
+                <p class="text-slate-600 dark:text-slate-400 mb-6">Ready-to-use prompts in <code>Agents/copilot/prompts/</code>:</p>
 
                 <table class="api-table mb-12">
                     <thead><tr><th>Prompt</th><th>Category</th><th>Description</th></tr></thead>
@@ -171,8 +228,8 @@
                 </table>
 
                 <!-- Instructions -->
-                <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">📚 Instruction Files (11)</h2>
-                <p class="text-slate-600 dark:text-slate-400 mb-6">Architecture patterns in <code>.github/instructions/</code>:</p>
+                <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">📚 Copilot Instruction Files (11)</h2>
+                <p class="text-slate-600 dark:text-slate-400 mb-6">Architecture patterns in <code>Agents/copilot/instructions/</code>:</p>
 
                 <table class="api-table mb-12">
                     <thead><tr><th>Instruction</th><th>Framework</th><th>Description</th></tr></thead>
@@ -192,7 +249,7 @@
                 </table>
 
                 <div class="info-box tip">
-                    <strong>Pro Tip:</strong> Check the <code>.github/prompts/</code> folder inside the <a href="https://github.com/tqtuan1201/TTBaseUIKit" target="_blank">open source repository</a> to see exact prompts that generate UI perfectly!
+                    <strong>Pro Tip:</strong> Check <code>Agents/Antigravity/ttb-skill-registry.md</code> and <code>Agents/copilot/</code> inside the repository to see the exact skill routing, prompts, and instruction files used by TTBaseUIKit agents.
                 </div>
             </div>
         </main>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/theme-init.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTBaseUIKit Agent Skills — AI Agents</title>
+    <meta name="description" content="Shared TTBaseUIKit Agent Skills package from Agents/Antigravity: install for Codex, Claude Code, Cursor/Antigravity-compatible tools, and other SKILL.md runners.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#3b82f6' } } } }</script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+</head>
+<body class="antialiased min-h-screen flex flex-col pt-16">
+    <script>window.TTBase = '..';</script>
+    <div id="site-header"></div>
+    <div class="max-w-screen-2xl mx-auto flex-1 w-full flex">
+        <div id="site-sidebar"></div>
+        <main class="flex-1 min-w-0 py-10 px-4 sm:px-6 lg:px-8 xl:pr-24">
+            <div class="prose dark:prose-invert max-w-4xl mx-auto">
+                <div class="flex items-center gap-3 mb-6">
+                    <h1 class="text-4xl font-extrabold m-0">TTBaseUIKit Agent Skills</h1>
+                    <span class="badge badge-green">Shared Package</span>
+                </div>
+                <p><code>Agents/Antigravity/</code> is the repository source for the standard TTBaseUIKit Agent Skills package. The folder name is historical; the skill set is tool-agnostic and can be installed for Codex, Claude Code, Cursor/Antigravity-compatible runners, and other tools that support <code>SKILL.md</code>.</p>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 not-prose my-8">
+                    <div class="glass-card p-4 text-center">
+                        <div class="text-2xl font-bold text-blue-500">8</div>
+                        <div class="text-xs text-slate-500">Skill Sets</div>
+                    </div>
+                    <div class="glass-card p-4 text-center">
+                        <div class="text-2xl font-bold text-emerald-500">44</div>
+                        <div class="text-xs text-slate-500">Prompts</div>
+                    </div>
+                    <div class="glass-card p-4 text-center">
+                        <div class="text-2xl font-bold text-amber-500">11</div>
+                        <div class="text-xs text-slate-500">Iron Laws</div>
+                    </div>
+                    <div class="glass-card p-4 text-center">
+                        <div class="text-2xl font-bold text-purple-500">7</div>
+                        <div class="text-xs text-slate-500">FCR Dimensions</div>
+                    </div>
+                </div>
+
+                <h2>Install Targets</h2>
+                <table class="api-table">
+                    <thead><tr><th>Tool</th><th>Command</th><th>Destination</th></tr></thead>
+                    <tbody>
+                        <tr><td>Codex</td><td><code>cd Agents/Antigravity/Installation/Codex && bash install.sh</code></td><td><code>~/.agents/skills/</code></td></tr>
+                        <tr><td>Claude Code</td><td><code>cd Agents/Antigravity/Installation/ClaudeCode && bash install.sh</code></td><td><code>~/.claude/skills/</code></td></tr>
+                        <tr><td>Cursor / Antigravity-compatible runners</td><td><code>cd Agents/Antigravity/Installation && bash install.sh</code></td><td><code>~/.cursor/skills/</code></td></tr>
+                    </tbody>
+                </table>
+
+                <h2>Quick Routing</h2>
+                <table class="api-table">
+                    <thead><tr><th>Command</th><th>Skill</th><th>Use For</th></tr></thead>
+                    <tbody>
+                        <tr><td><code>/ttb-init</code></td><td><code>ttb-skill-init</code></td><td>New project setup, configuration, localization, TTBDebugPlus</td></tr>
+                        <tr><td><code>/ttb-uikit</code></td><td><code>ttb-skill-uikit</code></td><td>UIKit screen, list, form, cell, custom view, API, coordinator, ViewModel</td></tr>
+                        <tr><td><code>/ttb-swiftui</code></td><td><code>ttb-skill-swiftui</code></td><td>TTBaseSUI screens/views, SUIBaseView navigation, SwiftUI ViewModel</td></tr>
+                        <tr><td><code>/ttb-native</code></td><td><code>ttb-skill-native-swiftui-components</code></td><td>Native SwiftUI components with TTView, TTSize, and TTFont tokens</td></tr>
+                        <tr><td><code>/ttb-bugfix</code></td><td><code>ttb-skill-bugfix</code></td><td>Root cause analysis, fix strategy, regression guard</td></tr>
+                        <tr><td><code>/ttb-refactor</code></td><td><code>ttb-skill-refactor</code></td><td>TTViewCodable migration, raw UIKit replacement, TTBaseSUI adoption</td></tr>
+                        <tr><td><code>/ttb-audit</code></td><td><code>ttb-skill-audit</code></td><td>Performance, accessibility, localization, and FCR audits</td></tr>
+                    </tbody>
+                </table>
+
+                <h2>Workflow Guarantees</h2>
+                <ul>
+                    <li><strong>iOS 14+ only:</strong> newer APIs require availability guards.</li>
+                    <li><strong>TTBaseUIKit first:</strong> use TTBaseUIKit components before raw UIKit.</li>
+                    <li><strong>TTViewCodable MVVM:</strong> UIKit screens keep view setup structured and ViewModels UI-free.</li>
+                    <li><strong>TTBaseSUI first for SwiftUI:</strong> native SwiftUI is a fallback when TTBaseSUI lacks a component.</li>
+                    <li><strong>xcodebuild verification:</strong> workflows require CLI build verification and post-build checks.</li>
+                    <li><strong>Zero regression:</strong> changes are reviewed through FCR 7-Dimension compliance scoring.</li>
+                </ul>
+
+                <h2>Prompt Coverage</h2>
+                <table class="api-table">
+                    <thead><tr><th>Area</th><th>Prompts</th><th>Examples</th></tr></thead>
+                    <tbody>
+                        <tr><td>UIKit</td><td>8</td><td><code>ttb-skill-screen</code>, <code>ttb-skill-list</code>, <code>ttb-skill-coordinator</code></td></tr>
+                        <tr><td>SwiftUI</td><td>6</td><td><code>ttb-skill-sui-screen</code>, <code>ttb-skill-sui-list</code>, <code>ttb-skill-native-view</code></td></tr>
+                        <tr><td>Native SwiftUI Components</td><td>20</td><td><code>ttb-skill-native-button</code>, <code>ttb-skill-native-card</code>, <code>ttb-skill-native-bottom-sheet</code></td></tr>
+                        <tr><td>Initialization</td><td>5</td><td><code>ttb-skill-init</code>, <code>ttb-skill-init-localization</code>, <code>ttb-skill-init-debug</code></td></tr>
+                        <tr><td>Quality</td><td>5</td><td><code>ttb-skill-bugfix</code>, <code>ttb-skill-refactor</code>, <code>ttb-skill-audit-performance</code></td></tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box tip">
+                    <strong>Source:</strong> This page is summarized from <code>Agents/Antigravity/SKILL.md</code>, <code>Agents/Antigravity/Installation/INSTALL.md</code>, and the Codex/Claude Code installation guides.
+                </div>
+
+                <a href="index.html" class="inline-flex items-center gap-2 text-primary hover:underline mt-8">← Back to AI Agents Hub</a>
+            </div>
+        </main>
+    </div>
+    <div id="site-footer"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markdown.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/components.js"></script>
+    <script src="../js/search.js"></script>
+</body>
+</html>

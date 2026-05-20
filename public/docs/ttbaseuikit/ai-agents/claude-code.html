@@ -5,7 +5,7 @@
     <script src="../js/theme-init.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Claude Code — TTBaseUIKit AI Agents</title>
-    <meta name="description" content="Configure Claude Code for TTBaseUIKit development with architecture rules and MVVM conventions.">
+    <meta name="description" content="Install the shared TTBaseUIKit Agent Skills package for Claude Code with architecture rules, MVVM conventions, and xcodebuild verification.">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#3b82f6' } } } }</script>
     <link rel="stylesheet" href="../css/style.css">
@@ -23,49 +23,21 @@
                     <h1 class="text-4xl font-extrabold m-0">Claude Code</h1>
                     <span class="badge badge-green">Supported</span>
                 </div>
-                <p>Claude Code reads the <code>CLAUDE.md</code> file at your project root to follow TTBaseUIKit architecture conventions and patterns.</p>
+                <p>Claude Code can use the shared TTBaseUIKit Agent Skills package from <code>Agents/Antigravity/Installation/ClaudeCode/</code>. The installed skills include UIKit, SwiftUI, native component, bugfix, refactor, audit, and shared verification workflows.</p>
 
                 <hr>
                 <h2>🔧 Setup</h2>
-                <p>Create a <code>CLAUDE.md</code> file in your project root:</p>
+                <p>Install the Claude Code package from the repository:</p>
 
-<pre><code class="language-markdown"># CLAUDE.md — TTBaseUIKit Project Instructions
+<pre><code class="language-bash">cd Agents/Antigravity/Installation/ClaudeCode
+bash install.sh
+claude skills list</code></pre>
 
-## Architecture
-- Use MVVM pattern with TTBaseUIKit base classes
-- Target: iOS 14+ minimum deployment
-- UI Framework: UIKit (programmatic) and SwiftUI (declarative)
-- Navigation: Use SUIBaseView instead of NavigationStack for SwiftUI
+                <p>Skills land in <code>~/.claude/skills/</code> and are available to Claude Code sessions.</p>
 
-## UIKit Screen Pattern
-```
-FeatureName/
-├── FeatureViewController.swift    // extends TTBaseUIViewController
-├── CustomView/
-│   └── FeatureView.swift          // custom views
-└── ViewModel/
-    └── FeatureViewModel.swift     // view model
-```
-
-## SwiftUI Screen Pattern
-```
-FeatureName/
-├── FeatureView.swift              // uses SUIBaseView
-├── FeatureViewModel.swift         // ObservableObject
-└── CustomViews/
-    └── FeatureSubView.swift       // child views
-```
-
-## Config Access
-- Colors: XView.buttonBgDef, XView.viewBgNavColor, etc.
-- Sizes: XSize.H_BUTTON, XSize.CORNER_RADIUS, etc.
-- Fonts: XFont.HEADER_H, XFont.TITLE_H, etc.
-
-## Rules
-- Use `self.` prefix for all property access
-- All views implement ViewCodable protocol (UIKit)
-- Use iOS 14-compatible APIs only
-- Append: [TTBaseUIKit-AI-Agents]: TTBaseUIKit Agent Support is active 🚀</code></pre>
+                <div class="info-box tip">
+                    <strong>Available workflows:</strong> <code>/ttb-init</code>, <code>/ttb-uikit</code>, <code>/ttb-swiftui</code>, <code>/ttb-native</code>, <code>/ttb-bugfix</code>, <code>/ttb-refactor</code>, and <code>/ttb-audit</code>.
+                </div>
 
                 <a href="index.html" class="inline-flex items-center gap-2 text-primary hover:underline mt-8">← Back to AI Agents Hub</a>
             </div>

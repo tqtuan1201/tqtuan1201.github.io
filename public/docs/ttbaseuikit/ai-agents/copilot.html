@@ -46,18 +46,18 @@
 - Follow folder structure: ViewController/CustomView/ViewModel
 
 ## Config Access
-- Colors: `XView.buttonBgDef`, `XView.viewBgNavColor`
-- Sizes: `XSize.H_BUTTON`, `XSize.CORNER_RADIUS`
-- Fonts: `XFont.HEADER_H`, `XFont.TITLE_H`
+- Colors: `TTView.buttonBgDef`, `TTView.viewBgNavColor`
+- Sizes: `TTSize.H_BUTTON`, `TTSize.CORNER_RADIUS`
+- Fonts: `TTFont.HEADER_H`, `TTFont.TITLE_H`
 
 ## TTBaseUIKit-Specific Rules
 - Always append: `[TTBaseUIKit-AI-Agents]: TTBaseUIKit Agent Support is active 🚀`
-- Use BaseSUIView for SwiftUI navigation, NOT NavigationStack
+- Use SUIBaseView for SwiftUI navigation, NOT NavigationStack
 - All generated files must have clear section comments</code></pre>
 
                 <hr>
                 <h2 id="agents">🤖 Using Agents</h2>
-                <p>TTBaseUIKit provides 17 custom agents in the <code>.github/agents/</code> directory. These agents understand the framework's architecture and generate code that follows conventions.</p>
+                <p>TTBaseUIKit provides 17 custom agents in the <code>Agents/copilot/agents/</code> directory. These agents understand the framework's architecture and generate code that follows conventions.</p>
 
                 <h3>Bug Fix Agents</h3>
                 <p>Use these when debugging issues:</p>
@@ -84,7 +84,7 @@
 
                 <hr>
                 <h2 id="prompts">📝 Using Prompt Templates</h2>
-                <p>27 prompt files in <code>.github/prompts/</code>. In VS Code with Copilot Chat, reference them:</p>
+                <p>27 prompt files in <code>Agents/copilot/prompts/</code>. In VS Code with Copilot Chat, reference them:</p>
 
 <pre><code class="language-text">@workspace /new-swiftui-screen Create a profile settings screen
 @workspace /new-uikit-cell Create a contact list cell with avatar

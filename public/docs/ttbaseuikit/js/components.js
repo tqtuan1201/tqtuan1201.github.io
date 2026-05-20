@@ -63,6 +63,7 @@ const NAV_SECTIONS = [
         title: 'AI Agents',
         items: [
             { label: 'Overview', href: 'ai-agents/index.html', icon: '✨' },
+            { label: 'Agent Skills Package', href: 'ai-agents/antigravity.html', icon: '' },
             { label: 'GitHub Copilot', href: 'ai-agents/copilot.html', icon: '' },
             { label: 'Claude Code', href: 'ai-agents/claude-code.html', icon: '' },
             { label: 'Xcode Agent Skills', href: 'ai-agents/xcode-agent-skills.html', icon: '' },
