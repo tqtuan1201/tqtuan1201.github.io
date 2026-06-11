@@ -795,7 +795,7 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════════
-       DIRECT DOWNLOAD
+       DOWNLOAD
        ═══════════════════════════════════════════════════════════════ -->
   <section class="section direct-download" id="download">
     <div class="container">
@@ -808,32 +808,31 @@
           Get Proximity Lock Now
         </h2>
         <p class="section-subtitle reveal reveal-delay-2" data-i18n="download.desc">
-          Download directly — no App Store, no waiting. Install and protect your Mac in seconds.
+          Available on the App Store for Mac and iPhone. Install and protect your Mac in seconds.
         </p>
       </div>
 
       <div class="download-grid">
-        <!-- macOS Direct Download -->
-        <div class="download-card download-card-featured reveal">
+        <!-- macOS App Store -->
+        <div class="download-card download-card-mac download-card-featured reveal">
+          <span class="download-ribbon" data-i18n="download.mac.ribbon">For Mac</span>
           <div class="download-card-glow"></div>
-          <div class="download-card-icon">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="3" width="20" height="14" rx="2"/>
-              <line x1="8" y1="21" x2="16" y2="21"/>
-              <line x1="12" y1="17" x2="12" y2="21"/>
+          <div class="download-card-icon download-card-icon-mac">
+            <svg width="40" height="40" viewBox="0 0 384 512" aria-hidden="true">
+              <path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
             </svg>
           </div>
           <h3 data-i18n="download.mac.title">macOS App</h3>
-          <p class="download-card-desc" data-i18n="download.mac.desc">Direct download — install without the App Store.</p>
-          
+          <p class="download-card-desc" data-i18n="download.mac.desc">Get it from the Mac App Store — automatic updates included.</p>
+
           <div class="download-meta">
             <div class="download-meta-item">
-              <span class="download-meta-label" data-i18n="download.mac.format">Format</span>
-              <span class="download-meta-value">.dmg Installer</span>
+              <span class="download-meta-label" data-i18n="download.mac.format">Source</span>
+              <span class="download-meta-value" data-i18n="download.mac.formatValue">Mac App Store</span>
             </div>
             <div class="download-meta-item">
-              <span class="download-meta-label" data-i18n="download.mac.size">Size</span>
-              <span class="download-meta-value">~6 MB</span>
+              <span class="download-meta-label" data-i18n="download.mac.platform">Platform</span>
+              <span class="download-meta-value">Mac</span>
             </div>
             <div class="download-meta-item">
               <span class="download-meta-label" data-i18n="download.mac.requires">Requires</span>
@@ -841,29 +840,31 @@
             </div>
           </div>
 
-          <a href="apps/Proximity-Lock-Installer.dmg" download class="btn-primary btn-glow download-btn" id="download-macos-btn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-              <polyline points="7 10 12 15 17 10"/>
-              <line x1="12" y1="15" x2="12" y2="3"/>
+          <a href="https://apps.apple.com/us/app/proximity-lock-smart-autolock/id6760981832?platform=mac" target="_blank" rel="noopener" class="appstore-badge appstore-badge-mac" id="download-macos-btn">
+            <svg class="appstore-badge-logo" width="26" height="26" viewBox="0 0 384 512" aria-hidden="true">
+              <path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
             </svg>
-            <span data-i18n="download.mac.cta">Download for macOS</span>
+            <span class="appstore-badge-text">
+              <small data-i18n="download.badge.pre">Download on the</small>
+              <strong data-i18n="download.mac.cta">Mac App Store</strong>
+            </span>
           </a>
 
           <div class="download-note">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
             </svg>
-            <span data-i18n="download.mac.note">Notarized by Apple. Safe to install.</span>
+            <span data-i18n="download.mac.note">Distributed and verified by Apple.</span>
           </div>
         </div>
 
         <!-- iOS App Store -->
-        <div class="download-card reveal reveal-delay-1">
-          <div class="download-card-icon">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="5" y="2" width="14" height="20" rx="3"/>
-              <line x1="12" y1="18" x2="12" y2="18"/>
+        <div class="download-card download-card-ios reveal reveal-delay-1">
+          <span class="download-ribbon download-ribbon-ios" data-i18n="download.ios.ribbon">For iPhone</span>
+          <div class="download-card-glow download-card-glow-ios"></div>
+          <div class="download-card-icon download-card-icon-ios">
+            <svg width="40" height="40" viewBox="0 0 384 512" aria-hidden="true">
+              <path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
             </svg>
           </div>
           <h3 data-i18n="download.ios.title">iOS App</h3>
@@ -875,19 +876,31 @@
               <span class="download-meta-value">iPhone</span>
             </div>
             <div class="download-meta-item">
+              <span class="download-meta-label" data-i18n="download.ios.source">Source</span>
+              <span class="download-meta-value" data-i18n="download.ios.sourceValue">App Store</span>
+            </div>
+            <div class="download-meta-item">
               <span class="download-meta-label" data-i18n="download.ios.requires">Requires</span>
               <span class="download-meta-value">iOS 15.0+</span>
             </div>
           </div>
 
-          <a href="https://apps.apple.com/us/app/proximity-lock-smart-autolock/id6760981832" target="_blank" rel="noopener" class="btn-primary download-btn download-btn-secondary" id="download-ios-btn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-              <polyline points="15 3 21 3 21 9"/>
-              <line x1="10" y1="14" x2="21" y2="3"/>
+          <a href="https://apps.apple.com/us/app/proximity-lock-smart-autolock/id6760981832" target="_blank" rel="noopener" class="appstore-badge appstore-badge-ios" id="download-ios-btn">
+            <svg class="appstore-badge-logo" width="26" height="26" viewBox="0 0 384 512" aria-hidden="true">
+              <path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
             </svg>
-            <span data-i18n="download.ios.cta">Get on App Store</span>
+            <span class="appstore-badge-text">
+              <small data-i18n="download.badge.pre">Download on the</small>
+              <strong data-i18n="download.ios.cta">App Store</strong>
+            </span>
           </a>
+
+          <div class="download-note">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            <span data-i18n="download.ios.note">Free on the App Store. Privacy-first.</span>
+          </div>
         </div>
       </div>
 
@@ -897,11 +910,11 @@
         <div class="download-steps">
           <div class="download-step">
             <span class="download-step-num">1</span>
-            <span data-i18n="download.install.step1">Download the .dmg file above</span>
+            <span data-i18n="download.install.step1">Open the Mac App Store link above</span>
           </div>
           <div class="download-step">
             <span class="download-step-num">2</span>
-            <span data-i18n="download.install.step2">Open the .dmg and drag to Applications</span>
+            <span data-i18n="download.install.step2">Click Get to install Proximity Lock</span>
           </div>
           <div class="download-step">
             <span class="download-step-num">3</span>

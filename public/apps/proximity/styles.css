@@ -1669,12 +1669,12 @@ button { border: none; cursor: pointer; font-family: inherit; background: none; 
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
-  max-width: 800px;
+  max-width: 880px;
   margin: 0 auto 40px;
 }
 
 .download-card {
-  padding: 36px 32px;
+  padding: 40px 34px 34px;
   background: var(--bg-glass);
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
@@ -1684,23 +1684,47 @@ button { border: none; cursor: pointer; font-family: inherit; background: none; 
   flex-direction: column;
   align-items: center;
   text-align: center;
-  transition: all var(--transition-medium);
+  transition: transform var(--transition-medium), border-color var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.download-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(120% 80% at 50% -10%, rgba(255, 255, 255, 0.06), transparent 60%);
+  opacity: 0;
+  transition: opacity var(--transition-medium);
+  pointer-events: none;
 }
 
 .download-card:hover {
   border-color: var(--border-hover);
-  transform: translateY(-4px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
 }
 
+.download-card:hover::after { opacity: 1; }
+
+/* Mac = green accent, iOS = blue accent */
 .download-card-featured {
-  border-color: rgba(48, 209, 88, 0.15);
-  background: rgba(48, 209, 88, 0.03);
+  border-color: rgba(48, 209, 88, 0.18);
+  background: linear-gradient(180deg, rgba(48, 209, 88, 0.06), rgba(48, 209, 88, 0.015) 40%, transparent);
 }
 
 .download-card-featured:hover {
-  border-color: rgba(48, 209, 88, 0.3);
-  box-shadow: 0 20px 60px rgba(48, 209, 88, 0.08), 0 8px 32px rgba(0, 0, 0, 0.3);
+  border-color: rgba(48, 209, 88, 0.4);
+  box-shadow: 0 24px 70px rgba(48, 209, 88, 0.12), 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+.download-card-ios {
+  border-color: rgba(0, 122, 255, 0.18);
+  background: linear-gradient(180deg, rgba(0, 122, 255, 0.06), rgba(0, 122, 255, 0.015) 40%, transparent);
+}
+
+.download-card-ios:hover {
+  border-color: rgba(0, 122, 255, 0.4);
+  box-shadow: 0 24px 70px rgba(0, 122, 255, 0.12), 0 8px 32px rgba(0, 0, 0, 0.35);
 }
 
 .download-card-glow {
@@ -1709,25 +1733,72 @@ button { border: none; cursor: pointer; font-family: inherit; background: none; 
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--green), var(--accent), transparent);
+  background: linear-gradient(90deg, transparent, var(--green), transparent);
+}
+
+.download-card-glow-ios {
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+/* Corner ribbon / platform tag */
+.download-ribbon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+  padding: 5px 12px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--green);
+  background: rgba(48, 209, 88, 0.1);
+  border: 1px solid rgba(48, 209, 88, 0.25);
+  border-radius: var(--radius-full);
+}
+
+.download-ribbon-ios {
+  color: var(--accent);
+  background: rgba(0, 122, 255, 0.1);
+  border-color: rgba(0, 122, 255, 0.25);
 }
 
 .download-card-icon {
-  width: 80px;
-  height: 80px;
-  border-radius: var(--radius-lg);
+  width: 84px;
+  height: 84px;
+  border-radius: 22px;
   background: var(--bg-glass-strong);
   border: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
-  transition: all var(--transition-medium);
+  margin-bottom: 22px;
+  position: relative;
+  transition: transform var(--transition-medium), border-color var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.download-card-icon svg { color: var(--text-primary); }
+
+.download-card-icon-mac {
+  background: linear-gradient(160deg, rgba(48, 209, 88, 0.18), rgba(48, 209, 88, 0.04));
+  border-color: rgba(48, 209, 88, 0.25);
+}
+
+.download-card-icon-ios {
+  background: linear-gradient(160deg, rgba(0, 122, 255, 0.18), rgba(0, 122, 255, 0.04));
+  border-color: rgba(0, 122, 255, 0.25);
 }
 
 .download-card:hover .download-card-icon {
-  transform: scale(1.05);
-  border-color: var(--border-hover);
+  transform: scale(1.06) translateY(-2px);
+}
+
+.download-card-mac:hover .download-card-icon-mac {
+  box-shadow: 0 12px 36px rgba(48, 209, 88, 0.25);
+}
+
+.download-card-ios:hover .download-card-icon-ios {
+  box-shadow: 0 12px 36px rgba(0, 122, 255, 0.25);
 }
 
 .download-card h3 {
@@ -1779,23 +1850,76 @@ button { border: none; cursor: pointer; font-family: inherit; background: none; 
   color: var(--text-primary);
 }
 
-.download-btn {
+/* Official-style App Store badge button */
+.appstore-badge {
   width: 100%;
-  padding: 14px 24px;
-  font-size: 15px;
-  border-radius: var(--radius-md);
+  max-width: 280px;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
+  gap: 12px;
+  padding: 13px 24px;
+  border-radius: 14px;
+  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-fast), box-shadow var(--transition-medium), border-color var(--transition-fast);
 }
 
-.download-btn-secondary {
-  background: var(--bg-glass-strong);
-  border: 1px solid var(--border);
+.appstore-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+  transition: left 0.7s ease;
 }
 
-.download-btn-secondary:hover {
-  background: var(--accent);
-  border-color: var(--accent);
-  box-shadow: 0 8px 32px var(--accent-glow);
+.appstore-badge:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.32);
+}
+
+.appstore-badge:hover::before { left: 130%; }
+
+.appstore-badge-mac:hover {
+  box-shadow: 0 14px 40px rgba(48, 209, 88, 0.28);
+}
+
+.appstore-badge-ios:hover {
+  box-shadow: 0 14px 40px rgba(0, 122, 255, 0.28);
+}
+
+.appstore-badge-logo {
+  flex-shrink: 0;
+  color: #fff;
+  margin-top: -2px;
+}
+
+.appstore-badge-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.1;
+}
+
+.appstore-badge-text small {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.appstore-badge-text strong {
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  color: #fff;
 }
 
 .download-note {
@@ -3194,7 +3318,7 @@ button { border: none; cursor: pointer; font-family: inherit; background: none; 
   }
 
   .download-card {
-    padding: 28px 24px;
+    padding: 34px 22px 28px;
   }
 
   .download-card h3 {
@@ -3213,9 +3337,13 @@ button { border: none; cursor: pointer; font-family: inherit; background: none; 
     padding: 6px 10px;
   }
 
-  .download-btn {
+  .appstore-badge {
+    max-width: 100%;
     padding: 12px 20px;
-    font-size: 14px;
+  }
+
+  .appstore-badge-text strong {
+    font-size: 18px;
   }
 
   .download-instructions {
