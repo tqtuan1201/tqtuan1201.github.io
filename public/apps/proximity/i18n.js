@@ -36,6 +36,7 @@ const translations = {
     "hero.trust.1": "No Cloud",
     "hero.trust.2": "No Battery Drain",
     "hero.trust.3": "Native Apple",
+    "hero.featured.label": "Featured on",
 
     // Stats
     "stat.1.number": "< 3s",
@@ -123,11 +124,36 @@ const translations = {
     "platforms.mac.f2": "Café Mode alarm system",
     "platforms.mac.f3": "Menu bar + multi-device",
     "platforms.watch.title": "Apple Watch",
-    "platforms.watch.desc": "Quick controls right on your wrist.",
-    "platforms.watch.f1": "Connection status at a glance",
-    "platforms.watch.f2": "Quick lock / unlock",
-    "platforms.watch.f3": "Café Mode toggle",
-    "platforms.watch.badge": "Coming Soon",
+    "platforms.watch.desc": "Control your Mac right from your wrist.",
+    "platforms.watch.f1": "Mac status at a glance",
+    "platforms.watch.f2": "Lock & Sleep from your wrist",
+    "platforms.watch.f3": "Café Mode + Smart Stack",
+    "platforms.watch.badge": "New",
+
+    // Apple Watch Companion
+    "watch.label": "Apple Watch Companion",
+    "watch.title": "Your Mac, On Your Wrist.",
+    "watch.desc": "Check status and control your Mac from Apple Watch — without ever reaching for your iPhone.",
+    "watch.card1.title": "Glanceable Status",
+    "watch.card1.desc": "Connection, lock, battery, charging and Café Mode — all at a glance.",
+    "watch.card2.title": "Lock & Sleep",
+    "watch.card2.desc": "Lock instantly, or put your Mac to sleep with a quick confirmation.",
+    "watch.card3.title": "Arm Café Mode",
+    "watch.card3.desc": "Turn the anti-theft alarm on or off before you step away.",
+    "watch.card4.title": "Complications & Smart Stack",
+    "watch.card4.desc": "Live status right on your watch face and in the Smart Stack widget.",
+    "watch.note": "Included free with the iPhone app — no separate download.",
+
+    // Featured On
+    "featured.label": "Featured On",
+    "featured.title": "Find Us in the Community",
+    "featured.desc": "Proximity Lock is live on these platforms — check it out and leave us a review!",
+    "featured.ph.name": "Product Hunt",
+    "featured.ph.desc": "The global launchpad for new products. Support us with an upvote.",
+    "featured.ph.cta": "View & Upvote",
+    "featured.uni.name": "unikorn.vn",
+    "featured.uni.desc": "Vietnam's hub for products built by local makers. Vote and review us.",
+    "featured.uni.cta": "View & Review",
 
     // Pricing
     "pricing.label": "Pricing",
@@ -195,10 +221,6 @@ const translations = {
     "download.ios.requires": "Requires",
     "download.ios.cta": "App Store",
     "download.ios.note": "Free on the App Store. Privacy-first.",
-    "download.install.title": "📦 macOS Installation",
-    "download.install.step1": "Open the Mac App Store link above",
-    "download.install.step2": "Click Get to install Proximity Lock",
-    "download.install.step3": "Launch Proximity Lock from Applications",
 
     // Footer
     "footer.privacy": "Privacy Policy",
@@ -241,6 +263,7 @@ const translations = {
     "hero.trust.1": "Không cần mạng",
     "hero.trust.2": "Không tốn pin",
     "hero.trust.3": "Chuẩn Apple",
+    "hero.featured.label": "Được giới thiệu trên",
 
     // Thống kê
     "stat.1.number": "< 3 giây",
@@ -328,11 +351,36 @@ const translations = {
     "platforms.mac.f2": "Hệ thống còi báo động Café Mode",
     "platforms.mac.f3": "Thanh menu + hỗ trợ nhiều thiết bị",
     "platforms.watch.title": "Apple Watch",
-    "platforms.watch.desc": "Điều khiển nhanh ngay trên cổ tay.",
-    "platforms.watch.f1": "Xem trạng thái kết nối nhanh",
-    "platforms.watch.f2": "Khoá / mở khoá nhanh",
-    "platforms.watch.f3": "Bật / tắt chế độ Café",
-    "platforms.watch.badge": "Sắp ra mắt",
+    "platforms.watch.desc": "Điều khiển Mac ngay trên cổ tay.",
+    "platforms.watch.f1": "Xem trạng thái Mac tức thì",
+    "platforms.watch.f2": "Khoá & cho ngủ từ cổ tay",
+    "platforms.watch.f3": "Chế độ Café + Smart Stack",
+    "platforms.watch.badge": "Mới",
+
+    // Ứng dụng Apple Watch
+    "watch.label": "Ứng dụng Apple Watch",
+    "watch.title": "Mac của bạn, ngay trên cổ tay.",
+    "watch.desc": "Xem trạng thái và điều khiển Mac từ Apple Watch — không cần lấy iPhone ra.",
+    "watch.card1.title": "Trạng thái tức thì",
+    "watch.card1.desc": "Kết nối, khoá, pin, sạc và chế độ Café — xem nhanh chỉ một cái liếc.",
+    "watch.card2.title": "Khoá & Cho ngủ",
+    "watch.card2.desc": "Khoá ngay lập tức, hoặc cho Mac ngủ với một bước xác nhận nhanh.",
+    "watch.card3.title": "Bật chế độ Café",
+    "watch.card3.desc": "Bật hoặc tắt còi chống trộm trước khi bạn rời đi.",
+    "watch.card4.title": "Complication & Smart Stack",
+    "watch.card4.desc": "Trạng thái trực tiếp ngay trên mặt đồng hồ và trong Smart Stack.",
+    "watch.note": "Tải kèm miễn phí cùng ứng dụng iPhone — không cần tải riêng.",
+
+    // Được giới thiệu trên
+    "featured.label": "Được giới thiệu trên",
+    "featured.title": "Tìm chúng tôi trong cộng đồng",
+    "featured.desc": "Proximity Lock đã có mặt trên các nền tảng này — ghé xem và để lại đánh giá nhé!",
+    "featured.ph.name": "Product Hunt",
+    "featured.ph.desc": "Bệ phóng sản phẩm mới toàn cầu. Ủng hộ chúng tôi bằng một upvote.",
+    "featured.ph.cta": "Xem & Upvote",
+    "featured.uni.name": "unikorn.vn",
+    "featured.uni.desc": "Nơi quy tụ sản phẩm do người Việt tạo ra. Vote và đánh giá cho chúng tôi.",
+    "featured.uni.cta": "Xem & Đánh giá",
 
     // Bảng giá
     "pricing.label": "Bảng giá",
@@ -400,10 +448,6 @@ const translations = {
     "download.ios.requires": "Yêu cầu",
     "download.ios.cta": "App Store",
     "download.ios.note": "Miễn phí trên App Store. Ưu tiên quyền riêng tư.",
-    "download.install.title": "📦 Cài đặt macOS",
-    "download.install.step1": "Mở liên kết Mac App Store ở trên",
-    "download.install.step2": "Nhấn Get (Nhận) để cài Proximity Lock",
-    "download.install.step3": "Mở Proximity Lock từ thư mục Applications",
 
     // Chân trang
     "footer.privacy": "Chính sách bảo mật",

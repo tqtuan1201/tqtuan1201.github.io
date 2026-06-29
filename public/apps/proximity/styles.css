@@ -714,6 +714,65 @@ button { border: none; cursor: pointer; font-family: inherit; background: none; 
   opacity: 0.6;
 }
 
+/* Subtle "Featured on" platforms row — keeps hero focus on the CTA */
+.hero-featured {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.hero-featured-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-tertiary);
+}
+
+.hero-featured-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  opacity: 0.85;
+  transition: opacity var(--transition-fast), color var(--transition-fast);
+}
+
+.hero-featured-item:hover {
+  opacity: 1;
+  color: var(--text-primary);
+}
+
+.hero-featured-logo {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 13px;
+}
+
+.hero-featured-logo svg {
+  width: 14px;
+  height: 14px;
+}
+
+.hero-featured-logo-ph {
+  background: #da552f;
+  color: #fff;
+}
+
+.hero-featured-logo-uni {
+  background: linear-gradient(150deg, #bf5af2, #ff6cab);
+}
+
 /* ── Hero Visual — Bluetooth Radar ───────────────────────────────── */
 .hero-visual {
   flex: 1;
@@ -1523,6 +1582,178 @@ button { border: none; cursor: pointer; font-family: inherit; background: none; 
   font-size: 14px;
   flex-shrink: 0;
   font-weight: 700;
+}
+
+/* "New" availability treatment for the (now shipping) Apple Watch card */
+.platform-card-watch {
+  border-color: rgba(100, 210, 255, 0.18);
+  background: rgba(100, 210, 255, 0.04);
+}
+
+.platform-badge-new {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 4px 10px;
+  background: var(--green-subtle);
+  border: 1px solid rgba(48, 209, 88, 0.25);
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--green);
+  letter-spacing: 0.5px;
+}
+
+/* Inline "New" pill for the watch section label (mirrors .badge-hot) */
+.badge-new {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  background: var(--green-subtle);
+  border: 1px solid rgba(48, 209, 88, 0.25);
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--green);
+  letter-spacing: 0.3px;
+  margin-left: 4px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   APPLE WATCH COMPANION
+   ═══════════════════════════════════════════════════════════════════ */
+.features-watch {
+  background: var(--bg-primary);
+}
+
+.watch-promo-img {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  border-radius: var(--radius-lg);
+  filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.5));
+}
+
+.watch-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 26px;
+  padding: 10px 16px;
+  background: var(--green-subtle);
+  border: 1px solid rgba(48, 209, 88, 0.15);
+  border-radius: var(--radius-lg);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--green);
+}
+
+.watch-note svg {
+  flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   FEATURED ON — Community / Social Proof
+   ═══════════════════════════════════════════════════════════════════ */
+.featured-on {
+  background: var(--bg-secondary);
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.featured-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition-medium);
+}
+
+.featured-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-hover);
+  transform: translateY(-6px);
+}
+
+.featured-card-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.featured-card-head h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.featured-logo {
+  width: 54px;
+  height: 54px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 28px;
+}
+
+.featured-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+.featured-logo-ph {
+  background: #da552f;
+  color: #fff;
+}
+
+.featured-logo-uni {
+  background: linear-gradient(150deg, #bf5af2, #ff6cab);
+}
+
+.featured-card p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  flex: 1;
+}
+
+.featured-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: auto;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.featured-cta svg {
+  width: 15px;
+  height: 15px;
+  transition: transform var(--transition-fast);
+}
+
+.featured-card:hover .featured-cta svg {
+  transform: translateX(3px);
+}
+
+@media (max-width: 768px) {
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ═══════════════════════════════════════════════════════════════════
