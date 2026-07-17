@@ -12,6 +12,7 @@ const translations = {
     "nav.platforms": "Platforms",
     "nav.pricing": "Pricing",
     "nav.contact": "Contact",
+    "nav.changelog": "Changelog",
     "nav.download": "Download Free",
 
     // Video Section
@@ -226,6 +227,7 @@ const translations = {
     "footer.privacy": "Privacy Policy",
     "footer.terms": "Terms of Service",
     "footer.support": "Support",
+    "footer.changelog": "Changelog",
     "footer.contact": "Contact",
     "footer.copyright": "© 2026 Proximity Lock. All rights reserved."
   },
@@ -239,6 +241,7 @@ const translations = {
     "nav.platforms": "Nền tảng",
     "nav.pricing": "Bảng giá",
     "nav.contact": "Liên hệ",
+    "nav.changelog": "Nhật ký cập nhật",
     "nav.download": "Tải miễn phí",
 
     // Video Section
@@ -453,6 +456,7 @@ const translations = {
     "footer.privacy": "Chính sách bảo mật",
     "footer.terms": "Điều khoản sử dụng",
     "footer.support": "Hỗ trợ",
+    "footer.changelog": "Nhật ký cập nhật",
     "footer.contact": "Liên hệ",
     "footer.copyright": "© 2026 Proximity Lock. Bảo lưu mọi quyền."
   }
