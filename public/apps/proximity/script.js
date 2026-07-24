@@ -268,7 +268,7 @@ function setLanguage(lang) {
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const key = el.dataset.i18n;
     const text = translations[lang][key];
-    if (text) el.textContent = text;
+    if (text) el.innerHTML = text;
   });
 
   document.querySelectorAll('.lang-toggle button').forEach((btn) => {
