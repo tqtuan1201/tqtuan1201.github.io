@@ -381,15 +381,23 @@ function initParallaxHero() {
   }, { passive: true });
 }
 
-// ── Video Player — YouTube Direct ───────────────────────────────────
+// ── Video Player — YouTube Inline Embed ─────────────────────────────
 function initVideoPlayer() {
   const thumbnail = document.getElementById('videoThumbnail');
-  if (!thumbnail) return;
-
-  const YOUTUBE_URL = 'https://youtu.be/nFAHoENvkYc';
+  const container = document.getElementById('videoContainer');
+  if (!thumbnail || !container) return;
 
   thumbnail.addEventListener('click', () => {
-    window.open(YOUTUBE_URL, '_blank', 'noopener,noreferrer');
+    container.innerHTML = `
+      <iframe 
+        src="https://www.youtube-nocookie.com/embed/nFAHoENvkYc?autoplay=1&rel=0" 
+        title="Proximity Lock — Setup & Demo Guide" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+      </iframe>
+    `;
   });
 }
 
