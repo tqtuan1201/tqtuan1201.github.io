@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>macOS on Tuan Truong&#39;s Blog</title>
+    <link>https://tqtuan1201.github.io/tags/macos/</link>
+    <description>Recent content in macOS on Tuan Truong&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 Jul 2026 17:19:12 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/macos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Proximity Lock: A Native Security &amp; Productivity Companion for Your Mac</title>
+      <link>https://tqtuan1201.github.io/posts/job/apps/proximitylock/app-info/</link>
+      <pubDate>Fri, 24 Jul 2026 17:19:12 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/job/apps/proximitylock/app-info/</guid>
+      
+        <description>Abstract In this post, I am excited to launch Proximity Lock — a native security and productivity companion built specifically for the Apple ecosystem. In this post, we will explore:
+The real-world friction that motivated building Proximity Lock Core features: Auto-Lock / Unlock, Cafe Mode, Work Mode, and Remote Control How to join the Launch Creator Rewards to get 50% OFF or Lifetime Pro FREE Let&amp;rsquo;s dive in!
+Motivation I got tired of two things in my daily workflow on macOS:</description>
+      
+    </item>
+    
+  </channel>
+</rss>
