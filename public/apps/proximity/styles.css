@@ -773,6 +773,11 @@ button { border: none; cursor: pointer; font-family: inherit; background: none; 
   background: linear-gradient(150deg, #bf5af2, #ff6cab);
 }
 
+.hero-featured-logo-ls {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+}
+
 /* ── Hero Visual — Bluetooth Radar ───────────────────────────────── */
 .hero-visual {
   flex: 1;
@@ -1662,9 +1667,9 @@ button { border: none; cursor: pointer; font-family: inherit; background: none; 
 
 .featured-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  max-width: 860px;
+  max-width: 1140px;
   margin: 0 auto;
 }
 
@@ -1723,6 +1728,28 @@ button { border: none; cursor: pointer; font-family: inherit; background: none; 
   background: linear-gradient(150deg, #bf5af2, #ff6cab);
 }
 
+.featured-logo-ls {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+}
+
+.featured-card-badge-wrap {
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.launchstag-badge-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: opacity var(--transition-fast);
+}
+
+.featured-card:hover .launchstag-badge-img {
+  opacity: 0.92;
+}
+
 .featured-card p {
   font-size: 14px;
   color: var(--text-secondary);
@@ -1748,6 +1775,12 @@ button { border: none; cursor: pointer; font-family: inherit; background: none; 
 
 .featured-card:hover .featured-cta svg {
   transform: translateX(3px);
+}
+
+@media (max-width: 992px) {
+  .featured-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
 }
 
 @media (max-width: 768px) {

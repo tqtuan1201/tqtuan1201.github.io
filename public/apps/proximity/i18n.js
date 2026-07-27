@@ -155,6 +155,9 @@ const translations = {
     "featured.uni.name": "unikorn.vn",
     "featured.uni.desc": "Vietnam's hub for products built by local makers. Vote and review us.",
     "featured.uni.cta": "View & Review",
+    "featured.ls.name": "Launchstag",
+    "featured.ls.desc": "The discovery platform for new apps and tech products. Support us with an upvote.",
+    "featured.ls.cta": "View & Upvote",
 
     // Pricing
     "pricing.label": "Pricing",
@@ -391,6 +394,9 @@ const translations = {
     "featured.uni.name": "unikorn.vn",
     "featured.uni.desc": "Nơi quy tụ sản phẩm do người Việt tạo ra. Vote và đánh giá cho chúng tôi.",
     "featured.uni.cta": "Xem & Đánh giá",
+    "featured.ls.name": "Launchstag",
+    "featured.ls.desc": "Nền tảng khám phá ứng dụng và sản phẩm công nghệ mới. Ghé xem và ủng hộ chúng tôi.",
+    "featured.ls.cta": "Xem & Upvote",
 
     // Bảng giá
     "pricing.label": "Bảng giá",
