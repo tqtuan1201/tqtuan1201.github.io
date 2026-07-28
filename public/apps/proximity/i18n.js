@@ -158,6 +158,9 @@ const translations = {
     "featured.ls.name": "Launchstag",
     "featured.ls.desc": "The discovery platform for new apps and tech products. Support us with an upvote.",
     "featured.ls.cta": "View & Upvote",
+    "featured.lb.name": "LaunchBuff",
+    "featured.lb.desc": "The platform to discover and launch hot tech products. Check us out!",
+    "featured.lb.cta": "View & Support",
 
     // Pricing
     "pricing.label": "Pricing",
@@ -397,6 +400,9 @@ const translations = {
     "featured.ls.name": "Launchstag",
     "featured.ls.desc": "Nền tảng khám phá ứng dụng và sản phẩm công nghệ mới. Ghé xem và ủng hộ chúng tôi.",
     "featured.ls.cta": "Xem & Upvote",
+    "featured.lb.name": "LaunchBuff",
+    "featured.lb.desc": "Nền tảng giới thiệu và bệ phóng sản phẩm công nghệ nổi bật. Ghé xem và ủng hộ chúng tôi!",
+    "featured.lb.cta": "Xem & Ủng hộ",
 
     // Bảng giá
     "pricing.label": "Bảng giá",
