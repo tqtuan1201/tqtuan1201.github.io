@@ -6,22 +6,11 @@
     <description>Recent content in Tags on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Jul 2026 17:19:12 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Apple Ecosystem</title>
-      <link>https://tqtuan1201.github.io/tags/apple-ecosystem/</link>
-      <pubDate>Fri, 24 Jul 2026 17:19:12 +0700</pubDate>
-      
-      <guid>https://tqtuan1201.github.io/tags/apple-ecosystem/</guid>
-      
-        <description></description>
-      
-    </item>
-    
+    <lastBuildDate>Thu, 30 Jul 2026 15:11:03 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Indie Dev</title>
       <link>https://tqtuan1201.github.io/tags/indie-dev/</link>
-      <pubDate>Fri, 24 Jul 2026 17:19:12 +0700</pubDate>
+      <pubDate>Thu, 30 Jul 2026 15:11:03 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/tags/indie-dev/</guid>
       
@@ -32,7 +21,7 @@
     <item>
       <title>iOS</title>
       <link>https://tqtuan1201.github.io/tags/ios/</link>
-      <pubDate>Fri, 24 Jul 2026 17:19:12 +0700</pubDate>
+      <pubDate>Thu, 30 Jul 2026 15:11:03 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/tags/ios/</guid>
       
@@ -43,7 +32,7 @@
     <item>
       <title>macOS</title>
       <link>https://tqtuan1201.github.io/tags/macos/</link>
-      <pubDate>Fri, 24 Jul 2026 17:19:12 +0700</pubDate>
+      <pubDate>Thu, 30 Jul 2026 15:11:03 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/tags/macos/</guid>
       
@@ -52,11 +41,22 @@
     </item>
     
     <item>
-      <title>Proximity Lock</title>
-      <link>https://tqtuan1201.github.io/tags/proximity-lock/</link>
-      <pubDate>Fri, 24 Jul 2026 17:19:12 +0700</pubDate>
+      <title>Productivity</title>
+      <link>https://tqtuan1201.github.io/tags/productivity/</link>
+      <pubDate>Thu, 30 Jul 2026 15:11:03 +0700</pubDate>
       
-      <guid>https://tqtuan1201.github.io/tags/proximity-lock/</guid>
+      <guid>https://tqtuan1201.github.io/tags/productivity/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Proximity Lock: Smart AutoLock</title>
+      <link>https://tqtuan1201.github.io/tags/proximity-lock-smart-autolock/</link>
+      <pubDate>Thu, 30 Jul 2026 15:11:03 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/tags/proximity-lock-smart-autolock/</guid>
       
         <description></description>
       
@@ -65,9 +65,31 @@
     <item>
       <title>Security</title>
       <link>https://tqtuan1201.github.io/tags/security/</link>
-      <pubDate>Fri, 24 Jul 2026 17:19:12 +0700</pubDate>
+      <pubDate>Thu, 30 Jul 2026 15:11:03 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/tags/security/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Work Mode</title>
+      <link>https://tqtuan1201.github.io/tags/work-mode/</link>
+      <pubDate>Thu, 30 Jul 2026 15:11:03 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/tags/work-mode/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Apple Ecosystem</title>
+      <link>https://tqtuan1201.github.io/tags/apple-ecosystem/</link>
+      <pubDate>Fri, 24 Jul 2026 17:19:12 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/tags/apple-ecosystem/</guid>
       
         <description></description>
       

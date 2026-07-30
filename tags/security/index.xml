@@ -6,17 +6,29 @@
     <description>Recent content in Security on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Jul 2026 17:19:12 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Jul 2026 15:11:03 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Proximity Lock: A Native Security &amp; Productivity Companion for Your Mac</title>
+      <title>Work Mode: Stay Awake &amp; Protected with Proximity Lock</title>
+      <link>https://tqtuan1201.github.io/posts/job/apps/proximitylock/work-mode/</link>
+      <pubDate>Thu, 30 Jul 2026 15:11:03 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/job/apps/proximitylock/work-mode/</guid>
+      
+        <description>Abstract Have you ever come back to your Mac and realized it went to sleep before the work was finished? I have. 😅
+Large uploads, iCloud syncs, video exports, photo imports, Docker containers, long Xcode builds, AI coding agents, or a huge game download all need time. You should not have to stay beside your Mac just to keep them running.
+That is why I built Work Mode into Proximity Lock: Smart AutoLock.</description>
+      
+    </item>
+    
+    <item>
+      <title>Proximity Lock: Smart AutoLock - A Native Security &amp; Productivity Companion for Your Mac</title>
       <link>https://tqtuan1201.github.io/posts/job/apps/proximitylock/app-info/</link>
       <pubDate>Fri, 24 Jul 2026 17:19:12 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/posts/job/apps/proximitylock/app-info/</guid>
       
-        <description>Abstract In this post, I am excited to launch Proximity Lock — a native security and productivity companion built specifically for the Apple ecosystem. In this post, we will explore:
-The real-world friction that motivated building Proximity Lock Core features: Auto-Lock / Unlock, Cafe Mode, Work Mode, and Remote Control How to join the Launch Creator Rewards to get 50% OFF or Lifetime Pro FREE Let&amp;rsquo;s dive in!
-Motivation I got tired of two things in my daily workflow on macOS:</description>
+        <description>Abstract In this post, I am excited to launch Proximity Lock: Smart AutoLock — a native security and productivity companion built specifically for the Apple ecosystem. In this post, we will explore:
+The real-world friction that motivated building Proximity Lock: Smart AutoLock Core features: Auto-Lock / Unlock, Cafe Mode, Work Mode, and Remote Control How to join the Launch Creator Rewards to get 50% OFF or Lifetime Pro FREE Let&amp;rsquo;s dive in!</description>
       
     </item>
     
