@@ -6,13 +6,35 @@
     <description>Recent content in Tags on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jul 2026 15:11:03 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Aug 2026 17:22:46 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Indie Dev</title>
-      <link>https://tqtuan1201.github.io/tags/indie-dev/</link>
-      <pubDate>Thu, 30 Jul 2026 15:11:03 +0700</pubDate>
+      <title>12bay</title>
+      <link>https://tqtuan1201.github.io/tags/12bay/</link>
+      <pubDate>Thu, 20 Aug 2026 17:22:46 +0700</pubDate>
       
-      <guid>https://tqtuan1201.github.io/tags/indie-dev/</guid>
+      <guid>https://tqtuan1201.github.io/tags/12bay/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Deep Link</title>
+      <link>https://tqtuan1201.github.io/tags/deep-link/</link>
+      <pubDate>Thu, 20 Aug 2026 17:22:46 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/tags/deep-link/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Dev Journey</title>
+      <link>https://tqtuan1201.github.io/tags/dev-journey/</link>
+      <pubDate>Thu, 20 Aug 2026 17:22:46 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/tags/dev-journey/</guid>
       
         <description></description>
       
@@ -21,9 +43,53 @@
     <item>
       <title>iOS</title>
       <link>https://tqtuan1201.github.io/tags/ios/</link>
-      <pubDate>Thu, 30 Jul 2026 15:11:03 +0700</pubDate>
+      <pubDate>Thu, 20 Aug 2026 17:22:46 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/tags/ios/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Security</title>
+      <link>https://tqtuan1201.github.io/tags/security/</link>
+      <pubDate>Thu, 20 Aug 2026 17:22:46 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/tags/security/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>SwiftUI</title>
+      <link>https://tqtuan1201.github.io/tags/swiftui/</link>
+      <pubDate>Thu, 20 Aug 2026 17:22:46 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/tags/swiftui/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>UIKit</title>
+      <link>https://tqtuan1201.github.io/tags/uikit/</link>
+      <pubDate>Thu, 20 Aug 2026 17:22:46 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/tags/uikit/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Indie Dev</title>
+      <link>https://tqtuan1201.github.io/tags/indie-dev/</link>
+      <pubDate>Thu, 30 Jul 2026 15:11:03 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/tags/indie-dev/</guid>
       
         <description></description>
       
@@ -57,17 +123,6 @@
       <pubDate>Thu, 30 Jul 2026 15:11:03 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/tags/proximity-lock-smart-autolock/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Security</title>
-      <link>https://tqtuan1201.github.io/tags/security/</link>
-      <pubDate>Thu, 30 Jul 2026 15:11:03 +0700</pubDate>
-      
-      <guid>https://tqtuan1201.github.io/tags/security/</guid>
       
         <description></description>
       
@@ -134,17 +189,6 @@
       <pubDate>Wed, 28 Jan 2026 14:53:39 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/tags/survey/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>SwiftUI</title>
-      <link>https://tqtuan1201.github.io/tags/swiftui/</link>
-      <pubDate>Wed, 10 Dec 2025 15:22:14 +0700</pubDate>
-      
-      <guid>https://tqtuan1201.github.io/tags/swiftui/</guid>
       
         <description></description>
       
@@ -222,17 +266,6 @@
       <pubDate>Mon, 04 Mar 2024 14:59:21 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/tags/personal-stories/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>12bay</title>
-      <link>https://tqtuan1201.github.io/tags/12bay/</link>
-      <pubDate>Wed, 13 Dec 2023 15:31:00 +0700</pubDate>
-      
-      <guid>https://tqtuan1201.github.io/tags/12bay/</guid>
       
         <description></description>
       

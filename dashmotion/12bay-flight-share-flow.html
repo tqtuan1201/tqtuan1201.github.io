@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>12Bay Flight Share Flow — dashmotion</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', 'Cascadia Code', Menlo, Consolas, monospace;
+    background: #020617;
+    padding: 1rem 1.25rem;
+    color: #e2e8f0;
+    overflow-x: hidden;
+  }
+  .container { max-width: 1000px; margin: 0 auto; }
+  .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; position: relative; }
+  .title-group { display: flex; align-items: center; gap: 10px; }
+  .pulse-dot { width: 8px; height: 8px; border-radius: 50%; background: #38bdf8; }
+  h1 { font-size: 1.05rem; font-weight: 600; letter-spacing: -0.01em; color: #f8fafc; }
+  .subtitle { color: #64748b; font-size: 0.75rem; margin-top: 2px; }
+  
+  .actions { display: flex; align-items: center; gap: 8px; position: relative; }
+  .btn {
+    background: #0b1329;
+    border: 1px solid #1e293b;
+    color: #94a3b8;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font: inherit;
+    font-size: 11px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.15s ease;
+    user-select: none;
+  }
+  .btn:hover { color: #f8fafc; border-color: #38bdf8; background: #0f1b33; }
+  .btn.active { border-color: #38bdf8; color: #38bdf8; background: #0f1b33; }
+
+  /* Dropdown Menu */
+  .menu-wrapper { position: relative; }
+  .dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 6px);
+    background: #0b1329;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.65);
+    padding: 6px;
+    z-index: 1000;
+    min-width: 180px;
+    display: none;
+    backdrop-filter: blur(12px);
+  }
+  .dropdown-menu.show { display: block; animation: menuFadeIn 0.15s ease-out; }
+  @keyframes menuFadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .menu-label {
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #475569;
+    padding: 4px 8px 2px;
+  }
+  .menu-divider { height: 1px; background: #1e293b; margin: 4px 0; }
+  .menu-item {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #cbd5e1;
+    text-align: left;
+    padding: 6px 8px;
+    font: inherit;
+    font-size: 11px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.12s;
+  }
+  .menu-item:hover { background: #1e293b; color: #38bdf8; }
+  .menu-item .icon { font-size: 12px; width: 14px; text-align: center; }
+
+  /* Toast notification */
+  .toast {
+    position: fixed;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: #0f172a;
+    border: 1px solid #38bdf8;
+    color: #f8fafc;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    box-shadow: 0 4px 16px rgba(56,189,248,0.25);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 2000;
+  }
+  .toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .diagram-card {
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    position: relative;
+    background: repeating-linear-gradient(0deg, #0f1b33 0 0.5px, transparent 0.5px 32px),
+      repeating-linear-gradient(90deg, #0f1b33 0 0.5px, transparent 0.5px 32px), #030a1c;
+    padding: 1rem 0.75rem;
+  }
+  .flow { stroke-dasharray: 5 5; }
+  @media (prefers-reduced-motion: no-preference) {
+    .flow { animation: dashmove 0.75s linear infinite; }
+    .pulse-dot { animation: pulse 2s ease-in-out infinite; }
+  }
+  @keyframes dashmove { to { stroke-dashoffset: -10; } }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+  body.paused .flow, body.paused .pulse-dot { animation-play-state: paused; }
+  .footer-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.6rem;
+    padding: 0 4px;
+    font-size: 10px;
+    color: #64748b;
+  }
+  .brand-link {
+    color: #38bdf8;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.15s ease;
+  }
+  .brand-link:hover { color: #7dd3fc; text-decoration: underline; }
+  .dot-sm { width: 5px; height: 5px; border-radius: 50%; background: #38bdf8; display: inline-block; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div>
+      <div class="title-group">
+        <div class="pulse-dot"></div>
+        <h1>12Bay Flight Share Flow</h1>
+      </div>
+      <p class="subtitle">Search &amp; Package &rarr; iOS Share Sheet &rarr; Universal Link &rarr; Live Fares</p>
+    </div>
+    <div class="actions">
+      <div class="menu-wrapper">
+        <button class="btn" id="shareBtn" aria-expanded="false" aria-haspopup="true">
+          <span>🔗</span> share
+        </button>
+        <div class="dropdown-menu" id="shareMenu" role="menu">
+          <div class="menu-label">SHARE LINK</div>
+          <button class="menu-item" id="copyLinkBtn" role="menuitem">
+            <span class="icon">📋</span> Copy Link
+          </button>
+          <button class="menu-item" id="shareXBtn" role="menuitem">
+            <span class="icon">𝕏</span> Share on X
+          </button>
+          <button class="menu-item" id="shareLinkedInBtn" role="menuitem">
+            <span class="icon">💼</span> LinkedIn
+          </button>
+          <button class="menu-item" id="shareTgBtn" role="menuitem">
+            <span class="icon">✈️</span> Telegram
+          </button>
+          <div class="menu-divider"></div>
+          <div class="menu-label">DOWNLOAD MEDIA</div>
+          <button class="menu-item" id="downloadGifBtn" role="menuitem">
+            <span class="icon">📥</span> Download GIF
+          </button>
+          <button class="menu-item" id="downloadSvgBtn" role="menuitem">
+            <span class="icon">🖼️</span> Download SVG
+          </button>
+          <button class="menu-item" id="downloadPngBtn" role="menuitem">
+            <span class="icon">📷</span> Download PNG
+          </button>
+        </div>
+      </div>
+      <button class="btn" id="pauseBtn" aria-pressed="false">⏸ pause</button>
+    </div>
+  </div>
+
+  <div class="diagram-card">
+    <svg id="flowsvg" width="100%" viewBox="0 0 970 140" role="img" aria-labelledby="flowsvg-title" aria-describedby="flowsvg-desc">
+      <title id="flowsvg-title">12Bay Flight Share Flow Horizontal Diagram</title>
+      <desc id="flowsvg-desc">Horizontal step flow from flight search to live results via universal link.</desc>
+      
+      <defs>
+        <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </marker>
+        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#38bdf8" flood-opacity="0.8"/>
+        </filter>
+      </defs>
+
+      <!-- Connectors -->
+      <g fill="none">
+        <path class="flow" d="M165 70 H215" stroke="#38bdf8" stroke-width="1.5" opacity="0.85" marker-end="url(#arrow)"/>
+        <path class="flow" d="M365 70 H415" stroke="#38bdf8" stroke-width="1.5" opacity="0.85" marker-end="url(#arrow)"/>
+        <path class="flow" d="M565 70 H615" stroke="#38bdf8" stroke-width="1.5" opacity="0.85" marker-end="url(#arrow)"/>
+        <path class="flow" d="M765 70 H815" stroke="#38bdf8" stroke-width="1.5" opacity="0.85" marker-end="url(#arrow)"/>
+      </g>
+
+      <!-- Animated Traveling Dots -->
+      <g>
+        <circle r="3.5" class="dot" fill="#38bdf8" filter="url(#glow)">
+          <animateMotion dur="0.6s" begin="0s;d3.end+0.4s" fill="freeze" id="d0" path="M165 70 H215"/>
+        </circle>
+        <circle r="3.5" class="dot" fill="#38bdf8" filter="url(#glow)">
+          <animateMotion dur="0.6s" begin="d0.end+0.2s" fill="freeze" id="d1" path="M365 70 H415"/>
+        </circle>
+        <circle r="3.5" class="dot" fill="#38bdf8" filter="url(#glow)">
+          <animateMotion dur="0.6s" begin="d1.end+0.2s" fill="freeze" id="d2" path="M565 70 H615"/>
+        </circle>
+        <circle r="3.5" class="dot" fill="#38bdf8" filter="url(#glow)">
+          <animateMotion dur="0.6s" begin="d2.end+0.2s" fill="freeze" id="d3" path="M765 70 H815"/>
+        </circle>
+      </g>
+
+      <!-- Step Nodes -->
+      <g font-family="JetBrains Mono, ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle">
+        <!-- Node 1 -->
+        <rect x="20" y="38" width="145" height="64" rx="10" fill="rgba(56,189,248,0.06)" stroke="#0284c7" stroke-width="1.2"/>
+        <text x="92.5" y="66" fill="#f8fafc" font-size="12.5" font-weight="600">1. Search Deals</text>
+        <text x="92.5" y="84" fill="#64748b" font-size="10.5">Browse flights</text>
+
+        <!-- Node 2 -->
+        <rect x="220" y="38" width="145" height="64" rx="10" fill="rgba(56,189,248,0.06)" stroke="#0284c7" stroke-width="1.2"/>
+        <text x="292.5" y="66" fill="#f8fafc" font-size="12.5" font-weight="600">2. Encode State</text>
+        <text x="292.5" y="84" fill="#64748b" font-size="10.5">Build smart link</text>
+
+        <!-- Node 3 -->
+        <rect x="420" y="38" width="145" height="64" rx="10" fill="rgba(56,189,248,0.06)" stroke="#0284c7" stroke-width="1.2"/>
+        <text x="492.5" y="66" fill="#f8fafc" font-size="12.5" font-weight="600">3. Native Share</text>
+        <text x="492.5" y="84" fill="#64748b" font-size="10.5">iOS Share Sheet</text>
+
+        <!-- Node 4 -->
+        <rect x="620" y="38" width="145" height="64" rx="10" fill="rgba(56,189,248,0.06)" stroke="#0284c7" stroke-width="1.2"/>
+        <text x="692.5" y="66" fill="#f8fafc" font-size="12.5" font-weight="600">4. Open Link</text>
+        <text x="692.5" y="84" fill="#64748b" font-size="10.5">Universal Link / Web</text>
+
+        <!-- Node 5 -->
+        <rect x="820" y="38" width="140" height="64" rx="10" fill="rgba(52,211,153,0.08)" stroke="#10b981" stroke-width="1.4"/>
+        <text x="890" y="66" fill="#34d399" font-size="12.5" font-weight="700">5. Live Results</text>
+        <text x="890" y="84" fill="#94a3b8" font-size="10.5">Fetch real-time fares</text>
+      </g>
+    </svg>
+  </div>
+  <div class="footer-bar">
+    <span>Tuan Truong · iOS &amp; SwiftUI Engineering</span>
+    <a href="https://tqtuan1201.github.io" target="_blank" rel="noopener noreferrer" class="brand-link">
+      <span class="dot-sm"></span> https://tqtuan1201.github.io
+    </a>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function () {
+  var svg = document.getElementById('flowsvg');
+  var toast = document.getElementById('toast');
+  var shareBtn = document.getElementById('shareBtn');
+  var shareMenu = document.getElementById('shareMenu');
+  var toastTimer = null;
+
+  function showToast(msg) {
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () {
+      toast.classList.remove('show');
+    }, 2200);
+  }
+
+  // Animation pause/play
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.dot').forEach(function (d) { d.remove(); });
+    var b = document.getElementById('pauseBtn'); if (b) b.remove();
+  } else {
+    var pauseBtn = document.getElementById('pauseBtn'); var paused = false;
+    if (pauseBtn) {
+      pauseBtn.addEventListener('click', function () {
+        paused = !paused; document.body.classList.toggle('paused', paused);
+        paused ? svg.pauseAnimations() : svg.unpauseAnimations();
+        pauseBtn.textContent = paused ? '▶ play' : '⏸ pause';
+        pauseBtn.setAttribute('aria-pressed', String(paused));
+      });
+    }
+  }
+
+  // Share dropdown toggle
+  function toggleMenu(show) {
+    var isOpen = typeof show === 'boolean' ? show : !shareMenu.classList.contains('show');
+    shareMenu.classList.toggle('show', isOpen);
+    shareBtn.classList.toggle('active', isOpen);
+    shareBtn.setAttribute('aria-expanded', String(isOpen));
+  }
+
+  shareBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!shareMenu.contains(e.target) && e.target !== shareBtn) {
+      toggleMenu(false);
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') toggleMenu(false);
+  });
+
+  function getShareUrl() {
+    try {
+      if (window.self !== window.top && document.referrer) {
+        return document.referrer;
+      }
+    } catch (e) {}
+    return window.location.href;
+  }
+
+  var shareTitle = '12Bay Flight Share Flow & Screenshot Protection on iOS';
+
+  // Copy Link
+  document.getElementById('copyLinkBtn').addEventListener('click', function () {
+    var url = getShareUrl();
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(function () {
+        showToast('✓ Copied article link!');
+        toggleMenu(false);
+      }).catch(function () {
+        fallbackCopy(url);
+      });
+    } else {
+      fallbackCopy(url);
+    }
+  });
+
+  function fallbackCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.focus(); ta.select();
+    try {
+      document.execCommand('copy');
+      showToast('✓ Copied article link!');
+    } catch (err) {
+      showToast('⚠️ Copy failed, please copy URL manually');
+    }
+    document.body.removeChild(ta);
+    toggleMenu(false);
+  }
+
+  // Social Shares
+  document.getElementById('shareXBtn').addEventListener('click', function () {
+    var url = encodeURIComponent(getShareUrl());
+    var text = encodeURIComponent(shareTitle);
+    window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + url, '_blank', 'noopener,noreferrer');
+    toggleMenu(false);
+  });
+
+  document.getElementById('shareLinkedInBtn').addEventListener('click', function () {
+    var url = encodeURIComponent(getShareUrl());
+    window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + url, '_blank', 'noopener,noreferrer');
+    toggleMenu(false);
+  });
+
+  document.getElementById('shareTgBtn').addEventListener('click', function () {
+    var url = encodeURIComponent(getShareUrl());
+    var text = encodeURIComponent(shareTitle);
+    window.open('https://t.me/share/url?url=' + url + '&text=' + text, '_blank', 'noopener,noreferrer');
+    toggleMenu(false);
+  });
+
+  // Download SVG
+  document.getElementById('downloadSvgBtn').addEventListener('click', function () {
+    var svgData = new XMLSerializer().serializeToString(svg);
+    var blob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+    var link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = '12bay-flight-share-flow.svg';
+    link.click();
+    URL.revokeObjectURL(link.href);
+    showToast('✓ SVG downloaded!');
+    toggleMenu(false);
+  });
+
+  // Download PNG
+  document.getElementById('downloadPngBtn').addEventListener('click', function () {
+    showToast('⏳ Generating PNG...');
+    var scale = 2;
+    var canvas = document.createElement('canvas');
+    canvas.width = 970 * scale;
+    canvas.height = 140 * scale;
+    var ctx = canvas.getContext('2d');
+    
+    var svgData = new XMLSerializer().serializeToString(svg);
+    var img = new Image();
+    var blob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+    var url = URL.createObjectURL(blob);
+
+    img.onload = function () {
+      ctx.fillStyle = '#030a1c';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      URL.revokeObjectURL(url);
+
+      canvas.toBlob(function (pngBlob) {
+        var link = document.createElement('a');
+        link.href = URL.createObjectURL(pngBlob);
+        link.download = '12bay-flight-share-flow.png';
+        link.click();
+        URL.revokeObjectURL(link.href);
+        showToast('✓ PNG downloaded!');
+        toggleMenu(false);
+      }, 'image/png');
+    };
+    img.src = url;
+  });
+
+  // Download Animated GIF
+  document.getElementById('downloadGifBtn').addEventListener('click', function () {
+    showToast('⏳ Downloading Animated GIF...');
+    var gifUrl = '/images/12bay-flight-share-flow.gif';
+    var link = document.createElement('a');
+    link.href = gifUrl;
+    link.download = '12bay-flight-share-flow.gif';
+    link.target = '_blank';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    setTimeout(function() {
+      showToast('✓ Animated GIF downloaded!');
+    }, 400);
+    toggleMenu(false);
+  });
+
+})();
+</script>
+</body>
+</html>

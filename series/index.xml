@@ -6,7 +6,18 @@
     <description>Recent content in Series on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jul 2026 15:11:03 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Aug 2026 17:22:46 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SwiftUI Serial - Updating TTBaseUIKit to support SwiftUI</title>
+      <link>https://tqtuan1201.github.io/series/swiftui-serial-updating-ttbaseuikit-to-support-swiftui/</link>
+      <pubDate>Thu, 20 Aug 2026 17:22:46 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/series/swiftui-serial-updating-ttbaseuikit-to-support-swiftui/</guid>
+      
+        <description></description>
+      
+    </item>
+    
     <item>
       <title>Indie Dev Journey - Building Apps for Apple Ecosystem</title>
       <link>https://tqtuan1201.github.io/series/indie-dev-journey-building-apps-for-apple-ecosystem/</link>
@@ -24,17 +35,6 @@
       <pubDate>Wed, 28 Jan 2026 14:53:39 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/series/data-lakehouse-journey/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>SwiftUI Serial - Updating TTBaseUIKit to support SwiftUI</title>
-      <link>https://tqtuan1201.github.io/series/swiftui-serial-updating-ttbaseuikit-to-support-swiftui/</link>
-      <pubDate>Wed, 10 Dec 2025 15:22:14 +0700</pubDate>
-      
-      <guid>https://tqtuan1201.github.io/series/swiftui-serial-updating-ttbaseuikit-to-support-swiftui/</guid>
       
         <description></description>
       

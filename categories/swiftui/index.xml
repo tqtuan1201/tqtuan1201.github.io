@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SwiftUI on Tuan Truong&#39;s Blog</title>
+    <link>https://tqtuan1201.github.io/categories/swiftui/</link>
+    <description>Recent content in SwiftUI on Tuan Truong&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Aug 2026 17:22:46 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/categories/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I Built Flight Sharing and Screenshot Protection for 12Bay on iOS</title>
+      <link>https://tqtuan1201.github.io/posts/job/ios/swiftui/12bay-share-flight/</link>
+      <pubDate>Thu, 20 Aug 2026 17:22:46 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/job/ios/swiftui/12bay-share-flight/</guid>
+      
+        <description>Abstract When you plan a trip with family or friends, choosing a flight is rarely a solo decision. You search for cheap tickets, compare airlines, check departure hours, and then try to show the options to everyone in your group.
+For a long time, the common habit was simple: take five or six phone screenshots and send them into a group chat. But screenshots are messy, hard to read, and quickly go out of date as airline prices change.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

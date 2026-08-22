@@ -64,6 +64,17 @@
     />
 
   
+    
+    
+    <link
+      rel="stylesheet"
+      href="/css/codeblock.min.59ec0e340a2fb911db5c642c1c320218614620db8baba49de3e1b2edfd74a6d0.css"
+      integrity="sha256-WewONAovuRHbXGQsHDICGGFGINuLq6Sd4&#43;Gy7f10ptA="
+      crossorigin="anonymous"
+      media="screen"
+    />
+
+  
   
   <link
     rel="stylesheet"
@@ -117,7 +128,12 @@
       crossorigin="anonymous"
     ></script>
 
-  
+  <script
+      type="text/javascript"
+      src="/js/codeblock.min.f24ff6154ab8a465a29d07bc146ab6758fa925708a8bb31441670aaccdc1ce36.js"
+      integrity="sha256-8k/2FUq4pGWinQe8FGq2dY&#43;pJXCKi7MUQWcKrM3BzjY="
+      crossorigin="anonymous"
+    ></script>
 
   
 
@@ -208,7 +224,7 @@
 
     ,
         "url" : "https:\/\/tqtuan1201.github.io\/myapps\/",
-        "wordCount" : "774",
+        "wordCount" : "1049",
         "genre" : [ ],
         "keywords" : [ ]
     }
@@ -599,12 +615,17 @@
 
     <div class="post__content">
       <h1>My Apps &amp; Tools</h1>
-      <p>I build tools that solve real problems — from keeping your Mac secure with Bluetooth, to accelerating iOS development, to simplifying deep link testing. Here&rsquo;s what I&rsquo;ve shipped:</p>
+      <p>I build tools that solve real problems — from watching AI coding agents and safeguarding developer health, to keeping your Mac secure with Bluetooth, accelerating iOS development, and simplifying deep link testing.</p>
+<p>All of my independent applications, tools, and live releases are published and maintained through <strong><a href="https://tryapps.store">TryApps Store</a></strong> — my dedicated indie developer ecosystem. Here is what I&rsquo;ve shipped:</p>
 
 
 
 
 
+
+  
+    
+  
 
   
     
@@ -660,158 +681,181 @@
 
 
 <style>
-.app-card {
-  border: 1px solid rgba(100, 100, 100, 0.2);
-  border-radius: 16px;
-  padding: 28px;
-  margin-bottom: 40px;
-  background: linear-gradient(135deg, rgba(40, 40, 60, 0.04) 0%, rgba(60, 60, 100, 0.08) 100%);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.app-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
-}
-.app-badge {
-  display: inline-block;
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 0.75em;
-  font-weight: 600;
-  margin-right: 6px;
-  margin-bottom: 6px;
-}
-.badge-blue { background: rgba(59, 130, 246, 0.15); color: #3b82f6; }
-.badge-green { background: rgba(34, 197, 94, 0.15); color: #22c55e; }
-.badge-purple { background: rgba(168, 85, 247, 0.15); color: #a855f7; }
-.badge-orange { background: rgba(249, 115, 22, 0.15); color: #f97316; }
-.badge-cyan { background: rgba(6, 182, 212, 0.15); color: #06b6d4; }
-body.theme--light .badge-blue { color: #1d4ed8; }
-body.theme--light .badge-green { color: #15803d; }
-body.theme--light .badge-purple { color: #7e22ce; }
-body.theme--light .badge-orange { color: #c2410c; }
-body.theme--light .badge-cyan { color: #0e7490; }
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 12px;
-  margin: 16px 0;
-}
-.feature-item {
-  padding: 12px 16px;
-  border-radius: 10px;
-  background: rgba(100, 100, 100, 0.06);
-  font-size: 0.9em;
-}
-.feature-item strong {
-  display: block;
-  margin-bottom: 2px;
-}
-.feature-item p {
-  margin: 0;
-  display: inline;
-  line-height: inherit;
-}
-.app-screenshot {
-  border-radius: 12px;
-  overflow: hidden;
-  margin: 20px auto;
+.myapps-section {
   max-width: 100%;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  margin: 0 auto;
 }
-.app-screenshot img {
-  width: 100%;
-  display: block;
-}
-.myapps-head {
+
+ 
+.tryapps-hub-banner {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 16px;
+  padding: 18px 24px;
+  border-radius: 16px;
+  margin-bottom: 28px;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(234, 88, 12, 0.05) 50%, rgba(59, 130, 246, 0.05) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.28);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+.tryapps-hub-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #f59e0b, #ea580c);
+}
+.tryapps-hub-left {
+  display: flex;
+  align-items: center;
   gap: 14px;
-  margin-bottom: 18px;
+  min-width: 0;
+}
+.tryapps-hub-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(234, 88, 12, 0.2));
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4em;
+  flex-shrink: 0;
+}
+.tryapps-hub-title {
+  font-size: 1.02em;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.tryapps-hub-desc {
+  margin: 3px 0 0;
+  font-size: 0.86em;
+  opacity: 0.75;
+  line-height: 1.4;
+}
+.tryapps-hub-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.86em;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #fff !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+.tryapps-hub-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.45);
+}
+
+ 
+.myapps-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 22px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(120, 120, 140, 0.15);
 }
 .myapps-head h4 {
   margin: 0;
-  font-size: 1.1em;
+  font-size: 1.15em;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 .myapps-head .myapps-sub {
-  margin: 4px 0 0;
-  font-size: 0.88em;
-  opacity: 0.6;
+  margin: 2px 0 0;
+  font-size: 0.86em;
+  opacity: 0.65;
 }
 .myapps-filters {
   display: flex;
-  gap: 8px;
+  gap: 6px;
   flex-wrap: nowrap;
   overflow-x: auto;
   max-width: 100%;
-  min-width: 0;
-  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  -ms-overflow-style: none;
-  padding-bottom: 2px;
 }
 .myapps-filters::-webkit-scrollbar {
   display: none;
 }
 .myapp-filter-btn {
-  border: 1px solid rgba(100, 100, 100, 0.25);
-  background: transparent;
+  border: 1px solid rgba(120, 120, 140, 0.2);
+  background: rgba(120, 120, 140, 0.06);
   color: inherit;
-  padding: 6px 16px;
+  padding: 6px 14px;
   border-radius: 20px;
-  font-size: 0.85em;
+  font-size: 0.84em;
   font-family: inherit;
   cursor: pointer;
-  opacity: 0.7;
-  flex-shrink: 0;
+  opacity: 0.75;
   white-space: nowrap;
-  transition: opacity 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  transition: all 0.2s ease;
 }
 .myapp-filter-btn:hover {
   opacity: 1;
+  background: rgba(59, 130, 246, 0.12);
+  border-color: rgba(59, 130, 246, 0.3);
 }
 .myapp-filter-btn.active {
   opacity: 1;
-  background: rgba(59, 130, 246, 0.15);
-  border-color: rgba(59, 130, 246, 0.4);
-  color: #3b82f6;
+  background: #3b82f6;
+  border-color: #3b82f6;
+  color: #fff;
   font-weight: 600;
+  box-shadow: 0 2px 10px rgba(59, 130, 246, 0.35);
 }
-body.theme--light .myapp-filter-btn.active {
-  color: #1d4ed8;
-}
+
+ 
 .myapps-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  gap: 18px;
-  margin-bottom: 28px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  margin-bottom: 36px;
 }
 .myapp-card {
   display: flex;
   flex-direction: column;
-  border: 1px solid rgba(100, 100, 100, 0.18);
+  border: 1px solid rgba(120, 120, 140, 0.18);
   border-radius: 14px;
-  padding: 20px;
-  background: rgba(100, 100, 100, 0.03);
+  padding: 18px;
+  background: rgba(120, 120, 140, 0.03);
   text-decoration: none !important;
   color: inherit !important;
+  position: relative;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 .myapp-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
-  border-color: rgba(100, 100, 100, 0.32);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  border-color: rgba(59, 130, 246, 0.4);
 }
 .myapp-card.is-hidden {
   display: none;
 }
 .myapp-card-top {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 .myapp-icon {
   width: 44px;
@@ -820,11 +864,12 @@ body.theme--light .myapp-filter-btn.active {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4em;
+  font-size: 1.35em;
   flex-shrink: 0;
   overflow: hidden;
-  background: rgba(100, 100, 100, 0.08);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: rgba(120, 120, 140, 0.08);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(120, 120, 140, 0.15);
 }
 .myapp-icon img {
   width: 100%;
@@ -835,128 +880,87 @@ body.theme--light .myapp-filter-btn.active {
 .myapp-name-row {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   flex-wrap: wrap;
+  min-width: 0;
 }
 .myapp-name-row strong {
-  font-size: 1.02em;
+  font-size: 1em;
+  font-weight: 700;
 }
 .myapp-badge-sm {
-  padding: 2px 10px;
+  padding: 2px 8px;
   font-size: 0.68em;
-  vertical-align: middle;
+  font-weight: 600;
+  border-radius: 12px;
   margin: 0;
 }
 .myapp-desc {
-  font-size: 0.88em;
-  opacity: 0.7;
+  font-size: 0.85em;
+  opacity: 0.72;
   line-height: 1.45;
-  margin: 0 0 14px;
+  margin: 0 0 12px;
   flex: 1;
 }
 .myapp-platforms {
   display: flex;
-  gap: 8px;
-  margin-bottom: 14px;
-  font-size: 1.05em;
-  opacity: 0.55;
+  gap: 6px;
+  margin-bottom: 12px;
+  font-size: 0.95em;
+  opacity: 0.6;
 }
 .myapp-cta-btn {
   align-self: flex-start;
-  font-size: 0.85em;
+  font-size: 0.82em;
   font-weight: 600;
-  padding: 8px 16px;
+  padding: 6px 14px;
   border-radius: 8px;
-  border: 1px solid rgba(59, 130, 246, 0.4);
+  border: 1px solid rgba(59, 130, 246, 0.35);
   color: #3b82f6 !important;
+  background: rgba(59, 130, 246, 0.06);
   text-decoration: none !important;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: all 0.2s ease;
 }
 .myapp-card:hover .myapp-cta-btn {
   background: #3b82f6;
   color: #fff !important;
+  border-color: #3b82f6;
 }
-.myapps-cta-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
-  border: 1px solid rgba(100, 100, 100, 0.18);
-  border-radius: 14px;
-  padding: 18px 24px;
-  margin: 40px 0 0;
-  background: rgba(100, 100, 100, 0.03);
+
+ 
+.app-card {
+  border: 1px solid rgba(120, 120, 140, 0.2);
+  border-radius: 18px;
+  padding: 26px 28px;
+  margin-bottom: 36px;
+  background: linear-gradient(135deg, rgba(120, 120, 140, 0.03) 0%, rgba(120, 120, 140, 0.06) 100%);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+  position: relative;
+  transition: border-color 0.25s ease;
 }
-.myapps-cta-bar-left {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-.myapps-cta-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 1.1em;
-  flex-shrink: 0;
-}
-.myapps-cta-bar h5 {
-  margin: 0;
-  font-size: 0.98em;
-}
-.myapps-cta-bar p {
-  margin: 2px 0 0;
-  font-size: 0.85em;
-  opacity: 0.65;
-}
-.app-cta {
-  display: inline-block;
-  padding: 10px 24px;
-  border-radius: 10px;
-  text-decoration: none !important;
-  font-weight: 600;
-  font-size: 0.95em;
-  margin-right: 10px;
-  margin-top: 10px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.app-cta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-}
-.cta-primary {
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
-  color: #fff !important;
-}
-.cta-secondary {
-  background: rgba(100, 100, 100, 0.1);
-  color: inherit !important;
-  border: 1px solid rgba(100, 100, 100, 0.2);
+.app-card:hover {
+  border-color: rgba(120, 120, 140, 0.35);
 }
 .app-header {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 8px;
+  gap: 16px;
+  margin-bottom: 14px;
 }
 .app-emoji {
-  width: 56px;
-  height: 56px;
+  width: 54px;
+  height: 54px;
   border-radius: 14px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.8em;
+  font-size: 1.7em;
   line-height: 1;
   flex-shrink: 0;
-  background: rgba(100, 100, 100, 0.08);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: rgba(120, 120, 140, 0.08);
+  border: 1px solid rgba(120, 120, 140, 0.2);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
 }
 .app-emoji img {
   width: 100%;
@@ -964,12 +968,219 @@ body.theme--light .myapp-filter-btn.active {
   object-fit: cover;
   display: block;
 }
+.app-header h3 {
+  margin: 0;
+  font-size: 1.35em;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  scroll-margin-top: 90px;
+}
+.app-header small {
+  display: block;
+  font-size: 0.88em;
+  opacity: 0.7;
+  margin-top: 3px;
+}
+
+ 
+.app-badges-row {
+  margin: 8px 0 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.app-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 14px;
+  font-size: 0.74em;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.badge-blue { background: rgba(59, 130, 246, 0.15); color: #3b82f6; border: 1px solid rgba(59, 130, 246, 0.25); }
+.badge-green { background: rgba(34, 197, 94, 0.15); color: #22c55e; border: 1px solid rgba(34, 197, 94, 0.25); }
+.badge-purple { background: rgba(168, 85, 247, 0.15); color: #a855f7; border: 1px solid rgba(168, 85, 247, 0.25); }
+.badge-orange { background: rgba(249, 115, 22, 0.15); color: #f97316; border: 1px solid rgba(249, 115, 22, 0.25); }
+.badge-cyan { background: rgba(6, 182, 212, 0.15); color: #06b6d4; border: 1px solid rgba(6, 182, 212, 0.25); }
+body.theme--light .badge-blue { color: #1d4ed8; }
+body.theme--light .badge-green { color: #15803d; }
+body.theme--light .badge-purple { color: #7e22ce; }
+body.theme--light .badge-orange { color: #c2410c; }
+body.theme--light .badge-cyan { color: #0e7490; }
+
+.app-description {
+  font-size: 0.94em;
+  line-height: 1.6;
+  opacity: 0.88;
+  margin-bottom: 18px;
+}
+
+ 
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 18px 0;
+}
+.feature-item {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(120, 120, 140, 0.05);
+  border: 1px solid rgba(120, 120, 140, 0.12);
+  font-size: 0.86em;
+  transition: background 0.2s ease;
+}
+.feature-item:hover {
+  background: rgba(120, 120, 140, 0.09);
+}
+.feature-item strong {
+  display: block;
+  font-size: 0.95em;
+  margin-bottom: 4px;
+  color: inherit;
+}
+.feature-item p {
+  margin: 0;
+  display: inline;
+  line-height: 1.45;
+  opacity: 0.75;
+}
+
+ 
+.app-screenshot-frame {
+  margin: 20px auto;
+  max-width: 560px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(120, 120, 140, 0.22);
+  background: rgba(15, 17, 23, 0.6);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15), 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.app-screenshot-frame:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22);
+}
+.app-screenshot-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: rgba(120, 120, 140, 0.08);
+  border-bottom: 1px solid rgba(120, 120, 140, 0.14);
+}
+.app-screenshot-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(120, 120, 140, 0.35);
+}
+.app-screenshot-title {
+  margin-left: 6px;
+  font-size: 0.75em;
+  opacity: 0.6;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.app-screenshot-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 4px;
+}
+.app-screenshot-content img {
+  max-width: 100%;
+  max-height: 280px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 6px;
+}
+
+ 
+.app-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+.app-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 10px;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 0.88em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.app-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+.cta-primary {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: #fff !important;
+  box-shadow: 0 3px 12px rgba(59, 130, 246, 0.3);
+}
+.cta-secondary {
+  background: rgba(120, 120, 140, 0.08);
+  color: inherit !important;
+  border: 1px solid rgba(120, 120, 140, 0.22);
+}
+
 .app-divider {
   border: none;
-  border-top: 1px solid rgba(100, 100, 100, 0.15);
-  margin: 48px 0;
+  border-top: 1px solid rgba(120, 120, 140, 0.16);
+  margin: 32px 0;
 }
-.app-header h3,
+
+ 
+.myapps-cta-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  border: 1px solid rgba(120, 120, 140, 0.2);
+  border-radius: 16px;
+  padding: 20px 26px;
+  margin: 36px 0 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);
+}
+.myapps-cta-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.myapps-cta-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.15em;
+  flex-shrink: 0;
+}
+.myapps-cta-bar h5 {
+  margin: 0;
+  font-size: 1.02em;
+  font-weight: 700;
+}
+.myapps-cta-bar p {
+  margin: 2px 0 0;
+  font-size: 0.85em;
+  opacity: 0.7;
+}
+
 #contact {
   scroll-margin-top: 90px;
 }
@@ -977,26 +1188,55 @@ body.theme--light .myapp-filter-btn.active {
 
 <div class="myapps-section">
 
+
+<div class="tryapps-hub-banner">
+  <div class="tryapps-hub-left">
+    <div class="tryapps-hub-icon">🏪</div>
+    <div>
+      <div class="tryapps-hub-title">TryApps Store Ecosystem <span class="app-badge badge-orange" style="margin: 0;">Hub</span></div>
+      <div class="tryapps-hub-desc">Central launchpad &amp; showcase for all my indie products, live apps, and upcoming developer tools.</div>
+    </div>
+  </div>
+  <a href="https://tryapps.store" target="_blank" rel="noopener" class="tryapps-hub-btn">Visit tryapps.store ↗</a>
+</div>
+
+
 <div class="myapps-head">
   <div>
-    <h4>📂 My Apps</h4>
-    <p class="myapps-sub">A collection of apps &amp; tools I've built and continue to improve.</p>
+    <h4>📂 Shipped Applications</h4>
+    <p class="myapps-sub">Production apps, developer utilities, and frameworks actively maintained.</p>
   </div>
   <div class="myapps-filters">
-    <button class="myapp-filter-btn active" data-filter="all">All</button>
+    <button class="myapp-filter-btn active" data-filter="all">All (6)</button>
     
-    <button class="myapp-filter-btn" data-filter="macos">macOS</button>
+    <button class="myapp-filter-btn" data-filter="macos">🖥 macOS</button>
     
-    <button class="myapp-filter-btn" data-filter="ios">iOS</button>
+    <button class="myapp-filter-btn" data-filter="ios">📱 iOS</button>
     
-    <button class="myapp-filter-btn" data-filter="watchos">watchOS</button>
+    <button class="myapp-filter-btn" data-filter="watchos">⌚ watchOS</button>
     
-    <button class="myapp-filter-btn" data-filter="web">Web</button>
+    <button class="myapp-filter-btn" data-filter="web">🌐 Web</button>
     
   </div>
 </div>
 
+
 <div class="myapps-grid">
+  
+  <a href="#flovix" class="myapp-card" data-platforms="macos">
+    <div class="myapp-card-top">
+      
+      <div class="myapp-icon"><img src="/images/logo-flovix.png" alt="FloviX logo" loading="lazy"></div>
+      
+      <div class="myapp-name-row">
+        <strong>FloviX</strong>
+        <span class="app-badge badge-orange myapp-badge-sm">New Release</span>
+      </div>
+    </div>
+    <p class="myapp-desc">Watches your AI coding agents, auto-heals crashes, keeps prompt templates close, and protects your health with smart breaks.</p>
+    <div class="myapp-platforms" aria-hidden="true">🖥 </div>
+    <span class="myapp-cta-btn">View Details →</span>
+  </a>
   
   <a href="#proximity-lock" class="myapp-card" data-platforms="macos ios watchos">
     <div class="myapp-card-top">
@@ -1077,6 +1317,7 @@ body.theme--light .myapp-filter-btn.active {
 
 </div>
 
+
 <script>
 (function () {
   var buttons = document.querySelectorAll('.myapp-filter-btn');
@@ -1098,7 +1339,86 @@ body.theme--light .myapp-filter-btn.active {
 
 
 
-<hr class="app-divider" style="margin-top: 20px;">
+
+<hr class="app-divider" style="margin-top: 10px;">
+
+
+<div class="app-card">
+
+<div class="app-header">
+  
+  <span class="app-emoji"><img src="/images/logo-flovix.png" alt="FloviX logo" loading="lazy"></span>
+  
+  <div>
+    <h3 id="flovix">FloviX</h3>
+    <small>Protect Your Flow — macOS Menu-Bar Guardian for AI Coding &amp; Health</small>
+  </div>
+</div>
+
+<div class="app-badges-row">
+  <span class="app-badge badge-blue">macOS</span><span class="app-badge badge-purple">AI</span><span class="app-badge badge-green">Productivity</span><span class="app-badge badge-purple">SwiftUI</span><span class="app-badge badge-cyan">Privacy</span><span class="app-badge badge-orange">Menu Bar</span>
+</div>
+
+<div class="app-description">
+  A privacy-first macOS menu-bar guardian designed for modern AI pair programming. FloviX watches <strong>Cursor, Windsurf, Claude Code, VS Code, iTerm2, and Docker</strong> in the background, automatically catches silent agent crashes, and heals them in seconds so you never lose your flow. Includes <strong>Health Guard</strong> for context-aware breaks, a <strong>desktop pet companion</strong>, and <strong>Focus Notes</strong> with dynamic variable substitution.
+</div>
+
+<div class="feature-grid">
+  
+  <div class="feature-item">
+    <strong>⚡ Auto-Heal AI Crashes</strong>
+    Detects rate limits, timeouts, and terminated agents across Cursor, Windsurf, and Claude Code — auto-retries in 2 seconds.
+  </div>
+  
+  <div class="feature-item">
+    <strong>🛡️ Health Guard &amp; Smart Breaks</strong>
+    Context-aware break reminders counted from real work and AI activity — not arbitrary timers — with full-screen nudges.
+  </div>
+  
+  <div class="feature-item">
+    <strong>🐾 Desktop Pet Companion</strong>
+    38 collectible companions that mirror your real-time workflow and remind you to stretch and rest.
+  </div>
+  
+  <div class="feature-item">
+    <strong>📝 Focus Notes &amp; Templates</strong>
+    Keep reusable prompt templates one keystroke away with dynamic <code>{{variables}}</code> and iCloud sync.
+  </div>
+  
+  <div class="feature-item">
+    <strong>🔊 Soundboard &amp; Monitor</strong>
+    Per-event audio feedback when AI tasks finish or error, plus a live AI Working activity monitor.
+  </div>
+  
+  <div class="feature-item">
+    <strong>🔒 100% Privacy-First</strong>
+    Runs completely on-device. No accounts, no analytics, no cloud telemetry — key names only.
+  </div>
+  
+</div>
+
+
+<div class="app-screenshot-frame">
+  <div class="app-screenshot-bar">
+    <span class="app-screenshot-dot"></span>
+    <span class="app-screenshot-dot"></span>
+    <span class="app-screenshot-dot"></span>
+    <span class="app-screenshot-title">FloviX Preview</span>
+  </div>
+  <div class="app-screenshot-content">
+    <img src="/images/myapps-flovix.webp" alt="FloviX — macOS Menu-Bar Guardian for AI Coding &amp; Developer Health" loading="lazy">
+  </div>
+</div>
+
+
+<div class="app-ctas">
+  <a href="https://flovix.tryapps.store/" target="_blank" rel="noopener" class="app-cta cta-primary">🌐 Visit FloviX Website</a><a href="https://flovix.tryapps.store/#get" target="_blank" rel="noopener" class="app-cta cta-secondary">⬇️ Download for macOS</a>
+</div>
+
+</div>
+
+
+<hr class="app-divider">
 
 
 <div class="app-card">
@@ -1108,52 +1428,60 @@ body.theme--light .myapp-filter-btn.active {
   <span class="app-emoji"><img src="/images/logo-12bay.png" alt="12Bay.vn logo" loading="lazy"></span>
   
   <div>
-    <h3 id="12bay" style="margin: 0;">12Bay.vn</h3>
-    <small style="opacity: 0.7;">Săn Vé Máy Bay Giá Rẻ — Cheap Flight Booking</small>
+    <h3 id="12bay">12Bay.vn</h3>
+    <small>Săn Vé Máy Bay Giá Rẻ — Cheap Flight Booking</small>
   </div>
 </div>
 
-<p>
-<span class="app-badge badge-blue">iOS</span>
-<span class="app-badge badge-orange">Swift</span>
-<span class="app-badge badge-purple">UIKit</span>
-<span class="app-badge badge-cyan">Apple Watch</span>
-<span class="app-badge badge-green">Travel</span>
-<span class="app-badge badge-green">4.6 ★</span>
+<div class="app-badges-row">
+  <span class="app-badge badge-blue">iOS</span><span class="app-badge badge-orange">Swift</span><span class="app-badge badge-purple">UIKit</span><span class="app-badge badge-cyan">Apple Watch</span><span class="app-badge badge-green">Travel</span><span class="app-badge badge-green">4.6 ★</span>
+</div>
 
-</p>
-
-A flight booking app for the Vietnamese market — search, compare, and book <strong>domestic &amp; international flights</strong> at the best prices. Built with <strong>TTBaseUIKit</strong>, serving users across Vietnam with real-time pricing, QR payment, and flight status tracking.
+<div class="app-description">
+  A flight booking app for the Vietnamese market — search, compare, and book <strong>domestic &amp; international flights</strong> at the best prices. Built with <strong>TTBaseUIKit</strong>, serving users across Vietnam with real-time pricing, QR payment, and flight status tracking.
+</div>
 
 <div class="feature-grid">
+  
   <div class="feature-item">
     <strong>🔍 Smart Search</strong>
     Compare prices across Vietnam Airlines, VietJet, Bamboo Airways and more — find the cheapest fares instantly.
   </div>
+  
   <div class="feature-item">
     <strong>💳 QR Payment</strong>
     One-scan checkout — no manual bank transfers. Supports all popular Vietnamese payment methods.
   </div>
+  
   <div class="feature-item">
     <strong>🛫 Flight Boarding</strong>
     Real-time flight status, boarding gate info, and departure updates — all in one tap.
   </div>
+  
   <div class="feature-item">
     <strong>⌚ Apple Watch</strong>
     Check flight info and booking details right from your wrist.
   </div>
-
+  
 </div>
 
 
-<div class="app-screenshot">
-  <img src="https://tqtuan1201.github.io/images/12bay-appstore.jpeg" alt="12Bay.vn — Săn Vé Máy Bay Giá Rẻ" loading="lazy">
+<div class="app-screenshot-frame">
+  <div class="app-screenshot-bar">
+    <span class="app-screenshot-dot"></span>
+    <span class="app-screenshot-dot"></span>
+    <span class="app-screenshot-dot"></span>
+    <span class="app-screenshot-title">12Bay.vn Preview</span>
+  </div>
+  <div class="app-screenshot-content">
+    <img src="/images/12bay-appstore.jpeg" alt="12Bay.vn — Săn Vé Máy Bay Giá Rẻ" loading="lazy">
+  </div>
 </div>
 
 
-<a href="https://apps.apple.com/us/app/s%C4%83n-v%C3%A9-m%C3%A1y-bay-gi%C3%A1-r%E1%BA%BB-12bay-vn/id1191396802" class="app-cta cta-primary">📱 App Store</a>
-<a href="https://12bay.vn/" class="app-cta cta-secondary">🌐 Visit Website</a>
-
+<div class="app-ctas">
+  <a href="https://apps.apple.com/us/app/s%C4%83n-v%C3%A9-m%C3%A1y-bay-gi%C3%A1-r%E1%BA%BB-12bay-vn/id1191396802" target="_blank" rel="noopener" class="app-cta cta-primary">📱 App Store</a><a href="https://12bay.vn/" target="_blank" rel="noopener" class="app-cta cta-secondary">🌐 Visit Website</a>
+</div>
 
 </div>
 
@@ -1168,52 +1496,60 @@ A flight booking app for the Vietnamese market — search, compare, and book <st
   <span class="app-emoji"><img src="/images/logo-proximity-lock.png" alt="Proximity Lock logo" loading="lazy"></span>
   
   <div>
-    <h3 id="proximity-lock" style="margin: 0;">Proximity Lock</h3>
-    <small style="opacity: 0.7;">Auto-Lock Your Mac with iPhone Proximity</small>
+    <h3 id="proximity-lock">Proximity Lock</h3>
+    <small>Auto-Lock Your Mac with iPhone Proximity</small>
   </div>
 </div>
 
-<p>
-<span class="app-badge badge-blue">macOS</span>
-<span class="app-badge badge-blue">iOS</span>
-<span class="app-badge badge-cyan">Bluetooth</span>
-<span class="app-badge badge-green">Security</span>
-<span class="app-badge badge-purple">SwiftUI</span>
-<span class="app-badge badge-orange">Apple Watch</span>
+<div class="app-badges-row">
+  <span class="app-badge badge-blue">macOS</span><span class="app-badge badge-blue">iOS</span><span class="app-badge badge-cyan">Bluetooth</span><span class="app-badge badge-green">Security</span><span class="app-badge badge-purple">SwiftUI</span><span class="app-badge badge-orange">Apple Watch</span>
+</div>
 
-</p>
-
-Your iPhone becomes a <strong>Bluetooth security key</strong> — walk away and your Mac locks itself automatically. No account, no cloud, no configuration. Just scan a QR code and you&rsquo;re protected in 30 seconds.
+<div class="app-description">
+  Your iPhone becomes a <strong>Bluetooth security key</strong> — walk away and your Mac locks itself automatically. No account, no cloud, no configuration. Just scan a QR code and you&rsquo;re protected in 30 seconds.
+</div>
 
 <div class="feature-grid">
+  
   <div class="feature-item">
     <strong>🚶 Auto-Lock</strong>
     Walk away → Mac locks. Smart signal filter ignores brief interference.
   </div>
+  
   <div class="feature-item">
     <strong>☕ Café Mode</strong>
     Anti-theft alarm on charger removal, lid close, or screen tampering.
   </div>
+  
   <div class="feature-item">
     <strong>📱 Remote Control</strong>
     Lock, sleep, check battery and view logs — all from your iPhone.
   </div>
+  
   <div class="feature-item">
     <strong>⌚ Apple Watch</strong>
     Quick security controls right on your wrist.
   </div>
-
+  
 </div>
 
 
-<div class="app-screenshot">
-  <img src="/images/myapps-proximity-lock.png" alt="Proximity Lock — Walk away, Mac locks automatically" loading="lazy">
+<div class="app-screenshot-frame">
+  <div class="app-screenshot-bar">
+    <span class="app-screenshot-dot"></span>
+    <span class="app-screenshot-dot"></span>
+    <span class="app-screenshot-dot"></span>
+    <span class="app-screenshot-title">Proximity Lock Preview</span>
+  </div>
+  <div class="app-screenshot-content">
+    <img src="/images/myapps-proximity-lock.png" alt="Proximity Lock — Walk away, Mac locks automatically" loading="lazy">
+  </div>
 </div>
 
 
-<a href="https://tqtuan1201.github.io/public/apps/proximity/" class="app-cta cta-primary">🌐 Visit Website</a>
-<a href="https://tqtuan1201.github.io/public/apps/proximity/#pricing" class="app-cta cta-secondary">⬇️ Download Free Trial</a>
-
+<div class="app-ctas">
+  <a href="https://tqtuan1201.github.io/public/apps/proximity/" target="_blank" rel="noopener" class="app-cta cta-primary">🌐 Visit Website</a><a href="https://tqtuan1201.github.io/public/apps/proximity/#pricing" target="_blank" rel="noopener" class="app-cta cta-secondary">⬇️ Download Free Trial</a>
+</div>
 
 </div>
 
@@ -1228,52 +1564,60 @@ Your iPhone becomes a <strong>Bluetooth security key</strong> — walk away and 
   <span class="app-emoji"><img src="/images/logo-ttbaseuikit.png" alt="TTBaseUIKit logo" loading="lazy"></span>
   
   <div>
-    <h3 id="ttbaseuikit" style="margin: 0;">TTBaseUIKit</h3>
-    <small style="opacity: 0.7;">Build iOS Apps Faster — 100&#43; Production-Ready Components</small>
+    <h3 id="ttbaseuikit">TTBaseUIKit</h3>
+    <small>Build iOS Apps Faster — 100&#43; Production-Ready Components</small>
   </div>
 </div>
 
-<p>
-<span class="app-badge badge-blue">iOS</span>
-<span class="app-badge badge-orange">Swift</span>
-<span class="app-badge badge-purple">UIKit</span>
-<span class="app-badge badge-cyan">SwiftUI</span>
-<span class="app-badge badge-green">SwiftPM</span>
-<span class="app-badge badge-green">Open Source</span>
+<div class="app-badges-row">
+  <span class="app-badge badge-blue">iOS</span><span class="app-badge badge-orange">Swift</span><span class="app-badge badge-purple">UIKit</span><span class="app-badge badge-cyan">SwiftUI</span><span class="app-badge badge-green">SwiftPM</span><span class="app-badge badge-green">Open Source</span>
+</div>
 
-</p>
-
-An ultra-modern enterprise foundation providing <strong>100+ production-ready base views</strong> for both UIKit and SwiftUI. Pre-built components eliminate boilerplate — build production UI in hours, not days.
+<div class="app-description">
+  An ultra-modern enterprise foundation providing <strong>100+ production-ready base views</strong> for both UIKit and SwiftUI. Pre-built components eliminate boilerplate — build production UI in hours, not days.
+</div>
 
 <div class="feature-grid">
+  
   <div class="feature-item">
     <strong>🧱 72&#43; UIKit Components</strong>
     BaseUIView, BaseUILabel, ViewCodable, Coordinators, Auto Layout helpers, and more.
   </div>
+  
   <div class="feature-item">
     <strong>🎨 51&#43; SwiftUI Views</strong>
     BaseSUIView, view modifiers, shimmer animations, button styles — iOS 14+.
   </div>
+  
   <div class="feature-item">
     <strong>🤖 17 AI Agent Skills</strong>
     Pre-configured for Copilot, Claude Code, Xcode Agent, Codex, and Gemini.
   </div>
+  
   <div class="feature-item">
     <strong>🛠 Debug Kit</strong>
     Built-in layout inspector, API response viewer, screen capture tools.
   </div>
-
+  
 </div>
 
 
-<div class="app-screenshot">
-  <img src="/images/myapps-ttbaseuikit.png" alt="TTBaseUIKit — Build iOS Apps Faster" loading="lazy">
+<div class="app-screenshot-frame">
+  <div class="app-screenshot-bar">
+    <span class="app-screenshot-dot"></span>
+    <span class="app-screenshot-dot"></span>
+    <span class="app-screenshot-dot"></span>
+    <span class="app-screenshot-title">TTBaseUIKit Preview</span>
+  </div>
+  <div class="app-screenshot-content">
+    <img src="/images/myapps-ttbaseuikit.png" alt="TTBaseUIKit — Build iOS Apps Faster" loading="lazy">
+  </div>
 </div>
 
 
-<a href="https://tqtuan1201.github.io/public/docs/ttbaseuikit/" class="app-cta cta-primary">📖 View Documentation</a>
-<a href="https://github.com/tqtuan1201/TTBaseUIKit" class="app-cta cta-secondary">⭐ GitHub</a>
-
+<div class="app-ctas">
+  <a href="https://tqtuan1201.github.io/public/docs/ttbaseuikit/" target="_blank" rel="noopener" class="app-cta cta-primary">📖 View Documentation</a><a href="https://github.com/tqtuan1201/TTBaseUIKit" target="_blank" rel="noopener" class="app-cta cta-secondary">⭐ GitHub</a>
+</div>
 
 </div>
 
@@ -1288,61 +1632,70 @@ An ultra-modern enterprise foundation providing <strong>100+ production-ready ba
   <span class="app-emoji"><img src="/images/logo-ttbdebugplus.png" alt="TTBDebugPlus logo" loading="lazy"></span>
   
   <div>
-    <h3 id="ttbdebugplus" style="margin: 0;">TTBDebugPlus</h3>
-    <small style="opacity: 0.7;">macOS Companion Debugger for iOS Apps</small>
+    <h3 id="ttbdebugplus">TTBDebugPlus</h3>
+    <small>macOS Companion Debugger for iOS Apps</small>
   </div>
 </div>
 
-<p>
-<span class="app-badge badge-blue">macOS</span>
-<span class="app-badge badge-purple">SwiftUI</span>
-<span class="app-badge badge-cyan">Bonjour</span>
-<span class="app-badge badge-orange">WebSocket</span>
-<span class="app-badge badge-green">Open Source</span>
-<span class="app-badge badge-green">Free</span>
+<div class="app-badges-row">
+  <span class="app-badge badge-blue">macOS</span><span class="app-badge badge-purple">SwiftUI</span><span class="app-badge badge-cyan">Bonjour</span><span class="app-badge badge-orange">WebSocket</span><span class="app-badge badge-green">Open Source</span><span class="app-badge badge-green">Free</span>
+</div>
 
-</p>
-
-A professional-grade macOS companion app for debugging iOS applications in <strong>real-time</strong>. View logs, inspect network requests, export to Postman, analyze API performance, and manage debug sessions — all from your Mac. Zero-config discovery via Bonjour, connects in under 2 seconds.
+<div class="app-description">
+  A professional-grade macOS companion app for debugging iOS applications in <strong>real-time</strong>. View logs, inspect network requests, export to Postman, analyze API performance, and manage debug sessions — all from your Mac. Zero-config discovery via Bonjour, connects in under 2 seconds.
+</div>
 
 <div class="feature-grid">
+  
   <div class="feature-item">
     <strong>📋 Live Console</strong>
     Filter by level (Error/Warning/Info/Debug), full-text search, JSON expand, auto-scroll LIVE mode.
   </div>
+  
   <div class="feature-item">
     <strong>🌐 Network Inspector</strong>
     JSON Tree Viewer, deep search, pin/bookmark requests, waterfall timing, export as cURL or Postman.
   </div>
+  
   <div class="feature-item">
     <strong>📱 Device Control</strong>
     Remote screenshot capture, toggle Dark Mode, app lifecycle management, accessibility overrides.
   </div>
+  
   <div class="feature-item">
     <strong>📊 Performance Monitor</strong>
     CPU &amp; Memory charts, FPS counter, network bandwidth, slow request &amp; duplicate detection.
   </div>
+  
   <div class="feature-item">
     <strong>🐛 Feedback Reporter</strong>
     Structured bug reports with auto-tags (UI/UX, Network, Crash), annotated screenshots, Markdown export.
   </div>
+  
   <div class="feature-item">
     <strong>📤 Export &amp; Share</strong>
     Postman Collection v2.1, cURL replay, .ttbdebug session files — share debug sessions across teams.
   </div>
-
+  
 </div>
 
 
-<div class="app-screenshot">
-  <img src="/images/myapps-ttbdebugplus.png" alt="TTBDebugPlus — macOS Companion Debugger for iOS Apps" loading="lazy">
+<div class="app-screenshot-frame">
+  <div class="app-screenshot-bar">
+    <span class="app-screenshot-dot"></span>
+    <span class="app-screenshot-dot"></span>
+    <span class="app-screenshot-dot"></span>
+    <span class="app-screenshot-title">TTBDebugPlus Preview</span>
+  </div>
+  <div class="app-screenshot-content">
+    <img src="/images/myapps-ttbdebugplus.png" alt="TTBDebugPlus — macOS Companion Debugger for iOS Apps" loading="lazy">
+  </div>
 </div>
 
 
-<a href="https://tqtuan1201.github.io/public/docs/ttbaseuikit/ttbdebugplus.html" class="app-cta cta-primary">📖 View Documentation</a>
-<a href="https://github.com/tqtuan1201/TTBDebugPlus" class="app-cta cta-secondary">⭐ GitHub</a>
-<a href="https://tqtuan1201.github.io/public/docs/ttbaseuikit/apps/TTBDebugPlus-Installer.dmg" class="app-cta cta-secondary">⬇️ Download .dmg</a>
-
+<div class="app-ctas">
+  <a href="https://tqtuan1201.github.io/public/docs/ttbaseuikit/ttbdebugplus.html" target="_blank" rel="noopener" class="app-cta cta-primary">📖 View Documentation</a><a href="https://github.com/tqtuan1201/TTBDebugPlus" target="_blank" rel="noopener" class="app-cta cta-secondary">⭐ GitHub</a><a href="https://tqtuan1201.github.io/public/docs/ttbaseuikit/apps/TTBDebugPlus-Installer.dmg" target="_blank" rel="noopener" class="app-cta cta-secondary">⬇️ Download .dmg</a>
+</div>
 
 </div>
 
@@ -1357,60 +1710,71 @@ A professional-grade macOS companion app for debugging iOS applications in <stro
   <span class="app-emoji">🔗</span>
   
   <div>
-    <h3 id="deep-link-tester" style="margin: 0;">Deep Link Tester</h3>
-    <small style="opacity: 0.7;">Test Universal Links, App Links &amp; Custom URL Schemes</small>
+    <h3 id="deep-link-tester">Deep Link Tester</h3>
+    <small>Test Universal Links, App Links &amp; Custom URL Schemes</small>
   </div>
 </div>
 
-<p>
-<span class="app-badge badge-purple">Web Tool</span>
-<span class="app-badge badge-blue">iOS</span>
-<span class="app-badge badge-green">Android</span>
-<span class="app-badge badge-cyan">Universal Links</span>
-<span class="app-badge badge-orange">Free &amp; Open Source</span>
+<div class="app-badges-row">
+  <span class="app-badge badge-purple">Web Tool</span><span class="app-badge badge-blue">iOS</span><span class="app-badge badge-green">Android</span><span class="app-badge badge-cyan">Universal Links</span><span class="app-badge badge-orange">Free &amp; Open Source</span>
+</div>
 
-</p>
-
-A free, configurable deep link testing tool for mobile developers. Build and test <strong>Universal Links</strong> (iOS), <strong>App Links</strong> (Android), and <strong>Custom URL Schemes</strong> with configurable parameters — all from your browser.
+<div class="app-description">
+  A free, configurable deep link testing tool for mobile developers. Build and test <strong>Universal Links</strong> (iOS), <strong>App Links</strong> (Android), and <strong>Custom URL Schemes</strong> with configurable parameters — all from your browser.
+</div>
 
 <div class="feature-grid">
+  
   <div class="feature-item">
     <strong>🔧 Link Builder</strong>
     Configure scheme, host, path, and query params with live preview.
   </div>
+  
   <div class="feature-item">
     <strong>🌐 Site Checker</strong>
     Validate <code>apple-app-site-association</code> and <code>assetlinks.json</code> files.
   </div>
+  
   <div class="feature-item">
     <strong>📱 QR Code</strong>
     Scan generated QR code to test links instantly on your device.
   </div>
+  
   <div class="feature-item">
     <strong>💾 App Presets</strong>
     Save and reuse configurations for different apps and environments.
   </div>
-
+  
 </div>
 
 
-<div class="app-screenshot">
-  <img src="/images/myapps-deep-link-tester.png" alt="Deep Link Tester — Test Universal Links &amp; App Links" loading="lazy">
+<div class="app-screenshot-frame">
+  <div class="app-screenshot-bar">
+    <span class="app-screenshot-dot"></span>
+    <span class="app-screenshot-dot"></span>
+    <span class="app-screenshot-dot"></span>
+    <span class="app-screenshot-title">Deep Link Tester Preview</span>
+  </div>
+  <div class="app-screenshot-content">
+    <img src="/images/myapps-deep-link-tester.png" alt="Deep Link Tester — Test Universal Links &amp; App Links" loading="lazy">
+  </div>
 </div>
 
 
-<a href="https://tqtuan1201.github.io/public/apps/applink/" class="app-cta cta-primary">🚀 Open Tool</a>
-
+<div class="app-ctas">
+  <a href="https://tqtuan1201.github.io/public/apps/applink/" target="_blank" rel="noopener" class="app-cta cta-primary">🚀 Open Tool</a>
+</div>
 
 </div>
+
 
 
 <div class="myapps-cta-bar">
   <div class="myapps-cta-bar-left">
     <div class="myapps-cta-icon">📩</div>
     <div>
-      <h5>Have an idea?</h5>
-      <p>I'm always open to new ideas and collaborations.</p>
+      <h5>Have an idea or want to collaborate?</h5>
+      <p>I am always open to new indie product ideas, framework contributions, and partnerships.</p>
     </div>
   </div>
   <a href="#contact" class="app-cta cta-primary" style="margin: 0;">Let's Connect →</a>
