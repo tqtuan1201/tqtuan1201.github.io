@@ -17,9 +17,9 @@ const translations = {
 
     // Video Section
     "video.label": "Video",
-    "video.title": "See Proximity Lock in Action",
-    "video.desc": "Watch how Proximity Lock secures your Mac automatically — from initial setup to everyday protection.",
-    "video.player.title": "Proximity Lock — Demo",
+    "video.title": "See Proximity Lock: Smart AutoLock in Action",
+    "video.desc": "Watch how Proximity Lock: Smart AutoLock secures your Mac automatically — from initial setup to everyday protection.",
+    "video.player.title": "Proximity Lock: Smart AutoLock — Demo",
     "video.player.badge": "Watch on YouTube",
     "video.duration": "▶ Watch on YouTube",
     "video.chip.1": "Auto-Lock Demo",
@@ -148,7 +148,7 @@ const translations = {
     // Featured On
     "featured.label": "Featured On",
     "featured.title": "Find Us in the Community",
-    "featured.desc": "Proximity Lock is live on these platforms — check it out and leave us a review!",
+    "featured.desc": "Proximity Lock: Smart AutoLock is live on these platforms — check it out and leave us a review!",
     "featured.ph.name": "Product Hunt",
     "featured.ph.desc": "The global launchpad for new products. Support us with an upvote.",
     "featured.ph.cta": "View & Upvote",
@@ -166,7 +166,7 @@ const translations = {
     "pricing.label": "Pricing",
     "pricing.title": "Try Free. Love It. Keep It.",
     "pricing.trial": "✨ 3-Day Full Access — No Credit Card Needed",
-    "pricing.card.title": "Proximity Lock Pro",
+    "pricing.card.title": "Proximity Lock: Smart AutoLock Pro",
     "pricing.card.desc": "Everything you need to keep your Mac safe — automatically.",
     "pricing.f1": "Proximity Auto-Lock",
     "pricing.f2": "Café Mode Anti-Theft",
@@ -183,9 +183,9 @@ const translations = {
     "nav.challenge": "🎁 Challenge",
     "challenge.label": "Creator Challenge",
     "challenge.title": "Get Pro for Free!",
-    "challenge.subtitle": "Create a short video about Proximity Lock and claim your free Pro access!",
+    "challenge.subtitle": "Create a short video about Proximity Lock: Smart AutoLock and claim your free Pro access!",
     "challenge.hero.title": "Get Pro for Free!",
-    "challenge.hero.subtitle": "Make a short video showing how Proximity Lock protects your Mac.",
+    "challenge.hero.subtitle": "Make a short video showing how Proximity Lock: Smart AutoLock protects your Mac.",
     "challenge.tier1.badge": "TIER 1",
     "challenge.tier1.unit": "views",
     "challenge.tier1.reward": "50% OFF Pro",
@@ -195,7 +195,7 @@ const translations = {
     "challenge.share.callout": "Simply post your video on <strong>TikTok, Instagram Reels, YouTube Shorts, or X</strong>, then send us the link. The more people you reach, the bigger your reward.",
     "challenge.reward": "🎁 Lifetime Pro Access",
     "challenge.step1.title": "Download the App",
-    "challenge.step1.desc": "Get Proximity Lock on iPhone & Mac from the App Store.",
+    "challenge.step1.desc": "Get Proximity Lock: Smart AutoLock on iPhone & Mac from the App Store.",
     "challenge.step2.title": "Create Your Video",
     "challenge.step2.desc": "Record a short review, tutorial, or creative video.",
     "challenge.step3.title": "Use Our Hashtags",
@@ -204,7 +204,7 @@ const translations = {
     "challenge.step4.desc": "Simply post your video on TikTok, Instagram Reels, YouTube Shorts, or X, then send us the link.",
     "challenge.step5.title": "Claim Your Reward",
     "challenge.step5.desc": "<strong>🎁 500 views</strong> → 50% OFF Pro · <strong>🚀 2,000 views</strong> → Lifetime Pro FREE! Send us proof and claim your code!",
-    "challenge.hashtags": "#ProximityLock #MacSecurity",
+    "challenge.hashtags": "#ProximityLock #SmartAutoLock #MacSecurity",
     "challenge.copy": "Copy",
     "challenge.copied": "Copied ✓",
     "challenge.cta": "Join the Challenge",
@@ -213,7 +213,7 @@ const translations = {
     // Download
     "nav.downloadLink": "Download",
     "download.label": "Download",
-    "download.title": "Get Proximity Lock Now",
+    "download.title": "Get Proximity Lock: Smart AutoLock Now",
     "download.desc": "Available on the App Store for Mac and iPhone. Install and protect your Mac in seconds.",
     "download.badge.pre": "Download on the",
     "download.mac.title": "macOS App",
@@ -242,7 +242,7 @@ const translations = {
     "footer.support": "Support",
     "footer.changelog": "Changelog",
     "footer.contact": "Contact",
-    "footer.copyright": "© 2026 Proximity Lock. All rights reserved."
+    "footer.copyright": "© 2026 Proximity Lock: Smart AutoLock. All rights reserved."
   },
 
   vi: {
@@ -259,9 +259,9 @@ const translations = {
 
     // Video Section
     "video.label": "Video",
-    "video.title": "Xem Proximity Lock hoạt động",
-    "video.desc": "Xem cách Proximity Lock tự động bảo vệ Mac của bạn — từ lúc cài đặt đến sử dụng hàng ngày.",
-    "video.player.title": "Proximity Lock — Demo",
+    "video.title": "Xem Proximity Lock: Smart AutoLock hoạt động",
+    "video.desc": "Xem cách Proximity Lock: Smart AutoLock tự động bảo vệ Mac của bạn — từ lúc cài đặt đến sử dụng hàng ngày.",
+    "video.player.title": "Proximity Lock: Smart AutoLock — Demo",
     "video.player.badge": "Xem trên YouTube",
     "video.duration": "▶ Xem trên YouTube",
     "video.chip.1": "Demo tự động khoá",
@@ -390,7 +390,7 @@ const translations = {
     // Được giới thiệu trên
     "featured.label": "Được giới thiệu trên",
     "featured.title": "Tìm chúng tôi trong cộng đồng",
-    "featured.desc": "Proximity Lock đã có mặt trên các nền tảng này — ghé xem và để lại đánh giá nhé!",
+    "featured.desc": "Proximity Lock: Smart AutoLock đã có mặt trên các nền tảng này — ghé xem và để lại đánh giá nhé!",
     "featured.ph.name": "Product Hunt",
     "featured.ph.desc": "Bệ phóng sản phẩm mới toàn cầu. Ủng hộ chúng tôi bằng một upvote.",
     "featured.ph.cta": "Xem & Upvote",
@@ -408,7 +408,7 @@ const translations = {
     "pricing.label": "Bảng giá",
     "pricing.title": "Dùng thử. Thích ngay. Mua luôn.",
     "pricing.trial": "✨ 3 ngày trải nghiệm đầy đủ — Không cần thẻ ngân hàng",
-    "pricing.card.title": "Proximity Lock Pro",
+    "pricing.card.title": "Proximity Lock: Smart AutoLock Pro",
     "pricing.card.desc": "Tất cả tính năng để Mac luôn an toàn — hoàn toàn tự động.",
     "pricing.f1": "Tự động khoá theo khoảng cách",
     "pricing.f2": "Chống trộm — Chế độ Café",
@@ -425,9 +425,9 @@ const translations = {
     "nav.challenge": "🎁 Thử thách",
     "challenge.label": "Thử thách Sáng tạo",
     "challenge.title": "Nhận Pro miễn phí!",
-    "challenge.subtitle": "Tạo video ngắn về Proximity Lock và nhận mã Pro miễn phí!",
+    "challenge.subtitle": "Tạo video ngắn về Proximity Lock: Smart AutoLock và nhận mã Pro miễn phí!",
     "challenge.hero.title": "Nhận Pro miễn phí!",
-    "challenge.hero.subtitle": "Quay video ngắn giới thiệu cách Proximity Lock bảo vệ Mac của bạn.",
+    "challenge.hero.subtitle": "Quay video ngắn giới thiệu cách Proximity Lock: Smart AutoLock bảo vệ Mac của bạn.",
     "challenge.tier1.badge": "HẠNG 1",
     "challenge.tier1.unit": "lượt xem",
     "challenge.tier1.reward": "Giảm 50% Pro",
@@ -437,7 +437,7 @@ const translations = {
     "challenge.share.callout": "Chỉ cần đăng video của bạn lên <strong>TikTok, Instagram Reels, YouTube Shorts hoặc X</strong>, sau đó gửi link cho chúng tôi. Càng nhiều người tiếp cận, phần thưởng càng lớn.",
     "challenge.reward": "🎁 Pro trọn đời",
     "challenge.step1.title": "Tải ứng dụng",
-    "challenge.step1.desc": "Tải Proximity Lock trên iPhone & Mac từ App Store.",
+    "challenge.step1.desc": "Tải Proximity Lock: Smart AutoLock trên iPhone & Mac từ App Store.",
     "challenge.step2.title": "Quay video",
     "challenge.step2.desc": "Quay video review, hướng dẫn, hoặc sáng tạo.",
     "challenge.step3.title": "Dùng hashtag",
@@ -446,7 +446,7 @@ const translations = {
     "challenge.step4.desc": "Đăng video lên TikTok, Instagram Reels, YouTube Shorts hoặc X, sau đó gửi link cho chúng tôi.",
     "challenge.step5.title": "Nhận thưởng",
     "challenge.step5.desc": "<strong>🎁 500 lượt xem</strong> → giảm 50% Pro · <strong>🚀 2.000 lượt xem</strong> → Pro trọn đời MIỄN PHÍ! Gửi bằng chứng và nhận mã Pro!",
-    "challenge.hashtags": "#ProximityLock #MacSecurity",
+    "challenge.hashtags": "#ProximityLock #SmartAutoLock #MacSecurity",
     "challenge.copy": "Sao chép",
     "challenge.copied": "Đã sao chép ✓",
     "challenge.cta": "Tham gia thử thách",
@@ -455,7 +455,7 @@ const translations = {
     // Tải về
     "nav.downloadLink": "Tải về",
     "download.label": "Tải về",
-    "download.title": "Tải Proximity Lock ngay",
+    "download.title": "Tải Proximity Lock: Smart AutoLock ngay",
     "download.desc": "Có sẵn trên App Store cho Mac và iPhone. Cài đặt và bảo vệ Mac chỉ trong vài giây.",
     "download.badge.pre": "Tải về trên",
     "download.mac.title": "Ứng dụng macOS",
@@ -484,6 +484,6 @@ const translations = {
     "footer.support": "Hỗ trợ",
     "footer.changelog": "Nhật ký cập nhật",
     "footer.contact": "Liên hệ",
-    "footer.copyright": "© 2026 Proximity Lock. Bảo lưu mọi quyền."
+    "footer.copyright": "© 2026 Proximity Lock: Smart AutoLock. Bảo lưu mọi quyền."
   }
 };

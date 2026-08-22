@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initParticleNetwork();
   initVideoPlayer();
   initChallengeHashtagCopy();
+  initStickyMobileBar();
 });
 
 // ── Ambient Particle Canvas — Premium Smooth ────────────────────────
@@ -381,24 +382,13 @@ function initParallaxHero() {
   }, { passive: true });
 }
 
-// ── Video Player — YouTube Inline Embed ─────────────────────────────
+// ── Video Player — Open YouTube in New Tab ──────────────────────────
 function initVideoPlayer() {
   const thumbnail = document.getElementById('videoThumbnail');
-  const container = document.getElementById('videoContainer');
-  if (!thumbnail || !container) return;
+  if (!thumbnail) return;
 
-  thumbnail.addEventListener('click', () => {
-    container.innerHTML = `
-      <iframe 
-        src="https://www.youtube-nocookie.com/embed/nFAHoENvkYc?autoplay=1&rel=0" 
-        title="Proximity Lock — Setup & Demo Guide" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
-      </iframe>
-    `;
-  });
+  // The <a> tag has href and target="_blank", no need to inject an iframe
+  // that gets blocked by YouTube embed permissions.
 }
 
 // ── Creator Challenge — Hashtag Copy to Clipboard ─────────────────────
@@ -407,7 +397,7 @@ function initChallengeHashtagCopy() {
   if (!btn) return;
 
   btn.addEventListener('click', async () => {
-    const hashtags = btn.getAttribute('data-hashtags') || '#ProximityLock #MacSecurity';
+    const hashtags = btn.getAttribute('data-hashtags') || '#ProximityLock #SmartAutoLock #MacSecurity';
 
     try {
       await navigator.clipboard.writeText(hashtags);
@@ -437,4 +427,43 @@ function initChallengeHashtagCopy() {
       label.textContent = originalText;
     }, 2000);
   });
+}
+
+// ── Floating Sticky Mobile Action Bar ────────────────────────────────
+function initStickyMobileBar() {
+  const stickyBar = document.getElementById('mobileStickyBar');
+  const heroSection = document.querySelector('.hero');
+  const downloadSection = document.getElementById('download');
+
+  if (!stickyBar || !heroSection) return;
+
+  function updateStickyBar() {
+    if (window.innerWidth >= 768) {
+      stickyBar.classList.remove('visible');
+      return;
+    }
+
+    const heroRect = heroSection.getBoundingClientRect();
+    const heroBottom = heroRect.bottom;
+    
+    // Check if hero is mostly scrolled past
+    const isPastHero = heroBottom < 100;
+
+    // Check if user is already inside download section
+    let isInDownload = false;
+    if (downloadSection) {
+      const dlRect = downloadSection.getBoundingClientRect();
+      isInDownload = dlRect.top < window.innerHeight && dlRect.bottom > 0;
+    }
+
+    if (isPastHero && !isInDownload) {
+      stickyBar.classList.add('visible');
+    } else {
+      stickyBar.classList.remove('visible');
+    }
+  }
+
+  window.addEventListener('scroll', updateStickyBar, { passive: true });
+  window.addEventListener('resize', updateStickyBar, { passive: true });
+  updateStickyBar();
 }
