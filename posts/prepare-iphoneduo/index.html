@@ -9,7 +9,7 @@
     
       Tuan Truong
         |
-        Get ready for iPhone Duo: What iOS developers need to change
+        Get ready for iPhone Duo: What iOS developers eed to Change
 
 
       
@@ -142,7 +142,7 @@
   <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://tqtuan1201.github.io/images/profile.jpg"/>
 
-<meta name="twitter:title" content="Get ready for iPhone Duo: What iOS developers need to change"/>
+<meta name="twitter:title" content="Get ready for iPhone Duo: What iOS developers eed to Change"/>
 <meta name="twitter:description" content="Abstract A few years ago, I wrote about the future of mobile app development. Back then, foldable phones were an Android story, and iOS developers stayed in a comfortable single-screen world.
 That changed on September 9, 2026, when Apple announced iPhone Duo. It has a 5.4-inch outer display and a 7.6-inch inner display that unfolds.
 I went through Apple&rsquo;s tech talks to find what really matters for an existing app. In this post, we will look at five ideas:"/>
@@ -151,7 +151,7 @@ I went through Apple&rsquo;s tech talks to find what really matters for an exist
 
 
   
-  <meta property="og:title" content="Get ready for iPhone Duo: What iOS developers need to change" />
+  <meta property="og:title" content="Get ready for iPhone Duo: What iOS developers eed to Change" />
 <meta property="og:description" content="Abstract A few years ago, I wrote about the future of mobile app development. Back then, foldable phones were an Android story, and iOS developers stayed in a comfortable single-screen world.
 That changed on September 9, 2026, when Apple announced iPhone Duo. It has a 5.4-inch outer display and a 7.6-inch inner display that unfolds.
 I went through Apple&rsquo;s tech talks to find what really matters for an existing app. In this post, we will look at five ideas:" />
@@ -173,8 +173,8 @@ I went through Apple&rsquo;s tech talks to find what really matters for an exist
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "articleSection": "posts",
-        "name": "Get ready for iPhone Duo: What iOS developers need to change",
-        "headline": "Get ready for iPhone Duo: What iOS developers need to change",
+        "name": "Get ready for iPhone Duo: What iOS developers eed to Change",
+        "headline": "Get ready for iPhone Duo: What iOS developers eed to Change",
         "alternativeHeadline": "",
         "description": "
       
@@ -685,7 +685,7 @@ I went through Apple&rsquo;s tech talks to find what really matters for an exist
     
 
     <div class="post__content">
-      <h1>Get ready for iPhone Duo: What iOS developers need to change</h1>
+      <h1>Get ready for iPhone Duo: What iOS developers eed to Change</h1>
       <h3>Table of Contents</h3>
         <nav id="TableOfContents">
   <ul>
@@ -722,7 +722,7 @@ I went through Apple&rsquo;s tech talks to find what really matters for an exist
 <hr>
 <h1 id="1-size-classes-not-orientation">1. Size classes, not orientation</h1>
 <p>The same app now moves between very different shapes. Closed, it looks like a normal iPhone. Open, it looks closer to a small iPad. Partly folded, the screen has a hinge in the middle.</p>
-<figure class="big"><img src="/images/iphoneduo-poses.png"
+<figure class="medium"><img src="/images/iphoneduo-poses.png"
          alt="iPhone Duo poses: closed with compact width, flat with regular width, folded with a hinge, and Split View with compact width"/><figcaption>
             <p>One app, four shapes</p>
         </figcaption>
@@ -757,7 +757,7 @@ I went through Apple&rsquo;s tech talks to find what really matters for an exist
 </span></span></code></pre></div><hr>
 <h1 id="2-navigation-bars-move-to-the-side">2. Navigation bars move to the side</h1>
 <p>On the wide inner display, a top bar plus a bottom bar takes too much height. In iOS 27, Apple combines them into one <strong>vertical bar</strong> on the side edge.</p>
-<figure class="big"><img src="/images/iphoneduo-side-bar.png"
+<figure class="medium"><img src="/images/iphoneduo-side-bar.png"
          alt="Top and bottom bars on a classic iPhone compared with one side vertical bar on the iPhone Duo inner display"/><figcaption>
             <p>Top and bottom bars become one side bar</p>
         </figcaption>
@@ -788,7 +788,7 @@ I went through Apple&rsquo;s tech talks to find what really matters for an exist
 <li><code>.division</code>: the hinge line. It is inactive when the device is flat.</li>
 <li><code>.occlusion</code>: camera cutouts that always cover some pixels.</li>
 </ul>
-<figure class="big"><img src="/images/iphoneduo-hinge.png"
+<figure class="medium"><img src="/images/iphoneduo-hinge.png"
          alt="Tabletop mode with media on the top half and controls on the bottom half, compared with a reading feed that flows across the hinge"/><figcaption>
             <p>Move controls off the fold, but let reading content flow</p>
         </figcaption>
@@ -818,7 +818,7 @@ I went through Apple&rsquo;s tech talks to find what really matters for an exist
 <hr>
 <h1 id="5-two-front-cameras">5. Two front cameras</h1>
 <p>iPhone Duo has a front camera on each display. You can choose how much control you need:</p>
-<figure class="big"><img src="/images/iphoneduo-cameras.png"
+<figure class="medium"><img src="/images/iphoneduo-cameras.png"
          alt="Virtual Front Camera switches sensors automatically at 1080p 60 fps, while direct sensor control gives 4K 120 fps and depth"/><figcaption>
             <p>Start simple, go direct only when you need more</p>
         </figcaption>
@@ -833,13 +833,13 @@ I went through Apple&rsquo;s tech talks to find what really matters for an exist
 <h1 id="before-you-ship">Before you ship</h1>
 <p>Here is the short checklist I would run on an existing app:</p>
 <ul>
-<li><input disabled="" type="checkbox"> Replace <code>UIScreen.main</code> with the trait collection or window scene.</li>
-<li><input disabled="" type="checkbox"> Remove layout logic based on device orientation.</li>
-<li><input disabled="" type="checkbox"> Use <code>view.bounds.inset(by: view.safeAreaInsets)</code> instead of mirrored insets.</li>
-<li><input disabled="" type="checkbox"> Move custom toolbars into system navigation containers.</li>
-<li><input disabled="" type="checkbox"> Give every bar item a symbol and a title.</li>
-<li><input disabled="" type="checkbox"> Keep UI state per scene, not in a global singleton.</li>
-<li><input disabled="" type="checkbox"> Test each pose in <strong>DeviceHub</strong>, the pose controller in the Xcode 27.1 iPhone Duo Simulator: closed, flat, tabletop, book, and Split View.</li>
+<li>Replace <code>UIScreen.main</code> with the trait collection or window scene.</li>
+<li>Remove layout logic based on device orientation.</li>
+<li>Use <code>view.bounds.inset(by: view.safeAreaInsets)</code> instead of mirrored insets.</li>
+<li>Move custom toolbars into system navigation containers.</li>
+<li>Give every bar item a symbol and a title.</li>
+<li>Keep UI state per scene, not in a global singleton.</li>
+<li>Test each pose in <strong>DeviceHub</strong>, the pose controller in the Xcode 27.1 iPhone Duo Simulator: closed, flat, tabletop, book, and Split View.</li>
 </ul>
 <hr>
 <h1 id="conclusion">Conclusion</h1>
@@ -886,7 +886,7 @@ I went through Apple&rsquo;s tech talks to find what really matters for an exist
 <h3>Posts in this Series</h3>
 <ul>
   
-    <li><a href="/posts/prepare-iphoneduo/">Get Ready for IPhone Duo: What IOS Developers Need to Change</a></li>
+    <li><a href="/posts/prepare-iphoneduo/">Get Ready for IPhone Duo: What IOS Developers Eed to Change</a></li>
 
   
     <li><a href="/posts/apple-watch-serial-design/">Let&#39;s Idea, How to Design Travel App (12Bay) on WatchOS?</a></li>
