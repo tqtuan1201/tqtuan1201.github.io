@@ -6,7 +6,20 @@
     <description>Recent content in iOS on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 20 Aug 2026 17:22:46 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Sep 2026 14:45:00 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Get ready for iPhone Duo: What iOS developers need to change</title>
+      <link>https://tqtuan1201.github.io/posts/prepare-iphoneduo/</link>
+      <pubDate>Tue, 15 Sep 2026 14:45:00 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/prepare-iphoneduo/</guid>
+      
+        <description>Abstract A few years ago, I wrote about the future of mobile app development. Back then, foldable phones were an Android story, and iOS developers stayed in a comfortable single-screen world.
+That changed on September 9, 2026, when Apple announced iPhone Duo. It has a 5.4-inch outer display and a 7.6-inch inner display that unfolds.
+I went through Apple&amp;rsquo;s tech talks to find what really matters for an existing app. In this post, we will look at five ideas:</description>
+      
+    </item>
+    
     <item>
       <title>How I Built Flight Sharing and Screenshot Protection for 12Bay on iOS</title>
       <link>https://tqtuan1201.github.io/posts/job/ios/swiftui/12bay-share-flight/</link>

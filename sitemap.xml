@@ -2,10 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://tqtuan1201.github.io/tags/12bay/</loc>
-    <lastmod>2026-08-20T17:22:46+07:00</lastmod>
+    <loc>https://tqtuan1201.github.io/tags/architecture/</loc>
+    <lastmod>2026-09-15T14:45:00+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/categories/architecture/</loc>
+    <lastmod>2026-09-15T14:45:00+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/categories/</loc>
+    <lastmod>2026-09-15T14:45:00+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/categories/dev-journey/</loc>
+    <lastmod>2026-09-15T14:45:00+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/series/dev-journey-the-future-of-mobile-app-developement/</loc>
+    <lastmod>2026-09-15T14:45:00+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/posts/prepare-iphoneduo/</loc>
+    <lastmod>2026-09-15T14:45:00+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/ios/</loc>
+    <lastmod>2026-09-15T14:45:00+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/categories/ios-development/</loc>
+    <lastmod>2026-09-15T14:45:00+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/iphone-duo/</loc>
+    <lastmod>2026-09-15T14:45:00+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/mobile-development/</loc>
+    <lastmod>2026-09-15T14:45:00+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/posts/</loc>
+    <lastmod>2026-09-15T14:45:00+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/series/</loc>
+    <lastmod>2026-09-15T14:45:00+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/swiftui/</loc>
+    <lastmod>2026-09-15T14:45:00+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/</loc>
+    <lastmod>2026-09-15T14:45:00+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/</loc>
+    <lastmod>2026-09-15T14:45:00+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/uikit/</loc>
+    <lastmod>2026-09-15T14:45:00+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/posts/job/data/survey/survey-superset/</loc>
+    <lastmod>2026-09-08T16:21:19+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/apache-superset/</loc>
+    <lastmod>2026-09-08T16:21:19+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/business-intelligence/</loc>
+    <lastmod>2026-09-08T16:21:19+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/categories/data/</loc>
+    <lastmod>2026-09-08T16:21:19+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/series/data-engineering-journey/</loc>
+    <lastmod>2026-09-08T16:21:19+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/data-visualization/</loc>
+    <lastmod>2026-09-08T16:21:19+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/docker/</loc>
+    <lastmod>2026-09-08T16:21:19+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/categories/notes/</loc>
+    <lastmod>2026-09-08T16:21:19+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/sql/</loc>
+    <lastmod>2026-09-08T16:21:19+07:00</lastmod>
+  </url><url>
+    <loc>https://tqtuan1201.github.io/tags/12bay/</loc>
     <lastmod>2026-08-20T17:22:46+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/tags/deep-link/</loc>
@@ -14,43 +86,19 @@
     <loc>https://tqtuan1201.github.io/tags/dev-journey/</loc>
     <lastmod>2026-08-20T17:22:46+07:00</lastmod>
   </url><url>
-    <loc>https://tqtuan1201.github.io/categories/dev-journey/</loc>
-    <lastmod>2026-08-20T17:22:46+07:00</lastmod>
-  </url><url>
     <loc>https://tqtuan1201.github.io/posts/job/ios/swiftui/12bay-share-flight/</loc>
-    <lastmod>2026-08-20T17:22:46+07:00</lastmod>
-  </url><url>
-    <loc>https://tqtuan1201.github.io/tags/ios/</loc>
     <lastmod>2026-08-20T17:22:46+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/categories/ios/</loc>
     <lastmod>2026-08-20T17:22:46+07:00</lastmod>
   </url><url>
-    <loc>https://tqtuan1201.github.io/posts/</loc>
-    <lastmod>2026-08-20T17:22:46+07:00</lastmod>
-  </url><url>
     <loc>https://tqtuan1201.github.io/tags/security/</loc>
-    <lastmod>2026-08-20T17:22:46+07:00</lastmod>
-  </url><url>
-    <loc>https://tqtuan1201.github.io/series/</loc>
-    <lastmod>2026-08-20T17:22:46+07:00</lastmod>
-  </url><url>
-    <loc>https://tqtuan1201.github.io/tags/swiftui/</loc>
     <lastmod>2026-08-20T17:22:46+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/categories/swiftui/</loc>
     <lastmod>2026-08-20T17:22:46+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/series/swiftui-serial-updating-ttbaseuikit-to-support-swiftui/</loc>
-    <lastmod>2026-08-20T17:22:46+07:00</lastmod>
-  </url><url>
-    <loc>https://tqtuan1201.github.io/tags/</loc>
-    <lastmod>2026-08-20T17:22:46+07:00</lastmod>
-  </url><url>
-    <loc>https://tqtuan1201.github.io/</loc>
-    <lastmod>2026-08-20T17:22:46+07:00</lastmod>
-  </url><url>
-    <loc>https://tqtuan1201.github.io/tags/uikit/</loc>
     <lastmod>2026-08-20T17:22:46+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/categories/apps/</loc>
@@ -105,9 +153,6 @@
     <lastmod>2026-01-28T14:53:39+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/tags/note/</loc>
-    <lastmod>2026-01-28T14:53:39+07:00</lastmod>
-  </url><url>
-    <loc>https://tqtuan1201.github.io/categories/notes/</loc>
     <lastmod>2026-01-28T14:53:39+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/categories/self-improvement/</loc>
@@ -392,9 +437,6 @@
     <loc>https://tqtuan1201.github.io/posts/apple-watch-serial-p1-homescreen/</loc>
     <lastmod>2022-05-04T14:38:52+07:00</lastmod>
   </url><url>
-    <loc>https://tqtuan1201.github.io/series/dev-journey-the-future-of-mobile-app-developement/</loc>
-    <lastmod>2022-04-20T17:39:16+07:00</lastmod>
-  </url><url>
     <loc>https://tqtuan1201.github.io/posts/apple-watch-serial-design/</loc>
     <lastmod>2022-04-20T17:39:16+07:00</lastmod>
   </url><url>
@@ -447,9 +489,6 @@
     <lastmod>2022-04-07T13:29:52+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/tags/future/</loc>
-    <lastmod>2022-04-06T16:05:26+07:00</lastmod>
-  </url><url>
-    <loc>https://tqtuan1201.github.io/tags/mobile-development/</loc>
     <lastmod>2022-04-06T16:05:26+07:00</lastmod>
   </url><url>
     <loc>https://tqtuan1201.github.io/tags/roadmap/</loc>

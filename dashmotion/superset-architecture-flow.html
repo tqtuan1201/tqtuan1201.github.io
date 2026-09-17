@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What runs behind Apache Superset</title>
+<link rel="stylesheet" href="kit/dashmotion.css">
+</head>
+<body>
+<script type="application/json" id="dm-spec">
+{
+  "title": "What runs behind Apache Superset",
+  "subtitle": "The Flask server sits in the middle. Your data stays in your own database.",
+  "description": "The React app calls the Flask server. Flask reads settings from the metadata database, caches results and queues jobs in Redis, and sends SQL to your analytics database. Celery workers take jobs from Redis and also query the analytics database.",
+  "gif": "/images/superset-architecture-flow.gif",
+  "nodes": [
+    { "id": "app", "label": "React app", "detail": "Dashboards, Explore, SQL Lab", "icon": "client", "col": 0, "row": 1 },
+    { "id": "flask", "label": "Flask server", "detail": "Login, roles, SQL builder", "icon": "service", "col": 1, "row": 1 },
+    { "id": "meta", "label": "Metadata DB", "detail": "Users, charts, layouts", "icon": "store", "col": 2, "row": 0 },
+    { "id": "redis", "label": "Redis", "detail": "Result cache, job queue", "icon": "cache", "col": 2, "row": 1 },
+    { "id": "dw", "label": "Your database", "detail": "PostgreSQL, ClickHouse, …", "icon": "store", "col": 2, "row": 2, "external": true },
+    { "id": "celery", "label": "Celery workers", "detail": "Long queries, reports", "icon": "worker", "col": 3, "row": 1 }
+  ],
+  "edges": [
+    { "from": "app", "to": "flask", "label": "HTTP" },
+    { "from": "flask", "to": "meta", "label": "settings" },
+    { "from": "flask", "to": "redis", "label": "cache" },
+    { "from": "flask", "to": "dw", "label": "SQL" },
+    { "from": "redis", "to": "celery", "label": "jobs" },
+    { "from": "celery", "to": "dw", "label": "SQL" }
+  ],
+  "sequence": [
+    { "nodes": ["app"] },
+    { "edges": ["app-flask"], "nodes": ["flask"] },
+    { "edges": ["flask-meta"], "nodes": ["meta"] },
+    { "edges": ["flask-redis"], "nodes": ["redis"] },
+    { "edges": ["flask-dw"], "nodes": ["dw"] },
+    { "edges": ["redis-celery"], "nodes": ["celery"] },
+    { "edges": ["celery-dw"], "nodes": ["dw"] }
+  ]
+}
+</script>
+<script src="kit/dashmotion.js" defer></script>
+</body>
+</html>

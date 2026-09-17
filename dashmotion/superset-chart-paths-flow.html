@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Two ways to build a Superset chart</title>
+<link rel="stylesheet" href="kit/dashmotion.css">
+</head>
+<body>
+<script type="application/json" id="dm-spec">
+{
+  "title": "Two ways to build a Superset chart",
+  "subtitle": "Explore works on a table directly. SQL Lab lets you shape the data first, then save it as a dataset.",
+  "description": "A table from your database becomes a dataset that opens in Explore, where you build a chart without SQL. Alternatively, you query the table in SQL Lab and save the result as a virtual dataset, which also opens in Explore. The saved chart is then added to a dashboard.",
+  "gif": "/images/superset-chart-paths-flow.gif",
+  "nodes": [
+    { "id": "table", "label": "Table", "detail": "In your database", "icon": "store", "col": 0, "row": 0, "external": true },
+    { "id": "explore", "label": "Explore", "detail": "Pick metrics, no SQL", "icon": "search", "col": 1, "row": 0 },
+    { "id": "sqllab", "label": "SQL Lab", "detail": "Write your own query", "icon": "code", "col": 1, "row": 1 },
+    { "id": "chart", "label": "Chart", "detail": "Saved visualization", "icon": "chart", "col": 2, "row": 0 },
+    { "id": "board", "label": "Dashboard", "detail": "Charts and filters", "icon": "client", "col": 3, "row": 0, "tone": "success" }
+  ],
+  "edges": [
+    { "from": "table", "to": "explore", "label": "dataset" },
+    { "from": "table", "to": "sqllab", "label": "query" },
+    { "from": "sqllab", "to": "explore", "label": "virtual dataset" },
+    { "from": "explore", "to": "chart" },
+    { "from": "chart", "to": "board" }
+  ],
+  "sequence": [
+    { "nodes": ["table"] },
+    { "edges": ["table-explore"], "nodes": ["explore"] },
+    { "edges": ["explore-chart"], "nodes": ["chart"] },
+    { "edges": ["chart-board"], "nodes": ["board"] },
+    { "edges": ["table-sqllab"], "nodes": ["sqllab"] },
+    { "edges": ["sqllab-explore"], "nodes": ["explore"] }
+  ]
+}
+</script>
+<script src="kit/dashmotion.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme="light"
+  class="html"
+><head>
+  <title>
+    
+      Tuan Truong
+        |
+        Get ready for iPhone Duo: What iOS developers need to change
+
+
+      
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.119.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Tuan Truong" />
+  <meta
+    name="description"
+    content="
+      “The only thing that is constant is change”, Heraclitus.
+
+
+    "
+  />
+  
+    <meta name="google-site-verification" content="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.23a7b1fea8bccc1a6a9a048b1f3c075b34edbab77a0f79958d731e3b4a6649ab.css"
+      integrity="sha256-I6ex/qi8zBpqmgSLHzwHWzTturd6D3mVjXMeO0pmSas="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.322f7815beb50e8cf61e202b1aa88261e079a6ab195e36ab0b4cdd7790ef98e2.css"
+    integrity="sha256-Mi94Fb61Doz2HiArGqiCYeB5pqsZXjarC0zdd5DvmOI="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/css/thumbnail.min.6314549c45a8fe7d53e772aa366dcc178c1b8b700eddd7117d382c8846c095d4.css"
+      integrity="sha256-YxRUnEWo/n1T53KqNm3MF4wbi3AO3dcRfTgsiEbAldQ="
+      crossorigin="anonymous"
+      media="screen"
+    />
+
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/css/codeblock.min.59ec0e340a2fb911db5c642c1c320218614620db8baba49de3e1b2edfd74a6d0.css"
+      integrity="sha256-WewONAovuRHbXGQsHDICGGFGINuLq6Sd4&#43;Gy7f10ptA="
+      crossorigin="anonymous"
+      media="screen"
+    />
+
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.69685904d5c2a0c6258d03c207b778c10466edf6cea928cc0164c376b0ad0930.css"
+    integrity="sha256-aWhZBNXCoMYljQPCB7d4wQRm7fbOqSjMAWTDdrCtCTA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.6d585e78d28cce1200d39fb133c92ed83df01738da721d0f48fb6eac62d24e04.css"
+    integrity="sha256-bVheeNKMzhIA05&#43;xM8ku2D3wFzjach0PSPturGLSTgQ="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.6b00d96498d59caa0dbcf9b49d30d821915291f2ceb0e19248523c8607ff43fa.css"
+    integrity="sha256-awDZZJjVnKoNvPm0nTDYIZFSkfLOsOGSSFI8hgf/Q/o="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/images/profile.jpg" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://tqtuan1201.github.io/posts/prepare-iphoneduo/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.738c0e3a493854876aeab9e2316fd43f1936aeeac4cc6b3e60bb26456dba72ad.js"
+      integrity="sha256-c4wOOkk4VIdq6rniMW/UPxk2rurEzGs&#43;YLsmRW26cq0="
+      crossorigin="anonymous"
+    ></script>
+
+  <script
+      type="text/javascript"
+      src="/js/codeblock.min.f24ff6154ab8a465a29d07bc146ab6758fa925708a8bb31441670aaccdc1ce36.js"
+      integrity="sha256-8k/2FUq4pGWinQe8FGq2dY&#43;pJXCKi7MUQWcKrM3BzjY="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tqtuan1201.github.io/images/profile.jpg"/>
+
+<meta name="twitter:title" content="Get ready for iPhone Duo: What iOS developers need to change"/>
+<meta name="twitter:description" content="Abstract A few years ago, I wrote about the future of mobile app development. Back then, foldable phones were an Android story, and iOS developers stayed in a comfortable single-screen world.
+That changed on September 9, 2026, when Apple announced iPhone Duo. It has a 5.4-inch outer display and a 7.6-inch inner display that unfolds.
+I went through Apple&rsquo;s tech talks to find what really matters for an existing app. In this post, we will look at five ideas:"/>
+<meta name="twitter:site" content="@QuangTuan0409"/>
+
+
+
+  
+  <meta property="og:title" content="Get ready for iPhone Duo: What iOS developers need to change" />
+<meta property="og:description" content="Abstract A few years ago, I wrote about the future of mobile app development. Back then, foldable phones were an Android story, and iOS developers stayed in a comfortable single-screen world.
+That changed on September 9, 2026, when Apple announced iPhone Duo. It has a 5.4-inch outer display and a 7.6-inch inner display that unfolds.
+I went through Apple&rsquo;s tech talks to find what really matters for an existing app. In this post, we will look at five ideas:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tqtuan1201.github.io/posts/prepare-iphoneduo/" /><meta property="og:image" content="https://tqtuan1201.github.io/images/profile.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2026-09-15T14:45:00+07:00" />
+<meta property="article:modified_time" content="2026-09-15T14:45:00+07:00" /><meta property="og:site_name" content="Hi, I&#39;m Tuan Truong" />
+<meta property="og:see_also" content="https://tqtuan1201.github.io/posts/apple-watch-serial-design/" /><meta property="og:see_also" content="https://tqtuan1201.github.io/posts/what-is-the-future-of-mobile-app-development/" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "posts",
+        "name": "Get ready for iPhone Duo: What iOS developers need to change",
+        "headline": "Get ready for iPhone Duo: What iOS developers need to change",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Abstract A few years ago, I wrote about the future of mobile app development. Back then, foldable phones were an Android story, and iOS developers stayed in a comfortable single-screen world.\nThat changed on September 9, 2026, when Apple announced iPhone Duo. It has a 5.4-inch outer display and a 7.6-inch inner display that unfolds.\nI went through Apple\u0026rsquo;s tech talks to find what really matters for an existing app. In this post, we will look at five ideas:
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/tqtuan1201.github.io\/posts\/prepare-iphoneduo\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Tuan Truong"
+        },
+        "copyrightYear" : "2026",
+        "dateCreated": "2026-09-15T14:45:00.00Z",
+        "datePublished": "2026-09-15T14:45:00.00Z",
+        "dateModified": "2026-09-15T14:45:00.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Tuan Truong",
+            "url": "https://tqtuan1201.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/tqtuan1201.github.io\/images\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://tqtuan1201.github.io/images/profile.jpg"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/tqtuan1201.github.io\/posts\/prepare-iphoneduo\/",
+        "wordCount" : "1330",
+        "genre" : [ 
+      
+      "Dev Journey"
+
+    
+      
+        ,
+
+      
+      "iOS Development"
+
+    
+      
+        ,
+
+      
+      "Architecture"
+
+    ],
+        "keywords" : [ 
+      
+      "iOS"
+
+    
+      
+        ,
+
+      
+      "iPhone Duo"
+
+    
+      
+        ,
+
+      
+      "SwiftUI"
+
+    
+      
+        ,
+
+      
+      "UIKit"
+
+    
+      
+        ,
+
+      
+      "Mobile Development"
+
+    
+      
+        ,
+
+      
+      "Architecture"
+
+    ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--light"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    
+      
+      <div class="sidebar__introduction">
+        <a href="/about">
+          <img
+            class="sidebar__introduction-profileimage"
+            src="/images/profile.jpg"
+            alt="profile picture"
+          />
+        </a>
+        
+          <div class="sidebar__introduction-title">
+            <a href="/">Hi, I&#39;m Tuan Truong</a>
+          </div>
+
+        
+        <div class="sidebar__introduction-description">
+          <p>“The only thing that is constant is change”, Heraclitus.</p>
+          </br>
+          <div class="sidebar__introduction-description">
+            <i style="color:#999999; font-weight: 360; font-size: 0.92em;">'If you have a great idea but don’t know how to start? Don't worry, simply click on <a href="/posts/job/cv/ourteam"><strong>Meet My Team</strong></a> and we can discuss your project over a cup of coffee'</i>
+          </div>
+          </br></br>
+        </div>
+      </div>
+      <ul class="sidebar__list">
+        
+          <li class="sidebar__list-item">
+            <a href="https://www.linkedin.com/in/thales-truong" rel="me" aria-label="Linkedin" title="Linkedin">
+              <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+          <li class="sidebar__list-item">
+            <a href="https://github.com/tqtuan1201" rel="me" aria-label="GitHub" title="GitHub">
+              <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+          <li class="sidebar__list-item">
+            <a href="mailto:truongquangtuanit@gmail.com" rel="me" aria-label="e-mail" title="e-mail">
+              <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+          <li class="sidebar__list-item">
+            <a href="https://twitter.com/QuangTuan0409" rel="me" aria-label="Twitter" title="Twitter">
+              <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+          <li class="sidebar__list-item">
+            <a href="https://warpcast.com/thales-truong" rel="me" aria-label="instagram" title="instagram">
+              <i class="fa-brands fa-weebly fa-2x" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+      </ul>
+      </br></br>
+      <div class="sidebar__action-buttons">
+        <a href="/buymeacoffee" class="sidebar__action-btn" aria-label="Buy me a coffee">
+          <img src="/images/buymeacoffee_button.png" alt="Buy me a coffee ^^">
+        </a>
+        <a href="/posts/job/cv/ourteam" class="sidebar__action-btn" aria-label="Meet my team">
+          <img src="/images/meetmyteam_button.png" alt="Meet my team ^^">
+        </a>
+      </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2026
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script>
+  </div>
+</div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/keynote"
+              
+              title=""
+              >Topics</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/myapps"
+              
+              title=""
+              >Apps</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/life"
+              
+              title=""
+              >Life</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/portfolio"
+              
+              title=""
+              >Projects</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/certifications"
+              
+              title=""
+              >Certifications</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/series"
+              
+              title=""
+              >Series</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/categories"
+              
+              title=""
+              >Categories</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/categories/keynotes/"
+              
+              title=""
+              >Notes</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/tags"
+              
+              title=""
+              >Tags</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/about"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/contact"
+              
+              title=""
+              >Contact</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      <li class="nav__list-item">
+        <div class="dropdown">
+          <button> RESUMES </button>
+          <div class="dropdown-content">
+          <a href="/posts/job/cv/myresume">My CV</a>
+          <a href="/posts/job/cv/ourteam">My Team</a>
+          </div>
+        </div>
+      </li>
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+
+<style>
+ 
+.dropdown {
+  display: inline-block;
+  position: relative;
+  padding-right: 10px;
+  padding-left: 4px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+.dropdown:hover .dropdown-content {
+  background-color: #FFFFFF;
+  display: block;
+  border-radius: 2px;
+}
+.dropdown-content a {
+  display: block;
+  color: #000000;
+  padding: 5px;
+  text-decoration: none;
+}
+.dropdown-content a:hover {
+  color: #FFFFFF;
+  background-color: #686868;
+}
+</style>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+      <div class="post__thumbnail-wrapper">
+        <img class="post__thumbnail" src="/images/prepare-iphoneduo-thumbnail.png?v=2&amp;quality=92&amp;strip=all" alt="Thumbnail image" />
+      </div>
+
+    
+
+    <div class="post__content">
+      <h1>Get ready for iPhone Duo: What iOS developers need to change</h1>
+      <h3>Table of Contents</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#1-size-classes-not-orientation">1. Size classes, not orientation</a></li>
+    <li><a href="#2-navigation-bars-move-to-the-side">2. Navigation bars move to the side</a></li>
+    <li><a href="#3-the-fold-is-a-reserved-region">3. The fold is a reserved region</a></li>
+    <li><a href="#4-your-app-can-be-narrow-and-open-twice">4. Your app can be narrow and open twice</a></li>
+    <li><a href="#5-two-front-cameras">5. Two front cameras</a></li>
+    <li><a href="#before-you-ship">Before you ship</a></li>
+    <li><a href="#conclusion">Conclusion</a>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        <div style="width: 100%; margin: 0 auto; background:rgba(0,0,0,0.5); height: 1px; opacity: 0.6"> </div><h1 id="abstract">Abstract</h1>
+<p>A few years ago, I wrote about <a href="https://tqtuan1201.github.io/posts/what-is-the-future-of-mobile-app-development/">the future of mobile app development</a>. Back then, foldable phones were an Android story, and iOS developers stayed in a comfortable single-screen world.</p>
+<p>That changed on September 9, 2026, when Apple announced <strong>iPhone Duo</strong>. It has a 5.4-inch outer display and a 7.6-inch inner display that unfolds.</p>
+<p>I went through Apple&rsquo;s tech talks to find what really matters for an existing app. In this post, we will look at five ideas:</p>
+<ul>
+<li>Size classes, not orientation</li>
+<li>Navigation bars move to the side</li>
+<li>The fold is a reserved region</li>
+<li>Your app can be narrow and open twice</li>
+<li>Two front cameras</li>
+</ul>
+<p>Let&rsquo;s get started.</p>
+<hr>
+<h1 id="1-size-classes-not-orientation">1. Size classes, not orientation</h1>
+<p>The same app now moves between very different shapes. Closed, it looks like a normal iPhone. Open, it looks closer to a small iPad. Partly folded, the screen has a hinge in the middle.</p>
+<figure class="big"><img src="/images/iphoneduo-poses.png"
+         alt="iPhone Duo poses: closed with compact width, flat with regular width, folded with a hinge, and Split View with compact width"/><figcaption>
+            <p>One app, four shapes</p>
+        </figcaption>
+</figure>
+
+<p>The rule that surprised me most: <mark>the inner display ignores your orientation lock.</mark> Even if <code>Info.plist</code> locks your app to portrait, people can turn the device, and your window can resize at any time.</p>
+<p>So build layout from the size class, not from the device orientation:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">// SwiftUI: Read size classes from the environment</span>
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="n">Environment</span><span class="p">(</span><span class="err">\</span><span class="p">.</span><span class="n">horizontalSizeClass</span><span class="p">)</span> <span class="kd">private</span> <span class="kd">var</span> <span class="nv">horizontalSizeClass</span>
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="n">Environment</span><span class="p">(</span><span class="err">\</span><span class="p">.</span><span class="n">verticalSizeClass</span><span class="p">)</span> <span class="kd">private</span> <span class="kd">var</span> <span class="nv">verticalSizeClass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// UIKit: Read size classes from traitCollection</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">isCompact</span> <span class="p">=</span> <span class="n">traitCollection</span><span class="p">.</span><span class="n">horizontalSizeClass</span> <span class="p">==</span> <span class="p">.</span><span class="n">compact</span>
+</span></span></code></pre></div><p>Two small bugs are worth fixing at the same time.</p>
+<p>First, <code>UIScreen.main</code> is deprecated in iOS 27. With two screens, &ldquo;main&rdquo; no longer has a clear meaning:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">// Avoid this:</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">scale</span> <span class="p">=</span> <span class="n">UIScreen</span><span class="p">.</span><span class="n">main</span><span class="p">.</span><span class="n">scale</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">bounds</span> <span class="p">=</span> <span class="n">UIScreen</span><span class="p">.</span><span class="n">main</span><span class="p">.</span><span class="n">bounds</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Do this instead:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// In UIKit:</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">scale</span> <span class="p">=</span> <span class="n">traitCollection</span><span class="p">.</span><span class="n">displayScale</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">currentScreen</span> <span class="p">=</span> <span class="n">window</span><span class="p">?.</span><span class="n">windowScene</span><span class="p">?.</span><span class="n">screen</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// In SwiftUI:</span>
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="n">Environment</span><span class="p">(</span><span class="err">\</span><span class="p">.</span><span class="n">displayScale</span><span class="p">)</span> <span class="kd">private</span> <span class="kd">var</span> <span class="nv">displayScale</span>
+</span></span></code></pre></div><p>Second, safe areas are no longer mirrored. The left inset might be <code>54pt</code> to clear the side bar, while the right inset is only <code>16pt</code>. Stop doubling one side:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">// BUG: Never assume opposite margins are identical</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">badWidth</span> <span class="p">=</span> <span class="n">view</span><span class="p">.</span><span class="n">bounds</span><span class="p">.</span><span class="n">width</span> <span class="o">-</span> <span class="p">(</span><span class="n">view</span><span class="p">.</span><span class="n">safeAreaInsets</span><span class="p">.</span><span class="kr">left</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">// Safe: Inset bounds using the complete edge insets</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">contentFrame</span> <span class="p">=</span> <span class="n">view</span><span class="p">.</span><span class="n">bounds</span><span class="p">.</span><span class="n">inset</span><span class="p">(</span><span class="n">by</span><span class="p">:</span> <span class="n">view</span><span class="p">.</span><span class="n">safeAreaInsets</span><span class="p">)</span>
+</span></span></code></pre></div><hr>
+<h1 id="2-navigation-bars-move-to-the-side">2. Navigation bars move to the side</h1>
+<p>On the wide inner display, a top bar plus a bottom bar takes too much height. In iOS 27, Apple combines them into one <strong>vertical bar</strong> on the side edge.</p>
+<figure class="big"><img src="/images/iphoneduo-side-bar.png"
+         alt="Top and bottom bars on a classic iPhone compared with one side vertical bar on the iPhone Duo inner display"/><figcaption>
+            <p>Top and bottom bars become one side bar</p>
+        </figcaption>
+</figure>
+
+<p>This gives content the full height of the screen, and the main actions stay under your thumb.</p>
+<p>The good news: if you use the system containers, you get this for free (<a href="https://developer.apple.com/videos/play/tech-talks/111462/?time=144">Tech Talk 111462</a>). In SwiftUI, that means <code>NavigationStack</code>, <code>NavigationSplitView</code>, and <code>TabView</code>. In UIKit, it means <code>UINavigationController</code> and <code>UITabBarController</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">// SwiftUI: TabView with sidebar placement and badges [Tech Talk 111461 &amp; 111462]</span>
+</span></span><span class="line"><span class="cl"><span class="n">TabView</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Tab</span><span class="p">(</span><span class="s">&#34;Inbox&#34;</span><span class="p">,</span> <span class="n">systemImage</span><span class="p">:</span> <span class="s">&#34;tray&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">InboxView</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="n">badge</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">Tab</span><span class="p">(</span><span class="s">&#34;Sent&#34;</span><span class="p">,</span> <span class="n">systemImage</span><span class="p">:</span> <span class="s">&#34;paperplane&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">SentView</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="n">defaultTabBarPlacement</span><span class="p">(.</span><span class="n">sidebar</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// UIKit: Sidebar placement for UITabBarController</span>
+</span></span><span class="line"><span class="cl"><span class="n">tabBarController</span><span class="p">.</span><span class="n">sidebar</span><span class="p">.</span><span class="n">preferredPlacement</span> <span class="p">=</span> <span class="p">.</span><span class="n">sidebar</span>
+</span></span></code></pre></div><p>One habit helps a lot here: <strong>give every bar item both an SF Symbol and a title.</strong> The side bar shows the symbol. When an item moves into the overflow menu, iOS shows the title.</p>
+<hr>
+<h1 id="3-the-fold-is-a-reserved-region">3. The fold is a reserved region</h1>
+<p>When iPhone Duo is partly folded into book or tabletop mode, the hinge bends the screen. Apple calls these areas <strong>reserved regions</strong>:</p>
+<ul>
+<li><code>.division</code>: the hinge line. It is inactive when the device is flat.</li>
+<li><code>.occlusion</code>: camera cutouts that always cover some pixels.</li>
+</ul>
+<figure class="big"><img src="/images/iphoneduo-hinge.png"
+         alt="Tabletop mode with media on the top half and controls on the bottom half, compared with a reading feed that flows across the hinge"/><figcaption>
+            <p>Move controls off the fold, but let reading content flow</p>
+        </figcaption>
+</figure>
+
+<p>The main idea is simple. <mark>Move controls away from the fold, but don&rsquo;t break reading content.</mark> A video player can sit on the top half while the scrubber sits on the flat half. An article or a feed should just keep scrolling across the hinge.</p>
+<p>You don&rsquo;t need to write frame math for every hinge angle. iOS 27.1 adds <code>ArrangementView</code> in SwiftUI and <code>UIArrangementViewController</code> in UIKit. You give it two views, and it places them around the hinge:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">// SwiftUI: Split Arrangement</span>
+</span></span><span class="line"><span class="cl"><span class="kd">struct</span> <span class="nc">PodcastPlayerScreen</span><span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">NavigationStack</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ArrangementView</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">NowPlayingView</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span> <span class="n">secondary</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">TranscriptView</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">.</span><span class="n">arrangementViewStyle</span><span class="p">(.</span><span class="bp">split</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>There is also an <code>onHingeChange</code> modifier that reports the live hinge angle. It is fun for games or music apps, but don&rsquo;t use it for layout. It fires many times per second, so layout work inside it drops frames.</p>
+<hr>
+<h1 id="4-your-app-can-be-narrow-and-open-twice">4. Your app can be narrow and open twice</h1>
+<p>On the inner display, people can run two apps side by side in Split View. When that happens, your app switches back to <strong>compact width</strong>. If your app already supports Split View on iPad, you are in good shape.</p>
+<p>iPhone Duo is also the first iPhone that can open <strong>several windows of the same app</strong>, for example two documents side by side. New windows only open on the inner display.</p>
+<p>This is where old shortcuts break. If your app keeps UI state in a global singleton, two windows will fight over it. Keep that state per scene instead.</p>
+<hr>
+<h1 id="5-two-front-cameras">5. Two front cameras</h1>
+<p>iPhone Duo has a front camera on each display. You can choose how much control you need:</p>
+<figure class="big"><img src="/images/iphoneduo-cameras.png"
+         alt="Virtual Front Camera switches sensors automatically at 1080p 60 fps, while direct sensor control gives 4K 120 fps and depth"/><figcaption>
+            <p>Start simple, go direct only when you need more</p>
+        </figcaption>
+</figure>
+
+<ul>
+<li><strong>The easy way:</strong> the normal front camera query returns a <strong>Virtual Front Camera</strong>. It switches sensors when the device folds or unfolds. The trade-off is 1080p at 60 fps and no depth data.</li>
+<li><strong>The pro way:</strong> pick each sensor yourself and use <code>AVCaptureDeviceDirectionCoordinator</code> to know which one faces the user. You get 4K at 120 fps and TrueDepth from the outer camera.</li>
+</ul>
+<p>For most video call and social apps, the easy way is enough. Camera apps can also show content on both displays at once, like controls inside and a teleprompter on the outer screen.</p>
+<hr>
+<h1 id="before-you-ship">Before you ship</h1>
+<p>Here is the short checklist I would run on an existing app:</p>
+<ul>
+<li><input disabled="" type="checkbox"> Replace <code>UIScreen.main</code> with the trait collection or window scene.</li>
+<li><input disabled="" type="checkbox"> Remove layout logic based on device orientation.</li>
+<li><input disabled="" type="checkbox"> Use <code>view.bounds.inset(by: view.safeAreaInsets)</code> instead of mirrored insets.</li>
+<li><input disabled="" type="checkbox"> Move custom toolbars into system navigation containers.</li>
+<li><input disabled="" type="checkbox"> Give every bar item a symbol and a title.</li>
+<li><input disabled="" type="checkbox"> Keep UI state per scene, not in a global singleton.</li>
+<li><input disabled="" type="checkbox"> Test each pose in <strong>DeviceHub</strong>, the pose controller in the Xcode 27.1 iPhone Duo Simulator: closed, flat, tabletop, book, and Split View.</li>
+</ul>
+<hr>
+<h1 id="conclusion">Conclusion</h1>
+<p>For me, iPhone Duo is the biggest change to iOS layout since iPhone X brought safe areas. But Apple&rsquo;s direction stays the same. If your app already uses adaptive layouts and the standard containers, most of the work is done.</p>
+<p>To make these ideas easy to remember, I put them on one page:</p>
+<figure class="big"><img src="/images/iphoneduo-architecture-cheat-sheet.png"
+         alt="iPhone Duo cheat sheet with five mental models and three rules before shipping"/><figcaption>
+            <p>iPhone Duo: 5 mental models for iOS developers</p>
+        </figcaption>
+</figure>
+
+<hr>
+<h4 id="references">References</h4>
+<p>Here are the official guides and tech talks referenced in this post:</p>
+<h5 id="official-documentation">Official Documentation</h5>
+<ul>
+<li><a href="https://developer.apple.com/iphone-duo/">Apple Developer — Get Ready for iPhone Duo</a>: Developer portal and design overview for iPhone Duo.</li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/designing-for-iphone-duo">Apple Human Interface Guidelines — Designing for iPhone Duo</a>: Layout, poses, and displacement guidelines.</li>
+<li><a href="https://developer.apple.com/videos/play/tech-talks/111461/">Apple Developer Videos — Prepare Your App for iPhone Duo (Tech Talk 111461)</a>: Size classes, safe areas, and DeviceHub.</li>
+<li><a href="https://developer.apple.com/videos/play/tech-talks/111462/">Apple Developer Videos — Raise the Bar with iPhone Duo (Tech Talk 111462)</a>: The side vertical bar and bar items.</li>
+<li><a href="https://developer.apple.com/videos/play/tech-talks/111463/">Apple Developer Videos — Strike a Pose with Adaptive Layouts on iPhone Duo (Tech Talk 111463)</a>: Reserved regions and <code>ArrangementView</code>.</li>
+<li><a href="https://developer.apple.com/videos/play/tech-talks/111464/">Apple Developer Videos — Leverage Multiple Displays and Scenes on iPhone Duo (Tech Talk 111464)</a>: Split View, multiple windows, hinge observation, and scene accessories.</li>
+<li><a href="https://developer.apple.com/videos/play/tech-talks/111465/">Apple Developer Videos — Build a Great Camera Experience for iPhone Duo (Tech Talk 111465)</a>: Virtual Front Camera and <code>AVCaptureDeviceDirectionCoordinator</code>.</li>
+</ul>
+<h5 id="community-research--prior-art">Community Research &amp; Prior Art</h5>
+<ul>
+<li><a href="https://tqtuan1201.github.io/posts/what-is-the-future-of-mobile-app-development/">Tuan Truong Blog — What Is the Future of Mobile App Development (2022)</a>: My earlier post on foldable devices and where mobile development was heading.</li>
+</ul>
+<h5 id="disclaimer--product-attribution">Disclaimer &amp; Product Attribution</h5>
+<div
+  class="notice"
+>
+  <span
+    class="notice__title"
+  >Info</span><div class="notice__content">
+    All code examples and diagrams shared in this post are written for technical learning, research, and educational purposes. All product names, logos, trademarks, and registered trademarks (including Apple, iPhone, iPhone Duo, iOS, Xcode, SwiftUI, and UIKit) belong to their respective owners.
+  </div>
+</div>
+
+<p>Happy coding, and see you in the next post!</p>
+
+
+
+<h3>Posts in this Series</h3>
+<ul>
+  
+    <li><a href="/posts/prepare-iphoneduo/">Get Ready for IPhone Duo: What IOS Developers Need to Change</a></li>
+
+  
+    <li><a href="/posts/apple-watch-serial-design/">Let&#39;s Idea, How to Design Travel App (12Bay) on WatchOS?</a></li>
+
+  
+    <li><a href="/posts/what-is-the-future-of-mobile-app-development/">What Is the Future of Mobile App Development</a></li>
+
+  
+</ul>
+</div>
+    <div class="post__footer">
+      
+        <span><a class="category" href="/categories/dev-journey/">Dev Journey</a><a class="category" href="/categories/ios-development/">iOS Development</a><a class="category" href="/categories/architecture/">Architecture</a></span>
+
+
+
+
+      
+
+      
+        <span><a class="tag" href="/tags/ios/">iOS</a><a class="tag" href="/tags/iphone-duo/">iPhone Duo</a><a class="tag" href="/tags/swiftui/">SwiftUI</a><a class="tag" href="/tags/uikit/">UIKit</a><a class="tag" href="/tags/mobile-development/">Mobile Development</a><a class="tag" href="/tags/architecture/">Architecture</a></span>
+
+
+
+
+      
+    </div>
+
+    
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Tuan Truong
+        2026
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script>
+  <script async defer src=" https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" /></noscript>
+
+
+</body>
+</html>

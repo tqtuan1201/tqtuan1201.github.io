@@ -750,12 +750,20 @@ For a long time, the common habit was simple: take five or six phone screenshots
 <hr>
 <h1 id="designing-the-flight-share-flow">Designing the flight share flow</h1>
 <p>The core idea is straightforward: instead of sharing a static image, we share the active search state through a smart link.</p>
-
-
-
-<div class="dashmotion-embed" style="width: 100%; margin: 1.5rem 0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
-  <iframe src="/dashmotion/12bay-flight-share-flow.html" title="12Bay Flight Share Flow Diagram" style="width: 100%; height: 280px; border: none; display: block;" loading="lazy" allow="clipboard-write; web-share"></iframe>
-</div>
+<figure class="dashmotion-embed" style="margin: 1.5rem 0;">
+  <div style="border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden;">
+    <iframe src="/dashmotion/12bay-flight-share-flow.html" title="12Bay Flight Share Flow Diagram" data-dashmotion style="width: 100%; height: 280px; border: 0; display: block; transition: height 0.2s ease;" loading="lazy" allow="clipboard-write; web-share"></iframe>
+  </div>
+</figure>
+<script>
+  window.addEventListener('message', function (event) {
+    var data = event.data;
+    if (!data || data.type !== 'dashmotion:height' || typeof data.height !== 'number') return;
+    document.querySelectorAll('iframe[data-dashmotion]').forEach(function (frame) {
+      if (frame.contentWindow === event.source) frame.style.height = Math.ceil(data.height) + 'px';
+    });
+  });
+</script>
 
 <p>The overall flow works in three simple steps:</p>
 <ol>

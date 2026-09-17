@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How a Superset dashboard query moves</title>
+<link rel="stylesheet" href="kit/dashmotion.css">
+</head>
+<body>
+<script type="application/json" id="dm-spec">
+{
+  "title": "How a Superset dashboard query moves",
+  "subtitle": "Every chart request passes the security check before any SQL reaches your database.",
+  "description": "A browser request goes to the security check, then RLS filters add WHERE conditions, the query runs in your database, and the result is cached and drawn. Without access, the request stops at the security check.",
+  "gif": "/images/superset-query-flow.gif",
+  "nodes": [
+    { "id": "client", "label": "Browser", "detail": "Opens a dashboard", "icon": "client", "col": 0, "row": 0, "step": 1 },
+    { "id": "auth", "label": "Security check", "detail": "Role and dataset access", "icon": "shield", "col": 1, "row": 0, "step": 2 },
+    { "id": "rls", "label": "RLS filters", "detail": "Adds WHERE per role", "icon": "filter", "col": 2, "row": 0, "step": 3 },
+    { "id": "db", "label": "Your database", "detail": "Runs the SQL", "icon": "store", "col": 3, "row": 0, "step": 4, "external": true },
+    { "id": "render", "label": "Cache & render", "detail": "Redis, then ECharts", "icon": "chart", "col": 4, "row": 0, "step": 5, "tone": "success" },
+    { "id": "denied", "label": "Access denied", "detail": "Request stops here", "icon": "stop", "col": 1, "row": 1, "tone": "danger" }
+  ],
+  "edges": [
+    { "from": "client", "to": "auth" },
+    { "from": "auth", "to": "rls" },
+    { "from": "rls", "to": "db" },
+    { "from": "db", "to": "render" },
+    { "from": "auth", "to": "denied", "label": "no access", "dashed": true, "tone": "danger" }
+  ]
+}
+</script>
+<script src="kit/dashmotion.js" defer></script>
+</body>
+</html>

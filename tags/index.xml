@@ -6,7 +6,128 @@
     <description>Recent content in Tags on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 20 Aug 2026 17:22:46 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Sep 2026 14:45:00 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Architecture</title>
+      <link>https://tqtuan1201.github.io/tags/architecture/</link>
+      <pubDate>Tue, 15 Sep 2026 14:45:00 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/tags/architecture/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>iOS</title>
+      <link>https://tqtuan1201.github.io/tags/ios/</link>
+      <pubDate>Tue, 15 Sep 2026 14:45:00 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/tags/ios/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>iPhone Duo</title>
+      <link>https://tqtuan1201.github.io/tags/iphone-duo/</link>
+      <pubDate>Tue, 15 Sep 2026 14:45:00 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/tags/iphone-duo/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Mobile Development</title>
+      <link>https://tqtuan1201.github.io/tags/mobile-development/</link>
+      <pubDate>Tue, 15 Sep 2026 14:45:00 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/tags/mobile-development/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>SwiftUI</title>
+      <link>https://tqtuan1201.github.io/tags/swiftui/</link>
+      <pubDate>Tue, 15 Sep 2026 14:45:00 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/tags/swiftui/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>UIKit</title>
+      <link>https://tqtuan1201.github.io/tags/uikit/</link>
+      <pubDate>Tue, 15 Sep 2026 14:45:00 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/tags/uikit/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Apache Superset</title>
+      <link>https://tqtuan1201.github.io/tags/apache-superset/</link>
+      <pubDate>Tue, 08 Sep 2026 16:21:19 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/tags/apache-superset/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Business Intelligence</title>
+      <link>https://tqtuan1201.github.io/tags/business-intelligence/</link>
+      <pubDate>Tue, 08 Sep 2026 16:21:19 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/tags/business-intelligence/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Data Visualization</title>
+      <link>https://tqtuan1201.github.io/tags/data-visualization/</link>
+      <pubDate>Tue, 08 Sep 2026 16:21:19 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/tags/data-visualization/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://tqtuan1201.github.io/tags/docker/</link>
+      <pubDate>Tue, 08 Sep 2026 16:21:19 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/tags/docker/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>SQL</title>
+      <link>https://tqtuan1201.github.io/tags/sql/</link>
+      <pubDate>Tue, 08 Sep 2026 16:21:19 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/tags/sql/</guid>
+      
+        <description></description>
+      
+    </item>
+    
     <item>
       <title>12bay</title>
       <link>https://tqtuan1201.github.io/tags/12bay/</link>
@@ -41,44 +162,11 @@
     </item>
     
     <item>
-      <title>iOS</title>
-      <link>https://tqtuan1201.github.io/tags/ios/</link>
-      <pubDate>Thu, 20 Aug 2026 17:22:46 +0700</pubDate>
-      
-      <guid>https://tqtuan1201.github.io/tags/ios/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
       <title>Security</title>
       <link>https://tqtuan1201.github.io/tags/security/</link>
       <pubDate>Thu, 20 Aug 2026 17:22:46 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/tags/security/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>SwiftUI</title>
-      <link>https://tqtuan1201.github.io/tags/swiftui/</link>
-      <pubDate>Thu, 20 Aug 2026 17:22:46 +0700</pubDate>
-      
-      <guid>https://tqtuan1201.github.io/tags/swiftui/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>UIKit</title>
-      <link>https://tqtuan1201.github.io/tags/uikit/</link>
-      <pubDate>Thu, 20 Aug 2026 17:22:46 +0700</pubDate>
-      
-      <guid>https://tqtuan1201.github.io/tags/uikit/</guid>
       
         <description></description>
       
@@ -585,17 +673,6 @@
       <pubDate>Wed, 06 Apr 2022 16:05:26 +0700</pubDate>
       
       <guid>https://tqtuan1201.github.io/tags/future/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Mobile Development</title>
-      <link>https://tqtuan1201.github.io/tags/mobile-development/</link>
-      <pubDate>Wed, 06 Apr 2022 16:05:26 +0700</pubDate>
-      
-      <guid>https://tqtuan1201.github.io/tags/mobile-development/</guid>
       
         <description></description>
       

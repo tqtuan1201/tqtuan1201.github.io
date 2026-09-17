@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iPhone Duo Adaptive Layout Pipeline</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #020617;
+    color: #e2e8f0;
+    font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+    padding: 1rem 1.25rem;
+    overflow-x: hidden;
+  }
+  .container { max-width: 1000px; margin: 0 auto; }
+  .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; position: relative; }
+  .title-group { display: flex; align-items: center; gap: 10px; }
+  .pulse-dot { width: 8px; height: 8px; border-radius: 50%; background: #38bdf8; }
+  h1 { font-size: 1.05rem; font-weight: 600; letter-spacing: -0.01em; color: #f8fafc; }
+  .subtitle { color: #64748b; font-size: 0.75rem; margin-top: 2px; }
+  
+  .actions { display: flex; align-items: center; gap: 8px; position: relative; }
+  .btn {
+    background: #0b1329;
+    border: 1px solid #1e293b;
+    color: #94a3b8;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font: inherit;
+    font-size: 11px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.15s ease;
+    user-select: none;
+  }
+  .btn:hover { color: #f8fafc; border-color: #38bdf8; background: #0f1b33; }
+  .btn.active { border-color: #38bdf8; color: #38bdf8; background: #0f1b33; }
+
+  /* Dropdown Menu */
+  .menu-wrapper { position: relative; }
+  .dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 6px);
+    background: #0b1329;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.65);
+    padding: 6px;
+    z-index: 1000;
+    min-width: 180px;
+    display: none;
+    backdrop-filter: blur(12px);
+  }
+  .dropdown-menu.show { display: block; animation: menuFadeIn 0.15s ease-out; }
+  @keyframes menuFadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .menu-label {
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #475569;
+    padding: 4px 8px 2px;
+  }
+  .menu-divider { height: 1px; background: #1e293b; margin: 4px 0; }
+  .menu-item {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #cbd5e1;
+    text-align: left;
+    padding: 6px 8px;
+    font: inherit;
+    font-size: 11px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.12s;
+  }
+  .menu-item:hover { background: #1e293b; color: #38bdf8; }
+  .menu-item .icon { font-size: 12px; width: 14px; text-align: center; }
+
+  /* Toast notification */
+  .toast {
+    position: fixed;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: #0f172a;
+    border: 1px solid #38bdf8;
+    color: #f8fafc;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 11px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+    z-index: 2000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  }
+  .toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* Diagram Card */
+  .diagram-card {
+    background: #030a1c;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    padding: 0.85rem;
+    position: relative;
+    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+  }
+  svg { display: block; width: 100%; height: auto; }
+  
+  /* Footer bar */
+  .footer-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.6rem;
+    padding: 0 4px;
+    font-size: 10.5px;
+    color: #475569;
+  }
+  .brand-link {
+    color: #38bdf8;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.15s ease;
+  }
+  .brand-link:hover { color: #7dd3fc; text-decoration: underline; }
+  .dot-sm { width: 5px; height: 5px; border-radius: 50%; background: #38bdf8; display: inline-block; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="title-group">
+      <div class="pulse-dot"></div>
+      <div>
+        <h1>iPhone Duo Adaptive Layout Pipeline</h1>
+        <div class="subtitle">iOS 27.1 · DeviceHub Pose Detection → Hinge &amp; Regions → Arrangement → Vertical Bar</div>
+      </div>
+    </div>
+    <div class="actions">
+      <button class="btn" id="pauseBtn" aria-pressed="false">⏸ pause</button>
+      <div class="menu-wrapper">
+        <button class="btn" id="shareBtn" aria-haspopup="true" aria-expanded="false">🔗 share ▾</button>
+        <div class="dropdown-menu" id="shareMenu" role="menu">
+          <div class="menu-label">Link Options</div>
+          <button class="menu-item" id="copyBtn"><span class="icon">📋</span> Copy Link</button>
+          <div class="menu-divider"></div>
+          <div class="menu-label">Social Share</div>
+          <button class="menu-item" id="shareX"><span class="icon">𝕏</span> Share on X</button>
+          <button class="menu-item" id="shareLinkedIn"><span class="icon">in</span> LinkedIn</button>
+          <button class="menu-item" id="shareTelegram"><span class="icon">✈️</span> Telegram</button>
+          <div class="menu-divider"></div>
+          <div class="menu-label">Export Assets</div>
+          <button class="menu-item" id="downloadGif"><span class="icon">🎞️</span> Animated GIF</button>
+          <button class="menu-item" id="downloadSvg"><span class="icon">📐</span> Vector SVG</button>
+          <button class="menu-item" id="downloadPng"><span class="icon">🖼️</span> High-Res PNG</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="diagram-card">
+    <svg viewBox="0 0 970 140" id="flowsvg" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#38bdf8" />
+        </marker>
+        <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#10b981" />
+        </marker>
+      </defs>
+
+      <!-- Connecting Lines -->
+      <g stroke-dasharray="5 5" stroke-width="1.5" fill="none">
+        <path d="M210 70 H280" stroke="#38bdf8" marker-end="url(#arrow)" />
+        <path d="M450 70 H520" stroke="#38bdf8" marker-end="url(#arrow)" />
+        <path d="M690 70 H760" stroke="#10b981" marker-end="url(#arrow-green)" />
+      </g>
+
+      <!-- Animated Traveling Dots -->
+      <g>
+        <circle r="3.5" class="dot" fill="#38bdf8" filter="url(#glow)">
+          <animateMotion dur="0.6s" begin="0s;a2.end+0.4s" fill="freeze" id="a0" path="M210 70 H280"/>
+        </circle>
+        <circle r="3.5" class="dot" fill="#38bdf8" filter="url(#glow)">
+          <animateMotion dur="0.6s" begin="a0.end+0.2s" fill="freeze" id="a1" path="M450 70 H520"/>
+        </circle>
+        <circle r="3.5" class="dot" fill="#38bdf8" filter="url(#glow)">
+          <animateMotion dur="0.6s" begin="a1.end+0.2s" fill="freeze" id="a2" path="M690 70 H760"/>
+        </circle>
+      </g>
+
+      <!-- Step Nodes -->
+      <g font-family="JetBrains Mono, ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle">
+        <!-- Node 1 -->
+        <rect x="40" y="38" width="170" height="64" rx="10" fill="rgba(56,189,248,0.06)" stroke="#0284c7" stroke-width="1.2"/>
+        <text x="125" y="66" fill="#f8fafc" font-size="12" font-weight="600">1. Pose &amp; Size Class</text>
+        <text x="125" y="84" fill="#64748b" font-size="10">Outer C / Inner R·R</text>
+
+        <!-- Node 2 -->
+        <rect x="280" y="38" width="170" height="64" rx="10" fill="rgba(56,189,248,0.06)" stroke="#0284c7" stroke-width="1.2"/>
+        <text x="365" y="66" fill="#f8fafc" font-size="12" font-weight="600">2. Reserved Regions</text>
+        <text x="365" y="84" fill="#64748b" font-size="10">Hinge Division &amp; Insets</text>
+
+        <!-- Node 3 -->
+        <rect x="520" y="38" width="170" height="64" rx="10" fill="rgba(56,189,248,0.06)" stroke="#0284c7" stroke-width="1.2"/>
+        <text x="605" y="66" fill="#f8fafc" font-size="12" font-weight="600">3. ArrangementView</text>
+        <text x="605" y="84" fill="#64748b" font-size="10">Split vs Overlay ZIndex</text>
+
+        <!-- Node 4 -->
+        <rect x="760" y="38" width="170" height="64" rx="10" fill="rgba(52,211,153,0.08)" stroke="#10b981" stroke-width="1.4"/>
+        <text x="845" y="66" fill="#34d399" font-size="12" font-weight="700">4. Vertical Bar UI</text>
+        <text x="845" y="84" fill="#94a3b8" font-size="10">Side Edge &amp; Overflow</text>
+      </g>
+    </svg>
+  </div>
+  <div class="footer-bar">
+    <span>Tuan Truong · iOS &amp; Platform Architecture</span>
+    <a href="https://tqtuan1201.github.io" target="_blank" rel="noopener noreferrer" class="brand-link">
+      <span class="dot-sm"></span> https://tqtuan1201.github.io
+    </a>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function () {
+  var svg = document.getElementById('flowsvg');
+  var toast = document.getElementById('toast');
+  var shareBtn = document.getElementById('shareBtn');
+  var shareMenu = document.getElementById('shareMenu');
+  var toastTimer = null;
+
+  function showToast(msg) {
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () {
+      toast.classList.remove('show');
+    }, 2200);
+  }
+
+  // Animation pause/play
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.dot').forEach(function (d) { d.remove(); });
+    var b = document.getElementById('pauseBtn'); if (b) b.remove();
+  } else {
+    var pauseBtn = document.getElementById('pauseBtn'); var paused = false;
+    if (pauseBtn) {
+      pauseBtn.addEventListener('click', function () {
+        paused = !paused; document.body.classList.toggle('paused', paused);
+        paused ? svg.pauseAnimations() : svg.unpauseAnimations();
+        pauseBtn.textContent = paused ? '▶ play' : '⏸ pause';
+        pauseBtn.setAttribute('aria-pressed', String(paused));
+      });
+    }
+  }
+
+  // Share dropdown toggle
+  function toggleMenu(show) {
+    var isOpen = typeof show === 'boolean' ? show : !shareMenu.classList.contains('show');
+    shareMenu.classList.toggle('show', isOpen);
+    shareBtn.classList.toggle('active', isOpen);
+    shareBtn.setAttribute('aria-expanded', String(isOpen));
+  }
+
+  if (shareBtn && shareMenu) {
+    shareBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!shareMenu.contains(e.target) && e.target !== shareBtn) {
+        toggleMenu(false);
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') toggleMenu(false);
+    });
+  }
+
+  // Copy link
+  var copyBtn = document.getElementById('copyBtn');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', function () {
+      var url = window.location.href;
+      navigator.clipboard.writeText(url).then(function () {
+        showToast('Link copied to clipboard!');
+        toggleMenu(false);
+      }).catch(function () {
+        showToast('Failed to copy link');
+      });
+    });
+  }
+
+  // Social sharing
+  var shareX = document.getElementById('shareX');
+  if (shareX) {
+    shareX.addEventListener('click', function () {
+      var text = encodeURIComponent(document.title);
+      var url = encodeURIComponent(window.location.href);
+      window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + url, '_blank');
+      toggleMenu(false);
+    });
+  }
+
+  var shareLinkedIn = document.getElementById('shareLinkedIn');
+  if (shareLinkedIn) {
+    shareLinkedIn.addEventListener('click', function () {
+      var url = encodeURIComponent(window.location.href);
+      window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + url, '_blank');
+      toggleMenu(false);
+    });
+  }
+
+  var shareTelegram = document.getElementById('shareTelegram');
+  if (shareTelegram) {
+    shareTelegram.addEventListener('click', function () {
+      var text = encodeURIComponent(document.title);
+      var url = encodeURIComponent(window.location.href);
+      window.open('https://t.me/share/url?url=' + url + '&text=' + text, '_blank');
+      toggleMenu(false);
+    });
+  }
+
+  // Download GIF (Points to companion generated gif in /images/)
+  var downloadGif = document.getElementById('downloadGif');
+  if (downloadGif) {
+    downloadGif.addEventListener('click', function () {
+      var link = document.createElement('a');
+      link.href = '/images/iphoneduo-adaptive-flow.gif';
+      link.download = 'iphoneduo-adaptive-flow.gif';
+      link.click();
+      showToast('Downloading animated GIF...');
+      toggleMenu(false);
+    });
+  }
+
+  // Download SVG
+  var downloadSvg = document.getElementById('downloadSvg');
+  if (downloadSvg) {
+    downloadSvg.addEventListener('click', function () {
+      var serializer = new XMLSerializer();
+      var source = serializer.serializeToString(svg);
+      var blob = new Blob([source], { type: 'image/svg+xml;charset=utf-8' });
+      var url = URL.createObjectURL(blob);
+      var link = document.createElement('a');
+      link.href = url;
+      link.download = 'iphoneduo-adaptive-flow.svg';
+      link.click();
+      URL.revokeObjectURL(url);
+      showToast('Vector SVG downloaded!');
+      toggleMenu(false);
+    });
+  }
+
+  // Download PNG (rasterized from SVG)
+  var downloadPng = document.getElementById('downloadPng');
+  if (downloadPng) {
+    downloadPng.addEventListener('click', function () {
+      var serializer = new XMLSerializer();
+      var source = serializer.serializeToString(svg);
+      var img = new Image();
+      var svgBlob = new Blob([source], { type: 'image/svg+xml;charset=utf-8' });
+      var url = URL.createObjectURL(svgBlob);
+      img.onload = function () {
+        var canvas = document.createElement('canvas');
+        canvas.width = 1940;
+        canvas.height = 280;
+        var ctx = canvas.getContext('2d');
+        ctx.fillStyle = '#030a1c';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        URL.revokeObjectURL(url);
+        var pngUrl = canvas.toDataURL('image/png');
+        var link = document.createElement('a');
+        link.href = pngUrl;
+        link.download = 'iphoneduo-adaptive-flow.png';
+        link.click();
+        showToast('High-Res PNG downloaded!');
+        toggleMenu(false);
+      };
+      img.src = url;
+    });
+  }
+})();
+</script>
+</body>
+</html>
