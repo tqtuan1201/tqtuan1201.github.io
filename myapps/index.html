@@ -24,7 +24,7 @@
   <meta
     name="description"
     content="
-      Apps and developer tools I&#39;ve built and published — from macOS security to iOS frameworks and web utilities.
+      Mac apps and developer tools I build and ship — find the right one by what you need, from clean copy and paste to screen annotation, Mac security, and iOS development.
 
 
     "
@@ -143,14 +143,14 @@
 <meta name="twitter:image" content="https://tqtuan1201.github.io/images/profile.jpg"/>
 
 <meta name="twitter:title" content="My Apps &amp; Tools"/>
-<meta name="twitter:description" content="Apps and developer tools I&#39;ve built and published — from macOS security to iOS frameworks and web utilities."/>
+<meta name="twitter:description" content="Mac apps and developer tools I build and ship — find the right one by what you need, from clean copy and paste to screen annotation, Mac security, and iOS development."/>
 <meta name="twitter:site" content="@QuangTuan0409"/>
 
 
 
   
   <meta property="og:title" content="My Apps &amp; Tools" />
-<meta property="og:description" content="Apps and developer tools I&#39;ve built and published — from macOS security to iOS frameworks and web utilities." />
+<meta property="og:description" content="Mac apps and developer tools I build and ship — find the right one by what you need, from clean copy and paste to screen annotation, Mac security, and iOS development." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tqtuan1201.github.io/myapps/" /><meta property="og:image" content="https://tqtuan1201.github.io/images/profile.jpg"/><meta property="article:section" content="" />
 <meta property="article:published_time" content="2026-03-25T00:00:00+00:00" />
@@ -172,7 +172,7 @@
         "headline": "My Apps \u0026 Tools",
         "alternativeHeadline": "",
         "description": "
-      Apps and developer tools I\u0027ve built and published — from macOS security to iOS frameworks and web utilities.
+      Mac apps and developer tools I build and ship — find the right one by what you need, from clean copy and paste to screen annotation, Mac security, and iOS development.
 
 
     ",
@@ -224,7 +224,7 @@
 
     ,
         "url" : "https:\/\/tqtuan1201.github.io\/myapps\/",
-        "wordCount" : "1049",
+        "wordCount" : "2506",
         "genre" : [ ],
         "keywords" : [ ]
     }
@@ -615,65 +615,23 @@
 
     <div class="post__content">
       <h1>My Apps &amp; Tools</h1>
-      <p>I build tools that solve real problems — from watching AI coding agents and safeguarding developer health, to keeping your Mac secure with Bluetooth, accelerating iOS development, and simplifying deep link testing.</p>
-<p>All of my independent applications, tools, and live releases are published and maintained through <strong><a href="https://tryapps.store">TryApps Store</a></strong> — my dedicated indie developer ecosystem. Here is what I&rsquo;ve shipped:</p>
+      <p>I build small apps that each solve one real problem: keeping AI coding agents running, pasting clean text, drawing on the screen during a call, locking a Mac when I walk away, and making iOS development faster.</p>
+<p>Everything is published and maintained through <strong><a href="https://tryapps.store">TryApps Store</a></strong>, my indie app home. Start with what you need, and the right app is right there:</p>
 
 
 
 
 
 
-  
-    
-  
-
-  
-    
-  
-    
-  
-
-  
-    
-  
-    
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
 
 
 
 
-  
-
-  
-
-  
-
-  
-
-  
 
 
-  
 
-  
 
-  
 
-  
 
 
 
@@ -681,1106 +639,1551 @@
 
 
 <style>
-.myapps-section {
+.ma {
+  --ma-surface: #ffffff;
+  --ma-surface-2: #f5f6f8;
+  --ma-border: rgba(15, 23, 42, 0.09);
+  --ma-border-strong: rgba(15, 23, 42, 0.16);
+  --ma-text: #0f172a;
+  --ma-muted: #475569;
+  --ma-faint: #64748b;
+  --ma-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 6px 20px rgba(15, 23, 42, 0.06);
+  --ma-shadow-hover: 0 2px 4px rgba(15, 23, 42, 0.05), 0 16px 40px rgba(15, 23, 42, 0.12);
+  --ma-brand: #2563eb;
+  --ma-radius: 18px;
+  --c-purple: #7c3aed; --c-green: #059669; --c-orange: #ea580c; --c-blue: #2563eb;
+  --c-pink: #db2777; --c-cyan: #0891b2; --c-teal: #0d9488;
+  color: var(--ma-text);
   max-width: 100%;
   margin: 0 auto;
 }
+body.theme--dark .ma {
+  --ma-surface: #171b24;
+  --ma-surface-2: #1e2330;
+  --ma-border: rgba(255, 255, 255, 0.08);
+  --ma-border-strong: rgba(255, 255, 255, 0.16);
+  --ma-text: #e8eaef;
+  --ma-muted: #b0b7c4;
+  --ma-faint: #8b93a3;
+  --ma-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.25);
+  --ma-shadow-hover: 0 2px 6px rgba(0, 0, 0, 0.35), 0 18px 44px rgba(0, 0, 0, 0.45);
+  --ma-brand: #60a5fa;
+  --c-purple: #a78bfa; --c-green: #34d399; --c-orange: #fb923c; --c-blue: #60a5fa;
+  --c-pink: #f472b6; --c-cyan: #22d3ee; --c-teal: #2dd4bf;
+}
+.ma *, .ma *::before, .ma *::after { box-sizing: border-box; }
+.ma .c-purple { --c: var(--c-purple); } .ma .c-green { --c: var(--c-green); }
+.ma .c-orange { --c: var(--c-orange); } .ma .c-blue { --c: var(--c-blue); }
+.ma .c-pink { --c: var(--c-pink); } .ma .c-cyan { --c: var(--c-cyan); }
+.ma .c-teal { --c: var(--c-teal); }
+.ma button { font: inherit; color: inherit; }
+.ma a { text-decoration: none !important; }
+.ma h2, .ma h3, .ma h4 { color: var(--ma-text); }
 
  
-.tryapps-hub-banner {
-  display: flex;
+.ma-hero {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 16px;
-  padding: 18px 24px;
-  border-radius: 16px;
+  padding: 28px 30px;
+  border-radius: 22px;
+  border: 1px solid var(--ma-border);
+  background:
+    radial-gradient(120% 140% at 100% 0%, rgba(124, 58, 237, 0.12), transparent 55%),
+    radial-gradient(90% 120% at 0% 100%, rgba(5, 150, 105, 0.10), transparent 55%),
+    radial-gradient(80% 100% at 60% 120%, rgba(234, 88, 12, 0.10), transparent 60%),
+    var(--ma-surface);
+  box-shadow: var(--ma-shadow);
   margin-bottom: 28px;
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(234, 88, 12, 0.05) 50%, rgba(59, 130, 246, 0.05) 100%);
-  border: 1px solid rgba(245, 158, 11, 0.28);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  position: relative;
-  overflow: hidden;
 }
-.tryapps-hub-banner::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(180deg, #f59e0b, #ea580c);
-}
-.tryapps-hub-left {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  min-width: 0;
-}
-.tryapps-hub-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(234, 88, 12, 0.2));
-  border: 1px solid rgba(245, 158, 11, 0.35);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.4em;
-  flex-shrink: 0;
-}
-.tryapps-hub-title {
-  font-size: 1.02em;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.tryapps-hub-desc {
-  margin: 3px 0 0;
-  font-size: 0.86em;
-  opacity: 0.75;
-  line-height: 1.4;
-}
-.tryapps-hub-btn {
+.ma-eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font-size: 0.86em;
-  font-weight: 600;
-  padding: 8px 18px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #f59e0b, #d97706);
-  color: #fff !important;
-  text-decoration: none !important;
-  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  white-space: nowrap;
-}
-.tryapps-hub-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.45);
-}
-
- 
-.myapps-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-bottom: 22px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid rgba(120, 120, 140, 0.15);
-}
-.myapps-head h4 {
-  margin: 0;
-  font-size: 1.15em;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
   gap: 8px;
-}
-.myapps-head .myapps-sub {
-  margin: 2px 0 0;
-  font-size: 0.86em;
-  opacity: 0.65;
-}
-.myapps-filters {
-  display: flex;
-  gap: 6px;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  max-width: 100%;
-  scrollbar-width: none;
-}
-.myapps-filters::-webkit-scrollbar {
-  display: none;
-}
-.myapp-filter-btn {
-  border: 1px solid rgba(120, 120, 140, 0.2);
-  background: rgba(120, 120, 140, 0.06);
-  color: inherit;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 0.84em;
-  font-family: inherit;
-  cursor: pointer;
-  opacity: 0.75;
-  white-space: nowrap;
-  transition: all 0.2s ease;
-}
-.myapp-filter-btn:hover {
-  opacity: 1;
-  background: rgba(59, 130, 246, 0.12);
-  border-color: rgba(59, 130, 246, 0.3);
-}
-.myapp-filter-btn.active {
-  opacity: 1;
-  background: #3b82f6;
-  border-color: #3b82f6;
-  color: #fff;
+  font-size: 0.78em;
   font-weight: 600;
-  box-shadow: 0 2px 10px rgba(59, 130, 246, 0.35);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ma-faint);
 }
+.ma-eyebrow a { color: var(--ma-brand) !important; }
+.ma-hero h2 {
+  margin: 8px 0 8px;
+  font-size: clamp(1.45em, 3vw, 1.9em);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+.ma-hero p { margin: 0; color: var(--ma-muted); font-size: 0.95em; line-height: 1.55; max-width: 52ch; }
+.ma-stats { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.ma-stat {
+  display: inline-flex; align-items: baseline; gap: 6px;
+  padding: 6px 12px; border-radius: 999px;
+  background: var(--ma-surface-2); border: 1px solid var(--ma-border);
+  font-size: 0.82em; color: var(--ma-muted);
+}
+.ma-stat b { font-size: 1.12em; color: var(--ma-text); }
+.ma-hero-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 52px);
+  gap: 10px;
+  transform: rotate(-6deg);
+}
+.ma-hero-icons button {
+  width: 52px; height: 52px; padding: 0; border: 0; cursor: pointer;
+  border-radius: 14px; overflow: hidden; background: var(--ma-surface-2);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.18);
+  transition: transform 0.25s ease;
+}
+.ma-hero-icons button:hover { transform: translateY(-4px) scale(1.06); }
+.ma-hero-icons button:nth-child(3n+2) { margin-top: 14px; }
+.ma-hero-icons img, .ma-icon img { width: 100%; height: 100%; object-fit: cover; display: block; margin: 0 !important; }
 
  
-.myapps-grid {
+.ma-section-head { display: flex; align-items: end; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin: 0 0 14px; }
+.ma-section-head h3 { margin: 0; font-size: 1.15em; font-weight: 750; letter-spacing: -0.01em; }
+.ma-section-head p { margin: 2px 0 0; font-size: 0.86em; color: var(--ma-faint); }
+
+ 
+.ma-needs {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 16px;
-  margin-bottom: 36px;
-}
-.myapp-card {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid rgba(120, 120, 140, 0.18);
-  border-radius: 14px;
-  padding: 18px;
-  background: rgba(120, 120, 140, 0.03);
-  text-decoration: none !important;
-  color: inherit !important;
-  position: relative;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-.myapp-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
-  border-color: rgba(59, 130, 246, 0.4);
-}
-.myapp-card.is-hidden {
-  display: none;
-}
-.myapp-card-top {
-  display: flex;
-  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 26px;
 }
-.myapp-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.35em;
-  flex-shrink: 0;
-  overflow: hidden;
-  background: rgba(120, 120, 140, 0.08);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
-  border: 1px solid rgba(120, 120, 140, 0.15);
-}
-.myapp-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.myapp-name-row {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  flex-wrap: wrap;
-  min-width: 0;
-}
-.myapp-name-row strong {
-  font-size: 1em;
-  font-weight: 700;
-}
-.myapp-badge-sm {
-  padding: 2px 8px;
-  font-size: 0.68em;
-  font-weight: 600;
-  border-radius: 12px;
-  margin: 0;
-}
-.myapp-desc {
-  font-size: 0.85em;
-  opacity: 0.72;
-  line-height: 1.45;
-  margin: 0 0 12px;
-  flex: 1;
-}
-.myapp-platforms {
-  display: flex;
-  gap: 6px;
-  margin-bottom: 12px;
-  font-size: 0.95em;
-  opacity: 0.6;
-}
-.myapp-cta-btn {
-  align-self: flex-start;
-  font-size: 0.82em;
-  font-weight: 600;
-  padding: 6px 14px;
-  border-radius: 8px;
-  border: 1px solid rgba(59, 130, 246, 0.35);
-  color: #3b82f6 !important;
-  background: rgba(59, 130, 246, 0.06);
-  text-decoration: none !important;
-  transition: all 0.2s ease;
-}
-.myapp-card:hover .myapp-cta-btn {
-  background: #3b82f6;
-  color: #fff !important;
-  border-color: #3b82f6;
-}
-
- 
-.app-card {
-  border: 1px solid rgba(120, 120, 140, 0.2);
-  border-radius: 18px;
-  padding: 26px 28px;
-  margin-bottom: 36px;
-  background: linear-gradient(135deg, rgba(120, 120, 140, 0.03) 0%, rgba(120, 120, 140, 0.06) 100%);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+.ma-need {
   position: relative;
-  transition: border-color 0.25s ease;
-}
-.app-card:hover {
-  border-color: rgba(120, 120, 140, 0.35);
-}
-.app-header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 14px;
-}
-.app-emoji {
-  width: 54px;
-  height: 54px;
-  border-radius: 14px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.7em;
-  line-height: 1;
-  flex-shrink: 0;
-  background: rgba(120, 120, 140, 0.08);
-  border: 1px solid rgba(120, 120, 140, 0.2);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
-}
-.app-emoji img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.app-header h3 {
-  margin: 0;
-  font-size: 1.35em;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  scroll-margin-top: 90px;
-}
-.app-header small {
-  display: block;
-  font-size: 0.88em;
-  opacity: 0.7;
-  margin-top: 3px;
-}
-
- 
-.app-badges-row {
-  margin: 8px 0 16px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-.app-badge {
-  display: inline-block;
-  padding: 3px 10px;
-  border-radius: 14px;
-  font-size: 0.74em;
-  font-weight: 600;
-  line-height: 1.4;
-}
-.badge-blue { background: rgba(59, 130, 246, 0.15); color: #3b82f6; border: 1px solid rgba(59, 130, 246, 0.25); }
-.badge-green { background: rgba(34, 197, 94, 0.15); color: #22c55e; border: 1px solid rgba(34, 197, 94, 0.25); }
-.badge-purple { background: rgba(168, 85, 247, 0.15); color: #a855f7; border: 1px solid rgba(168, 85, 247, 0.25); }
-.badge-orange { background: rgba(249, 115, 22, 0.15); color: #f97316; border: 1px solid rgba(249, 115, 22, 0.25); }
-.badge-cyan { background: rgba(6, 182, 212, 0.15); color: #06b6d4; border: 1px solid rgba(6, 182, 212, 0.25); }
-body.theme--light .badge-blue { color: #1d4ed8; }
-body.theme--light .badge-green { color: #15803d; }
-body.theme--light .badge-purple { color: #7e22ce; }
-body.theme--light .badge-orange { color: #c2410c; }
-body.theme--light .badge-cyan { color: #0e7490; }
-
-.app-description {
-  font-size: 0.94em;
-  line-height: 1.6;
-  opacity: 0.88;
-  margin-bottom: 18px;
-}
-
- 
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 10px;
-  margin: 18px 0;
-}
-.feature-item {
-  padding: 12px 14px;
-  border-radius: 12px;
-  background: rgba(120, 120, 140, 0.05);
-  border: 1px solid rgba(120, 120, 140, 0.12);
-  font-size: 0.86em;
-  transition: background 0.2s ease;
-}
-.feature-item:hover {
-  background: rgba(120, 120, 140, 0.09);
-}
-.feature-item strong {
-  display: block;
-  font-size: 0.95em;
-  margin-bottom: 4px;
-  color: inherit;
-}
-.feature-item p {
-  margin: 0;
-  display: inline;
-  line-height: 1.45;
-  opacity: 0.75;
-}
-
- 
-.app-screenshot-frame {
-  margin: 20px auto;
-  max-width: 560px;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid rgba(120, 120, 140, 0.22);
-  background: rgba(15, 17, 23, 0.6);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15), 0 2px 6px rgba(0, 0, 0, 0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-.app-screenshot-frame:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22);
-}
-.app-screenshot-bar {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 12px;
-  background: rgba(120, 120, 140, 0.08);
-  border-bottom: 1px solid rgba(120, 120, 140, 0.14);
-}
-.app-screenshot-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: rgba(120, 120, 140, 0.35);
-}
-.app-screenshot-title {
-  margin-left: 6px;
-  font-size: 0.75em;
-  opacity: 0.6;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.app-screenshot-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.2);
-  padding: 4px;
-}
-.app-screenshot-content img {
-  max-width: 100%;
-  max-height: 280px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  border-radius: 6px;
-}
-
- 
-.app-ctas {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 18px;
-}
-.app-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 18px;
-  border-radius: 10px;
-  text-decoration: none !important;
-  font-weight: 600;
-  font-size: 0.88em;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.app-cta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-}
-.cta-primary {
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
-  color: #fff !important;
-  box-shadow: 0 3px 12px rgba(59, 130, 246, 0.3);
-}
-.cta-secondary {
-  background: rgba(120, 120, 140, 0.08);
-  color: inherit !important;
-  border: 1px solid rgba(120, 120, 140, 0.22);
-}
-
-.app-divider {
-  border: none;
-  border-top: 1px solid rgba(120, 120, 140, 0.16);
-  margin: 32px 0;
-}
-
- 
-.myapps-cta-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
-  border: 1px solid rgba(120, 120, 140, 0.2);
+  display: flex; flex-direction: column; gap: 8px;
+  text-align: left;
+  padding: 16px;
   border-radius: 16px;
-  padding: 20px 26px;
-  margin: 36px 0 0;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);
+  border: 1px solid var(--ma-border);
+  background: var(--ma-surface);
+  box-shadow: var(--ma-shadow);
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
-.myapps-cta-bar-left {
-  display: flex;
-  align-items: center;
-  gap: 14px;
+.ma-need:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--c) 45%, transparent); box-shadow: var(--ma-shadow-hover); }
+.ma-need[aria-pressed="true"] {
+  border-color: var(--c);
+  background: color-mix(in srgb, var(--c) 9%, var(--ma-surface));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--c) 18%, transparent), var(--ma-shadow);
 }
-.myapps-cta-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 1.15em;
-  flex-shrink: 0;
+.ma-need-top { display: flex; align-items: center; gap: 10px; padding-right: 52px; }
+.ma-need-emoji {
+  width: 34px; height: 34px; border-radius: 10px; flex-shrink: 0;
+  display: grid; place-items: center; font-size: 1.05em;
+  background: color-mix(in srgb, var(--c) 14%, transparent);
 }
-.myapps-cta-bar h5 {
-  margin: 0;
-  font-size: 1.02em;
-  font-weight: 700;
+.ma-need-label { font-weight: 700; font-size: 0.95em; line-height: 1.25; }
+.ma-need-blurb { font-size: 0.8em; color: var(--ma-faint); line-height: 1.45; }
+.ma-need-apps { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 2px; }
+.ma-need-app {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.76em; font-weight: 600;
+  padding: 3px 9px 3px 3px; border-radius: 999px;
+  background: var(--ma-surface-2); border: 1px solid var(--ma-border);
 }
-.myapps-cta-bar p {
-  margin: 2px 0 0;
-  font-size: 0.85em;
-  opacity: 0.7;
+.ma-need-app img, .ma-need-app i {
+  width: 18px; height: 18px; border-radius: 5px; margin: 0 !important;
+  display: grid; place-items: center; font-style: normal; font-size: 0.8em; object-fit: cover;
+}
+.ma-need-count {
+  position: absolute; top: 12px; right: 12px;
+  font-size: 0.72em; font-weight: 700; color: var(--c);
+  padding: 2px 8px; border-radius: 999px;
+  background: color-mix(in srgb, var(--c) 12%, transparent);
 }
 
-#contact {
+ 
+.ma-toolbar {
+  position: sticky; top: 0; z-index: 5;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+  padding: 10px; margin: 0 -10px 14px;
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--ma-surface) 82%, transparent);
+  -webkit-backdrop-filter: saturate(160%) blur(12px);
+  backdrop-filter: saturate(160%) blur(12px);
+  scroll-margin-top: 80px;
+}
+.ma-search {
+  flex: 1 1 220px; display: flex; align-items: center; gap: 8px;
+  padding: 0 12px; height: 40px; border-radius: 12px;
+  border: 1px solid var(--ma-border-strong); background: var(--ma-surface);
+  color: var(--ma-faint);
+}
+.ma-search:focus-within { border-color: var(--ma-brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--ma-brand) 20%, transparent); }
+.ma-search input {
+  flex: 1; min-width: 0; border: 0; outline: 0; background: transparent;
+  font: inherit; font-size: 0.9em; color: var(--ma-text);
+}
+.ma-seg {
+  display: inline-flex; padding: 3px; gap: 2px; border-radius: 12px;
+  background: var(--ma-surface-2); border: 1px solid var(--ma-border);
+  overflow-x: auto; max-width: 100%; scrollbar-width: none;
+}
+.ma-seg::-webkit-scrollbar { display: none; }
+.ma-seg button {
+  border: 0; background: transparent; cursor: pointer; white-space: nowrap;
+  padding: 7px 12px; border-radius: 9px; font-size: 0.82em; font-weight: 600; color: var(--ma-muted);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.ma-seg button[aria-pressed="true"] { background: var(--ma-surface); color: var(--ma-text); box-shadow: 0 1px 3px rgba(15, 23, 42, 0.12); }
+.ma-status { display: flex; align-items: center; gap: 10px; font-size: 0.84em; color: var(--ma-faint); margin: 0 0 14px; min-height: 1.5em; }
+.ma-reset {
+  border: 0; background: none; padding: 0; cursor: pointer;
+  color: var(--ma-brand); font-weight: 600; font-size: 1em;
+}
+.ma-reset[hidden] { display: none; }
+
+ 
+.ma-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.ma-card {
+  --accent: var(--ma-brand);
+  position: relative;
+  display: flex; flex-direction: column; gap: 14px;
+  padding: 18px;
+  border-radius: var(--ma-radius);
+  border: 1px solid var(--ma-border);
+  background: var(--ma-surface);
+  box-shadow: var(--ma-shadow);
+  cursor: pointer;
   scroll-margin-top: 90px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.ma-card:hover { transform: translateY(-2px); box-shadow: var(--ma-shadow-hover); border-color: var(--ma-border-strong); }
+.ma-card:focus-within { border-color: var(--ma-border-strong); }
+.ma-card[hidden] { display: none; }
+.ma-card.is-flash { animation: ma-flash 1.6s ease; }
+@keyframes ma-flash { 0%, 60% { box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 40%, transparent), var(--ma-shadow-hover); } }
+.ma-card-head { display: flex; gap: 12px; align-items: center; }
+.ma-card .ma-icon { width: 48px; height: 48px; border-radius: 13px; font-size: 1.4em; }
+.ma-purpose { margin: 0; font-size: 0.92em; line-height: 1.5; color: var(--ma-muted); flex: 1; }
+.ma-card-meta { margin: 0; font-size: 0.78em; color: var(--ma-faint); }
+.ma-card .ma-actions { margin-top: -4px; }
+.ma-btn--solid { flex: 1; border: 0; background: var(--ma-text); color: var(--ma-surface) !important; }
+.ma-btn--solid:hover { opacity: 0.88; }
+.ma-icon {
+  width: 56px; height: 56px; border-radius: 15px; flex-shrink: 0; overflow: hidden;
+  display: grid; place-items: center; font-size: 1.6em;
+  background: var(--ma-surface-2);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+.ma-card-title { min-width: 0; }
+.ma-card-title h4 {
+  margin: 0; font-size: 1.08em; font-weight: 750; letter-spacing: -0.01em;
+  display: flex; align-items: center; flex-wrap: wrap; gap: 6px;
+}
+.ma-card-title p { margin: 1px 0 0; font-size: 0.82em; color: var(--ma-faint); line-height: 1.35; }
+.ma-badge {
+  display: inline-block; padding: 2px 8px; border-radius: 999px;
+  font-size: 0.66em; font-weight: 700; letter-spacing: 0.02em; line-height: 1.5;
+  color: var(--c); background: color-mix(in srgb, var(--c) 13%, transparent);
+  border: 1px solid color-mix(in srgb, var(--c) 28%, transparent);
+}
+.ma-usewhen {
+  margin: 0; font-size: 0.9em; line-height: 1.5; color: var(--ma-text);
+  padding: 10px 12px; border-radius: 12px;
+  background: var(--ma-surface-2);
+  border-left: 3px solid var(--accent);
+}
+.ma-usewhen span { display: block; font-size: 0.78em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ma-faint); margin-bottom: 2px; }
+.ma-jobs { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.ma-jobs li { position: relative; margin: 0; padding-left: 22px; font-size: 0.84em; line-height: 1.4; color: var(--ma-muted); }
+.ma-jobs li::before {
+  content: "✓"; position: absolute; left: 0; top: 0;
+  width: 16px; height: 16px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 0.72em; font-weight: 800;
+  color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, transparent);
+}
+.ma-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 4px; }
+.ma-chip {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 0.74em; font-weight: 600; color: var(--ma-muted);
+  padding: 3px 9px; border-radius: 8px;
+  background: var(--ma-surface-2); border: 1px solid var(--ma-border);
+}
+.ma-chip--price { color: var(--ma-text); }
+.ma-actions { display: flex; gap: 8px; }
+.ma-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  height: 38px; padding: 0 14px; border-radius: 11px;
+  font-size: 0.84em; font-weight: 650; cursor: pointer; white-space: nowrap;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.ma-btn:active { transform: scale(0.98); }
+.ma-btn--primary {
+  flex: 1; border: 0;
+  background: var(--accent); color: #fff !important;
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+.ma-btn--primary:hover { box-shadow: 0 6px 20px color-mix(in srgb, var(--accent) 50%, transparent); transform: translateY(-1px); }
+.ma-btn--ghost { border: 1px solid var(--ma-border-strong); background: var(--ma-surface); color: var(--ma-text) !important; }
+.ma-btn--ghost:hover { background: var(--ma-surface-2); }
+.ma-empty { text-align: center; padding: 36px 16px; border: 1px dashed var(--ma-border-strong); border-radius: var(--ma-radius); color: var(--ma-faint); margin-bottom: 40px; }
+.ma-empty[hidden] { display: none; }
+
+ 
+.ma-guide {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr));
+  gap: 14px;
+  margin-bottom: 36px;
+}
+.ma-guide-group {
+  padding: 14px; border-radius: 16px;
+  border: 1px solid var(--ma-border); background: var(--ma-surface);
+}
+.ma-guide-group h4 { margin: 0 0 8px; font-size: 0.86em; font-weight: 700; color: var(--c); display: flex; gap: 6px; align-items: center; }
+.ma-guide-row {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  text-align: left; padding: 8px 10px; margin: 0 0 2px; border: 0; border-radius: 10px;
+  background: transparent; cursor: pointer; font-size: 0.85em; line-height: 1.35;
+  transition: background 0.15s ease;
+}
+.ma-guide-row:hover { background: var(--ma-surface-2); }
+.ma-guide-row > span:first-child { color: var(--ma-muted); }
+.ma-guide-app { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; white-space: nowrap; flex-shrink: 0; }
+.ma-guide-app img, .ma-guide-app i { width: 20px; height: 20px; border-radius: 6px; margin: 0 !important; display: grid; place-items: center; font-style: normal; font-size: 0.75em; }
+.ma-guide-app::after { content: "→"; color: var(--ma-faint); transition: transform 0.15s ease; }
+.ma-guide-row:hover .ma-guide-app::after { transform: translateX(3px); }
+
+ 
+.ma-dialog {
+  width: min(760px, calc(100vw - 24px));
+  max-height: min(88vh, 900px);
+  padding: 0; border: 1px solid var(--ma-border); border-radius: 22px;
+  background: var(--ma-surface); color: var(--ma-text);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+.ma-dialog[open] { display: flex; flex-direction: column; animation: ma-pop 0.22s cubic-bezier(0.2, 0.9, 0.3, 1.1); }
+.ma-dialog::backdrop { background: rgba(10, 12, 18, 0.55); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+@keyframes ma-pop { from { opacity: 0; transform: translateY(12px) scale(0.98); } }
+html:has(.ma-dialog[open]) { overflow: hidden; }
+.ma-dlg-head {
+  display: flex; align-items: center; gap: 14px; padding: 18px 20px;
+  border-bottom: 1px solid var(--ma-border);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 10%, transparent), transparent);
+}
+.ma-dlg-head h3 { margin: 0; font-size: 1.3em; font-weight: 800; letter-spacing: -0.01em; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.ma-dlg-head p { margin: 2px 0 0; font-size: 0.86em; color: var(--ma-faint); }
+.ma-close {
+  margin-left: auto; flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%;
+  border: 1px solid var(--ma-border); background: var(--ma-surface-2); cursor: pointer;
+  font-size: 1.1em; line-height: 1; display: grid; place-items: center; color: var(--ma-muted);
+}
+.ma-close:hover { color: var(--ma-text); border-color: var(--ma-border-strong); }
+.ma-dlg-body { flex: 1 1 auto; min-height: 0; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 18px; overscroll-behavior: contain; }
+.ma-dlg-body > *, .ma-dlg-head, .ma-dlg-foot { flex-shrink: 0; }
+.ma-shot {
+  border-radius: 14px; overflow: hidden; border: 1px solid var(--ma-border);
+  background: #0b0d12; aspect-ratio: 1200 / 630;
+}
+.ma-shot img { width: 100%; height: 100%; object-fit: contain; display: block; margin: 0 !important; }
+.ma-dlg-cols { display: grid; grid-template-columns: 1.1fr 1fr; gap: 18px; }
+.ma-dlg-desc { font-size: 0.92em; line-height: 1.6; color: var(--ma-muted); }
+.ma-dlg-desc p { margin: 0 0 8px; }
+.ma-dlg-desc strong { color: var(--ma-text); }
+.ma-kicker { margin: 0 0 8px; font-size: 0.74em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ma-faint); }
+.ma-features { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+.ma-feature { padding: 12px 14px; border-radius: 12px; background: var(--ma-surface-2); border: 1px solid var(--ma-border); font-size: 0.84em; line-height: 1.45; }
+.ma-feature b { display: block; margin-bottom: 3px; font-size: 1.02em; color: var(--ma-text); }
+.ma-feature p { margin: 0; color: var(--ma-muted); }
+.ma-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.ma-dlg-foot {
+  display: flex; flex-wrap: wrap; gap: 8px; padding: 14px 20px;
+  border-top: 1px solid var(--ma-border); background: var(--ma-surface);
+}
+.ma-dlg-foot .ma-btn--primary { flex: 0 1 auto; }
+
+ 
+.ma-collab {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  padding: 20px 24px; border-radius: 20px;
+  border: 1px solid var(--ma-border);
+  background: linear-gradient(120deg, color-mix(in srgb, var(--c-blue) 8%, var(--ma-surface)), color-mix(in srgb, var(--c-purple) 8%, var(--ma-surface)));
+}
+.ma-collab h4 { margin: 0; font-size: 1.02em; font-weight: 750; }
+.ma-collab p { margin: 2px 0 0; font-size: 0.86em; color: var(--ma-muted); }
+.ma-collab .ma-btn--primary { flex: 0 0 auto; --accent: var(--ma-brand); }
+#contact { scroll-margin-top: 90px; }
+
+@media (max-width: 640px) {
+  .ma-hero { grid-template-columns: 1fr; padding: 22px 18px; }
+  .ma-hero-icons { display: none; }
+  .ma-toolbar { position: static; }
+  .ma-dlg-cols { grid-template-columns: 1fr; }
+  .ma-dialog { max-height: 92vh; border-radius: 18px; }
+  .ma-needs { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .ma-need { padding: 12px; }
+  .ma-need-blurb { display: none; }
+  .ma-need-app { font-size: 0.72em; }
+  .ma-need-top { padding-right: 0; }
+  .ma-need-count { position: static; align-self: flex-start; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ma *, .ma-dialog[open] { animation: none !important; transition: none !important; }
 }
 </style>
 
-<div class="myapps-section">
+
+<div class="ma" id="ma">
 
 
-<div class="tryapps-hub-banner">
-  <div class="tryapps-hub-left">
-    <div class="tryapps-hub-icon">🏪</div>
-    <div>
-      <div class="tryapps-hub-title">TryApps Store Ecosystem <span class="app-badge badge-orange" style="margin: 0;">Hub</span></div>
-      <div class="tryapps-hub-desc">Central launchpad &amp; showcase for all my indie products, live apps, and upcoming developer tools.</div>
-    </div>
-  </div>
-  <a href="https://tryapps.store" target="_blank" rel="noopener" class="tryapps-hub-btn">Visit tryapps.store ↗</a>
-</div>
-
-
-<div class="myapps-head">
+<section class="ma-hero">
   <div>
-    <h4>📂 Shipped Applications</h4>
-    <p class="myapps-sub">Production apps, developer utilities, and frameworks actively maintained.</p>
+    <span class="ma-eyebrow">🏪 Published on <a href="https://tryapps.store" target="_blank" rel="noopener">tryapps.store ↗</a></span>
+    <h2>Pick an app by what you need</h2>
+    <p>Each app does one job well. Choose a need below, search a task like <em>“clipboard”</em>, <em>“lock”</em>, or <em>“draw”</em>, and open any app for the full details.</p>
+    <div class="ma-stats">
+      <span class="ma-stat"><b>9</b> apps</span>
+      <span class="ma-stat"><b>6</b> for Mac</span>
+      <span class="ma-stat"><b>3</b> new</span>
+      <span class="ma-stat"><b>7</b> needs covered</span>
+    </div>
   </div>
-  <div class="myapps-filters">
-    <button class="myapp-filter-btn active" data-filter="all">All (6)</button>
+  <div class="ma-hero-icons" aria-hidden="true">
     
-    <button class="myapp-filter-btn" data-filter="macos">🖥 macOS</button>
+    <button type="button" tabindex="-1" data-open="flovix" title="FloviX"><img src="/images/logo-flovix.png" alt="" loading="lazy"></button>
     
-    <button class="myapp-filter-btn" data-filter="ios">📱 iOS</button>
+    <button type="button" tabindex="-1" data-open="pastezen" title="PasteZen"><img src="/images/logo-pastezen.png" alt="" loading="lazy"></button>
     
-    <button class="myapp-filter-btn" data-filter="watchos">⌚ watchOS</button>
+    <button type="button" tabindex="-1" data-open="inkglass" title="Inkglass"><img src="/images/logo-inkglass.png" alt="" loading="lazy"></button>
     
-    <button class="myapp-filter-btn" data-filter="web">🌐 Web</button>
+    <button type="button" tabindex="-1" data-open="proximity-lock" title="Proximity Lock"><img src="/images/logo-proximity-lock.png" alt="" loading="lazy"></button>
+    
+    <button type="button" tabindex="-1" data-open="aurafold" title="AuraFold"><img src="/images/logo-aurafold.png" alt="" loading="lazy"></button>
+    
+    <button type="button" tabindex="-1" data-open="ttbaseuikit" title="TTBaseUIKit"><img src="/images/logo-ttbaseuikit.png" alt="" loading="lazy"></button>
+    
+    <button type="button" tabindex="-1" data-open="ttbdebugplus" title="TTBDebugPlus"><img src="/images/logo-ttbdebugplus.png" alt="" loading="lazy"></button>
+    
+    <button type="button" tabindex="-1" data-open="deep-link-tester" title="Deep Link Tester"><span style="display:grid;place-items:center;width:100%;height:100%;font-size:1.4em;background: linear-gradient(135deg, #06b6d4, #0891b2);">🔗</span></button>
+    
+    <button type="button" tabindex="-1" data-open="12bay" title="12Bay.vn"><img src="/images/logo-12bay.png" alt="" loading="lazy"></button>
+    
+  </div>
+</section>
+
+
+<div class="ma-section-head">
+  <div>
+    <h3>What do you need?</h3>
+    <p>Tap a need to see the apps made for it. Tap again to show everything.</p>
+  </div>
+</div>
+<div class="ma-needs" role="group" aria-label="Filter apps by need">
+  
+  
+  
+  <button type="button" class="ma-need c-purple" data-cat="focus" aria-pressed="false">
+    <span class="ma-need-top">
+      <span class="ma-need-emoji" aria-hidden="true">🤖</span>
+      <span class="ma-need-label">AI coding &amp; focus</span>
+    </span>
+    <span class="ma-need-blurb">Keep AI agents running and protect your health while you build.</span>
+    <span class="ma-need-apps">
+      <span class="ma-need-app"><img src="/images/logo-flovix.png" alt="" loading="lazy">FloviX</span>
+    </span>
+    <span class="ma-need-count">1 app</span>
+  </button>
+  
+  
+  
+  
+  <button type="button" class="ma-need c-green" data-cat="clipboard" aria-pressed="false">
+    <span class="ma-need-top">
+      <span class="ma-need-emoji" aria-hidden="true">📋</span>
+      <span class="ma-need-label">Clean copy &amp; paste</span>
+    </span>
+    <span class="ma-need-blurb">Paste clean text without fonts, trackers, or broken PDF lines.</span>
+    <span class="ma-need-apps">
+      <span class="ma-need-app"><img src="/images/logo-pastezen.png" alt="" loading="lazy">PasteZen</span>
+    </span>
+    <span class="ma-need-count">1 app</span>
+  </button>
+  
+  
+  
+  
+  <button type="button" class="ma-need c-orange" data-cat="screen" aria-pressed="false">
+    <span class="ma-need-top">
+      <span class="ma-need-emoji" aria-hidden="true">✏️</span>
+      <span class="ma-need-label">Draw &amp; present on screen</span>
+    </span>
+    <span class="ma-need-blurb">Mark up anything on screen for calls, reviews, and bug reports.</span>
+    <span class="ma-need-apps">
+      <span class="ma-need-app"><img src="/images/logo-inkglass.png" alt="" loading="lazy">Inkglass</span>
+    </span>
+    <span class="ma-need-count">1 app</span>
+  </button>
+  
+  
+  
+  
+  <button type="button" class="ma-need c-blue" data-cat="security" aria-pressed="false">
+    <span class="ma-need-top">
+      <span class="ma-need-emoji" aria-hidden="true">🔒</span>
+      <span class="ma-need-label">Mac security</span>
+    </span>
+    <span class="ma-need-blurb">Lock your Mac the moment you walk away.</span>
+    <span class="ma-need-apps">
+      <span class="ma-need-app"><img src="/images/logo-proximity-lock.png" alt="" loading="lazy">Proximity Lock</span>
+    </span>
+    <span class="ma-need-count">1 app</span>
+  </button>
+  
+  
+  
+  
+  <button type="button" class="ma-need c-pink" data-cat="delight" aria-pressed="false">
+    <span class="ma-need-top">
+      <span class="ma-need-emoji" aria-hidden="true">✨</span>
+      <span class="ma-need-label">Make your Mac feel alive</span>
+    </span>
+    <span class="ma-need-blurb">Light, sound, and haptics that react to your MacBook lid.</span>
+    <span class="ma-need-apps">
+      <span class="ma-need-app"><img src="/images/logo-aurafold.png" alt="" loading="lazy">AuraFold</span>
+    </span>
+    <span class="ma-need-count">1 app</span>
+  </button>
+  
+  
+  
+  
+  <button type="button" class="ma-need c-cyan" data-cat="devtools" aria-pressed="false">
+    <span class="ma-need-top">
+      <span class="ma-need-emoji" aria-hidden="true">🛠</span>
+      <span class="ma-need-label">iOS developer tools</span>
+    </span>
+    <span class="ma-need-blurb">Build, debug, and test iOS apps faster.</span>
+    <span class="ma-need-apps">
+      <span class="ma-need-app"><img src="/images/logo-ttbaseuikit.png" alt="" loading="lazy">TTBaseUIKit</span><span class="ma-need-app"><img src="/images/logo-ttbdebugplus.png" alt="" loading="lazy">TTBDebugPlus</span><span class="ma-need-app"><i style="background: linear-gradient(135deg, #06b6d4, #0891b2);">🔗</i>Deep Link Tester</span>
+    </span>
+    <span class="ma-need-count">3 apps</span>
+  </button>
+  
+  
+  
+  
+  <button type="button" class="ma-need c-teal" data-cat="travel" aria-pressed="false">
+    <span class="ma-need-top">
+      <span class="ma-need-emoji" aria-hidden="true">✈️</span>
+      <span class="ma-need-label">Travel</span>
+    </span>
+    <span class="ma-need-blurb">Find and book cheap flights in Vietnam.</span>
+    <span class="ma-need-apps">
+      <span class="ma-need-app"><img src="/images/logo-12bay.png" alt="" loading="lazy">12Bay.vn</span>
+    </span>
+    <span class="ma-need-count">1 app</span>
+  </button>
+  
+  
+</div>
+
+
+<div class="ma-toolbar" id="ma-toolbar">
+  <label class="ma-search">
+    <span aria-hidden="true">🔎</span>
+    <input type="search" id="ma-q" placeholder="Search a task, e.g. “paste clean text”" aria-label="Search apps by task or name" autocomplete="off">
+  </label>
+  <div class="ma-seg" role="group" aria-label="Filter by platform">
+    <button type="button" data-platform="all" aria-pressed="true">All</button>
+    
+    <button type="button" data-platform="macos" aria-pressed="false">🖥 macOS</button>
+    
+    <button type="button" data-platform="ios" aria-pressed="false">📱 iOS</button>
+    
+    <button type="button" data-platform="watchos" aria-pressed="false">⌚ watchOS</button>
+    
+    <button type="button" data-platform="web" aria-pressed="false">🌐 Web</button>
     
   </div>
 </div>
+<p class="ma-status"><span id="ma-count" aria-live="polite">Showing all 9 apps</span><button type="button" class="ma-reset" id="ma-reset" hidden>Clear filters</button></p>
 
 
-<div class="myapps-grid">
+<div class="ma-grid" id="ma-grid">
   
-  <a href="#flovix" class="myapp-card" data-platforms="macos">
-    <div class="myapp-card-top">
-      
-      <div class="myapp-icon"><img src="/images/logo-flovix.png" alt="FloviX logo" loading="lazy"></div>
-      
-      <div class="myapp-name-row">
-        <strong>FloviX</strong>
-        <span class="app-badge badge-orange myapp-badge-sm">New Release</span>
+  
+  
+  
+  
+  
+  <article class="ma-card" id="flovix" style="--accent: #f59e0b;"
+    data-cat="focus" data-platforms="macos" data-search="flovix protect your flow — macos menu-bar guardian for ai coding &amp; health watches your ai coding agents, auto-heals crashes, keeps prompt templates close, and protects your health with smart breaks. ai coding guardian for mac restart stalled ai agents, and remember to take breaks. auto-retry my ai agent when it hits a rate limit get break reminders based on real work time keep prompt templates one keystroke away macos ai productivity swiftui privacy menu bar ai coding &amp; focus">
+    
+    
+    
+    
+    <div class="ma-card-head">
+      <div class="ma-icon"><img src="/images/logo-flovix.png" alt="" loading="lazy"></div>
+      <div class="ma-card-title">
+        <h4>FloviX</h4>
+        <p>AI coding guardian for Mac</p>
       </div>
     </div>
-    <p class="myapp-desc">Watches your AI coding agents, auto-heals crashes, keeps prompt templates close, and protects your health with smart breaks.</p>
-    <div class="myapp-platforms" aria-hidden="true">🖥 </div>
-    <span class="myapp-cta-btn">View Details →</span>
-  </a>
+    <p class="ma-purpose">Restart stalled AI agents, and remember to take breaks.</p>
+    <p class="ma-card-meta">macOS · $6.99 once · free trial</p>
+    <div class="ma-actions">
+      <a class="ma-btn ma-btn--solid" href="https://flovix.tryapps.store/#get" target="_blank" rel="noopener">Try it free ↗</a>
+      <button type="button" class="ma-btn ma-btn--ghost" data-open="flovix" aria-haspopup="dialog" aria-label="Details about FloviX">Details</button>
+    </div>
+  </article>
   
-  <a href="#proximity-lock" class="myapp-card" data-platforms="macos ios watchos">
-    <div class="myapp-card-top">
-      
-      <div class="myapp-icon"><img src="/images/logo-proximity-lock.png" alt="Proximity Lock logo" loading="lazy"></div>
-      
-      <div class="myapp-name-row">
-        <strong>Proximity Lock</strong>
-        <span class="app-badge badge-purple myapp-badge-sm">Featured</span>
+  
+  
+  
+  
+  
+  <article class="ma-card" id="pastezen" style="--accent: #10b981;"
+    data-cat="clipboard" data-platforms="macos" data-search="pastezen copy anything. paste it clean. a menu-bar app that cleans your clipboard the moment you copy — formatting, tracking links, and pdf line breaks are gone before you paste. clean clipboard for mac paste clean text, without odd fonts, tracking links, or broken lines. paste text without fonts and colours strip utm_, fbclid, and gclid from links fix broken lines in text copied from pdfs hide api keys and card numbers before i paste macos menu bar clipboard privacy mac app store clean copy &amp; paste">
+    
+    
+    
+    
+    <div class="ma-card-head">
+      <div class="ma-icon"><img src="/images/logo-pastezen.png" alt="" loading="lazy"></div>
+      <div class="ma-card-title">
+        <h4>PasteZen <span class="ma-badge c-green">New</span></h4>
+        <p>Clean clipboard for Mac</p>
       </div>
     </div>
-    <p class="myapp-desc">Smart auto-lock for your Mac when your iPhone moves out of range. Keep your data safe, always.</p>
-    <div class="myapp-platforms" aria-hidden="true">🖥 📱 ⌚ </div>
-    <span class="myapp-cta-btn">View Details →</span>
-  </a>
+    <p class="ma-purpose">Paste clean text, without odd fonts, tracking links, or broken lines.</p>
+    <p class="ma-card-meta">macOS · Free &#43; Pro upgrade</p>
+    <div class="ma-actions">
+      <a class="ma-btn ma-btn--solid" href="https://apps.apple.com/us/app/pastezen/id6809315333" target="_blank" rel="noopener">App Store ↗</a>
+      <button type="button" class="ma-btn ma-btn--ghost" data-open="pastezen" aria-haspopup="dialog" aria-label="Details about PasteZen">Details</button>
+    </div>
+  </article>
   
-  <a href="#12bay" class="myapp-card" data-platforms="ios watchos">
-    <div class="myapp-card-top">
-      
-      <div class="myapp-icon"><img src="/images/logo-12bay.png" alt="12Bay.vn logo" loading="lazy"></div>
-      
-      <div class="myapp-name-row">
-        <strong>12Bay.vn</strong>
-        <span class="app-badge badge-green myapp-badge-sm">Live</span>
+  
+  
+  
+  
+  
+  <article class="ma-card" id="inkglass" style="--accent: #f97316;"
+    data-cat="screen" data-platforms="macos" data-search="inkglass draw on your screen. copy it instantly. press one hotkey and your whole screen becomes a canvas. draw, then press ⌘c to copy your marks and the screen below as one image. draw on your mac screen draw on your screen during calls, reviews, and bug reports. draw arrows and notes on my screen during a call mark up a design or a bug and copy it as one image highlight my cursor and zoom while presenting macos menu bar annotation presenting mac app store draw &amp; present on screen">
+    
+    
+    
+    
+    <div class="ma-card-head">
+      <div class="ma-icon"><img src="/images/logo-inkglass.png" alt="" loading="lazy"></div>
+      <div class="ma-card-title">
+        <h4>Inkglass <span class="ma-badge c-orange">New</span></h4>
+        <p>Draw on your Mac screen</p>
       </div>
     </div>
-    <p class="myapp-desc">Travel companion app with flight booking, QR payment, and cheap ticket hunting for the Vietnamese market.</p>
-    <div class="myapp-platforms" aria-hidden="true">📱 ⌚ </div>
-    <span class="myapp-cta-btn">View Details →</span>
-  </a>
+    <p class="ma-purpose">Draw on your screen during calls, reviews, and bug reports.</p>
+    <p class="ma-card-meta">macOS · Free &#43; Pro upgrade</p>
+    <div class="ma-actions">
+      <a class="ma-btn ma-btn--solid" href="https://apps.apple.com/us/app/inkglass-draw-on-screen/id6818015074" target="_blank" rel="noopener">App Store ↗</a>
+      <button type="button" class="ma-btn ma-btn--ghost" data-open="inkglass" aria-haspopup="dialog" aria-label="Details about Inkglass">Details</button>
+    </div>
+  </article>
   
-  <a href="#ttbaseuikit" class="myapp-card" data-platforms="ios">
-    <div class="myapp-card-top">
-      
-      <div class="myapp-icon"><img src="/images/logo-ttbaseuikit.png" alt="TTBaseUIKit logo" loading="lazy"></div>
-      
-      <div class="myapp-name-row">
-        <strong>TTBaseUIKit</strong>
-        <span class="app-badge badge-cyan myapp-badge-sm">Open Source</span>
+  
+  
+  
+  
+  
+  <article class="ma-card" id="proximity-lock" style="--accent: #3b82f6;"
+    data-cat="security" data-platforms="macos ios watchos" data-search="proximity lock auto-lock your mac with iphone proximity smart auto-lock for your mac when your iphone moves out of range. keep your data safe, always. auto-lock with your iphone lock your mac when you walk away with your iphone. lock my mac when i walk away with my iphone get an alarm if someone unplugs or closes my mac in a café macos ios bluetooth security swiftui apple watch mac security">
+    
+    
+    
+    
+    <div class="ma-card-head">
+      <div class="ma-icon"><img src="/images/logo-proximity-lock.png" alt="" loading="lazy"></div>
+      <div class="ma-card-title">
+        <h4>Proximity Lock</h4>
+        <p>Auto-lock with your iPhone</p>
       </div>
     </div>
-    <p class="myapp-desc">100&#43; production-ready UIKit &amp; SwiftUI components. Build production iOS UI in hours, not days.</p>
-    <div class="myapp-platforms" aria-hidden="true">📱 </div>
-    <span class="myapp-cta-btn">View Details →</span>
-  </a>
+    <p class="ma-purpose">Lock your Mac when you walk away with your iPhone.</p>
+    <p class="ma-card-meta">macOS · iOS · watchOS · Free trial</p>
+    <div class="ma-actions">
+      <a class="ma-btn ma-btn--solid" href="https://tqtuan1201.github.io/public/apps/proximity/#pricing" target="_blank" rel="noopener">Try it free ↗</a>
+      <button type="button" class="ma-btn ma-btn--ghost" data-open="proximity-lock" aria-haspopup="dialog" aria-label="Details about Proximity Lock">Details</button>
+    </div>
+  </article>
   
-  <a href="#ttbdebugplus" class="myapp-card" data-platforms="macos">
-    <div class="myapp-card-top">
-      
-      <div class="myapp-icon"><img src="/images/logo-ttbdebugplus.png" alt="TTBDebugPlus logo" loading="lazy"></div>
-      
-      <div class="myapp-name-row">
-        <strong>TTBDebugPlus</strong>
-        <span class="app-badge badge-cyan myapp-badge-sm">Open Source</span>
+  
+  
+  
+  
+  
+  <article class="ma-card" id="aurafold" style="--accent: #ec4899;"
+    data-cat="delight" data-platforms="macos" data-search="aurafold fold the lid. the screen folds too. visual, sound, and haptic effects that follow your macbook lid, charger, and wake events — a small piece of joy every time you open your mac. lid effects for your macbook add light, sound, and haptics when you open or close your macbook. see a light effect when i open or close my macbook lid hear a soft sound and feel haptics when the lid moves show battery level as light when i plug in the charger check my lid angle from the menu bar macos menu bar ambient haptics mac app store make your mac feel alive">
+    
+    
+    
+    
+    <div class="ma-card-head">
+      <div class="ma-icon"><img src="/images/logo-aurafold.png" alt="" loading="lazy"></div>
+      <div class="ma-card-title">
+        <h4>AuraFold <span class="ma-badge c-pink">New</span></h4>
+        <p>Lid effects for your MacBook</p>
       </div>
     </div>
-    <p class="myapp-desc">Real-time macOS companion debugger for iOS apps — logs, network inspector, and device control.</p>
-    <div class="myapp-platforms" aria-hidden="true">🖥 </div>
-    <span class="myapp-cta-btn">View Details →</span>
-  </a>
+    <p class="ma-purpose">Add light, sound, and haptics when you open or close your MacBook.</p>
+    <p class="ma-card-meta">macOS · Free &#43; Pro upgrade</p>
+    <div class="ma-actions">
+      <a class="ma-btn ma-btn--solid" href="https://apps.apple.com/app/aurafold/id6738291847" target="_blank" rel="noopener">App Store ↗</a>
+      <button type="button" class="ma-btn ma-btn--ghost" data-open="aurafold" aria-haspopup="dialog" aria-label="Details about AuraFold">Details</button>
+    </div>
+  </article>
   
-  <a href="#deep-link-tester" class="myapp-card" data-platforms="web">
-    <div class="myapp-card-top">
-      
-      <div class="myapp-icon" style="background: ZgotmplZ;">🔗</div>
-      
-      <div class="myapp-name-row">
-        <strong>Deep Link Tester</strong>
-        <span class="app-badge badge-orange myapp-badge-sm">Free Tool</span>
+  
+  
+  
+  
+  
+  <article class="ma-card" id="ttbaseuikit" style="--accent: #8b5cf6;"
+    data-cat="devtools" data-platforms="ios" data-search="ttbaseuikit build ios apps faster — 100&#43; production-ready components 100&#43; production-ready uikit &amp; swiftui components. build production ios ui in hours, not days. ios ui component library build ios screens fast with ready-made uikit and swiftui views. build ios screens fast with ready-made uikit &amp; swiftui views ios swift uikit swiftui swiftpm open source ios developer tools">
+    
+    
+    
+    
+    <div class="ma-card-head">
+      <div class="ma-icon"><img src="/images/logo-ttbaseuikit.png" alt="" loading="lazy"></div>
+      <div class="ma-card-title">
+        <h4>TTBaseUIKit</h4>
+        <p>iOS UI component library</p>
       </div>
     </div>
-    <p class="myapp-desc">Build and test Universal Links, App Links, and custom URL schemes — right from your browser.</p>
-    <div class="myapp-platforms" aria-hidden="true">🌐 </div>
-    <span class="myapp-cta-btn">View Details →</span>
-  </a>
+    <p class="ma-purpose">Build iOS screens fast with ready-made UIKit and SwiftUI views.</p>
+    <p class="ma-card-meta">iOS · Free, open source</p>
+    <div class="ma-actions">
+      <a class="ma-btn ma-btn--solid" href="https://tqtuan1201.github.io/public/docs/ttbaseuikit/" target="_blank" rel="noopener">Read the docs ↗</a>
+      <button type="button" class="ma-btn ma-btn--ghost" data-open="ttbaseuikit" aria-haspopup="dialog" aria-label="Details about TTBaseUIKit">Details</button>
+    </div>
+  </article>
+  
+  
+  
+  
+  
+  
+  <article class="ma-card" id="ttbdebugplus" style="--accent: #06b6d4;"
+    data-cat="devtools" data-platforms="macos" data-search="ttbdebugplus macos companion debugger for ios apps real-time macos companion debugger for ios apps — logs, network inspector, and device control. ios debugger on your mac see your ios app&#39;s logs and network calls live on your mac. watch ios logs and network requests live on my mac export api calls to postman or curl macos swiftui bonjour websocket open source free ios developer tools">
+    
+    
+    
+    
+    <div class="ma-card-head">
+      <div class="ma-icon"><img src="/images/logo-ttbdebugplus.png" alt="" loading="lazy"></div>
+      <div class="ma-card-title">
+        <h4>TTBDebugPlus</h4>
+        <p>iOS debugger on your Mac</p>
+      </div>
+    </div>
+    <p class="ma-purpose">See your iOS app&#39;s logs and network calls live on your Mac.</p>
+    <p class="ma-card-meta">macOS · Free, open source</p>
+    <div class="ma-actions">
+      <a class="ma-btn ma-btn--solid" href="https://tqtuan1201.github.io/public/docs/ttbaseuikit/ttbdebugplus.html" target="_blank" rel="noopener">Read the docs ↗</a>
+      <button type="button" class="ma-btn ma-btn--ghost" data-open="ttbdebugplus" aria-haspopup="dialog" aria-label="Details about TTBDebugPlus">Details</button>
+    </div>
+  </article>
+  
+  
+  
+  
+  
+  
+  <article class="ma-card" id="deep-link-tester" style="--accent: #14b8a6;"
+    data-cat="devtools" data-platforms="web" data-search="deep link tester test universal links, app links &amp; custom url schemes build and test universal links, app links, and custom url schemes — right from your browser. deep link tester in the browser find out why a universal link or app link won&#39;t open your app. test universal links, app links, and url schemes web tool ios android universal links free &amp; open source ios developer tools">
+    
+    
+    
+    
+    <div class="ma-card-head">
+      <div class="ma-icon" style="background: linear-gradient(135deg, #06b6d4, #0891b2);">🔗</div>
+      <div class="ma-card-title">
+        <h4>Deep Link Tester</h4>
+        <p>Deep link tester in the browser</p>
+      </div>
+    </div>
+    <p class="ma-purpose">Find out why a Universal Link or App Link won&#39;t open your app.</p>
+    <p class="ma-card-meta">Web · Free</p>
+    <div class="ma-actions">
+      <a class="ma-btn ma-btn--solid" href="https://tqtuan1201.github.io/public/apps/applink/" target="_blank" rel="noopener">Open the tool ↗</a>
+      <button type="button" class="ma-btn ma-btn--ghost" data-open="deep-link-tester" aria-haspopup="dialog" aria-label="Details about Deep Link Tester">Details</button>
+    </div>
+  </article>
+  
+  
+  
+  
+  
+  
+  <article class="ma-card" id="12bay" style="--accent: #0ea5e9;"
+    data-cat="travel" data-platforms="ios watchos" data-search="12bay.vn săn vé máy bay giá rẻ — cheap flight booking travel companion app with flight booking, qr payment, and cheap ticket hunting for the vietnamese market. cheap flights in vietnam find and book cheap flights, then pay with a qr code. compare cheap flight prices in vietnam pay for a ticket with a qr code ios swift uikit apple watch travel 4.6 ★ travel">
+    
+    
+    
+    
+    <div class="ma-card-head">
+      <div class="ma-icon"><img src="/images/logo-12bay.png" alt="" loading="lazy"></div>
+      <div class="ma-card-title">
+        <h4>12Bay.vn</h4>
+        <p>Cheap flights in Vietnam</p>
+      </div>
+    </div>
+    <p class="ma-purpose">Find and book cheap flights, then pay with a QR code.</p>
+    <p class="ma-card-meta">iOS · watchOS · Free</p>
+    <div class="ma-actions">
+      <a class="ma-btn ma-btn--solid" href="https://apps.apple.com/us/app/s%C4%83n-v%C3%A9-m%C3%A1y-bay-gi%C3%A1-r%E1%BA%BB-12bay-vn/id1191396802" target="_blank" rel="noopener">App Store ↗</a>
+      <button type="button" class="ma-btn ma-btn--ghost" data-open="12bay" aria-haspopup="dialog" aria-label="Details about 12Bay.vn">Details</button>
+    </div>
+  </article>
+  
+</div>
+<div class="ma-empty" id="ma-empty" hidden>
+  <p>No app matches that yet.</p>
+  <button type="button" class="ma-btn ma-btn--ghost" data-reset>Show all apps</button>
+</div>
+
+
+<div class="ma-section-head">
+  <div>
+    <h3>Quick guide: “I want to…”</h3>
+    <p>Find your task, and the app that does it is on the right.</p>
+  </div>
+</div>
+<div class="ma-guide">
+  
+  
+  
+  <div class="ma-guide-group c-purple">
+    <h4><span aria-hidden="true">🤖</span>AI coding &amp; focus</h4>
+    
+    
+    
+    <button type="button" class="ma-guide-row" data-open="flovix" aria-haspopup="dialog">
+      <span>Auto-retry my AI agent when it hits a rate limit</span>
+      <span class="ma-guide-app"><img src="/images/logo-flovix.png" alt="" loading="lazy">FloviX</span>
+    </button>
+    
+    <button type="button" class="ma-guide-row" data-open="flovix" aria-haspopup="dialog">
+      <span>Get break reminders based on real work time</span>
+      <span class="ma-guide-app"><img src="/images/logo-flovix.png" alt="" loading="lazy">FloviX</span>
+    </button>
+    
+    <button type="button" class="ma-guide-row" data-open="flovix" aria-haspopup="dialog">
+      <span>Keep prompt templates one keystroke away</span>
+      <span class="ma-guide-app"><img src="/images/logo-flovix.png" alt="" loading="lazy">FloviX</span>
+    </button>
+    
+    
+  </div>
+  
+  
+  
+  
+  <div class="ma-guide-group c-green">
+    <h4><span aria-hidden="true">📋</span>Clean copy &amp; paste</h4>
+    
+    
+    
+    <button type="button" class="ma-guide-row" data-open="pastezen" aria-haspopup="dialog">
+      <span>Paste text without fonts and colours</span>
+      <span class="ma-guide-app"><img src="/images/logo-pastezen.png" alt="" loading="lazy">PasteZen</span>
+    </button>
+    
+    <button type="button" class="ma-guide-row" data-open="pastezen" aria-haspopup="dialog">
+      <span>Strip utm_, fbclid, and gclid from links</span>
+      <span class="ma-guide-app"><img src="/images/logo-pastezen.png" alt="" loading="lazy">PasteZen</span>
+    </button>
+    
+    <button type="button" class="ma-guide-row" data-open="pastezen" aria-haspopup="dialog">
+      <span>Fix broken lines in text copied from PDFs</span>
+      <span class="ma-guide-app"><img src="/images/logo-pastezen.png" alt="" loading="lazy">PasteZen</span>
+    </button>
+    
+    <button type="button" class="ma-guide-row" data-open="pastezen" aria-haspopup="dialog">
+      <span>Hide API keys and card numbers before I paste</span>
+      <span class="ma-guide-app"><img src="/images/logo-pastezen.png" alt="" loading="lazy">PasteZen</span>
+    </button>
+    
+    
+  </div>
+  
+  
+  
+  
+  <div class="ma-guide-group c-orange">
+    <h4><span aria-hidden="true">✏️</span>Draw &amp; present on screen</h4>
+    
+    
+    
+    <button type="button" class="ma-guide-row" data-open="inkglass" aria-haspopup="dialog">
+      <span>Draw arrows and notes on my screen during a call</span>
+      <span class="ma-guide-app"><img src="/images/logo-inkglass.png" alt="" loading="lazy">Inkglass</span>
+    </button>
+    
+    <button type="button" class="ma-guide-row" data-open="inkglass" aria-haspopup="dialog">
+      <span>Mark up a design or a bug and copy it as one image</span>
+      <span class="ma-guide-app"><img src="/images/logo-inkglass.png" alt="" loading="lazy">Inkglass</span>
+    </button>
+    
+    <button type="button" class="ma-guide-row" data-open="inkglass" aria-haspopup="dialog">
+      <span>Highlight my cursor and zoom while presenting</span>
+      <span class="ma-guide-app"><img src="/images/logo-inkglass.png" alt="" loading="lazy">Inkglass</span>
+    </button>
+    
+    
+  </div>
+  
+  
+  
+  
+  <div class="ma-guide-group c-blue">
+    <h4><span aria-hidden="true">🔒</span>Mac security</h4>
+    
+    
+    
+    <button type="button" class="ma-guide-row" data-open="proximity-lock" aria-haspopup="dialog">
+      <span>Lock my Mac when I walk away with my iPhone</span>
+      <span class="ma-guide-app"><img src="/images/logo-proximity-lock.png" alt="" loading="lazy">Proximity Lock</span>
+    </button>
+    
+    <button type="button" class="ma-guide-row" data-open="proximity-lock" aria-haspopup="dialog">
+      <span>Get an alarm if someone unplugs or closes my Mac in a café</span>
+      <span class="ma-guide-app"><img src="/images/logo-proximity-lock.png" alt="" loading="lazy">Proximity Lock</span>
+    </button>
+    
+    
+  </div>
+  
+  
+  
+  
+  <div class="ma-guide-group c-pink">
+    <h4><span aria-hidden="true">✨</span>Make your Mac feel alive</h4>
+    
+    
+    
+    <button type="button" class="ma-guide-row" data-open="aurafold" aria-haspopup="dialog">
+      <span>See a light effect when I open or close my MacBook lid</span>
+      <span class="ma-guide-app"><img src="/images/logo-aurafold.png" alt="" loading="lazy">AuraFold</span>
+    </button>
+    
+    <button type="button" class="ma-guide-row" data-open="aurafold" aria-haspopup="dialog">
+      <span>Hear a soft sound and feel haptics when the lid moves</span>
+      <span class="ma-guide-app"><img src="/images/logo-aurafold.png" alt="" loading="lazy">AuraFold</span>
+    </button>
+    
+    <button type="button" class="ma-guide-row" data-open="aurafold" aria-haspopup="dialog">
+      <span>Show battery level as light when I plug in the charger</span>
+      <span class="ma-guide-app"><img src="/images/logo-aurafold.png" alt="" loading="lazy">AuraFold</span>
+    </button>
+    
+    <button type="button" class="ma-guide-row" data-open="aurafold" aria-haspopup="dialog">
+      <span>Check my lid angle from the menu bar</span>
+      <span class="ma-guide-app"><img src="/images/logo-aurafold.png" alt="" loading="lazy">AuraFold</span>
+    </button>
+    
+    
+  </div>
+  
+  
+  
+  
+  <div class="ma-guide-group c-cyan">
+    <h4><span aria-hidden="true">🛠</span>iOS developer tools</h4>
+    
+    
+    
+    <button type="button" class="ma-guide-row" data-open="ttbaseuikit" aria-haspopup="dialog">
+      <span>Build iOS screens fast with ready-made UIKit &amp; SwiftUI views</span>
+      <span class="ma-guide-app"><img src="/images/logo-ttbaseuikit.png" alt="" loading="lazy">TTBaseUIKit</span>
+    </button>
+    
+    
+    
+    
+    <button type="button" class="ma-guide-row" data-open="ttbdebugplus" aria-haspopup="dialog">
+      <span>Watch iOS logs and network requests live on my Mac</span>
+      <span class="ma-guide-app"><img src="/images/logo-ttbdebugplus.png" alt="" loading="lazy">TTBDebugPlus</span>
+    </button>
+    
+    <button type="button" class="ma-guide-row" data-open="ttbdebugplus" aria-haspopup="dialog">
+      <span>Export API calls to Postman or cURL</span>
+      <span class="ma-guide-app"><img src="/images/logo-ttbdebugplus.png" alt="" loading="lazy">TTBDebugPlus</span>
+    </button>
+    
+    
+    
+    
+    <button type="button" class="ma-guide-row" data-open="deep-link-tester" aria-haspopup="dialog">
+      <span>Test Universal Links, App Links, and URL schemes</span>
+      <span class="ma-guide-app"><i style="background: linear-gradient(135deg, #06b6d4, #0891b2);">🔗</i>Deep Link Tester</span>
+    </button>
+    
+    
+  </div>
+  
+  
+  
+  
+  <div class="ma-guide-group c-teal">
+    <h4><span aria-hidden="true">✈️</span>Travel</h4>
+    
+    
+    
+    <button type="button" class="ma-guide-row" data-open="12bay" aria-haspopup="dialog">
+      <span>Compare cheap flight prices in Vietnam</span>
+      <span class="ma-guide-app"><img src="/images/logo-12bay.png" alt="" loading="lazy">12Bay.vn</span>
+    </button>
+    
+    <button type="button" class="ma-guide-row" data-open="12bay" aria-haspopup="dialog">
+      <span>Pay for a ticket with a QR code</span>
+      <span class="ma-guide-app"><img src="/images/logo-12bay.png" alt="" loading="lazy">12Bay.vn</span>
+    </button>
+    
+    
+  </div>
+  
   
 </div>
 
+
+
+
+<dialog class="ma-dialog" id="ma-dlg-flovix" data-app="flovix" aria-labelledby="ma-dlg-title-flovix" style="--accent: #f59e0b;">
+  <header class="ma-dlg-head">
+    <div class="ma-icon"><img src="/images/logo-flovix.png" alt="" loading="lazy"></div>
+    <div>
+      <h3 id="ma-dlg-title-flovix">FloviX <span class="ma-badge c-orange">New Release</span></h3>
+      <p>Protect Your Flow — macOS Menu-Bar Guardian for AI Coding &amp; Health</p>
+    </div>
+    <button type="button" class="ma-close" data-close aria-label="Close">✕</button>
+  </header>
+  <div class="ma-dlg-body">
+    <p class="ma-usewhen"><span>Use it to</span>Restart stalled AI agents, and remember to take breaks.</p>
+    <div class="ma-shot"><img src="/images/myapps-flovix.webp" alt="FloviX — macOS Menu-Bar Guardian for AI Coding &amp; Developer Health" loading="lazy"></div>
+    <div class="ma-dlg-cols">
+      <div>
+        <p class="ma-kicker">About</p>
+        <div class="ma-dlg-desc">A privacy-first macOS menu-bar guardian designed for modern AI pair programming. FloviX watches <strong>Cursor, Windsurf, Claude Code, VS Code, iTerm2, and Docker</strong> in the background, automatically catches silent agent crashes, and heals them in seconds so you never lose your flow. Includes <strong>Health Guard</strong> for context-aware breaks, a <strong>desktop pet companion</strong>, and <strong>Focus Notes</strong> with dynamic variable substitution.</div>
+      </div>
+      <div>
+        
+        <p class="ma-kicker">Good for</p>
+        <ul class="ma-jobs"><li>Auto-retry my AI agent when it hits a rate limit</li><li>Get break reminders based on real work time</li><li>Keep prompt templates one keystroke away</li></ul>
+        
+        <p class="ma-kicker" style="margin-top: 16px;">Platforms & price</p>
+        <div class="ma-meta">
+          <span class="ma-chip">🖥 macOS</span>
+          <span class="ma-chip ma-chip--price">$6.99 once · free trial</span>
+          <span class="ma-chip">🤖 AI coding &amp; focus</span>
+        </div>
+      </div>
+    </div>
+    
+    <div>
+      <p class="ma-kicker">Key features</p>
+      <div class="ma-features">
+        <div class="ma-feature"><b>⚡ Auto-Heal AI Crashes</b>Detects rate limits, timeouts, and terminated agents across Cursor, Windsurf, and Claude Code — auto-retries in 2 seconds.</div><div class="ma-feature"><b>🛡️ Health Guard &amp; Smart Breaks</b>Context-aware break reminders counted from real work and AI activity — not arbitrary timers — with full-screen nudges.</div><div class="ma-feature"><b>🐾 Desktop Pet Companion</b>38 collectible companions that mirror your real-time workflow and remind you to stretch and rest.</div><div class="ma-feature"><b>📝 Focus Notes &amp; Templates</b>Keep reusable prompt templates one keystroke away with dynamic <code>{{variables}}</code> and iCloud sync.</div><div class="ma-feature"><b>🔊 Soundboard &amp; Monitor</b>Per-event audio feedback when AI tasks finish or error, plus a live AI Working activity monitor.</div><div class="ma-feature"><b>🔒 100% Privacy-First</b>Runs completely on-device. No accounts, no analytics, no cloud telemetry — key names only.</div>
+      </div>
+    </div>
+    
+    <div class="ma-tags"><span class="ma-badge c-blue">macOS</span><span class="ma-badge c-purple">AI</span><span class="ma-badge c-green">Productivity</span><span class="ma-badge c-purple">SwiftUI</span><span class="ma-badge c-cyan">Privacy</span><span class="ma-badge c-orange">Menu Bar</span></div>
+  </div>
+  <footer class="ma-dlg-foot">
+    <a class="ma-btn ma-btn--primary" href="https://flovix.tryapps.store/" target="_blank" rel="noopener">🌐 Visit FloviX Website</a><a class="ma-btn ma-btn--ghost" href="https://flovix.tryapps.store/#get" target="_blank" rel="noopener">⬇️ Download for macOS</a>
+  </footer>
+</dialog>
+
+
+<dialog class="ma-dialog" id="ma-dlg-pastezen" data-app="pastezen" aria-labelledby="ma-dlg-title-pastezen" style="--accent: #10b981;">
+  <header class="ma-dlg-head">
+    <div class="ma-icon"><img src="/images/logo-pastezen.png" alt="" loading="lazy"></div>
+    <div>
+      <h3 id="ma-dlg-title-pastezen">PasteZen <span class="ma-badge c-green">New</span></h3>
+      <p>Copy anything. Paste it clean.</p>
+    </div>
+    <button type="button" class="ma-close" data-close aria-label="Close">✕</button>
+  </header>
+  <div class="ma-dlg-body">
+    <p class="ma-usewhen"><span>Use it to</span>Paste clean text, without odd fonts, tracking links, or broken lines.</p>
+    <div class="ma-shot"><img src="/images/myapps-pastezen.webp" alt="PasteZen — the menu bar popover showing a cleaned clipboard" loading="lazy"></div>
+    <div class="ma-dlg-cols">
+      <div>
+        <p class="ma-kicker">About</p>
+        <div class="ma-dlg-desc">PasteZen lives in the menu bar and cleans what you copy <strong>at the moment you copy it</strong>. Fonts and colours are dropped, tracking parameters like <strong>utm_, fbclid, and gclid</strong> are removed from links, and broken PDF line breaks are joined again with Apple&rsquo;s own on-device language tools. Password managers are detected and left alone, and the original text is always one click away.</div>
+      </div>
+      <div>
+        
+        <p class="ma-kicker">Good for</p>
+        <ul class="ma-jobs"><li>Paste text without fonts and colours</li><li>Strip utm_, fbclid, and gclid from links</li><li>Fix broken lines in text copied from PDFs</li><li>Hide API keys and card numbers before I paste</li></ul>
+        
+        <p class="ma-kicker" style="margin-top: 16px;">Platforms & price</p>
+        <div class="ma-meta">
+          <span class="ma-chip">🖥 macOS</span>
+          <span class="ma-chip ma-chip--price">Free &#43; Pro upgrade</span>
+          <span class="ma-chip">📋 Clean copy &amp; paste</span>
+        </div>
+      </div>
+    </div>
+    
+    <div>
+      <p class="ma-kicker">Key features</p>
+      <div class="ma-features">
+        <div class="ma-feature"><b>🧼 Plain Text on Copy</b>Fonts, colours, and hidden formatting are removed before the text reaches your clipboard.</div><div class="ma-feature"><b>🔗 Clean Links (Pro)</b>Removes <code>utm_</code>, <code>fbclid</code>, <code>gclid</code>, and similar tracking parameters from every link you copy.</div><div class="ma-feature"><b>📄 PDF Line Repair (Pro)</b>Column breaks and hyphens are joined again on your Mac, using Apple&rsquo;s language tools.</div><div class="ma-feature"><b>🕶 Smart Redaction (Pro)</b>Masks 13 kinds of secrets, including API keys and card numbers, before you paste them.</div><div class="ma-feature"><b>↩️ One-Click Restore</b>The original text is kept, so you can get it back any time.</div><div class="ma-feature"><b>🔐 Per-App Rules</b>Password managers are recognised and never read.</div>
+      </div>
+    </div>
+    
+    <div class="ma-tags"><span class="ma-badge c-blue">macOS</span><span class="ma-badge c-orange">Menu Bar</span><span class="ma-badge c-green">Clipboard</span><span class="ma-badge c-cyan">Privacy</span><span class="ma-badge c-purple">Mac App Store</span></div>
+  </div>
+  <footer class="ma-dlg-foot">
+    <a class="ma-btn ma-btn--primary" href="https://apps.apple.com/us/app/pastezen/id6809315333" target="_blank" rel="noopener">Get on the Mac App Store</a><a class="ma-btn ma-btn--ghost" href="https://pastezen.tryapps.store/" target="_blank" rel="noopener">🌐 Visit Website</a>
+  </footer>
+</dialog>
+
+
+<dialog class="ma-dialog" id="ma-dlg-inkglass" data-app="inkglass" aria-labelledby="ma-dlg-title-inkglass" style="--accent: #f97316;">
+  <header class="ma-dlg-head">
+    <div class="ma-icon"><img src="/images/logo-inkglass.png" alt="" loading="lazy"></div>
+    <div>
+      <h3 id="ma-dlg-title-inkglass">Inkglass <span class="ma-badge c-orange">New</span></h3>
+      <p>Draw on your screen. Copy it instantly.</p>
+    </div>
+    <button type="button" class="ma-close" data-close aria-label="Close">✕</button>
+  </header>
+  <div class="ma-dlg-body">
+    <p class="ma-usewhen"><span>Use it to</span>Draw on your screen during calls, reviews, and bug reports.</p>
+    <div class="ma-shot"><img src="/images/myapps-inkglass.webp" alt="Inkglass — the black toolbar growing from a MacBook notch, with ink strokes drawn below" loading="lazy"></div>
+    <div class="ma-dlg-cols">
+      <div>
+        <p class="ma-kicker">About</p>
+        <div class="ma-dlg-desc">Inkglass turns your <strong>screen itself into the canvas</strong>. Press <strong>⌃⌥N</strong>, draw with pens, markers, arrows, shapes, and text, then press <strong>⌘C</strong> to copy your marks and everything beneath them as one image. There are no floating palettes — just one small black capsule near the notch. Great for video calls, design reviews, bug reports, and teaching.</div>
+      </div>
+      <div>
+        
+        <p class="ma-kicker">Good for</p>
+        <ul class="ma-jobs"><li>Draw arrows and notes on my screen during a call</li><li>Mark up a design or a bug and copy it as one image</li><li>Highlight my cursor and zoom while presenting</li></ul>
+        
+        <p class="ma-kicker" style="margin-top: 16px;">Platforms & price</p>
+        <div class="ma-meta">
+          <span class="ma-chip">🖥 macOS</span>
+          <span class="ma-chip ma-chip--price">Free &#43; Pro upgrade</span>
+          <span class="ma-chip">✏️ Draw &amp; present on screen</span>
+        </div>
+      </div>
+    </div>
+    
+    <div>
+      <p class="ma-kicker">Key features</p>
+      <div class="ma-features">
+        <div class="ma-feature"><b>⚡ Instant Overlay</b>One hotkey (⌃⌥N) and you draw straight on top of any app.</div><div class="ma-feature"><b>🖊 Drawing Tools</b>Pens, markers, highlighters, shapes, arrows, text notes, and an eraser.</div><div class="ma-feature"><b>📋 Copy as One Image</b>⌘C puts your marks and the screen below on the clipboard together.</div><div class="ma-feature"><b>🔢 Pro Annotations</b>Numbered steps, callouts, blur, and spotlight for clear walkthroughs.</div><div class="ma-feature"><b>🎤 Presentation Mode (Pro)</b>Cursor highlight, zoom, vanishing ink, and multi-display support.</div><div class="ma-feature"><b>⚫ Minimal by Design</b>A single black capsule toolbar — nothing else gets in your way.</div>
+      </div>
+    </div>
+    
+    <div class="ma-tags"><span class="ma-badge c-blue">macOS</span><span class="ma-badge c-orange">Menu Bar</span><span class="ma-badge c-purple">Annotation</span><span class="ma-badge c-cyan">Presenting</span><span class="ma-badge c-purple">Mac App Store</span></div>
+  </div>
+  <footer class="ma-dlg-foot">
+    <a class="ma-btn ma-btn--primary" href="https://apps.apple.com/us/app/inkglass-draw-on-screen/id6818015074" target="_blank" rel="noopener">Get on the Mac App Store</a><a class="ma-btn ma-btn--ghost" href="https://inkglass.tryapps.store/" target="_blank" rel="noopener">🌐 Visit Website</a>
+  </footer>
+</dialog>
+
+
+<dialog class="ma-dialog" id="ma-dlg-proximity-lock" data-app="proximity-lock" aria-labelledby="ma-dlg-title-proximity-lock" style="--accent: #3b82f6;">
+  <header class="ma-dlg-head">
+    <div class="ma-icon"><img src="/images/logo-proximity-lock.png" alt="" loading="lazy"></div>
+    <div>
+      <h3 id="ma-dlg-title-proximity-lock">Proximity Lock <span class="ma-badge c-purple">Featured</span></h3>
+      <p>Auto-Lock Your Mac with iPhone Proximity</p>
+    </div>
+    <button type="button" class="ma-close" data-close aria-label="Close">✕</button>
+  </header>
+  <div class="ma-dlg-body">
+    <p class="ma-usewhen"><span>Use it to</span>Lock your Mac when you walk away with your iPhone.</p>
+    <div class="ma-shot"><img src="/images/myapps-proximity-lock.png" alt="Proximity Lock — Walk away, Mac locks automatically" loading="lazy"></div>
+    <div class="ma-dlg-cols">
+      <div>
+        <p class="ma-kicker">About</p>
+        <div class="ma-dlg-desc">Your iPhone becomes a <strong>Bluetooth security key</strong> — walk away and your Mac locks itself automatically. No account, no cloud, no configuration. Just scan a QR code and you&rsquo;re protected in 30 seconds.</div>
+      </div>
+      <div>
+        
+        <p class="ma-kicker">Good for</p>
+        <ul class="ma-jobs"><li>Lock my Mac when I walk away with my iPhone</li><li>Get an alarm if someone unplugs or closes my Mac in a café</li></ul>
+        
+        <p class="ma-kicker" style="margin-top: 16px;">Platforms & price</p>
+        <div class="ma-meta">
+          <span class="ma-chip">🖥 macOS</span><span class="ma-chip">📱 iOS</span><span class="ma-chip">⌚ watchOS</span>
+          <span class="ma-chip ma-chip--price">Free trial</span>
+          <span class="ma-chip">🔒 Mac security</span>
+        </div>
+      </div>
+    </div>
+    
+    <div>
+      <p class="ma-kicker">Key features</p>
+      <div class="ma-features">
+        <div class="ma-feature"><b>🚶 Auto-Lock</b>Walk away → Mac locks. Smart signal filter ignores brief interference.</div><div class="ma-feature"><b>☕ Café Mode</b>Anti-theft alarm on charger removal, lid close, or screen tampering.</div><div class="ma-feature"><b>📱 Remote Control</b>Lock, sleep, check battery and view logs — all from your iPhone.</div><div class="ma-feature"><b>⌚ Apple Watch</b>Quick security controls right on your wrist.</div>
+      </div>
+    </div>
+    
+    <div class="ma-tags"><span class="ma-badge c-blue">macOS</span><span class="ma-badge c-blue">iOS</span><span class="ma-badge c-cyan">Bluetooth</span><span class="ma-badge c-green">Security</span><span class="ma-badge c-purple">SwiftUI</span><span class="ma-badge c-orange">Apple Watch</span></div>
+  </div>
+  <footer class="ma-dlg-foot">
+    <a class="ma-btn ma-btn--primary" href="https://tqtuan1201.github.io/public/apps/proximity/" target="_blank" rel="noopener">🌐 Visit Website</a><a class="ma-btn ma-btn--ghost" href="https://tqtuan1201.github.io/public/apps/proximity/#pricing" target="_blank" rel="noopener">⬇️ Download Free Trial</a>
+  </footer>
+</dialog>
+
+
+<dialog class="ma-dialog" id="ma-dlg-aurafold" data-app="aurafold" aria-labelledby="ma-dlg-title-aurafold" style="--accent: #ec4899;">
+  <header class="ma-dlg-head">
+    <div class="ma-icon"><img src="/images/logo-aurafold.png" alt="" loading="lazy"></div>
+    <div>
+      <h3 id="ma-dlg-title-aurafold">AuraFold <span class="ma-badge c-pink">New</span></h3>
+      <p>Fold the lid. The screen folds too.</p>
+    </div>
+    <button type="button" class="ma-close" data-close aria-label="Close">✕</button>
+  </header>
+  <div class="ma-dlg-body">
+    <p class="ma-usewhen"><span>Use it to</span>Add light, sound, and haptics when you open or close your MacBook.</p>
+    <div class="ma-shot"><img src="/images/myapps-aurafold.webp" alt="AuraFold — a laptop lid folding with a line of light along the hinge" loading="lazy"></div>
+    <div class="ma-dlg-cols">
+      <div>
+        <p class="ma-kicker">About</p>
+        <div class="ma-dlg-desc">AuraFold gives your MacBook <strong>a physical feel</strong>. The display reacts to the <strong>real lid angle</strong>, mechanical sounds play in six materials with matching trackpad haptics, a ring of light runs around the screen edge when you plug in the charger, and the screen wakes with a soft bloom of light. It stays light on your system and runs from the menu bar.</div>
+      </div>
+      <div>
+        
+        <p class="ma-kicker">Good for</p>
+        <ul class="ma-jobs"><li>See a light effect when I open or close my MacBook lid</li><li>Hear a soft sound and feel haptics when the lid moves</li><li>Show battery level as light when I plug in the charger</li><li>Check my lid angle from the menu bar</li></ul>
+        
+        <p class="ma-kicker" style="margin-top: 16px;">Platforms & price</p>
+        <div class="ma-meta">
+          <span class="ma-chip">🖥 macOS</span>
+          <span class="ma-chip ma-chip--price">Free &#43; Pro upgrade</span>
+          <span class="ma-chip">✨ Make your Mac feel alive</span>
+        </div>
+      </div>
+    </div>
+    
+    <div>
+      <p class="ma-kicker">Key features</p>
+      <div class="ma-features">
+        <div class="ma-feature"><b>🪗 Living Hinge</b>The screen reacts to the real lid angle, in eight styles with matching sounds.</div><div class="ma-feature"><b>📐 Lid Insights</b>Shows the lid angle in the menu bar and tracks how you use your lid.</div><div class="ma-feature"><b>🔊 Sound Studio</b>Mechanical sounds in six materials — Titanium, Walnut, Glass, Paper, Ceramic, Brass — plus haptics.</div><div class="ma-feature"><b>🌈 Liquid Light</b>Light flows around the screen edge when the charger connects, coloured by battery level.</div><div class="ma-feature"><b>🌸 Wake Bloom</b>Open the lid or unlock, and the screen wakes with a bloom of light in eight styles.</div><div class="ma-feature"><b>🔌 Port &amp; Power Care</b>Gentle light and notifications when a port or power connection has a problem.</div>
+      </div>
+    </div>
+    
+    <div class="ma-tags"><span class="ma-badge c-blue">macOS</span><span class="ma-badge c-orange">Menu Bar</span><span class="ma-badge c-pink">Ambient</span><span class="ma-badge c-purple">Haptics</span><span class="ma-badge c-purple">Mac App Store</span></div>
+  </div>
+  <footer class="ma-dlg-foot">
+    <a class="ma-btn ma-btn--primary" href="https://apps.apple.com/app/aurafold/id6738291847" target="_blank" rel="noopener">Get on the Mac App Store</a><a class="ma-btn ma-btn--ghost" href="https://aurafold.tryapps.store/" target="_blank" rel="noopener">🌐 Try the Browser Demo</a>
+  </footer>
+</dialog>
+
+
+<dialog class="ma-dialog" id="ma-dlg-ttbaseuikit" data-app="ttbaseuikit" aria-labelledby="ma-dlg-title-ttbaseuikit" style="--accent: #8b5cf6;">
+  <header class="ma-dlg-head">
+    <div class="ma-icon"><img src="/images/logo-ttbaseuikit.png" alt="" loading="lazy"></div>
+    <div>
+      <h3 id="ma-dlg-title-ttbaseuikit">TTBaseUIKit <span class="ma-badge c-cyan">Open Source</span></h3>
+      <p>Build iOS Apps Faster — 100&#43; Production-Ready Components</p>
+    </div>
+    <button type="button" class="ma-close" data-close aria-label="Close">✕</button>
+  </header>
+  <div class="ma-dlg-body">
+    <p class="ma-usewhen"><span>Use it to</span>Build iOS screens fast with ready-made UIKit and SwiftUI views.</p>
+    <div class="ma-shot"><img src="/images/myapps-ttbaseuikit.png" alt="TTBaseUIKit — Build iOS Apps Faster" loading="lazy"></div>
+    <div class="ma-dlg-cols">
+      <div>
+        <p class="ma-kicker">About</p>
+        <div class="ma-dlg-desc">An ultra-modern enterprise foundation providing <strong>100+ production-ready base views</strong> for both UIKit and SwiftUI. Pre-built components eliminate boilerplate — build production UI in hours, not days.</div>
+      </div>
+      <div>
+        
+        <p class="ma-kicker">Good for</p>
+        <ul class="ma-jobs"><li>Build iOS screens fast with ready-made UIKit &amp; SwiftUI views</li></ul>
+        
+        <p class="ma-kicker" style="margin-top: 16px;">Platforms & price</p>
+        <div class="ma-meta">
+          <span class="ma-chip">📱 iOS</span>
+          <span class="ma-chip ma-chip--price">Free, open source</span>
+          <span class="ma-chip">🛠 iOS developer tools</span>
+        </div>
+      </div>
+    </div>
+    
+    <div>
+      <p class="ma-kicker">Key features</p>
+      <div class="ma-features">
+        <div class="ma-feature"><b>🧱 72&#43; UIKit Components</b>BaseUIView, BaseUILabel, ViewCodable, Coordinators, Auto Layout helpers, and more.</div><div class="ma-feature"><b>🎨 51&#43; SwiftUI Views</b>BaseSUIView, view modifiers, shimmer animations, button styles — iOS 14+.</div><div class="ma-feature"><b>🤖 17 AI Agent Skills</b>Pre-configured for Copilot, Claude Code, Xcode Agent, Codex, and Gemini.</div><div class="ma-feature"><b>🛠 Debug Kit</b>Built-in layout inspector, API response viewer, screen capture tools.</div>
+      </div>
+    </div>
+    
+    <div class="ma-tags"><span class="ma-badge c-blue">iOS</span><span class="ma-badge c-orange">Swift</span><span class="ma-badge c-purple">UIKit</span><span class="ma-badge c-cyan">SwiftUI</span><span class="ma-badge c-green">SwiftPM</span><span class="ma-badge c-green">Open Source</span></div>
+  </div>
+  <footer class="ma-dlg-foot">
+    <a class="ma-btn ma-btn--primary" href="https://tqtuan1201.github.io/public/docs/ttbaseuikit/" target="_blank" rel="noopener">📖 View Documentation</a><a class="ma-btn ma-btn--ghost" href="https://github.com/tqtuan1201/TTBaseUIKit" target="_blank" rel="noopener">⭐ GitHub</a>
+  </footer>
+</dialog>
+
+
+<dialog class="ma-dialog" id="ma-dlg-ttbdebugplus" data-app="ttbdebugplus" aria-labelledby="ma-dlg-title-ttbdebugplus" style="--accent: #06b6d4;">
+  <header class="ma-dlg-head">
+    <div class="ma-icon"><img src="/images/logo-ttbdebugplus.png" alt="" loading="lazy"></div>
+    <div>
+      <h3 id="ma-dlg-title-ttbdebugplus">TTBDebugPlus <span class="ma-badge c-cyan">Open Source</span></h3>
+      <p>macOS Companion Debugger for iOS Apps</p>
+    </div>
+    <button type="button" class="ma-close" data-close aria-label="Close">✕</button>
+  </header>
+  <div class="ma-dlg-body">
+    <p class="ma-usewhen"><span>Use it to</span>See your iOS app&#39;s logs and network calls live on your Mac.</p>
+    <div class="ma-shot"><img src="/images/myapps-ttbdebugplus.png" alt="TTBDebugPlus — macOS Companion Debugger for iOS Apps" loading="lazy"></div>
+    <div class="ma-dlg-cols">
+      <div>
+        <p class="ma-kicker">About</p>
+        <div class="ma-dlg-desc">A professional-grade macOS companion app for debugging iOS applications in <strong>real-time</strong>. View logs, inspect network requests, export to Postman, analyze API performance, and manage debug sessions — all from your Mac. Zero-config discovery via Bonjour, connects in under 2 seconds.</div>
+      </div>
+      <div>
+        
+        <p class="ma-kicker">Good for</p>
+        <ul class="ma-jobs"><li>Watch iOS logs and network requests live on my Mac</li><li>Export API calls to Postman or cURL</li></ul>
+        
+        <p class="ma-kicker" style="margin-top: 16px;">Platforms & price</p>
+        <div class="ma-meta">
+          <span class="ma-chip">🖥 macOS</span>
+          <span class="ma-chip ma-chip--price">Free, open source</span>
+          <span class="ma-chip">🛠 iOS developer tools</span>
+        </div>
+      </div>
+    </div>
+    
+    <div>
+      <p class="ma-kicker">Key features</p>
+      <div class="ma-features">
+        <div class="ma-feature"><b>📋 Live Console</b>Filter by level (Error/Warning/Info/Debug), full-text search, JSON expand, auto-scroll LIVE mode.</div><div class="ma-feature"><b>🌐 Network Inspector</b>JSON Tree Viewer, deep search, pin/bookmark requests, waterfall timing, export as cURL or Postman.</div><div class="ma-feature"><b>📱 Device Control</b>Remote screenshot capture, toggle Dark Mode, app lifecycle management, accessibility overrides.</div><div class="ma-feature"><b>📊 Performance Monitor</b>CPU &amp; Memory charts, FPS counter, network bandwidth, slow request &amp; duplicate detection.</div><div class="ma-feature"><b>🐛 Feedback Reporter</b>Structured bug reports with auto-tags (UI/UX, Network, Crash), annotated screenshots, Markdown export.</div><div class="ma-feature"><b>📤 Export &amp; Share</b>Postman Collection v2.1, cURL replay, .ttbdebug session files — share debug sessions across teams.</div>
+      </div>
+    </div>
+    
+    <div class="ma-tags"><span class="ma-badge c-blue">macOS</span><span class="ma-badge c-purple">SwiftUI</span><span class="ma-badge c-cyan">Bonjour</span><span class="ma-badge c-orange">WebSocket</span><span class="ma-badge c-green">Open Source</span><span class="ma-badge c-green">Free</span></div>
+  </div>
+  <footer class="ma-dlg-foot">
+    <a class="ma-btn ma-btn--primary" href="https://tqtuan1201.github.io/public/docs/ttbaseuikit/ttbdebugplus.html" target="_blank" rel="noopener">📖 View Documentation</a><a class="ma-btn ma-btn--ghost" href="https://github.com/tqtuan1201/TTBDebugPlus" target="_blank" rel="noopener">⭐ GitHub</a><a class="ma-btn ma-btn--ghost" href="https://tqtuan1201.github.io/public/docs/ttbaseuikit/apps/TTBDebugPlus-Installer.dmg" target="_blank" rel="noopener">⬇️ Download .dmg</a>
+  </footer>
+</dialog>
+
+
+<dialog class="ma-dialog" id="ma-dlg-deep-link-tester" data-app="deep-link-tester" aria-labelledby="ma-dlg-title-deep-link-tester" style="--accent: #14b8a6;">
+  <header class="ma-dlg-head">
+    <div class="ma-icon" style="background: linear-gradient(135deg, #06b6d4, #0891b2);">🔗</div>
+    <div>
+      <h3 id="ma-dlg-title-deep-link-tester">Deep Link Tester <span class="ma-badge c-orange">Free Tool</span></h3>
+      <p>Test Universal Links, App Links &amp; Custom URL Schemes</p>
+    </div>
+    <button type="button" class="ma-close" data-close aria-label="Close">✕</button>
+  </header>
+  <div class="ma-dlg-body">
+    <p class="ma-usewhen"><span>Use it to</span>Find out why a Universal Link or App Link won&#39;t open your app.</p>
+    <div class="ma-shot"><img src="/images/myapps-deep-link-tester.png" alt="Deep Link Tester — Test Universal Links &amp; App Links" loading="lazy"></div>
+    <div class="ma-dlg-cols">
+      <div>
+        <p class="ma-kicker">About</p>
+        <div class="ma-dlg-desc">A free, configurable deep link testing tool for mobile developers. Build and test <strong>Universal Links</strong> (iOS), <strong>App Links</strong> (Android), and <strong>Custom URL Schemes</strong> with configurable parameters — all from your browser.</div>
+      </div>
+      <div>
+        
+        <p class="ma-kicker">Good for</p>
+        <ul class="ma-jobs"><li>Test Universal Links, App Links, and URL schemes</li></ul>
+        
+        <p class="ma-kicker" style="margin-top: 16px;">Platforms & price</p>
+        <div class="ma-meta">
+          <span class="ma-chip">🌐 Web</span>
+          <span class="ma-chip ma-chip--price">Free</span>
+          <span class="ma-chip">🛠 iOS developer tools</span>
+        </div>
+      </div>
+    </div>
+    
+    <div>
+      <p class="ma-kicker">Key features</p>
+      <div class="ma-features">
+        <div class="ma-feature"><b>🔧 Link Builder</b>Configure scheme, host, path, and query params with live preview.</div><div class="ma-feature"><b>🌐 Site Checker</b>Validate <code>apple-app-site-association</code> and <code>assetlinks.json</code> files.</div><div class="ma-feature"><b>📱 QR Code</b>Scan generated QR code to test links instantly on your device.</div><div class="ma-feature"><b>💾 App Presets</b>Save and reuse configurations for different apps and environments.</div>
+      </div>
+    </div>
+    
+    <div class="ma-tags"><span class="ma-badge c-purple">Web Tool</span><span class="ma-badge c-blue">iOS</span><span class="ma-badge c-green">Android</span><span class="ma-badge c-cyan">Universal Links</span><span class="ma-badge c-orange">Free &amp; Open Source</span></div>
+  </div>
+  <footer class="ma-dlg-foot">
+    <a class="ma-btn ma-btn--primary" href="https://tqtuan1201.github.io/public/apps/applink/" target="_blank" rel="noopener">🚀 Open Tool</a>
+  </footer>
+</dialog>
+
+
+<dialog class="ma-dialog" id="ma-dlg-12bay" data-app="12bay" aria-labelledby="ma-dlg-title-12bay" style="--accent: #0ea5e9;">
+  <header class="ma-dlg-head">
+    <div class="ma-icon"><img src="/images/logo-12bay.png" alt="" loading="lazy"></div>
+    <div>
+      <h3 id="ma-dlg-title-12bay">12Bay.vn <span class="ma-badge c-green">Live</span></h3>
+      <p>Săn Vé Máy Bay Giá Rẻ — Cheap Flight Booking</p>
+    </div>
+    <button type="button" class="ma-close" data-close aria-label="Close">✕</button>
+  </header>
+  <div class="ma-dlg-body">
+    <p class="ma-usewhen"><span>Use it to</span>Find and book cheap flights, then pay with a QR code.</p>
+    <div class="ma-shot"><img src="/images/12bay-appstore.jpeg" alt="12Bay.vn — Săn Vé Máy Bay Giá Rẻ" loading="lazy"></div>
+    <div class="ma-dlg-cols">
+      <div>
+        <p class="ma-kicker">About</p>
+        <div class="ma-dlg-desc">A flight booking app for the Vietnamese market — search, compare, and book <strong>domestic &amp; international flights</strong> at the best prices. Built with <strong>TTBaseUIKit</strong>, serving users across Vietnam with real-time pricing, QR payment, and flight status tracking.</div>
+      </div>
+      <div>
+        
+        <p class="ma-kicker">Good for</p>
+        <ul class="ma-jobs"><li>Compare cheap flight prices in Vietnam</li><li>Pay for a ticket with a QR code</li></ul>
+        
+        <p class="ma-kicker" style="margin-top: 16px;">Platforms & price</p>
+        <div class="ma-meta">
+          <span class="ma-chip">📱 iOS</span><span class="ma-chip">⌚ watchOS</span>
+          <span class="ma-chip ma-chip--price">Free</span>
+          <span class="ma-chip">✈️ Travel</span>
+        </div>
+      </div>
+    </div>
+    
+    <div>
+      <p class="ma-kicker">Key features</p>
+      <div class="ma-features">
+        <div class="ma-feature"><b>🔍 Smart Search</b>Compare prices across Vietnam Airlines, VietJet, Bamboo Airways and more — find the cheapest fares instantly.</div><div class="ma-feature"><b>💳 QR Payment</b>One-scan checkout — no manual bank transfers. Supports all popular Vietnamese payment methods.</div><div class="ma-feature"><b>🛫 Flight Boarding</b>Real-time flight status, boarding gate info, and departure updates — all in one tap.</div><div class="ma-feature"><b>⌚ Apple Watch</b>Check flight info and booking details right from your wrist.</div>
+      </div>
+    </div>
+    
+    <div class="ma-tags"><span class="ma-badge c-blue">iOS</span><span class="ma-badge c-orange">Swift</span><span class="ma-badge c-purple">UIKit</span><span class="ma-badge c-cyan">Apple Watch</span><span class="ma-badge c-green">Travel</span><span class="ma-badge c-green">4.6 ★</span></div>
+  </div>
+  <footer class="ma-dlg-foot">
+    <a class="ma-btn ma-btn--primary" href="https://apps.apple.com/us/app/s%C4%83n-v%C3%A9-m%C3%A1y-bay-gi%C3%A1-r%E1%BA%BB-12bay-vn/id1191396802" target="_blank" rel="noopener">📱 App Store</a><a class="ma-btn ma-btn--ghost" href="https://12bay.vn/" target="_blank" rel="noopener">🌐 Visit Website</a>
+  </footer>
+</dialog>
+
+
+
+<div class="ma-collab">
+  <div>
+    <h4>📩 Have an idea or want to work together?</h4>
+    <p>I'm always open to new indie app ideas, framework contributions, and partnerships.</p>
+  </div>
+  <a href="#contact" class="ma-btn ma-btn--primary">Let's connect →</a>
 </div>
 
+</div>
+<div id="contact"></div>
 
 <script>
 (function () {
-  var buttons = document.querySelectorAll('.myapp-filter-btn');
-  var cards = document.querySelectorAll('.myapp-card');
-  buttons.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      buttons.forEach(function (b) { b.classList.remove('active'); });
-      btn.classList.add('active');
-      var filter = btn.getAttribute('data-filter');
-      cards.forEach(function (card) {
-        var platforms = (card.getAttribute('data-platforms') || '').split(' ');
-        var show = filter === 'all' || platforms.indexOf(filter) !== -1;
-        card.classList.toggle('is-hidden', !show);
-      });
+  var root = document.getElementById('ma');
+  if (!root) return;
+  var cards = [].slice.call(root.querySelectorAll('.ma-card'));
+  var needs = [].slice.call(root.querySelectorAll('.ma-need'));
+  var plats = [].slice.call(root.querySelectorAll('[data-platform]'));
+  var q = document.getElementById('ma-q');
+  var countEl = document.getElementById('ma-count');
+  var resetBtn = document.getElementById('ma-reset');
+  var empty = document.getElementById('ma-empty');
+  var toolbar = document.getElementById('ma-toolbar');
+  var total = cards.length;
+  var state = { cat: 'all', platform: 'all', q: '' };
+
+  function apply() {
+    var terms = state.q.toLowerCase().split(/\s+/).filter(Boolean);
+    var shown = 0;
+    cards.forEach(function (card) {
+      var hay = card.getAttribute('data-search') || '';
+      var ok = (state.cat === 'all' || card.getAttribute('data-cat') === state.cat) &&
+        (state.platform === 'all' || (' ' + card.getAttribute('data-platforms') + ' ').indexOf(' ' + state.platform + ' ') !== -1) &&
+        terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      card.hidden = !ok;
+      if (ok) shown++;
+    });
+    needs.forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-cat') === state.cat)); });
+    plats.forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-platform') === state.platform)); });
+    var filtered = state.cat !== 'all' || state.platform !== 'all' || terms.length;
+    countEl.textContent = filtered ? 'Showing ' + shown + ' of ' + total + ' apps' : 'Showing all ' + total + ' apps';
+    resetBtn.hidden = !filtered;
+    empty.hidden = shown !== 0;
+  }
+
+  function reset() {
+    state = { cat: 'all', platform: 'all', q: '' };
+    q.value = '';
+    apply();
+  }
+
+  function setCat(cat) {
+    state.cat = state.cat === cat ? 'all' : cat;
+    apply();
+    var r = toolbar.getBoundingClientRect();
+    if (r.top > window.innerHeight * 0.6 || r.top < 0) toolbar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  needs.forEach(function (b) { b.addEventListener('click', function () { setCat(b.getAttribute('data-cat')); }); });
+  cards.forEach(function (card) {
+    card.addEventListener('click', function (e) {
+      if (e.target.closest('a, button')) return;
+      openApp(card.id);
     });
   });
+  plats.forEach(function (b) { b.addEventListener('click', function () { state.platform = b.getAttribute('data-platform'); apply(); }); });
+  q.addEventListener('input', function () { state.q = q.value; apply(); });
+  resetBtn.addEventListener('click', reset);
+  root.querySelectorAll('[data-reset]').forEach(function (b) { b.addEventListener('click', reset); });
+
+  
+  function openApp(id, push) {
+    var dlg = document.getElementById('ma-dlg-' + id);
+    if (!dlg) return false;
+    if (typeof dlg.showModal !== 'function') {
+      var card = document.getElementById(id);
+      if (card) card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return true;
+    }
+    if (!dlg.open) dlg.showModal();
+    if (push !== false && location.hash !== '#' + id) history.replaceState(null, '', '#' + id);
+    return true;
+  }
+  root.querySelectorAll('[data-open]').forEach(function (b) {
+    b.addEventListener('click', function () { openApp(b.getAttribute('data-open')); });
+  });
+  root.querySelectorAll('.ma-dialog').forEach(function (dlg) {
+    dlg.querySelector('[data-close]').addEventListener('click', function () { dlg.close(); });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+    dlg.addEventListener('close', function () {
+      var id = dlg.getAttribute('data-app');
+      if (location.hash === '#' + id) history.replaceState(null, '', location.pathname + location.search);
+      var card = document.getElementById(id);
+      if (card && !card.hidden) {
+        card.classList.remove('is-flash'); void card.offsetWidth; card.classList.add('is-flash');
+      }
+    });
+  });
+
+  function fromHash() {
+    var id = decodeURIComponent(location.hash.slice(1));
+    if (id) openApp(id, false);
+  }
+  window.addEventListener('hashchange', fromHash);
+  fromHash();
+  apply();
 })();
 </script>
-
-
-
-
-<hr class="app-divider" style="margin-top: 10px;">
-
-
-<div class="app-card">
-
-<div class="app-header">
-  
-  <span class="app-emoji"><img src="/images/logo-flovix.png" alt="FloviX logo" loading="lazy"></span>
-  
-  <div>
-    <h3 id="flovix">FloviX</h3>
-    <small>Protect Your Flow — macOS Menu-Bar Guardian for AI Coding &amp; Health</small>
-  </div>
-</div>
-
-<div class="app-badges-row">
-  <span class="app-badge badge-blue">macOS</span><span class="app-badge badge-purple">AI</span><span class="app-badge badge-green">Productivity</span><span class="app-badge badge-purple">SwiftUI</span><span class="app-badge badge-cyan">Privacy</span><span class="app-badge badge-orange">Menu Bar</span>
-</div>
-
-<div class="app-description">
-  A privacy-first macOS menu-bar guardian designed for modern AI pair programming. FloviX watches <strong>Cursor, Windsurf, Claude Code, VS Code, iTerm2, and Docker</strong> in the background, automatically catches silent agent crashes, and heals them in seconds so you never lose your flow. Includes <strong>Health Guard</strong> for context-aware breaks, a <strong>desktop pet companion</strong>, and <strong>Focus Notes</strong> with dynamic variable substitution.
-</div>
-
-<div class="feature-grid">
-  
-  <div class="feature-item">
-    <strong>⚡ Auto-Heal AI Crashes</strong>
-    Detects rate limits, timeouts, and terminated agents across Cursor, Windsurf, and Claude Code — auto-retries in 2 seconds.
-  </div>
-  
-  <div class="feature-item">
-    <strong>🛡️ Health Guard &amp; Smart Breaks</strong>
-    Context-aware break reminders counted from real work and AI activity — not arbitrary timers — with full-screen nudges.
-  </div>
-  
-  <div class="feature-item">
-    <strong>🐾 Desktop Pet Companion</strong>
-    38 collectible companions that mirror your real-time workflow and remind you to stretch and rest.
-  </div>
-  
-  <div class="feature-item">
-    <strong>📝 Focus Notes &amp; Templates</strong>
-    Keep reusable prompt templates one keystroke away with dynamic <code>{{variables}}</code> and iCloud sync.
-  </div>
-  
-  <div class="feature-item">
-    <strong>🔊 Soundboard &amp; Monitor</strong>
-    Per-event audio feedback when AI tasks finish or error, plus a live AI Working activity monitor.
-  </div>
-  
-  <div class="feature-item">
-    <strong>🔒 100% Privacy-First</strong>
-    Runs completely on-device. No accounts, no analytics, no cloud telemetry — key names only.
-  </div>
-  
-</div>
-
-
-<div class="app-screenshot-frame">
-  <div class="app-screenshot-bar">
-    <span class="app-screenshot-dot"></span>
-    <span class="app-screenshot-dot"></span>
-    <span class="app-screenshot-dot"></span>
-    <span class="app-screenshot-title">FloviX Preview</span>
-  </div>
-  <div class="app-screenshot-content">
-    <img src="/images/myapps-flovix.webp" alt="FloviX — macOS Menu-Bar Guardian for AI Coding &amp; Developer Health" loading="lazy">
-  </div>
-</div>
-
-
-<div class="app-ctas">
-  <a href="https://flovix.tryapps.store/" target="_blank" rel="noopener" class="app-cta cta-primary">🌐 Visit FloviX Website</a><a href="https://flovix.tryapps.store/#get" target="_blank" rel="noopener" class="app-cta cta-secondary">⬇️ Download for macOS</a>
-</div>
-
-</div>
-
-
-<hr class="app-divider">
-
-
-<div class="app-card">
-
-<div class="app-header">
-  
-  <span class="app-emoji"><img src="/images/logo-12bay.png" alt="12Bay.vn logo" loading="lazy"></span>
-  
-  <div>
-    <h3 id="12bay">12Bay.vn</h3>
-    <small>Săn Vé Máy Bay Giá Rẻ — Cheap Flight Booking</small>
-  </div>
-</div>
-
-<div class="app-badges-row">
-  <span class="app-badge badge-blue">iOS</span><span class="app-badge badge-orange">Swift</span><span class="app-badge badge-purple">UIKit</span><span class="app-badge badge-cyan">Apple Watch</span><span class="app-badge badge-green">Travel</span><span class="app-badge badge-green">4.6 ★</span>
-</div>
-
-<div class="app-description">
-  A flight booking app for the Vietnamese market — search, compare, and book <strong>domestic &amp; international flights</strong> at the best prices. Built with <strong>TTBaseUIKit</strong>, serving users across Vietnam with real-time pricing, QR payment, and flight status tracking.
-</div>
-
-<div class="feature-grid">
-  
-  <div class="feature-item">
-    <strong>🔍 Smart Search</strong>
-    Compare prices across Vietnam Airlines, VietJet, Bamboo Airways and more — find the cheapest fares instantly.
-  </div>
-  
-  <div class="feature-item">
-    <strong>💳 QR Payment</strong>
-    One-scan checkout — no manual bank transfers. Supports all popular Vietnamese payment methods.
-  </div>
-  
-  <div class="feature-item">
-    <strong>🛫 Flight Boarding</strong>
-    Real-time flight status, boarding gate info, and departure updates — all in one tap.
-  </div>
-  
-  <div class="feature-item">
-    <strong>⌚ Apple Watch</strong>
-    Check flight info and booking details right from your wrist.
-  </div>
-  
-</div>
-
-
-<div class="app-screenshot-frame">
-  <div class="app-screenshot-bar">
-    <span class="app-screenshot-dot"></span>
-    <span class="app-screenshot-dot"></span>
-    <span class="app-screenshot-dot"></span>
-    <span class="app-screenshot-title">12Bay.vn Preview</span>
-  </div>
-  <div class="app-screenshot-content">
-    <img src="/images/12bay-appstore.jpeg" alt="12Bay.vn — Săn Vé Máy Bay Giá Rẻ" loading="lazy">
-  </div>
-</div>
-
-
-<div class="app-ctas">
-  <a href="https://apps.apple.com/us/app/s%C4%83n-v%C3%A9-m%C3%A1y-bay-gi%C3%A1-r%E1%BA%BB-12bay-vn/id1191396802" target="_blank" rel="noopener" class="app-cta cta-primary">📱 App Store</a><a href="https://12bay.vn/" target="_blank" rel="noopener" class="app-cta cta-secondary">🌐 Visit Website</a>
-</div>
-
-</div>
-
-
-<hr class="app-divider">
-
-
-<div class="app-card">
-
-<div class="app-header">
-  
-  <span class="app-emoji"><img src="/images/logo-proximity-lock.png" alt="Proximity Lock logo" loading="lazy"></span>
-  
-  <div>
-    <h3 id="proximity-lock">Proximity Lock</h3>
-    <small>Auto-Lock Your Mac with iPhone Proximity</small>
-  </div>
-</div>
-
-<div class="app-badges-row">
-  <span class="app-badge badge-blue">macOS</span><span class="app-badge badge-blue">iOS</span><span class="app-badge badge-cyan">Bluetooth</span><span class="app-badge badge-green">Security</span><span class="app-badge badge-purple">SwiftUI</span><span class="app-badge badge-orange">Apple Watch</span>
-</div>
-
-<div class="app-description">
-  Your iPhone becomes a <strong>Bluetooth security key</strong> — walk away and your Mac locks itself automatically. No account, no cloud, no configuration. Just scan a QR code and you&rsquo;re protected in 30 seconds.
-</div>
-
-<div class="feature-grid">
-  
-  <div class="feature-item">
-    <strong>🚶 Auto-Lock</strong>
-    Walk away → Mac locks. Smart signal filter ignores brief interference.
-  </div>
-  
-  <div class="feature-item">
-    <strong>☕ Café Mode</strong>
-    Anti-theft alarm on charger removal, lid close, or screen tampering.
-  </div>
-  
-  <div class="feature-item">
-    <strong>📱 Remote Control</strong>
-    Lock, sleep, check battery and view logs — all from your iPhone.
-  </div>
-  
-  <div class="feature-item">
-    <strong>⌚ Apple Watch</strong>
-    Quick security controls right on your wrist.
-  </div>
-  
-</div>
-
-
-<div class="app-screenshot-frame">
-  <div class="app-screenshot-bar">
-    <span class="app-screenshot-dot"></span>
-    <span class="app-screenshot-dot"></span>
-    <span class="app-screenshot-dot"></span>
-    <span class="app-screenshot-title">Proximity Lock Preview</span>
-  </div>
-  <div class="app-screenshot-content">
-    <img src="/images/myapps-proximity-lock.png" alt="Proximity Lock — Walk away, Mac locks automatically" loading="lazy">
-  </div>
-</div>
-
-
-<div class="app-ctas">
-  <a href="https://tqtuan1201.github.io/public/apps/proximity/" target="_blank" rel="noopener" class="app-cta cta-primary">🌐 Visit Website</a><a href="https://tqtuan1201.github.io/public/apps/proximity/#pricing" target="_blank" rel="noopener" class="app-cta cta-secondary">⬇️ Download Free Trial</a>
-</div>
-
-</div>
-
-
-<hr class="app-divider">
-
-
-<div class="app-card">
-
-<div class="app-header">
-  
-  <span class="app-emoji"><img src="/images/logo-ttbaseuikit.png" alt="TTBaseUIKit logo" loading="lazy"></span>
-  
-  <div>
-    <h3 id="ttbaseuikit">TTBaseUIKit</h3>
-    <small>Build iOS Apps Faster — 100&#43; Production-Ready Components</small>
-  </div>
-</div>
-
-<div class="app-badges-row">
-  <span class="app-badge badge-blue">iOS</span><span class="app-badge badge-orange">Swift</span><span class="app-badge badge-purple">UIKit</span><span class="app-badge badge-cyan">SwiftUI</span><span class="app-badge badge-green">SwiftPM</span><span class="app-badge badge-green">Open Source</span>
-</div>
-
-<div class="app-description">
-  An ultra-modern enterprise foundation providing <strong>100+ production-ready base views</strong> for both UIKit and SwiftUI. Pre-built components eliminate boilerplate — build production UI in hours, not days.
-</div>
-
-<div class="feature-grid">
-  
-  <div class="feature-item">
-    <strong>🧱 72&#43; UIKit Components</strong>
-    BaseUIView, BaseUILabel, ViewCodable, Coordinators, Auto Layout helpers, and more.
-  </div>
-  
-  <div class="feature-item">
-    <strong>🎨 51&#43; SwiftUI Views</strong>
-    BaseSUIView, view modifiers, shimmer animations, button styles — iOS 14+.
-  </div>
-  
-  <div class="feature-item">
-    <strong>🤖 17 AI Agent Skills</strong>
-    Pre-configured for Copilot, Claude Code, Xcode Agent, Codex, and Gemini.
-  </div>
-  
-  <div class="feature-item">
-    <strong>🛠 Debug Kit</strong>
-    Built-in layout inspector, API response viewer, screen capture tools.
-  </div>
-  
-</div>
-
-
-<div class="app-screenshot-frame">
-  <div class="app-screenshot-bar">
-    <span class="app-screenshot-dot"></span>
-    <span class="app-screenshot-dot"></span>
-    <span class="app-screenshot-dot"></span>
-    <span class="app-screenshot-title">TTBaseUIKit Preview</span>
-  </div>
-  <div class="app-screenshot-content">
-    <img src="/images/myapps-ttbaseuikit.png" alt="TTBaseUIKit — Build iOS Apps Faster" loading="lazy">
-  </div>
-</div>
-
-
-<div class="app-ctas">
-  <a href="https://tqtuan1201.github.io/public/docs/ttbaseuikit/" target="_blank" rel="noopener" class="app-cta cta-primary">📖 View Documentation</a><a href="https://github.com/tqtuan1201/TTBaseUIKit" target="_blank" rel="noopener" class="app-cta cta-secondary">⭐ GitHub</a>
-</div>
-
-</div>
-
-
-<hr class="app-divider">
-
-
-<div class="app-card">
-
-<div class="app-header">
-  
-  <span class="app-emoji"><img src="/images/logo-ttbdebugplus.png" alt="TTBDebugPlus logo" loading="lazy"></span>
-  
-  <div>
-    <h3 id="ttbdebugplus">TTBDebugPlus</h3>
-    <small>macOS Companion Debugger for iOS Apps</small>
-  </div>
-</div>
-
-<div class="app-badges-row">
-  <span class="app-badge badge-blue">macOS</span><span class="app-badge badge-purple">SwiftUI</span><span class="app-badge badge-cyan">Bonjour</span><span class="app-badge badge-orange">WebSocket</span><span class="app-badge badge-green">Open Source</span><span class="app-badge badge-green">Free</span>
-</div>
-
-<div class="app-description">
-  A professional-grade macOS companion app for debugging iOS applications in <strong>real-time</strong>. View logs, inspect network requests, export to Postman, analyze API performance, and manage debug sessions — all from your Mac. Zero-config discovery via Bonjour, connects in under 2 seconds.
-</div>
-
-<div class="feature-grid">
-  
-  <div class="feature-item">
-    <strong>📋 Live Console</strong>
-    Filter by level (Error/Warning/Info/Debug), full-text search, JSON expand, auto-scroll LIVE mode.
-  </div>
-  
-  <div class="feature-item">
-    <strong>🌐 Network Inspector</strong>
-    JSON Tree Viewer, deep search, pin/bookmark requests, waterfall timing, export as cURL or Postman.
-  </div>
-  
-  <div class="feature-item">
-    <strong>📱 Device Control</strong>
-    Remote screenshot capture, toggle Dark Mode, app lifecycle management, accessibility overrides.
-  </div>
-  
-  <div class="feature-item">
-    <strong>📊 Performance Monitor</strong>
-    CPU &amp; Memory charts, FPS counter, network bandwidth, slow request &amp; duplicate detection.
-  </div>
-  
-  <div class="feature-item">
-    <strong>🐛 Feedback Reporter</strong>
-    Structured bug reports with auto-tags (UI/UX, Network, Crash), annotated screenshots, Markdown export.
-  </div>
-  
-  <div class="feature-item">
-    <strong>📤 Export &amp; Share</strong>
-    Postman Collection v2.1, cURL replay, .ttbdebug session files — share debug sessions across teams.
-  </div>
-  
-</div>
-
-
-<div class="app-screenshot-frame">
-  <div class="app-screenshot-bar">
-    <span class="app-screenshot-dot"></span>
-    <span class="app-screenshot-dot"></span>
-    <span class="app-screenshot-dot"></span>
-    <span class="app-screenshot-title">TTBDebugPlus Preview</span>
-  </div>
-  <div class="app-screenshot-content">
-    <img src="/images/myapps-ttbdebugplus.png" alt="TTBDebugPlus — macOS Companion Debugger for iOS Apps" loading="lazy">
-  </div>
-</div>
-
-
-<div class="app-ctas">
-  <a href="https://tqtuan1201.github.io/public/docs/ttbaseuikit/ttbdebugplus.html" target="_blank" rel="noopener" class="app-cta cta-primary">📖 View Documentation</a><a href="https://github.com/tqtuan1201/TTBDebugPlus" target="_blank" rel="noopener" class="app-cta cta-secondary">⭐ GitHub</a><a href="https://tqtuan1201.github.io/public/docs/ttbaseuikit/apps/TTBDebugPlus-Installer.dmg" target="_blank" rel="noopener" class="app-cta cta-secondary">⬇️ Download .dmg</a>
-</div>
-
-</div>
-
-
-<hr class="app-divider">
-
-
-<div class="app-card">
-
-<div class="app-header">
-  
-  <span class="app-emoji">🔗</span>
-  
-  <div>
-    <h3 id="deep-link-tester">Deep Link Tester</h3>
-    <small>Test Universal Links, App Links &amp; Custom URL Schemes</small>
-  </div>
-</div>
-
-<div class="app-badges-row">
-  <span class="app-badge badge-purple">Web Tool</span><span class="app-badge badge-blue">iOS</span><span class="app-badge badge-green">Android</span><span class="app-badge badge-cyan">Universal Links</span><span class="app-badge badge-orange">Free &amp; Open Source</span>
-</div>
-
-<div class="app-description">
-  A free, configurable deep link testing tool for mobile developers. Build and test <strong>Universal Links</strong> (iOS), <strong>App Links</strong> (Android), and <strong>Custom URL Schemes</strong> with configurable parameters — all from your browser.
-</div>
-
-<div class="feature-grid">
-  
-  <div class="feature-item">
-    <strong>🔧 Link Builder</strong>
-    Configure scheme, host, path, and query params with live preview.
-  </div>
-  
-  <div class="feature-item">
-    <strong>🌐 Site Checker</strong>
-    Validate <code>apple-app-site-association</code> and <code>assetlinks.json</code> files.
-  </div>
-  
-  <div class="feature-item">
-    <strong>📱 QR Code</strong>
-    Scan generated QR code to test links instantly on your device.
-  </div>
-  
-  <div class="feature-item">
-    <strong>💾 App Presets</strong>
-    Save and reuse configurations for different apps and environments.
-  </div>
-  
-</div>
-
-
-<div class="app-screenshot-frame">
-  <div class="app-screenshot-bar">
-    <span class="app-screenshot-dot"></span>
-    <span class="app-screenshot-dot"></span>
-    <span class="app-screenshot-dot"></span>
-    <span class="app-screenshot-title">Deep Link Tester Preview</span>
-  </div>
-  <div class="app-screenshot-content">
-    <img src="/images/myapps-deep-link-tester.png" alt="Deep Link Tester — Test Universal Links &amp; App Links" loading="lazy">
-  </div>
-</div>
-
-
-<div class="app-ctas">
-  <a href="https://tqtuan1201.github.io/public/apps/applink/" target="_blank" rel="noopener" class="app-cta cta-primary">🚀 Open Tool</a>
-</div>
-
-</div>
-
-
-
-<div class="myapps-cta-bar">
-  <div class="myapps-cta-bar-left">
-    <div class="myapps-cta-icon">📩</div>
-    <div>
-      <h5>Have an idea or want to collaborate?</h5>
-      <p>I am always open to new indie product ideas, framework contributions, and partnerships.</p>
-    </div>
-  </div>
-  <a href="#contact" class="app-cta cta-primary" style="margin: 0;">Let's Connect →</a>
-</div>
-
-<div id="contact"></div>
 
 
 <div class="contact-form">

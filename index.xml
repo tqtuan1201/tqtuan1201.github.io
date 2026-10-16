@@ -6,7 +6,20 @@
     <description>Recent content on Tuan Truong&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Sep 2026 14:45:00 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Oct 2026 10:41:37 +0700</lastBuildDate><atom:link href="https://tqtuan1201.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Awesome skills: a searchable list of agent skills worth installing</title>
+      <link>https://tqtuan1201.github.io/posts/note/awesome-skills/</link>
+      <pubDate>Wed, 07 Oct 2026 10:41:37 +0700</pubDate>
+      
+      <guid>https://tqtuan1201.github.io/posts/note/awesome-skills/</guid>
+      
+        <description>Most of my blog and app work now happens with an AI agent in the terminal. The agent is smart, but it doesn&amp;rsquo;t know my way of working. Agent skills fill that gap.
+Good skills are spread across hundreds of GitHub repos, and my bookmarks became a mess. So I put the ones worth installing into one catalog you can search and filter, like my blockchain keyword note.
+What is an agent skill?</description>
+      
+    </item>
+    
     <item>
       <title>Get ready for iPhone Duo: What iOS developers need to Change</title>
       <link>https://tqtuan1201.github.io/posts/prepare-iphoneduo/</link>
@@ -88,7 +101,7 @@ The real-world friction that motivated building Proximity Lock: Smart AutoLock C
       
       <guid>https://tqtuan1201.github.io/myapps/</guid>
       
-        <description>Apps and developer tools I&#39;ve built and published — from macOS security to iOS frameworks and web utilities.</description>
+        <description>Mac apps and developer tools I build and ship — find the right one by what you need, from clean copy and paste to screen annotation, Mac security, and iOS development.</description>
       
     </item>
     
